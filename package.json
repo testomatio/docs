@@ -10,7 +10,8 @@
   "repository": "git@github.com:testomatio/docs.git/Testomatio Documentation",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "build": "vuepress build src",
+    "publish": "./runok.js && vuepress build src"
   },
   "license": "MIT",
   "devDependencies": {
