@@ -45,6 +45,7 @@ module.exports = {
    */
   themeConfig: {
     repo: '',
+    smoothScroll: true,
     editLinks: false,
     docsDir: '',
     editLinkText: '',
@@ -60,16 +61,16 @@ module.exports = {
         link: 'https://app.testomat.io'
       }
     ],
-    sidebar
+    sidebar,
+    /**
+     * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
+     */
   },
-
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
-  plugins: {
-    '@vuepress/plugin-back-to-top': {},
-    '@vuepress/medium-zoom': {
+  plugins: [
+    '@vuepress/back-to-top',
+    ['@vuepress/medium-zoom', {
       selector: '.theme-default-content img',
-    },
-  }
+    }],
+  ]
+
 }

@@ -16,10 +16,12 @@
   "license": "MIT",
   "devDependencies": {
     "@octokit/core": "^3.2.5",
+    "@vuepress/plugin-back-to-top": "^1.8.0",
+    "@vuepress/plugin-medium-zoom": "^1.8.0",
+    "@vuepress/theme-default": "^1.8.0",
     "dasherize": "^2.0.0",
     "runok": "^0.9.3",
     "slugify": "^1.4.6",
-    "vuepress": "^1.5.3",
-    "vuepress-plugin-medium-zoom": "^1.1.9"
+    "vuepress": "^1.5.3"
   }
 }

@@ -39,3 +39,24 @@ Issues are sorted by the count of comments. If you want a page to be shown first
   * has previews
 * Easy to share with team
 * Because that's free!
+
+## 🔨 Customization
+
+This static website is built with Vuepress.
+
+To start website locally
+
+* clone this repo
+* install dependencies with yarn
+* fetch all documenation pages
+
+```
+./runok docs
+```
+* start a dev server
+
+```
+npm run dev
+```
+
+Website structue is defined in `src/.vuepress/config.yml`
