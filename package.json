@@ -19,6 +19,7 @@
     "dasherize": "^2.0.0",
     "runok": "^0.9.3",
     "slugify": "^1.4.6",
-    "vuepress": "^1.5.3"
+    "vuepress": "^1.5.3",
+    "vuepress-plugin-medium-zoom": "^1.1.9"
   }
 }
