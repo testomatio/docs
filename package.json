@@ -1,0 +1,23 @@
+{
+  "name": "@testomatio/docs",
+  "version": "0.0.1",
+  "description": "Testomatio Documentation ",
+  "main": "index.js",
+  "authors": {
+    "name": "Testomatio Team",
+    "email": "editor@testomat.io"
+  },
+  "repository": "git@github.com:testomatio/docs.git/Testomatio Documentation",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@octokit/core": "^3.2.5",
+    "dasherize": "^2.0.0",
+    "runok": "^0.9.3",
+    "slugify": "^1.4.6",
+    "vuepress": "^1.5.3"
+  }
+}
