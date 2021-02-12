@@ -57,6 +57,13 @@ ${body}`);
 
       await this.docsReporter();
       await this.docsImporter();
+
+      await writeToFile(`issues/reference.js`, out => {
+        out.line('module.exports = [');
+        out.line(' "/reference/import",')
+        out.line(' "/reference/reporter",')
+        out.line(']');
+      });
     }
   },
 
