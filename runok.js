@@ -55,16 +55,21 @@ ${body}`);
         out.line(']');
       });
 
-      await this.docsReporter();
-      await this.docsImporter();
 
-      await writeToFile(`issues/reference.js`, out => {
-        out.line('module.exports = [');
-        out.line(' "/reference/import",')
-        out.line(' "/reference/reporter",')
-        out.line(']');
-      });
     }
+    if (!fs.existsSync('src/reference')){
+        fs.mkdirSync('src/reference');
+    }
+
+    await this.docsReporter();
+    await this.docsImporter();
+
+    await writeToFile(`issues/reference.js`, out => {
+      out.line('module.exports = [');
+      out.line(' "/reference/import",')
+      out.line(' "/reference/reporter",')
+      out.line(']');
+    });
   },
 
   async docsReporter() {
@@ -122,8 +127,7 @@ But make sure you imported tests first.
 
     const response3 = await axios.get(`https://raw.githubusercontent.com/testomatio/check-cucumber/master/README.md`);
     let content3 = (await response3.data).toString();
-    content3 = content.split('\n');
-    content3 = content.slice(content.indexOf('## Cli') + 2).join('\n')
+
 
     writeToFile('src/reference/import.md', cfg => {
       cfg.line(`---
