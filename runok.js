@@ -133,7 +133,7 @@ Testomat.io can import automated tests into a project.
 We provide CLI tools for different frameworks so you get visibility of your tests in seconds.
 On this page we collect the reference to them. Learn how to install and configure test importer for your project.
 
-## JavaScript
+# JavaScript
 
 > 📑 This documentation is taken from open-source project [testomatio/check-tests](https://github.com/testomatio/check-tests)
 
@@ -145,7 +145,7 @@ On this page we collect the reference to them. Learn how to install and configur
     content3 = content.split('\n');
     content3 = content.slice(content.indexOf('## Cli') + 2).join('\n')
 
-    cfg.line(`## Cucumber
+    cfg.line(`# Cucumber
 > 📑 This documentation is taken from open-source project [testomatio/check-cucumber](https://github.com/testomatio/check-cucumber)
 
 ${content3}
@@ -154,7 +154,7 @@ ${content3}
 
       cfg.line(`
 
-## PHP
+# PHP
 
 > 📑 This documentation is taken from open-source project [testomatio/php-list-tests](https://github.com/testomatio/php-list-tests)
 `)
