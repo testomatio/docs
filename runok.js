@@ -120,6 +120,11 @@ But make sure you imported tests first.
     let content2 = (await response2.data).toString();
     content2 = content2.split('\n').slice(3).join('\n')
 
+    const response3 = await axios.get(`https://raw.githubusercontent.com/testomatio/check-cucumber/master/README.md`);
+    let content3 = (await response3.data).toString();
+    content3 = content.split('\n');
+    content3 = content.slice(content.indexOf('## Cli') + 2).join('\n')
+
     writeToFile('src/reference/import.md', cfg => {
       cfg.line(`---
 permalink: /reference/import
@@ -139,11 +144,6 @@ On this page we collect the reference to them. Learn how to install and configur
 
 `)
       cfg.line(content);
-
-    const response3 = await axios.get(`https://raw.githubusercontent.com/testomatio/check-cucumber/master/README.md`);
-    let content3 = (await response3.data).toString();
-    content3 = content.split('\n');
-    content3 = content.slice(content.indexOf('## Cli') + 2).join('\n')
 
     cfg.line(`# Cucumber
 > 📑 This documentation is taken from open-source project [testomatio/check-cucumber](https://github.com/testomatio/check-cucumber)
