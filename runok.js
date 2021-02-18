@@ -119,14 +119,15 @@ But make sure you imported tests first.
     const response = await axios.get(`https://raw.githubusercontent.com/testomatio/check-tests/master/README.md`);
     let content = (await response.data).toString();
     content = content.split('\n');
-    content = content.slice(content.indexOf('## CLI') + 2).join('\n')
+    content = content.slice(content.indexOf('## CLI') + 2).join('\n').replace(/#\s/g, '## ')
 
     const response2 = await axios.get(`https://raw.githubusercontent.com/testomatio/php-list-tests/master/README.md`);
     let content2 = (await response2.data).toString();
     content2 = content2.split('\n').slice(3).join('\n')
 
     const response3 = await axios.get(`https://raw.githubusercontent.com/testomatio/check-cucumber/master/README.md`);
-    let content3 = (await response3.data).toString();
+    let content3 = (await response3.data).toString().split('\n');
+    content3 = content3.slice(content3.indexOf('## Cli') + 2).join('\n');
 
 
     writeToFile('src/reference/import.md', cfg => {
@@ -142,14 +143,14 @@ Testomat.io can import automated tests into a project.
 We provide CLI tools for different frameworks so you get visibility of your tests in seconds.
 On this page we collect the reference to them. Learn how to install and configure test importer for your project.
 
-# JavaScript
+## JavaScript
 
 > 📑 This documentation is taken from open-source project [testomatio/check-tests](https://github.com/testomatio/check-tests)
 
 `)
       cfg.line(content);
 
-    cfg.line(`# Cucumber
+    cfg.line(`## Cucumber
 > 📑 This documentation is taken from open-source project [testomatio/check-cucumber](https://github.com/testomatio/check-cucumber)
 
 ${content3}
@@ -158,7 +159,7 @@ ${content3}
 
       cfg.line(`
 
-# PHP
+## PHP
 
 > 📑 This documentation is taken from open-source project [testomatio/php-list-tests](https://github.com/testomatio/php-list-tests)
 `)
