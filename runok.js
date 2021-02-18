@@ -123,11 +123,11 @@ But make sure you imported tests first.
 
     const response2 = await axios.get(`https://raw.githubusercontent.com/testomatio/php-list-tests/master/README.md`);
     let content2 = (await response2.data).toString();
-    content2 = content2.split('\n').slice(3).join('\n')
+    content2 = content2.split('\n').slice(3).join('\n').replace(/#\s/g, '## ')
 
     const response3 = await axios.get(`https://raw.githubusercontent.com/testomatio/check-cucumber/master/README.md`);
     let content3 = (await response3.data).toString().split('\n');
-    content3 = content3.slice(content3.indexOf('## Cli') + 2).join('\n');
+    content3 = content3.slice(content3.indexOf('## Cli') + 2).join('\n')
 
 
     writeToFile('src/reference/import.md', cfg => {
