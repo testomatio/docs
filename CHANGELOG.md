@@ -5,3 +5,4 @@
 * added better headers to test design
 * added CI page +
 * added CI page sections (auto-assign), how it works, config vars, details
+* added reports page
