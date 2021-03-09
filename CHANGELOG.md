@@ -7,3 +7,4 @@
 * added CI page sections (auto-assign), how it works, config vars, details
 * added reports page (moved it)
 * update reference
+* notification rules draft
