@@ -8,3 +8,4 @@
 * added reports page (moved it)
 * update reference
 * notification rules draft
+* updated CI reference
