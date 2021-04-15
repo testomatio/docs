@@ -9,3 +9,4 @@
 * update reference
 * notification rules draft
 * updated CI reference
+* added notifications
