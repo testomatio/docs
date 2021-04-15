@@ -10,4 +10,4 @@
 * notification rules draft
 * updated CI reference
 * added notifications
-* added notification rules
+* added notification rules (datetime)
