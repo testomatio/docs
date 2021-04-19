@@ -10,4 +10,4 @@
 * notification rules draft
 * updated CI reference
 * added notifications
-* added notification rules (datetime), fixed formatting
+* added notification rules (datetime), fixed formatting, MS Teams
