@@ -11,3 +11,4 @@
 * updated CI reference
 * added notifications
 * added notification rules (datetime), fixed formatting, MS Teams
+* added Jenkins
