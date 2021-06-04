@@ -12,3 +12,4 @@
 * added notifications
 * added notification rules (datetime), fixed formatting, MS Teams
 * added Jenkins
+* added Gitlab CI
