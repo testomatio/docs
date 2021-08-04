@@ -28,6 +28,6 @@ jobs:
         branch: archive
         push_options: '--force'
         file_pattern: src/**.md
-        status_options: '--untracked-files=yes'
+
 
 
