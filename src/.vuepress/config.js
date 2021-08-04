@@ -8,7 +8,7 @@ for (const section of sections) {
   sidebar['/'].push({
     title: section.replace(/-([a-z])/g, function (g) { return ' ' + g[1].toUpperCase(); }).replace(/^\w/, c => c.toUpperCase()),
     collapsable: true,
-    sidebarDepth: 2,
+    sidebarDepth: 3,
     children: require('../../issues/'+section)
   });
 }

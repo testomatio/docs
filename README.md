@@ -30,6 +30,11 @@ In a few minutes a documentation site will be updated.
 
 Issues are sorted by the count of comments. If you want a page to be shown first just add a comment to issue. The issue that has more comments will be shown first on the site.
 
+## 🗄️ Where Are Backups?
+
+Backups are automatically generated on each page build.
+Restore a page from a markdown file in [archive branch](https://github.com/testomatio/docs/tree/archive/src) when needed.
+
 ## 🤔 Why do we use this approach?
 
 * To keep all Testomatio information on GitHub
