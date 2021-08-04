@@ -27,7 +27,7 @@ jobs:
       with:
         branch: archive
         push_options: '--force'
-        file_pattern: src/**.md
+        file_pattern: src/**/*.md
 
 
 
