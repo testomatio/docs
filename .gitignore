@@ -1,5 +1,4 @@
 node_modules
-src/*
 issues
 !src/.vuepress
 !src/index.md
