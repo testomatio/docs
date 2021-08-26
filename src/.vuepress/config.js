@@ -62,7 +62,7 @@ module.exports = {
         link: 'https://app.testomat.io'
       },
       {
-        test: 'Schedule a Demo',
+        text: 'Schedule a Demo',
         link: 'https://calendly.com/testomatio/demo'
       }
     ],
