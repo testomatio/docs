@@ -16,3 +16,4 @@
 * Added jira plugin
 * Added live docs +
 * Added few paragraphs
+* Added branches
