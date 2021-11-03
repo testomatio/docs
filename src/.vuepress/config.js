@@ -36,7 +36,7 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#5c89fc' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['script', { type: 'text/javascript'} 'window.$crisp=[];window.CRISP_WEBSITE_ID=\'4192ab4e-8b76-4b7e-a8c4-ea66dea249e7\';(function(){d=document;s=d.createElement(\'script\');s.src=\'https://client.crisp.chat/l.js\';s.async=1;d.getElementsByTagName(\'head\')[0].appendChild(s);})();'],
+    ['script', { type: 'text/javascript'}, `window.$crisp=[];window.CRISP_WEBSITE_ID="4192ab4e-8b76-4b7e-a8c4-ea66dea249e7";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();`],
     ['script', { type: 'text/javascript'}, `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
