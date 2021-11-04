@@ -4,5 +4,5 @@ module.exports = [
   'reference',
   'integration',
   'subscriptions',
-  'contact us'
+  'contact-us'
 ];
