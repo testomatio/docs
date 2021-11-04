@@ -2,5 +2,7 @@ module.exports = [
   'getting-started',
   'usage',
   'reference',
-  'integration'
+  'integration',
+  'subscriptions',
+  'contact us'
 ];
