@@ -80,10 +80,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ['@vuepress/medium-zoom', {
       selector: '.theme-default-content img',
     }],
-    ['sitemap': {
+    ['sitemap', {
       hostname: 'https://docs.testomat.io'
     }],
-    ['seo': { /* options */ }],
+    ['seo', { /* options */ }],
   ]
 
 }
