@@ -83,7 +83,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ['sitemap', {
       hostname: 'https://docs.testomat.io'
     }],
-    ['seo', { /* options */ }],
+    ['seo', {
+      siteTitle: (_, $site) => "Testomtat.io Documentation",
+      title: $page => $page.title,
+      description: $page => $page.frontmatter.description,
+      author: (_, $site) => "Testomat.io Team",
+      tags: $page => $page.frontmatter.tags,
+      twitterCard: _ => 'https://avatars.githubusercontent.com/u/59105116?s=200&v=4',
+      type: $page => 'documentation',
+      url: (_, $site, path) => ($site.themeConfig.domain || '') + path,
+      image: ($page, $site) => 'https://avatars.githubusercontent.com/u/59105116?s=200&v=4',
+      publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
+      modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+     }],
   ]
 
 }
