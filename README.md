@@ -10,7 +10,7 @@ To update documentation - create or edit an issue in this repository and update 
   * Add as many images as you need. Upload them by pasting images into issue
 * Add a label to the issue. Labels represent [sections of website](https://github.com/testomatio/docs/blob/master/sections.js).
 * Save an issue
-* [Update CHANGELOG file](https://github.com/testomatio/docs/edit/master/CHANGELOG.js), add a note about your change in a free format.
+* [Update CHANGELOG file](https://github.com/testomatio/docs/edit/master/CHANGELOG.md), add a note about your change in a free format.
 
 In a few minutes a documentation site will be updated.
 
