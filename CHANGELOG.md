@@ -21,3 +21,4 @@
 * changed sections...
 * added test artifacts section + + + +
 * updated GitLab CI setup
+* Analytics
