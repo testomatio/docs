@@ -26,3 +26,6 @@
 * Added Examples for Import Tests From CSV/XLS 
 * Updated URLs for Examples for Import Tests From CSV/XLS 
 * updated check-tests reference +
+* Added CI settings for Circle CI
+* added manual.feature extension
+* artifacts for Cypress
