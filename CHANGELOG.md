@@ -29,3 +29,4 @@
 * Added CI settings for Circle CI
 * added manual.feature extension
 * artifacts for Cypress
+* reporter fix
