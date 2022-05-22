@@ -30,3 +30,4 @@
 * added manual.feature extension
 * artifacts for Cypress
 * reporter fix
+* reporter and artifacts for wdio updated
