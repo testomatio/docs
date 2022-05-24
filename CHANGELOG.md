@@ -33,3 +33,4 @@
 * reporter and artifacts for wdio updated
 * added to bulk edit: File and Folder explanation, Suite Bulk Edit, Bulk Tests Creation
 * added to companies: Teams, Read-Only Users, Project Archive
+* changed headers in Bulk Edit
