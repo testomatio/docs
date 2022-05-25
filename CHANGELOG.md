@@ -35,4 +35,6 @@
 * added to companies: Teams, Read-Only Users, Project Archive
 * changed headers in Bulk Edit
 * changed order for Start From Scratch section
+* changed order for Getting started
+
 
