@@ -36,5 +36,6 @@
 * changed headers in Bulk Edit
 * changed order for Start From Scratch section
 * changed order for Getting started
+* re-changed order for Getting started
 
 
