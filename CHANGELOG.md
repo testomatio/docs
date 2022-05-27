@@ -38,5 +38,7 @@
 * changed order for Getting started
 * re-changed order for Getting started
 * re-re-changed order for Getting started
+* added page for Steps with videos
+* added videos for Bulk Edit, Run automated tests as manual, Company
 
 
