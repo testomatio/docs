@@ -41,4 +41,4 @@
 * added page for Steps with videos
 * added videos for Bulk Edit, Run automated tests as manual, Company
 * update docs
-* reporter for junit++
+* reporter for junit+++
