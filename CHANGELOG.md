@@ -42,3 +42,4 @@
 * added videos for Bulk Edit, Run automated tests as manual, Company
 * update docs
 * reporter for junit+++
+* added admin rights and pics in Jira Integration doc, added Automated Runs doc
