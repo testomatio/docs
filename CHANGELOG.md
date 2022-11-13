@@ -44,4 +44,4 @@
 * reporter for junit+++
 * added admin rights and pics in Jira Integration doc, added Automated Runs doc
 * Added Okta connection docs++
-* Added Azure pipeline
+* Added Azure pipeline +
