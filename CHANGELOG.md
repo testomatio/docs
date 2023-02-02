@@ -49,3 +49,4 @@
 * Updated csv/xls import doc, added testomat xls example file
 * Updated Slack link on Contact Us page
 * Added Labels & Custom Fields page
+* Added visibility and scope explanation to Labels
