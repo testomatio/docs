@@ -50,3 +50,4 @@
 * Updated Slack link on Contact Us page
 * Added Labels & Custom Fields page
 * Added visibility and scope explanation to Labels
+* Added explanation for Labels and Custom Fields
