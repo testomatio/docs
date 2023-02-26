@@ -51,3 +51,4 @@
 * Added Labels & Custom Fields page
 * Added visibility and scope explanation to Labels
 * Added explanation for Labels and Custom Fields
+* Added Linear Configuration page
