@@ -53,3 +53,5 @@
 * Added explanation for Labels and Custom Fields
 * Added Linear Configuration page
 * Added link to Linear Configuration page
+* Add newman reporter
+* 
