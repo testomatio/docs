@@ -54,4 +54,3 @@
 * Added Linear Configuration page
 * Added link to Linear Configuration page
 * Add newman reporter
-* 
