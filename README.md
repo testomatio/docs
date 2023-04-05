@@ -52,11 +52,11 @@ This static website is built with Vuepress.
 To start website locally
 
 * clone this repo
-* install dependencies with yarn
+* install dependencies with npm
 * fetch all documenation pages
 
 ```
-./runok docs
+./runok.js docs
 ```
 * start a dev server
 
