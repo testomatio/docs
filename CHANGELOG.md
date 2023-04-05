@@ -54,3 +54,4 @@
 * Added Linear Configuration page
 * Added link to Linear Configuration page
 * Add newman reporter+
+* fix typo: check-test > check-tests
