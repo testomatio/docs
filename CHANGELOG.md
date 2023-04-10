@@ -55,3 +55,4 @@
 * Added link to Linear Configuration page
 * Add newman reporter+
 * fix typo: check-test > check-tests
+* fix typo: critic > critical
