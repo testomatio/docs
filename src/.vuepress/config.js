@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     // editLinkText: '',
     logo: '/logo.svg',
     lastUpdated: false,
-    nav: [
+    navbar: [
       {
         text: 'Getting Started',
         link: FIRST_LINK,
