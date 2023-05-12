@@ -1,0 +1,25 @@
+.home .hero img {
+  max-width: 450px!important;
+}
+
+html {
+  --c-brand: #5c89fc;
+  --c-brand-light: #5c89fc;  
+}
+
+:root {
+  // brand colors
+  --c-brand: #5c89fc;
+  --c-brand-light: #5c89fc;
+  --search-input-width: 16rem;
+// $accentColor = #5c89fc
+}
+
+html.dark {
+  // brand colors
+  --c-brand: #5c89fc;
+}
+
+// $textColor = #2c3e50
+// $borderColor = #eaecef
+// $codeBgColor = #282c34

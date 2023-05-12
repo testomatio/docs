@@ -3,5 +3,6 @@ package-lock.json
 src
 issues
 !src/.vuepress
+!src/.vuepress/styles
 !src/index.md
 
