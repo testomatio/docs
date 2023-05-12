@@ -70,6 +70,13 @@ ${body}`);
       out.line(' "/reference/reporter",')
       out.line(']');
     });
+
+    await writeToFile(`issues/index.js`, out => {
+      out.line(`module.exports = {`)
+      sections.forEach(section => out.line(`  "${section}": require('./${section}'),`))      
+      out.line(`}`)
+    });
+
   },
 
   async docsReporter() {
