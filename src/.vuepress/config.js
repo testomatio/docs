@@ -9,12 +9,12 @@ const sections = require('../../sections')
 const children = require('../../issues/index');
 const FIRST_LINK = '/getting-started/start-from-scratch'
 
-const sidebar = { '/': [] }
+const sidebar = []
 
 
 for (const section of sections) {
-  sidebar['/'].push({
-    title: section.replace(/-([a-z])/g, function (g) { return ' ' + g[1].toUpperCase(); }).replace(/^\w/, c => c.toUpperCase()),
+  sidebar.push({
+    text: section.replace(/-([a-z])/g, function (g) { return ' ' + g[1].toUpperCase(); }).replace(/^\w/, c => c.toUpperCase()),
     collapsable: true,
     sidebarDepth: 3,
     children: children[section]

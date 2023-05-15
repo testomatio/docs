@@ -76,7 +76,6 @@ ${body}`);
       sections.forEach(section => out.line(`  "${section}": require('./${section}'),`))      
       out.line(`}`)
     });
-
   },
 
   async docsReporter() {
