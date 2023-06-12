@@ -57,3 +57,4 @@
 * fix typo: check-test > check-tests
 * fix typo: critic > critical
 * fix typo: Continious Integration > Continuous Integration
+* added Billing user manual
