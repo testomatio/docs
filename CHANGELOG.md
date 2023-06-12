@@ -58,3 +58,4 @@
 * fix typo: critic > critical
 * fix typo: Continious Integration > Continuous Integration
 * added Billing user manual
+* update Billing user manual
