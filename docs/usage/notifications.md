@@ -208,3 +208,18 @@ For instance, this is how notification can be enabled for reports finished in no
 (finished_at.hour > 18 or finished_at.hour < 9)
 ```
 
+### Examples
+
+#### Notify when tests are failing on CI
+
+To match tests executed on CI specify a Run title with "[CI]" prefix to identify that these tests were executed on CI:
+
+```
+TESTOMATIO_TITLE="[CI] Automated Tests"
+```
+
+Then write a notification rule that will check only for failing runs with "[CI]" in their title:
+
+```
+contains(run, "[CI]") and has_failed
+```
