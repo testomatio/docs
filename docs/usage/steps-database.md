@@ -14,6 +14,8 @@ There are few ways to create steps on the page:
 1. enter the step into the field and click Create
 2. click on Plus button to add context to the step
 
+![Alt text](images/steps-database/image.png)
+
 ![CleanShot 2022-05-26 at 23 26 17@2x](images/170574754-87d26001-bf0e-4435-ab3b-c2b1960b2e40.jpg)
 
 At the New Step screen, you need to add the step itself (1), description (2) and click on the Save button (3)
