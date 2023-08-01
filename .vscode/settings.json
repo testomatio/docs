@@ -1,5 +1,5 @@
 { 
   "markdown.copyFiles.destination": {
-    "**/*": "src/.vuepress/public/"
+    "**/*": "docs/.vuepress/public/assets/"
   }
 }
