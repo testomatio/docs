@@ -22,10 +22,10 @@ module.exports = {
     "/usage/jira-plugin",
     "/usage/notifications",    
   ],
-  'reference': [
-    "/reference/import",
-    "/reference/reporter",    
-  ],
+  // 'reference': [
+  //   "/reference/import",
+  //   "/reference/reporter",    
+  // ],
   'integration': [
     "/integration/jira",
     "/integration/issues-management-systems",
