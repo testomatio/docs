@@ -42,8 +42,10 @@ Repeating these steps, you can easily add as many tests as you need within a rea
 Unlike other test management systems, **Testomat.io doesn't allow suite to include other suites and tests**. That's why you can either create a suite (a collection of tests) or folder (collection of suites).
 
 ::: warning
-When creating a suite you will need to explicitly set its type: a suite or a folder.
+When creating a suite you have to explicitly set its type: a suite or a folder.
 :::
+
+![New suite](images/image-4.png)
 
 This was designed so tests structure could match the filesystem. For instance, if you use BDD project, feature file can contain scenarios, but can't contain other feature files. The same for automated tests, a file can contain tests but can't contain other files. 
 
