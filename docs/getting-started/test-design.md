@@ -6,20 +6,22 @@ editLink: true
 
 # Test Design
 
+When a new project is created, there are multiple options to start:
+
+![Create suites](images/image.png)
+
+1. Create new suite and start adding tests
+2. Import automated tests from source code
+3. Import tests from CSV file from another Test Management System
+
 ## **How to create a test**
 
-First of all, you need a suite to add a test to it. 
-You can create a suite in a few easy steps:
+Tests are created within a suite. 
 
-1. Click on **Tests** button.
-2. Fill the field with the name of your suite.
-3.  Click on **Create** button.
+![Create suites](images/image-3.png)
 
-![107248238-c58e0b00-6a3a-11eb-8e59-71a6b8d6d850](images/107252438-03d8f980-6a3e-11eb-8c02-a459cc27e46e.png)
-
-Now that your suite is created, open it:
-
-![107248895-71cff180-6a3b-11eb-9bcb-270330007264](images/107252511-16533300-6a3e-11eb-9bdc-15d12c9cda25.png)
+To create a new suite use "+" button or input field. 
+Open a newly created suite.
 
 To add a new test to the suite you are currently in,  click on **New Test** button.
 
