@@ -1,7 +1,7 @@
 ---
 permalink: /usage/test-artifacts
 title: Test Artifacts
-editLink: false
+editLink: true
 ---
 
 # Test Artifacts

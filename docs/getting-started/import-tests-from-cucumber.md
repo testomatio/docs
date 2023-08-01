@@ -1,7 +1,7 @@
 ---
 permalink: /getting-started/import-tests-from-cucumber
 title: Import Tests From Cucumber
-editLink: false
+editLink: true
 ---
 
 # Import Tests From Cucumber

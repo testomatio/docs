@@ -22,10 +22,18 @@ module.exports = {
     "/usage/jira-plugin",
     "/usage/notifications",    
   ],
-  // 'reference': [
-  //   "/reference/import",
-  //   "/reference/reporter",    
-  // ],
+  'importer': [
+    '/reference/import-js',
+    '/reference/import-bdd',
+    '/reference/import-php',
+  ],
+  'reporter': [    
+    "/reference/reporter",
+    "/reference/reporter/frameworks",
+    "/reference/reporter/junit",       
+    "/reference/reporter/pipes/testomatio",
+    "/reference/reporter/workflows",   
+  ],
   'integration': [
     "/integration/jira",
     "/integration/issues-management-systems",

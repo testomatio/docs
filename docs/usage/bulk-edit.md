@@ -1,7 +1,7 @@
 ---
 permalink: /usage/bulk-edit
 title: Bulk Edit
-editLink: false
+editLink: true
 ---
 
 # Bulk Edit

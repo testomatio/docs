@@ -1,7 +1,7 @@
 ---
 permalink: /subscriptions/companies
 title: Companies
-editLink: false
+editLink: true
 ---
 
 # Companies

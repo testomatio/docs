@@ -1,7 +1,7 @@
 ---
 permalink: /getting-started/test-design
 title: Test Design
-editLink: false
+editLink: true
 ---
 
 # Test Design

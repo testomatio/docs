@@ -1,7 +1,7 @@
 ---
 permalink: /usage/labels-and-custom-fields
 title: Labels And Custom Fields
-editLink: false
+editLink: true
 ---
 
 # Labels And Custom Fields

@@ -1,7 +1,7 @@
 ---
 permalink: /subscriptions/subscriptions
 title: Subscriptions
-editLink: false
+editLink: true
 ---
 
 # Subscriptions

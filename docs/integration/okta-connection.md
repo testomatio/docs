@@ -1,7 +1,7 @@
 ---
 permalink: /integration/okta-connection
 title: Okta Connection
-editLink: false
+editLink: true
 ---
 
 # Okta Connection

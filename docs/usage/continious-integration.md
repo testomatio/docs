@@ -1,7 +1,7 @@
 ---
 permalink: /usage/continious-integration
 title: Continious Integration
-editLink: false
+editLink: true
 ---
 
 # Continious Integration

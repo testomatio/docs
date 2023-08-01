@@ -1,7 +1,7 @@
 ---
 permalink: /usage/analytics
 title: Analytics
-editLink: false
+editLink: true
 ---
 
 # Analytics

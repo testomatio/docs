@@ -1,7 +1,7 @@
 ---
 permalink: /usage/living-documentation
 title: Living Documentation
-editLink: false
+editLink: true
 ---
 
 # Living Documentation

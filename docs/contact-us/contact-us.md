@@ -1,7 +1,7 @@
 ---
 permalink: /contact-us/contact-us
 title: Contact Us
-editLink: false
+editLink: true
 ---
 
 # Contact Us

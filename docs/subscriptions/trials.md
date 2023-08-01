@@ -1,7 +1,7 @@
 ---
 permalink: /subscriptions/trials
 title: Trials
-editLink: false
+editLink: true
 ---
 
 # Trials

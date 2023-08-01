@@ -1,0 +1,21 @@
+name: Auto-Merge
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x      
+      - run: npm i
+      - run: ./runok.js docs
+      - uses: emiliopedrollo/auto-merge@v1.2.0
+        with:
+          github_token: ${{ github.token }}
+          target_branch: 'master'

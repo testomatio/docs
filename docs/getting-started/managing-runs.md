@@ -1,7 +1,7 @@
 ---
 permalink: /getting-started/managing-runs
 title: Managing Runs
-editLink: false
+editLink: true
 ---
 
 # Managing Runs

@@ -60,7 +60,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     // docsDir: '',
     // editLinkText: '',
     logo: '/logo.svg',
-    lastUpdated: false,
+    lastUpdated: true,
+    docsRepo: 'https://github.com/testomatio/docs',
+    docsBranch: 'master',
+    docsDir: 'docs',
+    editLinkPattern: ':repo/edit/:branch/:path',    
     navbar: [
       {
         text: 'Getting Started',

@@ -1,7 +1,7 @@
 ---
 permalink: /integration/issues-management-systems
 title: Issues Management Systems
-editLink: false
+editLink: true
 ---
 
 # Issues Management Systems

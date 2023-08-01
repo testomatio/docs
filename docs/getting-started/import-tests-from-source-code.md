@@ -1,7 +1,7 @@
 ---
 permalink: /getting-started/import-tests-from-source-code
 title: Import Tests From Source Code
-editLink: false
+editLink: true
 ---
 
 # Import Tests From Source Code

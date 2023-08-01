@@ -1,7 +1,7 @@
 ---
 permalink: /getting-started/running-automated-tests
 title: Running Automated Tests
-editLink: false
+editLink: true
 ---
 
 # Running Automated Tests

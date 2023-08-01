@@ -1,7 +1,7 @@
 ---
 permalink: /integration/jira
 title: Jira
-editLink: false
+editLink: true
 ---
 
 # Jira

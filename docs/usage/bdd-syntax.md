@@ -1,7 +1,7 @@
 ---
 permalink: /usage/bdd-syntax
 title: BDD syntax 
-editLink: false
+editLink: true
 ---
 
 # BDD syntax 

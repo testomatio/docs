@@ -1,7 +1,7 @@
 ---
 permalink: /getting-started/running-tests-manually
 title: Running Tests Manually
-editLink: false
+editLink: true
 ---
 
 # Running Tests Manually

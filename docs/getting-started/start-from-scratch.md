@@ -1,7 +1,7 @@
 ---
 permalink: /getting-started/start-from-scratch
 title: Start From Scratch
-editLink: false
+editLink: true
 ---
 
 # Start From Scratch

@@ -1,7 +1,7 @@
 ---
 permalink: /usage/notifications
 title: Notifications
-editLink: false
+editLink: true
 ---
 
 # Notifications

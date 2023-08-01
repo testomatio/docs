@@ -1,7 +1,7 @@
 ---
 permalink: /usage/steps-database
 title: Steps Database
-editLink: false
+editLink: true
 ---
 
 # Steps Database

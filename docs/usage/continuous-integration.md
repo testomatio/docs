@@ -1,7 +1,7 @@
 ---
 permalink: /usage/continuous-integration
 title: Continuous Integration
-editLink: false
+editLink: true
 ---
 
 # Continuous Integration

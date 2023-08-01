@@ -1,7 +1,7 @@
 ---
 permalink: /usage/branches
 title: Branches
-editLink: false
+editLink: true
 ---
 
 # Branches

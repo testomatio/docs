@@ -9,6 +9,7 @@ const humanize = (s) => s.replace(/-([a-z])/g, function (g) { return g[1].toUppe
 const slugify = require('slugify')
 const dasherize = (str) => slugify(str.toLowerCase());
 const { globSync } = require('glob');
+const { execSync } = require('child_process');
 
 const token = process.env.GH_PAT;
 const octokit = new Octokit({ auth: token });
@@ -18,7 +19,8 @@ const FETCH_ISSUES_REQUEST = 'GET /repos/{owner}/{repo}/issues?labels={label}&so
 
 module.exports = {
   async docs() {
-    // deprecated
+    await this.docsImporter();
+    await this.docsReporter();
   },
 
   async docsImages() {
@@ -63,67 +65,53 @@ module.exports = {
   },
 
   async docsReporter() {
+    execSync('rm -rf tmp/reporter');
 
-    const response = await axios.get(`https://raw.githubusercontent.com/testomatio/reporter/master/README.md`);
-    let content = (await response.data).toString();
-    content = content.split('\n').slice(2).join('\n')
+    const destinationFolder = 'docs/reference/reporter';
 
-    const response2 = await axios.get(`https://raw.githubusercontent.com/testomatio/php-reporter/master/README.md`);
-    let content2 = (await response2.data).toString();
-    content2 = content2.split('\n').slice(2).join('\n')
+    if (!fs.existsSync(destinationFolder)) {
+      fs.mkdirSync(destinationFolder, { recursive: true });
+    }
 
+    execSync(`git clone https://github.com/testomatio/reporter.git tmp/reporter`);
+    execSync(`cp -R tmp/reporter/docs/** ${destinationFolder}`);
 
-    writeToFile('src/reference/reporter.md', cfg => {
-      cfg.line(`---
-permalink: /reference/reporter
-title: Reporter
-editLink: false
----
+    const capitalize = s => s && s[0].toUpperCase() + s.slice(1)
 
-# Reporter
+    const files = globSync(`${destinationFolder}/**/*.md`);
 
-Testomat.io provides several libraries for various testing frameworks.
-On this page we collect the reference to them. Learn how to install and configure reporter for your project.
-But make sure you imported tests first.
-
-## JavaScript
-
-> 📑 This documentation is taken from open-source project [testomatio/reporter](https://github.com/testomatio/reporter)
-
-`)
-      cfg.line(content);
-
-      cfg.line(`
-
-## PHP
-
-> 📑 This documentation is taken from open-source project [testomatio/php-reporter](https://github.com/testomatio/php-reporter)
-`);
-
-      cfg.line(content2);
-    })
+    for (const file of files) {
+      let title = humanize(path.basename(file, '.md')).trim();
+      title[0] = title[0].toUpperCase();
+      console.log(title.toUpperCase());
+      const contents = fs.readFileSync(file).toString();
+      writeToFile(file, cfg => {
+        cfg.line('---');
+        cfg.line(`title: ${capitalize(title)}`);
+        cfg.line(`editLink: false`);
+        cfg.line('---\n');
+        cfg.line(contents);
+      });
+    }
   },
 
   async docsImporter() {
+
+    const destinationFolder = 'docs/reference/importer';
+
+    if (!fs.existsSync(destinationFolder)) {
+      fs.mkdirSync(destinationFolder, { recursive: true });
+    }    
 
     const response = await axios.get(`https://raw.githubusercontent.com/testomatio/check-tests/master/README.md`);
     let content = (await response.data).toString();
     content = content.split('\n');
     content = content.slice(content.indexOf('## CLI') + 2).join('\n').replace(/#\s/g, '## ')
 
-    const response2 = await axios.get(`https://raw.githubusercontent.com/testomatio/php-list-tests/master/README.md`);
-    let content2 = (await response2.data).toString();
-    content2 = content2.split('\n').slice(3).join('\n').replace(/#\s/g, '## ')
-
-    const response3 = await axios.get(`https://raw.githubusercontent.com/testomatio/check-cucumber/master/README.md`);
-    let content3 = (await response3.data).toString().split('\n');
-    content3 = content3.slice(content3.indexOf('## Cli') + 2).join('\n')
-
-
-    writeToFile('src/reference/import.md', cfg => {
+    writeToFile('docs/reference/import-js.md', cfg => {
       cfg.line(`---
-permalink: /reference/import
-title: Import Tests
+permalink: /reference/import-js
+title: Import JavaScript Tests
 editLink: false
 ---
 
@@ -137,28 +125,50 @@ On this page we collect the reference to them. Learn how to install and configur
 
 > 📑 This documentation is taken from open-source project [testomatio/check-tests](https://github.com/testomatio/check-tests)
 
-`)
-      cfg.line(content);
+${content}`)});
 
-    cfg.line(`## Cucumber
-> 📑 This documentation is taken from open-source project [testomatio/check-cucumber](https://github.com/testomatio/check-cucumber)
-
-${content3}
-`);
+    const response2 = await axios.get(`https://raw.githubusercontent.com/testomatio/php-list-tests/master/README.md`);
+    let content2 = (await response2.data).toString();
+    content2 = content2.split('\n').slice(3).join('\n').replace(/#\s/g, '## ')
 
 
-      cfg.line(`
+    writeToFile('docs/reference/import-php.md', cfg => {
+      cfg.line(`---
+permalink: /reference/import-php
+title: Import PHP Tests
+editLink: false
+---
 
 ## PHP
 
 > 📑 This documentation is taken from open-source project [testomatio/php-list-tests](https://github.com/testomatio/php-list-tests)
-`)
 
-      cfg.line(content2);
-    })
-  }
+${content2}`)
+    });
 
+    const response3 = await axios.get(`https://raw.githubusercontent.com/testomatio/check-cucumber/master/README.md`);
+    let content3 = (await response3.data).toString().split('\n');
+    content3 = content3.slice(content3.indexOf('## Cli') + 2).join('\n')
+
+
+    writeToFile('docs/reference/import-bdd.md', cfg => {
+      cfg.line(`---
+permalink: /reference/import-bdd
+title: Import Cucumber BDD Tests
+editLink: false
+---
+
+## Cucumber
+
+> 📑 This documentation is taken from open-source project [testomatio/check-cucumber](https://github.com/testomatio/check-cucumber)
+
+${content3}
+`)});
+
+    }
 }
+    
+
 
 if (require.main === module) runok(module.exports);
 

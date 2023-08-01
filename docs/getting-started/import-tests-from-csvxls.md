@@ -1,7 +1,7 @@
 ---
 permalink: /getting-started/import-tests-from-csvxls
 title: Import Tests From CSV/XLS
-editLink: false
+editLink: true
 ---
 
 # Import Tests From CSV/XLS

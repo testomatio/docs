@@ -1,7 +1,7 @@
 ---
 permalink: /usage/jira-plugin
 title: Jira Plugin
-editLink: false
+editLink: true
 ---
 
 # Jira Plugin
