@@ -18,7 +18,7 @@ Moreover, when you have hundreds and thousands of tests on your hands, some thin
 
 Register at [app.testomat.io](https://app.testomat.io) and activate your user account. Then create a new project.
 
-![image](/assets/107104713-7f169180-682b-11eb-9c8d-ee4d5583e184.png)
+![image](images/107104713-7f169180-682b-11eb-9c8d-ee4d5583e184.png)
 
 The type of your new project will influence the look of your interface, as well as its intended audience. Choose **BDD Project** if you plan to follow BDD descriptions or use the Cucumber framework in future. If you haven't decided yet, you can start with default **Classical Project**. Depending on your choice, the interface will differ, as follows:
 
@@ -27,7 +27,7 @@ The type of your new project will influence the look of your interface, as well 
 
 > In this section of the Guide, we discuss the issues concerning Classical Projects. If you need to import a BDD Project, go to the [Import Tests From Cucumber](https://docs.testomat.io/getting-started/import-tests-from-cucumber/#why-do-i-need-to-import-my-tests) section of this guide.
 
-![image](/assets/107104737-96ee1580-682b-11eb-9c95-f258d3ab1e34.png)
+![image](images/107104737-96ee1580-682b-11eb-9c95-f258d3ab1e34.png)
 
 You can provide a URL of a repository hosted on GitHub, GitLab, BitBucket, as well as of a self-hosted one. Testomat.io will use this URL to navigate you from test cases straight to the source code. Please make sure that the URL is pointing to the *directory where the tests are located*. In the following steps we show in detail how to import tests from that directory.
 
@@ -39,11 +39,11 @@ Click the **Create** button to start a new project.
 
 When your project is created, click the **Import from Source Code** button.
 
-![image](/assets/107104789-df0d3800-682b-11eb-86ec-88642d299d96.png)
+![image](images/107104789-df0d3800-682b-11eb-86ec-88642d299d96.png)
 
 In the **Import** section, you are asked to pick the framework and programming language you use for tests.
 
-![image](/assets/107104794-e3d1ec00-682b-11eb-8913-3d0c563515eb.png)
+![image](images/107104794-e3d1ec00-682b-11eb-8913-3d0c563515eb.png)
 
 > If you don't see the framework you work with in this list - please contact us, and we will do our best to add support for it soon! 
 
@@ -53,23 +53,23 @@ Once you have chosen the framework and the language, you will be provided with a
 
 Open a terminal, navigate to the tests folder in your project and execute the command. 
 
-![image](/assets/107104824-03691480-682c-11eb-9c1a-0ace4b446459.png)
+![image](images/107104824-03691480-682c-11eb-9c1a-0ace4b446459.png)
 
 Seeing a report on how many tests were found means that the import command was executed successfully:
 
-![image](/assets/107104827-09f78c00-682c-11eb-9cc5-b014113fb65f.png)
+![image](images/107104827-09f78c00-682c-11eb-9cc5-b014113fb65f.png)
 
 If you don't see a similar message, this might be because our default settings do not work for you. Please check the command's API change command parameters so it could find tests. The most common issues with import are different file naming format and/or incorrect directory for import.
 
-![image](/assets/107104832-0fed6d00-682c-11eb-993a-afb4082cdf01.png)
+![image](images/107104832-0fed6d00-682c-11eb-993a-afb4082cdf01.png)
 
 When the tests are finally imported, reopen the project, and you will see that all tests with their folders and files are shown on Testomat.io.
 
-![image](/assets/107104839-1845a800-682c-11eb-923f-23cf29f7687f.png)
+![image](images/107104839-1845a800-682c-11eb-923f-23cf29f7687f.png)
 
 All imported tests are marked as "Automated" by default. If you click on any of those tests, you will see its code and a link to its repository. Please, check that the link actually points to the corresponding file. Otherwise, you might want to change the repository URL in project settings. 
 
-![image](/assets/107104862-3c08ee00-682c-11eb-8692-3df3e95c4aad.png)
+![image](images/107104862-3c08ee00-682c-11eb-8692-3df3e95c4aad.png)
 
 
 ## What's Next?

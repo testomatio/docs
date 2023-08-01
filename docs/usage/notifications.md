@@ -18,83 +18,83 @@ Let's see how it works!
 First, you need to set up Email notifications in the Settings tab. 
 Click on **Report Notifications** and click on **Add Notification Rule**
 
-![notif](/assets/114755380-3cf55900-9d62-11eb-90ed-47f5599af45e.jpg)
+![notif](images/114755380-3cf55900-9d62-11eb-90ed-47f5599af45e.jpg)
 
 At this point your next steps are:
 
 1. Enter a title for Notification Rule
 2. Choose **Email** from the list
 
-![notif 1](/assets/114756835-d4a77700-9d63-11eb-994c-c49e6dd2b36d.jpg)
+![notif 1](images/114756835-d4a77700-9d63-11eb-994c-c49e6dd2b36d.jpg)
 
 3. Enter Email or multiple Emails you want to response
 4. Customize these fields in BASIC RULES or use ADVANCED RULES ENGINE to enter your rule expression
 5. Click on Save button
 
-![notif 2](/assets/114757338-66af7f80-9d64-11eb-82cb-c52de1b2a967.jpg)
+![notif 2](images/114757338-66af7f80-9d64-11eb-82cb-c52de1b2a967.jpg)
 
 Now you have Email Notification enabled for the project. 
 
-![notif 4](/assets/114757724-df164080-9d64-11eb-962a-f095ce83c288.jpg)
+![notif 4](images/114757724-df164080-9d64-11eb-962a-f095ce83c288.jpg)
 
 How does it work?
 Each time Testomat.io creates Run Report which corresponds to your Email Notification Rule it will be sent to email.
 
-![notif 6](/assets/114760162-b5aae400-9d67-11eb-8df0-f404ede91377.jpg)
+![notif 6](images/114760162-b5aae400-9d67-11eb-8df0-f404ede91377.jpg)
 
 Please note, that you can set up multiple Email Notifications for different Run reports.
 
-![notif 7](/assets/114759624-14bc2900-9d67-11eb-8ed7-958bd403726d.jpg)
+![notif 7](images/114759624-14bc2900-9d67-11eb-8ed7-958bd403726d.jpg)
 
 ## Slack 
 
 Testomatio can send notifications to a specific Slack channel. Prepare a channel inside Slack workspace to which notifications will be sent:
 
-![image](/assets/114852582-92297d00-9deb-11eb-8da9-a4d6525f7e9e.png)
+![image](images/114852582-92297d00-9deb-11eb-8da9-a4d6525f7e9e.png)
 
 To enable Slack notification [create an incoming webhook by opening this link](https://slack.com/intl/en-ua/help/articles/115005265063-Incoming-webhooks-for-Slack). Create a new Slack App:
 
-![image](/assets/114852675-a79ea700-9deb-11eb-9670-71da8c3016cc.png)
+![image](images/114852675-a79ea700-9deb-11eb-9670-71da8c3016cc.png)
 
 Activate webhooks for this app:
 
-![image](/assets/114852767-c13fee80-9deb-11eb-8e95-6794b562da78.png)
+![image](images/114852767-c13fee80-9deb-11eb-8e95-6794b562da78.png)
 
-![image](/assets/114852831-d1f06480-9deb-11eb-8196-f9e92399ed7a.png)
+![image](images/114852831-d1f06480-9deb-11eb-8196-f9e92399ed7a.png)
 
 Add a new webhook for app:
 
-![image](/assets/114853120-2398ef00-9dec-11eb-9790-e314ba5513da.png)
+![image](images/114853120-2398ef00-9dec-11eb-9790-e314ba5513da.png)
 
 Select a channel to which notification will be sent:
 
-![image](/assets/114853283-4c20e900-9dec-11eb-9b99-16818252f4f4.png)
+![image](images/114853283-4c20e900-9dec-11eb-9b99-16818252f4f4.png)
 
 Copy Webhook URL:
 
-![image](/assets/114853409-6c50a800-9dec-11eb-8955-6ebd75b7c9dc.png)
+![image](images/114853409-6c50a800-9dec-11eb-8955-6ebd75b7c9dc.png)
 
 Create a new notification in Testomatio, select "Slack" and paste webhook URL into Url:
 
-![image](/assets/114853537-8db19400-9dec-11eb-8b28-667cd98995b1.png)
+![image](images/114853537-8db19400-9dec-11eb-8b28-667cd98995b1.png)
 
 ## MS Teams
 To send noitifcations in MS Teams you need to set up incoming webhooks for your channel. Steps to configure:
 * Navigate to "Apps" panel 
 
-![image](/assets/115186669-ca320800-a0ea-11eb-9a32-9984a9569427.png)
+![image](images/115186669-ca320800-a0ea-11eb-9a32-9984a9569427.png)
 
 * Search for "Incoming Webhook" and add it
 
-![image](/assets/115186740-ed5cb780-a0ea-11eb-9bda-6f5b1bd6201d.png)
+![image](images/115186740-ed5cb780-a0ea-11eb-9bda-6f5b1bd6201d.png)
 
 * Configure it and copy webhook url
 
-![image](/assets/115186899-2301a080-a0eb-11eb-8a11-0b44b4e7fbe9.png)
+![image](images/115186899-2301a080-a0eb-11eb-8a11-0b44b4e7fbe9.png)
 
 * Create a new notification in Testomatio, select "ms_teams" and paste webhook URL into Url:
 
-![image](/assets/115187240-a7542380-a0eb-11eb-88d1-ac8c3bb204a0.png)
+![image](images/115187240-a7542380-a0eb-11eb-88d1-ac8c3bb204a0.png)
 
 ## Jira Notifications
 
@@ -104,20 +104,20 @@ To do this, you need to connect Jira project with Testomat.io. Please see dedica
 1. Enter a name to your Notification rule
 2. Pick Jira from Notification Type drop-down
 
-![image](/assets/128397211-1e2aa7d8-3014-4e38-a6a6-4e1fc17adb1b.png)
+![image](images/128397211-1e2aa7d8-3014-4e38-a6a6-4e1fc17adb1b.png)
 
 3. Pick your dedicated Jira project from Jira Project drop-down
 4. Pick needed issue type from Issue Type drop-down
 5. Configure rules to define on which conditions this notification should be sent
 6.  Click on Save button
 
-![image](/assets/128397891-3d29412d-6d31-40a2-9b8f-df166c7e6943.png)
+![image](images/128397891-3d29412d-6d31-40a2-9b8f-df166c7e6943.png)
 
 Now Testomat.io will create an issue with detailed information on Test Run results within your Jira project for failed Test Runs. So you don't need to put all the data on each Test Run manually. This helps to save time and notify all contributors in a convenient way.
 
-![image](/assets/128398229-af615eaa-cccc-4251-8d3d-79cc69685f2e.png)
+![image](images/128398229-af615eaa-cccc-4251-8d3d-79cc69685f2e.png)
 
-![image](/assets/128398538-dc5f3fed-babb-4e10-bd7a-fe7ccc9b3bd2.png)
+![image](images/128398538-dc5f3fed-babb-4e10-bd7a-fe7ccc9b3bd2.png)
 
 ## Notification Rules
 
@@ -125,13 +125,13 @@ Testomatio has powerful rule engine which can be used to define on which conditi
 
 There is a basic and advanced rules engine:
 
-![image](/assets/114849114-1f6ad280-9de8-11eb-9621-699f534196d6.png)
+![image](images/114849114-1f6ad280-9de8-11eb-9621-699f534196d6.png)
 
 ### Basic Rules
 
 Inside Basic rules you can define simple conditions on which notifications should be sent. For instance, here is the rule for all manual with "Release" word to be reported:
 
-![image](/assets/114849446-6ce73f80-9de8-11eb-950c-55d4921a51c4.png)
+![image](images/114849446-6ce73f80-9de8-11eb-950c-55d4921a51c4.png)
 
 ### Advanced Rules
 

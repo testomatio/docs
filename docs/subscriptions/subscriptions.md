@@ -61,36 +61,36 @@ You decided to upgrade your Subscription at Testomat.io. First, you need to crea
 
 1. Go to the Companies tab on a dashboard
 
-![image](/assets/134371042-78686e98-5b7e-467b-8ff5-b77402aa9540.png)
+![image](images/134371042-78686e98-5b7e-467b-8ff5-b77402aa9540.png)
 
 2. Click on Create button
 
-![image](/assets/134371212-c296a7a7-c345-4ba4-bfbf-b29718170068.png)
+![image](images/134371212-c296a7a7-c345-4ba4-bfbf-b29718170068.png)
 
 3. Enter the name for your company
 4. Click on Create button
 
-![image](/assets/134371353-d8506558-fea2-49c7-88f0-3f49a4c39ffd.png)
+![image](images/134371353-d8506558-fea2-49c7-88f0-3f49a4c39ffd.png)
 
 5. Now your Company is created
 
-![image](/assets/134372022-6e0c2ede-a16a-49f5-8e33-f1cd7a51226a.png)
+![image](images/134372022-6e0c2ede-a16a-49f5-8e33-f1cd7a51226a.png)
 
 6. Now you can click on the Upgrade button
 
-![image](/assets/134372289-c75542cc-7f62-4855-ab19-81bbd02ad1d4.png)
+![image](images/134372289-c75542cc-7f62-4855-ab19-81bbd02ad1d4.png)
 
 7. Pick Subscription Plan, amount of users, and type of payment (1)and click on the Upgrade button (2)
 
-![image](/assets/134368580-7aa5e926-39df-4a03-ae10-4c54d4d4f864.png)
+![image](images/134368580-7aa5e926-39df-4a03-ae10-4c54d4d4f864.png)
 
 8. You will be redirected to the Payments page. Here you need to enter payment data and click on the Subscribe button
 
-![image](/assets/134369809-8131148e-b249-495a-b2e9-b71098b52ac2.png)
+![image](images/134369809-8131148e-b249-495a-b2e9-b71098b52ac2.png)
 
 9. Congratulations! 🎉 You upgraded your subscription 
 
-![image](/assets/134372540-edc6e445-67a0-4b27-9207-1e0e0c6248ba.png)
+![image](images/134372540-edc6e445-67a0-4b27-9207-1e0e0c6248ba.png)
 
 ## How To Manage Team Members Within a Company 
 
@@ -103,31 +103,31 @@ If you want to reduce the amount you’re charged, you’ll need to first delete
 
 1. Go to the Companies tab on a dashboard and click the Edit button
 
-![image](/assets/135045215-656098fb-84ca-472f-9a2a-eebbfdb46ecc.png)
+![image](images/135045215-656098fb-84ca-472f-9a2a-eebbfdb46ecc.png)
 
 2. Click on the Manage Subscription button
 
-![image](/assets/134401557-75e1c3ca-7549-4577-a3f8-dbc27603ccdf.png)
+![image](images/134401557-75e1c3ca-7549-4577-a3f8-dbc27603ccdf.png)
 
 3. You will be redirected to the billing page. Here you need to click on the Update Plan button
 
-![image](/assets/135114221-9cf0d0ef-fba6-4b8d-b860-bf90195bf141.png)
+![image](images/135114221-9cf0d0ef-fba6-4b8d-b860-bf90195bf141.png)
 
 4. Pick the Update quantity button
 
-![image](/assets/135114492-40815b7e-2b50-483c-8fa3-3e9b543c9ef1.png)
+![image](images/135114492-40815b7e-2b50-483c-8fa3-3e9b543c9ef1.png)
 
 5. Set the needed number of members and click Confirm button
 
-![image](/assets/134404348-d6ba6a4d-fb4a-494b-803b-6099211c6d4d.png)
+![image](images/134404348-d6ba6a4d-fb4a-494b-803b-6099211c6d4d.png)
 
 6. Now you see changed amount of users in your Companyand can go back to Testomat.io
 
-![image](/assets/134407002-4d2f7680-591f-42dd-965d-5b6c8b0710ee.png)
+![image](images/134407002-4d2f7680-591f-42dd-965d-5b6c8b0710ee.png)
 
 7. In Testomat.io you also will see updated amount of users 
 
-![image](/assets/135050703-6abbc4f8-78b8-43b5-bd7b-9375994c0308.png)
+![image](images/135050703-6abbc4f8-78b8-43b5-bd7b-9375994c0308.png)
 
 
 ## How To Upgrade And Downgrade Subscription Plan
@@ -138,19 +138,19 @@ To do this you need to use steps 1-3 described above to get to the billing page.
 
 4. Pick the subscription plan you want to use and click the Continue button 
 
-![image](/assets/135110702-e3f1925c-2a68-4359-ad19-a3f3481cc87d.png)
+![image](images/135110702-e3f1925c-2a68-4359-ad19-a3f3481cc87d.png)
 
 5. Check the billing information and click on Confirm button 
 
-![image](/assets/135111106-e7b04eac-cd96-435b-aab6-a24bfd1e5d69.png)
+![image](images/135111106-e7b04eac-cd96-435b-aab6-a24bfd1e5d69.png)
 
 6. See your subscription plan was changed
 
-![image](/assets/135111719-479ca4f3-d965-45b4-a11b-ecba7e4cd041.png)
+![image](images/135111719-479ca4f3-d965-45b4-a11b-ecba7e4cd041.png)
 
 7. In Testomat.io you also will see updated subscription plan
 
-![image](/assets/135112171-c5784376-31e3-4800-b423-c4085b8c5788.png)
+![image](images/135112171-c5784376-31e3-4800-b423-c4085b8c5788.png)
 
 With the same steps, you can downgrade your subscription.
 
@@ -163,7 +163,7 @@ Since billing occurs automatically, there is no need to manually renew your plan
 
 To cancel your subscription, click the Cancel button on the billing page:
 
-![image](/assets/135117844-c7da2a7c-31a4-4dd4-bfa9-b1e56fbacffb.png)
+![image](images/135117844-c7da2a7c-31a4-4dd4-bfa9-b1e56fbacffb.png)
 
 You will continue to have access to your current subscription level until the end of your current (already paid) billing period. At that point, any features beyond those allowed on the Free plan will be deactivated. If you renew or upgrade your subscription, your deactivated features and projects will be available again.
 
@@ -171,7 +171,7 @@ You will continue to have access to your current subscription level until the en
 
 When your subscription is canceled your company is set to Free plan with appropriate limitations. You may [see it above ](https://docs.testomat.io/usage/subscriptions/#how-to-use-testomat.io-as-a-free-subscription-plan). Some of your projects may be locked, but not lost. Member added above Free Plan limit will be moved to removed section in Companies section and won't have access to projects. You can contact support to get the data from the locked projects or upgrade to unlock it. 
 
-![image](/assets/135133257-c34357db-2d9f-461f-9618-54c41774ffc6.png)
+![image](images/135133257-c34357db-2d9f-461f-9618-54c41774ffc6.png)
  
 
 ## Frequently Asked Questions

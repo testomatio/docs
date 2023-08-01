@@ -17,11 +17,11 @@ Bulk edit is an advanced tool that allows to restructure tests in a project. Wit
 
 Bulk edit mode can be opened from the Tests screen:
 
-![image](/assets/107284429-7e1d7400-6a66-11eb-8b34-651d914d8b69.png)
+![image](images/107284429-7e1d7400-6a66-11eb-8b34-651d914d8b69.png)
 
 A bulk editor may look confusing at first:
 
-![image](/assets/107284522-9f7e6000-6a66-11eb-9ba3-1a9f91fa143f.png)
+![image](images/107284522-9f7e6000-6a66-11eb-9ba3-1a9f91fa143f.png)
 
 It has an editor with a project represented in text format, a live-preview and a button to apply changes. Don't worry, clicking "Preview" won't execute any changes on the project. You will see the list of planned changes and a confirmation button to accept them. To make yourself comfortable with bulk editor follow the next sections:
 
@@ -33,7 +33,7 @@ We use [YAML format](https://yaml.org) to structure data. If you are not familia
 
 In "Bulk Edit" mode all suites and tests are presented in YAML format.
 
-![image](/assets/107280279-cc2f7900-6a60-11eb-80fb-5c29d105ee2f.png)
+![image](images/107280279-cc2f7900-6a60-11eb-80fb-5c29d105ee2f.png)
 
 It may be hard to understand it from start. 
 But let's explain it step by step:
@@ -99,11 +99,11 @@ Let's sum up what we learned so far:
 
 * listing existing suites and tests
 
-![image](/assets/107282607-e28b0400-6a63-11eb-9c72-a2e28935a0f0.png)
+![image](images/107282607-e28b0400-6a63-11eb-9c72-a2e28935a0f0.png)
 
 * adding a new tests and suites:
 
-![image](/assets/107282791-25e57280-6a64-11eb-8b98-bcc8f4c141e1.png)
+![image](images/107282791-25e57280-6a64-11eb-8b98-bcc8f4c141e1.png)
 
 ## Keyboard Shortcuts
 
@@ -112,19 +112,19 @@ To unleash the full power of bulk edit learn these keyboard combinations that wi
 * Use **Alt+Up** to move current line one level higher.
 * Use **Alt+Down** to move one level lower.
 
-![move-elements](/assets/107283660-5bd72680-6a65-11eb-8235-5ea701818858.gif)
+![move-elements](images/107283660-5bd72680-6a65-11eb-8235-5ea701818858.gif)
 
 * Also you may select a block of text and move it with **Alt+Up** or **Alt+Down**
 
-![move-suite](/assets/107283762-7e693f80-6a65-11eb-8791-1ec1a73fca04.gif)
+![move-suite](images/107283762-7e693f80-6a65-11eb-8791-1ec1a73fca04.gif)
 
 * Use **Cmd+Right** or **Ctrl+Right** to indent a block to move it to next nesting level
 
-![move-indent](/assets/107283909-b07aa180-6a65-11eb-8f7a-277e4c5390a2.gif)
+![move-indent](images/107283909-b07aa180-6a65-11eb-8f7a-277e4c5390a2.gif)
 
 * Use **Cmd+d** or **Ctrl+d** to make a multiple selection. This allows replace values on the fly.
 
-![replace](/assets/107284209-1830ec80-6a66-11eb-9737-3e672ff149d3.gif)
+![replace](images/107284209-1830ec80-6a66-11eb-9737-3e672ff149d3.gif)
 
 
 
@@ -161,22 +161,22 @@ So the main rule here is **suite can contain only tests or suites but not both**
 
 Your project may contain a huge amount of tests and suites. So it will be more convenient to edit tests at the suite level. See how it works: 
 
-![CleanShot 2022-05-23 at 16 36 22@2x](/assets/169832053-494c7134-e117-4cc9-8837-2272e69e790b.jpg)
+![CleanShot 2022-05-23 at 16 36 22@2x](images/169832053-494c7134-e117-4cc9-8837-2272e69e790b.jpg)
 
-![CleanShot 2022-05-23 at 16 40 43@2x](/assets/169832839-f67f3cad-73b7-43ff-ba00-b4ecd4296c2f.jpg)
+![CleanShot 2022-05-23 at 16 40 43@2x](images/169832839-f67f3cad-73b7-43ff-ba00-b4ecd4296c2f.jpg)
 
-![CleanShot 2022-05-23 at 16 43 01@2x](/assets/169833139-498a319e-5449-4c92-b16e-8e7c08987150.jpg)
+![CleanShot 2022-05-23 at 16 43 01@2x](images/169833139-498a319e-5449-4c92-b16e-8e7c08987150.jpg)
 
-[![CleanShot 2022-05-27 at 20 21 06@2x](/assets/170759894-469aac18-08b7-407f-938e-eda4037dc4b8.jpg)](https://youtu.be/Cp7XJynF7u4)
+[![CleanShot 2022-05-27 at 20 21 06@2x](images/170759894-469aac18-08b7-407f-938e-eda4037dc4b8.jpg)](https://youtu.be/Cp7XJynF7u4)
 
 ## Bulk Tests Creation
 
 You want to enter only tests' names and save them for further completion. Our Bulk Tests Creation feature is intended to help you. You only need to create a suite, enable Bulk toggle, enter a test per line and click Create. 
 
-![CleanShot 2022-05-24 at 11 33 02@2x](/assets/169987645-2cb28827-6569-4457-bf88-112c3c9d9c9e.jpg)
+![CleanShot 2022-05-24 at 11 33 02@2x](images/169987645-2cb28827-6569-4457-bf88-112c3c9d9c9e.jpg)
 
-![CleanShot 2022-05-24 at 11 38 38@2x](/assets/169989236-8963210b-a603-4759-879e-76e76d2830d2.jpg)
+![CleanShot 2022-05-24 at 11 38 38@2x](images/169989236-8963210b-a603-4759-879e-76e76d2830d2.jpg)
 
-![CleanShot 2022-05-24 at 11 44 10@2x](/assets/169989963-978d9064-245b-486f-9715-2a9e349b5199.jpg)
+![CleanShot 2022-05-24 at 11 44 10@2x](images/169989963-978d9064-245b-486f-9715-2a9e349b5199.jpg)
 
-[![CleanShot 2022-05-27 at 20 19 26@2x](/assets/170759254-e6d4379b-733e-4521-98f3-abccca6eaffa.jpg)](https://youtu.be/jnJwZsRQjTQ)
+[![CleanShot 2022-05-27 at 20 19 26@2x](images/170759254-e6d4379b-733e-4521-98f3-abccca6eaffa.jpg)](https://youtu.be/jnJwZsRQjTQ)

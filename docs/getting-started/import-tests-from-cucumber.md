@@ -18,7 +18,7 @@ Moreover, when you have hundreds and thousands of tests on your hands, some thin
 
 Register at [app.testomat.io](https://app.testomat.io) and activate your user account. Then create a new project.
 
-![image](/assets/107104713-7f169180-682b-11eb-9c8d-ee4d5583e184.png)
+![image](images/107104713-7f169180-682b-11eb-9c8d-ee4d5583e184.png)
 
 The type of your new project will influence the look of your interface, as well as its intended audience. Choose **BDD Project** if you plan to follow BDD descriptions or use the Cucumber framework in future. If you haven't decided yet, you can start with default **Classical Project**. Depending on your choice, the interface will differ, as follows:
 
@@ -27,7 +27,7 @@ The type of your new project will influence the look of your interface, as well 
 
 > In this section of the Guide, we discuss the issues concerning BDD Projects. If you need to import a Classical Project, go to the [Import Tests From Source Code](https://docs.testomat.io/getting-started/import-tests-from-source-code/#why-do-i-need-to-import-my-tests) section of this guide.
 
-![image](/assets/107104996-d832f500-682c-11eb-9ee5-1c417353992f.png)
+![image](images/107104996-d832f500-682c-11eb-9ee5-1c417353992f.png)
 
 You can provide a URL of a repository hosted on GitHub, GitLab, BitBucket, as well as of a self-hosted one. Testomat.io will use this URL to navigate you from test cases straight to the source code. Please make sure that the URL is pointing to the *directory where the tests are located*. 
 
@@ -39,11 +39,11 @@ Click the **Create** button to start a new project.
 
 When your project is created, click the **Import from Source Code** button.
 
-![image](/assets/107105020-00225880-682d-11eb-985a-9843fedbcaf3.png)
+![image](images/107105020-00225880-682d-11eb-985a-9843fedbcaf3.png)
 
 When the **Import Project From Source Code** screen opens, you will need to pick Cucumber as your project framework. 
 
-![image](/assets/107105023-057fa300-682d-11eb-8bad-c39ed610a157.png)
+![image](images/107105023-057fa300-682d-11eb-8bad-c39ed610a157.png)
 
 > If you use BDD with CodeceptJS, choose CodeceptJS as your project framework and select "Gherkin" as your project language.
 
@@ -55,13 +55,13 @@ Open a terminal, navigate to the project folder in your project and execute the 
 npx check-cucumber@latest "**/*.feature" --dir path/to/features
 ```
 
-![image](/assets/107105061-2e079d00-682d-11eb-9865-0e00de9b2842.png)
+![image](images/107105061-2e079d00-682d-11eb-9865-0e00de9b2842.png)
 
 Seeing a report on how many tests were found means that the import command was executed successfully. If you don't see a similar message, you might need to change the pattern to match files or the directory to scan. Open the API reference of check-cucumber command to learn how to do that.
 
 Refresh the page and you will see all the imported test files.
 
-![image](/assets/107105070-365fd800-682d-11eb-8f30-6c259153b1ff.png)
+![image](images/107105070-365fd800-682d-11eb-8f30-6c259153b1ff.png)
 
 ## Import Manual BDD Tests from Source Code
 

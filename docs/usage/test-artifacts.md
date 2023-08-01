@@ -14,7 +14,7 @@ By using external storage Testomat.io allows getting full control over how the s
 
 Test artifacts can be uploaded with **public (default) or private** access to a bucket
 
-![testomatio-s3](/assets/142726285-1ce87a76-3e1c-47ec-8f35-f3baddcf1684.png)
+![testomatio-s3](images/142726285-1ce87a76-3e1c-47ec-8f35-f3baddcf1684.png)
 
 1. reporter sends a file to S3 storage and sends link back to Testomat.io
 2. Testomat.io displays artifacts by the link in public mode or pre-signed links in private mode
@@ -31,7 +31,7 @@ If you need a more secure approach use **private access** mode. In this case, yo
 
 Testomat.io will require read access to S3 storage to access those files and pre-sign them. Provide credentials to access the S3 bucket where test artifacts are stored on "Project > Settings > Artifacts" page:
 
-![image](/assets/142726276-7863a036-0347-4cc6-a919-000008bffa92.png)
+![image](images/142726276-7863a036-0347-4cc6-a919-000008bffa92.png)
 
 > Test Artifacts settings are available only to managers and owners of a project
 

@@ -8,8 +8,9 @@ const sections = require('./sections')
 const humanize = (s) => s.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase()+' '; });
 const slugify = require('slugify')
 const dasherize = (str) => slugify(str.toLowerCase());
+const { globSync } = require('glob');
 
-const token = `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`;
+const token = process.env.GH_PAT;
 const octokit = new Octokit({ auth: token });
 
 const FETCH_ISSUES_REQUEST = 'GET /repos/{owner}/{repo}/issues?labels={label}&sort=comments&direction=desc'
@@ -17,69 +18,48 @@ const FETCH_ISSUES_REQUEST = 'GET /repos/{owner}/{repo}/issues?labels={label}&so
 
 module.exports = {
   async docs() {
+    // deprecated
+  },
 
-    if (!fs.existsSync('issues')){
-        fs.mkdirSync('issues');
-    }
+  async docsImages() {
+    const files = globSync("docs/**/*.md");
+    
+    for (const file of files) {
+      console.log(`Processing ${file}`);
+      const content = fs.readFileSync(file).toString();
 
-    for (const section of sections) {
-      const resp = await octokit.request(FETCH_ISSUES_REQUEST, {
-        owner: 'testomatio',
-        repo: 'docs',
-        label: section
-      })
+      const destinationFolder = path.join(path.dirname(file), 'images');
 
-      const dir = `src/${section}`;
-      if (!fs.existsSync(dir)){
-          fs.mkdirSync(dir);
+      if (!fs.existsSync(destinationFolder)) {
+        fs.mkdirSync(destinationFolder, { recursive: true });
       }
 
-      // https://user-images.githubusercontent.com/77803888/216118898-c2ead11f-b9a2-44b5-919b-183176893c25.jpg
+      const imageUrls = content.match(/!\[.*?\]\((.*?)\)/g)?.map(match => match.match(/!\[.*?\]\((.*?)\)/)[1]) || [];
+      console.log(imageUrls);
 
-      for (const { title, body } of resp.data) {
+      let updatedContent = content;
 
-        const markdownText = await processMarkdown(body);
+      if (!imageUrls.length) continue;
 
-        fs.writeFileSync(`src/${section}/${dasherize(title)}.md`,
-`---
-permalink: /${section}/${dasherize(title)}
-title: ${title}
-editLink: false
----
-
-# ${title}
-
-${markdownText}`);
+      for (const imageUrl of imageUrls) {
+        if (imageUrl.startsWith('http')) {
+          try {
+            await downloadImage(imageUrl, destinationFolder);
+            updatedContent = updatedContent.replace(imageUrl, `images/${path.basename(imageUrl)}`);
+          } catch (err) {}
+          continue;
+        }
+        try {
+          fs.renameSync(path.join('docs/.vuepress/public', imageUrl), path.join(destinationFolder, path.basename(imageUrl)), { overwrite: true });
+        } catch (err) {}
+        updatedContent = updatedContent.replace(imageUrl, `images/${path.basename(imageUrl)}`);
       }
 
-      console.log(`${section}: ${resp.data.length} files written`)
-      await writeToFile(`issues/${section}.js`, out => {
-        out.line('module.exports = [');
-        resp.data.forEach(({ title }) => out.line(`  "/${section}/${dasherize(title)}",`))
-        out.line(']');
-      });
+      // updatedContent = content.replace(/!\[.*?\]\((\/assets\/.*?)\)/g, "![$&](images$1)");
 
-
+      // console.log(updatedContent);
+      fs.writeFileSync(file, updatedContent);
     }
-    if (!fs.existsSync('src/reference')){
-        fs.mkdirSync('src/reference');
-    }
-
-    await this.docsReporter();
-    await this.docsImporter();
-
-    await writeToFile(`issues/reference.js`, out => {
-      out.line('module.exports = [');
-      out.line(' "/reference/import",')
-      out.line(' "/reference/reporter",')
-      out.line(']');
-    });
-
-    await writeToFile(`issues/index.js`, out => {
-      out.line(`module.exports = {`)
-      sections.forEach(section => out.line(`  "${section}": require('./${section}'),`))      
-      out.line(`}`)
-    });
   },
 
   async docsReporter() {
@@ -207,8 +187,9 @@ async function downloadImage(imageUrl, destinationFolder) {
     return filename;
   } catch (error) {
     console.error(`Failed to download image: ${imageUrl} ${error}`);
-    process.exit(1);
-    return null;
+    // process.exit(1);
+    throw error;
+    // return null;
   }
 }
 

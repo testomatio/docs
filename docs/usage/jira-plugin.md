@@ -18,28 +18,28 @@ Namely, you can:
 
 When you are not logged in Testomatio (1), you are able to view tests and suites linked to the issue and (2)
 
-![image](/assets/125158928-c7403400-e17c-11eb-864d-bc823ff7ba62.png)
+![image](images/125158928-c7403400-e17c-11eb-864d-bc823ff7ba62.png)
 
-![image](/assets/125158874-6d3f6e80-e17c-11eb-8b70-454470ef25b8.png)
+![image](images/125158874-6d3f6e80-e17c-11eb-8b70-454470ef25b8.png)
 
 Also, you can look through the Test Coverage screen 
 
-![image](/assets/125159258-08394800-e17f-11eb-828e-4a2fbddbb00e.png)
+![image](images/125159258-08394800-e17f-11eb-828e-4a2fbddbb00e.png)
 
 ## How To Log In
 
 To use more Testomatio Jira Plugin options you need to log in to Testomatio.
 This can be done directly from the Jira issue
 
-![image](/assets/125162637-bcdc6500-e191-11eb-8b9f-ff029b7b2419.png)
+![image](images/125162637-bcdc6500-e191-11eb-8b9f-ff029b7b2419.png)
 
 Or you can do this from Apps
 
-![image](/assets/125159739-ebeada80-e181-11eb-818e-e439c7150a10.png)
+![image](images/125159739-ebeada80-e181-11eb-818e-e439c7150a10.png)
 
 Here you need to (1) enter **your Testomatio** email and password (2) click on Submit button
 
-![image](/assets/125160064-97e0f580-e183-11eb-993c-203e00c6d5ef.png)
+![image](images/125160064-97e0f580-e183-11eb-993c-203e00c6d5ef.png)
 
 Now you can view (1), edit (2), and unlink (3) tests and suites.
 
@@ -54,13 +54,13 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 5. Click on Save button
 6. See your suite created
 
-![image](/assets/125162674-eeedc700-e191-11eb-993f-644a30368069.png)
+![image](images/125162674-eeedc700-e191-11eb-993f-644a30368069.png)
 
-![image](/assets/125161964-15116800-e18e-11eb-9c1e-722400f0468b.png)
+![image](images/125161964-15116800-e18e-11eb-9c1e-722400f0468b.png)
 
-![image](/assets/125162037-79ccc280-e18e-11eb-81ed-a09dbc4668b5.png)
+![image](images/125162037-79ccc280-e18e-11eb-81ed-a09dbc4668b5.png)
 
-![image](/assets/125162084-b993aa00-e18e-11eb-9f0e-d1ef1a65e905.png)
+![image](images/125162084-b993aa00-e18e-11eb-9f0e-d1ef1a65e905.png)
 
 ## How To Create a Test
 
@@ -71,13 +71,13 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 5. Click on Save button
 6. See your test created
 
-![image](/assets/125162422-5f93e400-e190-11eb-9959-140eca400cb9.png)
+![image](images/125162422-5f93e400-e190-11eb-9959-140eca400cb9.png)
 
-![image](/assets/125162475-b7324f80-e190-11eb-8973-fc0e9b93aee7.png)
+![image](images/125162475-b7324f80-e190-11eb-8973-fc0e9b93aee7.png)
 
-![image](/assets/125162497-daf59580-e190-11eb-9b34-b3c3f3b1df24.png)
+![image](images/125162497-daf59580-e190-11eb-9b34-b3c3f3b1df24.png)
 
-![image](/assets/125162517-f660a080-e190-11eb-889a-d8eb2aff3749.png)
+![image](images/125162517-f660a080-e190-11eb-889a-d8eb2aff3749.png)
 
 ## How To Link a Suite to Jira Issue
 
@@ -86,11 +86,11 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 3. Click on Save button
 4. See your suite linked
 
-![image](/assets/125162803-89e6a100-e192-11eb-9f2d-08744cc1cb07.png)
+![image](images/125162803-89e6a100-e192-11eb-9f2d-08744cc1cb07.png)
 
-![image](/assets/125162844-cca87900-e192-11eb-8292-5b050a2087a7.png)
+![image](images/125162844-cca87900-e192-11eb-8292-5b050a2087a7.png)
 
-![image](/assets/125163417-bb14a080-e195-11eb-826f-7dbc9f4c62e8.png)
+![image](images/125163417-bb14a080-e195-11eb-826f-7dbc9f4c62e8.png)
 
 ## How To Link a Test to Jira Issue
 
@@ -99,11 +99,11 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 3. Click on Save button
 4. See your test linked
 
-![image](/assets/125163781-71c55080-e197-11eb-8934-0efc74ccd4be.png)
+![image](images/125163781-71c55080-e197-11eb-8934-0efc74ccd4be.png)
 
-![image](/assets/125164429-d504b200-e19a-11eb-814a-3545a34c4a7c.png)
+![image](images/125164429-d504b200-e19a-11eb-814a-3545a34c4a7c.png)
 
-![image](/assets/125164481-11d0a900-e19b-11eb-8511-253b69c1c61e.png)
+![image](images/125164481-11d0a900-e19b-11eb-8511-253b69c1c61e.png)
 
 ## How To Unlink a Suite
 
@@ -111,11 +111,11 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 2. Click on Unlink button
 3. See your suite was unlinked
 
-![image](/assets/125164798-bacbd380-e19c-11eb-9c5e-3b7fb9997783.png)
+![image](images/125164798-bacbd380-e19c-11eb-9c5e-3b7fb9997783.png)
 
-![image](/assets/125164824-dd5dec80-e19c-11eb-974d-b523a97c9fd6.png)
+![image](images/125164824-dd5dec80-e19c-11eb-974d-b523a97c9fd6.png)
 
-![image](/assets/125164844-02eaf600-e19d-11eb-8f60-ba6c8666e4b8.png)
+![image](images/125164844-02eaf600-e19d-11eb-8f60-ba6c8666e4b8.png)
 
 ## How To Unlink a Test
 
@@ -123,11 +123,11 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 2. Click on Unlink button
 3. See your test was unlinked
 
-![image](/assets/125165066-fd41e000-e19d-11eb-8630-210a1242fa18.png)
+![image](images/125165066-fd41e000-e19d-11eb-8630-210a1242fa18.png)
 
-![image](/assets/125165081-1185dd00-e19e-11eb-85e9-452a2110fe66.png)
+![image](images/125165081-1185dd00-e19e-11eb-85e9-452a2110fe66.png)
 
-![125165108-311d0580-e19e-11eb-8b52-43367f1741ba](/assets/125165409-7261e500-e19f-11eb-9e93-9e9e3335745a.png)
+![125165108-311d0580-e19e-11eb-8b52-43367f1741ba](images/125165409-7261e500-e19f-11eb-9e93-9e9e3335745a.png)
 
 ## How To Edit a Suite 
 
@@ -136,11 +136,11 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 3. Click on Update button
 4. See your suite was updated
 
-![image](/assets/125235737-97636e80-e2eb-11eb-99d2-8a44c06841dd.png)
+![image](images/125235737-97636e80-e2eb-11eb-99d2-8a44c06841dd.png)
 
-![image](/assets/125239698-b36a0e80-e2f1-11eb-8e4b-cc085c99efff.png)
+![image](images/125239698-b36a0e80-e2f1-11eb-8e4b-cc085c99efff.png)
 
-![image](/assets/125236131-21abd280-e2ec-11eb-9145-68e0f660f5e2.png)
+![image](images/125236131-21abd280-e2ec-11eb-9145-68e0f660f5e2.png)
 
 ## How To Edit a Test
 
@@ -148,9 +148,9 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 2. Edit the test
 3. Click on Save button
 
-![image](/assets/125239228-0abbaf00-e2f1-11eb-8f97-0730e477ee65.png)
+![image](images/125239228-0abbaf00-e2f1-11eb-8f97-0730e477ee65.png)
 
-![image](/assets/125239355-39398a00-e2f1-11eb-86b5-746c070ea9b1.png)
+![image](images/125239355-39398a00-e2f1-11eb-86b5-746c070ea9b1.png)
 
 ## How To Edit Feature File for BDD
 
@@ -160,9 +160,9 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 4. Edit Feature File
 5. Click on Update button
 
-![image](/assets/125240526-e8c32c00-e2f2-11eb-8eb5-69f5b77d7397.png)
+![image](images/125240526-e8c32c00-e2f2-11eb-8eb5-69f5b77d7397.png)
 
-![image](/assets/125240629-04c6cd80-e2f3-11eb-8da0-6555ae538513.png)
+![image](images/125240629-04c6cd80-e2f3-11eb-8da0-6555ae538513.png)
 
 <img width="985" alt="Screenshot at Jul 12 09-27-55" src="https://user-images.githubusercontent.com/77803888/125240960-7e5ebb80-e2f3-11eb-9fc9-1ed95883f75c.png">
 
@@ -181,19 +181,19 @@ With Testomatio Plugin you can work with branches within your project directly f
 3. Press Enter
 4. See your branch was created
 
-![image](/assets/125247307-77d44200-e2fb-11eb-9d82-13acdb851766.png)
+![image](images/125247307-77d44200-e2fb-11eb-9d82-13acdb851766.png)
 
-![image](/assets/125246651-bb7a7c00-e2fa-11eb-8fd0-4032bb52a295.png)
+![image](images/125246651-bb7a7c00-e2fa-11eb-8fd0-4032bb52a295.png)
 
 ## Switch Between Branches
 
 You can switch between branches and Main by clicking on the branches button (1) and clicking on Switch To Main (2)
 
-![image](/assets/125247796-034dd300-e2fc-11eb-9ba1-c1b26b2e1cb8.png)
+![image](images/125247796-034dd300-e2fc-11eb-9ba1-c1b26b2e1cb8.png)
 
 ## How To Work Within Branches 
 
 Within the branch, you can do all actions described previously view, edit, unlink, edit Feature File. 
 Test and Suites related to the branch will be marked with a badge with the name of the branch.
 
-![image](/assets/125249279-b8cd5600-e2fd-11eb-8a22-bb3882d792fe.png)
+![image](images/125249279-b8cd5600-e2fd-11eb-8a22-bb3882d792fe.png)

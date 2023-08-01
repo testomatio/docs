@@ -20,31 +20,31 @@ For now, Testomat.io supports import from CSV/XLS for these systems:
 
 You can use **Import from CSV** button on Tests page :
 
-![image](/assets/149749728-40f8b5b0-f945-4a41-b1f7-62b11d45a774.png)
+![image](images/149749728-40f8b5b0-f945-4a41-b1f7-62b11d45a774.png)
 
 Or use **Imports** button on the side menu:
 
-![image](/assets/149753594-80142936-904c-48bd-8446-22d941f7c257.png)
+![image](images/149753594-80142936-904c-48bd-8446-22d941f7c257.png)
 
 Then click on the Menu button and pick **Import From CSV**
 
-![image](/assets/149753979-19e83701-d1bc-407f-993c-52b7701f2c38.png)
+![image](images/149753979-19e83701-d1bc-407f-993c-52b7701f2c38.png)
 
 Pick the format you are going to import:
 
-![image](/assets/149754376-e6dc82ad-2ee5-416b-be50-51227255f3a2.png)
+![image](images/149754376-e6dc82ad-2ee5-416b-be50-51227255f3a2.png)
 
 Click on **Choose file** and pick your file:
 
-![image](/assets/149755082-09d0526f-5950-4b03-bb7c-dda84f3ea9c0.png)
+![image](images/149755082-09d0526f-5950-4b03-bb7c-dda84f3ea9c0.png)
 
 Now click on **Create** button
 
-![image](/assets/149755688-4bacbc4e-6c37-4094-ad91-9d4de42afdd9.png)
+![image](images/149755688-4bacbc4e-6c37-4094-ad91-9d4de42afdd9.png)
 
 And see Testomat.io importing your tests 
 
-![Import From TR](/assets/149757000-33a76baa-503f-4fbe-b9db-4339eff07e20.gif)
+![Import From TR](images/149757000-33a76baa-503f-4fbe-b9db-4339eff07e20.gif)
 
 ## Example Files For Import 
 
@@ -68,7 +68,7 @@ Here you can find samples for each of supported formats:
 Testomat.io allows converting CSV/XLS to BDD Scenarios, where your Precondition equals **Given**, Step = **When**, and Expected Result = **Then**.
 
 
-![image](/assets/149758030-698bfebd-6045-4db9-976c-5c1f95ded5e0.png)
+![image](images/149758030-698bfebd-6045-4db9-976c-5c1f95ded5e0.png)
 
 For this moment this feature is implemented for TestRail. But you can request it for other systems [here](https://testomat.nolt.io/).
 

@@ -12,7 +12,7 @@ Testomat.io provides two trials for you to evaluate all features: a 30 Days Tria
 
 All new users are given a free trial to evaluate Testomat.io features without a commitment. The free trial period allows getting familiar with our features and benefits of delivery with simplified test management using out-of-the-box test automation integration capabilities.
 
-![image](/assets/135104795-40c1a6e9-59b4-4265-a200-f604b9979391.png)
+![image](images/135104795-40c1a6e9-59b4-4265-a200-f604b9979391.png)
 
 **Duration**
 The free trial is offered to all new users and lasts for 30 days from the moment of account creation.
@@ -51,7 +51,7 @@ If your account was created before October 2021 you can request Free Trial here:
 2. in the menu click on Request a Free Trial 
 3. your 30 days Free Trial is activated 
 
-![image](/assets/139681457-b60419cc-575c-4958-90b1-55bdeba2d3bd.png)
+![image](images/139681457-b60419cc-575c-4958-90b1-55bdeba2d3bd.png)
 
 ## How Can I Ask a Question
  
