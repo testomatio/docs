@@ -1,8 +1,42 @@
-module.exports = [
-  'getting-started',
-  'usage',
-  'reference',
-  'integration',
-  'subscriptions',
-  'contact-us'
-];
+module.exports = {
+  'getting-started': [
+    "/getting-started/start-from-scratch",
+    "/getting-started/test-design",
+    "/getting-started/import-tests-from-cucumber",
+    "/getting-started/import-tests-from-source-code",
+    "/getting-started/import-tests-from-csvxls",
+    "/getting-started/running-tests-manually",
+    "/getting-started/running-automated-tests",
+    "/getting-started/managing-runs",    
+  ],
+  'usage': [
+    "/usage/continuous-integration",
+    "/usage/living-documentation",
+    "/usage/bulk-edit",
+    "/usage/labels-and-custom-fields",
+    "/usage/steps-database",
+    "/usage/analytics",
+    "/usage/test-artifacts",
+    "/usage/branches",
+    "/usage/bdd-syntax",
+    "/usage/jira-plugin",
+    "/usage/notifications",    
+  ],
+  'reference': [
+    "/reference/import",
+    "/reference/reporter",    
+  ],
+  'integration': [
+    "/integration/jira",
+    "/integration/issues-management-systems",
+    "/integration/okta-connection",    
+  ],
+  'subscriptions': [
+    "/subscriptions/companies",
+    "/subscriptions/trials",
+    "/subscriptions/subscriptions",    
+  ],
+  'contact-us': [
+    "/contact-us/contact-us",
+  ]
+};

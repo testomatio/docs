@@ -1,8 +1,6 @@
 node_modules
 package-lock.json
-src
+.env
 issues
-!src/.vuepress
-!src/.vuepress/styles
-!src/index.md
-
+docs/.vuepress/.cache
+docs/.vuepress/.temp

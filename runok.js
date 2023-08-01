@@ -3,12 +3,13 @@ const { runok, tasks: { exec, writeToFile } } = require('runok');
 const { Octokit } = require("@octokit/core");
 const axios = require('axios').default;
 const fs = require('fs');
+const path = require('path');
 const sections = require('./sections')
 const humanize = (s) => s.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase()+' '; });
 const slugify = require('slugify')
 const dasherize = (str) => slugify(str.toLowerCase());
 
-const token = `7a1e0b27f7e1f9390a00e703d61f8d87255f1def`;
+const token = `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`;
 const octokit = new Octokit({ auth: token });
 
 const FETCH_ISSUES_REQUEST = 'GET /repos/{owner}/{repo}/issues?labels={label}&sort=comments&direction=desc'
@@ -33,9 +34,12 @@ module.exports = {
           fs.mkdirSync(dir);
       }
 
-      const { title, body } = resp.data;
+      // https://user-images.githubusercontent.com/77803888/216118898-c2ead11f-b9a2-44b5-919b-183176893c25.jpg
 
       for (const { title, body } of resp.data) {
+
+        const markdownText = await processMarkdown(body);
+
         fs.writeFileSync(`src/${section}/${dasherize(title)}.md`,
 `---
 permalink: /${section}/${dasherize(title)}
@@ -45,7 +49,7 @@ editLink: false
 
 # ${title}
 
-${body}`);
+${markdownText}`);
       }
 
       console.log(`${section}: ${resp.data.length} files written`)
@@ -177,3 +181,53 @@ ${content3}
 }
 
 if (require.main === module) runok(module.exports);
+
+
+async function downloadImage(imageUrl, destinationFolder) {
+  try {
+    const img = imageUrl.split('/')[imageUrl.split('/').length - 1];
+
+    if (fs.existsSync(path.join(destinationFolder, img))) {
+      console.log(`Image already exists: ${imageUrl}`);
+      return path.join(destinationFolder, img);
+    }
+
+    const response = await axios.get(imageUrl, { responseType: 'arraybuffer' });
+    const contentType = response.headers['content-type'];
+    const extension = contentType.split('/')[1];
+
+    if (!fs.existsSync(destinationFolder)) {
+      fs.mkdirSync(destinationFolder, { recursive: true });
+    }
+
+    const filename = path.join(destinationFolder, img);
+    fs.writeFileSync(filename, response.data);
+
+    console.log(`Downloaded image: ${imageUrl} => ${filename}`);
+    return filename;
+  } catch (error) {
+    console.error(`Failed to download image: ${imageUrl} ${error}`);
+    process.exit(1);
+    return null;
+  }
+}
+
+async function processMarkdown(markdownText) {
+  const imageRegex = /!\[([^\]]*)\]\((https:\/\/user-images\.githubusercontent\.com[^)]+)\)/g;
+  let updatedMarkdown = markdownText;
+
+  let match;
+  while ((match = imageRegex.exec(markdownText)) !== null) {
+    const fullMatch = match[0];
+    const altText = match[1] || '';
+    const imageUrl = match[2];
+    // const newImageUrl = imageUrl.slice(4, -1); // Removing "![](" and ")" from the URL
+    const newImagePath = await downloadImage(imageUrl, 'src/.vuepress/public/assets');
+    if (newImagePath) {
+      const newImageTag = `![${altText}](/assets/${newImagePath})`;
+      updatedMarkdown = updatedMarkdown.replace(fullMatch, newImageTag);
+    }
+  }
+
+  return updatedMarkdown;
+}
