@@ -14,7 +14,7 @@ When a new project is created, there are multiple options to start:
 2. Import automated tests from source code
 3. Import tests from CSV file from another Test Management System
 
-## **How to create a test**
+## Creating a test
 
 Tests are created within a suite. 
 
@@ -36,6 +36,26 @@ It is also possible to the test straightaway from this screen. Simply input the 
 ![Screenshot_1](images/107253458-fe2fe380-6a3e-11eb-9409-5e49b9d365cb.jpg)
 
 Repeating these steps, you can easily add as many tests as you need within a reasonable period of time.
+
+## Suites and folders
+
+Unlike other test management systems, **Testomat.io doesn't allow suite to include other suites and tests**. That's why you can either create a suite (a collection of tests) or folder (collection of suites).
+
+::: warning
+When creating a suite you will need to explicitly set its type: a suite or a folder.
+:::
+
+This was designed so tests structure could match the filesystem. For instance, if you use BDD project, feature file can contain scenarios, but can't contain other feature files. The same for automated tests, a file can contain tests but can't contain other files. 
+
+It's assumed that in any moment a manual test can be automated, so it is important to keep the filesystem structure in a project.
+
+An empty suite can be converted to folder or vice versa
+
+![Empty suite](images/image-1.png)
+
+Also you can set an emoji icon for the suite
+
+![Emoji pick](images/image-2.png)
 
 ## **How to add a label/tag to a test**
 
