@@ -51,7 +51,7 @@ Before you execute your tests, you might want to specify the run environment opt
 
 You will see the list of all test cases when the test execution is launched. Mark them as passed or failed. When a test check fails, you can write the description of the failure and attach a relevant image.
 
-![Execute test](<images/Google Chrome-Manual Run - #5023c525 - Testomat.io-2023-08-02 at 12.35.19@2x.png>)
+![Execute tests](images/image-6.png)
 
 Once the run is finished, the overall results of it are available for your review, like this:
 
