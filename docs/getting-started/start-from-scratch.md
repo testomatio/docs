@@ -12,28 +12,30 @@ editLink: true
 
 Register at [app.testomat.io](https://app.testomat.io) and activate your user account. Then create a new project.
 
-![image](images/107103355-0b25ba80-6826-11eb-8ee3-941eea060212.png)
+![Create New Project](<images/Google Chrome-Dashboard - Testomat.io-2023-08-02 at 12.15.58@2x.png>)
 
 The type of your new project will influence the look of your interface, as well as its intended audience. Choose **BDD Project** if you plan to follow BDD descriptions or use the Cucumber framework in future. If you haven't decided yet, you can start with default **Classical Project**. Depending on your choice, the interface will differ, as follows:
 
 * Within a **BDD Project**, you will have feature definitions written both in the source code (by engineers) and in Testomatio (by managers and QAs). So you will be able to track and plan Cucumber automation, as well as synchronize the actual feature files with relevant test cases. When a scenario has changed in the system, but has not been updated in the code yet, you will be notified that this certain scenario is out of date.
 * Within a **Classical Project**, test cases will be written in free form using markdown. Automated tests will be synced up with test cases, so you will be able to see the test description in one tab and the corresponding test code in another tab. When a description of a test case undergoes changes, you will be notified that a certain test might need to be updated.
 
-![image](images/107103409-39a39580-6826-11eb-833b-e23a02e68b24.png)
+![Select type of project](<images/Google Chrome-New Project - Testomat.io-2023-08-02 at 12.19.38@2x.png>)
 
 Fill the name of your project in the **Project Title** field.  The **Repository URL** field is optional, so you can simply skip it. Click the **Create** button to start a new project. 
 
-![image](images/107103420-3e684980-6826-11eb-8aa9-47b440993e49.png)
+![New blank project](<images/Google Chrome-Tests - Testomat.io-2023-08-02 at 12.21.51@2x.png>)
 
 ## Write First Test Cases
 
 Now you can start creating suites and test cases for your projects. We have implemented Bulk Creation input, which enables you to create as many test suites as you need:
 
-![image](images/107103474-6c4d8e00-6826-11eb-8108-f219782bd2d8.png)
+![Create test suite or folder](<images/Google Chrome-Tests - Testomat.io-2023-08-02 at 12.24.32@2x.png>)
+
+![Create test suite or folder](<images/Google Chrome-Tests - Testomat.io-2023-08-02 at 12.27.24@2x.png>)
 
 Select a certain suite to nest the creation of new test cases in that suite. This can be done even faster and more efficiently using the same old Bulk Creation editor:
 
-![image](images/107103529-ae76cf80-6826-11eb-86b1-2af5f76570a9.png)
+![Create test](<images/Google Chrome-Tests - Testomat.io-2023-08-02 at 12.30.05@2x.png>)
 
 When tests are newly created, they are marked as "manual" by default, which shows that they are ready for manual checks.
 
@@ -41,20 +43,20 @@ You can now add descriptions for each test case. However, the roles of these rou
 
 ## Run Manual Tests
 
-![image](images/107103555-c77f8080-6826-11eb-8b26-cc4fb229cd9b.png)
+![Run manual tests](<images/Google Chrome-Runs - Testomat.io-2023-08-02 at 12.31.02@2x.png>)
 
 Before you execute your tests, you might want to specify the run environment options (a list of options is customizable) and the title for this run. Here is how you set the environment for test execution. Click the **Launch** button to execute the tests.
 
-![image](images/107103593-e7af3f80-6826-11eb-82d3-35464c5ed583.png)
+![Choose test plan](<images/Google Chrome-Runs - Testomat.io-2023-08-02 at 12.33.35@2x.png>)
 
 You will see the list of all test cases when the test execution is launched. Mark them as passed or failed. When a test check fails, you can write the description of the failure and attach a relevant image.
 
-![image](images/107103637-0ca3b280-6827-11eb-9251-e2c34ce4b2c0.png)
+![Execute test](<images/Google Chrome-Manual Run - #5023c525 - Testomat.io-2023-08-02 at 12.35.19@2x.png>)
 
 Once the run is finished, the overall results of it are available for your review, like this:
 
-![image](images/107103698-378e0680-6827-11eb-8ee7-b05bdd1fef10.png)
+![Simplified test report](<images/Google Chrome-Runs - Testomat.io-2023-08-02 at 12.36.48@2x.png>)
 
 To get a detailed report of the test run, click on the **Report** button:
 
-![image](images/107103728-51c7e480-6827-11eb-8a68-f62a808f224c.png)
+![Detailed test report](<images/Google Chrome-Report - #5023c525 - Testomat.io-2023-08-02 at 12.37.18@2x.png>)
