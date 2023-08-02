@@ -59,4 +59,4 @@ Once the run is finished, the overall results of it are available for your revie
 
 To get a detailed report of the test run, click on the **Report** button:
 
-![Detailed test report](<images/Google Chrome-Report - #5023c525 - Testomat.io-2023-08-02 at 12.37.18@2x.png>)
+![Detailed test report](images/image-5.png)
