@@ -16,7 +16,7 @@ To have test artifacts uploaded you need to create S3 Object Storage bucket on A
 
 ::: warning Important
 
-You need to obtain the following credentials: `ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`, `BUCKET`, `REGION`, `ENDPOINT` (not required for AWS) to access S3 bucket
+You need to obtain the following credentials: `ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`, `BUCKET`, `REGION`, `ENDPOINT` (not required for AWS) to access S3 bucket. Then to to [Configuration](#configuration) section to enable S3 access. 
 ::: 
 
  If you are unsure how to do that, follow the next section to create S3 bucket on Backblaze and connect it to Testomat.io:
@@ -89,11 +89,22 @@ Testomat.io will require read access to S3 storage to access those files and pre
 
 ## Configuration
 
-S3 Bucket credentials can be set in Settings > Artifacts page. If "Share credentials" is enabled, credentials will be passed to reporter.
+S3 Bucket credentials can be set in Settings > Artifacts page. 
 
-![Alt text](images/image-7.png)
+Enable "Share credentials" toggle to pass credentials into reporter.
+Fill in S3 credentials into the form:
 
-Alternatively, you can configure reporter locally using environment variables. If `S3_BUCKET` environment variable is defined reporter will start uploading test artifacts.
+* `S3_ACCESS_KEY_ID` 
+* `S3_SECRET_ACCESS_KEY`
+* `S3_REGION`
+* `S3_BUCKET`
+* `S3_ENDPOINT`
+
+If you don't have them, [obtain bucket credentials](#how-to-obtain-s3-bucket-for-free)
+
+![Alt text](images/image-8.png)
+
+Alternatively, you can configure reporter by using environment variables. If `S3_BUCKET` environment variable is defined reporter will start uploading test artifacts.
 
 We recommend storing S3 configuration in `.env` files when running tests locally and using job configuration when running on the Continuous Integration server.
 
