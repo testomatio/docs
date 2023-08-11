@@ -14,6 +14,11 @@ By using external storage Testomat.io allows getting full control over how the s
 
 To have test artifacts uploaded you need to create S3 Object Storage bucket on AWS, DigitalOcean, Azure, or Google Cloud Storage in interoperability mode.
 
+::: warning Important
+
+You need to obtain the following credentials: `ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`, `BUCKET`, `REGION`, `ENDPOINT` (not required for AWS) to access S3 bucket
+::: 
+
  If you are unsure how to do that, follow the next section to create S3 bucket on Backblaze and connect it to Testomat.io:
 
 ### How to obtain S3 bucket for free
