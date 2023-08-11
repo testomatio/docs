@@ -8,9 +8,56 @@ editLink: true
 
 To inspect a failing test additional files can be attached to a test. These files are called test artifacts. Testomat.io does not store test artifacts on its own servers. However, you can upload test artifacts to arbitrary S3 compatible storage and allow Testomat.io to display them.
 
-To have test artifacts uploaded you need to have S3 Object Storage bucket on AWS, DigitalOcean, Azure, or Google Cloud in interoperability mode. Testomat.io reporter will upload files to these services and send links back to Testomat.io.
+By using external storage Testomat.io allows getting full control over how the storage is used. You can either clean up old test artifacts or contrary extend storage to store all history for all periods. S3 was chosen as a de-facto standard for file storage so all cloud providers support it. 
 
-By using external storage Testomat.io allows getting full control over how the storage is used. You can either clean up old test artifacts or contrary extend storage to store all history for all periods. S3 was chosen as a de-facto standard for file storage so all cloud providers support it. If you don't have S3 storage yet, you can purchase one from your favorite cloud provider and create a new bucket (storage space) on it. Testomat.io has no direct access to artifacts storage.  
+## Set Up S3 Bucket
+
+To have test artifacts uploaded you need to create S3 Object Storage bucket on AWS, DigitalOcean, Azure, or Google Cloud Storage in interoperability mode.
+
+ If you are unsure how to do that, follow the next section to create S3 bucket on Backblaze and connect it to Testomat.io:
+
+### How to obtain S3 bucket for free
+
+If you don't use AWS you can quickly create S3 storage using [Backblaze Cloud Storage](https://www.backblaze.com/cloud-storage). Sign up (no credit card) required and create first bucket for artifacts:
+
+![Alt text](images/image.png)
+
+Name your bucket with unique id, like `my-company-name-artifacts` and accept all default options:
+
+![Alt text](images/image-1.png)
+
+Copy the `Endpoint` value of the created bucket:
+
+![Alt text](images/image-6.png)
+
+Then open Application Keys and create a key to access storage:
+
+![](images/image-2.png)
+
+
+![Alt text](images/image-3.png)
+
+![Alt text](images/image-4.png)
+
+Please copy `keyID` and `applicationKey` information as it is required for the bucket setup.
+
+Now open Settings > Artifacts inside Testomat.io project. Enable `Private URLs` and `Share credentials` togle. Then enter the data you obtained:
+
+* `keyID` value as **ACCESS_KEY_ID**
+* `applicationKey` value as **SECRET_ACCESS_KEY**
+* bucket name as **BUCKET**
+* `endpoint` value as **ENDPOINT**https://s3.us-east-005.backblazeb2.com
+* part of endpoint that corresponds to region (`s3.{region}.backblazeb2.com`) as **REGION**. For instance, if your endpoint is `https://s3.us-east-005.backblazeb2.com`, your region is `us-east-005`
+
+![Alt text](images/image-5.png)
+
+Save the settings and run tests with Testomatio reporter. All stored artifacts will be uploaded so in the end of execution you should see this line:
+
+```
+[TESTOMATIO] 🗄️ Total X artifacts privately uploaded to S3 bucket  
+```
+
+## Overview
 
 Test artifacts can be uploaded with **public (default) or private** access to a bucket
 
@@ -37,7 +84,11 @@ Testomat.io will require read access to S3 storage to access those files and pre
 
 ## Configuration
 
-Testomat.io reporter uses environment variables to pass configuration to upload screenshots. If `S3_BUCKET` environment variable is defined reporter will start uploading test artifacts.
+S3 Bucket credentials can be set in Settings > Artifacts page. If "Share credentials" is enabled, credentials will be passed to reporter.
+
+![Alt text](images/image-7.png)
+
+Alternatively, you can configure reporter locally using environment variables. If `S3_BUCKET` environment variable is defined reporter will start uploading test artifacts.
 
 We recommend storing S3 configuration in `.env` files when running tests locally and using job configuration when running on the Continuous Integration server.
 
@@ -82,6 +133,19 @@ S3_ACCESS_KEY_ID=11111111111111111111
 S3_SECRET_ACCESS_KEY=2222222222222222222222222222222222222222222
 S3_BUCKET=artifacts
 S3_REGION=ams3
+```
+
+##### Backblaze
+
+Upload to Backblaze in private access mode:
+
+```
+S3_ENDPOINT=https://s3.us-east-005.backblazeb2.com
+S3_ACCESS_KEY_ID=0000000000000000000000
+S3_SECRET_ACCESS_KEY=1111111111111111111111111
+S3_BUCKET=demo-artifacts
+S3_REGION=us-east-005
+TESTOMATIO_PRIVATE_ARTIFACTS=1
 ```
 
 ##### Minio
