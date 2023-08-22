@@ -70,7 +70,7 @@ Testomat.io allows converting CSV/XLS to BDD Scenarios, where your Precondition 
 
 ![image](images/149758030-698bfebd-6045-4db9-976c-5c1f95ded5e0.png)
 
-For this moment this feature is implemented for TestRail. But you can request it for other systems [here](https://testomat.nolt.io/).
+For this moment this feature is implemented for TestRail and QTest. But you can request it for other systems [here](https://testomat.nolt.io/).
 
 ## Create Custom XLS For Testomat.io
 
