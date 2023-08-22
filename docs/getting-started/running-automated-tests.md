@@ -6,7 +6,26 @@ editLink: true
 
 # Running Automated Tests
 
-### Why Do I Need to Enable Test Run Report
+Testomat.io can receive and store test run reports from various test frameworks. 
+You can use Testomat.io as a test management system or as a rich reporting tool. 
+
+Depending on how you plan to use it we can look from different perspectives:
+
+* In case of **Test Management System**, the key entity is a Test. So before reporting tests it is **required to import your tests** first. Test has its history and a lifecycle, so each test report will be attached to a corresponding test in a project. If a reported test doesn't exist, you will see message "Tests Not Matched". By default, new tests are not created from Run report, to avoid duplicates, or cases when you accidentally reported wrong tests.
+
+* In case of **Reporting Tool**, you are more focused on getting reports rather than managing tests. In this case you may not need test history, so **importing tests is not required**. You can run tests with `TESTOMATIO_CREATE=1` option enabled, and all tests will be created from a test result.
+
+If your project contains only automated tests, you may prefer using Testomat.io as reporting tool only. However, to unleash the full power of Testomat.io we recommend using it as a test management system, that means keep tests synchronized with the codebase. 
+
+![Alt text](images/image-7.png)
+
+### Why Do I need to Import my Tests?
+
+As described in a section above, Testomat.io require tests to be imported first in order to synchonize them wth the codebase and to keep track the history of tests between reports. If test was not found in a project it is marked as "Unmatched" in report. We use this notice to avoid duplicates or accidentally added tests. Read more about [importing tests](./import-tests-from-source-code.md).
+
+This rule doesn't apply to test reported via JUnit XML. In this case all tests from XML file are created automatically on report.
+
+### How to Receive Run Report
 
 You have already [imported automated tests](https://docs.testomat.io/getting-started/import-tests-from-source-code/) and you wonder what's next? Testomat.io will help you to generate a run command to use on your machine or on your CI. As a result, you will get human-readable Run Reports with lots of additional information.
 
@@ -46,7 +65,76 @@ As soon as all tests are completed you can check Run Report with details.
 
 ![Detailed test report](images/2023-08-04_23.21.47@2x.png)
 
+## Advanced Reporting
 
+Testomat.io reporter can be configured to add additional information for Run report. For instance, you can specify:
 
+* run title
+* rungroup
+* environemnt
 
+[Learn more of all possible options](./../reference/reporter/pipes/testomatio.md).
 
+### Reporting Parallel Tests
+
+When you enable reporing for tests running  in parallel, you might end with multiple reports per each executed process. There are few options to deal with this case, which you can use depending on your setup.
+
+**Option 1: Use start-test-run** 
+
+Run tests via `npx start-test-run` command:
+
+```
+npx start-test-run -c "<actual run command>"
+```
+
+Under hood start-test-run creates a new empty run and passes its ID as environment variable into all spawned processes. So no matter how many parallel processes are started they will report to the single Run report.
+
+However, this might not work in all cases. An alternative appriach would be:
+
+**Option 2: Use shared run**
+
+Pick the unique name for this run and use `SHARED_RUN` environement variable to enable shared report:
+
+```
+SHARED_RUN=1 TESTOMATIO_TITLE="UniqTitleForThisBuild" <actual run command>
+```
+
+For instance, if you run tests on CI as a title you can use ID of this Build:
+
+```
+TESTOMATIO_TITLE="Build $BUILD_ID" SHARED_RUN=1 <actual run command> 
+```
+
+If you prefer you can use Git commit as unique identifier:
+
+```
+TESTOMATIO_TITLE=$(git rev-parse HEAD) SHARED_RUN=1 <actual run command> 
+```
+
+Please refer to documentation of your CI system and pick the variable which and be unique to all runs of this build. This approach **fits perfectly for sharded tests when you run tests on different jobs, different containers, different machines**.
+
+We recommend to also append some more info into the TESTOMATIO_TITLE 
+
+**Optiona 3: Manually create and close run**
+
+In this case you create a run, receive its ID and manually close it after all runs are finished.
+
+Create a run via `start-test-run --launch`:
+
+```
+export TESTOMATIO_RUN=$(TESTOMATIO=xxx npx start-test-run --launch | tail -1)
+```
+
+then execute tests passing the `TESTOAMTIO_PROCEED` variable:
+
+```
+TESTOMATIO=xxx TESTOMATIO_RUN=$RUN_ID TESTOMATIO_PROCEED=1 <actual-run-command>
+```
+
+Once tests are finished close the run with `start-test-run --finish`:
+
+```
+TESTOMATIO=xxx npx start-test-run --finish
+```
+
+If you have a complex pipeline, you can start Run on the stage #1, execute tests in parallel on stage #2, and close the run on stage #3. 
