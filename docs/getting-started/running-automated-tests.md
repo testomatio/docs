@@ -77,7 +77,7 @@ Testomat.io reporter can be configured to add additional information for Run rep
 
 ### Reporting Parallel Tests
 
-When you enable reporing for tests running  n parallel, you might end with multiple reports per each executed process. There are few options to deal with this case, which you can use depending on your setup.
+When you enable reporing for tests running in parallel, you might end with multiple reports per each executed process. There are few options to deal with this case, which you can use depending on your setup.
 
 **Strategy 1: Use start-test-run** 
 
@@ -102,19 +102,19 @@ In this case multiple independent launches will report data to the report matche
 Pick the unique name for this run and use `SHARED_RUN` environement variable to enable shared report:
 
 ```
-SHARED_RUN=1 TESTOMATIO_TITLE="UniqTitleForThisBuild" <actual run command>
+TESTOMATIO_SHARED_RUN=1 TESTOMATIO_TITLE="UniqTitleForThisBuild" <actual run command>
 ```
 
 For instance, if you run tests on CI as a title you can use ID of this Build:
 
 ```
-TESTOMATIO_TITLE="Build $BUILD_ID" SHARED_RUN=1 <actual run command> 
+TESTOMATIO_TITLE="Build $BUILD_ID" TESTOMATIO_SHARED_RUN=1 <actual run command> 
 ```
 
 If you prefer you can use Git commit as unique identifier:
 
 ```
-TESTOMATIO_TITLE=$(git rev-parse HEAD) SHARED_RUN=1 <actual run command> 
+TESTOMATIO_TITLE=$(git rev-parse HEAD) TESTOMATIO_SHARED_RUN=1 <actual run command> 
 ```
 
 Please refer to documentation of your CI system and pick the variable which and be unique to all runs of this build. This approach **fits perfectly for sharded tests when you run tests on different jobs, different containers, different machines**.
