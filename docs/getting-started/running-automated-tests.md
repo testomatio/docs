@@ -23,6 +23,8 @@ If your project contains only automated tests, you may prefer using Testomat.io 
 
 As described in a section above, Testomat.io require tests to be imported first in order to synchonize them wth the codebase and to keep track the history of tests between reports. If test was not found in a project it is marked as "Unmatched" in report. We use this notice to avoid duplicates or accidentally added tests. Read more about [importing tests](./import-tests-from-source-code.md).
 
+![Unnatched tests](images/unmatched_tests.png)
+
 This rule doesn't apply to test reported via JUnit XML. In this case all tests from XML file are created automatically on report.
 
 ### How to Receive Run Report
