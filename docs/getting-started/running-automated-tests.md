@@ -77,9 +77,9 @@ Testomat.io reporter can be configured to add additional information for Run rep
 
 ### Reporting Parallel Tests
 
-When you enable reporing for tests running  in parallel, you might end with multiple reports per each executed process. There are few options to deal with this case, which you can use depending on your setup.
+When you enable reporing for tests running  n parallel, you might end with multiple reports per each executed process. There are few options to deal with this case, which you can use depending on your setup.
 
-**Option 1: Use start-test-run** 
+**Strategy 1: Use start-test-run** 
 
 Run tests via `npx start-test-run` command:
 
@@ -89,9 +89,15 @@ npx start-test-run -c "<actual run command>"
 
 Under hood start-test-run creates a new empty run and passes its ID as environment variable into all spawned processes. So no matter how many parallel processes are started they will report to the single Run report.
 
+![Alt text](images/image-10.png)
+
 However, this might not work in all cases. An alternative appriach would be:
 
-**Option 2: Use shared run**
+**Strategy 2: Use shared run**
+
+In this case multiple independent launches will report data to the report matched by the same Run title.
+
+![Alt text](images/image-12.png)
 
 Pick the unique name for this run and use `SHARED_RUN` environement variable to enable shared report:
 
@@ -115,9 +121,11 @@ Please refer to documentation of your CI system and pick the variable which and 
 
 We recommend to also append some more info into the TESTOMATIO_TITLE 
 
-**Optiona 3: Manually create and close run**
+**Strategy 3: Manually create and close run**
 
 In this case you create a run, receive its ID and manually close it after all runs are finished.
+
+![Alt text](images/image-9.png)
 
 Create a run via `start-test-run --launch`:
 
