@@ -106,7 +106,7 @@ To run Multi Environment Tests in sequence you need to click on Launch All butto
 
 ![CleanShot 2022-05-26 at 12 45 40@2x](images/170463403-0e791a50-e563-4e9d-8752-0feba409876c.jpg)
 
-## **How To Runs Tests As Checklist**
+## **How To Run Tests As Checklist**
 
 Checklists are widely used in day-to-day manual testing to quickly execute a set of tests without distracting to the additional details. In this mode, the test description is hidden by default. But you can still view the description when you click on the Description button.
 
@@ -118,7 +118,7 @@ To enable Checklist mode you need to launch Manual Run and switch on the Checkli
 
 ![CleanShot 2022-05-25 at 18 35 05@2x](images/170301515-667bf871-6c49-4059-ae3e-3e561ef92a01.jpg)
 
-### How To Run Automated Tests Manually
+## **How To Run Automated Tests Manually**
 
 When creating Manual Test Run automated tests are disabled by default.
 
@@ -134,7 +134,24 @@ So can run automated tests manually as regular manual tests and see Code Descrip
 
 ![CleanShot 2022-05-26 at 13 13 12@2x](images/170468049-5c87bcb2-cf8b-4c03-909d-2cb0a495acae.jpg)
 
+## **How Make Changes in The Launched Test Run**
 
+As your testing journey unfolds, you might encounter new scenarios that warrant immediate attention. Fear not, Testomat.io provides you with options to inject additional tests into your already launched test runs. Discover how to expand your test scope effortlessly, ensuring that even the most unforeseen scenarios are accounted for without disrupting your testing momentum.
 
+You can update your Test Run any time in few easy steps: 
 
+1. open the Run
+2. click Edit button
 
+![Add test](images/1.png)
+
+Let's see what we can do here:
+
+![Edit ongoing test run](images/2-1.png)
+
+1. Assign more users to the Run
+2. Edit title of the Run
+3. Add/remove testing environments
+4. Add more tests to the Run
+5. Add tests from another test plan
+6. Don't foget to save ;)
