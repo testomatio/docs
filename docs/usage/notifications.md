@@ -149,6 +149,7 @@ A complete list of allowed variables:
 * `manual` - boolean. True if a run is manual
 * `has_failed` - boolean. True if a run has failed
 * `has_passed` - boolean. True if a run has passed
+* `was_terminated` - boolean. True if a run was terminated
 * `run` - string. Title of a run
 * `rungroup` - title. Title of rungroup a run belongs to
 * `status` - string. Status of run, 'passed' or 'failed' as a string.
@@ -157,6 +158,7 @@ A complete list of allowed variables:
 * `passed_tests` - collection. A list of all passed tests in a run.
 * `failed_tests` - collection. A list of all failed tests in a run.
 * `skipped_tests` - collection. A list of all skipped tests in a run.
+
 
 An expression should return a boolean value. To deal with types other than boolean functions and methods can be used:
 
@@ -223,3 +225,10 @@ Then write a notification rule that will check only for failing runs with "[CI]"
 ```
 contains(run, "[CI]") and has_failed
 ```
+
+#### Notify when automated tests are terminated
+
+```
+automated and was_terminated
+```
+

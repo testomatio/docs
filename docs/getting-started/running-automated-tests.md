@@ -148,3 +148,17 @@ TESTOMATIO=xxx npx start-test-run --finish
 ```
 
 If you have a complex pipeline, you can start Run on the stage #1, execute tests in parallel on stage #2, and close the run on stage #3. 
+
+### Terminated Runs
+
+Sometimes, during test automation, unexpected issues may arise, or a test can be stopped for various reasons. 
+
+![terminated run](images/terminated-test-run.png)
+
+For example, during the execution of the problematic test case, the some gateway becomes unresponsive due to a server issue. This issue was unforeseen and not within the control of the testing team. Testomat.io detects the problem and initiates a termination of the problematic test case. The custom timeout you defined (min 30 minutes) comes into play. If the test case does not complete within this time frame, it is terminated automatically.
+
+So you can terminate test runs without causing disruptions and you can set custom timeouts for terminated runs.
+
+![setup terminated timeout](images/setup-terminated.png)
+
+
