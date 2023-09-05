@@ -3,7 +3,7 @@ import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { seoPlugin } from "vuepress-plugin-seo2";
 import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
-import { searchPlugin } from '@vuepress/plugin-search';
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 
 const sections = require('../../sections')
 const FIRST_LINK = '/getting-started/start-from-scratch'
@@ -79,13 +79,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         link: 'https://calendly.com/testomatio/demo'
       }
     ],
+    displayAllHeaders: true,
     sidebar,
     /**
      * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
      */
   }),
   plugins: [
-    searchPlugin({
+    searchProPlugin({
       // options
     }),    
     sitemapPlugin({

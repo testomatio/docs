@@ -7,7 +7,7 @@
     "name": "Testomatio Team",
     "email": "editor@testomat.io"
   },
-  "repository": "git@github.com:testomatio/docs.git/Testomatio Documentation",
+  "repository": "git@github.com:testomatio/docs.git",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
@@ -16,11 +16,10 @@
   "license": "MIT",
   "devDependencies": {
     "@octokit/core": "^3.6.0",
-    "@vuepress/client": "2.0.0-beta.66",
-    "@vuepress/plugin-back-to-top": "2.0.0-beta.66",
-    "@vuepress/plugin-medium-zoom": "2.0.0-beta.66",
+    "@vuepress/client": "^2.0.0-beta.66",
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.66",
+    "@vuepress/plugin-medium-zoom": "^2.0.0-beta.66",
     "@vuepress/plugin-palette": "^2.0.0-beta.67",
-    "@vuepress/plugin-search": "^2.0.0-beta.67",
     "axios": "^0.21.4",
     "dasherize": "^2.0.0",
     "dotenv": "^16.3.1",
@@ -28,9 +27,10 @@
     "runok": "^0.9.3",
     "slugify": "^1.6.6",
     "vue": "^3.3.4",
-    "vuepress": "2.0.0-beta.66",
-    "vuepress-plugin-seo2": "2.0.0-beta.234",
-    "vuepress-plugin-sitemap2": "2.0.0-beta.234",
+    "vuepress": "^2.0.0-beta.66",
+    "vuepress-plugin-search-pro": "^2.0.0-beta.237",
+    "vuepress-plugin-seo2": "^2.0.0-beta.234",
+    "vuepress-plugin-sitemap2": "^2.0.0-beta.234",
     "webpack": "^5.88.2"
   }
 }
