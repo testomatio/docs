@@ -129,9 +129,23 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 
 ![125165108-311d0580-e19e-11eb-8b52-43367f1741ba](images/125165409-7261e500-e19f-11eb-9e93-9e9e3335745a.png)
 
+## How To Link And Launch a Test Plan
+
+1. Go to Plans tab
+2. Click Extra Button
+3. Click Link Plan
+4. Pick the plan and ckick Link
+5. Click Action button
+
+![Alt text](images/link_plan1.png)
+
+![Alt text](images/link_plan2.png)
+
+![Alt text](images/link_plan3.png)
+
 ## How To Edit a Suite 
 
-1. Go to Suites tab, click on the trash pen icon near the suite you want to edit
+1. Go to Suites tab, click on the pen icon near the suite you want to edit
 2. Edit the suite
 3. Click on Update button
 4. See your suite was updated
