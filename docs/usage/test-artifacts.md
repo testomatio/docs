@@ -215,3 +215,4 @@ global.testomatioArtifacts.push({ name: 'Screenshot', path: 'img/file.png' });
 Artifacts will be uploaded for the current test when it is finished:
 
 If everything was configured correctly test artifacts will be uploaded on the next run. 
+

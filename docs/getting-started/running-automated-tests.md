@@ -161,4 +161,16 @@ So you can terminate test runs without causing disruptions and you can set custo
 
 ![setup terminated timeout](images/setup-terminated.png)
 
+## How To Enable Playwright Trace Viewer
 
+Traces in Playwright refer to detailed logs or recordings of browser interactions during a test script's execution. They capture a chronological sequence of events, including browser actions, network requests, and other relevant information.
+
+Here are steps how to enable Playwright trace viewer for uploaded artifacts in Test Run:
+
+1. setup S3 Bucket (see [dedicated documentation](https://docs.testomat.io/usage/test-artifacts#set-up-s3-bucket))
+2. enable third-party cookies in your browser
+3. run your tests
+4. click on a test
+5. click on the trace.zip
+
+![open playwright trace viewer](images/Open-Playwright-Trace.gif)
