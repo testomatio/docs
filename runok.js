@@ -99,7 +99,7 @@ module.exports = {
       if (titleId === 'JUNIT') title = "JUnit Reporter"
       let contents = fs.readFileSync(file).toString()
       if (titleId === 'FRAMEWORKS') {
-        let phpContents = fs.readFileSync(phpReadme).toString().replace(/^#\s.+/gm, '');
+        let phpContents = fs.readFileSync(phpReadme).toString().replace(/^#\s.+/gm, '').replace(/^##\s/gm, '');
         if (phpContents) contents += `\n## PHP Frameworks \n\n> Taken from [PHP Reporter Readme](${phpReporterUrl})\n ${phpContents}`
 
         let pytestContents = fs.readFileSync(pytestReadme).toString().split('## Change')[0];

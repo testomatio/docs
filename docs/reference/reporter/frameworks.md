@@ -419,7 +419,7 @@ System.out.println("file://" + pathToScreenshot);
 > Taken from [PHP Reporter Readme](https://github.com/testomatio/php-reporter)
  
 
-## Installation
+Installation
 
 ```
 composer require testomatio/reporter --dev
