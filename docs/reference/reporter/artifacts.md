@@ -3,7 +3,7 @@ title: Artifacts
 editLink: false
 ---
 
-# 🛡 Artifacts
+
 
 Artifacts are files produced by test runner, usually screenshots, videos or traces.
 
@@ -198,8 +198,8 @@ Console.WriteLine("file://" + pathToScreenshot);
 Attaching a screenshot to the Python test
 
 ```python
-# assume you created a screenshot
-# which is located at `pathToScreenshot`
+
+
 print("file://" + pathToScreenshot)
 ```
 
@@ -208,8 +208,8 @@ print("file://" + pathToScreenshot)
 Attaching a screenshot to the Ruby test
 
 ```python
-# assume you created a screenshot
-# which is located at `path_to_screenshot`
+
+
 puts "file://" + path_to_screenshot
 ```
 

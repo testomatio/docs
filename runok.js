@@ -84,7 +84,10 @@ module.exports = {
       let title = humanize(path.basename(file, '.md')).trim();
       title[0] = title[0].toUpperCase();
       console.log(title.toUpperCase());
-      const contents = fs.readFileSync(file).toString();
+      if (title === 'FRAMEWORKS') title = "Test Frameworks"
+      if (title === 'TESTOMATIO') title = "Advanced Options"
+      if (title === 'JUNIT') title = "JUnit Reporter"
+      const contents = fs.readFileSync(file).toString().replace(/^#\s.+/gm, '');
       writeToFile(file, cfg => {
         cfg.line('---');
         cfg.line(`title: ${capitalize(title)}`);
