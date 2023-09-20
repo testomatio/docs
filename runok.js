@@ -66,6 +66,8 @@ module.exports = {
 
   async docsReporter() {
     execSync('rm -rf tmp/reporter');
+    execSync('rm -rf tmp/php-reporter');
+    execSync('rm -rf tmp/pytest-reporter');
 
     const destinationFolder = 'docs/reference/reporter';
 
@@ -73,8 +75,16 @@ module.exports = {
       fs.mkdirSync(destinationFolder, { recursive: true });
     }
 
-    execSync(`git clone https://github.com/testomatio/reporter.git tmp/reporter`);
+    execSync(`git clone https://github.com/testomatio/reporter.git tmp/reporter --depth=1`);
     execSync(`cp -R tmp/reporter/docs/** ${destinationFolder}`);
+
+    const phpReporterUrl = 'https://github.com/testomatio/php-reporter'
+    execSync(`git clone ${phpReporterUrl}.git tmp/php-reporter --depth=1`);
+    const phpReadme = 'tmp/php-reporter/README.md';
+
+    const pytestReporterUrl = 'https://github.com/Ypurek/pytest-analyzer'
+    execSync(`git clone ${pytestReporterUrl}.git tmp/pytest-reporter --depth=1`);
+    const pytestReadme = 'tmp/pytest-reporter/README.md';
 
     const capitalize = s => s && s[0].toUpperCase() + s.slice(1)
 
@@ -83,10 +93,20 @@ module.exports = {
     for (const file of files) {
       let title = humanize(path.basename(file, '.md')).trim();
       title[0] = title[0].toUpperCase();
-      if (title.toUpperCase() === 'FRAMEWORKS') title = "Test Frameworks"
-      if (title.toUpperCase() === 'TESTOMATIO') title = "Advanced Options"
-      if (title.toUpperCase() === 'JUNIT') title = "JUnit Reporter"
-      const contents = fs.readFileSync(file).toString().replace(/^#\s.+/gm, '');
+      const titleId = title.toUpperCase();
+      if (titleId === 'FRAMEWORKS') title = "Test Frameworks";      
+      if (titleId === 'TESTOMATIO') title = "Advanced Options"
+      if (titleId === 'JUNIT') title = "JUnit Reporter"
+      let contents = fs.readFileSync(file).toString()
+      if (titleId === 'FRAMEWORKS') {
+        let phpContents = fs.readFileSync(phpReadme).toString().replace(/^#\s.+/gm, '');
+        if (phpContents) contents += `\n## PHP Frameworks \n\n> Taken from [PHP Reporter Readme](${phpReporterUrl})\n ${phpContents}`
+
+        let pytestContents = fs.readFileSync(pytestReadme).toString().split('## Change')[0];
+        pytestContents = pytestContents.replace(/##\s/g, '#### ');
+        if (pytestContents) contents += `\n## Python Frameworks\n\n### Pytest\n\n\n> Taken from [PHP Reporter Readme](${phpReporterUrl})\n\n${pytestContents}`          
+      }
+      contents = contents.replace(/^#\s.+/gm, '');
       writeToFile(file, cfg => {
         cfg.line('---');
         cfg.line(`title: ${capitalize(title)}`);

@@ -8,6 +8,11 @@ editLink: true
 
 Testomat.io reporter is NodeJS package that sends test results to [app.testomat.io](https://app.testomat.io)
 
+::: note
+Testomatio Reporter is a standalone package that can be used without Testomat.io application.
+[Open it on GitHub](https://github.com/testomatio/reporter)
+:::
+
 ## Installation
 
 To enable Testomat.io Reporter install `@testomatio/reporter` package
