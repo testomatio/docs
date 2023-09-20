@@ -83,10 +83,9 @@ module.exports = {
     for (const file of files) {
       let title = humanize(path.basename(file, '.md')).trim();
       title[0] = title[0].toUpperCase();
-      console.log(title.toUpperCase());
-      if (title === 'FRAMEWORKS') title = "Test Frameworks"
-      if (title === 'TESTOMATIO') title = "Advanced Options"
-      if (title === 'JUNIT') title = "JUnit Reporter"
+      if (title.toUpperCase() === 'FRAMEWORKS') title = "Test Frameworks"
+      if (title.toUpperCase() === 'TESTOMATIO') title = "Advanced Options"
+      if (title.toUpperCase() === 'JUNIT') title = "JUnit Reporter"
       const contents = fs.readFileSync(file).toString().replace(/^#\s.+/gm, '');
       writeToFile(file, cfg => {
         cfg.line('---');

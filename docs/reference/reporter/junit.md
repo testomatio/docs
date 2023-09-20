@@ -1,5 +1,5 @@
 ---
-title: Junit
+title: JUnit Reporter
 editLink: false
 ---
 
