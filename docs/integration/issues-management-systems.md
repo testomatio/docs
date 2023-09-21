@@ -94,7 +94,8 @@ There are several ways how to create a defect for failed test:
 
 1. Give a name to your profile 
 4. Enter your GitHub Username
-8. Enter your GitHub API Token ([learn more](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
+8. Enter your GitHub API Token with access to workflow scope and write permissions ([learn more](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
+![Alt text](images/GH-pat.png)
 10. Enter your GitHub Organization/Repository
 11. Click on Save button
 
