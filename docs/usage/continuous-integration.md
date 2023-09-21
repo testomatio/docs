@@ -428,7 +428,7 @@ ref=refs/heads/develop
 
 While connection settings can be different across CI settings, the list of input variables is the same. 
 
-![image](images/113130343-a46cbe00-9224-11eb-8808-7fc096d2a335.png)
+![Input-Variables-Tab](images/Input-Variables-Tab.gif)
 
 For example, Testomatio sends `grep` variable to CI to identify which tests should be executed. It may pass other input variables 
 which can be used on CI to improve reporting.
