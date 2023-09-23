@@ -37,12 +37,7 @@ We want our users to know that we’re doing everything we can to follow these r
 - **Contact:** 
   - For inquiries regarding the Privacy Policy, users can contact the company via email or the [contact page](/contact-us/contact-us) on the website.
 
-
 For a comprehensive understanding of our practices and your rights, we encourage you to review the full version of our Privacy Policy at [Privacy Policy](https://testomat.io/privacy). 
-
-
-### Note:
-This is a brief summary. For full details, please refer to the [Privacy Policy](https://testomat.io/privacy) on Testomat.io’s website.
 
 
 ## Common Questions about GDPR
