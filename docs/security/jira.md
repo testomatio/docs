@@ -46,13 +46,13 @@ Namely, you can:
 
 For details on how to use Testomat.io JIRA Plugin, please refer to [JIRA guide](/usage/jira-plugin) in our documentation.
 
-## FAQ Section
+## FAQ
 
 #### Q: If we connect the Jira app, what access would Testomat.io gain? Can it access all projects?
-**A:** When connected, Testomatio gains read access to all issues of the projects it is enabled on, allowing it to display tests that can be attached to any Jira issue. It does not have restrictions on the Jira API regarding which issues it can access. However, Testomatio strictly adheres to accessing only the necessary data for its functionality and maintains high standards of data integrity and security. It does not update or delete any issues on your Jira and only performs write operations to save test data into Jira storage attached to a specific issue.
+**A:** When connected, Testomat.io gains read access to all issues of the projects it is enabled on, allowing it to display tests that can be attached to any Jira issue. It does not have restrictions on the Jira API regarding which issues it can access. However, Testomat.io strictly adheres to accessing only the necessary data for its functionality and maintains high standards of data integrity and security. It does not update or delete any issues on your Jira and only performs write operations to save test data into Jira storage attached to a specific issue.
 
 #### How can we be confident in the security and privacy of the JIRA Plugin app?
-**A:** We understand the concerns regarding security and privacy. Testomat.io is committed to maintaining the highest standards of security and data protection. Testomatio only accesses data essential for its functionality and does not perform any operations that would compromise the integrity of your Jira issues. If you have specific concerns or need more information, please feel free to [Contact](/contact-us/contact-us) our support team, and we will be happy to assist you.
+**A:** We understand the concerns regarding security and privacy. Testomat.io is committed to maintaining the highest standards of security and data protection. Testomat.io only accesses data essential for its functionality and does not perform any operations that would compromise the integrity of your Jira issues. If you have specific concerns or need more information, please feel free to [Contact](/contact-us/contact-us) our support team, and we will be happy to assist you.
 
 ## Additional Information
 For any concerns or additional information regarding the permissions and security of the Testomat.io JIRA plugin, please refer to our [Security Page](/security/overview) or [Contact](/contact-us/contact-us) support team.
