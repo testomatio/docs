@@ -14,7 +14,7 @@ Testomat.io uses the following subprocessor for hosting customer data and provid
 - **Entity:** DigitalOcean
   - **Description/Purpose:** Cloud infrastructure
   - **Server Locations:** Germany, Netherlands
-  - **Security:**: https://www.digitalocean.com/security
+  - **Security:** https://www.digitalocean.com/security
 
 ## Other Subprocessors
 
