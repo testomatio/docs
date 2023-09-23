@@ -72,11 +72,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       },
       {
         text: 'Security',
-        link: 'https://docs.testomat.io/security/overview'
+        link: '/security/overview'
       },
       {
         text: 'Compliance',
-        link: 'https://docs.testomat.io/compliance/overview'
+        link: '/compliance/overview'
       },
       {
         text: 'Login',
@@ -88,7 +88,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       },
       {
         text: 'Contacts',
-        link: 'https://docs.testomat.io/contact-us/contact-us'
+        link: '/contact-us/contact-us'
       }
     ],
     displayAllHeaders: true,
