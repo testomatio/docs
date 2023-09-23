@@ -44,6 +44,15 @@ module.exports = {
     "/subscriptions/trials",
     "/subscriptions/subscriptions",    
   ],
+  'security': [
+    "/security/overview",
+    "/security/subprocessors",
+  ],
+  'compliance': [
+    "/compliance/overview",
+    "/compliance/terms",    
+    "/compliance/privacy",
+  ],
   'contact-us': [
     "/contact-us/contact-us",
   ]
