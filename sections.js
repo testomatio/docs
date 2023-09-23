@@ -52,6 +52,7 @@ module.exports = {
     "/compliance/overview",
     "/compliance/terms",    
     "/compliance/privacy",
+    "/compliance/gdpr",
   ],
   'contact-us': [
     "/contact-us/contact-us",
