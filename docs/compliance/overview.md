@@ -47,6 +47,8 @@ By sticking to the rules and being open about what we do, we aim to create a pla
 
 The Terms of Service of testomat.io, managed by Optimum Solutions Sp. z o.o., outline the rules and regulations for using our service. By accessing and using the service, users agree to abide by these terms.
 
+Check out a short summary of our Terms of Service:
+
 - **Introduction:** The Terms of Service govern the use of web pages located at testomat.io, operated by Optimum Solutions Sp. z o.o. Users must agree to these terms and the Privacy Policy to use the service.
 - **Communications:** By creating an account, users agree to receive newsletters and promotional materials but can opt-out at any time.
 - **Purchases & Payments:** Users must provide accurate information for purchases and grant the right to provide this information to third parties for facilitating payments.
@@ -69,7 +71,8 @@ For a comprehensive understanding of our terms and your rights, we encourage you
 
 The Privacy Policy of testomat.io, operated by Optimum Solutions Sp. z o.o., governs the collection, use, and disclosure of user data. Users consent to this policy by using the service. 
 
-Check out a short summary of our privacy policy:
+Check out a short summary of our Privacy Policy:
+
 - **Introduction:** The Privacy Policy applies to the services offered by testomat.io, operated by Optimum Solutions Sp. z o.o. Users consent to this policy by using the service.
 - **Data Collection:** The service collects personal and usage data, including names, email addresses, and browser information, using cookies and other tracking technologies.
 - **Use of Data:** Collected data is used to provide and maintain the service, improve user experience, and send newsletters and promotional materials, with users having the option to opt-out.
