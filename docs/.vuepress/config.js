@@ -71,7 +71,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         link: FIRST_LINK,
       },
       {
-        text: 'Testomatio App',
+        text: 'Security',
+        link: 'https://docs.testomat.io/security/overview'
+      },
+      {
+        text: 'Compliance',
+        link: 'https://docs.testomat.io/compliance/overview'
+      },
+      {
+        text: 'Login',
         link: 'https://app.testomat.io'
       },
       {
