@@ -6,13 +6,20 @@ editLink: true
 
 # Jira Plugin
 
-Testomatio Jira Plugin allows using Jira more efficiently.
+Testomatio Jira Plugin allows using Jira more efficiently. There are a lot of different actions you can do directly and instantly from JIRA.
+
 Namely, you can:
 
-- link tests and suites to Jira issues
-- view, add and edit your project directly from Jira
-- edit your BDD Feature file from Jira
-- create and manage branches within your project from Jira
+- Connect multiple Testomat.io and JIRA projects easily.
+- Quickly link/unlink tests, suites, and plans to JIRA issues.
+- View and edit tests directly in JIRA.
+- Use autocomplete and smart suggestions for creating tests.
+- Easily modify BDD/Gherkin feature files and scenarios.
+- Create multiple tests at once from checklists from bulk create 
+- Run manual and automated tests from JIRA tickets.
+- Attach test reports to JIRA issues with a click.
+- Use tracebility matrix and reports to check test coverage in sprints and project.
+- Manage project branches.
 
 ## Options Without Loggin in Testomatio
 

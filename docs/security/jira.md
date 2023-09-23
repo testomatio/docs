@@ -31,12 +31,16 @@ While Testomat.io has access to all issues of a project it is enabled on, it is 
 
 Testomat.io Jira Plugin allows using Jira more efficiently. Namely, you can:
 
-- link / unlink tests, suites, and test plans to Jira issues
-- view, add and edit your tests directly from Jira
-- execute tests and link test report to Jira issue
-- tracebility matrix to understand coverage
-- edit BDD / Gherkin feature files and scenarios
-- create and manage branches within your project
+- Connect multiple Testomat.io and JIRA projects easily.
+- Quickly link/unlink tests, suites, and plans to JIRA issues.
+- View and edit tests directly in JIRA.
+- Use autocomplete and smart suggestions for creating tests.
+- Easily modify BDD/Gherkin feature files and scenarios.
+- Create multiple tests at once from checklists from bulk create 
+- Run manual and automated tests from JIRA tickets.
+- Attach test reports to JIRA issues with a click.
+- Use tracebility matrix and reports to check test coverage in sprints and project.
+- Manage project branches.
 
 For details on how to use Testomat.io JIRA Plugin, please refer to [JIRA guide](/usage/jira-plugin) in our documentation.
 
