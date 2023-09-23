@@ -28,12 +28,13 @@ We want our users to know that we’re doing everything we can to follow these r
   - Testomat.io uses secure methods to protect your data.
   - Primiraliry names and emails are used to Thrid Parties to provide customer support and help.
   - Names and emails may be stored in places with different data protection laws.
+  - Check the list of [subprocessors](/security/subprocessors) used to provide seamless service.
+
 
 - **Third-Party Services:**
   - Testomat.io may use other companies to:
     - Provide or improve the service.
     - These companies / services can’t use your data for anything other than helping Testomat.io to provide service.
-    - Check the list of [subprocessors](/security/subprocessors) used to provide seamless service.
 
 - **User Rights:**
   - EU or EEA residents can:
