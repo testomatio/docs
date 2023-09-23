@@ -46,6 +46,7 @@ module.exports = {
   ],
   'security': [
     "/security/overview",
+    "/security/jira",
     "/security/subprocessors",
   ],
   'compliance': [
