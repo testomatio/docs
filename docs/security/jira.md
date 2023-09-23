@@ -41,4 +41,4 @@ Testomat.io Jira Plugin allows using Jira more efficiently. Namely, you can:
 For details on how to use Testomat.io JIRA Plugin, please refer to [JIRA guide](/usage/jira-plugin) in our documentation.
 
 ## Additional Information
-For any concerns or additional information regarding the permissions and security of the Testomat.io JIRA plugin, please refer to our [Security Page](/security/overview) or [contact](/contact-us/contact-us) our support team.
+For any concerns or additional information regarding the permissions and security of the Testomat.io JIRA plugin, please refer to our [Security Page](/security/overview) or [Contact](/contact-us/contact-us) support team.

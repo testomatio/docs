@@ -211,3 +211,7 @@ Within the branch, you can do all actions described previously view, edit, unlin
 Test and Suites related to the branch will be marked with a badge with the name of the branch.
 
 ![image](images/125249279-b8cd5600-e2fd-11eb-8a22-bb3882d792fe.png)
+
+## JIRA Plugin Permissions and Security
+
+Testomat.io’s JIRA plugin is designed to integrate seamlessly with your JIRA projects, requiring specific permissions to operate effectively. The plugin has **read access** to all issues of an enabled project to display tests that can be attached to any JIRA issue and can **write properties** to save test data into JIRA storage attached to a specific issue. Importantly, Testomat.io **does not perform any update or delete operations** on your JIRA issues, maintaining the integrity of your project data. The plugin accesses several JIRA API endpoints strictly necessary for its functionality, adhering to high standards of data security and integrity. For detailed information on permissions and security, refer to the [JIRA Permissions](/security/jira) section in our documentation.
