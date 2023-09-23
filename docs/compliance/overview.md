@@ -23,6 +23,25 @@ By sticking to the rules and being open about what we do, we aim to create a pla
    - **Data Isolation:** Separate customer data with  isolation and access permissions.
    - **Access Permissions:** Fine-grained access control via system permissions, roles, and network addresses.
 
+## Data Processing
+
+- **Data Collection:**
+  - Testomat.io gathers names, emails, and specific usage data to enhance its service and customer support.
+    - **Name and Email:** These are utilized to offer personalized support, payments and assistance.
+    - **Test Case Data:** The names, descriptions, source code, execution status of test cases are collected to build comprehensive test reports in Testomat.io.
+    - **Automated Script Source Code:** Source Code is sent to Testomat.io to integrate manual and automated tests within one unified system. The source code is exclusively stored and displayed in Testomat.io and is not transmitted to any third parties.
+    - **Integration with Tools:** Test case names, descriptions, and test results, including execution status, are transmitted to issue management systems (JIRA, Azure, Linear, etc), collaboration tools (like Slack, MS Teams), CI\CD tools (like GitHub, Gitlab, Azure) to facilitate test execution, defect creation and team communication.
+
+- **Data Storage:**
+  - **Artifacts for Automated Scripts:** Trace files, screenshots, videos, other artifacts related to automated scripts are not stored on Testomat.io servers. Users are encouraged to set up S3 Compatible Object Storage on platforms like Amazon, DigitalOcean, Minio, or Google Cloud (in interoperability mode) and configure test runners to upload artifacts directly to S3 storage.
+    - **Storage Configuration:** By default, artifacts are uploaded to a public bucket. For enhanced privacy, users can enable private links by pre-signing URLs, ensuring each user gets a unique file access URL per session with a 10-minute duration.
+  - **Files for Manual Tests:** Files attached to manual tests are securely stored in the Testomat.io database and are not transmitted to any third parties. This ensures the confidentiality and integrity of the files related to manual tests.
+
+- **Data Security:**
+  - Testomat.io uses secure methods to protect your data.
+  - Names and emails are used to Thrid Parties to provide customer support and help.
+  - Names and emails may be stored in places with different data protection laws.
+
 ## Terms
 
 The Terms of Service of testomat.io, managed by Optimum Solutions Sp. z o.o., outline the rules and regulations for using our service. By accessing and using the service, users agree to abide by these terms.
