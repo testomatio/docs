@@ -13,12 +13,13 @@ Here you can find useful contacts and links
 
 **Reach us** 
 
-- contact@testomat.io
-- [Slack](https://join.slack.com/t/testomatio/shared_invite/zt-1ac24wnao-EICi76nXmHbW3GQH4d22uA) 
-- **Crisp chat** _(at the bottom-right corner)_
+- Ask in [Slack](https://join.slack.com/t/testomatio/shared_invite/zt-1ac24wnao-EICi76nXmHbW3GQH4d22uA) 
+- Use **Crisp chat** _(at the bottom-right corner)_
 - Make [feature request](https://testomat.nolt.io/roadmap)
 - Raise [a defect](https://github.com/testomatio/app/issues/)
 - Schedule [a demo](https://calendly.com/testomatio/demo)
+- General queries contact@testomat.io
+- Technical support support@testomat.io
 
 **Documentation**
 
