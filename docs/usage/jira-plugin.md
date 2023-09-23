@@ -6,7 +6,7 @@ editLink: true
 
 # Jira Plugin
 
-Testomatio Jira Plugin allows using Jira more efficiently. There are a lot of different actions you can do directly and instantly from JIRA.
+The Testomat.io Jira Plugin enhances your Jira experience, enabling a host of actions to be performed directly and seamlessly from Jira, streamlining your workflow and boosting efficiency.
 
 Namely, you can:
 

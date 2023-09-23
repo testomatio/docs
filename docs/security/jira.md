@@ -29,7 +29,9 @@ While Testomat.io has access to all issues of a project it is enabled on, it is 
 
 ## JIRA Plugin features
 
-Testomat.io Jira Plugin allows using Jira more efficiently. Namely, you can:
+The Testomat.io Jira Plugin enhances your Jira experience, enabling a host of actions to be performed directly and seamlessly from Jira, streamlining your workflow and boosting efficiency.
+
+Namely, you can:
 
 - Connect multiple Testomat.io and JIRA projects easily.
 - Quickly link/unlink tests, suites, and plans to JIRA issues.
