@@ -8,7 +8,7 @@ editLink: true
 
 Testomat.io, or just Testomat, is really serious about following the GDPR rules that started on May 25, 2018. GDPR is a big deal because it helps protect people’s data in Europe. Testomat has to follow these rules because it works with people in Europe.
 
-We want our users to know that we’re doing everything we can to follow these rules. If you have questions or worries about this, you can email our legal team at compliance@testomat.io.
+We want our users to know that we’re doing everything we can to follow these rules. If you have questions or worries about this, you can email our legal team at [contact page](/contact-us/contact-us).
 
 ## Common Questions about GDPR
 

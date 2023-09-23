@@ -40,7 +40,7 @@ The Terms of Service of testomat.io, managed by Optimum Solutions Sp. z o.o., ou
 - **Termination:** Accounts may be terminated or suspended immediately, without prior notice or liability, under the sole discretion of the company, for any breach of Terms.
 - **Governing Law:** These Terms shall be governed and construed in accordance with the laws of Krakow, Poland.
 - **Amendments To Terms:** Terms may be amended at any time, and it is the users’ responsibility to review these Terms periodically.
-- **Contact:** Feedback, comments, and requests for technical support can be sent by email to support@testomat.io or by visiting the contact page on the website.
+- **Contact:** Feedback, comments, and requests for technical support can be sent by email by visiting the [contact page](/contact-us/contact-us) on the website.
 
 For a comprehensive understanding of our terms and your rights, we encourage you to review the full version of our terms at [Terms of Service](https://testomat.io/terms). 
 

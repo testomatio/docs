@@ -17,7 +17,7 @@ Testomat.io uses the following subprocessor for hosting customer data and provid
 
 ## Other Subprocessors
 
-Also we use the following subprocessors to perform other service functions for different kinds of help, like customer support and payment processing, all based in the USA:
+Also we use the following subprocessors to perform other service functions for different kinds of help, like customer support and payment processing:
 
 - **Crisp:** Customer support. Location: France
 - **GitHub:** Issue management. Location: USA

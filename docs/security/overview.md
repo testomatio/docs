@@ -96,7 +96,7 @@ Check out a short summary of our privacy policy:
 - **Data Security:** The service employs commercially acceptable means to protect user data, acknowledging that no method is 100% secure.
 - **Children’s Privacy:** The service does not intentionally collect data from children under 13 and has measures to prevent such collection.
 - **Policy Changes:** Users will be notified of any changes to the Privacy Policy via email or a notice on the service.
-- **Contact:** For inquiries regarding the Privacy Policy, users can contact the company via email or the contact page on the website.
+- **Contact:** For inquiries regarding the Privacy Policy, users can contact the company via email or the [contact page](/contact-us/contact-us) on the website.
 
 For a comprehensive understanding of our practices and your rights, we encourage you to review the full version of our Privacy Policy at [Privacy Policy](https://testomat.io/privacy). 
 
