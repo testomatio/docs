@@ -85,6 +85,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {
         text: 'Schedule a Demo',
         link: 'https://calendly.com/testomatio/demo'
+      },
+      {
+        text: 'Contacts',
+        link: 'https://docs.testomat.io/contact-us/contact-us'
       }
     ],
     displayAllHeaders: true,
