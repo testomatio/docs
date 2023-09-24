@@ -28,7 +28,7 @@ Our security measures are comprehensive, encompassing various aspects including 
 
 Certainly! Below is the extended version of each point with at least 5 items:
 
-- **Servers**
+- **Servers and Data Centers**
   - Hosted on **DigitalOcean** for reliable uptime and performance.
   - Access restricted to **senior management level** to maintain security.
   - Regular maintenance and updates are performed to ensure optimal performance.

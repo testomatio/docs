@@ -10,7 +10,7 @@ Testomat.io, or just Testomat, is really serious about following the GDPR rules 
 
 We want our users to know that we’re doing everything we can to follow these rules. If you have questions or worries about this, you can email our legal team at [contact page](/contact-us/contact-us).
 
-## Controls Summary
+## Controls Implementation Summary
 
 - **Data Collection:**
   - Testomat.io gathers names, emails, and specific usage data to enhance its service and customer support.
