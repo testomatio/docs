@@ -45,7 +45,7 @@ Please note, when the Free Trial ends features over the Free plan limit will no 
 
 ## How Can I Request Free Trial
 
-If your account was created before October 2021 you can request Free Trial here:
+You can request Free Trial here:
 
 1. click on the avatar icon 
 2. in the menu click on Request a Free Trial 
