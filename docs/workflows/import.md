@@ -1,3 +1,9 @@
+---
+permalink: /workflows/import
+title: Auto-Import
+editLink: true
+---
+
 # Auto-Import
 
 It is recommended to re-import your automated tests regularely. 

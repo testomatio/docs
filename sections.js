@@ -26,7 +26,7 @@ module.exports = {
     '/reference/import-js',
     '/reference/import-bdd',
     '/reference/import-php',
-    'workflows/import'
+    '/workflows/import'
   ],
   'reporter': [    
     "/reference/reporter",
