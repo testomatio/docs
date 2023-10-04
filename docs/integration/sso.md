@@ -12,12 +12,12 @@ This guide shows how to set up SSO connection via SAML for various SAML provider
 
 ### Prerequisites
 
-* You have a compay in Testomat.io, and you are [**owner of this company**](/subscriptions/companies#roles-within-a-company).
+* You have a company in Testomat.io, and you are [**owner of this company**](/subscriptions/companies#roles-within-a-company).
 * Company is on an enterprise plan.
 * You have SAML identity provider like Okta or GSuite
 * You and all potential company members use emails from the same domain name (like: user1@companyname.com, user2@companyname.com, etc)
 
-If you are ready, proceed to configuring identity provider:
+If you are ready, proceed to configure identity provider:
 
 * [Okta](#okta)
 * [GSuite](#gsuite)
