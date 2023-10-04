@@ -38,7 +38,7 @@ module.exports = {
   'integration': [
     "/integration/jira",
     "/integration/issues-management-systems",
-    "/integration/okta-connection",    
+    "/integration/sso",    
   ],
   'subscriptions': [
     "/subscriptions/companies",
