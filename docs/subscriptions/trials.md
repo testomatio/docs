@@ -41,7 +41,7 @@ An extra free trial lasts for 14 days from the moment of its activation. It is a
 
 ## When Trial Ends
 
-Please note, when the Free Trial ends features over the Free plan limit will no longer be available. However, their data is not lost. If you subscribe to a Professional or Enterprise plan, you will be able to access those features and content again. If you are interested in the paid options supported by Testomat.io, see our **_pricing plan_** (add the link here) for more details. 
+Please note, when the Free Trial ends features over the Free plan limit will no longer be available. However, their data is not lost. If you subscribe to a Professional or Enterprise plan, you will be able to access those features and content again. If you are interested in the paid options supported by Testomat.io, see our [**pricing plan**](https://testomat.io/pricing/) for more details. 
 
 ## How Can I Request Free Trial
 
