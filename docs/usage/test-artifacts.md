@@ -138,6 +138,43 @@ S3_BUCKET=artifacts
 S3_REGION=us-west-1
 ```
 
+To allow Testomat.io access stored files it is recommended to apply this policy to the bucket:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObjectAcl",
+                "s3:GetObject",
+                "s3:GetObjectVersionAcl"
+            ],
+            "Resource": "arn:aws:s3:::<bucket_name>/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket",
+                "s3:PutBucketCORS",
+                "s3:GetBucketAcl"
+            ],
+            "Resource": "arn:aws:s3:::<bucket_name>"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": "s3:ListAllMyBuckets",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
 ##### DigitalOcean
 
 Upload to DigitalOcean in private access mode:
