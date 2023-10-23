@@ -24,6 +24,7 @@ Different team members have different access levels to management options:
 - **Manager** is a team member who can purchase a subscription, can create projects, invite members to a company and a project, and has access to all features within the project
 - **Developer** is a team member who can create projects and has access to all features within the project
 - **Billing** is a team member who can update subscriptions and is free.
+- **Read-only** is a team member who has permissions for viewing or reading information, can't make changes and is free (available in Professional and Enterprise plans).
 
 ## How To Invite A User to A Company
 

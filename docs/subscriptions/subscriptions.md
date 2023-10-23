@@ -185,3 +185,6 @@ A: Testomat.io accepts US currency only ($USD).
 Q: Can I share one license/seat with several members?
 A: No, as it's one member per seat. However, you can release the license by removing a member and invite another person to the vacant seat.
 
+Q: Is it possible to get free read only users in Trial or Free subscription?
+A: No, free read-only users are available in Professional and Enterprise plans.
+
