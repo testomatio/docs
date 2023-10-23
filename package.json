@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "publish": "./runok.js && vuepress build docs"
+    "publish": "./runok.js docs && vuepress build docs"
   },
   "license": "MIT",
   "devDependencies": {
