@@ -252,7 +252,7 @@ The rules engine allows writing conditions in a special expression language simi
 A list of allowed variables:
 
 * `title` - string. Title of a rungroup
-* `rungroup_finished` - boolean. True if all runs completed
+* `rungroup_finished` -  boolean. True if all runs completed => True if rungroup contains only finished runs.
 * `runs` - collection. A list of all runs inside a rungroup
 * `finished_runs` - collection. A list of finished (passed or failed) runs inside a rungroup
 * `ongoing_runs` - collection. A list of pending runs (scheduled, in progress) runs inside a rungroup
