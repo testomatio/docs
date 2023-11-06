@@ -210,6 +210,32 @@ For instance, this is how notification can be enabled for reports finished in no
 (finished_at.hour > 18 or finished_at.hour < 9)
 ```
 
+### Run Group Notifications
+
+::: warning Please note that Run Group Notifications are available for Email notification type only
+:::
+
+To configure Notification Rule for Run Group you need to:
+
+1. pick rungroup for Notification rule context
+2. add your Rule Expression, for example, you can use `rungroup_finished` variable if you want to get notification when all Run report inside the group are finished.
+
+![Alt text](images/rungroup-notifs.png)
+
+### Rules for Run Group Notifications
+
+The rules engine allows writing conditions in a special expression language similar to Ruby or JavaScript.
+
+A list of allowed variables:
+
+* `title` - string. Title of a rungroup
+* `rungroup_finished` - boolean. True if all runs completed
+* `runs` - collection. A list of all runs inside a rungroup
+* `finished_runs` - collection. A list of finished (passed or failed) runs inside a rungroup
+* `ongoing_runs` - collection. A list of pending runs (scheduled, in progress) runs inside a rungroup
+* `failed_runs` - collection. A list of failed runs inside a rungroup
+
+
 ### Examples
 
 #### Notify when tests are failing on CI
