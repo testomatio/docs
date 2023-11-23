@@ -13,6 +13,7 @@ module.exports = {
     "/usage/continuous-integration",
     "/usage/living-documentation",
     "/usage/bulk-edit",
+    "/usage/query-language",
     "/usage/labels-and-custom-fields",
     "/usage/steps-database",
     "/usage/analytics",
