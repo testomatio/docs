@@ -8,7 +8,7 @@ editLink: true
 
 As a test management system, Testomat.io Team intends to provide our users with as much valuable testing data as possible. For this purpose, we developed Analytics Feature. 
 
-<img width="987" alt="analytics " src="https://user-images.githubusercontent.com/77803888/147567785-657a9051-f2e6-4deb-b9ad-d53aa5fdabec.png">
+![Analytics](images/Analytics.png)
 
 ## How Does It Work?
 
@@ -27,6 +27,8 @@ As a management system for automated tests, Testomat.io team created an Automati
 Your team may require visualizing your current status on the project. This is implemented with Defects Board. There you can see defects from the latest test runs, navigate to the suite, latest test run, and the failed test itself. For the Defects widget, we added the ability to group and sort defects found on the project.
 
 ![Defects Board Refactoring](images/147571296-182b119a-7e4f-4c27-9a20-0cd0760b7e3b.gif)
+
+## Issues
 
 ## Flaky Tests
 
