@@ -32,6 +32,16 @@ Your team may require visualizing your current status on the project. This is im
 
 There may be some unstable automated tests on your project that sometimes fail and sometimes pass. 
 
+**How does it work?**
+
+Let's say `0 == failed` and `1 == passed`.
+If we have 1 passed and 1 failed, avg value is 0.5.
+If all tests are passing, value is 1.
+If all tests failing value is 0.
+We set some boundaries between where tests neither pass or fail.
+So if avg value is 0.9 we can consider this test as non-flaky as it passes 90% of time.
+
+
 ![Flaky](images/Flaky.gif)
 
 ## Slowest Tests 
