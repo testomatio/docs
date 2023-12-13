@@ -59,6 +59,11 @@ Please note, that there can be only one default template in each category.
 
 ![Default Templates](images/make-default.png)
 
+### Configure Defect Templates 
+
+
+
+
 ## Applying Templates
 
 ### Applying Templates To Tests And Suites
