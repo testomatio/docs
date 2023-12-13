@@ -61,8 +61,19 @@ Please note, that there can be only one default template in each category.
 
 ### Configure Defect Templates 
 
+You can create templates for defects in Jira, Github, Azure, etc. You can automatically prefill summary and description fields using variables described below:
 
+- `{{ description }}`: This variable represents the defect description.
+- `{{ assignee }}`: Indicates the person assigned to the test.
+- `{{ title }}`: Represents the title of the test case.
+- `{{ priority }}`: Indicates the priority assigned to the test case.
+- `{{ tags }}`: Represents any tags associated with the test case.
+- `{{ jira-issues }}`: Provides a link or reference to Jira issues related to the test case.
+- `{{ test-description }}`: This variable represents the detailed description of the test case. It includes information about the purpose of the test, test steps, and expected outcomes.
+- `{{ test-attachments }}`: Refers to any attachments associated with the test case. This could include images, documents, or other files relevant to the test.
+- `{{ attachments }}`: Represents any attachments related to test failures or defects. This may include screenshots, log files, or other evidence documenting the failure.
 
+![defect-template](images/defect-template.png)
 
 ## Applying Templates
 
