@@ -14,29 +14,29 @@ When you run tests with Testomat.io it will generate a Run Report with the resul
 
 Clicking on the Test Run will toggle RunReport screen in basic view.
 
-![33](images/108555719-87c49880-72fe-11eb-9503-efd242e5a44f.jpg)
+![toggle RunReport screen](images/1-1.png)
 
 Here you can see 1. a list of tests, 2. their status (Passed/ Failed/ Skipped), 3. general information on the Run Result.
 
-![333](images/108555736-8dba7980-72fe-11eb-9f52-f23a6e44cce1.jpg)
+![run overview](images/2-2.png)
 
 Also, you can click on test and open it to see details.
 
-![3333](images/108555750-93b05a80-72fe-11eb-993d-b935e8297f39.jpg)
+![see details](images/3.png)
 
 **Extended view**
 
 If you click on Report button you will see the extended view of the Run Report.
 
-![33333](images/108555796-a32fa380-72fe-11eb-9cee-11e4583a85ef.jpg)
+![Report button](images/4.png)
 
 You can see such options here: 1. a list of tests 2. overview of all executed tests 3. Report Summary.
 
-![333333](images/108555804-a7f45780-72fe-11eb-9729-346afc64d287.jpg)
+![Report Details](images/5.png)
 
-If you hover your tests in Overview field you will see a summary of the test and its status. Also, you can click on a test and see its details.
+You can sort suites by Name and by Failed status in the Overview widget. 
 
-![33333333](images/108556510-c7d84b00-72ff-11eb-9002-0e4913c4f5ef.gif)
+![Averview widget](images/6.gif)
 
 You can use ↓ and ↑ keys to navigate the tests and have a quick view of details for each test.
 
@@ -46,29 +46,30 @@ You can use ↓ and ↑ keys to navigate the tests and have a quick view of deta
 
 You can group your Runs within Testomat.io. To do this you need to click on New Group button
 
-![4](images/108557489-5bf6e200-7301-11eb-875c-3c651955e05b.jpg)
+![New Group button](images/7.png)
 
 On New RunGroup screen you need
-1. Choose a group type
-2. Add a Name of a group
-3. Choose Merge strategy
+
+1. Add a Name of a group
+2. Choose Merge strategy
+3. Choose a group type (optional)
 4. Click on Save button
 
-![44](images/108557953-f2c39e80-7301-11eb-8994-a478077b48a2.jpg)
+![New RunGroup screen](images/8.png)
 
 A New RunGroup will appear on Runs page
 
-![444](images/108558191-3cac8480-7302-11eb-8365-22b3dcd095c4.jpg)
+![RunGroup will appea](images/9.png)
 
 To put Manual Run to a RunGroup you need to open it and click on Add Manual Run button
 
-![4444](images/108558574-c9efd900-7302-11eb-91b6-e8e58d517b13.jpg)
+![put Manual Run](images/10.png)
 
 To put an Automated Run to a RunGroup you need to execute your tests with Testomat.io providing TESTOMATIO_RUNGROUP_TITLE="Build ${BUILD_ID}". 
 
 Now you can see Test Runs in a created RunGroup
 
-![44444](images/108561751-6fa54700-7307-11eb-9a79-3321608fa71c.jpg)
+![Test Runs in a created RunGroup](images/11.png)
 
 ## Merge Strategy
 
@@ -76,25 +77,25 @@ With Testomat.io you can use different Merge Strategies for Test Runs analysis. 
 
 You can use it when merging few Runs:
 
-![5](images/108630710-d7c26d00-746e-11eb-8b44-a3f5dcfdfe23.jpg)
+![merge str](images/12.png)
 
 Or when you add/edit RunGroup
 
-![55](images/108630727-ed379700-746e-11eb-8965-fbafb42c61d8.jpg)
+![merge str 2](images/13.png)
 
 ## Merge Runs
 
 With Testomat.io you can merge your Test Runs. To do this you need to choose Test Runs you want to merge and click on Merge button on the top of the page
 
-![6](images/108630814-72bb4700-746f-11eb-8122-ef4f38a1481c.jpg)
+![merge runs](images/14.png)
 
-Here you will need to 1. Select testing Environment 2. Enter a name for merged run 3. Choose a Merging Strategy 4. Click on Merge button
+Here you will need to 1. Select testing Environment 2. Enter a name for merged run 3. Choose a Merging Strategy 4. Decide to keep original runs or not. 5. Click on Merge button
 
-![66](images/108630945-30ded080-7470-11eb-8399-18d103243939.jpg)
+![merge runs steps](images/15.png)
 
 Your merged run will appear in the list of runs on the Runs page 
 
-![666](images/108630987-65528c80-7470-11eb-8f98-4922d5058ee6.jpg)
+![merged run](images/16.png)
 
 ## Relaunch Runs
 
