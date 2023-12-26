@@ -71,6 +71,28 @@ Now you can see Test Runs in a created RunGroup
 
 ![Test Runs in a created RunGroup](images/11.png)
 
+## Copy Run Group
+
+ You can easily create a new Run Group, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
+
+**Assignee**: Define assignee details separately, preventing them from being copied.
+
+**Issues**: Choose whether to include or exclude linked issues in the duplication process
+
+**Labels**: Decide whether labels should be duplicated or omitted in the new test run
+
+**Environments**: Control the duplication of environment settings based on your requirements.
+
+**Nested Structure**: Preserve or exclude the nested structure of your test groups as you duplicate them.
+
+Here are steps: 1. Open Run Group 2. Click Extra menu 3. Click Copy 4. Pick configurations 5. Save 6. See Run Group created.
+
+![Copy group 1](images/32.png)
+
+![Copy group 2](images/33.png)
+
+![Copy group 3](images/34.png)
+
 ## Merge Strategy
 
 With Testomat.io you can use different Merge Strategies for Test Runs analysis. It helps to aggregate results when a group contains multiple runs.
@@ -85,7 +107,7 @@ Or when you add/edit RunGroup
 
 ## Merge Runs
 
-With Testomat.io you can merge your Test Runs. To do this you need to choose Test Runs you want to merge and click on Merge button on the top of the page
+With Testomat.io you can merge your Test Runs. To do this you need to enable multi-selection, choose the Test Runs you want to merge, and click on the Merge button at the bottom of the page
 
 ![merge runs](images/14.png)
 
@@ -133,16 +155,61 @@ On the Runs page you will see a copy of your Test Run with new tests results:
 
 ![copy of your Test Run](images/24.png)
 
+## Archive Test Run 
+
+Archive Test Run provides you with the ability to declutter the main Runs board, ensuring that only relevant and active test runs take center stage while preserving historical data.  To do this you need to 1. click on the menu button and 2. click on Archive button. 3. Confirm.
+
+![Archive Test Run](images/25.png)
+
+Archived runs find a new home in the dedicated Runs Archive section. This segregated space ensures that your archived data is easily accessible without cluttering the main board. The Runs Archive comes equipped with filtering capabilities.
+
+![Run Archive](images/26.png)
+
+## Filtering Test Runs
+
+Testomat provides filtering capabilities for Runs and Run Groups. On the Runs page, you can find Basic filters and Additional filters.
+
+![Run Filters](images/27.png)
+
+## Multiselection For Runs
+
+Multiselection allows the bulk application options to many runs with one click. Here is overview:
+
+1. Select all - select all runs on the Runs page
+2. Move - move runs to/from Run Group
+3. Download - export selected run reports to spreadsheet
+4. Labels - apply/remove [labels](https://docs.testomat.io/usage/labels-and-custom-fields/#how-to-setup-a-label) to runs
+5. Merge - merge selected runs 
+6. Compare - opens Compare runs view
+7. Archive - archive selected runs
+8. Link - link selected runs to [JIRA](https://docs.testomat.io/integration/jira/#connecting-to-jira-project), [GitHub](https://docs.testomat.io/integration/issues-management-systems/#github-issues-configuration), [Azure](https://docs.testomat.io/integration/issues-management-systems/#azure-devops-configuration),[Linear](https://docs.testomat.io/integration/issues-management-systems/#linear-configuration) or other issue.
+9. Delete - delete selected runs 
+
+![Multiselection Options](images/28.png)
+
+## How To Download Run Report
+
+Testomat provides option to export Run Reports as spreadsheet so you can get your data in xlsx file. See how it works.
+
+**Download few run reports in one file**: 1. Enable Multiselection 2. Pick Runs 3. Click Download
+
+![export with multiselect](images/29.png)
+
+**Download a separate Run Report**: 1. Open Run Report 2. Click Run 3. Click Extra button 4. Download as Spreadsheet.
+
+![export report](images/30-1.png)
+
+## Compare Test Runs
+
+Select test runs and see a visual display of the similarities and differences. Compare your run reports and analyze them by such parameters as Flaky, Revieved, Degraded, and more. To do this 1. Enable Multiselection 2. Pick Runs 3. Click Compare
+
+![Compare Test Runs](images/compare-runs.gif)
+
+Also this option is applicable for Run Groups. 1. Open Run group 2. Click Combined Report
+
+![Combined Report](images/31.png)
 
 
-
-
-
-
-
-
-
- 
 
 
 
