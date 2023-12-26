@@ -101,37 +101,37 @@ Your merged run will appear in the list of runs on the Runs page
 
 For some reason, you may need to re-check some tests in your Run manually. You can use Relaunch Run options for such cases. To do this you need to 1. click on the menu button and 2. click on Relaunch manually button
 
-![7](images/108631310-f1b17f00-7471-11eb-86fb-07a024cf804c.jpg)
+![Relaunch Run](images/17.png)
 
 Your Test Run will open in Manual Run window and you will be able to re-check tests and change their status:
 
-![77](images/108631334-24f40e00-7472-11eb-8678-ea187b495b49.jpg)
+![relaunched Run](images/18.png)
 
 When you finish you need to click on Finish button. You will see tests with new status and new Run Status
 
-![777](images/108631339-2ae9ef00-7472-11eb-8f4c-8736dd084826.jpg)
+![new status](images/19.png)
 
 Also, your Test Run will contain updated information on its results: You will see a changed tag and Run status.
 
-![7777](images/108631468-b5cae980-7472-11eb-8306-2b5a2c48ebc5.jpg)
+![New statuses](images/20.png)
 
 ## Launch a Copy
 
-If you need need to re-check some tests in your Run manually, but for some reason, you want to save this Test Run you can use Launch a copy option. To do this you need to 1. click on the menu button and 2. click on Launch a Copy Manually button.
+If you need need to re-check some tests in your Run manually, but for some reason, you want to save this Test Run you can use Launch a copy option. To do this you need to 1. click on the menu button and 2. click on Launch a Copy button.
 
-![8](images/108631687-bb74ff00-7473-11eb-981d-49e770c67dcd.jpg)
+![Launch a Copy button](images/21.png)
 
 Your Test Run will open in Manual Run window and you will be able to re-check tests and change their status:
 
-![88](images/108631721-e9f2da00-7473-11eb-95c5-d4d3fc5fc606.jpg)
+![test run copy](images/22.png)
 
 When you finish you need to click on Finish button. You will see a new Test Run tests with new status and new Run Status:
 
-![888](images/108631777-41914580-7474-11eb-8441-b898f0ae70f4.jpg)
+![new Test Run tests](images/23.png)
 
 On the Runs page you will see a copy of your Test Run with new tests results:
 
-![8888](images/108631835-99c84780-7474-11eb-837e-2469c0b4ec85.jpg)
+![copy of your Test Run](images/24.png)
 
 
 
