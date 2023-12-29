@@ -40,7 +40,7 @@ You can sort suites by Name and by Failed status in the Overview widget.
 
 You can use ↓ and ↑ keys to navigate the tests and have a quick view of details for each test.
 
-![3333333](images/108555900-d07c5180-72fe-11eb-82e7-f8b058438eca.gif)
+![navigate with arrows](images/CleanShot-2023-12-29-at-094607.gif)
 
 ## RunGroups
 
