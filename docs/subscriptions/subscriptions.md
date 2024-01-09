@@ -167,6 +167,28 @@ To cancel your subscription, click the Cancel button on the billing page:
 
 You will continue to have access to your current subscription level until the end of your current (already paid) billing period. At that point, any features beyond those allowed on the Free plan will be deactivated. If you renew or upgrade your subscription, your deactivated features and projects will be available again.
 
+## Edit Your Billing Data
+
+ > Please note, that there is no way to change Billing data for old bills.
+
+ To update / edit your billing data you should go to Companies page > Manage subscription > Billing Iinformation > Update information
+
+ ![upd bill info 1](images/edit-bill-1.png)
+
+ ![upd bill info 2](images/edit-bill-2.png)
+
+ Enter your data such as email, phone number, address, Tax ID > Save
+
+ ![upd bill 3](<images/CleanShot 2024-01-09 at 09.08.52@2x.png>)
+
+ See your Billing Data was updated
+
+ ![upd bill 4](<images/CleanShot 2024-01-09 at 09.09.49@2x.png>)
+
+ If you need to edit some specific Billing data please contact us support@testomat.io.
+
+
+
 ## What Happens To Locked Projects And Users
 
 When your subscription is canceled your company is set to Free plan with appropriate limitations. You may [see it above ](https://docs.testomat.io/usage/subscriptions/#how-to-use-testomat.io-as-a-free-subscription-plan). Some of your projects may be locked, but not lost. Member added above Free Plan limit will be moved to removed section in Companies section and won't have access to projects. You can contact support to get the data from the locked projects or upgrade to unlock it. 
@@ -188,3 +210,5 @@ A: No, as it's one member per seat. However, you can release the license by remo
 Q: Is it possible to get free read only users in Trial or Free subscription?
 A: No, free read-only users are available in Professional and Enterprise plans.
 
+Q: Can I change Billing data for already paid bills.
+A: No, Billing data can't be changed for old bills.
