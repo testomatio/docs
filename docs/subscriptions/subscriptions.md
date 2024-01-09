@@ -171,7 +171,7 @@ You will continue to have access to your current subscription level until the en
 
  > Please note, that there is no way to change Billing data for old bills.
 
- To update / edit your billing data you should go to Companies page > Manage subscription > Billing Iinformation > Update information
+ To update / edit your Billing data you should go to Companies page > Manage subscription > Billing Iinformation > Update information
 
  ![upd bill info 1](images/edit-bill-1.png)
 
@@ -181,7 +181,7 @@ You will continue to have access to your current subscription level until the en
 
  ![upd bill 3](<images/CleanShot 2024-01-09 at 09.08.52@2x.png>)
 
- See your Billing Data was updated
+ See your Billing information was updated
 
  ![upd bill 4](<images/CleanShot 2024-01-09 at 09.09.49@2x.png>)
 
