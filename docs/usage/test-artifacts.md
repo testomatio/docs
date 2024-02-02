@@ -137,6 +137,7 @@ S3_SECRET_ACCESS_KEY=2222222222222222222222222222222222222222222
 S3_BUCKET=artifacts
 S3_REGION=us-west-1
 ```
+Please note, that you need to enable [Use Private URLs for Test Artifacts](https://docs.testomat.io/usage/test-artifacts/#private-access) in Testomat Project settings if you configure bucket credentials on Testomat side.
 
 To allow Testomat.io access stored files it is recommended to apply this policy to the bucket:
 
