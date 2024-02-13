@@ -160,9 +160,7 @@ exports.config = {
   // ...
   reporters: [
     [testomatio, {
-      apiKey: $ {
-        process.env.TESTOMATIO
-      }
+      apiKey: process.env.TESTOMATIO
     }]
   ]
 }

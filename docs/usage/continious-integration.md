@@ -11,12 +11,12 @@ A single test, suite, test plan, or all tests can be executed automatically on C
 
 Currently following CI systems supported:
 
-* Jenkins
-* Bamboo
-* GitHub Actions
-* GitLab
-* Circle CI
-* Azure Pipelines
+* [Jenkins](#jenkins)
+* [Bamboo](#bamboo)
+* [GitHub Actions](#github-actions)
+* [GitLab CI](#gitlab-ci)
+* [Circle CI](#circle-ci)
+* [Azure Pipelines](#azure-pipelines)
 
 ## Overview
 
