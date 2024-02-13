@@ -1,7 +1,7 @@
 import { defineUserConfig, defaultTheme } from 'vuepress'
-import { sitemapPlugin } from "vuepress-plugin-sitemap2";
+import { sitemapPlugin } from "@vuepress/plugin-sitemap";
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
-import { seoPlugin } from "vuepress-plugin-seo2";
+import { seoPlugin } from "@vuepress/plugin-seo";
 import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 
