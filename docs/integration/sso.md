@@ -255,7 +255,7 @@ Now, use any assigned user from Azure AD to Log In into Testomat.io. Select "SSO
 
 > In case user sees 404 page on Azure AD, check that Single Sign-On URL was correctly set.
 
-# Custom SAML
+### Custom SAML
 
 SAML providers can have different UI and different terms. In this section we will try to narrow down what configuration should be done to integrate any custom SAML provider without getting into the details.
 
