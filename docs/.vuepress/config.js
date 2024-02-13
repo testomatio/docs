@@ -1,4 +1,5 @@
-import { defineUserConfig, defaultTheme } from 'vuepress'
+import { defineUserConfig } from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default'
 import { sitemapPlugin } from "@vuepress/plugin-sitemap";
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { seoPlugin } from "@vuepress/plugin-seo";
