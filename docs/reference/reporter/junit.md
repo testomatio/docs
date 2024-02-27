@@ -11,15 +11,13 @@ Testomat.io will not only create a run report but also collect all information a
 
 Tested Frameworks:
 
-* JUnit (JUnit)
-* Python (Pytest)
-* Minitest (Ruby)
-* PHPUnit (PHP)
-* NUnit (C#)
-
+- JUnit (JUnit)
+- Python (Pytest)
+- Minitest (Ruby)
+- PHPUnit (PHP)
+- NUnit (C#)
 
 To enable Testomatio Reporter install `@testomatio/reporter` package
-
 
 Use one of your favorite package managers:
 
@@ -43,17 +41,16 @@ Then import XML report into Testomat.io
 npx report-xml "{pattern}" --lang={lang}
 ```
 
-* `pattern` - is a glob pattern to match all XML files from report. For instance, `"test/report/**.xml"` or just `report.xml`
-* `--lang` option can be specified to identify source code of the project. Example: `--lang=Ruby` or `--lang=Java` or `--lang=Python`. Possible values:
-  * `c#`
-  * `java`
-  * `ruby`
-  * `python`
-  * `php`
-* `--java-tests` option is avaiable for Java projects, and can be set if path to tests is different then `src/test/java`. When this option is enable, `lang` option is automatically set to `java`
-* `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [bucket config for artifats](./artifacts).
-* `--timelimit <time>` set a timer to silently kill a long-running reporter process due to network or other issues. For instance, use `--set-timeout=3` to stop process after 3 secs.
-
+- `pattern` - is a glob pattern to match all XML files from report. For instance, `"test/report/**.xml"` or just `report.xml`
+- `--lang` option can be specified to identify source code of the project. Example: `--lang=Ruby` or `--lang=Java` or `--lang=Python`. Possible values:
+  - `c#`
+  - `java`
+  - `ruby`
+  - `python`
+  - `php`
+- `--java-tests` option is avaiable for Java projects, and can be set if path to tests is different then `src/test/java`. When this option is enable, `lang` option is automatically set to `java`
+- `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [bucket config for artifats](./artifacts).
+- `--timelimit <time>` set a timer to silently kill a long-running reporter process due to network or other issues. For instance, use `--set-timeout=3` to stop process after 3 secs.
 
 ## Pytest
 
@@ -110,6 +107,33 @@ This will produce XML report which contains path to a file:
 
 When XML report is uploaded, all files from `file://` will be uploaded to corresponding tests.
 
+### Assign Test ID
+
+To link test in source code with test in Testomat.io add Test ID as a comment:
+
+```java
+  @Test
+  public void testAddition() {
+    // @T8acca9eb
+    MyMath myMath = new MyMath();
+    int result = myMath.add(2, 3);
+    assertEquals(5, result);
+}
+```
+
+In this case `@TT8acca9eb` is ID of existing test inside Testomat.io project
+
+Alternatively, if the code can't be imported by a reported, use output inside a test to print its ID:
+
+```java
+public void testAddition() {
+  MyMath myMath = new MyMath();
+  int result = myMath.add(2, 3);
+  System.out.println("tid://@T8acca9eb"); // here we print test ID
+  assertEquals(5, result);
+}
+```
+
 ## NUnit
 
 Generate NUnit XML report and run the following code:
@@ -136,6 +160,16 @@ To upload an arbitrary file as artifact, print its absulute path to console:
 Console.WriteLine("file://path/to/file.png");
 ```
 
+### Assign Test ID
+
+To link test in source code with test in Testomat.io print a Test ID inside a test:
+
+```java
+Console.WriteLine("tid://@T8acca9eb"); // here we print test ID
+```
+
+Use `tid://` prefix with a existing Test ID to match test with ID.
+
 ## Ruby Minitest
 
 ```ruby
@@ -160,6 +194,16 @@ Import reports from `test/reports` directory:
 TESTOMATIO={API_KEY} npx report-xml "test/reports/*.xml" --lang ruby
 ```
 
+### Assign Test ID
+
+To link test in source code with test in Testomat.io print a Test ID inside a test:
+
+```java
+puts "tid://@T8acca9eb" // here we print test ID
+```
+
+Use `tid://` prefix with a existing Test ID to match test with ID.
+
 ## PHPUnit
 
 Generate PHPUnit XML and import it
@@ -167,5 +211,4 @@ Generate PHPUnit XML and import it
 ```
 TESTOMATIO={API_KEY} npx report-xml "report.xml" --lang php
 ```
-
 

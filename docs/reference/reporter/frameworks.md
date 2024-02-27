@@ -30,7 +30,6 @@ TESTOMATIO={API_KEY} npx codeceptjs run
 
 > 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](./artifacts.md)
 
-
 #### CodeceptJS Parallel Run
 
 If tests run parallel, like workers in CodeceptJS use `start-test-run` command to get proper reports:
@@ -44,7 +43,6 @@ TESTOMATIO={API_KEY} npx start-test-run -c 'npx codeceptjs run-workers 2'
 Use `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [S3 config for artifacts](./artifacts).
 
 Command `start-test-run` is used to initiate a single run report before all workers are started. Each worker will report to the same Run, and after all workers and codeceptjs finishes, this will finish the run report.
-
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/codeceptJS) | 🗄 [CodeceptJS API Example](https://github.com/testomatio/examples/tree/master/codeceptJSApi) | 🥒 [CodeceptJS Cucumber Example](https://github.com/testomatio/examples/tree/master/codeceptjs-cucumber)
 
@@ -82,7 +80,9 @@ TESTOMATIO={API_KEY} npx playwright test
 
 > 📐 When used with [Testomat.io Application](https://app.testomat.io) it is recommended to import automated tests first via [check-tests](https://github.com/testomatio/check-tests#cli). To create items on the fly set `TESTOMATIO_CREATE=1` env variable.
 
-Register `cypress-plugin` in `cypress/plugins/index.js`:
+<details>
+  <summary> For Cypress <code>< 10.0.0</code> <i>(click to expand)</i></summary>
+  Register `cypress-plugin` in `cypress/plugins/index.js`:
 
 ```javascript
 const testomatioReporter = require('@testomatio/reporter/lib/adapter/cypress-plugin');
@@ -100,6 +100,16 @@ module.exports = (on, config) => {
 };
 ```
 
+</details>
+
+For Cypress >= `10.0.0` use `setupNodeEvents` in `cypress.config.js(ts)`
+
+```javascript
+setupNodeEvents(on, config) {
+  return require('@testomatio/reporter/lib/adapter/cypress-plugin')(on, config)
+}
+```
+
 Run the following command from you project folder:
 
 ```bash
@@ -113,7 +123,6 @@ TESTOMATIO={API_KEY} npx cypress run
 ### Mocha
 
 > 📐 When used with [Testomat.io Application](https://app.testomat.io) it is recommended to import automated tests first via [check-tests](https://github.com/testomatio/check-tests#cli). To create items on the fly set `TESTOMATIO_CREATE=1` env variable.
-
 
 Run the following command from you project folder:
 
@@ -146,7 +155,6 @@ TESTOMATIO={API_KEY} npx jest
 
 > 📺 [Video](https://www.youtube.com/watch?v=RKfIfnEuGys)
 
-
 ### WebdriverIO
 
 > 📐 When used with [Testomat.io Application](https://app.testomat.io) it is recommended to import automated tests first via [check-tests](https://github.com/testomatio/check-tests#cli). To create items on the fly set `TESTOMATIO_CREATE=1` env variable.
@@ -160,12 +168,13 @@ exports.config = {
   // ...
   reporters: [
     [testomatio, {
-      apiKey: process.env.TESTOMATIO
+      apiKey: $ {
+        process.env.TESTOMATIO
+      }
     }]
   ]
 }
 ```
-
 
 For making screenshots on failed tests add the following hook to `wdio.conf.js`:
 
@@ -222,10 +231,8 @@ To report Newman tests a separate package is required:
 npm i newman-reporter-testomatio --save-dev
 ```
 
-> **Note**
-> `newman` and `newman-reporter-testomatio` should be installed in the same directory. If you run your tests using globally installed newman (`newman run ...`), intall `newman-reporter-testomatio` globally too (`npm i newman-reporter-testomatio -g`). If you use locally installed newman (within the project) (`npx newman run ...`), install `newman-reporter-testomatio` locally (`npm i newman-reporter-testomatio`).
-You can verify installed packages via `npm list` or `npm list -g`.
-
+> **Note** > `newman` and `newman-reporter-testomatio` should be installed in the same directory. If you run your tests using globally installed newman (`newman run ...`), intall `newman-reporter-testomatio` globally too (`npm i newman-reporter-testomatio -g`). If you use locally installed newman (within the project) (`npx newman run ...`), install `newman-reporter-testomatio` locally (`npm i newman-reporter-testomatio`).
+> You can verify installed packages via `npm list` or `npm list -g`.
 
 Run collection and specify `testomatio` as reporter:
 
@@ -234,7 +241,6 @@ TESTOMATIO={API_KEY} npx newman run {collection_name.json} -r testomatio
 ```
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/newman)
-
 
 ### Detox
 
@@ -303,6 +309,7 @@ For example, with Surefire Report Plugin in Maven, you can add the following con
     </plugins>
 </build>
 ```
+
 In this case JUnit XML will be saved into `target/surefire-reports/`
 
 So you can import reports to Testomat.io by running:
@@ -329,6 +336,7 @@ In this example, we added ID as a comment to `negativeNumbersCanBeSubtracted` te
       assertThat(calc.Calculate(-1.0, -3.0, "-"), equalTo(2.0));
   }
 ```
+
 To make this feature work, please ensure that source code of Java tests is accessible to `npx report-xml` command, use `--java-tests` option to specify the correct path. To check if source code of tests is available run reporter with DEBUG mode:
 
 ```
@@ -511,6 +519,10 @@ Windows (cmd):
 set TESTOMATIO=<key>
 ```
 
+##### Run groups parameter
+There is environment variable `TESTOMATIO_RUNGROUP_TITLE` that can be used to specify run tests with specific group title.
+
+##### pytest.ini
 In case you are using private testomat.io service, create `pytest.ini` file in your project root directory. Specify
 testomat.io url in it
 
@@ -557,42 +569,75 @@ to configure test environment, you can use additional option:
 pytest --analyzer sync --testRunEnv windows11,chrome,1920x1080
 ```
 
-##### Submitting Test Artifacts (NEW)
+Eny environments used in test run should be placed in comma separated list, NO SPACES ALLOWED.
 
-According documentation, Testomat.io does not store any screenshots,
-logs or other artifacts. In order to manage them it is advised to use S3 Buckets.
+
+##### Submitting Test Artifacts
+
+Testomat.io does not store any screenshots, logs or other artifacts.
+
+In order to manage them it is advised to use S3 Buckets (GCP Storage).
 https://docs.testomat.io/usage/test-artifacts/
 
-In order to save artifacts, enable **Share credentials with Testomat.io Reporter** option in testomat.io Settings ->
-Artifacts.
+Analyser needs to be aware of the cloud storage credentials.
+There are two options:
+1. Enable **Share credentials with Testomat.io Reporter** option in testomat.io Settings -> Artifacts.
+2. Use environment variables   `ACCESS_KEY_ID, SECRET_ACCESS_KEY, ENDPOINT, BUCKET`
 
-To send artifact to s3 bucket, next code should be added to test:
+You would need to decide when you want to upload your test artifacts to cloud storage
+
+1) Upload page screenshot when test fails, using fixtures [reference](https://docs.pytest.org/en/latest/example/simple.html#making-test-result-information-available-in-fixtures)
 
 ```python
 
+import pytest
+from typing import Dict
+from pytest import StashKey, CollectReport
+from playwright.sync_api import Page
+
+phase_report_key = StashKey[Dict[str, CollectReport]]()
+
+@pytest.hookimpl(wrapper=True, tryfirst=True)
+def pytest_runtest_makereport(item, call):
+    rep = yield
+    item.stash.setdefault(phase_report_key, {})[rep.when] = rep
+    return rep
 
 
+@pytest.fixture(scope="function")
+def handle_artifacts(page: Page, request):
+    yield
+    report = request.node.stash[phase_report_key]
+    if ("call" not in report) or report["setup"].failed or report["call"].failed:
+        random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
 
-artifact_url = pytest.s3_connector.upload_file(file_path, key, bucket_name)
-
-artifact_url = pytest.s3_connector.upload_file_object(file_bytes, key, bucket_name)
+        filename = f"{random_string}.png"
+        screenshot_path = os.path.join(artifacts_dir, filename)
+        page.screenshot(path=screenshot_path)
+        # file_path - required, path to file to be uploaded
+        # file_bytes - required, bytes of the file to be uploaded
+        # key - required, file name in the s3 bucket
+        # bucket_name - optional,name of the bucket to upload file to. Default value is taken from Testomatio.io
+        artifact_url = pytest.testomatio.upload_file(screenshot_path, filename)
+        # or
+        # artifact_url = pytest.testomatio.upload_file_object(file_bytes, key, bucket_name)
+        pytest.testomatio.add_artifacts([artifact_url])
+    page.close()
 ```
 
 ⚠️ Please take into account s3_connector available only after **pytest_collection_modifyitems()** hook is executed.
 
-In conftest.py file next hook can be added. set attribute testomatio_artifacts. This list will be sent to testomat.io
+2) If you prefer to use pytest hooks - add `pytest_runtest_makereport` hook in your `conftest.py` file.
 
 ```python
 def pytest_runtest_makereport(item, call):
-    artifact_urls = ['url1', 'url2']
-    setattr(item, 'testomatio_artifacts', artifact_urls)
+    artifact_url = pytest.testomatio.upload_file(screenshot_path, filename)
+    pytest.testomatio.add_artifacts([artifact_url])
 ```
-
-Eny environments used in test run. Should be placed in comma separated list, NO SPACES ALLOWED.
 
 ##### Clarifications
 
-- tests can be synced even without `@mark.testomatio('@T96c700e6')` decorator.
+- tests can be synced even without `@patest.mark.testomatio('@T96c700e6')` decorator.
 - test title in testomat.io == test name in pytest
 - test suit title in testomat.io == test file name in pytest
 
@@ -602,12 +647,32 @@ To make analyzer experience more consistent, it uses standard pytest markers.
 Testomat.io test id is a string value that starts with `@T` and has 8 symbols after.
 
 ```python
-from pytest import mark
+import pytest
 
 
-@mark.testomatio('@T96c700e6')
+@pytest.mark.testomatio('@T96c700e6')
 def test_example():
     assert 2 + 2 == 4
 ```
+
+##### Compatibility table with [Testomatio check-tests](https://github.com/testomatio/check-tests)
+
+| Action |  Compatibility | Method |
+|--------|--------|-------|
+| Importing test into Testomatio | complete | `pytest --analyzer add` |
+| Exclude hook code of a test | N/A | N/A |
+| Include line number code of a test | N/A | N/A |
+| Import Parametrized Tests | complete | default behaviour |
+| Disable Detached Tests | complete | `pytest --analyzer add --no-detached` |
+| Synchronous Import | complete | default behaviour |
+| Auto-assign Test IDs in Source Code | complete | default behaviour |
+| Keep Test IDs Between Projects | complete | `pytest --analyzer add --create` |
+| Clean Test IDs | complete | `pytest --analyzer remove` |
+| Import Into a Branch | N/A | N/A |
+| Keep Structure of Source Code | complete | `pytest --analyzer add --keep-structure` |
+| Delete Empty Suites | complete | `pytest --analyzer add --no-empty` |
+| Import Into a Specific Suite | N/A | N/A |
+| Debugging | parity | `pytest --analyzer debug` |
+
 
 
