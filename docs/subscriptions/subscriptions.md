@@ -207,6 +207,22 @@ A: Testomat.io accepts US currency only ($USD).
 Q: Can I share one license/seat with several members?
 A: No, as it's one member per seat. However, you can release the license by removing a member and invite another person to the vacant seat.
 
+Q: Can I cancel subscription at any time?
+A: Yes, please go to billing portal page and cancel subscription.
+
+Q: Can I manage my subscription from mobile?
+A: No, you should use deskotp browser to access subscription, mobile version is not supported.
+
+Q: I don't use testomat.io, do you refund subscription?
+A: No, we do not issue refunds for subscriptions as outlined in our terms and conditions available at https://testomat.io/terms/. You should cancel your subscription when you find it no longer necessary. Please be advised that you take full responsibility for any actions taken within the billing portal.
+
+
+
+
+
+
+
+
 Q: Is it possible to get free read only users in Trial or Free subscription?
 A: No, free read-only users are available in Professional and Enterprise plans.
 
