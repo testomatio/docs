@@ -198,33 +198,26 @@ When your subscription is canceled your company is set to Free plan with appropr
 
 ## Frequently Asked Questions
 
-Q: I'd like to collaborate with a user who already has their own subscription. Should I purchase a seat for the user to collaborate on my projects?
+Q: I'd like to collaborate with a user who already has their own subscription. Should I purchase a seat for the user to collaborate on my projects?\
 A: Yes, in Testomat.io you pay for the number of licenses in your account. To start the collaboration, you may either invite the user to your account or ask them to invite you. 
 
-Q: What currency am I going to be charged in?
+Q: What currency am I going to be charged in?\
 A: Testomat.io accepts US currency only ($USD). 
 
-Q: Can I share one license/seat with several members?
+Q: Can I share one license/seat with several members?\
 A: No, as it's one member per seat. However, you can release the license by removing a member and invite another person to the vacant seat.
 
-Q: Can I cancel subscription at any time?
+Q: Can I cancel subscription at any time?\
 A: Yes, please go to billing portal page and cancel subscription.
 
-Q: Can I manage my subscription from mobile?
+Q: Can I manage my subscription from mobile?\
 A: No, you should use deskotp browser to access subscription, mobile version is not supported.
 
-Q: I don't use testomat.io, do you refund subscription?
+Q: I don't use testomat.io, do you refund subscription?\
 A: No, we do not issue refunds for subscriptions as outlined in our terms and conditions available at https://testomat.io/terms/. You should cancel your subscription when you find it no longer necessary. Please be advised that you take full responsibility for any actions taken within the billing portal.
 
-
-
-
-
-
-
-
-Q: Is it possible to get free read only users in Trial or Free subscription?
+Q: Is it possible to get free read only users in Trial or Free subscription?\
 A: No, free read-only users are available in Professional and Enterprise plans.
 
-Q: Can I change Billing data for already paid bills.
+Q: Can I change Billing data for already paid bills?\
 A: No, Billing data can't be changed for old bills.
