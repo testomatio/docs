@@ -167,13 +167,14 @@ const testomatio = require('@testomatio/reporter/lib/adapter/webdriver');
 exports.config = {
   // ...
   reporters: [
-    [testomatio, {
-      apiKey: $ {
-        process.env.TESTOMATIO
-      }
-    }]
-  ]
-}
+    [
+      testomatio,
+      {
+        apiKey: process.env.TESTOMATIO,
+      },
+    ],
+  ],
+};
 ```
 
 For making screenshots on failed tests add the following hook to `wdio.conf.js`:
@@ -192,7 +193,10 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx start-test-run -c 'npx wdio wdio.conf.js'
 ```
 
-> 📑 [Example Project](https://github.com/testomatio/examples/tree/master/webdriverio-mocha)
+> Example projects:
+[📑 wdio v6](https://github.com/testomatio/examples/tree/master/webdriverio-mocha)
+[📑 wdio v7](https://github.com/testomatio/examples/tree/master/wdio/v7)
+[📑 wdio v8](https://github.com/testomatio/examples/tree/master/wdio/v8)
 
 > 📺 [Video](https://www.youtube.com/watch?v=cjVZzey-lto)
 
@@ -420,10 +424,9 @@ If you want to have artifacts attached, use `System.out.println` to print an abs
 System.out.println("file://" + pathToScreenshot);
 ```
 
-## PHP Frameworks 
+## PHP Frameworks
 
 > Taken from [PHP Reporter Readme](https://github.com/testomatio/php-reporter)
- 
 
 Installation
 
@@ -434,7 +437,7 @@ composer require testomatio/reporter --dev
 ### Codeception
 
 Get API key from Testomatio application and set it as `TESTOMATIO` environment variable.
-Run your tests with`Testomatio\Reporter\Codeception` extension enabled: 
+Run your tests with`Testomatio\Reporter\Codeception` extension enabled:
 
 On Linux/MacOS:
 
@@ -448,7 +451,7 @@ On Windows
 set TESTOMATIO={apiKey}&& php vendor/bin/codecept run  --ext "Testomatio\Reporter\Codeception"
 ```
 
-Alternatively, you can add `Testomatio\Reporter\Codeception` extension to suite or global config. 
+Alternatively, you can add `Testomatio\Reporter\Codeception` extension to suite or global config.
 Reporter will be started only when `TESTOMATIO` environment variable is set:
 
 ```yml
@@ -468,6 +471,7 @@ Add `Testomatio\Reporter\PHPUnit` listener to `phpunit.xml` or `phpunit.dist.xml
     <listener class="Testomatio\Reporter\PHPUnit" file="vendor/testomatio/php-reporter/src/PHPUnit.php" />
 </listeners>
 ```
+
 Run tests and provide `TESTOMATIO` API key as environment variable:
 
 On Linux/MacOS:
@@ -486,12 +490,9 @@ set TESTOMATIO={apiKey}&& php vendor/bin/phpunit
 
 ### Pytest
 
-
 > Taken from [PHP Reporter Readme](https://github.com/testomatio/php-reporter)
 
 [![Support Ukraine Badge](https://bit.ly/support-ukraine-now)](https://github.com/support-ukraine/support-ukraine)
-
-
 
 #### uses Testomat.io API:
 

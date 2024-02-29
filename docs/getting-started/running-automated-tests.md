@@ -121,7 +121,7 @@ TESTOMATIO_TITLE=$(git rev-parse HEAD) TESTOMATIO_SHARED_RUN=1 <actual run comma
 
 Please refer to documentation of your CI system and pick the variable which and be unique to all runs of this build. This approach **fits perfectly for sharded tests when you run tests on different jobs, different containers, different machines**.
 
-We recommend to also append some more info into the TESTOMATIO_TITLE 
+We recommend to also append some more info into the `TESTOMATIO_TITLE`
 
 **Strategy 3: Manually create and close run**
 

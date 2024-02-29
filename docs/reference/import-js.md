@@ -173,7 +173,7 @@ Please note, that this will take a long time on a large codebase.
 
 ### Auto-assign Test IDs in Source Code
 
-To disable guess matching for tests it is recommend to use Testomatio IDs to map a test in source code to a test in Testomatio. Testomatio IDs can be put automatically into the test names into source code when `--update-ids` option is used:
+To easily match tests in code with tests in Testomatio it is recommend to use Testomatio IDs to map a test in source code to a test in Testomatio. Testomatio IDs can be put automatically into the test names into source code when `--update-ids` option is used:
 
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --update-ids
