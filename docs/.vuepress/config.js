@@ -1,9 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 import { sitemapPlugin } from "@vuepress/plugin-sitemap";
-import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { seoPlugin } from "@vuepress/plugin-seo";
-import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { viteBundler } from '@vuepress/bundler-vite'
 
@@ -112,10 +110,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     sitemapPlugin({
       hostname: 'https://docs.testomat.io'
     }),
-    mediumZoomPlugin({
-      selector: '.theme-default-content img',
-    }),    
-    backToTopPlugin(),
     seoPlugin({
       hostname: 'https://docs.testomat.io',
       siteTitle: (_, $site) => "Testomtat.io Documentation",
