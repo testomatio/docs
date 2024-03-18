@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import { MeiliSearchPlugin } from 'vuepress-plugin-meilisearch2';
 import { defaultTheme } from '@vuepress/theme-default'
+import { hopeTheme } from 'vuepress-theme-hope';
 import { sitemapPlugin } from "@vuepress/plugin-sitemap";
 import { seoPlugin } from "@vuepress/plugin-seo";
 import { viteBundler } from '@vuepress/bundler-vite'
@@ -53,7 +54,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
-  theme: defaultTheme({
+  theme: hopeTheme({
     // repo: '',
     // smoothScroll: true,
     // editLinks: false,
@@ -92,6 +93,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       },
     ],
     displayAllHeaders: true,
+    navbarLayout: {
+      start: ['Brand'],
+      center: ['Links'],
+      // 插入到 navbar
+      end: ['MeiliSearch'],
+    },    
     sidebar,
     /**
      * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
