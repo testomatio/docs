@@ -1,8 +1,8 @@
 import { defineUserConfig } from 'vuepress'
+import { MeiliSearchPlugin } from 'vuepress-plugin-meilisearch2';
 import { defaultTheme } from '@vuepress/theme-default'
 import { sitemapPlugin } from "@vuepress/plugin-sitemap";
 import { seoPlugin } from "@vuepress/plugin-seo";
-import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { viteBundler } from '@vuepress/bundler-vite'
 
 const sections = require('../../sections')
@@ -89,7 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {
         text: 'Schedule a Demo',
         link: 'https://calendly.com/testomatio/demo'
-      }
+      },
     ],
     displayAllHeaders: true,
     sidebar,
@@ -104,9 +104,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }),
 
   plugins: [
-    searchProPlugin({
-      resultHistoryCount: 0,
-    }),    
+    MeiliSearchPlugin({
+      host: 'http://174.138.8.90',
+      apiKey: 'd34b927796984d210b216d1670f7e29461c8e5c0d4a0c74a08064238b342e5bd',
+      index: 'docs',
+    }),
     sitemapPlugin({
       hostname: 'https://docs.testomat.io'
     }),
@@ -127,3 +129,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 
 });
+
