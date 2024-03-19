@@ -106,6 +106,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   plugins: [
     searchProPlugin({
       resultHistoryCount: 0,
+      queryHistoryCount: 0,
+      autoSuggestions: false,
     }),    
     sitemapPlugin({
       hostname: 'https://docs.testomat.io'
