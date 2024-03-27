@@ -248,6 +248,14 @@ Fill in the form:
 
 ![Alt text](images/image-5.png)
 
+7. Set `Authn Context` by selecting "Password Protected Transport". The actual value should become:
+
+```
+urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+```
+
+![alt text](images/image-17.png)
+
 And save the form.
 
 
@@ -298,6 +306,7 @@ Fill in the form:
 6. Upload certificate file.
 
 ![Alt text](images/image-5.png)
+
 
 And save the form.
 
