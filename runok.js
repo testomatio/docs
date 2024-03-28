@@ -4,7 +4,6 @@ const { Octokit } = require("@octokit/core");
 const axios = require('axios').default;
 const fs = require('fs');
 const path = require('path');
-const sections = require('./sections')
 const humanize = (s) => s.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase()+' '; });
 const slugify = require('slugify')
 const dasherize = (str) => slugify(str.toLowerCase());
