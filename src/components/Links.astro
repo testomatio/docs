@@ -1,0 +1,36 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+
+const links = [
+    {
+        link: 'https://app.testomat.io',
+        data: 'Login / Sign Up'
+    },
+    {
+        link: 'https://calendly.com/testomatio/demo',
+        data: 'Schedule a Demo'
+    },
+]
+
+---
+
+{
+    links.map((data) =>
+        <div class="sl-flex header-links">
+            <a href={data.link} rel="noopener noreferrer" aria-label={data.data} target="_blank">{data.data}</a>
+        </div>
+    )
+}
+
+<style>
+    .header-links a {
+        color: #23262f;
+        font-size: 0.875rem;
+        text-decoration: none;
+    }
+
+    .header-links a:hover {
+        margin-bottom: -2px;
+        border-bottom: 2px solid #3d50f5;
+    }
+</style>
