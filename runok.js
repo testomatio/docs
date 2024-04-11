@@ -46,14 +46,14 @@ module.exports = {
         if (imageUrl.startsWith('http')) {
           try {
             await downloadImage(imageUrl, destinationFolder);
-            updatedContent = updatedContent.replace(imageUrl, `images/${path.basename(imageUrl)}`);
+            updatedContent = updatedContent.replace(imageUrl, `./images/${path.basename(imageUrl)}`);
           } catch (err) {}
           continue;
         }
-        try {
-          fs.renameSync(path.join('docs/.vuepress/public', imageUrl), path.join(destinationFolder, path.basename(imageUrl)), { overwrite: true });
-        } catch (err) {}
-        updatedContent = updatedContent.replace(imageUrl, `images/${path.basename(imageUrl)}`);
+        // try {
+        //   fs.renameSync(path.join('docs/.vuepress/public', imageUrl), path.join(destinationFolder, path.basename(imageUrl)), { overwrite: true });
+        // } catch (err) {}
+        updatedContent = updatedContent.replace(imageUrl, `./images/${path.basename(imageUrl)}`);
       }
 
       // updatedContent = content.replace(/!\[.*?\]\((\/assets\/.*?)\)/g, "![$&](images$1)");

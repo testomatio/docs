@@ -260,7 +260,7 @@ Fill in the form:
 urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
 ```
 
-![alt text](images/image-17.png)
+![alt text](./images/image-17.png)
 
 And save the form.
 

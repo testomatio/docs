@@ -1,13 +1,25 @@
 ---
 import Default from '@astrojs/starlight/components/Head.astro';
 import { ViewTransitions } from "astro:transitions";
+import docsearch from 'meilisearch-docsearch';
 
 ---
 
 <ViewTransitions />
 <Default {...Astro.props}><slot /></Default>
 
+<div id="docsearch"></div>
 
+
+<script is:inline>
+
+  docsearch({
+    container: "#docsearch",
+    host: "YOUR_HOST_URL",
+    apiKey: "YOUR_SEARCH_API_KEY",
+    indexUid: "YOUR_INDEX_UID",
+  });
+</script>
 
 <script is:inline>
   // @ts-check
@@ -25,20 +37,25 @@ import { ViewTransitions } from "astro:transitions";
   
   if (!sidebar) return;
 
+  console.log('sidebar', sidebar);
+
   const details = Array.from(sidebar.querySelectorAll('details'));
 
     const Restore = (data) => {
       if (!data) return;
 
+      
       try {
         const obj = JSON.parse(data);
         position = {
           ...position, ...obj,
         };
-  
+        
         const sidebar = document.querySelector('#starlight__sidebar');
         if (!sidebar) return;
 
+        console.log('Restore scroll', position, sidebar);
+        
         const details = Array.from(sidebar.querySelectorAll('details'));
         position.details = details.map(detail => detail.hasAttribute('open'));
 
@@ -70,12 +87,12 @@ import { ViewTransitions } from "astro:transitions";
         }
 
 
-        if (target) {
-          target.scrollIntoView({behavior: 'smooth'});
-        }
-        else {
+        // if (target) {
+        //   target.scrollIntoView({behavior: 'smooth'});
+        // }
+        // else {
           sidebar.scrollTop = position.scrollTop || 0;
-        }
+        // }
   
       }
       catch (err) {
@@ -92,7 +109,7 @@ import { ViewTransitions } from "astro:transitions";
       timeout = window.setTimeout(() => {
         position.scrollTop = sidebar.scrollTop;
         position.details = details.map(detail => detail.hasAttribute('open'));
-        // console.log('Store scroll', position);
+        console.log('Store scroll', position);
         sessionStorage.setItem(key, JSON.stringify(position));
         timeout = 0;
       }, 50);
