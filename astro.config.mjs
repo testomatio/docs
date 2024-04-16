@@ -1,6 +1,7 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom'
+import starlightDocSearch from '@astrojs/starlight-docsearch';
 
 export default defineConfig({
 	site: 'https://docs.testomat.io',
@@ -10,7 +11,14 @@ export default defineConfig({
 	prefetch: true,
 	integrations: [
 		starlight({
-			plugins: [starlightImageZoom()],
+			plugins: [
+				starlightImageZoom(),
+				starlightDocSearch({
+					appId: 'U0TAOEGGOK',
+					apiKey: 'd58ba5ebc24c3b167b6d2ada25902c96',
+					indexName: 'content',
+				}),
+			],
 			title: 'Testomatio',
 			pagefind: false,
 
@@ -22,7 +30,7 @@ export default defineConfig({
         baseUrl: 'https://github.com/testomatio/docs/edit/master/',
       },
 
-			favicon: './src/assets/logo.svg',
+			favicon: '/logo.svg',
 
 			head: [
 				{
