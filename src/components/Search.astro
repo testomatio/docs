@@ -20,11 +20,11 @@ import 'instantsearch.css/themes/satellite.css'
 ></script>
 <script is:inline>
     const search = instantsearch({
-        indexName: 'posts',
+        indexName: 'docs',
         searchClient: instantMeiliSearch(
-            import.meta.env.PUBLIC_MEILISEARCH_HOST,
-            import.meta.env.PUBLIC_MEILISEARCH_SEARCH_KEY
-        ),
+           'http://174.138.8.90',
+            'd34b927796984d210b216d1670f7e29461c8e5c0d4a0c74a08064238b342e5bd'
+        ).searchClient,
     })
     search.addWidgets([
         instantsearch.widgets.searchBox({
