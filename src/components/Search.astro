@@ -1,0 +1,55 @@
+---
+// Include only the reset.css
+import 'instantsearch.css/themes/reset.css'
+// or include the full Satellite theme
+import 'instantsearch.css/themes/satellite.css'
+---
+
+<div class="wrapper">
+    <div id="searchbox"></div>
+    <div id="hits"></div>
+</div>
+
+<script
+        is:inline
+        src="https://cdn.jsdelivr.net/npm/@meilisearch/instant-meilisearch/dist/instant-meilisearch.umd.min.js"
+></script>
+<script
+        is:inline
+        src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"
+></script>
+<script is:inline>
+    const search = instantsearch({
+        indexName: 'posts',
+        searchClient: instantMeiliSearch(
+            import.meta.env.PUBLIC_MEILISEARCH_HOST,
+            import.meta.env.PUBLIC_MEILISEARCH_SEARCH_KEY
+        ),
+    })
+    search.addWidgets([
+        instantsearch.widgets.searchBox({
+            container: '#searchbox',
+        }),
+        instantsearch.widgets.configure({ hitsPerPage: 8 }),
+        instantsearch.widgets.hits({
+            container: '#hits',
+            templates: {
+                item: `
+            <a href='/{{#helpers.snippet}}{ "attribute": "id" }{{/helpers.snippet}}/'>
+              <h2 class="hit-name">
+                    {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
+              </h2>
+              <p>{{#helpers.snippet}}{ "attribute": "content" }{{/helpers.snippet}}...</p>
+            </a>
+          `,
+            },
+        }),
+    ])
+    search.start()
+</script>
+
+<style is:global>
+    .ais-Hits-item {
+        margin-bottom: 1em;
+    }
+</style>

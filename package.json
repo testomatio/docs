@@ -27,12 +27,15 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.21.5",
-    "@astrojs/starlight-docsearch": "^0.1.0",
     "@octokit/core": "^5.1.0",
     "@pagefind/default-ui": "^1.1.0",
     "astro": "^4.6.2",
     "astro-vtbot": "^1.7.9",
+    "instantsearch.css": "^8.1.0",
+    "meilisearch": "^0.38.0",
+    "remove-markdown": "^0.5.0",
     "sharp": "^0.33.3",
     "starlight-image-zoom": "^0.2.0"
-  }
+  },
+  "type": "module"
 }
