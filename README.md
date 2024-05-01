@@ -10,10 +10,6 @@ Documentation is saved as static markdown files under `docs`.
 
 ## 📁 Adding a new Section to Documentation page
 
-* Add a new item to [sections](https://github.com/testomatio/docs/blob/master/sections.js).
-
-## Auto-Generated Docs
-
 Docs for importer and reporter are auto-generated from corresponding repositories:
 
 ```

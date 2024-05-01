@@ -1,0 +1,32 @@
+---
+// import { docsearch } from "meilisearch-docsearch/js";
+import "meilisearch-docsearch/css";
+---
+
+<div id="docsearch"></div>
+
+<script
+        is:inline
+        src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"
+></script>
+
+<script>
+    const { docsearch } = window.__docsearch_meilisearch__;
+    docsearch({
+        container: "#docsearch",
+        host: "http://174.138.8.90",
+        apiKey: "d34b927796984d210b216d1670f7e29461c8e5c0d4a0c74a08064238b342e5bd",
+        indexUid: "docs",
+    });
+</script>
+
+<!--<script is:inline>-->
+<!--    docsearch({-->
+<!--        container: "#docsearch",-->
+<!--        host: "http://174.138.8.90",-->
+<!--        apiKey: "d34b927796984d210b216d1670f7e29461c8e5c0d4a0c74a08064238b342e5bd",-->
+<!--        indexUid: "docs",-->
+<!--    });-->
+<!--</script>-->
+
+

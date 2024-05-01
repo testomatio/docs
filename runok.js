@@ -4,7 +4,6 @@ const { Octokit } = require("@octokit/core");
 const axios = require('axios').default;
 const fs = require('fs');
 const path = require('path');
-const sections = require('./sections')
 const humanize = (s) => s.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase()+' '; });
 const slugify = require('slugify')
 const dasherize = (str) => slugify(str.toLowerCase());
@@ -47,14 +46,14 @@ module.exports = {
         if (imageUrl.startsWith('http')) {
           try {
             await downloadImage(imageUrl, destinationFolder);
-            updatedContent = updatedContent.replace(imageUrl, `images/${path.basename(imageUrl)}`);
+            updatedContent = updatedContent.replace(imageUrl, `./images/${path.basename(imageUrl)}`);
           } catch (err) {}
           continue;
         }
-        try {
-          fs.renameSync(path.join('docs/.vuepress/public', imageUrl), path.join(destinationFolder, path.basename(imageUrl)), { overwrite: true });
-        } catch (err) {}
-        updatedContent = updatedContent.replace(imageUrl, `images/${path.basename(imageUrl)}`);
+        // try {
+        //   fs.renameSync(path.join('docs/.vuepress/public', imageUrl), path.join(destinationFolder, path.basename(imageUrl)), { overwrite: true });
+        // } catch (err) {}
+        updatedContent = updatedContent.replace(imageUrl, `./images/${path.basename(imageUrl)}`);
       }
 
       // updatedContent = content.replace(/!\[.*?\]\((\/assets\/.*?)\)/g, "![$&](images$1)");
