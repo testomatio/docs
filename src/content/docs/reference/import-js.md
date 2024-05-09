@@ -2,6 +2,7 @@
 title: Import JavaScript Tests
 ---
 
+
 Testomat.io can import automated tests into a project.
 We provide CLI tools for different frameworks so you get visibility of your tests in seconds.
 On this page we collect the reference to them. Learn how to install and configure test importer for your project.
@@ -169,7 +170,7 @@ Please note, that this will take a long time on a large codebase.
 
 ### Auto-assign Test IDs in Source Code
 
-To easily match tests in code with tests in Testomatio it is recommend to use Testomatio IDs to map a test in source code to a test in Testomatio. Testomatio IDs can be put automatically into the test names into source code when `--update-ids` option is used:
+To disable guess matching for tests it is recommend to use Testomatio IDs to map a test in source code to a test in Testomatio. Testomatio IDs can be put automatically into the test names into source code when `--update-ids` option is used:
 
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --update-ids

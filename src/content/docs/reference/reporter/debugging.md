@@ -2,6 +2,8 @@
 title: Debugging
 ---
 
+
+
 To enable debug logs, set `DEBUG` environment variable to required module name, e.g.:
 
 ```bash

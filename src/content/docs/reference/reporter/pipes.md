@@ -2,6 +2,8 @@
 title: Pipes
 ---
 
+## 📯 Pipes
+
 ### What are Pipes?
 
 Unlike other reporters, Testomat.io Reporter doesn't force you to report data only to Testomat.io application. Testomat.io Reporter collects data from test frameworks and submits it via pipes to other services.

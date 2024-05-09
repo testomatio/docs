@@ -1,5 +1,5 @@
 ---
-title: Test Frameworks
+title: NodeJS Test Frameworks
 ---
 
 ## JavaScript Frameworks
@@ -166,14 +166,13 @@ const testomatio = require('@testomatio/reporter/lib/adapter/webdriver');
 exports.config = {
   // ...
   reporters: [
-    [
-      testomatio,
-      {
-        apiKey: process.env.TESTOMATIO,
-      },
-    ],
-  ],
-};
+    [testomatio, {
+      apiKey: $ {
+        process.env.TESTOMATIO
+      }
+    }]
+  ]
+}
 ```
 
 For making screenshots on failed tests add the following hook to `wdio.conf.js`:
@@ -192,10 +191,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx start-test-run -c 'npx wdio wdio.conf.js'
 ```
 
-> Example projects:
-[📑 wdio v6](https://github.com/testomatio/examples/tree/master/webdriverio-mocha)
-[📑 wdio v7](https://github.com/testomatio/examples/tree/master/wdio/v7)
-[📑 wdio v8](https://github.com/testomatio/examples/tree/master/wdio/v8)
+> 📑 [Example Project](https://github.com/testomatio/examples/tree/master/webdriverio-mocha)
 
 > 📺 [Video](https://www.youtube.com/watch?v=cjVZzey-lto)
 
@@ -422,257 +418,4 @@ If you want to have artifacts attached, use `System.out.println` to print an abs
 ```java
 System.out.println("file://" + pathToScreenshot);
 ```
-
-## PHP Frameworks
-
-> Taken from [PHP Reporter Readme](https://github.com/testomatio/php-reporter)
-
-Installation
-
-```
-composer require testomatio/reporter --dev
-```
-
-### Codeception
-
-Get API key from Testomatio application and set it as `TESTOMATIO` environment variable.
-Run your tests with`Testomatio\Reporter\Codeception` extension enabled:
-
-On Linux/MacOS:
-
-```
-TESTOMATIO={apiKey} php vendor/bin/codecept run --ext "Testomatio\Reporter\Codeception"
-```
-
-On Windows
-
-```
-set TESTOMATIO={apiKey}&& php vendor/bin/codecept run  --ext "Testomatio\Reporter\Codeception"
-```
-
-Alternatively, you can add `Testomatio\Reporter\Codeception` extension to suite or global config.
-Reporter will be started only when `TESTOMATIO` environment variable is set:
-
-```yml
-extensions:
-  enabled:
-    - Testomatio\Reporter\Codeception
-```
-
-### PHPUnit
-
-> PHPUnit v10+ is not implemented yet
-
-Add `Testomatio\Reporter\PHPUnit` listener to `phpunit.xml` or `phpunit.dist.xml`
-
-```xml
-<listeners>
-    <listener class="Testomatio\Reporter\PHPUnit" file="vendor/testomatio/php-reporter/src/PHPUnit.php" />
-</listeners>
-```
-
-Run tests and provide `TESTOMATIO` API key as environment variable:
-
-On Linux/MacOS:
-
-```
-TESTOMATIO={apiKey} php vendor/bin/phpunit
-```
-
-On Windows
-
-```
-set TESTOMATIO={apiKey}&& php vendor/bin/phpunit
-```
-
-## Python Frameworks
-
-### Pytest
-
-> Taken from [PHP Reporter Readme](https://github.com/testomatio/php-reporter)
-
-[![Support Ukraine Badge](https://bit.ly/support-ukraine-now)](https://github.com/support-ukraine/support-ukraine)
-
-#### uses Testomat.io API:
-
-- https://testomatio.github.io/check-tests/
-- https://testomatio.github.io/reporter/
-
-#### Installation
-
-```bash
-pip install pytest-analyzer
-```
-
-#### configuration
-
-Create environment variable `TESTOMATIO` and set your testomat.io API key.
-Linux:
-
-```bash
-export TESTOMATIO=<key>
-```
-
-Windows (cmd):
-
-```bash
-set TESTOMATIO=<key>
-```
-
-##### Run groups parameter
-There is environment variable `TESTOMATIO_RUNGROUP_TITLE` that can be used to specify run tests with specific group title.
-
-##### pytest.ini
-In case you are using private testomat.io service, create `pytest.ini` file in your project root directory. Specify
-testomat.io url in it
-
-```ini
-[pytest]
-testomatio_url = https://app.testomat.io
-
-```
-
-#### Usage
-
-Run pytest with analyzer add parameter to analyze your tests, send them to testomat.io and get back test id. Tests will
-not be executed
-
-```bash
-pytest --analyzer add
-```
-
-Run pytest with analyzer remove parameter to remove all test ids from your tests. Tests will not be executed
-
-```bash
-pytest --analyzer remove
-```
-
-Run pytest with analyzer sync parameter to execute tests and send the execution status to testomat.io.  
-Sync can be executed even without marking tests with ids. If testomat.io failed to match tests by title, it will create
-new tests for the run
-
-```bash
-pytest --analyzer sync
-```
-
-Run pytest with analyzer debug parameter to get test data collected in metadata.json file
-
-```bash
-pytest --analyzer debug
-```
-
-##### Submitting Test Run Environment
-
-to configure test environment, you can use additional option:
-
-```bash
-pytest --analyzer sync --testRunEnv windows11,chrome,1920x1080
-```
-
-Eny environments used in test run should be placed in comma separated list, NO SPACES ALLOWED.
-
-
-##### Submitting Test Artifacts
-
-Testomat.io does not store any screenshots, logs or other artifacts.
-
-In order to manage them it is advised to use S3 Buckets (GCP Storage).
-https://docs.testomat.io/usage/test-artifacts/
-
-Analyser needs to be aware of the cloud storage credentials.
-There are two options:
-1. Enable **Share credentials with Testomat.io Reporter** option in testomat.io Settings -> Artifacts.
-2. Use environment variables   `ACCESS_KEY_ID, SECRET_ACCESS_KEY, ENDPOINT, BUCKET`
-
-You would need to decide when you want to upload your test artifacts to cloud storage
-
-1) Upload page screenshot when test fails, using fixtures [reference](https://docs.pytest.org/en/latest/example/simple.html#making-test-result-information-available-in-fixtures)
-
-```python
-
-import pytest
-from typing import Dict
-from pytest import StashKey, CollectReport
-from playwright.sync_api import Page
-
-phase_report_key = StashKey[Dict[str, CollectReport]]()
-
-@pytest.hookimpl(wrapper=True, tryfirst=True)
-def pytest_runtest_makereport(item, call):
-    rep = yield
-    item.stash.setdefault(phase_report_key, {})[rep.when] = rep
-    return rep
-
-
-@pytest.fixture(scope="function")
-def handle_artifacts(page: Page, request):
-    yield
-    report = request.node.stash[phase_report_key]
-    if ("call" not in report) or report["setup"].failed or report["call"].failed:
-        random_string = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
-
-        filename = f"{random_string}.png"
-        screenshot_path = os.path.join(artifacts_dir, filename)
-        page.screenshot(path=screenshot_path)
-        # file_path - required, path to file to be uploaded
-        # file_bytes - required, bytes of the file to be uploaded
-        # key - required, file name in the s3 bucket
-        # bucket_name - optional,name of the bucket to upload file to. Default value is taken from Testomatio.io
-        artifact_url = pytest.testomatio.upload_file(screenshot_path, filename)
-        # or
-        # artifact_url = pytest.testomatio.upload_file_object(file_bytes, key, bucket_name)
-        pytest.testomatio.add_artifacts([artifact_url])
-    page.close()
-```
-
-⚠️ Please take into account s3_connector available only after **pytest_collection_modifyitems()** hook is executed.
-
-2) If you prefer to use pytest hooks - add `pytest_runtest_makereport` hook in your `conftest.py` file.
-
-```python
-def pytest_runtest_makereport(item, call):
-    artifact_url = pytest.testomatio.upload_file(screenshot_path, filename)
-    pytest.testomatio.add_artifacts([artifact_url])
-```
-
-##### Clarifications
-
-- tests can be synced even without `@patest.mark.testomatio('@T96c700e6')` decorator.
-- test title in testomat.io == test name in pytest
-- test suit title in testomat.io == test file name in pytest
-
-#### Example of test
-
-To make analyzer experience more consistent, it uses standard pytest markers.  
-Testomat.io test id is a string value that starts with `@T` and has 8 symbols after.
-
-```python
-import pytest
-
-
-@pytest.mark.testomatio('@T96c700e6')
-def test_example():
-    assert 2 + 2 == 4
-```
-
-##### Compatibility table with [Testomatio check-tests](https://github.com/testomatio/check-tests)
-
-| Action |  Compatibility | Method |
-|--------|--------|-------|
-| Importing test into Testomatio | complete | `pytest --analyzer add` |
-| Exclude hook code of a test | N/A | N/A |
-| Include line number code of a test | N/A | N/A |
-| Import Parametrized Tests | complete | default behaviour |
-| Disable Detached Tests | complete | `pytest --analyzer add --no-detached` |
-| Synchronous Import | complete | default behaviour |
-| Auto-assign Test IDs in Source Code | complete | default behaviour |
-| Keep Test IDs Between Projects | complete | `pytest --analyzer add --create` |
-| Clean Test IDs | complete | `pytest --analyzer remove` |
-| Import Into a Branch | N/A | N/A |
-| Keep Structure of Source Code | complete | `pytest --analyzer add --keep-structure` |
-| Delete Empty Suites | complete | `pytest --analyzer add --no-empty` |
-| Import Into a Specific Suite | N/A | N/A |
-| Debugging | parity | `pytest --analyzer debug` |
-
-
 

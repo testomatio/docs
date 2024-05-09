@@ -1,6 +1,8 @@
 ---
-title: GitHub Pipe
+title: Github
 ---
+
+## GitHub Pipe
 
 GitHub Pipe adds a comment with a summary of a run to a Pull Request:
 
@@ -29,6 +31,10 @@ on:
 
 jobs:
   test:
+    permissions:
+      # These permissions are required for testomat to create comments on pull requests
+      issues: write
+      pull-requests: write
     # pre-execution steps
     - name: Run Tests
       run: <actual test command with @testomatio/reporter enabled>

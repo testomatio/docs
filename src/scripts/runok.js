@@ -83,7 +83,7 @@ module.exports = {
     execSync(`git clone ${phpReporterUrl}.git tmp/php-reporter --depth=1`);
     const phpReadme = 'tmp/php-reporter/README.md';
 
-    const pytestReporterUrl = 'https://github.com/Ypurek/pytest-analyzer'
+    const pytestReporterUrl = 'https://github.com/testomatio/pytestomatio'
     execSync(`git clone ${pytestReporterUrl}.git tmp/pytest-reporter --depth=1`);
     const pytestReadme = 'tmp/pytest-reporter/README.md';
 
@@ -95,18 +95,10 @@ module.exports = {
       let title = humanize(path.basename(file, '.md')).trim();
       title[0] = title[0].toUpperCase();
       const titleId = title.toUpperCase();
-      if (titleId === 'FRAMEWORKS') title = "Test Frameworks";      
+      if (titleId === 'FRAMEWORKS') title = "NodeJS Test Frameworks";      
       if (titleId === 'TESTOMATIO') title = "Advanced Options"
       if (titleId === 'JUNIT') title = "JUnit Reporter"
       let contents = fs.readFileSync(file).toString()
-      if (titleId === 'FRAMEWORKS') {
-        let phpContents = fs.readFileSync(phpReadme).toString().replace(/^#\s.+/gm, '').replace(/^##\s/gm, '');
-        if (phpContents) contents += `\n## PHP Frameworks \n\n> Taken from [PHP Reporter Readme](${phpReporterUrl})\n ${phpContents}`
-
-        let pytestContents = fs.readFileSync(pytestReadme).toString().split('## Change')[0];
-        pytestContents = pytestContents.replace(/##\s/g, '#### ');
-        if (pytestContents) contents += `\n## Python Frameworks\n\n### Pytest\n\n\n> Taken from [PHP Reporter Readme](${phpReporterUrl})\n\n${pytestContents}`          
-      }
       contents = contents.replace(/^#\s.+/gm, '');
       writeToFile(file, cfg => {
         cfg.line('---');
@@ -115,6 +107,28 @@ module.exports = {
         cfg.line(contents);
       });
     }
+
+    let phpContents = fs.readFileSync(phpReadme).toString().replace(/^#\s.+/gm, '');
+    phpContents = `\n:::note\n Taken from [PHP Reporter Readme](${phpReporterUrl})\n:::\n ${phpContents}\n`
+
+    writeToFile('src/content/docs/reference/reporter/php.md', cfg => {
+      cfg.line('---');
+      cfg.line(`title: PHP Test Frameworks`);
+      cfg.line('---\n');
+      cfg.line(phpContents);
+    });
+
+    let pytestContents = fs.readFileSync(pytestReadme).toString().split('## Change')[0];
+    pytestContents = `\n:::note\n Taken from [Pytestomatio Reporter Readme](${pytestReporterUrl})\n:::\n\n${pytestContents}\n`          
+
+    writeToFile('src/content/docs/reference/reporter/python.md', cfg => {
+      cfg.line('---');
+      cfg.line(`title: Python Test Frameworks`);
+      cfg.line('---\n');
+      cfg.line(pytestContents);
+    });
+
+
   },
 
   async docsImporter() {
@@ -135,7 +149,6 @@ module.exports = {
 title: Import JavaScript Tests
 ---
 
-# Import Tests
 
 Testomat.io can import automated tests into a project.
 We provide CLI tools for different frameworks so you get visibility of your tests in seconds.
@@ -157,7 +170,6 @@ ${content}`)});
 title: Import PHP Tests
 ---
 
-## PHP
 
 > 📑 This documentation is taken from open-source project [testomatio/php-list-tests](https://github.com/testomatio/php-list-tests)
 
@@ -173,8 +185,6 @@ ${content2}`)
       cfg.line(`---
 title: Import Cucumber BDD Tests
 ---
-
-## Cucumber
 
 > 📑 This documentation is taken from open-source project [testomatio/check-cucumber](https://github.com/testomatio/check-cucumber)
 

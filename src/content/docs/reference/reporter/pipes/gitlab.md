@@ -1,6 +1,8 @@
 ---
-title: GitLab Pipe
+title: Gitlab
 ---
+
+## GitLab Pipe
 
 Similarly to [GitHub Pipe](#GitHub-Pipe), GitLab Pipe adds a comment with a summary of a run to a Merge Request:
 

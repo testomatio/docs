@@ -2,13 +2,15 @@
 title: Artifacts
 ---
 
+
+
 Artifacts are files produced by test runner, usually screenshots, videos or traces.
 
 Testomat.io Reporter uses a custom S3 bucket for artifacts which can be obtained from any S3 provider, like AWS, DigitalOcean and others. This makes artifacts storage to be independent from Testomat.io Application. In case you decide to stop using it, you still control your data. It is also up to you to clean old artifacts when you don't need them.
 
 By using external storage Testomat.io allows getting full control over how the storage is used. You can either clean up old test artifacts or contrary extend storage to store all history for all periods. S3 was chosen as a de-facto standard for file storage so all cloud providers support it. If you don't have S3 storage yet, you can purchase one from your favorite cloud provider and create a new bucket (storage space) on it. Testomat.io has no direct access to artifacts storage.
 
-![](././images/artifacts.png)
+![](./images/artifacts.png)
 
 Test artifacts can be uploaded with public (default) or private access to a bucket
 
@@ -39,7 +41,7 @@ These variables can be stored into `.env` file if tests are executed locally or 
 
 If you use Testomat.io Application, you can set those variables inside **Settings > Artifacts** and share credentials with reporter
 
-![](././images/shared_artifacts.png)
+![](./images/shared_artifacts.png)
 
 In this case Testomat.io Reporter will obtain S3 credentials for server and use them to save artifacts.
 

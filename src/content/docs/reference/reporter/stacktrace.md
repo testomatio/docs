@@ -2,6 +2,8 @@
 title: Stacktrace
 ---
 
+
+
 Stack traces are collected automatically from every handled exception of a test.
 Testomat.io reporter formats them to include the exact code piece using [callsite-record](https://www.npmjs.com/package/callsite-record) library. This helps quickly identify error.
 

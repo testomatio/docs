@@ -91,8 +91,10 @@ export default defineConfig({
 					// collapsed: true,
 					items: [
 						{ label: 'JavaScript Reporter', link: '/reference/reporter'},
-						{ label: 'Testing Frameworks', link: '/reference/reporter/frameworks'},
-						{ label: 'JUnit Reporter', link: '/reference/reporter/junit'},
+						{ label: 'NodeJS Test Frameworks', link: '/reference/reporter/frameworks'},
+						{ label: 'PHP Test Frameworks', link: '/reference/reporter/php'},
+						{ label: 'Python Test Frameworks', link: '/reference/reporter/python'},
+						{ label: 'Java and Other Test Frameworks', link: '/reference/reporter/junit'},
 						{ label: 'Test Artifacts', link: '/reference/reporter/artifacts'},
 						{ label: 'Debugging', link: '/reference/reporter/debugging'},
 						{ label: 'Env variables', link: '/reference/reporter/env-variables'},

@@ -1,11 +1,12 @@
-name: Auto-Merge
+name: Publish
 
 on:
   push:
     branches:
       - master
 jobs:
-  merge-branch:
+  import-docs:
+    name: Attach docs from importer
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,11 +21,25 @@ jobs:
           github_token: ${{ github.token }}
           target_branch: 'master'
 
+  deploy:
+    depends_on: import-docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 60b76f40370d8320885e92e3daa114b1
+          projectName: docs
+          directory: dist    
+
   run-scraper:
+    depends_on: deploy
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
-    - name: Run scraper
+    - name: Search Index 
       env:
         HOST_URL: ${{ secrets.MEILISEARCH_HOST_URL }}
         API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
@@ -35,4 +50,4 @@ jobs:
           -e MEILISEARCH_API_KEY=$API_KEY \
           -v $CONFIG_FILE_PATH:/docs-scraper/docsearch.json \
           getmeili/docs-scraper:latest pipenv run ./docs_scraper docsearch.json
-          
+
