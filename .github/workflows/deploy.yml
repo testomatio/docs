@@ -1,0 +1,38 @@
+name: Auto-Merge
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20.x      
+      - run: npm i  --legacy-peer-deps
+      - run: ./runok.js docs
+      - uses: emiliopedrollo/auto-merge@v1.2.0
+        with:
+          github_token: ${{ github.token }}
+          target_branch: 'master'
+
+  run-scraper:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+    - name: Run scraper
+      env:
+        HOST_URL: ${{ secrets.MEILISEARCH_HOST_URL }}
+        API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
+        CONFIG_FILE_PATH: docsearch.json
+      run: |
+        docker run -t --rm \
+          -e MEILISEARCH_HOST_URL=$HOST_URL \
+          -e MEILISEARCH_API_KEY=$API_KEY \
+          -v $CONFIG_FILE_PATH:/docs-scraper/docsearch.json \
+          getmeili/docs-scraper:latest pipenv run ./docs_scraper docsearch.json
+          

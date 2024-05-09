@@ -10,6 +10,8 @@ const dasherize = (str) => slugify(str.toLowerCase());
 const { globSync } = require('glob');
 const { execSync } = require('child_process');
 
+require('dotenv').config();
+
 const token = process.env.GH_PAT;
 const octokit = new Octokit({ auth: token });
 
@@ -23,7 +25,7 @@ module.exports = {
   },
 
   async docsImages() {
-    const files = globSync("docs/**/*.md");
+    const files = globSync("src/content/docs/**/*.md");
     
     for (const file of files) {
       console.log(`Processing ${file}`);
@@ -68,7 +70,7 @@ module.exports = {
     execSync('rm -rf tmp/php-reporter');
     execSync('rm -rf tmp/pytest-reporter');
 
-    const destinationFolder = 'docs/reference/reporter';
+    const destinationFolder = 'src/content/docs/reference/reporter';
 
     if (!fs.existsSync(destinationFolder)) {
       fs.mkdirSync(destinationFolder, { recursive: true });
@@ -109,7 +111,6 @@ module.exports = {
       writeToFile(file, cfg => {
         cfg.line('---');
         cfg.line(`title: ${capitalize(title)}`);
-        cfg.line(`editLink: false`);
         cfg.line('---\n');
         cfg.line(contents);
       });
@@ -118,7 +119,7 @@ module.exports = {
 
   async docsImporter() {
 
-    const destinationFolder = 'docs/reference/importer';
+    const destinationFolder = 'src/content/docs/reference/importer';
 
     if (!fs.existsSync(destinationFolder)) {
       fs.mkdirSync(destinationFolder, { recursive: true });
@@ -129,11 +130,9 @@ module.exports = {
     content = content.split('\n');
     content = content.slice(content.indexOf('## CLI') + 2).join('\n').replace(/#\s/g, '## ')
 
-    writeToFile('docs/reference/import-js.md', cfg => {
+    writeToFile('src/content/docs/reference/import-js.md', cfg => {
       cfg.line(`---
-permalink: /reference/import-js
 title: Import JavaScript Tests
-editLink: false
 ---
 
 # Import Tests
@@ -153,11 +152,9 @@ ${content}`)});
     content2 = content2.split('\n').slice(3).join('\n').replace(/#\s/g, '## ')
 
 
-    writeToFile('docs/reference/import-php.md', cfg => {
+    writeToFile('src/content/docs/reference/import-php.md', cfg => {
       cfg.line(`---
-permalink: /reference/import-php
 title: Import PHP Tests
-editLink: false
 ---
 
 ## PHP
@@ -172,11 +169,9 @@ ${content2}`)
     content3 = content3.slice(content3.indexOf('## Cli') + 2).join('\n')
 
 
-    writeToFile('docs/reference/import-bdd.md', cfg => {
+    writeToFile('src/content/docs/reference/import-bdd.md', cfg => {
       cfg.line(`---
-permalink: /reference/import-bdd
 title: Import Cucumber BDD Tests
-editLink: false
 ---
 
 ## Cucumber
@@ -186,7 +181,9 @@ editLink: false
 ${content3}
 `)});
 
-    }
+    },
+
+
 }
     
 
