@@ -13,23 +13,47 @@ import path from "path"
 import matter from "gray-matter"
 import removeMd from "remove-markdown"
 
-const filenames = fs.readdirSync(path.join("./src/posts"))
-const data = filenames.map(filename => {
-    try {
-        const markdownWithMeta = fs.readFileSync("./src/posts/" + filename)
-        const { data: frontmatter, content } = matter(markdownWithMeta)
-        return {
-            id: frontmatter.slug,
+const filenames = fs.readdirSync(path.join("./src/content/docs"))
+const docsDir = 'src/content/docs';
+
+const data = []
+let i = 0;
+
+ function walkSync(currentPath) {
+    const files = fs.readdirSync(currentPath);
+  
+    for (const file of files) {
+      const filePath = path.join(currentPath, file);
+      const stat = fs.statSync(filePath);
+  
+      if (stat.isDirectory()) {
+        walkSync(filePath);
+      } else if (path.extname(filePath) === '.md') {
+        // Process the Markdown file
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+
+        const { data: frontmatter, content } = matter(fileContent)
+        data.push({
+            id: i++,
             title: frontmatter.title,
+            url: filePath.replace(docsDir, '').replace('.md', ''),
             content: removeMd(content).replace(/\n/g, ""),
-        }
-    } catch (e) {
-        // console.log(e.message)
+        });
+
+        // Add or update the record in the Algolia index
+      }
     }
-})
+  }
+  
+  // Start walking from the docs directory
+walkSync(docsDir);      
+
+
+console.log(data);
 
 // 2. Send the dataset in JSON format
-client
-    .index("posts")
-    .addDocuments(JSON.parse(JSON.stringify(data)))
-    .then(res => console.log(res)) //show the result
+const res = await client.index("docs").addDocuments(data)
+await client.waitForTask(res['taskUid']);
+const docs = await client.index('docs').getDocuments();
+console.log('Doooocs!')
+console.log(docs);
