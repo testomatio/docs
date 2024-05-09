@@ -30,6 +30,7 @@
     "@pagefind/default-ui": "^1.1.0",
     "astro": "^4.7.0",
     "astro-vtbot": "^1.7.14",
+    "bunosh": "^0.1.4",
     "docs-searchbar.js": "^2.5.0",
     "dotenv": "^16.4.5",
     "gray-matter": "^4.0.3",
