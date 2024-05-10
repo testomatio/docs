@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 20.x      
       - run: npm i  --legacy-peer-deps
-      - run: ./runok.js docs
+      - run: node src/scripts/runok.js docs
       - uses: emiliopedrollo/auto-merge@v1.2.0
         with:
           github_token: ${{ github.token }}
