@@ -34,3 +34,7 @@
     --docsearch-footer-shadow: 0 -1px 0 0 rgb(224, 227, 232), 0 -3px 6px 0 rgba(69, 98, 155, 0.12);
     --docsearch-icon-color: rgb(21, 21, 21);
 }
+
+.sl-markdown-content :is(th, td):not(:where(.not-content *)) {
+    min-width: 350px;
+}
