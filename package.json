@@ -34,10 +34,8 @@
     "docs-searchbar.js": "^2.5.0",
     "dotenv": "^16.4.5",
     "gray-matter": "^4.0.3",
-    "instantsearch.css": "^8.1.0",
     "meilisearch": "^0.38.0",
     "meilisearch-docsearch": "^0.6.0",
-    "remove-markdown": "^0.5.0",
     "sharp": "^0.33.3",
     "starlight-image-zoom": "^0.3.0"
   },
