@@ -36,5 +36,23 @@
 }
 
 .sl-markdown-content :is(th, td):not(:where(.not-content *)) {
-    min-width: 350px;
+    min-width: 220px;
+}
+
+@media screen and (min-width: 768px) {
+    .sl-markdown-content :is(th, td):not(:where(.not-content *)) {
+        min-width: 300px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sl-markdown-content :is(th, td):not(:where(.not-content *)) {
+        min-width: 250px;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .sl-markdown-content :is(th, td):not(:where(.not-content *)) {
+        min-width: 350px;
+    }
 }
