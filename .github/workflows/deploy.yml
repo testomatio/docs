@@ -5,7 +5,7 @@ on:
     branches:
       - docs
 jobs:
-  deploy:
+  import-docs:
     name: Attach docs from importer
     runs-on: ubuntu-latest
     steps:
@@ -16,9 +16,9 @@ jobs:
           node-version: 20.x
       - uses: pnpm/action-setup@v4
         with:
-          version: 8
-      - run: pnpm install
-      - run: pnpm run publish
+          version: 8          
+      - run: node src/scripts/runok.js docs
+      - run: pnpm run build
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
