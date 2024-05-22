@@ -17,6 +17,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 8
+      - run: pnpm install
       - run: pnpm run publish
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
