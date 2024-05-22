@@ -3,7 +3,7 @@ title: Testomatio
 description: Documentation
 template: splash
 hero:
-  tagline: Documentation
+  tagline: Welcome to Testomat.io Documentation
   image:
     file: ../../assets/logo.svg
   actions:

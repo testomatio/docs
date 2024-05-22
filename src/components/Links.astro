@@ -3,13 +3,25 @@ import type { Props } from '@astrojs/starlight/props';
 
 const links = [
     {
-        link: 'https://app.testomat.io',
-        data: 'Login'
+        link: 'https://app.testomat.io/docs/api',
+        data: 'Public API'
     },
+    {
+        link: 'https://changelog.testomat.io',
+        data: 'Changelog'
+    },
+    {
+        link: 'https://testomat.io/blog/',
+        data: 'Blog'
+    },    
     {
         link: 'https://calendly.com/testomatio/demo',
         data: 'Schedule a Demo'
     },
+    {
+        link: 'https://app.testomat.io',
+        data: 'Sign In'
+    },    
 ]
 
 ---
@@ -17,7 +29,7 @@ const links = [
 {
     links.map((data) =>
         <div class="sl-flex header-links">
-            <a href={data.link} rel="noopener noreferrer" aria-label={data.data} target="_blank">{data.data}</a>
+            <a href={data.link} aria-label={data.data} target="_blank">{data.data}</a>
         </div>
     )
 }
