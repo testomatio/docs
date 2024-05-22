@@ -16,7 +16,9 @@ jobs:
           node-version: 20.x
       - uses: pnpm/action-setup@v4
         with:
-          version: 8          
+          version: 8
+      - run: pnpm install
+      - run: cd src/scripts && pnpm install
       - run: node src/scripts/runok.js docs
       - run: pnpm run build
       - name: Publish to Cloudflare Pages
