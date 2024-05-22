@@ -1,11 +1,11 @@
 # Testomatio Docs Builder
 
-Documentation is saved as static markdown files under `docs`.
+Documentation is saved as static markdown files under `src/content/docs`.
 
 ## 📋 Editing a Page
 
 * Recommended to open VSCode editor by pressing `.`.
-* Open a markdown file inside `docs` directory
+* Open a markdown file inside `src/content/docs` directory
 * Save and commit 
 
 ## 📁 Adding a new Section to Documentation page

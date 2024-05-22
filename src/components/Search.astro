@@ -13,8 +13,15 @@ import "meilisearch-docsearch/css";
     const { docsearch } = window.__docsearch_meilisearch__;
     docsearch({
         container: "#docsearch",
-        host: "http://174.138.8.90",
-        apiKey: "d34b927796984d210b216d1670f7e29461c8e5c0d4a0c74a08064238b342e5bd",
+        host:  import.meta.env.PUBLIC_MEILISEARCH_HOST_URL,
+        apiKey: import.meta.env.PUBLIC_MEILISEARCH_KEY,
         indexUid: "docs",
     });
 </script>
+
+<style is:global>
+    .search-pro-result-title {
+    font-size: 1.25rem !important;
+    font-weight: 600;
+    }
+</style>
