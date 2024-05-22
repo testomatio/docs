@@ -5,7 +5,7 @@ on:
     branches:
       - docs
 jobs:
-  import-docs:
+  deploy:
     name: Attach docs from importer
     runs-on: ubuntu-latest
     steps:
