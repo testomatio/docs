@@ -6,7 +6,7 @@ on:
       - docs
 jobs:
   deploy:
-    name: Attach docs from importer
+    name: Build & Publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -31,6 +31,7 @@ jobs:
 
   run-scraper:
     needs: deploy
+    name: Run Search Scraper
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
