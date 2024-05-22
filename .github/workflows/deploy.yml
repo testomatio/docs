@@ -22,8 +22,8 @@ jobs:
           target_branch: 'master'
 
   deploy:
-    depends_on: import-docs
     runs-on: ubuntu-latest
+    needs: import-docs
     steps:
       - uses: actions/checkout@v2
       - name: Publish to Cloudflare Pages
@@ -35,7 +35,7 @@ jobs:
           directory: dist    
 
   run-scraper:
-    depends_on: deploy
+    needs: deploy
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
