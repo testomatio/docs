@@ -372,9 +372,9 @@ Save + Close All: ensures all open tests and suites are saved and closed simulta
 
 Unlike other test management systems, **Testomat.io doesn't allow suite to include other suites and tests**. That's why you can either create a suite (a collection of tests) or folder (collection of suites).
 
-::: warning
+<Aside type="caution" title="Warning!">
 When creating a suite you have to explicitly set its type: a suite or a folder.
-:::
+</Aside>
 
 ![New suite](./images/2023-08-03_00.53.02@2x.png)
 

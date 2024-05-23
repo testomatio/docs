@@ -231,8 +231,8 @@ automated and was_terminated
 
 ### Run Group Notifications
 
-::: warning Please note that Run Group Notifications are available for Email notification type only
-:::
+<Aside> Please note that Run Group Notifications are available for Email notification type only
+</Aside>
 
 To configure Notification Rule for Run Group you need to:
 

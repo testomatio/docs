@@ -47,11 +47,11 @@ In case you build a complex query use braces `()` to explicitly set priority of 
 tag == 'A' or (tag == 'B' and tag == 'C')
 ```
 
-::: warning Important
+<Aside type="caution" title="Important">
 
 **Use braces** when you have combination of `and` / `or` operators. Query like `A and B or C and D` is ambiguous, so it should be rewritten to something like: `(A and B) or (C and D)` to explicitly set the order of operators.
 
-::: 
+</Aside>
 
 Please note, that most of variables requires values in string format wrapped into single or double quotes:
 
