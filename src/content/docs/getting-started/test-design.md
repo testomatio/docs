@@ -2,6 +2,8 @@
 title: Test Design
 ---
 
+import { Aside } from '@astrojs/starlight/components';
+
 When a new project is created, there are multiple options to start:
 
 ![Choose what to do next](./images/2023-08-03_00.37.59@2x.png)
@@ -372,7 +374,7 @@ Save + Close All: ensures all open tests and suites are saved and closed simulta
 
 Unlike other test management systems, **Testomat.io doesn't allow suite to include other suites and tests**. That's why you can either create a suite (a collection of tests) or folder (collection of suites).
 
-<Aside type="caution" title="Warning!">
+<Aside>
 When creating a suite you have to explicitly set its type: a suite or a folder.
 </Aside>
 

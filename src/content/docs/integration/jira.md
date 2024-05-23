@@ -2,6 +2,9 @@
 title: Jira
 ---
 
+import { Aside } from '@astrojs/starlight/components';
+
+
 ## Installing Testomatio Plugin in JIRA
 
 Install [Testomatio Plugin from Atlassian Marketplace](https://marketplace.atlassian.com/apps/1224120/testomatio?hosting=cloud&tab=overview)
@@ -11,7 +14,7 @@ Install [Testomatio Plugin from Atlassian Marketplace](https://marketplace.atlas
 ## Connecting to JIRA project
 
 
-::: warning Please note connecting to JIRA project requires admin rights to enable two-way integration capabilities like editing test cases or executing tests directly in JIRA. So user that is used to make JIRA configuration on project settings should have JIRA admin rights otherwise Testomat.io project won't possible to connect to JIRA.
+<Aside type="caution" title="Watch out!"> Please note connecting to JIRA project requires admin rights to enable two-way integration capabilities like editing test cases or executing tests directly in JIRA. So user that is used to make JIRA configuration on project settings should have JIRA admin rights otherwise Testomat.io project won't possible to connect to JIRA.
 :::  
 
 To link tests to JIRA issues connect a Testomatio project to JIRA project.

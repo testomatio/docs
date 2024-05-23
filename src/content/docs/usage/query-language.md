@@ -2,6 +2,9 @@
 title: Query Language
 ---
 
+import { Aside } from '@astrojs/starlight/components';
+
+
 TQL or **Testomat.io Query Language** is a flexible way to filter tests data inside Testomat.io. Query Language provides basic selection operators like **and**, **or** and **not** and braces to prioritize selection.
 
 ## Writing Queries 

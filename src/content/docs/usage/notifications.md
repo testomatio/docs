@@ -2,6 +2,9 @@
 title: Notifications
 ---
 
+import { Aside } from '@astrojs/starlight/components';
+
+
 Testomat.io allows sending notifications for finished runs:
 - Send brief reports to stakeholders
 - Notify team members of failed tests

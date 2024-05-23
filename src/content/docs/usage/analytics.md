@@ -1,6 +1,8 @@
 ---
 title: Analytics
 ---
+import { Aside } from '@astrojs/starlight/components';
+
 
 As a test management system, Testomat.io Team intends to provide our users with as much valuable testing data as possible. For this purpose, we developed Analytics Feature. 
 
