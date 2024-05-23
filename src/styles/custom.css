@@ -56,3 +56,14 @@
         min-width: 350px;
     }
 }
+
+html[data-theme=dark] .docsearch-modal-btn-icon,
+html[data-theme=dark] .docsearch-btn-placeholder {
+    color: #edeef3;
+}
+
+@media screen and (max-width: 767px) {
+    .social-icons {
+        flex-wrap: wrap;
+    }
+}
