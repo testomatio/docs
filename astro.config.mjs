@@ -86,7 +86,8 @@ export default defineConfig({
 					items: [
 						{ label: 'Import JavaScript Tests', link: '/reference/import-js'},
 						{ label: 'Import Cucumber BDD Tests', link: '/reference/import-bdd'},
-						{ label: 'Import PHP Tests', link: '/reference/import-php'},						
+						{ label: 'Import PHP Tests', link: '/reference/import-php'},
+						{ label: 'Automated Import', link: '/workflows/import'},
 					]
 				},
 				{
@@ -99,12 +100,10 @@ export default defineConfig({
 						{ label: 'Python Test Frameworks', link: '/reference/reporter/python'},
 						{ label: 'Java and Other Test Frameworks', link: '/reference/reporter/junit'},
 						{ label: 'Test Artifacts', link: '/reference/reporter/artifacts'},
-						{ label: 'Debugging', link: '/reference/reporter/debugging'},
 						{ label: 'Configuration', link: '/reference/reporter/env-variables'},
 						{ label: 'Functions', link: '/reference/reporter/functions'},
 						{ label: 'Logger', link: '/reference/reporter/logger'},
 						{ label: 'Pipes', link: '/reference/reporter/pipes'},
-						{ label: 'Stacktrace', link: '/reference/reporter/stacktrace'},
 						{ label: 'Workflows', link: '/reference/reporter/workflows'},
 					],
 				},
@@ -126,10 +125,6 @@ export default defineConfig({
 					label: 'Compliance',
 					// collapsed: true,
 					autogenerate: { directory: 'compliance' },
-				},
-				{
-					label: 'Workflows',
-					autogenerate: { directory: 'workflows' },
 				},
 				{
 					label: 'Contact us',
