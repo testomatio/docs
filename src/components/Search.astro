@@ -1,21 +1,22 @@
 ---
 import "meilisearch-docsearch/css";
-const apiKey = import.meta.env.PUBLIC_MEILISEARCH_KEY
+const apiKey = import.meta.env.PUBLIC_MEILISEARCH_KEY;
 ---
 
 <div id="docsearch"></div>
 
 <script
-        is:inline
-        src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"
+is:inline
+src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"
 ></script>
 
-<script is:inline>
+
+<script  define:vars={{ apiKey }}>
     const { docsearch } = window.__docsearch_meilisearch__;
     docsearch({
         container: "#docsearch",
         host: 'https://docsearch.testomat.io',
-        apiKey: {apiKey},
+        apiKey,
         indexUid: "docs",
     });
 </script>

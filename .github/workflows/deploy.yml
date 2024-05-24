@@ -32,7 +32,7 @@ jobs:
   run-scraper:
     needs: deploy
     name: Run Search Scraper
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
     - name: Search Index 
