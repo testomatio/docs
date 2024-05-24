@@ -21,6 +21,8 @@ jobs:
       - run: cd src/scripts && pnpm install
       - run: node src/scripts/runok.js docs
       - run: pnpm run build
+        env:
+          PUBLIC_MEILISEARCH_KEY: ${{ secrets.PUBLIC_MEILISEARCH_KEY }}
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
@@ -39,11 +41,10 @@ jobs:
       env:
         HOST_URL: ${{ secrets.MEILISEARCH_HOST_URL }}
         API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
-        CONFIG_FILE_PATH: docsearch.json
       run: |
         docker run -t --rm \
           -e MEILISEARCH_HOST_URL=$HOST_URL \
           -e MEILISEARCH_API_KEY=$API_KEY \
-          -v $CONFIG_FILE_PATH:/docs-scraper/docsearch.json \
+          -v $PWD/docsearch.json:/docs-scraper/docsearch.json \
           getmeili/docs-scraper:latest pipenv run ./docs_scraper docsearch.json
 
