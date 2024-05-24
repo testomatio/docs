@@ -13,10 +13,11 @@ src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"
 
 <script  define:vars={{ apiKey }}>
     const { docsearch } = window.__docsearch_meilisearch__;
+    console.log('api', apiKey);
     docsearch({
         container: "#docsearch",
         host: 'https://docsearch.testomat.io',
-        apiKey,
+        apiKey: apiKey,
         indexUid: "docs",
     });
 </script>
