@@ -21,6 +21,12 @@ src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"
     });
 </script>
 
+<script>
+    document.addEventListener("astro:before-preparation", () => {
+        document.querySelector<HTMLButtonElement>(".docsearch-modal-search-cancel-btn")?.click();
+    });
+</script>
+
 <style is:global>
     .search-pro-result-title {
     font-size: 1.25rem !important;
