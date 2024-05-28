@@ -35,28 +35,6 @@
     --docsearch-icon-color: rgb(21, 21, 21);
 }
 
-.sl-markdown-content :is(th, td):not(:where(.not-content *)) {
-    min-width: 220px;
-}
-
-@media screen and (min-width: 768px) {
-    .sl-markdown-content :is(th, td):not(:where(.not-content *)) {
-        min-width: 300px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .sl-markdown-content :is(th, td):not(:where(.not-content *)) {
-        min-width: 250px;
-    }
-}
-
-@media screen and (min-width: 1152px) {
-    .sl-markdown-content :is(th, td):not(:where(.not-content *)) {
-        min-width: 350px;
-    }
-}
-
 html[data-theme=dark] .docsearch-modal-btn-icon,
 html[data-theme=dark] .docsearch-btn-placeholder {
     color: #edeef3;
