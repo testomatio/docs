@@ -160,12 +160,6 @@ To allow Testomat.io access stored files it is recommended to apply this policy 
                 "s3:GetBucketAcl"
             ],
             "Resource": "arn:aws:s3:::<bucket_name>"
-        },
-        {
-            "Sid": "VisualEditor2",
-            "Effect": "Allow",
-            "Action": "s3:ListAllMyBuckets",
-            "Resource": "*"
         }
     ]
 }
