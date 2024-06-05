@@ -24,7 +24,7 @@ export default defineConfig({
 			],
 
       editLink: {
-        baseUrl: 'https://github.com/testomatio/docs/edit/master/',
+        baseUrl: 'https://github.com/testomatio/docs/edit/docs/',
       },
 
 			favicon: '/logo.svg',
