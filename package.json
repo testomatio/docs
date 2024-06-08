@@ -28,7 +28,7 @@
     "@astrojs/starlight": "^0.24.0",
     "@octokit/core": "^5.1.0",
     "@pagefind/default-ui": "^1.1.0",
-    "astro": "^4.10.0",
+    "astro": "^4.10.1",
     "astro-vtbot": "^1.7.23",
     "bunosh": "^0.1.4",
     "dotenv": "^16.4.5",
