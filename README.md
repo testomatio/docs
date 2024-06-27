@@ -10,7 +10,7 @@ Documentation is saved as static markdown files under `src/content/docs`.
 
 ## 🔨 Customization
 
-This static website is built with Vuepress.
+This static website is built with Astro Starlight.
 
 To start the website locally
 
