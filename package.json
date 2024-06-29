@@ -29,7 +29,7 @@
     "@octokit/core": "^5.1.0",
     "@pagefind/default-ui": "^1.1.0",
     "astro": "^4.11.3",
-    "astro-vtbot": "^1.7.24",
+    "astro-vtbot": "^1.7.25",
     "bunosh": "^0.1.5",
     "dotenv": "^16.4.5",
     "gray-matter": "^4.0.3",
