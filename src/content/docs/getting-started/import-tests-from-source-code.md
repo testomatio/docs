@@ -14,7 +14,7 @@ Moreover, when you have hundreds and thousands of tests on your hands, some thin
 
 Register at [app.testomat.io](https://app.testomat.io) and activate your user account. Then create a new project.
 
-![Create New Project](./images/scratch1.png)
+![Create New Project](./images/New_qIJOdkr6_2024-07-09.png)
 
 The type of your new project will influence the look of your interface, as well as its intended audience. Choose **BDD Project** if you plan to follow BDD descriptions or use the Cucumber framework in future. If you haven't decided yet, you can start with default **Classical Project**. Depending on your choice, the interface will differ, as follows:
 
