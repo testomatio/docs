@@ -10,11 +10,10 @@ import VtbotStarlight from 'astro-vtbot/components/starlight/Base.astro';
 
 <script>
     document.addEventListener("astro:before-swap", (e) => {
-        const crispStyle = document.querySelector(
-            'link[rel="stylesheet"][href*="client.crisp.chat"]'
-        );
-        if (crispStyle) {
-            e.newDocument.head.appendChild(crispStyle.cloneNode(true));
-        }
+        document
+            .querySelectorAll('link[rel="stylesheet"][href*="client.crisp.chat"]')
+            .forEach((el) => {
+                e.newDocument.head.appendChild(el.cloneNode(true));
+            });
     });
 </script>
