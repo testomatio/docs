@@ -18,12 +18,12 @@ The type of your new project will influence the look of your interface, as well 
 Let's start creating a project:
 
 1. Fill the name of your project in the **Project Title** field.  
-2. The **Fill demo data** checkbox is optional. This option fills the project with ready-made test data so that new users can try testomat.io quickly and easily. You can simply skip it. 
+2. The **Fill demo data** checkbox is optional. This option fills the project with ready-made test data so that new users can try Testomat.io quickly and easily. You can simply skip it. 
 3. Click the **Create** button to start a new project. 
 
 ![Select type of project](./images/New_rughOXfd_2024-07-09.png)
 
-Congratulations! You have just created your first project. Now you can start creating suites and test cases for your projects.
+You have just created your first project. Now you can start creating suites and test cases for your projects.
 
 ![New blank project](./images/New_WG8caz4S_2024-07-09.png)
 
@@ -36,7 +36,7 @@ Let's take a look at creating test cases step by step.
 
 ![Create test suite](./images/New_0g8uRrQa_2024-07-10.png)
 
-We have implemented **Bulk edit**, which enables you to create as many test suites as you need:
+Testomat.io has implemented **Bulk edit**, which enables you to create as many test suites as you need:
 
 ![Open Bulk edit](./images/New_AWU2XnsC_2024-07-10.png)
 
@@ -55,13 +55,13 @@ Great, let's move on! Select a certain suite to nest the creation of new test ca
 
 ![Create test](./images/New_j7XWLhgA_2024-07-10.png)
 
-When tests are newly created, they are marked as "manual" by default, which shows that they are ready for manual checks.
+When tests are newly created, they are marked as **manual** by default, which shows that they are ready for manual checks.
 
 You can now add descriptions for each test case. However, the roles of these routine test cases are clearly seen from their titles, so we can probably try to run them to verify the user management part. 
 
 ## Run Manual Tests
 
-Now let's get down to the main thing we're here for! Let's start our tests:
+Now let's take a look at how to run our tests and get a detailed report:
 
 1. Select **Run** tab in the sidebar.
 2. Click the **Manual Run** button to create new test run.
@@ -89,4 +89,4 @@ To get a detailed report of the test run, click on the **Report** button:
 
 ![Detailed test report](./images/New_HXhqqpV4_2024-07-10.png)
 
-That's great! Now you can share the report with your stakeholders. It is just a tip of the iceberg, keep reading the documentation to discover [testomat.io](https://app.testomat.io)!
+Now you can share the report with your stakeholders. It is just a tip of the iceberg, keep reading the documentation to discover [Testomat.io](https://app.testomat.io)!
