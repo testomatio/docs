@@ -23,11 +23,11 @@ The type of your new project will influence the look of your interface, as well 
 
 > In this section of the Guide, we discuss the issues concerning BDD Projects. If you need to import a Classical Project, go to the [Import Tests From Source Code](https://docs.testomat.io/getting-started/import-tests-from-source-code/#why-do-i-need-to-import-my-tests) section of this guide.
 
-![Select type of project](././images/scratch2.png)
+![Select type of project](././images/New_hgjKedfJ_2024-07-19.png)
 
 You can provide a URL of a repository hosted on GitHub, GitLab, BitBucket, as well as of a self-hosted one. Testomat.io will use this URL to navigate you from test cases straight to the source code. Please make sure that the URL is pointing to the *directory where the tests are located*. 
 
-> If you have set a repository URL make sure that the path matches the one in URL repository. For instance, if you have URL: "https://github.com/testomatio/examples/tree/master/features" you should navigate to "features" within your project to import tests.
+> If you have set a repository URL make sure that the path matches the one in URL repository. For instance, if you have URL: "https://github.com/testomatio/examples/tree/master/cucumber/features" you should navigate to "features" within your project to import tests.
 
 Click the **Create** button to start a new project.
 
@@ -35,11 +35,15 @@ Click the **Create** button to start a new project.
 
 When your project is created, click the **Import from Source Code** button.
 
-![Import automated tests](././images/2023-08-04_23.46.33@2x.png)
+![Import automated tests](././images/New_AVoLiSh1_2024-07-19.png)
+
+Or another case:
+
+![Import automated tests too](././images/New_2b7OzBQ1_2024-07-19.png)
 
 When the **Import Project From Source Code** screen opens, you will need to pick Cucumber as your project framework. 
 
-![Configuration settings](././images/2023-08-04_23.48.18@2x.png)
+![Configuration settings](././images/New_jylFbzYH_2024-07-19.png)
 
 > If you use BDD with CodeceptJS, choose CodeceptJS as your project framework and select "Gherkin" as your project language.
 
@@ -48,25 +52,29 @@ Once you have chosen the framework and the language, you will be provided with a
 Open a terminal, navigate to the project folder in your project and execute the command. By default, we assume that your features files are located in the **features** folder of your project. If you store them in a different folder, rewrite the --dir  option of the command to use the folder your feature files are actually stored in:
 
 ```
-npx check-cucumber@latest "**/*.feature" --dir path/to/features
+TESTOMATIO={apiKey} npx check-cucumber@latest "**/*.feature" --dir features
 ```
 
-![Import automated tests](././images/2023-08-04_23.50.37@2x.png)
-
-![Check command executed successfully](././images/2023-08-04_23.51.31@2x.png)
+![Import automated tests](././images/New_sKP42S9R_2024-07-23.png)
 
 Seeing a report on how many tests were found means that the import command was executed successfully. If you don't see a similar message, you might need to change the pattern to match files or the directory to scan. Open the API reference of check-cucumber command to learn how to do that.
 
-![Test tree with automated tests](././images/2023-08-04_23.53.19@2x.png)
-
 Refresh the page and you will see all the imported test files.
 
-![Automated test](././images/2023-08-04_23.54.12@2x.png)
+![Test tree with automated tests](././images/New_zIxolwhp_2024-07-23.png)
 
 ## Import Manual BDD Tests from Source Code
 
 If you have manual tests in the repository and want to import them into Testomatio you can use `.manual.feature` extension in the feature file. Tests will be imported as well as automated tests and will be marked as `manual` in Testomatio. For instance:
 
 ```
-mark-as-completed.manual.feature
+filename.manual.feature
 ```
+
+![Manual extention](././images/New_BTxyj9Zv_2024-07-23.png)
+
+Now run the command we used earlier to import the tests from the source code.
+
+![Import manual tests](././images/New_fwAVSlDp_2024-07-23.png)
+
+As a result, we got tests divided into automated and manual. This structure allows for more efficient and flexible testing workflows, enhancing our overall testing strategy. 

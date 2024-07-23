@@ -23,7 +23,7 @@ The type of your new project will influence the look of your interface, as well 
 
 > In this section of the Guide, we discuss the issues concerning Classical Projects. If you need to import a BDD Project, go to the [Import Tests From Cucumber](https://docs.testomat.io/getting-started/import-tests-from-cucumber/#why-do-i-need-to-import-my-tests) section of this guide.
 
-![Select type of project](./images/scratch2.png)
+![Select type of project](./images/New_hgjKedfJ_2024-07-19.png)
 
 You can provide a URL of a repository hosted on GitHub, GitLab, BitBucket, as well as of a self-hosted one. Testomat.io will use this URL to navigate you from test cases straight to the source code. Please make sure that the URL is pointing to the *directory where the tests are located*. In the following steps we show in detail how to import tests from that directory.
 
