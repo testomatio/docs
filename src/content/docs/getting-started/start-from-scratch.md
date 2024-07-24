@@ -32,32 +32,26 @@ You have just created your first project. Now you can start creating suites and 
 Let's take a look at creating test cases step by step.
 
 1. Fill the name in the input field. 
-2. Click the **+ Suite** button to create a test case. 
+2. Click the **+ Suite** button to create a new suite. 
 
 ![Create test suite](./images/New_0g8uRrQa_2024-07-10.png)
 
-Testomat.io has implemented **Bulk edit**, which enables you to create as many test suites as you need:
+Or another case:
 
-![Open Bulk edit](./images/New_AWU2XnsC_2024-07-10.png)
+![Create test suite too](./images/New_zWbhofhO_2024-07-19.png)
 
-Just provide a list of suite names and click **Preview** button.
-
-![Apply Bulk edit](./images/New_yrn1bkR2_2024-07-10.png)
-
-To learn more about [Bulk edit](https://docs.testomat.io/usage/bulk-edit/) check out our detailed guide.
-
-Great, let's move on! Select a certain suite to nest the creation of new test cases in that suite. This can be done even faster and more efficiently using the same old Bulk edit, just use the toggle switch:
+Great, let's move on! Select a certain suite to nest the creation of new test cases in that suite. 
 
 1. Select a test case.
-2. Switch on the Bulk edit.
-3. Provide a list of test case names.
-4. Click the **Create** button to create multiple test cases.
+2. Fill the name in the input field. 
+3. Click the **Create** button to create multiple test cases.
 
 ![Create test](./images/New_j7XWLhgA_2024-07-10.png)
 
-When tests are newly created, they are marked as **manual** by default, which shows that they are ready for manual checks.
+When tests are newly created, they are marked as **manual** by default, which shows that they are ready for manual checks. Also, to create or edit multiple suits or test cases at once use [Bulk Edit](https://docs.testomat.io/usage/bulk-edit/).
 
-You can now add descriptions for each test case. However, the roles of these routine test cases are clearly seen from their titles, so we can probably try to run them to verify the user management part. 
+As a result, you can add descriptions for each test case. However, the roles of these routine test cases are clearly seen from their titles, so we can probably try to run them to verify the user management part. 
+
 
 ## Run Manual Tests
 
