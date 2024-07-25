@@ -14,7 +14,7 @@ Moreover, when you have hundreds and thousands of tests on your hands, some thin
 
 Register at [app.testomat.io](https://app.testomat.io) and activate your user account. Then create a new project.
 
-![Create New Project](././images/New_qIJOdkr6_2024-07-09.png)
+![Testomat.io - Create new project](././images/New_qIJOdkr6_2024-07-09.png)
 
 The type of your new project will influence the look of your interface, as well as its intended audience. Choose **BDD Project** if you plan to follow BDD descriptions or use the Cucumber framework in future. If you haven't decided yet, you can start with default **Classical Project**. Depending on your choice, the interface will differ, as follows:
 
@@ -23,7 +23,7 @@ The type of your new project will influence the look of your interface, as well 
 
 > In this section of the Guide, we discuss the issues concerning BDD Projects. If you need to import a Classical Project, go to the [Import Tests From Source Code](https://docs.testomat.io/getting-started/import-tests-from-source-code/#why-do-i-need-to-import-my-tests) section of this guide.
 
-![Select type of project](././images/New_hgjKedfJ_2024-07-19.png)
+![Testomat.io - Select type of project](././images/New_hgjKedfJ_2024-07-19.png)
 
 You can provide a URL of a repository hosted on GitHub, GitLab, BitBucket, as well as of a self-hosted one. Testomat.io will use this URL to navigate you from test cases straight to the source code. Please make sure that the URL is pointing to the *directory where the tests are located*. 
 
@@ -35,15 +35,15 @@ Click the **Create** button to start a new project.
 
 When your project is created, click the **Import from Source Code** button.
 
-![Import automated tests](././images/New_AVoLiSh1_2024-07-19.png)
+![Testomat.io - Import automated tests](././images/New_AVoLiSh1_2024-07-19.png)
 
 Or another case:
 
-![Import automated tests too](././images/New_2b7OzBQ1_2024-07-19.png)
+![Testomat.io - Import automated tests another way](././images/New_2b7OzBQ1_2024-07-19.png)
 
 When the **Import Project From Source Code** screen opens, you will need to pick Cucumber as your project framework. 
 
-![Configuration settings](././images/New_jylFbzYH_2024-07-19.png)
+![Testomat.io - Configuration settings](././images/New_jylFbzYH_2024-07-19.png)
 
 > If you use BDD with CodeceptJS, choose CodeceptJS as your project framework and select "Gherkin" as your project language.
 
@@ -55,13 +55,13 @@ Open a terminal, navigate to the project folder in your project and execute the 
 TESTOMATIO={apiKey} npx check-cucumber@latest "**/*.feature" --dir features
 ```
 
-![Import automated tests](././images/New_sKP42S9R_2024-07-23.png)
+![Testomat.io - Import cucumber automated tests](././images/New_sKP42S9R_2024-07-23.png)
 
 Seeing a report on how many tests were found means that the import command was executed successfully. If you don't see a similar message, you might need to change the pattern to match files or the directory to scan. Open the API reference of check-cucumber command to learn how to do that.
 
 Refresh the page and you will see all the imported test files.
 
-![Test tree with automated tests](././images/New_zIxolwhp_2024-07-23.png)
+![Testomat.io - Test tree with automated tests](././images/New_zIxolwhp_2024-07-23.png)
 
 ## Import Manual BDD Tests from Source Code
 
@@ -71,10 +71,10 @@ If you have manual tests in the repository and want to import them into Testomat
 filename.manual.feature
 ```
 
-![Manual extention](././images/New_BTxyj9Zv_2024-07-23.png)
+![Testomat.io - Manual extention](././images/New_BTxyj9Zv_2024-07-23.png)
 
 Now run the command we used earlier to import the tests from the source code.
 
-![Import manual tests](././images/New_fwAVSlDp_2024-07-23.png)
+![Testomat.io - Import cucumber manual tests](././images/New_fwAVSlDp_2024-07-23.png)
 
 As a result, we got tests divided into automated and manual. This structure allows for more efficient and flexible testing workflows, enhancing our overall testing strategy. 
