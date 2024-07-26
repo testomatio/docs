@@ -41,35 +41,29 @@ Or another case:
 
 ![Testomat.io - Import automated tests another way](././images/New_GhgayW5f_2024-07-25.png)
 
-In the **Import** section, you are asked to pick the framework and programming language you use for tests.
+In the **Import** section, you are asked to pick the framework, programming language and and operating system you are using for testing.
 
 ![Testomat.io - Copy instructions](./images/New_eUYumU81_2024-07-25.png)
 
 > If you don't see the framework you work with in this list - please contact us, and we will do our best to add support for it soon! 
 
-Once you have chosen the framework and the language, you will be provided with a command that you need to copy and execute in a terminal. Before running this command, please check if your environment matches these requirements:
+Once you have chosen the project parameters, you will be provided with a command that you need to copy and execute in a terminal. Before running this command, please check if your environment matches these requirements:
 * If you run tests in NodeJS (JavaScript, TypeScript), you should have NodeJS 10+ and npm to be installed to be able to run this command.
 * If you run tests in PHP - you will need PHP > 7.2 and Composer installed. 
 
-Open a terminal, navigate to the tests folder in your project and execute the command. 
+Open a terminal, navigate to the tests folder in your project and execute the command. Seeing a report on how many tests were found means that the import command was executed successfully:
 
-![Testomat.io - Execute command in terminal](./images/2023-08-04_23.35.21@2x.png)
-
-Seeing a report on how many tests were found means that the import command was executed successfully:
-
-![Testomat.io - Automated tests found and sent](./images/2023-08-04_23.37.05@2x.png)
+![Testomat.io - Execute command in terminal, automated tests found and sent](./images/New_koBKlQw7_2024-07-26.png)
 
 If you don't see a similar message, this might be because our default settings do not work for you. Please check the command's API change command parameters so it could find tests. The most common issues with import are different file naming format and/or incorrect directory for import.
 
-![Testomat.io - Find more information in docs](./images/2023-08-04_23.41.07@2x.png)
-
 When the tests are finally imported, reopen the project, and you will see that all tests with their folders and files are shown on Testomat.io.
 
-![Testomat.io - Automated tests](./images/2023-08-04_23.42.19@2x.png)
+![Testomat.io - Imported automated tests](./images/New_hcbaJeTv_2024-07-26.png)
 
 All imported tests are marked as "Automated" by default. If you click on any of those tests, you will see its code and a link to its repository. Please, check that the link actually points to the corresponding file. Otherwise, you might want to change the repository URL in project settings. 
 
-![Testomat.io - Automated test source code](./images/2023-08-04_23.43.34@2x.png)
+![Testomat.io - Automated test source code](./images/New_cIVsD22d_2024-07-26.png)
 
 
 ## What's Next?
