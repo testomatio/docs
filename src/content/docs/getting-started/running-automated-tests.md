@@ -157,6 +157,14 @@ So you can terminate test runs without causing disruptions and you can set custo
 
 ![setup terminated timeout](./images/setup-terminated.png)
 
+### Stack Traces 
+
+Testomat.io provides detailed information about the active stack frames during the execution of a program.
+
+It extracts URLs from user logs and convert them into clickable links within the test result view, making it easy for users to access the URLs directly from the test results.
+
+![Testomat.io - Clickable links in automated tests report](./images/New_fE0hyJn9_2024-07-30.png)
+
 ## How To Enable Playwright Trace Viewer
 
 Traces in Playwright refer to detailed logs or recordings of browser interactions during a test script's execution. They capture a chronological sequence of events, including browser actions, network requests, and other relevant information.
