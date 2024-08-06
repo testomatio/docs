@@ -1,5 +1,18 @@
 ---
 title: Start From Scratch
+description: Learn how to start from scratch with Testomat.io. Create a new project, write your first test cases, and run manual tests with detailed reporting features.
+type: article
+url: https://docs.testomat.io/getting-started/start-from-scratch/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/logo.svg
+      
+  - tag: meta
+    attrs:
+      name: keyword
+      content: test reporting, test suites, test cases, test automation, manual testing, Cucumber, BDD, test management, Testomat.io
 ---
 
 > If you don't have any manual or automated tests yet - follow this guide. Otherwise, pick the section of the guide relevant to your project. You might want to start from [this section](https://docs.testomat.io/getting-started/import-tests-from-source-code/) if you consider **importing tests from source code** into Testomat.io. For those interested in importing tests from the **Cucumber** framework, go straight to [this section](https://docs.testomat.io/getting-started/import-tests-from-cucumber/#why-do-i-need-to-import-my-tests)!
