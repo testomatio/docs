@@ -27,7 +27,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx codeceptjs run
 ```
 
-> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](./artifacts.md)
+> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](/reference/reporter/artifacts)
 
 #### CodeceptJS Parallel Run
 
@@ -39,7 +39,7 @@ TESTOMATIO={API_KEY} npx start-test-run -c 'npx codeceptjs run-workers 2'
 
 > Specify a command to run with `-c` option in `start-test-run`
 
-Use `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [S3 config for artifacts](./artifacts).
+Use `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [S3 config for artifacts](/reference/reporter/artifacts).
 
 Command `start-test-run` is used to initiate a single run report before all workers are started. Each worker will report to the same Run, and after all workers and codeceptjs finishes, this will finish the run report.
 
@@ -71,7 +71,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx playwright test
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts.md)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](/reference/reporter/artifacts)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/playwright) | 🥒 [Playwright + Cucumber Example](https://github.com/testomatio/examples/tree/master/playwright-cucumber-js)
 
@@ -115,7 +115,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx cypress run
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts.md)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](/reference/reporter/artifacts)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/cypress) | 🥒 [Cypress + Cucumber Example](https://github.com/testomatio/examples/tree/master/cypress-cucumber)
 
@@ -380,7 +380,7 @@ This will produce XML report which contains path to a file:
 
 When XML report is uploaded, all files from `file://` will be uploaded to corresponding tests.
 
-> 🖼 Read more how [Artifacts](./artifacts.md) work
+> 🖼 Read more how [Artifacts](/reference/reporter/artifacts) work
 
 ### Selenide
 
@@ -389,7 +389,7 @@ However, it is important to note, that Selenide automatically adds artifacts int
 
 ### Cucumber Java
 
-If you use Java version of Cucumber Java you should import your feature files first using [check-cucumber](npmjs.com/package/check-cucumber).
+If you use Java version of Cucumber Java you should import your feature files first using [check-cucumber](https://www.npmjs.com/package/check-cucumber).
 Provide a path to directory containing feature files by using `-d` option:
 
 ```

@@ -4,7 +4,7 @@ title: Gitlab
 
 ## GitLab Pipe
 
-Similarly to [GitHub Pipe](#GitHub-Pipe), GitLab Pipe adds a comment with a summary of a run to a Merge Request:
+Similarly to [GitHub Pipe](/reference/reporter/pipes/github#github-pipe), GitLab Pipe adds a comment with a summary of a run to a Merge Request:
 
 This summary will contain:
 
