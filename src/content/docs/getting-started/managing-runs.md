@@ -69,7 +69,7 @@ Now you can see Test Runs in a created RunGroup
 
 ### RunGroup Chart
 
-The 50 most recent test runs belonging to the group are displayed on the сhart. To view the results of the previous runs on the сhart, use the pagination arrows.
+The chart displays up to 50 of the latest test runs belonging to the group. If you have more, use the pagination arrows, to view the results of the previous runs.
 
 ![Testomat.io - RunGroup Chart](./images/New_iWaZSQo7_2024-08-03.png)
 
