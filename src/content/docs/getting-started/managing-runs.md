@@ -67,9 +67,15 @@ Now you can see Test Runs in a created RunGroup
 
 ![Test Runs in a created RunGroup](./images/11.png)
 
+### RunGroup Chart
+
+The chart displays up to 50 of the latest test runs belonging to the group. If you have more, use the pagination arrows, to view the results of the previous runs.
+
+![Testomat.io - RunGroup Chart](./images/New_iWaZSQo7_2024-08-03.png)
+
 ## Copy Run Group
 
- You can easily create a new Run Group, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
+You can easily create a new Run Group, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
 
 **Assignee**: Define assignee details separately, preventing them from being copied.
 
