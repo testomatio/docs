@@ -30,7 +30,7 @@ yarn add @testomatio/reporter --dev
 
 Reporter works differenttely depending on your current setup: 
 
-* If you use **NodeJS** framework like Jest, Playwright, etc, you get realtime reports, automatic artifacts uploads, logs. [Learn how to set up frameworks reporter](./reporter/frameworks.md) 
-* If you use **Java, Ruby, PHP, or other languages**, reports are created from JUnit file. [Learn how to set up JUnit reporter](./reporter/junit)
+* If you use **NodeJS** framework like Jest, Playwright, etc, you get realtime reports, automatic artifacts uploads, logs. [Learn how to set up frameworks reporter](/reference/reporter/frameworks/) 
+* If you use **Java, Ruby, PHP, or other languages**, reports are created from JUnit file. [Learn how to set up JUnit reporter](/reference/reporter/junit)
 
-Reporter is configured through environment variables. [Learn more about configuration](./reporter/pipes/testomatio.md).
+Reporter is configured through environment variables. [Learn more about configuration](/reference/reporter/pipes/testomatio).

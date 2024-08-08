@@ -192,7 +192,7 @@ Select "Bamboo" profile in a list. Optionally, configure a Run Title and select 
 
 ### GitLab CI
 
-1. Add new trigger https://docs.gitlab.com/ee/ci/triggers/README.html#adding-a-new-trigger
+1. Add new trigger https://docs.gitlab.com/ee/ci/triggers/#trigger-a-pipeline
 
 ![image](./images/120804889-d1538f00-c54d-11eb-9566-d6a5e77e4945.png)
 

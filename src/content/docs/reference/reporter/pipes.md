@@ -31,10 +31,10 @@ Pipes Concepts:
 
 ### Built-in Pipes
 
-- [Testomat.io](./pipes/testomatio.md)
-- [GitHub](./pipes/github.md)
-- [Gitlab](./pipes/gitlab.md)
-- [CSV](./pipes/csv.md)
+- [Testomat.io](/reference/reporter/pipes/testomatio)
+- [GitHub](/reference/reporter/pipes/github)
+- [Gitlab](/reference/reporter/pipes/gitlab)
+- [CSV](/reference/reporter/pipes/csv)
 
 ## Custom Pipe
 

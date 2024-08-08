@@ -17,7 +17,7 @@ If your project contains only automated tests, you may prefer using Testomat.io 
 
 ### Why Do I need to Import my Tests?
 
-As described in a section above, Testomat.io require tests to be imported first in order to synchonize them wth the codebase and to keep track the history of tests between reports. If test was not found in a project it is marked as "Unmatched" in report. We use this notice to avoid duplicates or accidentally added tests. Read more about [importing tests](./import-tests-from-source-code.md).
+As described in a section above, Testomat.io require tests to be imported first in order to synchonize them wth the codebase and to keep track the history of tests between reports. If test was not found in a project it is marked as "Unmatched" in report. We use this notice to avoid duplicates or accidentally added tests. Read more about [importing tests](/getting-started/import-tests-from-source-code/).
 
 ![Unnatched tests](./images/unmatched_tests.png)
 
@@ -71,7 +71,7 @@ Testomat.io reporter can be configured to add additional information for Run rep
 * rungroup
 * environemnt
 
-[Learn more of all possible options](./../reference/reporter/pipes/testomatio.md).
+[Learn more of all possible options](/reference/reporter/pipes/testomatio).
 
 ### Reporting Parallel Tests
 

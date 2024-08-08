@@ -187,7 +187,7 @@ You will continue to have access to your current subscription level until the en
 
 ## What Happens To Locked Projects And Users
 
-When your subscription is canceled your company is set to Free plan with appropriate limitations. You may [see it above ](https://docs.testomat.io/usage/subscriptions/#how-to-use-testomat.io-as-a-free-subscription-plan). Some of your projects may be locked, but not lost. Member added above Free Plan limit will be moved to removed section in Companies section and won't have access to projects. You can contact support to get the data from the locked projects or upgrade to unlock it. 
+When your subscription is canceled your company is set to Free plan with appropriate limitations. Some of your projects may be locked, but not lost. Member added above Free Plan limit will be moved to removed section in Companies section and won't have access to projects. You can contact support to get the data from the locked projects or upgrade to unlock it. 
 
 ![image](./images/135133257-c34357db-2d9f-461f-9618-54c41774ffc6.png)
  

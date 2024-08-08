@@ -56,7 +56,8 @@ Or from the chosen Branch
 
 When testing different versions of your software you may need to add automated tests to a specific branch for some reason. Testomat.io allows working with automated tests within a branch, separately from Main. 
 You can import tests into a chosen branch or create a new branch during import using `TESTOMATIO_BRANCH` parameter. 
-Learn more [here.](https://docs.testomat.io/reference/import/#import-into-a-branch-2)
+
+[//]: # (Learn more [here.]&#40;https://docs.testomat.io/reference/import/#import-into-a-branch-2&#41;)
 
 ## Merge And Replace To Main
 

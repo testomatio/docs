@@ -11,7 +11,7 @@ head:
       
   - tag: meta
     attrs:
-      name: keyword
+      name: keywords
       content: test reporting, test suites, test cases, test automation, manual testing, Cucumber, BDD, test management, Testomat.io
 ---
 
