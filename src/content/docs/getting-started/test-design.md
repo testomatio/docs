@@ -2,8 +2,6 @@
 title: Test Design
 ---
 
-import { Aside } from '@astrojs/starlight/components';
-
 When a new project is created, there are multiple options to start:
 
 ![Choose what to do next](./images/2023-08-03_00.37.59@2x.png)
@@ -349,6 +347,19 @@ Beyond Feature Files lies the individual tests. Here, the BDD Editor grants you 
 6. Full screen button - offers you a seamless transition distraction-free environment
 7. Save - save your work
 8. Close - escape the editor
+
+## **URL/ID Quick Copy**
+
+Depending on your needs, you can set up a convenient way to copy **URL/IDs** in **Test Cases**, **Suites** and **Runs**.
+
+To start, you need to open a **Test Case** (**Suite** or **Run**):
+
+1. Click the copy icon to open the modal window.
+2. In the window that opens, you can copy the format you are interested in.
+3. Turn on the toggle next to a format if you need to use it frequently.
+4. Now, every time you click on the ID, the selected format will be copied to clipboard without any further actions.
+
+![Testomat.io - URL/ID Copy](./images/New_1pgghaYx_2024-08-08.png)
 
 ## **How To Add An Attachment To A Test**
 
