@@ -1,8 +1,6 @@
 ---
 title: Analytics
 ---
-import { Aside } from '@astrojs/starlight/components';
-
 
 As a test management system, Testomat.io Team intends to provide our users with as much valuable testing data as possible. For this purpose, we developed Analytics Feature. 
 
@@ -35,6 +33,22 @@ As a management system for automated tests, Testomat.io team created an Automati
 Custom charts are a powerful addition to analytics. They allow you to customise the display of data that is important to you.
 
 ![Testomat.io - Custom Charts](./images/New_3EOUAwBN_2024-08-04.png)
+
+### How To Customise The Chart View?
+
+In the **Edit** mode, select the **Labels** field to customise the information on the chart to your preference:
+
+| Label                      | View                                                |
+|----------------------------|-----------------------------------------------------|
+| Query                      | `state == 'manual' and status == 'failed': 9 tests` |
+| Titles                     | `state == 'manual' and status ...: 9 tests`         |
+| Short query                | `Manual - Failed`                                   |
+| Numbers                    | `9`                                                 |
+| Title and tests amount     | `Manual - Failed: 9 tests`                          |
+| Title and %                | `Manual - Failed: 7%`                               |
+| Title, tests amounts and % | `Manual - Failed: 9 tests, 7%`                      |
+
+![Testomat.io - Custom Charts Labels](./images/New_Sey1I0ug_2024-08-07.png)
 
 ### Timelines
 
@@ -102,8 +116,3 @@ Overview chart visualizes aggregated tests statuses by suites:
 Flaky and Slowests tests widgets show the latest 5 tests and navigate to dedicated Analytics pages: 
 
 ![Testomat.io - image](./images/147570746-6d5a24be-689a-4209-b246-24aaf8afeda0.png)
-
-
-
-
- 
