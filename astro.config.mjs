@@ -1,7 +1,6 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom'
-import starlightLinksValidator from 'starlight-links-validator'
 
 export default defineConfig({
 	site: 'https://docs.testomat.io',
@@ -13,7 +12,6 @@ export default defineConfig({
 		starlight({
 			plugins: [
 				starlightImageZoom(),
-				starlightLinksValidator(),
 			],
 			title: 'Testomatio',
 			pagefind: false,
