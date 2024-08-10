@@ -433,6 +433,10 @@ Also you can set an emoji icon for the suite
 
 ![Pick emoji](./images/2023-08-03_00.57.10@2x.png)
 
+If your test is deeply nested within suites and folders, you can use breadcrumbs with tooltips to navigate the project structure more effectively.
+
+![Testomat.io - Breadcrumbs tooltip](./images/New_g6FZ3V7n_2024-08-10.png)
+
 ## **How to add a label/tag to a test**
 
 This option is the easiest one! You simply need to add the label's name (preceeded by @ char) in the name field of the test.
