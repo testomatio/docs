@@ -33,6 +33,17 @@ It is also possible to the test straightaway from this screen. Simply input the 
 
 Repeating these steps, you can easily add as many tests as you need within a reasonable period of time.
 
+Also, you can use shortcut commands to create/edit Test Cases or Suites:
+
+| Details                                        | Shortcut          |
+|------------------------------------------------|-------------------|
+| Opens the window to create a new **Suite**     | `Cmd + I`         |
+| Save & Create New Suite in create mode         | `Shift + Cmd + S` |
+| Save & View Suite in edit mode                 | `Shift + Cmd + S` |
+| Opens the window to create a new **Test Case** | `Cmd + U`         |
+| Save & Create New Test Case in create mode     | `Shift + Cmd + S` |
+| Save & View Test Case in edit mode             | `Shift + Cmd + S` |
+
 ## **Test Case Editor**
 
 Test Case Editor is a dynamic interface, designed to accommodate the diverse requirements of test case formulation. Through this platform, testers wield the power to architect meticulously structured test scenarios, encompassing a range of variables, actions, expected results, and potential outcomes.
@@ -226,7 +237,7 @@ In this pattern, the steps are presented in a table format, with the expected re
 |---------------|------------------|
 | Success login | Check form       |
 | Failed login  | Check form       |
-````
+```
 
 Some example:
 
