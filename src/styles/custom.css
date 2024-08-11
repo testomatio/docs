@@ -44,4 +44,34 @@ html[data-theme=dark] .docsearch-btn-placeholder {
     .social-icons {
         flex-wrap: wrap;
     }
+
+    .hero img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero img {
+        width: 100%;
+        max-width: 680px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        position: relative;
+    }
+
+    .hero img {
+        max-width: 660px;
+        position: absolute;
+        top: 60px;
+        right: -219px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .hero img {
+        max-width: 730px;
+    }
 }
