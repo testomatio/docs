@@ -46,7 +46,7 @@ html[data-theme=dark] .docsearch-btn-placeholder {
     }
 
     .hero img {
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -55,23 +55,38 @@ html[data-theme=dark] .docsearch-btn-placeholder {
         width: 100%;
         max-width: 680px;
     }
+
+    .content-panel {
+        overflow-x: hidden;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .hero {
         position: relative;
+        grid-template-columns: 3fr 4fr;
     }
 
     .hero img {
-        max-width: 660px;
+        max-width: 700px;
         position: absolute;
         top: 60px;
         right: -219px;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .hero .tagline  {
+        font-size: 18px;
     }
 }
 
 @media screen and (min-width: 1300px) {
     .hero img {
-        max-width: 730px;
+        max-width: 820px;
+        top: 40px;
+        right: -260px;
     }
 }
