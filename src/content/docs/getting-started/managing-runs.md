@@ -20,6 +20,10 @@ Also, you can click on test and open it to see details.
 
 ![see details](./images/3.png)
 
+Moreover, you can view the history of run results by filtering them by group name.
+
+![Testomat.io - Test result history in RunGroup](./images/New_NhgwWJkq_2024-08-12.gif)
+
 **Extended view**
 
 If you click on Report button you will see the extended view of the Run Report.
