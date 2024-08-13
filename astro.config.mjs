@@ -103,7 +103,6 @@ export default defineConfig({
 						{ label: 'Configuration', link: '/reference/reporter/env-variables'},
 						{ label: 'Functions', link: '/reference/reporter/functions'},
 						{ label: 'Logger', link: '/reference/reporter/logger'},
-						{ label: 'Pipes', link: '/reference/reporter/pipes'},
 						{
 							label: 'Pipes',
 							collapsed: false,
