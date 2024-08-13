@@ -35,6 +35,7 @@ Pipes Concepts:
 - [GitHub](/reference/reporter/pipes/github)
 - [Gitlab](/reference/reporter/pipes/gitlab)
 - [CSV](/reference/reporter/pipes/csv)
+- [Bitbucket](/reference/reporter/pipes/bitbucket)
 
 ## Custom Pipe
 
