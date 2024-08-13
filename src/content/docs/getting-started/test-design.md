@@ -439,9 +439,9 @@ If your test is deeply nested within suites and folders, you can use breadcrumbs
 
 ## **How to add a label/tag to a test**
 
-This option is the easiest one! You simply need to add the label's name (preceeded by @ char) in the name field of the test.
+This option is the easiest one! You simply need to add the label's name (preceeded by @ char) in the name field of the test. The drop-down list of tags already used in projects appears, when you type the @ symbol.
 
-![Add tag to a test](./images/2023-08-03_00.59.35@2x.png)
+![Add tag to a test](./images/New_926xDzhS_2024-08-13.png)
 
 And now you can see your label/tag in the test list next to the test's title.
 
