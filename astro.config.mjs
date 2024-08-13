@@ -110,7 +110,7 @@ export default defineConfig({
 								{ label: 'Overview', link: '/reference/reporter/pipes' },
 								{ label: 'Advanced Options', link: '/reference/reporter/pipes/testomatio' },
 								{ label: 'GitHub', link: '/reference/reporter/pipes/github' },
-								{ label: 'GitHub', link: '/reference/reporter/pipes/gitlab' },
+								{ label: 'GitLab', link: '/reference/reporter/pipes/gitlab' },
 								{ label: 'BitBucket', link: '/reference/reporter/pipes/bitbucket' },
 								{ label: 'CSV', link: '/reference/reporter/pipes/csv' },
 								{ label: 'HTML', link: '/reference/reporter/pipes/html' },
