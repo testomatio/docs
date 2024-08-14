@@ -19,7 +19,7 @@ jobs:
           version: 8
       - run: pnpm install
       - run: cd src/scripts && pnpm install
-      - run: node src/scripts/runok.js docs
+      - run: cd src/scripts && node runok.js docs
       - run: pnpm run build
         env:
           PUBLIC_MEILISEARCH_KEY: ${{ secrets.PUBLIC_MEILISEARCH_KEY }}
@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Search Index 
+    - name: Search Index
       env:
         HOST_URL: ${{ secrets.MEILISEARCH_HOST_URL }}
         API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
@@ -47,4 +47,3 @@ jobs:
           -e MEILISEARCH_API_KEY=$API_KEY \
           -v $PWD/docsearch.json:/docs-scraper/docsearch.json \
           getmeili/docs-scraper:latest pipenv run ./docs_scraper docsearch.json
-

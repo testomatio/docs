@@ -1,4 +1,7 @@
 ---
+title: Python
+---
+---
 title: Python Test Frameworks
 ---
 
@@ -9,7 +12,7 @@ title: Python Test Frameworks
 
 [![Support Ukraine Badge](https://bit.ly/support-ukraine-now)](https://github.com/support-ukraine/support-ukraine)
 
-# testomat.io plugin for pytest
+
 
 ## uses testomat.io API:
 
@@ -108,7 +111,7 @@ You would need to decide when you want to upload your test artifacts to cloud st
 1) Upload page screenshot when test fails, using fixtures [reference](https://docs.pytest.org/en/latest/example/simple.html#making-test-result-information-available-in-fixtures)
 
 ```python
-# content of conftest.py
+
 import pytest
 import random
 import os
@@ -213,4 +216,5 @@ def test_example():
 2. `cz commit`
 3. `cz bump`
 4. `git push remoteName branchName --tags`
+
 

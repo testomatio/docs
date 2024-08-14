@@ -147,7 +147,7 @@ module.exports = {
     content = content.split('\n');
     content = content.slice(content.indexOf('## CLI') + 2).join('\n').replace(/#\s/g, '## ')
 
-    writeToFile('src/content/docs/reference/import-js.md', cfg => {
+    writeToFile('\,/content/docs/reference/import-js.md', cfg => {
       cfg.line(`---
 title: Import JavaScript Tests
 ---
@@ -168,7 +168,7 @@ ${content}`)});
     content2 = content2.split('\n').slice(3).join('\n').replace(/#\s/g, '## ')
 
 
-    writeToFile('src/content/docs/reference/import-php.md', cfg => {
+    writeToFile('../content/docs/reference/import-php.md', cfg => {
       cfg.line(`---
 title: Import PHP Tests
 ---
@@ -184,7 +184,7 @@ ${content2}`)
     content3 = content3.slice(content3.indexOf('## Cli') + 2).join('\n')
 
 
-    writeToFile('src/content/docs/reference/import-bdd.md', cfg => {
+    writeToFile('../content/docs/reference/import-bdd.md', cfg => {
       cfg.line(`---
 title: Import Cucumber BDD Tests
 ---
