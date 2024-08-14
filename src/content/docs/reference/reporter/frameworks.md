@@ -4,6 +4,23 @@ title: NodeJS Test Frameworks
 
 ## JavaScript Frameworks
 
+- [CodeceptJS](#codeceptjs)
+- [Cucumber](#cucumber)
+- [Cucumber Java](#cucumber-java)
+- [Cypress](#cypress)
+- [Detox](#detox)
+- [Java Frameworks](#java-frameworks)
+- [Jest](#jest)
+- [JUnit](#junit)
+- [Mocha](#mocha)
+- [Newman/Postman](#newman)
+- [Playwright](#playwright)
+- [Protractor](#protractor)
+- [Selenide](#selenide)
+- [TestCafe](#testcafe)
+- [Vitest](#vitest)
+- [WebdriverIO](#webdriverio)
+
 Testomat.io reporter is NodeJS package that can be applied to all popular JavaScript test runners.
 
 ### CodeceptJS
@@ -27,7 +44,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx codeceptjs run
 ```
 
-> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](/reference/reporter/artifacts)
+> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](./artifacts.md)
 
 #### CodeceptJS Parallel Run
 
@@ -39,7 +56,7 @@ TESTOMATIO={API_KEY} npx start-test-run -c 'npx codeceptjs run-workers 2'
 
 > Specify a command to run with `-c` option in `start-test-run`
 
-Use `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [S3 config for artifacts](/reference/reporter/artifacts).
+Use `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [S3 config for artifacts](./artifacts).
 
 Command `start-test-run` is used to initiate a single run report before all workers are started. Each worker will report to the same Run, and after all workers and codeceptjs finishes, this will finish the run report.
 
@@ -71,7 +88,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx playwright test
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](/reference/reporter/artifacts)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts.md)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/playwright) | 🥒 [Playwright + Cucumber Example](https://github.com/testomatio/examples/tree/master/playwright-cucumber-js)
 
@@ -115,7 +132,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx cypress run
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](/reference/reporter/artifacts)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts.md)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/cypress) | 🥒 [Cypress + Cucumber Example](https://github.com/testomatio/examples/tree/master/cypress-cucumber)
 
@@ -153,6 +170,51 @@ TESTOMATIO={API_KEY} npx jest
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/jest)
 
 > 📺 [Video](https://www.youtube.com/watch?v=RKfIfnEuGys)
+
+### Vitest
+
+When used with [Testomat.io](https://app.testomat.io) it is recommended to import automated tests first via [check-tests](https://github.com/testomatio/check-tests#cli). To create items on the fly set `TESTOMATIO_CREATE=1` env variable.
+
+1. Install Testomatio reporter:
+
+```bash
+npm install @testomatio/reporter --save-dev
+```
+
+2. Add Testomatio reporter to [vitest.config.ts](https://vitest.dev/config/)
+
+```typescript
+// import reporter
+import TestomatioReporter from '@testomatio/reporter/lib/adapter/vitest';
+
+export default defineConfig({
+  test: {
+    // add Testomatio reporter to reporters list
+    reporters: ['verbose', new TestomatioReporter()],
+  },
+});
+```
+
+> You may also pass your API key
+
+```typescript
+new TestomatioReporter({ apiKey: process.env.TESTOMATIO });
+```
+
+or pass it later via environment variable when running tests.
+
+3. Run tests:
+
+```bash
+TESTOMATIO={API_KEY} npx vitest
+```
+
+> 📑 [Example Project](https://github.com/testomatio/examples/tree/master/vitest)
+
+Vitest reporter has some limitations:
+
+- it does not support [testomatio functions](./functions.md) (but supports adding console.logs and [vitest metadata](https://vitest.dev/advanced/metadata) to report)
+- tests can't be uploaded "on the fly", they sent to Testomat.io only after the run is finished (but vitest is supposed to be used as unit test framework, so your run should not take much time)
 
 ### WebdriverIO
 
@@ -380,7 +442,7 @@ This will produce XML report which contains path to a file:
 
 When XML report is uploaded, all files from `file://` will be uploaded to corresponding tests.
 
-> 🖼 Read more how [Artifacts](/reference/reporter/artifacts) work
+> 🖼 Read more how [Artifacts](./artifacts.md) work
 
 ### Selenide
 
@@ -389,7 +451,7 @@ However, it is important to note, that Selenide automatically adds artifacts int
 
 ### Cucumber Java
 
-If you use Java version of Cucumber Java you should import your feature files first using [check-cucumber](https://www.npmjs.com/package/check-cucumber).
+If you use Java version of Cucumber Java you should import your feature files first using [check-cucumber](npmjs.com/package/check-cucumber).
 Provide a path to directory containing feature files by using `-d` option:
 
 ```
