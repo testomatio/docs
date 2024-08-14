@@ -1,22 +1,15 @@
 ---
-title: EnvV ariables
----
----
-title: EnvV ariables
----
----
-title: EnvV ariables
+title: Configuration
 ---
 
 
-You can configure Testomat.io reporter as environment variables.
+You can configure Testomat.io reporter with **environment variables**.
 
 Environment variables can be either passed inline, or from `.env` file or from secrets, when running on CI.
 
 > ℹ️ Specifying **any value** for truthy variables activates the setting, e.g. `TESTOMAT_ENABLE_SMTH=true`, `TESTOMAT_ENABLE_SMTH=1`, and even `TESTOMAT_ENABLE_SMTH=false`, `TESTOMAT_ENABLE_SMTH=0` etc do the same - **enable** the setting.
 
 ## Variables List
-
 
 #### `TESTOMATIO` 
 
@@ -180,7 +173,7 @@ Configuration for CI/CD pipelines.
 * `GITLAB_PAT`: Your GitLab personal access token (to enable Gitlab Pipe).
 
 
-
+## Loading configuration from `.env` file
 
 You can use `.env` file to store your environment variables. To read environment variables from `.env` file, use [dotenv](https://www.npmjs.com/package/dotenv) package:
 
@@ -199,6 +192,4 @@ It is recommended to read `.env` file as early as possible in your application, 
 E.g. in CodeceptJS you can do it in `codecept.conf.js` file. In Playwright: `playwright.config.js`. Jest: `jest.config.js`. Cypress: `cypress.config.js`. And so on.
 
 It is recommended to add `.env` file to `.gitignore` to avoid committing sensitive data to the repository.
-
-
 

@@ -1,7 +1,6 @@
 ---
 title: Pipes
 ---
-
 ## 📯 Pipes
 
 ### What are Pipes?
@@ -31,10 +30,10 @@ Pipes Concepts:
 
 ### Built-in Pipes
 
-- [Testomat.io](./pipes/testomatio.md)
-- [GitHub](./pipes/github.md)
-- [Gitlab](./pipes/gitlab.md)
-- [CSV](./pipes/csv.md)
+- [Testomat.io](./pipes/testomatio)
+- [GitHub](./pipes/github)
+- [Gitlab](./pipes/gitlab)
+- [CSV](./pipes/csv)
 
 ## Custom Pipe
 

@@ -1,7 +1,6 @@
 ---
 title: Github
 ---
-
 ## GitHub Pipe
 
 GitHub Pipe adds a comment with a summary of a run to a Pull Request:

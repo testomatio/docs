@@ -3,7 +3,6 @@ title: Logger
 ---
 
 
-
 - intercepts `console` logs by default
 - intercepts any logger messages (winston, pino, etc., specified by user))
 - attaches intercepted log messages to your report

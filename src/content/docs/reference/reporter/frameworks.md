@@ -1,7 +1,6 @@
 ---
 title: NodeJS Test Frameworks
 ---
-
 ## JavaScript Frameworks
 
 - [CodeceptJS](#codeceptjs)
@@ -44,7 +43,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx codeceptjs run
 ```
 
-> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](./artifacts.md)
+> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](./artifacts)
 
 #### CodeceptJS Parallel Run
 
@@ -88,7 +87,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx playwright test
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts.md)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/playwright) | 🥒 [Playwright + Cucumber Example](https://github.com/testomatio/examples/tree/master/playwright-cucumber-js)
 
@@ -132,7 +131,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx cypress run
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts.md)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/cypress) | 🥒 [Cypress + Cucumber Example](https://github.com/testomatio/examples/tree/master/cypress-cucumber)
 
@@ -213,7 +212,7 @@ TESTOMATIO={API_KEY} npx vitest
 
 Vitest reporter has some limitations:
 
-- it does not support [testomatio functions](./functions.md) (but supports adding console.logs and [vitest metadata](https://vitest.dev/advanced/metadata) to report)
+- it does not support [testomatio functions](./functions) (but supports adding console.logs and [vitest metadata](https://vitest.dev/advanced/metadata) to report)
 - tests can't be uploaded "on the fly", they sent to Testomat.io only after the run is finished (but vitest is supposed to be used as unit test framework, so your run should not take much time)
 
 ### WebdriverIO
@@ -442,7 +441,7 @@ This will produce XML report which contains path to a file:
 
 When XML report is uploaded, all files from `file://` will be uploaded to corresponding tests.
 
-> 🖼 Read more how [Artifacts](./artifacts.md) work
+> 🖼 Read more how [Artifacts](./artifacts) work
 
 ### Selenide
 

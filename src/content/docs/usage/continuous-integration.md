@@ -2,7 +2,7 @@
 title: Continuous Integration
 ---
 
-Testomatio allows executing tests on CI from its interface. 
+Testomatio allows executing tests on CI from its interface.
 A single test, suite, test plan, or all tests can be executed automatically on CI.
 
 Currently following CI systems supported:
@@ -26,23 +26,23 @@ Connecting CI server to Testomatio consist of the following steps:
 2. Import automated tests into that project from a repository
 3. [Assign Ids](#assigning-ids) for imported tests source code
 4. Create a new job in CI according to instructions on this page
-5. Connect CI server to Testomatio 
+5. Connect CI server to Testomatio
 6. Run your tests or suites to get reports!
 
-## Assigning IDs 
+## Assigning IDs
 
 To execute a specific test or a suite a test runner should have a way to find a test by its unique name. For this reason, Testomatio IDs can be used. If tests in the source code will have Testomatio IDs it will be very simple to filter tests. We provide a semi-automatic way to assign Testomatio IDs to tests in source code.
 
 For JavaScript frameworks use the same `check-tests` command you used for importing tests with `--update-ids`. The tests must be already imported in Testomatio:
 
 ```
-TESTOMATIO={apiKey} npx check-tests <framework> <pattern> --update-ids 
+TESTOMATIO={apiKey} npx check-tests <framework> <pattern> --update-ids
 ```
 
 For Cucumber tests use `check-cucumber` command with the similar `--update-ids` command. The command should be the same as for importing plus `--update-ids` option:
 
 ```
-TESTOMATIO={apiKey} npx check-cucumber <pattern> --update-ids 
+TESTOMATIO={apiKey} npx check-cucumber <pattern> --update-ids
 ```
 
 This command will update your source code. Please check the changes before committing it.
@@ -51,7 +51,7 @@ If the Testomatio IDs were placed correctly you can commit your changes to repos
 From now on, Testomatio can use Test IDs to run exact tests and suites on Continuous Integration servers.
 
 
-## Configuring CI 
+## Configuring CI
 
 CI configuration has 3 steps:
 
@@ -64,7 +64,7 @@ Follow the guide for a corresponding CI to set it up.
 ### Jenkins
 
 To connect Jenkins to Testomatio you will need a user and an API Token created.
-API token can be added on "Configure" page of current user: 
+API token can be added on "Configure" page of current user:
 
 ![image](./images/116779414-06684f80-aa7f-11eb-9a63-0231dd19f1be.png)
 
@@ -105,7 +105,7 @@ TESTOMATIO_RUN=${run} TESTOMATIO=${testomatio} npx codeceptjs run --grep "${grep
 ![image](./images/116780412-5518e800-aa85-11eb-88b8-b35853381a91.png)
 
 
-Save the build and switch to Testomat.io. 
+Save the build and switch to Testomat.io.
 
 Open Settings and Connect a new CI:
 
@@ -115,7 +115,7 @@ Select "Jenkins" and fill in all required fields:
 
 ![image](./images/116780079-e33f9f00-aa82-11eb-8678-3f2b5638b196.png)
 
-* `Jenkins Hostname` - URL of Jenkins host 
+* `Jenkins Hostname` - URL of Jenkins host
 * `Username` - a user on Jenkins which will trigger builds
 * `API Token` - a token we created previously in the user's settings.
 * `Job Name` - the name of a job we just created
@@ -178,7 +178,7 @@ A project and plan keys can be found from URL:
 
 You can pass more input variables if you set them in [Environment Configuration](#environment-configuration)
 
-3. Open Runs page (or any test or suite) then select `Run in CI` option in extra menu. 
+3. Open Runs page (or any test or suite) then select `Run in CI` option in extra menu.
 
 ![image](./images/113136648-46dc6f80-922c-11eb-9e72-3a3356c5f647.png)
 
@@ -196,7 +196,7 @@ Select "Bamboo" profile in a list. Optionally, configure a Run Title and select 
 
 ![image](./images/120804889-d1538f00-c54d-11eb-9566-d6a5e77e4945.png)
 
-2. Create .gitlab-ci.yml file or add the job to existing one. E.g. - 
+2. Create .gitlab-ci.yml file or add the job to existing one. E.g. -
 https://gitlab.com/TetianaKhomenko/prod-setup/-/blob/main/.gitlab-ci.yml
 
 ![image](./images/145948594-853bed0b-b913-4d36-a0b6-6bee1faced91.png)
@@ -302,15 +302,15 @@ You can pass more input variables if you set them in [Environment Configuration]
 
 ```
 parameters:
-  testomatio: 
+  testomatio:
     type: string
     default: ""
 
-  run: 
+  run:
     type: string
     default: ""
 
-  testomatio_url: 
+  testomatio_url:
     type: string
     default: ""
 
@@ -377,7 +377,7 @@ You will need to enter the following:
 
 6. Save the conection
 
-7. Testomat.io will need to send input variables into a pipeline. We need to enable them inside a pipeline using Azure DevOps UI. Open a Pipeline and edit it. 
+7. Testomat.io will need to send input variables into a pipeline. We need to enable them inside a pipeline using Azure DevOps UI. Open a Pipeline and edit it.
 
 ![image](./images/201499184-cdaff7a1-7e13-482e-bf7b-43517963cec9.png)
 
@@ -387,19 +387,18 @@ You will need to enter the following:
 
 9. Create the following variables:
 
-* grep
-* run
-* testomatio
-* testomatio_url
+* `grep`
+* `run`
+* `testomatio`
+* `testomatio_url`
 
- 
 ![2022-11-13_01-56](./images/201499260-77f27aed-64fb-4067-8943-3272a35f4072.png)
 
 Do not set defaults to this variable and tick "Let users override this value when running this pipeline" so Testomat.io could set these variables via API request.
 
 ![image](./images/201499290-cdc67537-e526-4274-84b1-fc5675de87ab.png)
 
-10. Update the pipeline to use passed variables. Update the script and pass environment variables to a test runner. Each variable can be accessed as `$(variable)`. For CodeceptJS this command will look the following way: 
+10. Update the pipeline to use passed variables. Update the script and pass environment variables to a test runner. Each variable can be accessed as `$(variable)`. For CodeceptJS this command will look the following way:
 
 ```yaml
 - script: |
@@ -411,7 +410,7 @@ Do not set defaults to this variable and tick "Let users override this value whe
 You can pass more custom variables into a pipeline defining them in a Pipeline UI first and listing them in Testomat.io configuration as well. These variables should be set in Azure  in the same way as `grep`. See [Environment Configuration](#environment-configuration) to see how they can be configured in Testomat.io
 
 To specify a different branch to run tests add `ref` parameter on Configuration tab specifying target ref.
- 
+
 ![image](./images/205988656-7b8e0b6c-860e-4d49-9e6b-c5f450fecb50.png)
 
 To specify `develop` branch add this as config parameter:
@@ -422,11 +421,11 @@ ref=refs/heads/develop
 
 ## Input Variables
 
-While connection settings can be different across CI settings, the list of input variables is the same. 
+While connection settings can be different across CI settings, the list of input variables is the same.
 
 ![Input-Variables-Tab](./images/Input-Variables-Tab.gif)
 
-For example, Testomatio sends `grep` variable to CI to identify which tests should be executed. It may pass other input variables 
+For example, Testomatio sends `grep` variable to CI to identify which tests should be executed. It may pass other input variables
 which can be used on CI to improve reporting.
 
 Here is how `run` input variable can be accessed on different CIs:
@@ -438,7 +437,7 @@ Here is the list of preconfigured input variables:
 
 * `run` - passes Run ID to CI. If this option is toggled on, when a run is created in Testomatio it is instantly added to the list of runs marked as "Scheduled". On CI `run` variable must be passed as `TESTOMATIO_RUN` environment variable to a reporter. This allows mapping a scheduled run to the run which is currently processed. **If `TESTOMATIO_RUN` is not set, a duplicate run will be created**.
 * `testomatio` - passes project access key to CI. This input variable must be passed as `TESTOMATIO` environment variable to match the Testomatio project. Toggle on this option if you prefer not to hardcode Testomatio Project ID in CI configuration but to obtain this value on launch. This may be useful if you have a different Testomatio project configured for on CI run.
-* `testomatio_url` - when working on a self-hosted Testomatio instance, this variable can be used to pass Testomatio endpoint to CI system. Pass `testomatio_url` environment variable to `TESTOMATIO_URL` 
+* `testomatio_url` - when working on a self-hosted Testomatio instance, this variable can be used to pass Testomatio endpoint to CI system. Pass `testomatio_url` environment variable to `TESTOMATIO_URL`
 
 ## Environment Configuration
 
@@ -478,4 +477,3 @@ These variables will be passed to CI in the same manner as `grep` parameter. So,
         TEST_USER: "${{ github.event.inputs.user }}"
         TEST_PASSWORD: "${{ github.event.inputs.password }}"
 ```
-

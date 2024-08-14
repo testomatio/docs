@@ -100,7 +100,7 @@ export default defineConfig({
 						{ label: 'Python Test Frameworks', link: '/reference/reporter/python'},
 						{ label: 'Java and Other Test Frameworks', link: '/reference/reporter/junit'},
 						{ label: 'Test Artifacts', link: '/reference/reporter/artifacts'},
-						{ label: 'Configuration', link: '/reference/reporter/env-variables'},
+						{ label: 'Configuration', link: '/reference/reporter/configuration'},
 						{ label: 'Functions', link: '/reference/reporter/functions'},
 						{ label: 'Logger', link: '/reference/reporter/logger'},
 						{
@@ -115,7 +115,7 @@ export default defineConfig({
 								{ label: 'CSV', link: '/reference/reporter/pipes/csv' },
 								{ label: 'HTML', link: '/reference/reporter/pipes/html' },
 							],
-						},						
+						},
 						{ label: 'Workflows', link: '/reference/reporter/workflows'},
 					],
 				},

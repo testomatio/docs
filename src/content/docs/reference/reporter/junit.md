@@ -1,7 +1,6 @@
 ---
 title: JUnit Reporter
 ---
-
 ## JUnit Reports
 
 JUnit XML format is standard among test runners on various platforms. Testomat.io can load XML reports from test runners and create tests in a project from it. If your framework is not supported yet, generate JUnit report and upload it into Testomat.io

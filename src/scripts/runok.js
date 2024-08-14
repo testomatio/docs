@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const { runok, tasks: { exec, writeToFile } } = require('runok');
-const { Octokit } = require("@octokit/core");
 const axios = require('axios').default;
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +12,6 @@ const { execSync } = require('child_process');
 require('dotenv').config();
 
 const token = process.env.GH_PAT;
-const octokit = new Octokit({ auth: token });
 
 const FETCH_ISSUES_REQUEST = 'GET /repos/{owner}/{repo}/issues?labels={label}&sort=comments&direction=desc'
 
@@ -26,7 +24,7 @@ module.exports = {
 
   async docsImages() {
     const files = globSync("src/content/docs/**/*.md");
-    
+
     for (const file of files) {
       console.log(`Processing ${file}`);
       const content = fs.readFileSync(file).toString();
@@ -70,7 +68,9 @@ module.exports = {
     execSync('rm -rf tmp/php-reporter');
     execSync('rm -rf tmp/pytest-reporter');
 
-    const destinationFolder = 'src/content/docs/reference/reporter';
+    const destinationFolder = path.resolve(path.join(__dirname, '../content/docs/reference/reporter'));
+
+    console.log(destinationFolder);
 
     if (!fs.existsSync(destinationFolder)) {
       fs.mkdirSync(destinationFolder, { recursive: true });
@@ -89,29 +89,32 @@ module.exports = {
 
     const capitalize = s => s && s[0].toUpperCase() + s.slice(1)
 
+    console.log(destinationFolder)
+
     const files = globSync(`${destinationFolder}/**/*.md`);
 
     for (const file of files) {
       let title = humanize(path.basename(file, '.md')).trim();
       title[0] = title[0].toUpperCase();
       const titleId = title.toUpperCase();
-      if (titleId === 'FRAMEWORKS') title = "NodeJS Test Frameworks";      
+
+      if (titleId === 'FRAMEWORKS') title = "NodeJS Test Frameworks";
       if (titleId === 'TESTOMATIO') title = "Advanced Options"
       if (titleId === 'JUNIT') title = "JUnit Reporter"
       let contents = fs.readFileSync(file).toString()
       contents = contents.replace(/^#\s.+/gm, '');
-      writeToFile(file, cfg => {
-        cfg.line('---');
-        cfg.line(`title: ${capitalize(title)}`);
-        cfg.line('---\n');
-        cfg.line(contents);
-      });
+      // fix links
+      contents = contents.replace(/(\.md)(?=\))/g, '');
+
+      contents = `---\ntitle: ${capitalize(title)}\n---\n${contents}\n`;
+
+      fs.writeFileSync(file, contents)
     }
 
     let phpContents = fs.readFileSync(phpReadme).toString().replace(/^#\s.+/gm, '');
     phpContents = `\n:::note\n Taken from [PHP Reporter Readme](${phpReporterUrl})\n:::\n ${phpContents}\n`
 
-    writeToFile('src/content/docs/reference/reporter/php.md', cfg => {
+    writeToFile('../content/docs/reference/reporter/php.md', cfg => {
       cfg.line('---');
       cfg.line(`title: PHP Test Frameworks`);
       cfg.line('---\n');
@@ -119,9 +122,9 @@ module.exports = {
     });
 
     let pytestContents = fs.readFileSync(pytestReadme).toString().split('## Change')[0];
-    pytestContents = `\n:::note\n Taken from [Pytestomatio Reporter Readme](${pytestReporterUrl})\n:::\n\n${pytestContents}\n`          
+    pytestContents = `\n:::note\n Taken from [Pytestomatio Reporter Readme](${pytestReporterUrl})\n:::\n\n${pytestContents}\n`
 
-    writeToFile('src/content/docs/reference/reporter/python.md', cfg => {
+    writeToFile('../content/docs/reference/reporter/python.md', cfg => {
       cfg.line('---');
       cfg.line(`title: Python Test Frameworks`);
       cfg.line('---\n');
@@ -133,11 +136,11 @@ module.exports = {
 
   async docsImporter() {
 
-    const destinationFolder = 'src/content/docs/reference/importer';
+    const destinationFolder = '../content/docs/reference/importer';
 
     if (!fs.existsSync(destinationFolder)) {
       fs.mkdirSync(destinationFolder, { recursive: true });
-    }    
+    }
 
     const response = await axios.get(`https://raw.githubusercontent.com/testomatio/check-tests/master/README.md`);
     let content = (await response.data).toString();
@@ -195,7 +198,7 @@ ${content3}
 
 
 }
-    
+
 
 
 if (require.main === module) runok(module.exports);

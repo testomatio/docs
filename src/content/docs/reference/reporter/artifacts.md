@@ -3,7 +3,6 @@ title: Artifacts
 ---
 
 
-
 Artifacts are files produced by test runner, usually screenshots, videos or traces.
 
 Testomat.io Reporter uses a custom S3 bucket for artifacts which can be obtained from any S3 provider, like AWS, DigitalOcean and others. This makes artifacts storage to be independent from Testomat.io Application. In case you decide to stop using it, you still control your data. It is also up to you to clean old artifacts when you don't need them.

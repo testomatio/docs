@@ -1,7 +1,6 @@
 ---
 title: Html
 ---
-
 ## Testomat.io HTML Pipe
 
 The Testomat.io HTML Pipe is a feature that allows you to generate and save HTML reports based on your test results. This functionality is part of the Testomat.io testing ecosystem.
