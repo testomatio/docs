@@ -33,16 +33,7 @@ It is also possible to the test straightaway from this screen. Simply input the 
 
 Repeating these steps, you can easily add as many tests as you need within a reasonable period of time.
 
-Also, you can use shortcut commands to create/edit Test Cases or Suites:
-
-| Details                                        | Shortcut          |
-|------------------------------------------------|-------------------|
-| Opens the window to create a new **Suite**     | `Cmd + I`         |
-| Save & Create New Suite in create mode         | `Shift + Cmd + S` |
-| Save & View Suite in edit mode                 | `Shift + Cmd + S` |
-| Opens the window to create a new **Test Case** | `Cmd + U`         |
-| Save & Create New Test Case in create mode     | `Shift + Cmd + S` |
-| Save & View Test Case in edit mode             | `Shift + Cmd + S` |
+Also, you can use shortcut commands to create/edit Test Cases or Suites. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more. 
 
 ## **Test Case Editor**
 
@@ -305,22 +296,7 @@ Some example:
 
 ```
 
-### Markdown Shortcuts
-
-Use Markdown shortcuts to edit test case description quickly and easily.
-
-| Function       | Windows          | macOS           |
-|----------------|------------------|-----------------|
-| Bold           | Ctrl + B         | Cmd + B         |
-| Italic         | Ctrl + I         | Cmd + I         |
-| Heading 2      | Ctrl + 1         | Alt + 2         |
-| Heading 3      | Ctrl + 2         | Alt + 3         |
-| Heading 4      | Ctrl + 3         | Alt + 4         |
-| Quote Block    | Ctrl + Shift + K | Cmd + Shift + K |
-| Link           | Ctrl + U         | Cmd + U         |
-| Ordered List   | Ctrl + Shift + 7 | Alt + ,         |
-| Unordered List | Ctrl + Shift + 8 | Alt + .         |
-
+Use Markdown shortcuts to edit test case description quickly and easily. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more. 
 
 ## **BDD Editor Review**
 
