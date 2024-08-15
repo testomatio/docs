@@ -5,7 +5,7 @@ title: Github
 
 GitHub Pipe adds a comment with a summary of a run to a Pull Request:
 
-![](./images/github.png)
+![](images/github.png)
 
 This summary will contain:
 

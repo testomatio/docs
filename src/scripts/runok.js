@@ -105,6 +105,7 @@ module.exports = {
       contents = contents.replace(/^#\s.+/gm, '');
       // fix links
       contents = contents.replace(/(\.md)(?=\))/g, '');
+      contents = contents.replace(/\]\(\.\//g, '](');
 
       contents = `---\ntitle: ${capitalize(title)}\n---\n${contents}\n`;
 

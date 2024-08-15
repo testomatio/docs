@@ -3,7 +3,7 @@ title: Advanced Options
 ---
 ## Testomat.io Pipe
 
-![](./images/testomatio.png)
+![](images/testomatio.png)
 
 Testomat.io Pipe sends data to [Testomat.io Application](https://app.testomat.io). Testomat.io provides free projects forever and unlimited test runs. Even it is a cloud application you can use it for free.
 
@@ -194,7 +194,7 @@ TESTOMATIO={API_KEY} npx start-test-run -c <actual run command> --filter 'testom
 
 Filter tests by tag names. Use this filter to select tests associated with specific tags.
 
-![Tag Name Filter](./images/by-tag-name.png)
+![Tag Name Filter](images/by-tag-name.png)
 
 _Command execution example_
 
@@ -206,7 +206,7 @@ TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testom
 
 Filter tests by Testomatio plan IDs. Use this filter to organize and execute tests based on plan IDs.
 
-![Plan ID Filter](./images/by-plan-id.png)
+![Plan ID Filter](images/by-plan-id.png)
 
 _Command execution example_
 
@@ -219,13 +219,13 @@ TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testom
 Filter tests using custom labels. Labels allow you to categorize tests for better management and execution.
 
 Label Filter (by label name) Example 1:
-![Label Filter Example 3](./images/by-label-1.png)
+![Label Filter Example 3](images/by-label-1.png)
 
 Label Filter (by label id) Example 2:
-![Label Filter Example 1](./images/by-label.png)
+![Label Filter Example 1](images/by-label.png)
 
 Another Label Filter Example 3:
-![Label Filter Example 2](./images/by-label-3.png)
+![Label Filter Example 2](images/by-label-3.png)
 
 _Command execution example_
 
@@ -253,7 +253,7 @@ Here's a list of available types that you can copy and add to the run command:
 - 💤 Trivial
 
 Label Filter Example based on the Severity type:
-![Label Filter Example 3](./images/by-label-severity.png)
+![Label Filter Example 3](images/by-label-severity.png)
 
 _Command execution example_
 
@@ -271,7 +271,7 @@ TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testom
 
 Filter tests linked to JIRA tickets. Use this filter to coordinate testing efforts with your JIRA workflow.
 
-![JIRA Ticket Filter](./images/by-jira-id.png)
+![JIRA Ticket Filter](images/by-jira-id.png)
 
 _Command execution example_
 

@@ -7,7 +7,7 @@ title: Pipes
 
 Unlike other reporters, Testomat.io Reporter doesn't force you to report data only to Testomat.io application. Testomat.io Reporter collects data from test frameworks and submits it via pipes to other services.
 
-![](./images/reporter-pipes.png)
+![](images/reporter-pipes.png)
 
 For instance, you can enable GitHub Pipe to create a comment on a GitHub Pull Request and CSV Export Pipe to write a report in CSV format. To report data to Testomat.io App, Testomat.io Pipe should be enabled, but not required if you don't plan to use Testomat.io App. You can also write your own pipe to:
 
@@ -30,10 +30,11 @@ Pipes Concepts:
 
 ### Built-in Pipes
 
-- [Testomat.io](./pipes/testomatio)
-- [GitHub](./pipes/github)
-- [Gitlab](./pipes/gitlab)
-- [CSV](./pipes/csv)
+- [Testomat.io](pipes/testomatio)
+- [GitHub](pipes/github)
+- [Gitlab](pipes/gitlab)
+- [CSV](pipes/csv)
+- [Bitbucket](pipes/bitbucket)
 
 ## Custom Pipe
 
