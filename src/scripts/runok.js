@@ -147,7 +147,7 @@ module.exports = {
     content = content.split('\n');
     content = content.slice(content.indexOf('## CLI') + 2).join('\n').replace(/#\s/g, '## ')
 
-    writeToFile('\,/content/docs/reference/import-js.md', cfg => {
+    writeToFile('../content/docs/reference/import-js.md', cfg => {
       cfg.line(`---
 title: Import JavaScript Tests
 ---
