@@ -89,8 +89,6 @@ module.exports = {
 
     const capitalize = s => s && s[0].toUpperCase() + s.slice(1)
 
-    console.log(destinationFolder)
-
     const files = globSync(`${destinationFolder}/**/*.md`);
 
     for (const file of files) {
@@ -105,7 +103,7 @@ module.exports = {
       contents = contents.replace(/^#\s.+/gm, '');
       // fix links
       contents = contents.replace(/(\.md)(?=\))/g, '');
-      contents = contents.replace(/\]\(\.\//g, '](');
+      // contents = contents.replace(/\]\(\.\//g, '](');
 
       contents = `---\ntitle: ${capitalize(title)}\n---\n${contents}\n`;
 
