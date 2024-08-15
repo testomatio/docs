@@ -9,7 +9,7 @@ Testomat.io Reporter uses a custom S3 bucket for artifacts which can be obtained
 
 By using external storage Testomat.io allows getting full control over how the storage is used. You can either clean up old test artifacts or contrary extend storage to store all history for all periods. S3 was chosen as a de-facto standard for file storage so all cloud providers support it. If you don't have S3 storage yet, you can purchase one from your favorite cloud provider and create a new bucket (storage space) on it. Testomat.io has no direct access to artifacts storage.
 
-![](images/artifacts.png)
+![](./images/artifacts.png)
 
 Test artifacts can be uploaded with public (default) or private access to a bucket
 
@@ -40,7 +40,7 @@ These variables can be stored into `.env` file if tests are executed locally or 
 
 If you use Testomat.io Application, you can set those variables inside **Settings > Artifacts** and share credentials with reporter
 
-![](images/shared_artifacts.png)
+![](./images/shared_artifacts.png)
 
 In this case Testomat.io Reporter will obtain S3 credentials for server and use them to save artifacts.
 
@@ -48,7 +48,7 @@ In this case Testomat.io Reporter will obtain S3 credentials for server and use 
 
 **👀 By default tests artifacts are uploaded to bucket with `public-read` permission.**
 
-In this case uploaded files will be publicly accessible in Internet. These public links will be used by [Testomat.io Application](https://testomat.io) as well as [GitHub](pipes.md#github-pipe) and [GitLab](pipes.md#gitlab-pipe) Pipes to display images.
+In this case uploaded files will be publicly accessible in Internet. These public links will be used by [Testomat.io Application](https://testomat.io) as well as [GitHub](./pipes.md#github-pipe) and [GitLab](./pipes.md#gitlab-pipe) Pipes to display images.
 
 **➿ To upload files with private access** bucket add `TESTOMATIO_PRIVATE_ARTIFACTS=1` environment value.
 Then update provide the same S3 credentials in "Settings > Artifacts" section of a project,
@@ -95,7 +95,7 @@ S3_FORCE_PATH_STYLE=true
 
 Google Cloud Storage can work via S3 protocol if **Interoperability mode** is enabled.
 
-![](images/google-interoperability.png)
+![](./images/google-interoperability.png)
 
 Open Cloud Storage. Create a bucket for artifacts, then inside Settings select "Interoperability". Create Access Key and Secret Key for the current user.
 
@@ -120,13 +120,13 @@ Testomat.io Reporter has built-in support for test artifacts of following framew
 
 If a screenshot, a video, or a trace was saved and attached to test, Testomat.io reporter will automatically upload any of these as artifacts.
 
-Usually, artifacts are stored automatically for failed test cases. To send arbitrary files as artifacts use [`artifact`](functions.md#artifact) method from testomat functions `@testomatio/reporter` package.
+Usually, artifacts are stored automatically for failed test cases. To send arbitrary files as artifacts use [`artifact`](./functions.md#artifact) method from testomat functions `@testomatio/reporter` package.
 
 If S3 credentials are not set, artfact file will be ignored.
 
 ### Other Frameworks
 
-For tests in **Java**, **Python**, **C#** and other languages, which are not (yet) integrated into Testomat.io Reporter, **use [JUnit format](junit) for reporting**.
+For tests in **Java**, **Python**, **C#** and other languages, which are not (yet) integrated into Testomat.io Reporter, **use [JUnit format](../junit) for reporting**.
 
 To attach a file to a test as an artifact print the file name into console with `file://` prefix and upload XML report with Testomat.io.
 

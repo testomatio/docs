@@ -25,6 +25,15 @@ title: EnvV ariables
 ---
 title: EnvV ariables
 ---
+---
+title: EnvV ariables
+---
+---
+title: EnvV ariables
+---
+---
+title: EnvV ariables
+---
 
 
 You can configure Testomat.io reporter as environment variables.
@@ -217,6 +226,9 @@ It is recommended to read `.env` file as early as possible in your application, 
 E.g. in CodeceptJS you can do it in `codecept.conf.js` file. In Playwright: `playwright.config.js`. Jest: `jest.config.js`. Cypress: `cypress.config.js`. And so on.
 
 It is recommended to add `.env` file to `.gitignore` to avoid committing sensitive data to the repository.
+
+
+
 
 
 

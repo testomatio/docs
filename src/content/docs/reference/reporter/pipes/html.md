@@ -68,5 +68,5 @@ TESTOMATIO_HTML_REPORT_SAVE=1 TESTOMATIO_HTML_REPORT_FOLDER=user-html-reporter T
 
 🖥️ An example of a report can be seen in the screenshot below:
 
-![HTML example](images/html-pipe.png)
+![HTML example](./images/html-pipe.png)
 

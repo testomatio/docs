@@ -7,7 +7,7 @@ export default defineConfig({
 	image: {
 		service: passthroughImageService()
 	},
-	trailingSlash: 'never',
+	trailingSlash: 'always',
 	prefetch: true,
 	integrations: [
 		starlight({
