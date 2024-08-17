@@ -165,6 +165,10 @@ It extracts URLs from user logs and convert them into clickable links within the
 
 ![Testomat.io - Clickable links in automated tests report](./images/New_fE0hyJn9_2024-07-30.png)
 
+Stacktrace lets you search for text and regular expressions. This powerful tool enables you to quickly locate specific data within extensive logs or codebases, saving you valuable time and effort. By using text searches, you can easily pinpoint exact matches, while regular expressions allow for more complex queries.
+
+![Testomat.io - Stacktrace search](./images/New_FJSHQ5EX_2024-08-17.gif)
+
 ## How To Enable Playwright Trace Viewer
 
 Traces in Playwright refer to detailed logs or recordings of browser interactions during a test script's execution. They capture a chronological sequence of events, including browser actions, network requests, and other relevant information.
