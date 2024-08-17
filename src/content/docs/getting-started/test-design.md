@@ -496,3 +496,11 @@ And on the test description page
 You may need to move your tests within a project, for example to another suite. For this purpose, you can use drag and drop. You need to drag a test and drop it into a suite. Please note, you should drop a test to suite name on the top of the suite.
 
 ![Alt text](./images/2023-08-03_01.29.33.gif)
+
+## How to restore deleted tests?
+
+The **Trash Bin** feature is designed to enhance data recovery and user experience by allowing users to easily restore accidentally deleted suites or test cases. This feature ensures that valuable testing data is not permanently lost and can be quickly recovered without the need for complex restoration processes.
+
+![Testomat.io - Trash Bin](./images/New_vzUGVzmP_2024-08-13.gif)
+
+You can also track changes to Suits and Test Cases, including deletions, on the [Pulse](https://docs.testomat.io/usage/pulse/) page.

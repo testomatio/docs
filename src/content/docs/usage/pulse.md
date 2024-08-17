@@ -23,17 +23,3 @@ With Bulk Restore, you can:
 * **Multi-Selection Mode:** Easily activate multi-select mode, choose the tests and suites you wish to restore, and bring them all back with a single action.
 
 ![Testomat.io - Bulk Restore](./images/New_85QaXaUI_2024-07-30.gif)
-
-## Trash Bin
-
-The **Trash Bin** feature is designed to enhance data recovery and user experience by allowing users to easily restore accidentally deleted suites or test cases. This feature ensures that valuable testing data is not permanently lost and can be quickly recovered without the need for complex restoration processes.
-
-With **Trash Bin**, you can confidently:
-
-* **Data Safety:** Minimizes the risk of permanent loss of important test data due to accidental deletion.
-
-* **User Convenience:** Provides a straightforward way to recover deleted items directly from the Tests page.
-
-* **Efficiency:** Saves time and resources by eliminating the need for external recovery methods or administrative intervention.
-
-![Testomat.io - Trash Bin](./images/New_vzUGVzmP_2024-08-13.gif)
