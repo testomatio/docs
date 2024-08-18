@@ -7,18 +7,24 @@ Testomat.io provides functionality for test steps re-using and autocompletion.
 ## How To Add A New Step In Steps Database
 
 There are few ways to create steps on the page:
-1. enter the step into the field and click Create
-2. click on Plus button to add context to the step
 
-![CleanShot 2022-05-26 at 23 26 17@2x](./images/170574754-87d26001-bf0e-4435-ab3b-c2b1960b2e40.jpg)
+1. Open **Steps** page.
+2. Enter the step into the field.
+3. Click **Create** button.
 
-At the New Step screen, you need to add the step itself (1), description (2) and click on the Save button (3)
+Or another way:
 
-![CleanShot 2022-05-26 at 15 45 02@2x](./images/170490390-4317ab4f-dca8-4b14-a6c2-3f0b35431021.jpg)
+4. Сlick on **Plus** button to add context to the step.
 
-See a new step created 
+![Testomat.io - Steps](./images/New_oVmHkZJz_2024-08-18.png)
 
-![CleanShot 2022-05-26 at 18 41 23@2x](./images/170523532-cdc1b77b-12f1-46f2-be47-2ba0cd766e00.jpg)
+At the New Step screen, you need to add the step itself (1), description (2) and click on the Save button (3).
+
+![Testomat.io - Add context to the step](./images/New_DLg3V9rr_2024-08-18.png)
+
+The new step has been created!
+
+![Testomat.io - New step created](./images/New_CqZ0FlTE_2024-08-18.png)
 
 ## How To Add A New Step In Editor for Classical Tests
 
