@@ -62,13 +62,13 @@ This feature enhances your ability to track progress, identify trends, and make 
 
 ![Testomat.io - Timelines for Custom Charts](./images/New_ACit3dNa_2024-08-04.gif)
 
-## Defects Board 
+## Failures Board 
 
-Your team may require visualizing your current status on the project. This is implemented with Defects Board. There you can see defects from the latest test runs, navigate to the suite, latest test run, and the failed test itself. For the Defects widget, we added the ability to group and sort defects found on the project.
+Your team may require visualizing your current status on the project. This is implemented with Failures Board. There you can see failures from the latest test runs, navigate to the suite, latest test run, and the failed test itself. For the Failures widget, we added the ability to group and sort failures found on the project.
 
-![Testomat.io - Defects Board Refactoring](./images/147571296-182b119a-7e4f-4c27-9a20-0cd0760b7e3b.gif)
+![Testomat.io - Failures Board](./images/New_QIy3IApm_2024-08-18.gif)
 
-## Issues
+<!-- ## Issues -->
 
 ## Flaky Tests
 
