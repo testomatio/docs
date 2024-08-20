@@ -43,7 +43,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx codeceptjs run
 ```
 
-> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](../artifacts)
+> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](../artifacts/)
 
 #### CodeceptJS Parallel Run
 
@@ -87,7 +87,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx playwright test
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](../artifacts)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](../artifacts/)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/playwright) | 🥒 [Playwright + Cucumber Example](https://github.com/testomatio/examples/tree/master/playwright-cucumber-js)
 
@@ -131,7 +131,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx cypress run
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](../artifacts)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](../artifacts/)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/cypress) | 🥒 [Cypress + Cucumber Example](https://github.com/testomatio/examples/tree/master/cypress-cucumber)
 
@@ -450,7 +450,7 @@ However, it is important to note, that Selenide automatically adds artifacts int
 
 ### Cucumber Java
 
-If you use Java version of Cucumber Java you should import your feature files first using [check-cucumber](npmjs.com/package/check-cucumber).
+If you use Java version of Cucumber Java you should import your feature files first using [check-cucumber](https://www.npmjs.com/package/check-cucumber).
 Provide a path to directory containing feature files by using `-d` option:
 
 ```
