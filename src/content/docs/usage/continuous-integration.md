@@ -14,7 +14,7 @@ Currently following CI systems supported:
 * Circle CI
 * Azure Pipelines
 * BitBucket Pipelines
-* TeamCity Clouds
+* Teamcity
 
 ## Overview
 
@@ -481,7 +481,7 @@ These variables will be passed to CI in the same manner as `grep` parameter. So,
 ```
 
 
-### Bitbucket
+## Bitbucket Pipelines
 
 To connect Bitbucket to Testomatio you will need a API Token created. API token can be added on "Repository settings" page of current user:
 
@@ -505,13 +505,12 @@ Add the following parameters as a string with empty default values:
 
 The job should include a step where the test runner is executed with —grep option and TESTOMATIO environment variables passed in.
 
-For instance:
+For instance: ```- npx codeceptjs run-workers 2 --grep "${grep}"```
 
-```- npx codeceptjs run-workers 2 --grep "${grep}"```
 <img width="936" alt="Screenshot 2024-08-20 at 13 47 01" src="https://github.com/user-attachments/assets/bf1c5b0e-45aa-46b6-90d5-f9def7ec37e1">
 
-
 If you use on-premise Testomatio setup you will also need to add ```testomatio_url``` parameter.
+
 
 Save the build and switch to Testomat.io.
 
@@ -520,5 +519,48 @@ Save the build and switch to Testomat.io.
 
 Connect a Bitbucket Pipelines in Testomatio:
 <img width="1654" alt="Screenshot 2024-08-20 at 13 54 58" src="https://github.com/user-attachments/assets/6c7737bb-f206-4158-b70c-017ca7490aef">
+
+
+
+
+## Teamcity
+
+
+Let's create a new project in your Teamcity workspace:
+
+<img width="1678" alt="Screenshot 2024-08-20 at 14 17 22" src="https://github.com/user-attachments/assets/41504a43-18f7-4b6a-b759-3e65928e8d6f">
+
+
+On the same page Create Build Configuration.
+
+_Build configurations define how to retrieve and build sources of a project._
+
+
+Create a Access Key for the user:
+
+<img width="1370" alt="Screenshot 2024-08-20 at 15 07 34" src="https://github.com/user-attachments/assets/ddd68419-4d03-492b-a592-35327d5b8474">
+
+
+Setup variables:
+
+<img width="1634" alt="Screenshot 2024-08-20 at 15 16 03" src="https://github.com/user-attachments/assets/ed561f76-cd82-45b9-8af5-e9c707d64cc5">
+
+Add a new Build Step: Command Line.
+
+<img width="1315" alt="Screenshot 2024-08-20 at 15 23 48" src="https://github.com/user-attachments/assets/d2876624-d53f-4f20-a991-e5c847b557bf">
+
+
+Connect a Teamcity in Testomatio:
+
+<img width="1653" alt="Screenshot 2024-08-20 at 14 08 19" src="https://github.com/user-attachments/assets/fdd7da14-9492-48d8-bc12-18b47d42eeab">
+
+
+
+
+
+
+
+
+
 
 
