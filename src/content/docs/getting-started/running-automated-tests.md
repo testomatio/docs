@@ -71,7 +71,7 @@ Testomat.io reporter can be configured to add additional information for Run rep
 * rungroup
 * environemnt
 
-[Learn more of all possible options](/reference/reporter/pipes/testomatio).
+[Learn more of all possible options](/reference/reporter/pipes/testomatio/).
 
 ### Reporting Parallel Tests
 
