@@ -8,7 +8,7 @@ hero:
     file: ../../assets/test-reporting-heat-map.webp
   actions:
     - text: Get Started
-      link: /getting-started/start-from-scratch
+      link: /getting-started/start-from-scratch/
       icon: right-arrow
       variant: primary
 sidebar: 
