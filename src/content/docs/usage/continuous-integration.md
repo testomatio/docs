@@ -485,17 +485,15 @@ These variables will be passed to CI in the same manner as `grep` parameter. So,
 
 To connect Bitbucket to Testomatio you will need a API Token created. API token can be added on "Repository settings" page of current user:
 
-<img width="1411" alt="Screenshot 2024-08-20 at 10 57 25" src="https://github.com/user-attachments/assets/ded499f2-276a-4b85-81bf-2fcc4feceee0">
-
+![Testomat.io - Bitbucket API Token](./images/New_TZ0DW4li_2024-08-24.png)
 
 Then create a new Bitbucket project. Select button "Create" on the top and "Project".
 
-<img width="877" alt="Screenshot 2024-08-20 at 11 03 19" src="https://github.com/user-attachments/assets/233aa19b-3e3e-4b85-8841-b8403ef715c1">
-
+![Testomat.io - Bitbucket New Project](./images/New_fcRot0eP_2024-08-24.png)
 
 Make this build parametrized:
 
-<img width="1426" alt="Screenshot 2024-08-20 at 11 07 34" src="https://github.com/user-attachments/assets/62dceacf-59ba-4fa2-a586-b2ca48bef5fe">
+![Testomat.io - Bitbucket Workspace Variables](./images/New_MvzBQxer_2024-08-24.png)
 
 Add the following parameters as a string with empty default values:
 
@@ -514,8 +512,7 @@ If you use on-premise Testomatio setup you will also need to add ```testomatio_u
 
 Save the build and switch to Testomat.io.
 
-<img width="1671" alt="Screenshot 2024-08-20 at 11 26 37" src="https://github.com/user-attachments/assets/f5661c42-42c8-470e-90c3-14ad05df9e45">
-
+![Testomat.io - Bitbucket Continuous Integration](./images/New_suL5Muya_2024-08-24.png)
 
 Connect a Bitbucket Pipelines in Testomatio:
 <img width="1654" alt="Screenshot 2024-08-20 at 13 54 58" src="https://github.com/user-attachments/assets/6c7737bb-f206-4158-b70c-017ca7490aef">
