@@ -161,15 +161,53 @@ On the Runs page you will see a copy of your Test Run with new tests results:
 
 ![copy of your Test Run](./images/24.png)
 
-## Archive Test Run 
+## Archive Runs & Groups
 
-Archive Test Run provides you with the ability to declutter the main Runs board, ensuring that only relevant and active test runs take center stage while preserving historical data.  To do this you need to 1. click on the menu button and 2. click on Archive button. 3. Confirm.
+Archive provides you with the ability to declutter the main Runs board, ensuring that only relevant and active test runs take center stage while preserving historical data. The Runs page displays the 30 most recent Runs and Groups, while all other runs go to Archive. 
 
-![Archive Test Run](./images/25.png)
+![Testomat.io - Archive Runs and Groups](./images/New_d9qEAJjX_2024-08-24.png)
 
-Archived runs find a new home in the dedicated Runs Archive section. This segregated space ensures that your archived data is easily accessible without cluttering the main board. The Runs Archive comes equipped with filtering capabilities.
+You can also forcefully archive a Run or Group. To do this you need:
 
-![Run Archive](./images/26.png)
+1. Сlick the menu button. 
+2. Click the Archive button. 
+3. Confirm.
+
+Forcedly archived Runs and Groups get the **archived** badge!
+
+![Testomat.io - Forcibly archived badge](./images/New_8ytGsRr0_2024-08-24.png)
+
+Incomplete Runs or Groups with such runs cannot be archived forcibly or automatically from the main Runs board!
+
+![Testomat.io - Archiving of incomplete Runs or Groups](./images/New_yqswaA98_2024-08-24.png)
+
+### Runs Archive
+
+Archived runs find a new home in the dedicated **Runs Archive** section. This segregated space ensures that your archived data is easily accessible without cluttering the main board. The Runs Archive comes equipped with filtering capabilities.
+
+![Testomat.io - Runs Archive Filter](./images/New_t9GEoTQl_2024-08-25.png)
+
+You can set the period after which old Test Runs will be deleted from the archive. You can do this through the menu button on the Runs Archive page, then click on the **Purge Old Runs** button, specify the period and confirm. Alternatively, you can specify a term in **Project Settings**.
+
+![Testomat.io - Purge Old Runs](./images/New_bA0ng1x8_2024-08-25.png)
+
+### Groups Archive
+
+For archived groups, there is a separate section called **Group Archive**. The Groups Archive can also be filtered.
+
+![Testomat.io - Groups Archive Filter](./images/New_uenasKAy_2024-08-25.png)
+
+Furthermore, you can sort the groups in a variety of ways.
+
+![Testomat.io - Groups Archive Sorting](./images/New_fJrzuLZv_2024-08-25.png)
+
+### More About Archives
+
+* Automatically archived Runs and Groups can be un-archived. This allows them to be displayed on the main board.
+* When archiving a group - all runs within it get the **archived** badge.
+* If you restore from an archived group, then this group and the parent group will also be unarchived.
+* When a group is restored, all of the archived runs will be restored as well.
+* If automated run starts in archived group - this group restore from archive.
 
 ## Filtering Test Runs
 
