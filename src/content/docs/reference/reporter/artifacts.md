@@ -48,7 +48,7 @@ In this case Testomat.io Reporter will obtain S3 credentials for server and use 
 
 **👀 By default tests artifacts are uploaded to bucket with `public-read` permission.**
 
-In this case uploaded files will be publicly accessible in Internet. These public links will be used by [Testomat.io Application](https://testomat.io) as well as [GitHub](/reference/reporter/pipes/github/#github-pipe) and [GitLab](/reference/reporter/pipes/gitlab/#gitlab-pipe) Pipes to display images.
+In this case uploaded files will be publicly accessible in Internet. These public links will be used by [Testomat.io Application](https://testomat.io) as well as [GitHub](./pipes/github.md#github-pipe) and [GitLab](./pipes/gitlab.md#gitlab-pipe) Pipes to display images.
 
 **➿ To upload files with private access** bucket add `TESTOMATIO_PRIVATE_ARTIFACTS=1` environment value.
 Then update provide the same S3 credentials in "Settings > Artifacts" section of a project,
@@ -120,13 +120,13 @@ Testomat.io Reporter has built-in support for test artifacts of following framew
 
 If a screenshot, a video, or a trace was saved and attached to test, Testomat.io reporter will automatically upload any of these as artifacts.
 
-Usually, artifacts are stored automatically for failed test cases. To send arbitrary files as artifacts use [`artifact`](../functions/#artifact) method from testomat functions `@testomatio/reporter` package.
+Usually, artifacts are stored automatically for failed test cases. To send arbitrary files as artifacts use [`artifact`](./functions.md#artifact) method from testomat functions `@testomatio/reporter` package.
 
 If S3 credentials are not set, artfact file will be ignored.
 
 ### Other Frameworks
 
-For tests in **Java**, **Python**, **C#** and other languages, which are not (yet) integrated into Testomat.io Reporter, **use [JUnit format](./../junit/) for reporting**.
+For tests in **Java**, **Python**, **C#** and other languages, which are not (yet) integrated into Testomat.io Reporter, **use [JUnit format](./junit.md) for reporting**.
 
 To attach a file to a test as an artifact print the file name into console with `file://` prefix and upload XML report with Testomat.io.
 

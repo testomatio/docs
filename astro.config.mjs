@@ -1,13 +1,17 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom'
+import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
+
+const options = {
+	contentPath: 'src/content/docs',
+};
 
 export default defineConfig({
 	site: 'https://docs.testomat.io',
 	image: {
 		service: passthroughImageService()
 	},
-	trailingSlash: 'always',
 	prefetch: true,
 	integrations: [
 		starlight({
@@ -147,4 +151,7 @@ export default defineConfig({
 			],
 		}),
 	],
+	markdown: {
+		rehypePlugins: [[rehypeAstroRelativeMarkdownLinks, options]],
+	},
 });

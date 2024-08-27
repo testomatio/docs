@@ -102,7 +102,7 @@ module.exports = {
       let contents = fs.readFileSync(file).toString()
       contents = contents.replace(/^#\s.+/gm, '');
       // fix links
-      contents = transformLinks(contents)
+      // contents = transformLinks(contents)
 
       contents = `---\ntitle: ${capitalize(title)}\n---\n${contents}\n`;
 
@@ -252,16 +252,16 @@ async function processMarkdown(markdownText) {
   return updatedMarkdown;
 }
 
-function transformLinks(markdown) {
-  // Regular expression to find markdown links pointing to .md files
-  const mdLinkRegex = /\[([^\]]+)\]\((\.\/[^\)]+)\.md\)/g;
-
-  // Replace function to remove .md and adjust the path
-  const transformedMarkdown = markdown.replace(mdLinkRegex, (match, text, filePath) => {
-    // Adjust path from './' to '../'
-    const newPath = path.join('..', filePath);
-    return `[${text}](${newPath})`;
-  });
-
-  return transformedMarkdown;
-}
+// function transformLinks(markdown) {
+//   // Regular expression to find markdown links pointing to .md files
+//   const mdLinkRegex = /\[([^\]]+)\]\((\.\/[^\)]+)\.md\)/g;
+//
+//   // Replace function to remove .md and adjust the path
+//   const transformedMarkdown = markdown.replace(mdLinkRegex, (match, text, filePath) => {
+//     // Adjust path from './' to '../'
+//     const newPath = path.join('..', filePath);
+//     return `[${text}](${newPath})`;
+//   });
+//
+//   return transformedMarkdown;
+// }

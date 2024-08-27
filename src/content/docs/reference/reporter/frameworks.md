@@ -43,7 +43,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx codeceptjs run
 ```
 
-> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](../artifacts/)
+> 🖼 Screenshots of failed tests and videos (for Playwright helper) will be automatically uploaded as [Artifacts](./artifacts.md)
 
 #### CodeceptJS Parallel Run
 
@@ -55,7 +55,7 @@ TESTOMATIO={API_KEY} npx start-test-run -c 'npx codeceptjs run-workers 2'
 
 > Specify a command to run with `-c` option in `start-test-run`
 
-Use `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [S3 config for artifacts](./artifacts).
+Use `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [S3 config for artifacts](./artifacts.md).
 
 Command `start-test-run` is used to initiate a single run report before all workers are started. Each worker will report to the same Run, and after all workers and codeceptjs finishes, this will finish the run report.
 
@@ -87,7 +87,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx playwright test
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](../artifacts/)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts.md)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/playwright) | 🥒 [Playwright + Cucumber Example](https://github.com/testomatio/examples/tree/master/playwright-cucumber-js)
 
@@ -131,7 +131,7 @@ Run the following command from you project folder:
 TESTOMATIO={API_KEY} npx cypress run
 ```
 
-> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](../artifacts/)
+> 🖼 Screenshots of failed tests and videos will be automatically uploaded as [Artifacts](./artifacts.md)
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/cypress) | 🥒 [Cypress + Cucumber Example](https://github.com/testomatio/examples/tree/master/cypress-cucumber)
 
@@ -212,7 +212,7 @@ TESTOMATIO={API_KEY} npx vitest
 
 Vitest reporter has some limitations:
 
-- it does not support [testomatio functions](../functions) (but supports adding console.logs and [vitest metadata](https://vitest.dev/advanced/metadata) to report)
+- it does not support [testomatio functions](./functions.md) (but supports adding console.logs and [vitest metadata](https://vitest.dev/advanced/metadata) to report)
 - tests can't be uploaded "on the fly", they sent to Testomat.io only after the run is finished (but vitest is supposed to be used as unit test framework, so your run should not take much time)
 
 ### WebdriverIO
@@ -441,7 +441,7 @@ This will produce XML report which contains path to a file:
 
 When XML report is uploaded, all files from `file://` will be uploaded to corresponding tests.
 
-> 🖼 Read more how [Artifacts](../artifacts) work
+> 🖼 Read more how [Artifacts](./artifacts.md) work
 
 ### Selenide
 
