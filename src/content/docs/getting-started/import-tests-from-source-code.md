@@ -65,6 +65,27 @@ All imported tests are marked as "Automated" by default. If you click on any of 
 
 ![Testomat.io - Automated test source code](./images/New_cIVsD22d_2024-07-26.png)
 
+## Import Automated Tests As Manual
+
+If you need to import automated tests as manual, just add a tag to the test name in your code and thеn use the same tag in the import settings. In your code, the tag name must begin with the **@** symbol. For instance: `@tagname`.
+
+![Testomat.io - Add tag to source code](./images/New_8ZP5jCBP_2024-08-27.png)
+
+The `manual` name of the tag is used as an example, you can use whatever you like.
+
+Now, open **Import Project from Source Code** in Testomat.io and specify your project parameters. Just like we did earlier. 
+
+Before you execute the command, take some additional steps:
+
+1. Click **Additional Settings**.
+2. Enter a tag name, same as in the code (here without @ symbol).
+3. Execute the command in your project and click the **Finish** button.
+
+![Testomat.io - Add tag name to import settings](./images/New_DUY4aG6H_2024-08-27.png)
+
+On the **Tests** page, the imported tests that have been tagged are listed as manual.
+
+![Testomat.io - Import Automated Tests As Manual](./images/New_QxNiCQPq_2024-08-27.png)
 
 ## What's Next?
 
