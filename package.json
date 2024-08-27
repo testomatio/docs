@@ -18,7 +18,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "axios": "^1.7.4",
+    "axios": "^1.7.5",
     "dasherize": "^2.0.0",
     "glob": "^10.4.2",
     "runok": "^0.9.3",
@@ -29,6 +29,7 @@
     "@octokit/core": "^5.1.0",
     "@pagefind/default-ui": "^1.1.0",
     "astro": "^4.14.5",
+    "astro-rehype-relative-markdown-links": "^0.15.0",
     "astro-vtbot": "^1.8.7",
     "bunosh": "^0.1.5",
     "dotenv": "^16.4.5",
