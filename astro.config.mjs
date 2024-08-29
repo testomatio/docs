@@ -83,6 +83,10 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Tutorials',
+					autogenerate: { directory: 'tutorials' },
+				},
+				{
 					label: 'Usage',
 					autogenerate: { directory: 'usage' },
 				},
