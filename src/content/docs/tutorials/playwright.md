@@ -76,7 +76,7 @@ Also, the IDs are specified in your test in Testomat.io.
 
 ## Reporting Playwright tests
 
-Text
+Reports are crucial for understanding the results of automated tests and providing insights into the status and performance of your automation workflows. In Testomat.io, you'll be able to view Playwright reports, even the most intricate of these, such as Trace Viewer.
 
 ### How To Enable Playwright Trace Viewer
 
@@ -91,3 +91,4 @@ Here are steps how to enable Playwright trace viewer for uploaded artifacts in T
 5. Click on the `trace.zip`.
 
 ![Testomat.io - Open Playwright Trace Viewer](./images/Open-Playwright-Trace.gif)
+
