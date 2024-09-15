@@ -169,6 +169,36 @@ Stacktrace lets you search for text and regular expressions. This powerful tool 
 
 ![Testomat.io - Stacktrace search](./images/New_FJSHQ5EX_2024-08-17.gif)
 
+## Running Manual and Automated Tests
+
+Testomat.io has a separate category for working with tests called **Mixed**. It is a combination of automated and manual tests. You can create a **Mixed Plan** and run manual and automated tests in parallel.
+
+To start the Mixed Run, you need to do a few things:
+
+* Tests need to have **IDs**. This can be done by adding the `--update-ids` option when importing tests.
+
+* You need to configure **Continuous Integration**. To learn how to set up CI in Testomat.io, visit the [dedicated page](https://docs.testomat.io/usage/continuous-integration/).
+
+* Create a **Mixed Plan** that contains both automated and manual tests. You can learn how to create a Mixed Plan by visiting the page [dedicated page](https://docs.testomat.io/getting-started/test-plans/).
+
+To get started, open the **Runs** page and select **Mixed Run** in the menu.
+
+![Testomat.io - Start the Mixied Run](./images/New_G4KYCW6P_2024-09-15.png)
+
+Next, name the run (optional), select a Profile (this is your configured CI), select a pre-created Mixed Plan and click on the **Launch** button.
+
+![Testomat.io - Set Up the Mixied Run](./images/New_DSZjGZmH_2024-09-15.png)
+
+While you are running manual tests, your automated tests are running in parallel.
+
+![Testomat.io - Run Tests](./images/New_rzMWPX3a_2024-09-15.png)
+
+![Testomat.io - GitHub Actions](./images/New_bwcoXKfZ_2024-09-15.png)
+
+As a result, you receive the combined report:
+
+![Testomat.io - Mixed Run Report](./images/New_cHhvni5r_2024-09-15.png)
+
 ## How To Enable Playwright Trace Viewer
 
 Traces in Playwright refer to detailed logs or recordings of browser interactions during a test script's execution. They capture a chronological sequence of events, including browser actions, network requests, and other relevant information.
