@@ -16,23 +16,9 @@ After that, you should select the type of plan you want to create:
 
 ![Testomat.io - New Plan](./images/New_BVGb17Wo_2024-09-10.png)
 
-<!-- Test Plans
-  Manual
-   Select Tests by Checking Tests & Suites
-   Select Tests by Tags
-   Select Tests by Labels
-   Select Tests by QueryLanguage (screenshots + link to query language page)
-   Run Automated as Manual
-  Automated
-   How automated tests are executed on CI (link to CI)
-     (or use plan ID with npx start-test-run (mentioned abow)
-   Tests need IDs
-  Mixed 
--->
-
 ## Manual
 
-By choosing a manual plan, you can easily customize your selection of test cases:
+By choosing manual plan, you can easily customize your selection of test cases:
 
 * Select test cases by Checking Tests & Suites
 * Select test cases by Tags
@@ -46,3 +32,25 @@ Additionally, you can run your Automated tests as Manual using a toggle switch.
 ![Testomat.io - Create Manual Plan](./images/New_JxL6qSdU_2024-09-10.gif)
 
 ## Automated
+
+By choosing automated plan, you need to configure **Continuous Integration**. Also, tests need to have IDs. This can be done by adding the `--update-ids` option when importing tests.
+
+To learn how to set up Continuous Integration in Testomat.io, visit the [dedicated page](https://docs.testomat.io/usage/continuous-integration/).
+
+![Testomat.io - Create Automated Plan](./images/New_O9I32YCX_2024-09-15.gif)
+
+After running tests via CI, the report will be sent to Testomat.io. You can view it on the **Runs** page.
+
+![Testomat.io - GitHub Actions](./images/New_KoPkaO0N_2024-09-15.png)
+
+Automated run report:
+
+![Testomat.io - Automated Plan Report](./images/New_Q8Cq5xGN_2024-09-15.png)
+
+A **Plan ID** can also be used to run an Automated Plan. To learn how to do this, visit the [Filter Test](https://docs.testomat.io/reference/reporter/pipes/testomatio/#filter-tests) page (currently available for Playwright and CodeceptJS frameworks). 
+
+## Mixed
+
+Mixed Plan is a combination of automated and manual tests. Automated tests are running in **Continuous Integration**, while you run manual tests in parallel. As a result, you get one report for both automated and manual runs.
+
+![Testomat.io - Create Mixed Plan](./images/New_UhbNVumq_2024-09-15.gif)
