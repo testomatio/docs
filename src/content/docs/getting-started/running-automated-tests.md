@@ -168,17 +168,3 @@ It extracts URLs from user logs and convert them into clickable links within the
 Stacktrace lets you search for text and regular expressions. This powerful tool enables you to quickly locate specific data within extensive logs or codebases, saving you valuable time and effort. By using text searches, you can easily pinpoint exact matches, while regular expressions allow for more complex queries.
 
 ![Testomat.io - Stacktrace search](./images/New_FJSHQ5EX_2024-08-17.gif)
-
-## How To Enable Playwright Trace Viewer
-
-Traces in Playwright refer to detailed logs or recordings of browser interactions during a test script's execution. They capture a chronological sequence of events, including browser actions, network requests, and other relevant information.
-
-Here are steps how to enable Playwright trace viewer for uploaded artifacts in Test Run:
-
-1. setup S3 Bucket (see [dedicated documentation](https://docs.testomat.io/usage/test-artifacts#set-up-s3-bucket))
-2. enable third-party cookies in your browser
-3. run your tests
-4. click on a test
-5. click on the trace.zip
-
-![open playwright trace viewer](./images/Open-Playwright-Trace.gif)
