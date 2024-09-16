@@ -79,6 +79,7 @@ export default defineConfig({
 						{ label: 'Test Design', link: '/getting-started/test-design'},
 						{ label: 'Running Tests Manually', link: '/getting-started/running-tests-manually'},
 						{ label: 'Running Automated Tests', link: '/getting-started/running-automated-tests'},
+						{ label: 'Test Plans', link: '/getting-started/test-plans'},
 						{ label: 'Managing Runs', link: '/getting-started/managing-runs'},
 					],
 				},
