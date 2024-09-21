@@ -25,11 +25,45 @@ By choosing manual plan, you can easily customize your selection of test cases:
 * Select test cases by Labels
 * Select test cases by Query
 
+![Testomat.io - Create Manual Plan](./images/New_JxL6qSdU_2024-09-10.gif)
+
+Let's take a closer look at the work with filling the Plan with Test Cases:
+
+1. To select specific test cases, open a suit by clicking on the arrow next to it and select tests you need. 
+2. If you need all tests belonging to a particular suit, just click on suite name. All the tests in that suit will be selected automatically.
+
+![Testomat.io - Select test cases by Checking Tests & Suites](./images/New_fPk7pQ3N_2024-09-21.png)
+
+3. Use the search to find test cases by keywords.
+
+![Testomat.io - Search Tests](./images/New_ePSOfhbu_2024-09-21.png)
+
+4. Use the filter to select test cases by specific criteria. You can filter by:
+
+* by Tag
+* by Priority
+* by Assignee
+* by Field
+
+![Testomat.io - Filter Tests](./images/New_pQqT2hyj_2024-09-21.png)
+
+5. Or you can select test cases using the query language.
+
+> Note: It is not possible to use a filter and a query language at the same time!
+
+![Testomat.io - Select test cases by Query](./images/New_A920SrRa_2024-09-21.png)
+
+![Testomat.io - TQL](./images/New_KZgeLhRu_2024-09-21.png)
+
 For more details on using the Query Language, visit the [dedicated page](https://docs.testomat.io/usage/query-language/).
 
-Additionally, you can run your Automated tests as Manual using a toggle switch.
+6. Only the tests that meet the criteria will be displayed, when you click on the `.. tests matched` button
 
-![Testomat.io - Create Manual Plan](./images/New_JxL6qSdU_2024-09-10.gif)
+![Testomat.io - Matched tests](./images/New_gVfndDmF_2024-09-21.png)
+
+7. Additionally, you can run your Automated tests as Manual using a toggle switch. This gives you the option to include automated tests into a manual plan. It means that you will manually assign Passed/Failed statuses to automated tests during a test run.
+
+![Testomat.io - Run Automated tests as Manual using toggle](./images/New_ARLJc69t_2024-09-21.png)
 
 ## Automated
 
