@@ -1,5 +1,18 @@
 ---
 title: Running Automated Tests
+description: Learn how to run automated tests using Testomat.io. This guide walks through the process of importing tests, generating run reports, and configuring automated test frameworks. It also covers advanced reporting features like parallel test execution, managing stack traces, and handling terminated runs for optimized test management and reporting.
+type: article
+url: https://docs.testomat.io/getting-started/running-automated-tests/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ./images/New_fE0hyJn9_2024-07-30.png
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: automated tests, test reporting, test management, parallel testing, CI/CD, stack trace, Playwright, Testomat.io, test import, run reports, test automation frameworks
 ---
 
 Testomat.io can receive and store test run reports from various test frameworks. 

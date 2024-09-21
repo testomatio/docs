@@ -1,9 +1,19 @@
 ---
 title: Jira
+description: Learn how to integrate Jira with Testomat.io for seamless test management. This guide covers installing the Jira plugin, connecting projects, linking tests and suites to Jira issues, and automating issue creation for failed tests and runs. Streamline your workflow by managing both testing and issue tracking from a single platform.
+type: article
+url: https://docs.testomat.io/integration/jira/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ./images/191554363-292706f8-1ea4-47cb-8b4e-e88e6bbb0227.jpg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, Jira integration, test management, issue tracking, linking tests, Jira issues, plugin setup, automated issues, test defects, QA tools
 ---
-
-import { Aside } from '@astrojs/starlight/components';
-
 
 ## Installing Testomatio Plugin in JIRA
 

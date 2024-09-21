@@ -1,5 +1,18 @@
 ---
 title: Import PHP Tests
+description: Import PHP tests into Testomat.io using the list-tests CLI utility, which supports PHPUnit and Codeception. This guide explains how to install the tool, print and export test lists in markdown format, and import tests directly into Testomat.io by passing the API key for your project. Easily manage PHP tests and maintain live documentation with this integration.
+type: article
+url: https://docs.testomat.io/reference/import-php/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/logo.svg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, PHP test import, PHPUnit, Codeception, CLI tool, test management, live documentation, markdown export, test synchronization, API key, QA tools
 ---
 
 

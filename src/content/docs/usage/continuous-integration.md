@@ -1,5 +1,18 @@
 ---
 title: Continuous Integration
+description: Explore how to integrate continuous testing into your CI/CD pipeline using Testomat.io. This guide explains the setup process for Continuous Integration (CI), allowing users to connect their test management tool with popular CI tools like Jenkins, GitLab, and more. Learn how to automate test runs, manage reports, and streamline your testing workflows within a CI environment for effective test tracking and execution.
+type: article
+url: https://docs.testomat.io/usage/continuous-integration/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ./images/New_RtsIVB63_2024-08-26.png
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
 ---
 
 Testomatio allows executing tests on CI from its interface.

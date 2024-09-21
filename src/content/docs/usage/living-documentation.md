@@ -1,5 +1,18 @@
 ---
 title: Living Documentation
+description: Learn how to enable and embed Living Documentation in Testomat.io, a dynamic and real-time document generation tool for test projects. This guide covers embedding specific test suites, tests, or tests tagged with Jira IDs into websites or Confluence using iframes, offering enhanced visibility and collaboration for testing efforts.
+type: article
+url: https://docs.testomat.io/usage/living-documentation/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ./images/126028734-59df8280-2224-405f-960c-6a5de4a4b7d9.png
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Living Documentation, Testomat.io, dynamic documentation, test management, Jira integration, test suites, embedding tests, iframe, real-time documentation, Confluence integration
 ---
 
 Testomatio allows generating Living Documentation which is a dynamic document that provides information that is current, accurate, and easy to understand.

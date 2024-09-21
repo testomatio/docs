@@ -1,5 +1,18 @@
 ---
 title: GDPR Commitment
+description: Testomat.io is fully committed to GDPR compliance, ensuring the protection of personal data in line with European regulations. It collects only essential data, provides users with control over their information, and employs subprocessors to manage data securely. The platform supports data access, modification, and deletion rights for EU/EEA residents, ensuring transparency and privacy.
+type: article
+url: https://docs.testomat.io/compliance/gdpr/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/logo.svg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: GDPR compliance, data protection, personal data, Testomat.io, data privacy, user rights, data security, subprocessors, data access, European regulations
 ---
 
 Testomat.io, or just Testomat, is really serious about following the GDPR rules that started on May 25, 2018. GDPR is a big deal because it helps protect people’s data in Europe. Testomat has to follow these rules because it works with people in Europe.

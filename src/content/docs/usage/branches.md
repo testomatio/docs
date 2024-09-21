@@ -1,5 +1,18 @@
 ---
 title: Branches
+description: Learn how to manage test branching in Testomat.io for efficient collaboration. This guide covers creating branches for isolated test modifications, working within branches without affecting the main test suite, handling automated tests in branches, and merging or replacing changes to the main branch. It also explains the difference between merging and replacing branches to maintain version control in testing.
+type: article
+url: https://docs.testomat.io/usage/branches/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ./images/131306785-a428e7ad-83cc-4542-b47e-0551c8d3ab19.png
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io branches, test branching, test versioning, merge branches, automated tests, test suites, version control, collaborative testing, test management, QA
 ---
 
 The typical day-to-day workflow includes changes that developers make to the code. So as code is changing, quality assurance needs to update the tests to keep code tests coverage update. You may need to add tests for a new feature, but you don't want to affect existing suites and tests. Or there are a lot of specialists in the team and you don't want to affect each other's work and you need to write tests separately. 

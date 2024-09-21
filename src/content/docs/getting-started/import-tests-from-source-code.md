@@ -1,5 +1,18 @@
 ---
 title: Import Tests From Source Code
+description: Learn how to import existing end-to-end or unit tests directly from your source code into Testomat.io. This guide covers creating a project and configuring test imports from repositories. It also shows how to sync automated tests, import them as manual if needed, and manage test visibility.
+type: article
+url: https://docs.testomat.io/getting-started/import-tests-from-source-code/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ./images/New_cIVsD22d_2024-07-26.png
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, source code, test import, automated tests, manual tests, test management, repository, GitHub, Jira, BDD, project setup, CI integration, visibility
 ---
 
 > If you have end-2-end tests, API or unit tests already implemented, you can import them into Testomat.io.

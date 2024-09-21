@@ -1,5 +1,18 @@
 ---
 title: Import Tests From Cucumber
+description: Learn how to import tests from Cucumber into Testomat.io for better visibility and management. This guide covers steps to create a new project, select the appropriate framework, and import Cucumber feature files using specific commands. It also explains how to differentiate and manage both automated and manual BDD tests efficiently.
+type: article
+url: https://docs.testomat.io/getting-started/import-tests-from-cucumber/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ././images/New_zIxolwhp_2024-07-23.png
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, Cucumber, BDD, feature files, test import, automated tests, manual tests, project setup, test management, testing framework, NodeJS, CodeceptJS
 ---
 
 > If you have end-2-end tests or API or unit tests already implemented you can import them into Testomat.io

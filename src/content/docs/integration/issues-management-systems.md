@@ -1,5 +1,18 @@
 ---
 title: Issues Management Systems
+description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps, and Linear with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
+type: article
+url: https://docs.testomat.io/integration/issues-management-systems/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ./images/221125834-31a351a7-48ee-472c-a8b2-1f2bfaaef39d.jpg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects
 ---
 
 Quality assurance is closely connected to Issue management, which means the process of identifying and addressing any problems that occur over the course of a project. This involves documenting the issues and resolving them through review and consideration of all relevant information. Testomat.io provides Issues Management Systems integration to meet this need and link your testing data to your Issue Management System.
