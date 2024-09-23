@@ -1,5 +1,18 @@
 ---
 title: Testomat.io Reporter
+description: The Testomat.io Reporter is a Node.js package designed to send test results directly to Testomat.io. It supports real-time reports, artifact uploads, and logs for Node.js frameworks like Jest and Playwright. It can also generate reports from JUnit files for other languages like Java, PHP, and Ruby. The package is configured via environment variables and integrates with CI workflows.
+type: article
+url: https://docs.testomat.io/reference/reporter/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/logo.svg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, Node.js, Jest, Playwright, JUnit, test reporting, real-time reports, CI integration, test artifacts, automated testing, test management
 ---
 
 Testomat.io reporter is NodeJS package that sends test results to [app.testomat.io](https://app.testomat.io)

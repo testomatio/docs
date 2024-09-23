@@ -1,5 +1,18 @@
 ---
 title: JUnit Reporter
+description: Learn how to use the JUnit reporter with Testomat.io to upload XML test reports from various frameworks like JUnit, Pytest, NUnit, and more. Testomat.io automatically processes these reports to generate detailed test runs and create tests directly in the system. Supports Playwright, Ruby, Java, Python, and PHP.
+type: article
+url: https://docs.testomat.io/reference/reporter/junit/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/logo.svg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: JUnit reporter, Testomat.io, test automation, XML report, Pytest, NUnit, test result import, Playwright, CI/CD integration, test management
 ---
 ## JUnit Reports
 
