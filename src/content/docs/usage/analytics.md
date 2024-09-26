@@ -62,6 +62,10 @@ This feature enhances your ability to track progress, identify trends, and make 
 
 ![Testomat.io - Timelines for Custom Charts](./images/New_ACit3dNa_2024-08-04.gif)
 
+Each timeline is associated with a unique URL, which can be copied and shared with other members of the project team. 
+
+![Testomat.io - Unique URL for timelines](./images/New_E5IK2JjS_2024-09-24.png)
+
 ## Failures Board 
 
 Your team may require visualizing your current status on the project. This is implemented with Failures Board. There you can see failures from the latest test runs, navigate to the suite, latest test run, and the failed test itself. For the Failures widget, we added the ability to group and sort failures found on the project.
