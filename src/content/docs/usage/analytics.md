@@ -76,15 +76,20 @@ There may be some unstable automated tests on your project that sometimes fail a
 
 **How does it work?**
 
-Let's say `0 == failed` and `1 == passed`.
-If we have 1 passed and 1 failed, avg value is 0.5.
-If all tests are passing, value is 1.
-If all tests failing value is 0.
-We set some boundaries between where tests neither pass or fail.
-So if avg value is 0.9 we can consider this test as non-flaky as it passes 90% of time.
+Flakiness is determined by calculating the average value of run statuses for a given test. The method of calculation can be defined based on specific parameters, including a minimum and maximum success rate threshold.
 
+* Minimum Success Rate: Defines the lowest acceptable pass rate to be considered within the flakiness range.
+* Maximum Success Rate: Defines the highest acceptable pass rate to be considered within the flakiness range.
 
-![Testomat.io - Flaky](./images/Flaky.gif)
+Analytics will identify and display tests that have a pass rate falling within the defined range. **The pass rate is calculated based on the last 100 runs.**
+
+Example:
+* Minimum Success Rate: 40%
+* Maximum Success Rate: 60%
+
+If a test has been run 14 times and succeeded 7 times, the success rate is calculated as 50%. Since 50% falls within the defined range (40% to 60%), this test would be considered flaky and displayed in the analytics report.
+
+![Testomat.io - Flaky](./images/New_mjqIWEbd_2024-09-25.gif)
 
 ## Slowest Tests 
 
