@@ -1,5 +1,18 @@
 ---
 title: Gitlab
+description: The GitLab Pipe in Testomat.io enables automatic test result reporting directly into GitLab merge requests. It provides detailed test metrics, including passed, failed, and skipped tests, along with stack traces. The integration is achieved through environment variables like GITLAB_TOKEN, improving visibility into test results within the GitLab CI/CD pipeline.
+type: article
+url: https://docs.testomat.io/reference/reporter/pipes/gitlab/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/logo.svg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: GitLab Pipe, Testomat.io, merge request comments, test reporting, CI integration, GitLab CI/CD, GITLAB_TOKEN, automated testing, test management
 ---
 ## GitLab Pipe
 

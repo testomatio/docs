@@ -1,5 +1,18 @@
 ---
 title: Bulk Edit
+description: Learn how to use the Bulk Edit feature in Testomat.io to efficiently manage large test projects. This guide explains how to restructure suites and tests, reorder, create, or delete tests in YAML format, and apply changes with live previews. It also covers keyboard shortcuts, file patterns, and bulk test creation for improved test management.
+type: article
+url: https://docs.testomat.io/usage/bulk-edit/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ./images/169832839-f67f3cad-73b7-43ff-ba00-b4ecd4296c2f.jpg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: bulk edit, test management, Testomat.io, YAML, test suite, reorder tests, create tests, delete tests, bulk test creation, file patterns, test restructuring, automation
 ---
 
 

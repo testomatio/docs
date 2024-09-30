@@ -1,5 +1,18 @@
 ---
 title: Terms of Service
+description: Testomat.io’s Terms of Service govern the use of its platform, covering topics such as account creation, subscription payments, refunds, prohibited uses, and intellectual property. Users agree to these terms upon accessing the service. The document also outlines policies for content posting, service termination, and modifications to fees or terms.
+type: article
+url: https://docs.testomat.io/compliance/terms/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/logo.svg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Terms of Service, Testomat.io, subscription, user account, payments, refunds, intellectual property, prohibited uses, service termination, amendments
 ---
 
 The Terms of Service of testomat.io, managed by Optimum Solutions Sp. z o.o., outline the rules and regulations for using our service. By accessing and using the service, users agree to abide by these terms.

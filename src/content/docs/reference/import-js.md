@@ -1,5 +1,18 @@
 ---
 title: Import JavaScript Tests
+description: Import JavaScript tests into Testomat.io using the CLI tool with support for various frameworks like Cypress, TestCafe, and Protractor. This guide covers commands for importing, synchronizing, and managing test IDs, as well as options for handling parametrized tests, disabling detached tests, and importing into specific suites or branches.
+type: article
+url: https://docs.testomat.io/reference/import-js/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://user-images.githubusercontent.com/24666922/78563263-505d1280-7838-11ea-8fbc-18e942d48485.png
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, JavaScript test import, automated tests, test management, CLI tool, test synchronization, parametrized tests, Test IDs, Cypress, TestCafe, Protractor, QA tools
 ---
 
 

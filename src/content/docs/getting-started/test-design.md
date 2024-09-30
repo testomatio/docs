@@ -1,5 +1,18 @@
 ---
 title: Test Design
+description: Learn how to create effective test designs with Testomat.io. This guide covers building test scenarios, using various test design techniques, and integrating them into your project workflow for improved test case management and automated test runs.
+type: article
+url: https://docs.testomat.io/getting-started/test-design/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: ./images/class_editor.png
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: test design, test cases, test management, test automation, testing techniques, Testomat.io, BDD, Gherkin, Cucumber, test scenarios, project workflow, software testing
 ---
 
 When a new project is created, there are multiple options to start:

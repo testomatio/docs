@@ -1,5 +1,18 @@
 ---
 title: Python Test Frameworks
+description: Learn how to integrate the Testomat.io reporter with Python test frameworks like Pytest. The documentation covers installation, synchronizing tests, configuring test environments, reporting results, and submitting test artifacts. It also includes detailed configuration options such as managing test artifacts through S3 and setting up environment variables for reporting.
+type: article
+url: https://docs.testomat.io/reference/reporter/python/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/logo.svg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Python test frameworks, Pytest, Testomat.io, test synchronization, test reporting, test artifacts, automation, S3 storage, test configuration, API integration, continuous integration, environment setup
 ---
 
 

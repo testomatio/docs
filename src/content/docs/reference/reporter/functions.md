@@ -1,5 +1,18 @@
 ---
 title: Functions
+description: Explore Testomat.io's flexible reporting functions to enhance your test reports. Learn to use functions like artifact, log, and step for adding files, logging additional information, and describing test actions. Integrates seamlessly with frameworks like Playwright, Jest, and Mocha, supporting custom reporting needs.
+type: article
+url: https://docs.testomat.io/reference/reporter/functions/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/logo.svg
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, test reporting functions, artifact, log, step, Playwright, Jest, Mocha, CodeceptJS, test automation, test customization
 ---
 Testomat functions gives you more flexibility in reporting and make your reports more powerful.
 
