@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/github.png
+      content: https://docs.testomat.io/_astro/github.C03cgmD4_Z2jb7MH.webp
       
   - tag: meta
     attrs:

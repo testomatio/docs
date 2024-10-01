@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/html-pipe.png
+      content: https://docs.testomat.io/_astro/html-pipe.DcWwRyWV_1EqHcU.webp
       
   - tag: meta
     attrs:

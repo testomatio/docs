@@ -2,12 +2,12 @@
 title: Artifacts
 description: Understand how to manage and upload test artifacts in Testomat.io using external S3-compatible storage. This guide covers configuring public and private access to test artifacts, setting up an S3 bucket, and automating the upload of screenshots, videos, and other test-related files. Learn how to securely store and manage artifacts to improve test analysis and reporting.
 type: article
-url: https://docs.testomat.io/usage/test-artifacts/
+url: https://docs.testomat.io/reference/reporter/artifacts/
 head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/artifacts.png
+      content: https://docs.testomat.io/_astro/shared_artifacts.B-l29chE_ZH695H.webp
       
   - tag: meta
     attrs:

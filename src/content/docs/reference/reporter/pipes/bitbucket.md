@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/bitbucket.png
+      content: https://docs.testomat.io/_astro/bitbucket.DCXWS1as_18rWNn.webp
       
   - tag: meta
     attrs:

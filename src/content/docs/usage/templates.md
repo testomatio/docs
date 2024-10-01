@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/delete-template.png
+      content: https://docs.testomat.io/_astro/make-default.DaaTuaif_Z1WGTAO.webp
       
   - tag: meta
     attrs:
