@@ -1,5 +1,5 @@
 ---
-title: Pipes
+title: Forwarding Test Data with Pipes Feature
 description: Testomat.io's Pipes feature allows you to forward test data from your test framework to other services like GitHub, GitLab, or CSV reports. Pipes are configured via environment variables and can be customized to send data to analytics, databases, or notifications. You can also create custom pipes for specific needs, ensuring compatibility across different test frameworks.
 type: article
 url: https://docs.testomat.io/reference/reporter/pipes/

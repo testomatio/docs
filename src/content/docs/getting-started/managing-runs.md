@@ -1,5 +1,5 @@
 ---
-title: Managing Runs
+title: Effective Test Run Management Guide
 description: Learn how to manage test runs effectively in Testomat.io. This guide covers generating detailed run reports, grouping test runs, applying merge strategies, relaunching runs, copying run groups, and filtering results. It also explains multi-selection options for archiving, merging, and downloading reports for efficient test tracking and management.
 type: article
 url: https://docs.testomat.io/getting-started/managing-runs/

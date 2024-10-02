@@ -1,5 +1,5 @@
 ---
-title: BDD syntax
+title: Mastering BDD Syntax
 description: Learn the Behavior-driven development (BDD) syntax in Testomat.io using the Gherkin format. This guide provides a reference for key BDD elements such as Feature, Scenario, Given, When, Then, and more, along with rules for proper syntax structure, case-sensitivity, and keyword usage in .feature files.
 type: article
 url: https://docs.testomat.io/usage/bdd-syntax/

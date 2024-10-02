@@ -1,5 +1,5 @@
 ---
-title: Auto-Import
+title: Auto-Import Test Cases with GitHub Actions
 description: Learn how to automatically import and update your test cases in Testomat.io using GitHub Actions. This guide explains how to set up a workflow to sync automated tests with your codebase on every push to the main branch, ensuring consistency in test management. It includes commands for Playwright with TypeScript, token management, and auto-committing changes to test IDs.
 type: article
 url: https://docs.testomat.io/workflows/import/
