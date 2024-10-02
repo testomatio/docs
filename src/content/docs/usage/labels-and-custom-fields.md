@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/216260430-126dd8e8-63a3-4b25-b3c5-c031b445ba5b.jpg
+      content: https://docs.testomat.io/_astro/216135753-4033ed5d-4344-4d28-bc74-9b2446ac3b07.DZ17yVlm_Z1QLJs2.webp
       
   - tag: meta
     attrs:

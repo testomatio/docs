@@ -1,5 +1,5 @@
 ---
-title: Workflows
+title: CI Workflows
 description: This guide covers various Continuous Integration (CI) workflows using Testomat.io Reporter, including configurations for GitHub Actions, Azure Pipelines, and testing frameworks like CodeceptJS, Cypress, Playwright, MiniTest, and PHPUnit. It details how to execute tests, report results, and send data to Testomat.io during different stages of CI pipelines.
 type: article
 url: https://docs.testomat.io/reference/reporter/workflows/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: https://docs.testomat.io/logo.svg
+      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
       
   - tag: meta
     attrs:

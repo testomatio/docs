@@ -1,5 +1,5 @@
 ---
-title: Steps Database
+title: Utilizing the Steps Database for Efficient Testing
 description: Learn how to utilize the Steps Database in Testomat.io to store, reuse, and auto-complete test steps across projects. This guide covers creating, editing, renaming steps, and using snippets for efficient test writing. Save time and maintain consistency by leveraging the Steps Database during test creation, including both classical and BDD-style tests.
 type: article
 url: https://docs.testomat.io/usage/steps-database/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/New_oVmHkZJz_2024-08-18.png
+      content: https://docs.testomat.io/_astro/New_oVmHkZJz_2024-08-18.ejJvt3aQ_16wl18.webp
       
   - tag: meta
     attrs:

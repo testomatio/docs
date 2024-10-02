@@ -1,5 +1,5 @@
 ---
-title: Pulse
+title: Tracking Changes in Project with Pulse
 description: Pulse in Testomat.io tracks all changes to test cases and test suites, providing transparency and control over project modifications. It monitors creation details, updates, and offers a history of changes. With its recovery feature, deleted items can be easily restored. The Bulk Restore option allows users to recover multiple deleted tests and suites simultaneously.
 type: article
 url: https://docs.testomat.io/usage/pulse/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: https://docs.testomat.io/logo.svg
+      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
       
   - tag: meta
     attrs:

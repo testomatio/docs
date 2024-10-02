@@ -1,5 +1,5 @@
 ---
-title: Test Design
+title: Creating Effective Test Designs
 description: Learn how to create effective test designs with Testomat.io. This guide covers building test scenarios, using various test design techniques, and integrating them into your project workflow for improved test case management and automated test runs.
 type: article
 url: https://docs.testomat.io/getting-started/test-design/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/class_editor.png
+      content: https://docs.testomat.io/_astro/class_editor.DFw30t7Y_1wUwhr.webp
       
   - tag: meta
     attrs:

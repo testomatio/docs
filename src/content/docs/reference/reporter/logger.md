@@ -1,5 +1,5 @@
 ---
-title: Logger
+title: Using Logger to Enhance Test Reports
 description: Learn how to use Testomat.io’s Logger to intercept and attach log messages from various logging frameworks (e.g., Winston, Pino) to your test reports. The Logger offers convenient syntax for logging, customizes output formats, and supports popular frameworks like Playwright, Jest, and Mocha.
 type: article
 url: https://docs.testomat.io/reference/reporter/logger/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: https://docs.testomat.io/logo.svg
+      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
       
   - tag: meta
     attrs:

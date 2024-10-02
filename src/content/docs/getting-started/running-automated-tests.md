@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/New_fE0hyJn9_2024-07-30.png
+      content: https://docs.testomat.io/_astro/image-7.BWXewamn_Z27T85y.webp
       
   - tag: meta
     attrs:

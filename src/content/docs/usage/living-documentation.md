@@ -1,5 +1,5 @@
 ---
-title: Living Documentation
+title: Enabling Living Documentation
 description: Learn how to enable and embed Living Documentation in Testomat.io, a dynamic and real-time document generation tool for test projects. This guide covers embedding specific test suites, tests, or tests tagged with Jira IDs into websites or Confluence using iframes, offering enhanced visibility and collaboration for testing efforts.
 type: article
 url: https://docs.testomat.io/usage/living-documentation/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/126028734-59df8280-2224-405f-960c-6a5de4a4b7d9.png
+      content: https://docs.testomat.io/_astro/126028734-59df8280-2224-405f-960c-6a5de4a4b7d9.BNrl6wUZ_ZmAFLw.webp
       
   - tag: meta
     attrs:

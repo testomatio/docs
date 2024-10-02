@@ -1,5 +1,5 @@
 ---
-title: Contact Us
+title: Contact for Support, Pricing, and Demos
 description: Get in touch with Testomat.io for questions on product features, user flows, subscriptions, and pricing. Reach their team via Slack, Crisp chat, or email for general queries or technical support. You can also request demos, raise issues on GitHub, and request new features.
 type: article
 url: https://docs.testomat.io/contact-us/contact-us/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: https://docs.testomat.io/logo.svg
+      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
       
   - tag: meta
     attrs:

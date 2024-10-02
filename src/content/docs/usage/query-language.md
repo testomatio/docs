@@ -1,5 +1,5 @@
 ---
-title: Query Language
+title: Filtering Test Data with Testomat.io Query Language
 description: Explore how to filter and retrieve test data using Testomat.io Query Language (TQL). This guide explains the use of basic selection operators like and, or, not, and introduces variables such as tags, labels, priorities, and dates. Learn how to write complex queries to efficiently manage test suites and filter tests based on various criteria, enhancing test tracking and organization.
 type: article
 url: https://docs.testomat.io/usage/query-language/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/image-10.png
+      content: https://docs.testomat.io/_astro/image-10.CseiEB5H_m3LwE.webp
       
   - tag: meta
     attrs:

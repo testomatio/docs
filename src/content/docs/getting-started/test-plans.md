@@ -1,5 +1,5 @@
 ---
-title: Test Plans
+title: Creating and Managing Test Plans
 description: Explore how to create and manage test plans in Testomat.io. This guide covers manual, automated, and mixed test plans, detailing how to organize test cases, run tests on CI, and combine manual and automated test reports. Learn how to configure Continuous Integration and use filters for efficient test management.
 type: article
 url: https://docs.testomat.io/getting-started/test-plans/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/New_BVGb17Wo_2024-09-10.png
+      content: https://docs.testomat.io/_astro/New_BVGb17Wo_2024-09-10.Csen7x4B_Z3UAOR.webp
       
   - tag: meta
     attrs:

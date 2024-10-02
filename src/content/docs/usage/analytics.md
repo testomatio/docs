@@ -1,5 +1,5 @@
 ---
-title: Analytics
+title: Monitoring Testing Performance with Analytics
 description: Explore Testomat.io's Analytics feature to monitor testing performance. This guide explains how to track automated and manual tests, customize analytics views with charts, and analyze test metrics through timelines. It covers important dashboards like automation coverage, failure board, slowest and flaky tests, and more. Optimize your test strategy with insights into test statuses, failures, and trends.
 type: article
 url: https://docs.testomat.io/usage/analytics/
@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: ./images/Analytics.png
+      content: https://docs.testomat.io/_astro/Analytics.WCbjldw3_1LVNGK.webp
       
   - tag: meta
     attrs:
