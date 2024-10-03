@@ -2,6 +2,18 @@
 import type { Props } from '@astrojs/starlight/props';
 import StarlightHead from '@astrojs/starlight/components/Head.astro';
 import VtbotStarlight from 'astro-vtbot/components/starlight/Base.astro';
+import type { TechArticle, WithContext } from "schema-dts";
+
+const { title, description } = Astro.props.entry.data;
+
+const techArticleSchema: WithContext<TechArticle> = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description: description,
+    url: Astro.url.href,
+};
+
 ---
 
 <VtbotStarlight {...Astro.props}>
@@ -16,4 +28,9 @@ import VtbotStarlight from 'astro-vtbot/components/starlight/Base.astro';
                 e.newDocument.head.appendChild(el.cloneNode(true));
             });
     });
+</script>
+
+<script
+        type="application/ld+json"
+        set:html={JSON.stringify(techArticleSchema)}>
 </script>
