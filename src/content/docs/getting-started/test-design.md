@@ -361,6 +361,12 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 
 ![Testomat.io - URL/ID Copy](./images/New_1pgghaYx_2024-08-08.png)
 
+## **How To Use ID In Tests**
+
+Another useful feature is links to other tests, suites, and folders within your tests. All you need to do is copy their ID and paste it into the Test Editor.
+
+![Testomat.io - Use ID In Tests](./images/New_0ldrsL29_2024-10-05.gif)
+
 ## **How To Add An Attachment To A Test**
 
 First of all, you need to open the test that you want to add the attachment to. 
