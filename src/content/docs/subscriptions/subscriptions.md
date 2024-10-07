@@ -1,5 +1,5 @@
 ---
-title: Subscription Plans and Management
+title: Subscriptions
 description: Explore the subscription options in Testomat.io, including Free, Professional, and Enterprise plans. This guide outlines how to manage subscriptions, upgrade or downgrade plans, handle billing, and manage team members. It also covers what happens to locked projects after cancellation and details about subscription renewal and cancellation.
 type: article
 url: https://docs.testomat.io/subscriptions/subscriptions/

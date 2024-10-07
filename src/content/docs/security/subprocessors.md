@@ -1,5 +1,5 @@
 ---
-title: Subprocessors and Security
+title: Subprocessors
 description: Testomat.io uses subprocessors like DigitalOcean for cloud infrastructure, along with other service providers for customer support, payment processing, and email management. Each subprocessor is vetted for security and privacy before being integrated. Key subprocessors include Crisp, GitHub, Stripe, and Sendgrid, which help in various operational areas such as support, issue management, and payments.
 type: article
 url: https://docs.testomat.io/security/subprocessors/

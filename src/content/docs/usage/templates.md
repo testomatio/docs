@@ -1,5 +1,5 @@
 ---
-title: Creating and Managing Templates
+title: Templates
 description: Learn how to create, edit, and apply templates in Testomat.io to standardize your testing and defect reporting workflows. This guide covers template management, configuration, assigning labels, and best practices for optimizing test and suite creation. Streamline processes with default templates and improve efficiency in defect management using pre-configured templates for Jira, GitHub, and other platforms.
 type: article
 url: https://docs.testomat.io/usage/templates/

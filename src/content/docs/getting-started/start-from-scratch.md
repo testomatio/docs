@@ -1,5 +1,5 @@
 ---
-title: Start Test Projects from Scratch
+title: Start From Scratch
 description: Learn how to start from scratch with Testomat.io. Create a new project, write your first test cases, and run manual tests with detailed reporting features.
 type: article
 url: https://docs.testomat.io/getting-started/start-from-scratch/

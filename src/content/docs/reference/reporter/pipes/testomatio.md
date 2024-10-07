@@ -1,5 +1,5 @@
 ---
-title: Advanced Reporting Configurations
+title: Advanced Options
 description: Learn how to use the Testomat.io Pipe for advanced reporting configurations in test automation. The guide covers setting environment variables, adding reports to test runs, managing parallel executions, filtering tests, and integrating with JIRA for issue tracking.
 type: article
 url: https://docs.testomat.io/reference/reporter/pipes/testomatio/
