@@ -1,5 +1,5 @@
 ---
-title: Automating PR results with GitHub Pipe
+title: Github
 description: The GitHub Pipe feature in Testomat.io enables automated comments on pull requests, summarizing test results with key metrics like passed/failed/skipped tests, stack traces, and slowest tests. It integrates through the GH_PAT environment variable, with options to keep previous reports using GH_KEEP_OUTDATED_REPORTS. This enhances CI workflows by providing detailed feedback directly in GitHub.
 type: article
 url: https://docs.testomat.io/reference/reporter/pipes/github/

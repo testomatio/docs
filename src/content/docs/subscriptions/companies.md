@@ -1,5 +1,5 @@
 ---
-title: Managing Teams and Subscriptions
+title: Companies
 description: Explore how Testomat.io simplifies managing teams and subscriptions with the Companies feature. This guide explains how to invite and manage users, assign roles (like Owner, Manager, Developer, and Read-Only), and create or assign teams to projects. It also covers managing billing users, archiving projects, and maintaining efficient team workflows.
 type: article
 url: https://docs.testomat.io/subscriptions/companies/
