@@ -81,6 +81,7 @@ export default defineConfig({
 						{ label: 'Running Automated Tests', link: '/getting-started/running-automated-tests'},
 						{ label: 'Test Plans', link: '/getting-started/test-plans'},
 						{ label: 'Managing Runs', link: '/getting-started/managing-runs'},
+						{ label: 'Project', link: '/getting-started/project'},
 					],
 				},
 				{
