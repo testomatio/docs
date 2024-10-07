@@ -30,4 +30,4 @@ To do this, follow these steps:
 4. Select the required time in the **Timezone** field
 5. Click the **Update** button to save changes
 
-![Testomatio.io - Project Timezone](./images/New_AeE0lcpF_2024-10-05.png)
+![Testomatio.io - Project Timezone](./images/New_0oOC4blY_2024-10-07.png)
