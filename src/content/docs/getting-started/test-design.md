@@ -361,6 +361,14 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 
 ![Testomat.io - URL/ID Copy](./images/New_1pgghaYx_2024-08-08.png)
 
+## **Cross-Linking Tests, Suites and Folders**
+
+Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window. 
+
+All you need to do is copy their IDs and paste it into a test/suite description:
+
+![Testomat.io - Use ID In Tests](./images/New_0ldrsL29_2024-10-05.gif)
+
 ## **How To Add An Attachment To A Test**
 
 First of all, you need to open the test that you want to add the attachment to. 
