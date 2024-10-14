@@ -123,14 +123,14 @@ This tool enables teams to manage the testing process more efficiently, quickly 
 
 Another big plus is the detailed statistics for a particular label. Click on the label to open another window with options.
 
-You will see all tests with this label. You can also search (2) for specific tests or filter (1) by Tags, Priority and Jira Issues.
+You will see all tests with this label. You can also filter **(2)** by Tags, Priority and Jira Issues or search **(3)** for specific tests.
 
-Additionally, there is a special option to display tests:
+Additionally, there is a special option **(1)** to display tests:
 
 * **By Tests** - shows all tests created in the project with this label.
 * **By Runs** - only shows tests that have a run result.
 
-![Testomat.io - Detailed label information](./images/New_RLoTfA5h_2024-10-01.png)
+![Testomat.io - Detailed label information](./images/New_BXpy3mr7_2024-10-14.png)
 
 ## Analytics In Run Reports
 
