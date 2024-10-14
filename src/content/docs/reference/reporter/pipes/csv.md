@@ -1,5 +1,5 @@
 ---
-title: Exporting Test Results as CSV
+title: CSV
 description: The CSV Pipe in Testomat.io allows you to export test results as a CSV file by setting the TESTOMATIO_CSV_FILENAME environment variable. This functionality integrates with CI workflows to generate reports in a simple, readable format, enabling easy sharing and analysis of test results across teams.
 type: article
 url: https://docs.testomat.io/reference/reporter/pipes/csv/

@@ -1,5 +1,5 @@
 ---
-title: Free 30-Day Trial and Extended Access
+title: Trials
 description: Testomat.io offers a Free 30-Day Trial and an additional 14-Day Trial for users to explore all features, including test automation, Jira integration, and notifications. Both trials allow unlimited users and projects, with full access to tools like branching, public reports, and rerun options. The 14-day extension is available after the initial trial period if more time is needed to evaluate the platform.
 type: article
 url: https://docs.testomat.io/subscriptions/trials/

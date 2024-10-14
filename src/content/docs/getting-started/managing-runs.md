@@ -1,5 +1,5 @@
 ---
-title: Effective Test Run Management Guide
+title: Managing Runs
 description: Learn how to manage test runs effectively in Testomat.io. This guide covers generating detailed run reports, grouping test runs, applying merge strategies, relaunching runs, copying run groups, and filtering results. It also explains multi-selection options for archiving, merging, and downloading reports for efficient test tracking and management.
 type: article
 url: https://docs.testomat.io/getting-started/managing-runs/
@@ -266,9 +266,13 @@ Also this option is applicable for Run Groups. 1. Open Run group 2. Click Combin
 
 ![Combined Report](./images/31.png)
 
+## Share Runs Filter
 
+This feature allows to pass **Runs** and **Runs Archive** filter parameters directly through the URL. This is useful for improving collaboration, as it allows teams to quickly access relevant test results without manually adjusting filters.
 
+Specify the necessary filtering parameters on the **Runs** or **Runs Archive** page, copy the URL and share it with interested members.
 
+![Testomatio.io - Share Runs Filter](./images/New_FRXL06AF_2024-10-08.png)
 
 
 

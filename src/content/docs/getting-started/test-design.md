@@ -1,5 +1,5 @@
 ---
-title: Creating Effective Test Designs
+title: Test Design
 description: Learn how to create effective test designs with Testomat.io. This guide covers building test scenarios, using various test design techniques, and integrating them into your project workflow for improved test case management and automated test runs.
 type: article
 url: https://docs.testomat.io/getting-started/test-design/
@@ -360,6 +360,14 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 4. Now, every time you click on the ID, the selected format will be copied to clipboard without any further actions.
 
 ![Testomat.io - URL/ID Copy](./images/New_1pgghaYx_2024-08-08.png)
+
+## **Cross-Linking Tests, Suites and Folders**
+
+Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window. 
+
+All you need to do is copy their IDs and paste it into a test/suite description:
+
+![Testomat.io - Use ID In Tests](./images/New_0ldrsL29_2024-10-05.gif)
 
 ## Add Attachments to Test
 
