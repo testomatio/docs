@@ -127,6 +127,33 @@ Ever Failing Tests is another useful Analytics widget that will show you automat
 
 ![Testomat.io - Ever Failing Tests](./images/147574334-3a076e17-9a8e-437b-8a8c-9d1833a29c28.gif)
 
+## Labels Statistics
+
+Labels Statistics is a feature that allows users to visualize test coverage by labels on an interactive chart. It provides an efficient way to analyze and track the status of testing with the following capabilities:
+
+* **Label coverage visualization:** you can view information about which tests need to be reviewed, which can be automated, and what impact they have on the system. You can set up your own labels or use the ready-made ones offered by Testomat.io. To learn how to add labels to the project, visit a [dedicated page](https://docs.testomat.io/usage/labels-and-custom-fields/#_top).
+
+* **Test filtering (1) and search (2):** for convenience, there is  filtering by Environments, Tags, Labels, Jira issues, Date Range, Priority, as well as search options to quickly find tests by name or other criteria, making it easier to locate specific tests.
+
+* **Chart download (3):** the feature allows to export the chart in multiple formats such as PNG, SVG, or CSV, facilitating further analysis or sharing with team members.
+
+* **Automation coverage analysis:** you can evaluate the level of test automation, helping to identify which parts of the testing process are already automated and where additional efforts are needed.
+
+This tool enables teams to manage the testing process more efficiently, quickly identify issues, and optimize automation efforts.
+
+![Testomat.io - Labels Statistics](./images/New_m3fhfYsx_2024-10-01.png)
+
+Another big plus is the detailed statistics for a particular label. Click on the label to open another window with options.
+
+You will see all tests with this label. You can also filter **(2)** by Tags, Priority and Jira Issues or search **(3)** for specific tests.
+
+Additionally, there is a special option **(1)** to display tests:
+
+* **By Tests** - shows all tests created in the project with this label.
+* **By Runs** - only shows tests that have a run result.
+
+![Testomat.io - Detailed label information](./images/New_BXpy3mr7_2024-10-14.png)
+
 ## Analytics In Run Reports
 
 We empowered Testomat.io Run Reports with Overview chart, Flaky and Slowests tests widgets, so you receive more essential information in one place at one time.
