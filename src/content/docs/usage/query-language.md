@@ -81,7 +81,15 @@ tag = 'A' <- won't work !!!!
 
 tag == 'A' <- will work
 ```
+### Multiple values
 
+It may be necessary to find multiple values associated with a single variable. Fortunately, TQL provides a straightforward solution. The following syntax can be used to achieve this:
+
+```
+jira in ['LMP-100', 'LMP-104', 'LMP-144', 'LMP-214', 'LMP-219']
+```
+
+![Testomat.io - TQL Multiple values](./images/New_mYtOus61_2024-10-14.png)
 
 ## Variables
 
