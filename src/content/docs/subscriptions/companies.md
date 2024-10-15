@@ -82,6 +82,22 @@ So you can reactivate them at any time by clicking on the reactivate button
 
 ![image](./images/139680468-0034fc14-bd2c-4cf2-b282-684814a4eabc.png)
 
+## Export Users List
+
+You may need to get data about users who are members of your company. Fortunately, Testomat.io makes it easy and convenient:
+
+![Testomat.io - Export Users List](./images/New_Hj9V2azU_2024-10-15.png)
+
+The exported .csv file contains the following information about the company's users:
+
+1. Name	
+2. Email	
+3. Role	
+4. Status	
+5. Paused At (UTC)	
+6. Last Login (UTC)
+
+![Testomat.io - Exported File](./images/New_VrXg7eLa_2024-10-15.png)
 
 ## Teams 
 
