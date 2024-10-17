@@ -91,7 +91,7 @@ jira in ['LMP-100', 'LMP-104', 'LMP-144', 'LMP-214', 'LMP-219']
 
 ![Testomat.io - TQL Multiple values](./images/New_mYtOus61_2024-10-14.png)
 
-## Variables
+## Tests Variables
 
 In previous section we used `tag` in the query. `tag` is an allowed query variable. Here is a comprehenisve list of variables you can use in the query:
 
@@ -127,6 +127,48 @@ In previous section we used `tag` in the query. `tag` is an allowed query variab
 | test         | Match tests by title or ID                  | `test % 'User login'`               |
 |              |                                            | `test == '{TEST_ID}'`               |
 
+## Runs Variables
+Testomat.io has implemented a Query Language for Runs to make the search more flexible. You are already familiar with some of the variables from the previous section, but more new features have been implemented for Runs, which gives you new opportunities.
+
+Before diving into the details of variables, it's important to understand that variables starting with `has_` are used to filter **test runs** by whether they match certain **test criteria**. Specifically:
+
+* `has_test`: This variable allows you to filter runs based on whether they contain specific tests, which are identified by their title or ID. In other words, you can use `has_test` to find test runs that include tests that match a given name or ID.
+
+| Variable          | Description                                            | Example                                           |
+|-------------------|--------------------------------------------------------|---------------------------------------------------|
+| title             | Match runs by title                                    | `title == 'Run title'`                            |
+| plan              | Match runs by plan                                     | `plan == '{PLAN_ID}'`                             |
+| env               | Match runs by environment                              | `env == 'Production'`                             |
+| tag               | Match runs by tag                                      | `tag == 'slow'`                                   |
+| label             | Match runs by label or custom field                    | `label IN ['Severity:🔥Critical', 'Automatable']` |
+| jira              | Match runs by jira_id or Jira issue key                | `jira == 'JST-1'`                                 |
+| duration          | Match runs by duration in seconds                      | `duration < 1000`                                 |
+| passed_count      | Match runs by number of passed tests                   | `passed_count > 100`                              |
+| failed_count      | Match runs by number of failed tests                   | `failed_count < 10`                               |
+| skipped_count     | Match runs by number of skipped tests                  | `skipped_count < 10`                              |
+| automated         | Match runs by automated                                | `automated`                                       |
+| manual            | Match runs by manual                                   | `manual`                                          |
+| mixed             | Match runs by mixed                                    | `mixed`                                           |
+| finished          | Match runs by finished                                 | `finished`                                        |
+| unfinished        | Match runs by unfinished                               | `unfinished`                                      |
+| passed            | Match runs by passed status                            | `passed`                                          |
+| failed            | Match runs by failed status                            | `failed`                                          |
+| terminated        | Match runs by terminated                               | `terminated`                                      |
+| published         | Match runs by published                                | `published`                                       |
+| private           | Match runs by private                                  | `private`                                         |
+| archived          | Match runs by archived                                 | `archived`                                        |
+| unarchived        | Match runs by unarchived                               | `unarchived`                                      |
+| has_test          | Match runs containing tests by their title or ID       | `has_test == '{TEST_ID}'`                         |
+| has_test_tag      | Match runs containing tests with specific tags         | `has_test_tag == 'regression'`                    |
+| has_test_label    | Match runs containing tests with specific labels       | `has_test_label == 'Automatable'`                 |
+| has_suite         | Match runs containing suites by their title or ID      | `has_suite % 'Users'`                             |
+| has_message       | Match runs containing tests with messages              | `has_message == "Result message"`                 |
+| has_assigned_to   | Match runs containing tests assigned to specific users | `has_assigned_to IN ['John Doe', 'Jane Smith']`   |
+| has_retries       | Match runs containing tests with retries               | `has_retries > 2`                                 |
+| has_test_duration | Match runs containing tests with specific durations    | `has_test_duration <= 1.minute`                   |
+| created_at        | Match runs by creation time                            | `created_at <= 1.week_ago`                        |
+| updated_at        | Match runs by last update                              | `updated_at >= 5.days_ago`                        |
+| finished_at       | Match runs by finish time                              | `finished_at < 7.days_ago`                        |
 
 ## Filter By Priority
 
