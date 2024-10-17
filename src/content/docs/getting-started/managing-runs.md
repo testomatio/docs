@@ -228,6 +228,16 @@ Testomat provides filtering capabilities for Runs and Run Groups. On the Runs pa
 
 ![Run Filters](./images/27.png)
 
+## Filter Runs by TQL
+
+Testomat.io Query Language for Runs enables more flexible searches, allowing users to filter Test Runs by criteria like `finished_at`, `passed_count`, `has_test_label` and many others. This helps quickly find relevant runs and improves test analysis.
+
+![Testomatio.io - Filter Test Runs by Query Language](./images/New_wcpBcPsg_2024-10-17.png)
+
+If you would like to find out more about the [Runs Variables](https://docs.testomat.io/usage/query-language/#runs-variables), please visit a separate section of the documentation.
+
+![Testomatio.io - Query Language Variables](./images/New_8X0J8uAJ_2024-10-17.png)
+
 ## Multiselection For Runs
 
 Multiselection allows the bulk application options to many runs with one click. Here is overview:

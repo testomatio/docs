@@ -83,7 +83,7 @@ tag == 'A' <- will work
 ```
 
 
-## Variables
+## Tests Variables
 
 In previous section we used `tag` in the query. `tag` is an allowed query variable. Here is a comprehenisve list of variables you can use in the query:
 
@@ -145,7 +145,6 @@ Before diving into the details of variables, it's important to understand that v
 | unfinished        | Match runs by unfinished                               | `unfinished`                                      |
 | passed            | Match runs by passed status                            | `passed`                                          |
 | failed            | Match runs by failed status                            | `failed`                                          |
-| running           | Match runs by running                                  | `running`                                         |
 | terminated        | Match runs by terminated                               | `terminated`                                      |
 | published         | Match runs by published                                | `published`                                       |
 | private           | Match runs by private                                  | `private`                                         |
