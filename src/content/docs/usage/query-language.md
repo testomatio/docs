@@ -8,7 +8,7 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/image-10.CseiEB5H_m3LwE.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
@@ -17,7 +17,7 @@ head:
 
 TQL or **Testomat.io Query Language** is a flexible way to filter tests data inside Testomat.io. Query Language provides basic selection operators like **and**, **or** and **not** and braces to prioritize selection.
 
-## Writing Queries 
+## Writing Queries
 
 To access Query Language Editor click on the button right to search field on Tests screen:
 
@@ -127,7 +127,24 @@ In previous section we used `tag` in the query. `tag` is an allowed query variab
 | test         | Match tests by title or ID                  | `test % 'User login'`               |
 |              |                                            | `test == '{TEST_ID}'`               |
 
+#### Examples
+
+```ruby
+# list tests linked to specific jira issues
+jira in ['JST-1', 'JST-2', 'JST-3']
+
+# failed tests with either smoke or stage1 tag
+tag in ['smoke', 'stage1'] and status == 'failed'
+
+# list important and automatable tests by label
+label == 'Automatable' and priority > 'normal'
+
+# list recently created tests
+created_at < 1.month_ago
+```
+
 ## Runs Variables
+
 Testomat.io has implemented a Query Language for Runs to make the search more flexible. You are already familiar with some of the variables from the previous section, but more new features have been implemented for Runs, which gives you new opportunities.
 
 Before diving into the details of variables, it's important to understand that variables starting with `has_` are used to filter **test runs** by whether they match certain **test criteria**. Specifically:
@@ -137,8 +154,11 @@ Before diving into the details of variables, it's important to understand that v
 | Variable          | Description                                            | Example                                           |
 |-------------------|--------------------------------------------------------|---------------------------------------------------|
 | title             | Match runs by title                                    | `title == 'Run title'`                            |
+|                   |                                                        | `title % 'Manual tests'`                          |
 | plan              | Match runs by plan                                     | `plan == '{PLAN_ID}'`                             |
+|                   |                                                        | `plan % 'Smoke tests'`                            |
 | env               | Match runs by environment                              | `env == 'Production'`                             |
+|                   |                                                        | `env in ['Windows', 'Linux']`                          |
 | tag               | Match runs by tag                                      | `tag == 'slow'`                                   |
 | label             | Match runs by label or custom field                    | `label IN ['Severity:🔥Critical', 'Automatable']` |
 | jira              | Match runs by jira_id or Jira issue key                | `jira == 'JST-1'`                                 |
@@ -158,7 +178,9 @@ Before diving into the details of variables, it's important to understand that v
 | private           | Match runs by private                                  | `private`                                         |
 | archived          | Match runs by archived                                 | `archived`                                        |
 | unarchived        | Match runs by unarchived                               | `unarchived`                                      |
+| with_defect       | Match runs that have linked defects                    | `with_defect`                                     |
 | has_test          | Match runs containing tests by their title or ID       | `has_test == '{TEST_ID}'`                         |
+|                   |                                                        | `has_test % 'Important test'`                     |
 | has_test_tag      | Match runs containing tests with specific tags         | `has_test_tag == 'regression'`                    |
 | has_test_label    | Match runs containing tests with specific labels       | `has_test_label == 'Automatable'`                 |
 | has_suite         | Match runs containing suites by their title or ID      | `has_suite % 'Users'`                             |
@@ -169,6 +191,34 @@ Before diving into the details of variables, it's important to understand that v
 | created_at        | Match runs by creation time                            | `created_at <= 1.week_ago`                        |
 | updated_at        | Match runs by last update                              | `updated_at >= 5.days_ago`                        |
 | finished_at       | Match runs by finish time                              | `finished_at < 7.days_ago`                        |
+
+#### Examples
+
+```ruby
+# match failed runs with all User tests
+failed and has_test % 'User'
+
+# match runs with tests from Smoke Tests plan
+finished and plan % 'Smoke Tests'
+
+# match runs with tests with @regression tag
+failed and has_test_tag == 'regression'
+
+# list all runs with tests that have tests as flaky
+finished and finished_at < 1.week_ago and has_test_label == 'Flaky'
+
+# list all runs with tests that have connection errors
+failed and has_message % 'Connection Error'
+
+# list all runs with tests that have retries
+finished and has_retries > 2
+
+# list all runs that contain Jira Issues or Issues linked to tests results
+finished and with_defect
+
+# automated tests executed in pruection and had Server error in messages
+automated and env == 'Production' and has_message % 'Server Error'
+```
 
 ## Filter By Priority
 
@@ -183,7 +233,11 @@ priority > 'normal'
 To match test by its title or its suite title a special operator `%` was introduced. This allows to match all tests containing a text inside its title. For instance, this query will match all tests with word `User` in their title:
 
 ```ruby
+# when searching for tests
 test % 'User'
+
+# when searching for runs containing test
+has_test % 'User'
 ```
 
 Searched text should be longer than 4 chars.
@@ -192,7 +246,11 @@ This also works for suites, so you can select all tests from a suite containing 
 
 
 ```ruby
+# when searching for tests from a suite
 suite % 'User'
+
+# when searching for runs containing tests from a suite
+has_suite % 'User'
 ```
 
 However, if there are multiple suites with word User in their title, **only the first suite will be selected**.
@@ -204,7 +262,7 @@ When you deal with date variables like `created_at`, `run_at`, and others you ca
 
 Examples:
 
-```ruby 
+```ruby
 1.day_ago
 3.days_ago
 
@@ -228,18 +286,15 @@ To list all tests created for the previous week use `1.week_ago` with `>` operat
 created_at > 1.week_ago
 ```
 
-To list all tests that were executed more than 1 month ago use `1.month_ago` with `<` operator:
-
-```ruby
-run_at < 1.month_ago
-```
 
 ## Users
 
 Variables like `assigned_to` or `created_by` require user names to be passed as value. For instance, this will select all tests created by John Snow.
 
-```
+```ruby
 created_by == 'John Snow'
+
+created_by IN ['John Snow', 'John Doe']
 ```
 
 Filtering always happens by user name, not by email or user ID. Also, user should exist inside the project.
