@@ -92,5 +92,9 @@ Please check https://docs.testomat.io/security/subprocessors for more details ab
 #### 9. **Does all data have to be encrypted?**
 No, GDPR asks companies to protect data properly, but it doesn’t say exactly how, like saying it has to be encrypted.
 
+#### 10. **Does your app have any compliance certifications?**
+Our application has completed the CAIQ Lite Questionnaire, which provides comprehensive answers covering all compliance and security levels. We strictly adhere to all CAIQ points, ensuring that our security practices align with industry standards and best practices for safeguarding user data. We are committed to maintaining full compliance in areas such as data protection, risk management, and access control. We provide our CAIQ Lite Questionnaire responses upon request via email. [Contact](/contact-us/contact-us) our support team, and we will be happy to assist you.
+
+
 ### Note:
 This is just to help you understand and isn’t legal advice. If you need legal advice about GDPR, please talk to a lawyer.

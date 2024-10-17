@@ -63,5 +63,9 @@ For details on how to use Testomat.io JIRA Plugin, please refer to [JIRA guide](
 #### How can we be confident in the security and privacy of the JIRA Plugin app?
 **A:** We understand the concerns regarding security and privacy. Testomat.io is committed to maintaining the highest standards of security and data protection. Testomat.io only accesses data essential for its functionality and does not perform any operations that would compromise the integrity of your Jira issues. If you have specific concerns or need more information, please feel free to [Contact](/contact-us/contact-us) our support team, and we will be happy to assist you.
 
+#### Does your app have any compliance certifications?
+Our application has completed the CAIQ Lite Questionnaire, which provides comprehensive answers covering all compliance and security levels. We strictly adhere to all CAIQ points, ensuring that our security practices align with industry standards and best practices for safeguarding user data. We are committed to maintaining full compliance in areas such as data protection, risk management, and access control. We provide our CAIQ Lite Questionnaire responses upon request via email. [Contact](/contact-us/contact-us) our support team, and we will be happy to assist you.
+
+
 ## Additional Information
 For any concerns or additional information regarding the permissions and security of the Testomat.io JIRA plugin, please refer to our [Security Page](/security/overview) or [Contact](/contact-us/contact-us) support team.
