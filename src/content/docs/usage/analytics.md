@@ -85,7 +85,13 @@ Your team may require visualizing your current status on the project. This is im
 
 ![Testomat.io - Failures Board](./images/New_QIy3IApm_2024-08-18.gif)
 
-<!-- ## Issues -->
+## Issues Board 
+
+The Issue Board provides a comprehensive view of all tests, suites and runs associated with an issue. It displays a list of associated test cases and test suites, ensuring visibility of relevant automated or manual tests. This feature helps maintain traceability between issues and tests, making it easier to monitor coverage.
+
+Visit the [Issues Management Systems](https://docs.testomat.io/integration/issues-management-systems/#_top) page to find out which systems Testomat.io supports and how to connect.
+
+![Testomat.io - Issues Board](./images/New_dMX5JYvp_2024-10-23.gif)
 
 ## Flaky Tests
 
