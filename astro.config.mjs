@@ -156,4 +156,14 @@ export default defineConfig({
 	markdown: {
 		rehypePlugins: [[rehypeAstroRelativeMarkdownLinks, options]],
 	},
+	redirects: {
+		"/getting-started/test-plans": "/project/plans/test-plans",
+		"/getting-started/import-tests-from-cucumber": "/project/import-export/import-tests-from-cucumber",
+		"/getting-started/import-tests-from-source-code": "/project/import-export/import-tests-from-source-code",
+		"/getting-started/import-tests-from-csvxls": "/project/import-export/import-tests-from-csvxls",
+		"/getting-started/test-design": "/project/tests/test-design",
+		"/getting-started/running-tests-manually": "/project/runs/running-tests-manually",
+		"/getting-started/running-automated-tests": "/project/runs/running-automated-tests",
+		"/getting-started/managing-runs": "/project/runs/managing-runs",
+	},
 });
