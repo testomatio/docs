@@ -25,6 +25,7 @@ Testomat.io provides integration for Issues Management Systems:
 - [GitHub Issues](https://docs.testomat.io/integration/issues-management-systems/#github-issues-configuration)
 - [Azure DevOps](https://docs.testomat.io/integration/issues-management-systems/#azure-devops-configuration)
 - [Linear](https://docs.testomat.io/integration/issues-management-systems/#linear-configuration)
+- [ClickUp](https://docs.testomat.io/integration/issues-management-systems/#clickup-configuration)
 
 See how to connect your Issues Management System and how to link your tests to issues below.
 
@@ -145,5 +146,46 @@ Once your Issues Management System is configured you can link a test or create a
 Once your Issues Management System is configured you can link a test or create a defect. As a result, Testomat.io will create a ticket in your Linear Team with dedicated links and data, so you can easily look through the testing data you need. Here is an example:
 
 ![CleanShot 2023-02-24 at 11 08 22@2x](./images/221138224-d3d3a194-e9c0-487e-9169-06e0db427ea2.jpg)
+
+## ClickUp Configuration
+
+If you already have a workspace set up and configured in **ClickUp**, we can proceed with integrating it with Testomat.io. All you need is a **Personal Access Token** and a **List ID**. We’ll guide you step-by-step on how to retrieve this information and use it to connect with Testomat.io.
+
+![Testomat.io - ClickUp Workspace](./images/New_MMtFLigW_2024-10-30.png)
+
+1. Click on **Workspace name** in the top-left corner
+2. Then click on **Settings**
+
+![Testomat.io - ClickUp Settings](./images/New_yufZMdE0_2024-10-30.png)
+
+3. Go to **Apps**
+4. Click on **Generate** button to create **API Token**
+5. Copy your API Token
+
+![Testomat.io - ClickUp API Token](./images/New_3rJtUJBY_2024-10-30.png)
+
+Keep your API Token secure, as you’ll need it for the integration with Testomat.io.
+
+Next, we need to find the **List ID**. In ClickUp, the List ID is a unique identifier assigned to each list within a folder in a workspace. You can find the List ID **in the URL when viewing a specific list** on the ClickUp website.
+
+![Testomat.io - ClickUp List ID](./images/New_dpfy1Y03_2024-10-30.png)
+
+After collecting all necessary data, we can move on to Testomat.io. 
+
+1. Select ClickUp from the list of available Issue Management Systems.
+
+![Testomat.io - Connect to ClickUp](./images/New_MZKRZOnR_2024-10-30.png)
+
+2. Enter a **Profile Name**
+3. Paste ClickUp **API Token**
+4. Paste ClickUp **List ID**
+5. Click on **Save** button
+
+![Testomat.io - ClickUp Configuration](./images/New_fHP8LT7x_2024-10-30.png)
+
+If everything was done correctly, you will receive a confirmation message indicating that the ClickUp profile was successfully created.
+
+![Testomat.io - ClickUp Profile](./images/New_7pymFV99_2024-10-30.png)
+
 
 
