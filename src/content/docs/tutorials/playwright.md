@@ -81,8 +81,8 @@ Avoid string concatenation like `title + name`. Instead, use template literals f
 When importing tests, enable **Auto-assign Ids** (`--update-ids`) to track changes without duplicating tests when scaling your project. Without this, CI processes may not launch correctly.
 
 ```diff
-+ test('user should be fine @T12345678', () => {
 - test('user should be fine', () => {
++ test('user should be fine @T12345678', () => {
   expect(user).toBe('fine');
 });
 ```
