@@ -85,6 +85,17 @@ Also, the IDs are specified in your test in Testomat.io.
 
 ![Testomat.io - Auto-assign Ids in Tests](./images/New_JhM1Hqz3_2024-08-29.png)
 
+### Parameterised Tests
+
+To import parameterized tests into Testomat.io and display parameters in the test name, use template literals. This will allow you to dynamically insert variable values into the test name without using string concatenation with the `+` symbol.
+
+```javascript
+test(`Create user ${userName} @T12345678`, () => {
+  expect(user).toBe('fine');
+});
+```
+⚠️ Note: Avoid using concatenation like title + name. Instead, use template literals to create clear and informative test names that include variable values.
+
 ## Reporting Playwright tests
 
 Reports are crucial for understanding the results of automated tests and providing insights into the status and performance of your automation workflows. In Testomat.io, you'll be able to view Playwright reports, even the most intricate of these, such as Trace Viewer.
