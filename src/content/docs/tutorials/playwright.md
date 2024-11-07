@@ -139,7 +139,7 @@ Trace logs in Playwright capture a detailed sequence of browser events. Here’s
 To report parallel test executions to the same Testomat.io run, assign a shared title to all parallel runs and set the `TESTOMATIO_SHARED_RUN` environment variable.
 
 ```bash
-IO_TITLE="report for commit ${GIT_COMMIT}" TESTOMATIO_SHARED_RUN=1 <actual run command>
+TESTOMATIO_TITLE="report for commit ${GIT_COMMIT}" TESTOMATIO_SHARED_RUN=1 <actual run command>
 ```
 
 > **Tip**: Use a commit hash as the title for unique run identification across parallel jobs.
