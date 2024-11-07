@@ -1,5 +1,18 @@
 ---
 title: Issues Management Systems
+description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps, and Linear with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
+type: article
+url: https://docs.testomat.io/integration/issues-management-systems/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/221125834-31a351a7-48ee-472c-a8b2-1f2bfaaef39d.Cfh-wOie_Z1LVMN4.webp
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects
 ---
 
 Quality assurance is closely connected to Issue management, which means the process of identifying and addressing any problems that occur over the course of a project. This involves documenting the issues and resolving them through review and consideration of all relevant information. Testomat.io provides Issues Management Systems integration to meet this need and link your testing data to your Issue Management System.
@@ -12,6 +25,8 @@ Testomat.io provides integration for Issues Management Systems:
 - [GitHub Issues](https://docs.testomat.io/integration/issues-management-systems/#github-issues-configuration)
 - [Azure DevOps](https://docs.testomat.io/integration/issues-management-systems/#azure-devops-configuration)
 - [Linear](https://docs.testomat.io/integration/issues-management-systems/#linear-configuration)
+- [ClickUp](https://docs.testomat.io/integration/issues-management-systems/#clickup-configuration)
+- [YouTrack](https://docs.testomat.io/integration/issues-management-systems/#youtrack-configuration)
 
 See how to connect your Issues Management System and how to link your tests to issues below.
 
@@ -133,4 +148,99 @@ Once your Issues Management System is configured you can link a test or create a
 
 ![CleanShot 2023-02-24 at 11 08 22@2x](./images/221138224-d3d3a194-e9c0-487e-9169-06e0db427ea2.jpg)
 
+## ClickUp Configuration
+
+If you already have a workspace set up and configured in **ClickUp**, we can proceed with integrating it with Testomat.io. All you need is a **Personal Access Token** and a **List ID**. We’ll guide you step-by-step on how to retrieve this information and use it to connect with Testomat.io.
+
+![Testomat.io - ClickUp Workspace](./images/New_MMtFLigW_2024-10-30.png)
+
+1. Click on **Workspace name** in the top-left corner
+2. Then click on **Settings**
+
+![Testomat.io - ClickUp Settings](./images/New_yufZMdE0_2024-10-30.png)
+
+3. Go to **Apps**
+4. Click on **Generate** button to create **API Token**
+5. Copy your API Token
+
+![Testomat.io - ClickUp API Token](./images/New_3rJtUJBY_2024-10-30.png)
+
+Keep your API Token secure, as you’ll need it for the integration with Testomat.io.
+
+Next, we need to find the **List ID**. In ClickUp, the List ID is a unique identifier assigned to each list within a folder in a workspace. You can find the List ID **in the URL when viewing a specific list** on the ClickUp website.
+
+![Testomat.io - ClickUp List ID](./images/New_dpfy1Y03_2024-10-30.png)
+
+After collecting all necessary data, we can move on to Testomat.io. 
+
+1. Select ClickUp from the list of available Issue Management Systems.
+
+![Testomat.io - Connect to ClickUp](./images/New_MZKRZOnR_2024-10-30.png)
+
+2. Enter a **Profile Name**
+3. Paste ClickUp **API Token**
+4. Paste ClickUp **List ID**
+5. Click on **Save** button
+
+![Testomat.io - ClickUp Configuration](./images/New_fHP8LT7x_2024-10-30.png)
+
+If everything was done correctly, you will receive a confirmation message indicating that the ClickUp profile was successfully created.
+
+![Testomat.io - ClickUp Profile](./images/New_7pymFV99_2024-10-30.png)
+
+## YouTrack Configuration
+
+If you already have a workspace and project configured in **YouTrack**, you're ready to integrate it with Testomat.io. To get started, you’ll need your **Workspace Name**, **Personal Access Token**, and **Project ID**. We’ll walk you through each step to locate this information and connect it with Testomat.io.
+
+![Testomat.io - YouTrack Project](./images/New_US8feteR_2024-10-31.png)
+
+You can find your **Workspace Name** in the browser **URL** when you're logged into YouTrack. For example: `[my-workspace].youtrack.cloud`
+
+![Testomat.io - YouTrack Workspace Name](./images/New_kltLXnVA_2024-10-31.png)
+
+To locate the **Project ID**, follow these steps:
+
+1. Go to **Projects** in the header
+2. Click on your project
+
+![Testomat.io - YouTrack Project Info](./images/New_Yp7Na4z3_2024-10-31.png)
+
+3. Find your **Project ID** in the browser **URL**; For example: `0-1`
+
+![Testomat.io - YouTrack Project ID](./images/New_0t9JUaTD_2024-10-31.png)
+
+Finally, to create the **Personal Access Token**, follow these steps:
+
+1. Click on the profile avatar
+2. Go to **Profile**
+3. Then go to **Account Security**
+4. Click on **New token...** button
+
+![Testomat.io - YouTrack Create Token](./images/New_pCUPQyzz_2024-10-31.png)
+
+5. Enter a **Token** name
+6. Select services (YouTrack, YouTrack Administration)
+7. Click on **Create** button
+
+![Testomat.io - YouTrack Personal Access Token](./images/New_WzTEWxkc_2024-10-31.png)
+
+Once the token has been created, copy it. Keep your Personal Access Token secure, as you’ll need it for the integration with Testomat.io.
+
+After collecting all necessary data, we can move on to Testomat.io. 
+
+1. Select YouTrack from the list of available Issue Management Systems.
+
+![Testomat.io - Connect to YouTrack](./images/New_F8MYluVy_2024-10-31.png)
+
+2. Enter a **Profile Name**
+3. Paste YouTrack **Workspace name**
+4. Paste YouTrack **Personal Access Token**
+5. Paste YouTrack **Project ID**
+6. Click on **Save** button
+
+![Testomat.io - YouTrack Configuration](./images/New_UTbONHqM_2024-10-31.png)
+
+If everything was done correctly, you will receive a confirmation message indicating that the YouTrack profile was successfully created.
+
+![Testomat.io - YouTrack Profile](./images/New_K1fdAe5k_2024-10-31.png)
 

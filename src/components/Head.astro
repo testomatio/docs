@@ -2,6 +2,59 @@
 import type { Props } from '@astrojs/starlight/props';
 import StarlightHead from '@astrojs/starlight/components/Head.astro';
 import VtbotStarlight from 'astro-vtbot/components/starlight/Base.astro';
+import type {
+    Article,
+    Organization,
+    WebSite,
+    WithContext
+} from 'schema-dts'
+
+const { title, description } = Astro.props.entry.data;
+
+const website: WithContext<WebSite> = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    title,
+    description,
+    image: {
+        '@type': 'ImageObject',
+        url: 'https://docs.testomat.io/logo.svg'
+    },
+    inLanguage: Astro.props.lang,
+    name: Astro.props.siteTitle,
+    url: Astro.url.href,
+}
+
+const organization: WithContext<Organization> = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': Astro.props.id,
+    description,
+    image: {
+        '@type': 'ImageObject',
+        url: 'https://docs.testomat.io/logo.svg'
+    },
+    logo: {
+        '@type': 'ImageObject',
+        url: 'https://docs.testomat.io/logo.svg'
+    },
+    name: Astro.props.siteTitle,
+    url: Astro.url.href,
+}
+
+const article: WithContext<Article> = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    url: Astro.url,
+    image: {
+        '@type': 'ImageObject',
+        url: 'https://docs.testomat.io/logo.svg'
+    },
+    inLanguage: Astro.props.lang,
+}
+
 ---
 
 <VtbotStarlight {...Astro.props}>
@@ -17,3 +70,9 @@ import VtbotStarlight from 'astro-vtbot/components/starlight/Base.astro';
             });
     });
 </script>
+
+{
+    [website, organization, article].map((data) =>
+        <script is:inline set:html={JSON.stringify(data)} type='application/ld+json' />
+    )
+}

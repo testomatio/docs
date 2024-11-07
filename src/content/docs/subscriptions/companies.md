@@ -1,5 +1,18 @@
 ---
 title: Companies
+description: Explore how Testomat.io simplifies managing teams and subscriptions with the Companies feature. This guide explains how to invite and manage users, assign roles (like Owner, Manager, Developer, and Read-Only), and create or assign teams to projects. It also covers managing billing users, archiving projects, and maintaining efficient team workflows.
+type: article
+url: https://docs.testomat.io/subscriptions/companies/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/139676288-74ad80ee-6eb7-41c6-af59-fb7d5e115283.P9abRdTD_ZNRBUO.webp
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, companies, team management, roles, project access, billing users, subscription management, team workflows, project archive, QA tools
 ---
 
 Testomat.io Team implemented Companies feature to simplify work with your team and subscriptions.
@@ -69,6 +82,22 @@ So you can reactivate them at any time by clicking on the reactivate button
 
 ![image](./images/139680468-0034fc14-bd2c-4cf2-b282-684814a4eabc.png)
 
+## Export Users List
+
+You may need to get data about users who are members of your company. Fortunately, Testomat.io makes it easy and convenient:
+
+![Testomat.io - Export Users List](./images/New_Hj9V2azU_2024-10-15.png)
+
+The exported .csv file contains the following information about the company's users:
+
+1. Name	
+2. Email	
+3. Role	
+4. Status	
+5. Paused At (UTC)	
+6. Last Login (UTC)
+
+![Testomat.io - Exported File](./images/New_VrXg7eLa_2024-10-15.png)
 
 ## Teams 
 

@@ -1,9 +1,19 @@
 ---
 title: Notifications
+description: Learn how to configure and manage notifications in Testomat.io for various channels, including Email, Slack, MS Teams, and Jira. This guide covers setting up notification rules, both basic and advanced, and demonstrates how to send alerts based on specific test run conditions. Streamline communication with automatic notifications for failed tests, test completion, and other custom triggers.
+type: article
+url: https://docs.testomat.io/usage/notifications/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/114756835-d4a77700-9d63-11eb-994c-c49e6dd2b36d.DjOg-ijg_2iRmrc.webp
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, notifications, Email alerts, Slack notifications, MS Teams, Jira integration, notification rules, test runs, automated alerts, CI notifications, QA tools
 ---
-
-import { Aside } from '@astrojs/starlight/components';
-
 
 Testomat.io allows sending notifications for finished runs:
 - Send brief reports to stakeholders

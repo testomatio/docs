@@ -1,5 +1,18 @@
 ---
 title: Test Design
+description: Learn how to create effective test designs with Testomat.io. This guide covers building test scenarios, using various test design techniques, and integrating them into your project workflow for improved test case management and automated test runs.
+type: article
+url: https://docs.testomat.io/getting-started/test-design/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/class_editor.DFw30t7Y_1wUwhr.webp
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: test design, test cases, test management, test automation, testing techniques, Testomat.io, BDD, Gherkin, Cucumber, test scenarios, project workflow, software testing
 ---
 
 When a new project is created, there are multiple options to start:
@@ -348,7 +361,15 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 
 ![Testomat.io - URL/ID Copy](./images/New_1pgghaYx_2024-08-08.png)
 
-## **How To Add An Attachment To A Test**
+## **Cross-Linking Tests, Suites and Folders**
+
+Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window. 
+
+All you need to do is copy their IDs and paste it into a test/suite description:
+
+![Testomat.io - Use ID In Tests](./images/New_0ldrsL29_2024-10-05.gif)
+
+## Add Attachments to Test
 
 First of all, you need to open the test that you want to add the attachment to. 
 
@@ -362,13 +383,33 @@ Add your attachment via **Browse a file** or simply drag and drop it.
 
 ![Click on attachments](./images/2023-08-03_01.07.03@2x.png)
 
-You can also add attachmennts directly to the test descrption:
+You can also add attachmennts to the test descrption:
 
-![insert attachment in a test description](./images/insert_attachments.png)
+1. Click on the **Attachment** button.
+2. Select a file from your PC, or drag and drop it onto the area. You can also paste a file from the clipboard.
+3. Click on the image that has been downloaded. 
 
-Or use Attachment dialog by clicking Attachments button:
+![Testomatio.io - Insert attachment in a test description](./images/New_9mLj3wh3_2024-10-07.png)
 
-![Use Attachment dialog](./images/attachments_button-1.png)
+Once you have completed the steps, you will see the attachment in the test case description:
+
+![Testomatio.io - Insert attachment in a test description](./images/New_8DanPb4g_2024-10-08.png)
+
+## Add Drawing to Test
+
+Including drawings in test case descriptions can improve clarity by visually representing complex UI layouts and interactions that are difficult to explain through text alone.
+
+To add a drawing to a test case, enter the edit mode and click on the **Draw** button.
+
+![Testomatio.io - Draw Editor](./images/New_OwQMWpps_2024-10-07.png)
+
+You'll see a window with a set of drawing tools. You can select different elements from the top panel (2) and apply styles to them from the side panel (3). When you are done with the drawing, click on the **Save** button (4).
+
+![Testomatio.io - Draw Tools](./images/New_VxPGvi8Y_2024-10-07.png)
+
+After saving the changes in the edit mode, you will see a preview of the drawing in the test case description:
+
+![Testomatio.io - Draw Preview](./images/New_1hpi4Xy4_2024-10-07.png)
 
 ## How To Save Your Tests
 

@@ -1,5 +1,18 @@
 ---
 title: Analytics
+description: Explore Testomat.io's Analytics feature to monitor testing performance. This guide explains how to track automated and manual tests, customize analytics views with charts, and analyze test metrics through timelines. It covers important dashboards like automation coverage, failure board, slowest and flaky tests, and more. Optimize your test strategy with insights into test statuses, failures, and trends.
+type: article
+url: https://docs.testomat.io/usage/analytics/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/Analytics.WCbjldw3_1LVNGK.webp
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io analytics, test management, automation coverage, custom charts, flaky tests, slow tests, test failures, testing trends, manual tests, automated testing
 ---
 
 As a test management system, Testomat.io Team intends to provide our users with as much valuable testing data as possible. For this purpose, we developed Analytics Feature. 
@@ -62,6 +75,10 @@ This feature enhances your ability to track progress, identify trends, and make 
 
 ![Testomat.io - Timelines for Custom Charts](./images/New_ACit3dNa_2024-08-04.gif)
 
+Each timeline is associated with a unique URL, which can be copied and shared with other members of the project team. 
+
+![Testomat.io - Unique URL for timelines](./images/New_E5IK2JjS_2024-09-24.png)
+
 ## Failures Board 
 
 Your team may require visualizing your current status on the project. This is implemented with Failures Board. There you can see failures from the latest test runs, navigate to the suite, latest test run, and the failed test itself. For the Failures widget, we added the ability to group and sort failures found on the project.
@@ -76,15 +93,20 @@ There may be some unstable automated tests on your project that sometimes fail a
 
 **How does it work?**
 
-Let's say `0 == failed` and `1 == passed`.
-If we have 1 passed and 1 failed, avg value is 0.5.
-If all tests are passing, value is 1.
-If all tests failing value is 0.
-We set some boundaries between where tests neither pass or fail.
-So if avg value is 0.9 we can consider this test as non-flaky as it passes 90% of time.
+Flakiness is determined by calculating the average value of run statuses for a given test. The method of calculation can be defined based on specific parameters, including a minimum and maximum success rate threshold.
 
+* Minimum Success Rate: Defines the lowest acceptable pass rate to be considered within the flakiness range.
+* Maximum Success Rate: Defines the highest acceptable pass rate to be considered within the flakiness range.
 
-![Testomat.io - Flaky](./images/Flaky.gif)
+Analytics will identify and display tests that have a pass rate falling within the defined range. **The pass rate is calculated based on the last 100 runs.**
+
+Example:
+* Minimum Success Rate: 40%
+* Maximum Success Rate: 60%
+
+If a test has been run 14 times and succeeded 7 times, the success rate is calculated as 50%. Since 50% falls within the defined range (40% to 60%), this test would be considered flaky and displayed in the analytics report.
+
+![Testomat.io - Flaky](./images/New_mjqIWEbd_2024-09-25.gif)
 
 ## Slowest Tests 
 
@@ -104,6 +126,33 @@ There may be tests that were never executed on your project because they simply 
 Ever Failing Tests is another useful Analytics widget that will show you automated tests that never passed. This feature will help you to pay attention to potential risks in your application.
 
 ![Testomat.io - Ever Failing Tests](./images/147574334-3a076e17-9a8e-437b-8a8c-9d1833a29c28.gif)
+
+## Labels Statistics
+
+Labels Statistics is a feature that allows users to visualize test coverage by labels on an interactive chart. It provides an efficient way to analyze and track the status of testing with the following capabilities:
+
+* **Label coverage visualization:** you can view information about which tests need to be reviewed, which can be automated, and what impact they have on the system. You can set up your own labels or use the ready-made ones offered by Testomat.io. To learn how to add labels to the project, visit a [dedicated page](https://docs.testomat.io/usage/labels-and-custom-fields/#_top).
+
+* **Test filtering (1) and search (2):** for convenience, there is  filtering by Environments, Tags, Labels, Jira issues, Date Range, Priority, as well as search options to quickly find tests by name or other criteria, making it easier to locate specific tests.
+
+* **Chart download (3):** the feature allows to export the chart in multiple formats such as PNG, SVG, or CSV, facilitating further analysis or sharing with team members.
+
+* **Automation coverage analysis:** you can evaluate the level of test automation, helping to identify which parts of the testing process are already automated and where additional efforts are needed.
+
+This tool enables teams to manage the testing process more efficiently, quickly identify issues, and optimize automation efforts.
+
+![Testomat.io - Labels Statistics](./images/New_m3fhfYsx_2024-10-01.png)
+
+Another big plus is the detailed statistics for a particular label. Click on the label to open another window with options.
+
+You will see all tests with this label. You can also filter **(2)** by Tags, Priority and Jira Issues or search **(3)** for specific tests.
+
+Additionally, there is a special option **(1)** to display tests:
+
+* **By Tests** - shows all tests created in the project with this label.
+* **By Runs** - only shows tests that have a run result.
+
+![Testomat.io - Detailed label information](./images/New_BXpy3mr7_2024-10-14.png)
 
 ## Analytics In Run Reports
 

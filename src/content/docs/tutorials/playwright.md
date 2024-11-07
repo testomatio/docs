@@ -36,6 +36,10 @@ The next step is to specify the parameters of your project and the operating sys
 * In the **Project Language** field, select the language of your project's tests from the list: `JavaScript`, `TypeScript` or `Gherkin` (BDD tests);
 * In the **Import tests** field, select the operating system of your device: `Mac`, `Linux` or `Windows`.
 
+* In the **Auto-assign Ids** button, select the option to automatically assign IDs to your tests.
+* In the **Purge old Ids** button, select the option to remove previously set ld IDs from your tests.
+* In the **Disable detached tests** button, select the option to disable detached tests.
+* In the **Prefer source code structure** button, select the option to prefer source code structure.
 ![Testomat.io - Set up Playwright project import](./images/New_b1BS3EKN_2024-08-29.png)
 
 Next, you need to copy the generated command and execute it in the terminal of your project. After that, your tests will be imported into [Testomat.io](https://app.testomat.io) аnd will be displayed on the **Tests** page.
@@ -68,6 +72,13 @@ Without this option, you will not be able to launch the CI process correctly!
 
 After executing the command to import the tests, the IDs are automatically set in the code.
 
+```diff
++ test('user should be fine @T12345678', () => {
+- test('user should be fine', () => {
+  expect(user).toBe('fine');
+});
+```
+
 ![Testomat.io - Auto-assign Ids in Code](./images/New_WTxw4TbZ_2024-08-29.png)
 
 Also, the IDs are specified in your test in Testomat.io.
@@ -77,6 +88,28 @@ Also, the IDs are specified in your test in Testomat.io.
 ## Reporting Playwright tests
 
 Reports are crucial for understanding the results of automated tests and providing insights into the status and performance of your automation workflows. In Testomat.io, you'll be able to view Playwright reports, even the most intricate of these, such as Trace Viewer.
+
+### Artifacts in Playwright with Testomat.io Reporter and S3
+
+Artifacts like screenshots, videos, and logs are invaluable for debugging Playwright tests. With the Testomat.io reporter, these artifacts can be automatically captured and uploaded to an S3 bucket, linking each artifact to its respective test case in the Testomat.io dashboard. [Read Docs](https://docs.testomat.io/usage/test-artifacts/)
+
+![Testomat.io - Artifacts](./images/artefacts_settings.jpg)
+
+- Configure Artifacts: Enable options in Playwright (e.g., recordVideo, screenshot, logs).
+- Setup S3 and Testomat.io Reporter: Configure the reporter to upload artifacts to your S3 bucket, ensuring it’s connected to Testomat.io for seamless integration.
+- View and Debug: Access artifacts through Testomat.io, which links to the S3 bucket for downloading and analyzing each screenshot, video, or log.
+
+### How to view Playwright attachments
+
+To view the attachments, click on the test in the Test Run and then click on the attachment you want to view.
+Screenshots, videos, and logs will be displayed in the Test Run.
+
+Screenshot example:
+![Testomat.io - Open Playwright Screenshot](./images/view_image.gif)
+
+Video example:
+![Testomat.io - Open Playwright Video](./images/view_video.gif)
+
 
 ### How To Enable Playwright Trace Viewer
 
@@ -92,3 +125,20 @@ Here are steps how to enable Playwright trace viewer for uploaded artifacts in T
 
 ![Testomat.io - Open Playwright Trace Viewer](./images/Open-Playwright-Trace.gif)
 
+## Reporting Parallel Execution to the Same Run
+
+Provide a shared unique title to all runs that will be running in parallel, and add the `TESTOMATIO_SHARED_RUN` environment variable. This will direct all reports to a single run.
+
+```bash
+IO_TITLE="report for commit ${GIT_COMMIT}" TESTOMATIO_SHARED_RUN=1 <actual run command>
+```
+
+We recommend using a commit hash as a title to create a new run. This ensures the run title is unique and will be the same for all parallel jobs running for that commit.
+
+By default, you can report to the same run if a run was created no more than 20 minutes ago. If you want to increase this time, you can use the `TESTOMATIO_SHARED_RUN_TIMEOUT` environment variable.
+
+`TESTOMATIO_SHARED_RUN_TIMEOUT` accepts values in minutes, so to increase the timeout to 2 hours (120 minutes), use the following command:
+
+```bash
+TESTOMATIO={API_KEY} TESTOMATIO_TITLE="report for commit ${GIT_COMMIT}" TESTOMATIO_SHARED_RUN=1 TESTOMATIO_SHARED_RUN_TIMEOUT=120 <actual run command>
+```

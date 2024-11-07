@@ -1,5 +1,18 @@
 ---
 title: Managing Runs
+description: Learn how to manage test runs effectively in Testomat.io. This guide covers generating detailed run reports, grouping test runs, applying merge strategies, relaunching runs, copying run groups, and filtering results. It also explains multi-selection options for archiving, merging, and downloading reports for efficient test tracking and management.
+type: article
+url: https://docs.testomat.io/getting-started/managing-runs/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/New_iWaZSQo7_2024-08-03.DjYRaTwD_Ysioy.webp
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: managing test runs, run reports, merge strategy, run groups, relaunch runs, test management, Testomat.io, run comparison, multi-selection, archiving, test reporting
 ---
 
 ## Reports
@@ -215,6 +228,16 @@ Testomat provides filtering capabilities for Runs and Run Groups. On the Runs pa
 
 ![Run Filters](./images/27.png)
 
+## Filter Runs by TQL
+
+Testomat.io Query Language for Runs enables more flexible searches, allowing users to filter Test Runs by criteria like `finished_at`, `passed_count`, `has_test_label` and many others. This helps quickly find relevant runs and improves test analysis.
+
+![Testomatio.io - Filter Test Runs by Query Language](./images/New_wcpBcPsg_2024-10-17.png)
+
+If you would like to find out more about the [Runs Variables](https://docs.testomat.io/usage/query-language/#runs-variables), please visit a separate section of the documentation.
+
+![Testomatio.io - Query Language Variables](./images/New_8X0J8uAJ_2024-10-17.png)
+
 ## Multiselection For Runs
 
 Multiselection allows the bulk application options to many runs with one click. Here is overview:
@@ -253,9 +276,13 @@ Also this option is applicable for Run Groups. 1. Open Run group 2. Click Combin
 
 ![Combined Report](./images/31.png)
 
+## Share Runs Filter
 
+This feature allows to pass **Runs** and **Runs Archive** filter parameters directly through the URL. This is useful for improving collaboration, as it allows teams to quickly access relevant test results without manually adjusting filters.
 
+Specify the necessary filtering parameters on the **Runs** or **Runs Archive** page, copy the URL and share it with interested members.
 
+![Testomatio.io - Share Runs Filter](./images/New_FRXL06AF_2024-10-08.png)
 
 
 

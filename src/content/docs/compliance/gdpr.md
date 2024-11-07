@@ -1,5 +1,18 @@
 ---
 title: GDPR Commitment
+description: Testomat.io is fully committed to GDPR compliance, ensuring the protection of personal data in line with European regulations. It collects only essential data, provides users with control over their information, and employs subprocessors to manage data securely. The platform supports data access, modification, and deletion rights for EU/EEA residents, ensuring transparency and privacy.
+type: article
+url: https://docs.testomat.io/compliance/gdpr/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: GDPR compliance, data protection, personal data, Testomat.io, data privacy, user rights, data security, subprocessors, data access, European regulations
 ---
 
 Testomat.io, or just Testomat, is really serious about following the GDPR rules that started on May 25, 2018. GDPR is a big deal because it helps protect people’s data in Europe. Testomat has to follow these rules because it works with people in Europe.
@@ -78,6 +91,10 @@ Please check https://docs.testomat.io/security/subprocessors for more details ab
 
 #### 9. **Does all data have to be encrypted?**
 No, GDPR asks companies to protect data properly, but it doesn’t say exactly how, like saying it has to be encrypted.
+
+#### 10. **Does your app have any compliance certifications?**
+Our application has completed the CAIQ Lite Questionnaire, which provides comprehensive answers covering all compliance and security levels. We strictly adhere to all CAIQ points, ensuring that our security practices align with industry standards and best practices for safeguarding user data. We are committed to maintaining full compliance in areas such as data protection, risk management, and access control. We provide our CAIQ Lite Questionnaire responses upon request via email. [Contact](/contact-us/contact-us) our support team, and we will be happy to assist you.
+
 
 ### Note:
 This is just to help you understand and isn’t legal advice. If you need legal advice about GDPR, please talk to a lawyer.

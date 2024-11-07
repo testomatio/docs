@@ -1,5 +1,18 @@
 ---
 title: Import Cucumber BDD Tests
+description: Import Cucumber BDD tests into Testomat.io using the check-cucumber CLI tool. This guide covers commands to synchronize tests, assign test IDs, manage detached tests, and clean or import tests into specific suites, branches, or keep source code structure intact. It also supports both manual and automated BDD test imports, allowing efficient test management and version control.
+type: article
+url: https://docs.testomat.io/reference/import-bdd/
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://user-images.githubusercontent.com/24666922/78559548-2dc7fb00-7832-11ea-8c69-0722222a82fe.png
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, Cucumber BDD, CLI tool, test import, test IDs, test synchronization, automated tests, manual tests, test management, QA tools
 ---
 
 > 📑 This documentation is taken from open-source project [testomatio/check-cucumber](https://github.com/testomatio/check-cucumber)
