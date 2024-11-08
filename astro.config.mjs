@@ -154,6 +154,18 @@ export default defineConfig({
 					autogenerate: { directory: 'integration' },
 				},
 				{
+					label: 'Management',
+					items: [
+						{
+							label: 'Company',
+							collapsed: false,
+							items: [
+								{ label: 'Administration', link: '/management/company/administration' },
+							],
+						},
+					]
+				},
+				{
 					label: 'Subscriptions',
 					// collapsed: true,
 					autogenerate: { directory: 'subscriptions' },
