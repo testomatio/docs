@@ -73,7 +73,6 @@ export default defineConfig({
 					label: 'Getting Started',
 					items: [
 						{ label: 'Start from Scratch', link: '/getting-started/start-from-scratch'},
-						{ label: 'Project', link: '/getting-started/project'},
 					],
 				},
 				{
@@ -161,6 +160,11 @@ export default defineConfig({
 							collapsed: false,
 							items: [
 								{ label: 'Administration', link: '/management/company/administration' },
+							],
+							label: 'Project',
+							collapsed: false,
+							items: [
+								{ label: 'Settings', link: '/management/project/settings' },
 							],
 						},
 					]
