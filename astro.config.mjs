@@ -73,15 +73,38 @@ export default defineConfig({
 					label: 'Getting Started',
 					items: [
 						{ label: 'Start from Scratch', link: '/getting-started/start-from-scratch'},
-						{ label: 'Import Tests from Cucumber', link: '/getting-started/import-tests-from-cucumber'},
-						{ label: 'Import Tests from Source Code', link: '/getting-started/import-tests-from-source-code'},
-						{ label: 'Import Tests from CSV/XLS', link: '/getting-started/import-tests-from-csvxls'},
-						{ label: 'Test Design', link: '/getting-started/test-design'},
-						{ label: 'Running Tests Manually', link: '/getting-started/running-tests-manually'},
-						{ label: 'Running Automated Tests', link: '/getting-started/running-automated-tests'},
-						{ label: 'Test Plans', link: '/getting-started/test-plans'},
-						{ label: 'Managing Runs', link: '/getting-started/managing-runs'},
 						{ label: 'Project', link: '/getting-started/project'},
+					],
+				},
+				{
+					label: 'Project',
+					items: [
+						{
+							label: 'Tests',
+							collapsed: false,
+							items: [
+								{ label: 'Test Design', link: '/project/tests/test-design' },
+							],
+						},
+						{
+							label: 'Runs',
+							collapsed: false,
+							items: [
+								{ label: 'Running Tests Manually', link: '/project/runs/running-tests-manually' },
+								{ label: 'Running Automated Tests', link: '/project/runs/running-automated-tests' },
+								{ label: 'Managing Runs', link: '/project/runs/managing-runs' },
+							],
+						},
+						{ label: 'Plans', link: '/project/plans/test-plans'},
+						{
+							label: 'Import & Export',
+							collapsed: false,
+							items: [
+								{ label: 'Import from Source Code', link: '/project/import-export/import-tests-from-source-code' },
+								{ label: 'Import from Cucumber', link: '/project/import-export/import-tests-from-cucumber' },
+								{ label: 'Import from CSV/XLS', link: '/project/import-export/import-tests-from-csvxls' },
+							],
+						},
 					],
 				},
 				{
