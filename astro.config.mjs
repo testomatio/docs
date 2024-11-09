@@ -97,6 +97,21 @@ export default defineConfig({
 						},
 						{ label: 'Plans', link: '/project/plans/test-plans'},
 						{
+							label: 'Steps',
+							collapsed: false,
+							items: [
+								{ label: 'Steps', link: '/project/steps-snippets/steps' },
+								{ label: 'Snippets', link: '/project/steps-snippets/snippets' },
+							],
+						},
+						{
+							label: 'Pulse',
+							collapsed: false,
+							items: [
+								{ label: 'Overview', link: '/project/pulse/overview' },
+							],
+						},
+						{
 							label: 'Import & Export',
 							collapsed: false,
 							items: [
@@ -105,7 +120,26 @@ export default defineConfig({
 								{ label: 'Import from CSV/XLS', link: '/project/import-export/import-tests-from-csvxls' },
 							],
 						},
+						{
+							label: 'Analytics',
+							collapsed: false,
+							items: [
+								{ label: 'Overview', link: '/project/analytics/overview' },
+							],
+						},
 					],
+				},
+				{
+					label: "Advanced",
+					items: [
+						{ label: 'Tags, Labels & Custom fields', link: '/advanced/tags-labels/labels-and-custom-fields' },
+						{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder/bulk-edit' },
+						{ label: 'Branches', link: '/advanced/branches-folder/branches' },
+						{ label: 'Artifacts', link: '/advanced/artifacts/test-artifacts' },
+						{ label: 'TQL', link: '/advanced/tql/query-language' },
+						{ label: 'Keyboard Shortcuts', link: '/advanced/shortcuts/keyboard-shortcuts' },
+						{ label: 'Living Documentation', link: '/advanced/living-doc/living-documentation' },
+					]
 				},
 				{
 					label: 'Usage',
@@ -200,5 +234,15 @@ export default defineConfig({
 		"/getting-started/running-tests-manually": "/project/runs/running-tests-manually",
 		"/getting-started/running-automated-tests": "/project/runs/running-automated-tests",
 		"/getting-started/managing-runs": "/project/runs/managing-runs",
+		"/usage/steps-database": "/project/steps-snippets/steps",
+		"/usage/pulse": "/project/pulse/overview",
+		"/usage/analytics": "/project/analytics/overview",
+		"/usage/labels-and-custom-fields": "/advanced/tags-labels/labels-and-custom-fields",
+		"/usage/bulk-edit": "/advanced/bulk-edit-folder/bulk-edit",
+		"/usage/branches": "/advanced/branches-folder/branches",
+		"/usage/test-artifacts": "/advanced/artifacts/test-artifacts",
+		"/usage/query-language": "/advanced/tql/query-language",
+		"/usage/keyboard-shortcuts": "/advanced/shortcuts/keyboard-shortcuts",
+		"/usage/living-documentation": "/advanced/living-doc/living-documentation",
 	},
 });
