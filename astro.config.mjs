@@ -73,20 +73,77 @@ export default defineConfig({
 					label: 'Getting Started',
 					items: [
 						{ label: 'Start from Scratch', link: '/getting-started/start-from-scratch'},
-						{ label: 'Import Tests from Cucumber', link: '/getting-started/import-tests-from-cucumber'},
-						{ label: 'Import Tests from Source Code', link: '/getting-started/import-tests-from-source-code'},
-						{ label: 'Import Tests from CSV/XLS', link: '/getting-started/import-tests-from-csvxls'},
-						{ label: 'Test Design', link: '/getting-started/test-design'},
-						{ label: 'Running Tests Manually', link: '/getting-started/running-tests-manually'},
-						{ label: 'Running Automated Tests', link: '/getting-started/running-automated-tests'},
-						{ label: 'Test Plans', link: '/getting-started/test-plans'},
-						{ label: 'Managing Runs', link: '/getting-started/managing-runs'},
 						{ label: 'Project', link: '/getting-started/project'},
 					],
 				},
-				{
+        {
 					label: 'Tutorials',
-					autogenerate: { directory: 'tutorials' },
+					autogenerate: { directory: 'tutorials' },        
+        },
+        {
+					label: 'Project',
+					items: [
+						{
+							label: 'Tests',
+							collapsed: false,
+							items: [
+								{ label: 'Test Design', link: '/project/tests/test-design' },
+							],
+						},
+						{
+							label: 'Runs',
+							collapsed: false,
+							items: [
+								{ label: 'Running Tests Manually', link: '/project/runs/running-tests-manually' },
+								{ label: 'Running Automated Tests', link: '/project/runs/running-automated-tests' },
+								{ label: 'Managing Runs', link: '/project/runs/managing-runs' },
+							],
+						},
+						{ label: 'Plans', link: '/project/plans/test-plans'},
+						{
+							label: 'Steps',
+							collapsed: false,
+							items: [
+								{ label: 'Steps', link: '/project/steps-snippets/steps' },
+								{ label: 'Snippets', link: '/project/steps-snippets/snippets' },
+							],
+						},
+						{
+							label: 'Pulse',
+							collapsed: false,
+							items: [
+								{ label: 'Overview', link: '/project/pulse/overview' },
+							],
+						},
+						{
+							label: 'Import & Export',
+							collapsed: false,
+							items: [
+								{ label: 'Import from Source Code', link: '/project/import-export/import-tests-from-source-code' },
+								{ label: 'Import from Cucumber', link: '/project/import-export/import-tests-from-cucumber' },
+								{ label: 'Import from CSV/XLS', link: '/project/import-export/import-tests-from-csvxls' },
+							],
+						},
+						{
+							label: 'Analytics',
+							collapsed: false,
+							items: [
+								{ label: 'Overview', link: '/project/analytics/overview' },
+							],
+						},
+					],
+				},
+				{
+					label: "Advanced",
+					items: [
+						{ label: 'Tags, Labels & Custom fields', link: '/advanced/tags-labels/labels-and-custom-fields' },
+						{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder/bulk-edit' },
+						{ label: 'Branches', link: '/advanced/branches-folder/branches' },
+						{ label: 'Artifacts', link: '/advanced/artifacts/test-artifacts' },
+						{ label: 'TQL', link: '/advanced/tql/query-language' },
+						{ label: 'Keyboard Shortcuts', link: '/advanced/shortcuts/keyboard-shortcuts' },
+						{ label: 'Living Documentation', link: '/advanced/living-doc/living-documentation' },
+					]
 				},
 				{
 					label: 'Usage',
@@ -135,6 +192,18 @@ export default defineConfig({
 					autogenerate: { directory: 'integration' },
 				},
 				{
+					label: 'Management',
+					items: [
+						{
+							label: 'Company',
+							collapsed: false,
+							items: [
+								{ label: 'Administration', link: '/management/company/administration' },
+							],
+						},
+					]
+				},
+				{
 					label: 'Subscriptions',
 					// collapsed: true,
 					autogenerate: { directory: 'subscriptions' },
@@ -159,5 +228,25 @@ export default defineConfig({
 	],
 	markdown: {
 		rehypePlugins: [[rehypeAstroRelativeMarkdownLinks, options]],
+	},
+	redirects: {
+		"/getting-started/test-plans": "/project/plans/test-plans",
+		"/getting-started/import-tests-from-cucumber": "/project/import-export/import-tests-from-cucumber",
+		"/getting-started/import-tests-from-source-code": "/project/import-export/import-tests-from-source-code",
+		"/getting-started/import-tests-from-csvxls": "/project/import-export/import-tests-from-csvxls",
+		"/getting-started/test-design": "/project/tests/test-design",
+		"/getting-started/running-tests-manually": "/project/runs/running-tests-manually",
+		"/getting-started/running-automated-tests": "/project/runs/running-automated-tests",
+		"/getting-started/managing-runs": "/project/runs/managing-runs",
+		"/usage/steps-database": "/project/steps-snippets/steps",
+		"/usage/pulse": "/project/pulse/overview",
+		"/usage/analytics": "/project/analytics/overview",
+		"/usage/labels-and-custom-fields": "/advanced/tags-labels/labels-and-custom-fields",
+		"/usage/bulk-edit": "/advanced/bulk-edit-folder/bulk-edit",
+		"/usage/branches": "/advanced/branches-folder/branches",
+		"/usage/test-artifacts": "/advanced/artifacts/test-artifacts",
+		"/usage/query-language": "/advanced/tql/query-language",
+		"/usage/keyboard-shortcuts": "/advanced/shortcuts/keyboard-shortcuts",
+		"/usage/living-documentation": "/advanced/living-doc/living-documentation",
 	},
 });

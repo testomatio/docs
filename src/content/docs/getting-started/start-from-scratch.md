@@ -12,12 +12,16 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: test reporting, test suites, test cases, test automation, manual testing, Cucumber, BDD, test management, Testomat.io
+      content: Testomat.io, Test Reporting, Test Suites, Test Cases, Test Automation, Manual Testing, Cucumber, BDD, Test Management, Analytics, Automation Coverage
 ---
 
-> If you don't have any manual or automated tests yet - follow this guide. Otherwise, pick the section of the guide relevant to your project. You might want to start from [this section](https://docs.testomat.io/getting-started/import-tests-from-source-code/) if you consider **importing tests from source code** into Testomat.io. For those interested in importing tests from the **Cucumber** framework, go straight to [this section](https://docs.testomat.io/getting-started/import-tests-from-cucumber/#why-do-i-need-to-import-my-tests)!
+<!-- 
+> If you don't have any manual or automated tests yet - follow this guide. Otherwise, pick the section of the guide relevant to your project. You might want to start from [this section](https://docs.testomat.io/getting-started/import-tests-from-source-code/) if you consider **importing tests from source code** into Testomat.io. For those interested in importing tests from the **Cucumber** framework, go straight to [this section](https://docs.testomat.io/getting-started/import-tests-from-cucumber/#why-do-i-need-to-import-my-tests)! 
+-->
 
-## Create a new project
+Welcome! This section guides you through the initial steps of using Testomat.io to organize and manage your testing process effectively. If you don't have any manual or automated tests yet - follow this guide.
+
+## Create Project
 
 Register at [app.testomat.io](https://app.testomat.io) and activate your user account. Then create a new project.
 
@@ -40,7 +44,7 @@ You have just created your first project. Now you can start creating suites and 
 
 ![Testomat.io - New blank project](./images/New_WG8caz4S_2024-07-09.png)
 
-## Write First Test Cases
+## Create Manual Test Cases
 
 Let's take a look at creating test cases step by step.
 
@@ -55,7 +59,7 @@ Or another case:
 
 Great, let's move on! Select a certain suite to nest the creation of new test cases in that suite. 
 
-1. Select a test case.
+1. Select a test suite.
 2. Fill the name in the input field. 
 3. Click the **Create** button to create multiple test cases.
 
@@ -64,7 +68,6 @@ Great, let's move on! Select a certain suite to nest the creation of new test ca
 When tests are newly created, they are marked as **manual** by default, which shows that they are ready for manual checks. Also, to create or edit multiple suits or test cases at once use [Bulk Edit](https://docs.testomat.io/usage/bulk-edit/).
 
 As a result, you can add descriptions for each test case. However, the roles of these routine test cases are clearly seen from their titles, so we can probably try to run them to verify the user management part. 
-
 
 ## Run Manual Tests
 
@@ -86,14 +89,84 @@ You will see the list of all test cases when the test execution is launched. Mar
 
 ![Testomat.io - Execute tests](./images/New_3ccsUbOe_2024-07-10.png)
 
-Once the run is finished, the overall results of it are available for your review, like this:
+Once the run is finished, the overall results of it are available for your review.
 
-![Testomat.io - Simplified test report](./images/New_vndJf7BB_2024-07-10.png)
+## Import Automated Tests
 
-Here you can find all the important information about the completed test run. Such as the duration of the run, the performer, and so on. You can also filter by status, find specific tests by tags, or sort by available methods.
+Now let's have a look at the import process for your automated tests. When your project is created, click the **Import from Source Code** button.
 
-To get a detailed report of the test run, click on the **Report** button:
+![Testomat.io - Import test cases](./images/New_3EXiVWPT_2024-07-25.png)
 
-![Testomat.io - Detailed test report](./images/New_HXhqqpV4_2024-07-10.png)
+Or another case:
 
-Now you can share the report with your stakeholders. It is just a tip of the iceberg, keep reading the documentation to discover [Testomat.io](https://app.testomat.io)!
+![Testomat.io - Import automated tests another way](././images/New_GhgayW5f_2024-07-25.png)
+
+In the **Import** section, you are asked to pick the framework, programming language and and operating system you are using for testing.
+
+![Testomat.io - Copy instructions](./images/New_eUYumU81_2024-07-25.png)
+
+> If you don't see the framework you work with in this list - please contact us, and we will do our best to add support for it soon! 
+
+Once you have chosen the project parameters, you will be provided with a command that you need to copy and execute in a terminal. Before running this command, please check if your environment matches these requirements:
+* If you run tests in NodeJS (JavaScript, TypeScript), you should have NodeJS 10+ and npm to be installed to be able to run this command.
+* If you run tests in PHP - you will need PHP > 7.2 and Composer installed. 
+
+Open a terminal, navigate to the tests folder in your project and execute the command. Seeing a report on how many tests were found means that the import command was executed successfully:
+
+![Testomat.io - Execute command in terminal, automated tests found and sent](./images/New_koBKlQw7_2024-07-26.png)
+
+If you don't see a similar message, this might be because our default settings do not work for you. Please check the command's API change command parameters so it could find tests. The most common issues with import are different file naming format and/or incorrect directory for import.
+
+When the tests are finally imported, reopen the project, and you will see that all tests with their folders and files are shown on Testomat.io.
+
+![Testomat.io - Imported automated tests](./images/New_hcbaJeTv_2024-07-26.png)
+
+All imported tests are marked as "Automated" by default. If you click on any of those tests, you will see its code and a link to its repository. Please, check that the link actually points to the corresponding file. Otherwise, you might want to change the repository URL in project settings. 
+
+![Testomat.io - Automated test source code](./images/New_cIVsD22d_2024-07-26.png)
+
+## Run Automated Tests
+
+First, go to the **Runs** page, click on the **Extra** button and pick **Setup Automated**
+
+![Testomat.io - Import automated tests](./images/New_KDQj4E92_2024-10-26.png)
+
+Then you need to pick your framework from the dropdown. Testomat.io will generate instructions regarding your framework. You may need to make few changes to your code, namely, add the Testomat.io plugin.
+
+![Testomat.io - Choose test automation framework](./images/New_yAgJow0e_2024-10-26.png)
+
+Please note that you need to start generated commands in your terminal from your project folder.
+
+![Testomat.io - Execute test cases](./images/New_7kkpQA0c_2024-10-26.png)
+
+If you have successfully launched your automated tests, a new Test Run will appear on Runs page.
+
+![Testomat.io - Automated test run](./images/New_L8L968uj_2024-10-26.png)
+
+## Test Run Report
+
+Click on a run to see the report. Here you can find all the important information about the completed test run. Such as the duration of the run, the performer, and so on. You can also filter by status, find specific tests by tags, or sort by available methods. Moreover, you can see tests results in real-time.
+
+To get a detailed report of the test run, click on the **Report** button.
+
+![Testomat.io - Simplified test report](./images/New_kldg87VR_2024-10-26.png)
+
+Now you can share the report with your stakeholders.
+
+![Testomat.io - Detailed test report](./images/New_v6s3GenD_2024-10-26.png)
+
+## Analytics
+
+Testomat.io Analytics provides an extensive overview of testing data by tracking both automated and manual tests. You can visualize trends over time with custom charts, identify automation coverage, monitor failure patterns, and analyze metrics like flaky or slowest tests. Additional features include a failure board, label and tag statistics for better team insights, allowing for optimized testing and proactive bug prevention.
+
+![Testomat.io - Analytics](./images/New_K2WAzUDa_2024-10-26.png)
+
+Within the Analytics features, **Automation Coverage** stands out as particularly noteworthy. 
+
+Automation coverage in Testomat.io offers insights into the scope of automated testing within a project, tracking the proportion of tests that are automated versus those that remain manual. Through its analytics, Testomat.io provides a detailed view of the automated test ratio, enabling teams to identify areas that may benefit from further automation. This feature helps streamline automation strategies, making it easier to optimize test coverage in line with project goals.
+
+![Testomat.io - Automation Coverage](./images/New_GU20EwjQ_2024-10-26.png)
+
+For more details, refer to the Testomat.io [Analytics](https://docs.testomat.io/usage/analytics/) documentation.
+
+You’ve just scratched the surface of Testomat.io's features. Continue reading to fully explore [Testomat.io](https://app.testomat.io)!
