@@ -76,7 +76,11 @@ export default defineConfig({
 						{ label: 'Project', link: '/getting-started/project'},
 					],
 				},
-				{
+        {
+					label: 'Tutorials',
+					autogenerate: { directory: 'tutorials' },        
+        },
+        {
 					label: 'Project',
 					items: [
 						{
