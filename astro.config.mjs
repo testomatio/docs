@@ -99,7 +99,9 @@ export default defineConfig({
 								{ label: 'Managing Runs', link: '/project/runs/managing-runs' },
 							],
 						},
-						{ label: 'Plans', link: '/project/plans/test-plans'},
+						{ label: 'Plans', link: '/project/plans/test-plans',
+							attrs: { style: 'font-size: var(--sl-text-base); color: var(--sl-color-white); font-weight: 600;'},
+						},
 						{
 							label: 'Steps',
 							collapsed: false,
