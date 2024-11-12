@@ -105,7 +105,7 @@ Once you have decided to create an issue in your Jira project, you can select it
 
 ![Testomatio.io - Link Failed Test to existing issue or create a new one](./images/New_Y2SJbV9K_2024-10-19.png)
 
-You can even create an issue as a subtask by **specifying a Perent ticket**:
+You can even create an issue as a subtask by **specifying a Parent ticket**:
 
 ![Testomatio.io - Creating JIRA Issue as Subtask](./images/New_8rxMYOhd_2024-10-19.png)
 
