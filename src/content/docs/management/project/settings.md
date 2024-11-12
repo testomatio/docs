@@ -2,7 +2,7 @@
 title: Project setup and management
 description: You will learn how to set up and manage a project.
 type: article
-url: https://docs.testomat.io/getting-started/project/
+url: https://docs.testomat.io/management/project/settings
 head:
   - tag: meta
     attrs:
