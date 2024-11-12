@@ -89,36 +89,26 @@ Now tests from added Suite are shown in the Jira issue:
 
 If you unlink an issue from a suite, all tests of this suite will be unlinked as well.
 
-## Creating JIRA Issue
+## Creating JIRA Issue for a Failed Run
 
-Testomat.io makes it incredibly convenient to create issues for Jira directly from your Runs. With just a few clicks, you can instantly log detailed bug reports, complete with test context and steps to reproduce. 
+To create a JIRA Issue for a failed manual or automated run open a run and select "Attach Jira Issue" in the dots menu: 
 
-### Failed Test
+![CleanShot 2022-09-21 at 19 47 04@2x](./images/191564154-6c2e4552-3631-4cbe-8590-6ac1185125e9.jpg)
 
-To create a JIRA issue for a Failed Test,  open a Run with a failed test. Find a test in list, move the cursor over it and click on the **Link to Issue** icon:
+Create a new issue for a run or attach it to an existing issue.
 
-![Testomatio.io - Creating JIRA Issue for Failed Test](./images/New_7T8nObH5_2024-10-19.png)
+![CleanShot 2022-09-21 at 19 52 02@2x](./images/191564967-ca138d17-9ddd-4b82-bd37-7f9e6a9cc7d8.jpg)
 
-You can link it to an existing issue **(1)** or create a new one **(2)**.
+## Creating JIRA Issue for a Failed Test
 
-Once you have decided to create an issue in your Jira project, you can select its ticket types **(3)**.
+Select a Run with a failed test. Find a test in a list and click "Create Jira Issue" button:
 
-![Testomatio.io - Link Failed Test to existing issue or create a new one](./images/New_Y2SJbV9K_2024-10-19.png)
+![CleanShot 2022-09-21 at 19 53 40@2x](./images/191565430-fb506f7a-7f7f-4fa1-8e74-0ba787be5cc8.jpg)
 
-You can even create an issue as a subtask by **specifying a Parent ticket**:
+You will be able to create a new issue for this test or link it to existing issue.
 
-![Testomatio.io - Creating JIRA Issue as Subtask](./images/New_8rxMYOhd_2024-10-19.png)
+![CleanShot 2022-09-21 at 19 55 09@2x](./images/191565572-b502c38c-8c0e-498c-8bad-d6a1211834fd.jpg)
 
-The generated ticket will contain the specified information, as well as information about the test run and a web link to the test run report:
+Created Issue will receive information on a test run and a web link to the Run report will be added:
 
-![Testomatio.io - Created ticket in Jira](./images/New_8ENxIFXB_2024-10-19.png)
-
-### Failed Run
-
-To create a JIRA issue for a Failed Manual or Automated Run, open the run and select the **Link to Issue** option from the dots menu:
-
-![Testomatio.io - Creating JIRA Issue for Failed Run](./images/New_cLq5eNs9_2024-10-19.png)
-
-Create a new issue for a run or append to an existing issue.
-
-![Testomatio.io - Link Failed Run to existing issue or create a new one](./images/New_tYJ8Bm2P_2024-10-19.png)
+![CleanShot 2022-09-21 at 19 56 17@2x](./images/191565828-ab6b827b-cfea-41bf-9b8b-31656ea84101.jpg)
