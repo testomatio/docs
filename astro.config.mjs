@@ -215,19 +215,33 @@ export default defineConfig({
 					autogenerate: { directory: 'subscriptions' },
 				},
 				{
-					label: 'Security',
-					// collapsed: true,
-					autogenerate: { directory: 'security' },
-				},
-				{
-					label: 'Compliance',
-					// collapsed: true,
-					autogenerate: { directory: 'compliance' },
-				},
-				{
-					label: 'Contact us',
+					label: 'Support',
 					collapsed: true,
-					autogenerate: { directory: 'contact-us' },
+					items: [
+						{ label: 'Contact Us', link: '/support/contact-us'},
+					],
+				},
+				{
+					label: 'Legal',
+					items: [
+						{
+							label: 'Compliance',
+							collapsed: true,
+							items: [
+								{ label: 'Testomat.io Compliance Overview', link: '/legal/compliance/overview' },
+								{ label: 'GDPR Commitment', link: '/legal/compliance/gdpr' },
+								{ label: 'Privacy Policy', link: '/legal/compliance/privacy' },
+								{ label: 'Terms of Service', link: '/legal/compliance/terms' },
+							],
+							label: 'Security',
+							collapsed: true,
+							items: [
+								{ label: 'Testomat.io Security Overview', link: '/legal/security/overview' },
+								{ label: 'JIRA Plugin Permissions and Security', link: '/legal/security/jira' },
+								{ label: 'Subprocessors', link: '/legal/security/subprocessors' },
+							],
+						},
+					]
 				},
 			],
 		}),
@@ -254,5 +268,6 @@ export default defineConfig({
 		"/usage/query-language": "/advanced/tql/query-language",
 		"/usage/keyboard-shortcuts": "/advanced/shortcuts/keyboard-shortcuts",
 		"/usage/living-documentation": "/advanced/living-doc/living-documentation",
+		"/contact-us/contact-us": "/support/contact-us",
 	},
 });
