@@ -28,7 +28,7 @@ This guide shows how to set up SSO connection via SAML for various SAML provider
 
 If you are ready, proceed to configure identity provider:
 
-* [Okta]()
-* [Google Workspace]()
-* [Azure AD]()
-* [Custom SAML]()
+* [Okta](https://docs.testomat.io/integrations/single-sign-on/okta)
+* [Google Workspace](https://docs.testomat.io/integrations/single-sign-on/google)
+* [Azure AD](https://docs.testomat.io/integrations/single-sign-on/azure)
+* [Custom SAML](https://docs.testomat.io/integrations/single-sign-on/saml)
