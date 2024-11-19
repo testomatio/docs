@@ -103,7 +103,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Steps',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Steps', link: '/project/steps-snippets/steps' },
 								{ label: 'Snippets', link: '/project/steps-snippets/snippets' },
@@ -111,7 +111,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Pulse',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Overview', link: '/project/pulse/overview' },
 							],
@@ -127,7 +127,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Analytics',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Overview', link: '/project/analytics/overview' },
 							],
@@ -199,7 +199,7 @@ export default defineConfig({
 					items: [
 						{
 							label: 'Issues Management',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Overview', link: '/integrations/issues-management/overview' },
 								{ label: 'Jira', link: '/integrations/issues-management/jira' },
@@ -213,7 +213,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Continuous Integration',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Overview', link: '/integrations/continuous-integration/overview' },
 								{ label: 'Jenkins', link: '/integrations/continuous-integration/jenkins' },
@@ -228,7 +228,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Report Notifications',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Notification Rules', link: '/integrations/report-notifications/rules' },
 								{ label: 'Email', link: '/integrations/report-notifications/email' },
@@ -239,7 +239,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Single Sign On',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Overview', link: '/integrations/single-sign-on/overview' },
 								{ label: 'Okta', link: '/integrations/single-sign-on/okta' },
@@ -280,7 +280,7 @@ export default defineConfig({
 					items: [
 						{
 							label: 'Compliance',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Compliance Overview', link: '/legal/compliance/overview' },
 								{ label: 'GDPR', link: '/legal/compliance/gdpr' },
@@ -290,7 +290,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Security',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Security Overview', link: '/legal/security/overview' },
 								{ label: 'JIRA Plugin Security', link: '/legal/security/jira' },
@@ -301,7 +301,7 @@ export default defineConfig({
 				},
 				{
 					label: 'Support',
-					collapsed: true,
+					collapsed: false,
 					items: [
 						{ label: 'Contact Us', link: '/support/contact-us'},
 					],
