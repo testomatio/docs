@@ -1,65 +1,18 @@
 ---
-title: Jira Plugin
+title: Work with Tests in Jira
 description: Learn how to integrate Testomat.io with Jira using the Jira plugin. This guide covers connecting Testomat.io projects to Jira, linking/unlinking tests, suites, and test plans to Jira issues, and running manual or automated tests directly from Jira. Manage BDD feature files, attach test reports, and utilize the traceability matrix for comprehensive test coverage in sprints.
 type: article
-url: https://docs.testomat.io/usage/jira-plugin/
+url: https://docs.testomat.io/advanced/jira-plugin/work-in-jira
 head:
   - tag: meta
     attrs:
       name: og:image
-      content: https://docs.testomat.io/_astro/125158928-c7403400-e17c-11eb-864d-bc823ff7ba62.BaYja7YJ_1CM6F3.webp
-      
+      content: https://docs.testomat.io/_astro/125162422-5f93e400-e190-11eb-9959-140eca400cb9.BKJldTge_ZqM9vX.webp
   - tag: meta
     attrs:
       name: keywords
       content: Jira plugin, Testomat.io, test management, test coverage, BDD, feature files, automated tests, manual tests, Jira integration, traceability matrix, test reporting
 ---
-
-The Testomat.io Jira Plugin enhances your Jira experience, enabling a host of actions to be performed directly and seamlessly from Jira, streamlining your workflow and boosting efficiency.
-
-Namely, you can:
-
-- Connect multiple Testomat.io and JIRA projects easily.
-- Quickly link/unlink tests, suites, and plans to JIRA issues.
-- View and edit tests directly in JIRA.
-- Use autocomplete and smart suggestions for creating tests.
-- Easily modify BDD/Gherkin feature files and scenarios.
-- Create multiple tests at once from checklists from bulk create 
-- Run manual and automated tests from JIRA tickets.
-- Attach test reports to JIRA issues with a click.
-- Use tracebility matrix and reports to check test coverage in sprints and project.
-- Manage project branches.
-
-## Options Without Loggin in Testomatio
-
-When you are not logged in Testomatio (1), you are able to view tests and suites linked to the issue and (2)
-
-![image](./images/125158928-c7403400-e17c-11eb-864d-bc823ff7ba62.png)
-
-![image](./images/125158874-6d3f6e80-e17c-11eb-8b70-454470ef25b8.png)
-
-Also, you can look through the Test Coverage screen 
-
-![image](./images/125159258-08394800-e17f-11eb-828e-4a2fbddbb00e.png)
-
-## How To Log In
-
-To use more Testomatio Jira Plugin options you need to log in to Testomatio.
-This can be done directly from the Jira issue
-
-![image](./images/125162637-bcdc6500-e191-11eb-8b9f-ff029b7b2419.png)
-
-Or you can do this from Apps
-
-![image](./images/125159739-ebeada80-e181-11eb-818e-e439c7150a10.png)
-
-Here you need to (1) enter **your Testomatio** email and password (2) click on Submit button
-
-![image](./images/125160064-97e0f580-e183-11eb-993c-203e00c6d5ef.png)
-
-Now you can view (1), edit (2), and unlink (3) tests and suites.
-
-<img width="659" alt="Screenshot at Jul 10 15-51-36" src="https://user-images.githubusercontent.com/77803888/125163637-bd2b2f00-e196-11eb-90a8-ec8c0e5168eb.png">
 
 ## How To Create a Suite
 
@@ -195,39 +148,3 @@ Now you can view (1), edit (2), and unlink (3) tests and suites.
 ![image](./images/125240629-04c6cd80-e2f3-11eb-8da0-6555ae538513.png)
 
 <img width="985" alt="Screenshot at Jul 12 09-27-55" src="https://user-images.githubusercontent.com/77803888/125240960-7e5ebb80-e2f3-11eb-9fc9-1ed95883f75c.png">
-
-## Work With Branches in Jira
-
-With Testomatio Plugin you can work with branches within your project directly from Jira. Namely, you can:
-
-- add new branches to the existing project 
-- switch between your branches
-- make changes within existing branches 
-
-## How To Add a New Branch
-
-1. Click on the branches button
-2. Enter a branch name or leave it as an issue name
-3. Press Enter
-4. See your branch was created
-
-![image](./images/125247307-77d44200-e2fb-11eb-9d82-13acdb851766.png)
-
-![image](./images/125246651-bb7a7c00-e2fa-11eb-8fd0-4032bb52a295.png)
-
-## Switch Between Branches
-
-You can switch between branches and Main by clicking on the branches button (1) and clicking on Switch To Main (2)
-
-![image](./images/125247796-034dd300-e2fc-11eb-9ba1-c1b26b2e1cb8.png)
-
-## How To Work Within Branches 
-
-Within the branch, you can do all actions described previously view, edit, unlink, edit Feature File. 
-Test and Suites related to the branch will be marked with a badge with the name of the branch.
-
-![image](./images/125249279-b8cd5600-e2fd-11eb-8a22-bb3882d792fe.png)
-
-## JIRA Plugin Permissions and Security
-
-Testomat.io’s JIRA plugin is designed to integrate seamlessly with your JIRA projects, requiring specific permissions to operate effectively. The plugin has **read access** to all issues of an enabled project to display tests that can be attached to any JIRA issue and can **write properties** to save test data into JIRA storage attached to a specific issue. Importantly, Testomat.io **does not perform any update or delete operations** on your JIRA issues, maintaining the integrity of your project data. The plugin accesses several JIRA API endpoints strictly necessary for its functionality, adhering to high standards of data security and integrity. For detailed information on permissions and security, refer to the [JIRA Permissions](/security/jira) section in our documentation.
