@@ -2,7 +2,7 @@
 title: Administration
 description: You will learn how to manage your company.
 type: article
-url: https://docs.testomat.io/management/company/administration/
+url: https://docs.testomat.io/management/company/administration
 head:
   - tag: meta
     attrs:

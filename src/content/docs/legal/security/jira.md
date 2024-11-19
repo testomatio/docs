@@ -2,7 +2,7 @@
 title: JIRA Plugin Permissions and Security
 description: The Testomat.io JIRA plugin enhances integration with JIRA projects by linking test cases to issues. It offers read access to project issues and writes properties for storing test data. The plugin ensures data security and performs no update or delete operations. Features include linking/unlinking tests, viewing/editing tests in JIRA, running tests, and attaching reports.
 type: article
-url: https://docs.testomat.io/security/jira/
+url: https://docs.testomat.io/legal/security/jira
 head:
   - tag: meta
     attrs:

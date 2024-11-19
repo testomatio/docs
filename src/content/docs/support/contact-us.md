@@ -2,7 +2,7 @@
 title: Contact Us
 description: Get in touch with Testomat.io for questions on product features, user flows, subscriptions, and pricing. Reach their team via Slack, Crisp chat, or email for general queries or technical support. You can also request demos, raise issues on GitHub, and request new features.
 type: article
-url: https://docs.testomat.io/contact-us/contact-us/
+url: https://docs.testomat.io/support/contact-us
 head:
   - tag: meta
     attrs:

@@ -2,7 +2,7 @@
 title: Testomat.io Compliance Overview
 description: Testomat.io’s Compliance Overview emphasizes adherence to legal standards, ensuring trust and transparency for users. Key practices include 24/7 system monitoring, HTTPS encryption, regular updates, and strict data protection. It outlines data collection and processing protocols, ensuring compliance with global regulations while maintaining security and privacy for user data.
 type: article
-url: https://docs.testomat.io/compliance/overview/
+url: https://docs.testomat.io/legal/compliance/overview
 head:
   - tag: meta
     attrs:

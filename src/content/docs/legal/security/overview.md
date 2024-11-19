@@ -2,7 +2,7 @@
 title: Testomat.io Security Overview
 description: Testomat.io’s Security Overview outlines robust measures to ensure data integrity, confidentiality, and availability. It features encryption, access controls, regular audits, and compliance with standards such as SOC 2. Security protocols include continuous monitoring, secure hosting on DigitalOcean, and regular system backups. Development and incident response practices prioritize vulnerability management and user privacy.
 type: article
-url: https://docs.testomat.io/security/overview/
+url: https://docs.testomat.io/legal/security/overview
 head:
   - tag: meta
     attrs:
