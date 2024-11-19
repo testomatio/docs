@@ -276,13 +276,6 @@ export default defineConfig({
 					autogenerate: { directory: 'subscriptions' },
 				},
 				{
-					label: 'Support',
-					collapsed: true,
-					items: [
-						{ label: 'Contact Us', link: '/support/contact-us'},
-					],
-				},
-				{
 					label: 'Legal',
 					items: [
 						{
@@ -290,7 +283,7 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								{ label: 'Compliance Overview', link: '/legal/compliance/overview' },
-								{ label: 'GDPR Commitment', link: '/legal/compliance/gdpr' },
+								{ label: 'GDPR', link: '/legal/compliance/gdpr' },
 								{ label: 'Privacy Policy', link: '/legal/compliance/privacy' },
 								{ label: 'Terms of Service', link: '/legal/compliance/terms' },
 							]
@@ -306,6 +299,13 @@ export default defineConfig({
 						},
 					]
 				},
+				{
+					label: 'Support',
+					collapsed: true,
+					items: [
+						{ label: 'Contact Us', link: '/support/contact-us'},
+					],
+				},				
 			],
 		}),
 	],
