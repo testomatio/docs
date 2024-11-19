@@ -103,7 +103,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Steps',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Steps', link: '/project/steps-snippets/steps' },
 								{ label: 'Snippets', link: '/project/steps-snippets/snippets' },
@@ -111,7 +111,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Pulse',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/pulse/overview' },
 							],
@@ -127,7 +127,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Analytics',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/analytics/overview' },
 							],
@@ -144,11 +144,17 @@ export default defineConfig({
 						{ label: 'TQL', link: '/advanced/tql/query-language' },
 						{ label: 'Keyboard Shortcuts', link: '/advanced/shortcuts/keyboard-shortcuts' },
 						{ label: 'Living Documentation', link: '/advanced/living-doc/living-documentation' },
+						{
+							label: 'Jira Plugin',
+							collapsed: true,
+							items: [
+								{ label: 'Overview', link: '/advanced/jira-plugin/overview' },
+								{ label: 'Work with Tests in Jira', link: '/advanced/jira-plugin/work-in-jira' },
+								{ label: 'Work with Branches in Jira', link: '/advanced/jira-plugin/branches' },
+								{ label: 'Creating Jira Issue', link: '/advanced/jira-plugin/jira-issue' },
+							],
+						},
 					]
-				},
-				{
-					label: 'Usage',
-					autogenerate: { directory: 'usage' },
 				},
 				{
 					label: "Importers",
@@ -189,8 +195,60 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Integration',
-					autogenerate: { directory: 'integration' },
+					label: 'Integrations',
+					items: [
+						{
+							label: 'Issues Management',
+							collapsed: true,
+							items: [
+								{ label: 'Overview', link: '/integrations/issues-management/overview' },
+								{ label: 'Jira', link: '/integrations/issues-management/jira' },
+								{ label: 'GitHub Issues', link: '/integrations/issues-management/github' },
+								{ label: 'Azure DevOps', link: '/integrations/issues-management/azure' },
+								{ label: 'Linear', link: '/integrations/issues-management/linear' },
+								{ label: 'ClickUp', link: '/integrations/issues-management/clickup' },
+								{ label: 'YouTrack', link: '/integrations/issues-management/youtrack' },
+								{ label: 'GitLab', link: '/integrations/issues-management/gitlab' },
+							],
+						},
+						{
+							label: 'Continuous Integration',
+							collapsed: true,
+							items: [
+								{ label: 'Overview', link: '/integrations/continuous-integration/overview' },
+								{ label: 'Jenkins', link: '/integrations/continuous-integration/jenkins' },
+								{ label: 'Atlassian Bamboo', link: '/integrations/continuous-integration/bamboo' },
+								{ label: 'GitHub Actions', link: '/integrations/continuous-integration/github' },
+								{ label: 'GitLab CI', link: '/integrations/continuous-integration/gitlab' },
+								{ label: 'Azure Pipelines', link: '/integrations/continuous-integration/azure' },
+								{ label: 'Circle CI', link: '/integrations/continuous-integration/circle' },
+								{ label: 'BitBucket Pipelines', link: '/integrations/continuous-integration/bitbucket' },
+								{ label: 'Teamcity', link: '/integrations/continuous-integration/teamcity' },
+							],
+						},
+						{
+							label: 'Report Notifications',
+							collapsed: true,
+							items: [
+								{ label: 'Notification Rules', link: '/integrations/report-notifications/rules' },
+								{ label: 'Email', link: '/integrations/report-notifications/email' },
+								{ label: 'Slack', link: '/integrations/report-notifications/slack' },
+								{ label: 'Microsoft Teams', link: '/integrations/report-notifications/ms-teams' },
+								{ label: 'Jira', link: '/integrations/report-notifications/jira' },
+							],
+						},
+						{
+							label: 'Single Sign On',
+							collapsed: true,
+							items: [
+								{ label: 'Overview', link: '/integrations/single-sign-on/overview' },
+								{ label: 'Okta', link: '/integrations/single-sign-on/okta' },
+								{ label: 'Google Workspace', link: '/integrations/single-sign-on/google' },
+								{ label: 'Azure AD', link: '/integrations/single-sign-on/azure' },
+								{ label: 'Custom SAML', link: '/integrations/single-sign-on/saml' },
+							],
+						},
+					]
 				},
 				{
 					label: 'Management',
@@ -201,10 +259,13 @@ export default defineConfig({
 							items: [
 								{ label: 'Administration', link: '/management/company/administration' },
 							],
+						},
+						{
 							label: 'Project',
 							collapsed: false,
 							items: [
 								{ label: 'Settings', link: '/management/project/settings' },
+								{ label: 'Templates', link: '/management/project/templates' },
 							],
 						},
 					]
@@ -269,5 +330,12 @@ export default defineConfig({
 		"/usage/keyboard-shortcuts": "/advanced/shortcuts/keyboard-shortcuts",
 		"/usage/living-documentation": "/advanced/living-doc/living-documentation",
 		"/contact-us/contact-us": "/support/contact-us",
+		"/integration/issues-management-systems": "/integrations/issues-management/overview",
+		"/integration/jira": "/integrations/issues-management/jira",
+		"/usage/continuous-integration": "/integrations/continuous-integration/overview",
+		"/usage/notifications": "/integrations/report-notifications/rules",
+		"/integration/sso": "/integrations/single-sign-on/overview",
+		"/usage/templates": "/management/project/templates",
+		"/usage/jira-plugin": "/advanced/jira-plugin/overview",
 	},
 });
