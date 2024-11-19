@@ -300,7 +300,7 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								{ label: 'Security Overview', link: '/legal/security/overview' },
-								{ label: 'JIRA Plugin Permissions and Security', link: '/legal/security/jira' },
+								{ label: 'JIRA Plugin Security', link: '/legal/security/jira' },
 								{ label: 'Subprocessors', link: '/legal/security/subprocessors' },
 							]
 						},
