@@ -75,11 +75,11 @@ export default defineConfig({
 						{ label: 'Start from Scratch', link: '/getting-started/start-from-scratch'},
 					],
 				},
-        {
+        			{
 					label: 'Tutorials',
 					autogenerate: { directory: 'tutorials' },        
-        },
-        {
+       				},
+        			{
 					label: 'Project',
 					items: [
 						{
@@ -289,18 +289,20 @@ export default defineConfig({
 							label: 'Compliance',
 							collapsed: true,
 							items: [
-								{ label: 'Testomat.io Compliance Overview', link: '/legal/compliance/overview' },
+								{ label: 'Compliance Overview', link: '/legal/compliance/overview' },
 								{ label: 'GDPR Commitment', link: '/legal/compliance/gdpr' },
 								{ label: 'Privacy Policy', link: '/legal/compliance/privacy' },
 								{ label: 'Terms of Service', link: '/legal/compliance/terms' },
-							],
+							]
+						},
+						{
 							label: 'Security',
 							collapsed: true,
 							items: [
-								{ label: 'Testomat.io Security Overview', link: '/legal/security/overview' },
+								{ label: 'Security Overview', link: '/legal/security/overview' },
 								{ label: 'JIRA Plugin Permissions and Security', link: '/legal/security/jira' },
 								{ label: 'Subprocessors', link: '/legal/security/subprocessors' },
-							],
+							]
 						},
 					]
 				},
