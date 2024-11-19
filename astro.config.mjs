@@ -146,11 +146,11 @@ export default defineConfig({
 						{ label: 'Living Documentation', link: '/advanced/living-doc/living-documentation' },
 						{
 							label: 'Jira Plugin',
-							collapsed: true,
+							collapsed: false,
 							items: [
 								{ label: 'Overview', link: '/advanced/jira-plugin/overview' },
-								{ label: 'Work with Tests in Jira', link: '/advanced/jira-plugin/work-in-jira' },
-								{ label: 'Work with Branches in Jira', link: '/advanced/jira-plugin/branches' },
+								{ label: 'Tests in Jira', link: '/advanced/jira-plugin/work-in-jira' },
+								{ label: 'Branches in Jira', link: '/advanced/jira-plugin/branches' },
 								{ label: 'Creating Jira Issue', link: '/advanced/jira-plugin/jira-issue' },
 							],
 						},
