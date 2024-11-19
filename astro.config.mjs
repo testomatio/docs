@@ -103,7 +103,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Steps',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Steps', link: '/project/steps-snippets/steps' },
 								{ label: 'Snippets', link: '/project/steps-snippets/snippets' },
@@ -111,7 +111,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Pulse',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/pulse/overview' },
 							],
@@ -127,7 +127,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Analytics',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/analytics/overview' },
 							],
@@ -144,11 +144,17 @@ export default defineConfig({
 						{ label: 'TQL', link: '/advanced/tql/query-language' },
 						{ label: 'Keyboard Shortcuts', link: '/advanced/shortcuts/keyboard-shortcuts' },
 						{ label: 'Living Documentation', link: '/advanced/living-doc/living-documentation' },
+						{
+							label: 'Jira Plugin',
+							collapsed: true,
+							items: [
+								{ label: 'Overview', link: '/advanced/jira-plugin/overview' },
+								{ label: 'Work with Tests in Jira', link: '/advanced/jira-plugin/work-in-jira' },
+								{ label: 'Work with Branches in Jira', link: '/advanced/jira-plugin/branches' },
+								{ label: 'Creating Jira Issue', link: '/advanced/jira-plugin/jira-issue' },
+							],
+						},
 					]
-				},
-				{
-					label: 'Usage',
-					autogenerate: { directory: 'usage' },
 				},
 				{
 					label: "Importers",
@@ -253,10 +259,13 @@ export default defineConfig({
 							items: [
 								{ label: 'Administration', link: '/management/company/administration' },
 							],
+						},
+						{
 							label: 'Project',
 							collapsed: false,
 							items: [
 								{ label: 'Settings', link: '/management/project/settings' },
+								{ label: 'Templates', link: '/management/project/templates' },
 							],
 						},
 					]
@@ -311,5 +320,7 @@ export default defineConfig({
 		"/usage/continuous-integration": "/integrations/continuous-integration/overview",
 		"/usage/notifications": "/integrations/report-notifications/rules",
 		"/integration/sso": "/integrations/single-sign-on/overview",
+		"/usage/templates": "/management/project/templates",
+		"/usage/jira-plugin": "/advanced/jira-plugin/overview",
 	},
 });

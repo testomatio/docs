@@ -23,7 +23,7 @@ To do this, follow these steps:
 
 1. Click on **Settings** in the sidebar 
 2. Click the **Project** button 
-3. Active **Administration mode
+3. Active **Administration** mode
 
 ![Testomatio.io - Project Settings](./images/New_0XUPKOcb_2024-10-05.png)
 
