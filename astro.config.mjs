@@ -96,9 +96,39 @@ export default defineConfig({
 								{ label: 'Running Tests Manually', link: '/project/runs/running-tests-manually' },
 								{ label: 'Running Automated Tests', link: '/project/runs/running-automated-tests' },
 								{ label: 'Managing Runs', link: '/project/runs/managing-runs' },
+								{
+									label: 'Reporter',
+									// collapsed: true,
+									items: [
+										{ label: 'Overview', link: '/project/runs/reporter/overview'},
+										{ label: 'NodeJS Test Frameworks', link: '/project/runs/reporter/frameworks'},
+										{ label: 'PHP Test Frameworks', link: '/project/runs/reporter/php'},
+										{ label: 'Python Test Frameworks', link: '/project/runs/reporter/python'},
+										{ label: 'Java and Other Test Frameworks', link: '/project/runs/reporter/junit'},
+										{ label: 'Test Artifacts', link: '/project/runs/reporter/artifacts'},
+										{ label: 'Configuration', link: '/project/runs/reporter/configuration'},
+										{ label: 'Functions', link: '/project/runs/reporter/functions'},
+										{ label: 'Logger', link: '/project/runs/reporter/logger'},
+										{
+											label: 'Pipes',
+											collapsed: false,
+											items: [
+												{ label: 'Overview', link: '/project/runs/reporter/pipes/overview' },
+												{ label: 'Advanced Options', link: '/project/runs/reporter/pipes/testomatio' },
+												{ label: 'GitHub', link: '/project/runs/reporter/pipes/github' },
+												{ label: 'GitLab', link: '/project/runs/reporter/pipes/gitlab' },
+												{ label: 'BitBucket', link: '/project/runs/reporter/pipes/bitbucket' },
+												{ label: 'CSV', link: '/project/runs/reporter/pipes/csv' },
+												{ label: 'HTML', link: '/project/runs/reporter/pipes/html' },
+											],
+										},
+										{ label: 'Workflows', link: '/project/runs/reporter/workflows'},
+									],
+								},
 							],
 						},
-						{ label: 'Plans', link: '/project/plans/test-plans',
+						{ 
+							label: 'Plans', link: '/project/plans/test-plans',
 							attrs: { style: 'font-size: var(--sl-text-base); color: var(--sl-color-white); font-weight: 600;'},
 						},
 						{
@@ -123,6 +153,10 @@ export default defineConfig({
 								{ label: 'Import from Source Code', link: '/project/import-export/import-tests-from-source-code' },
 								{ label: 'Import from Cucumber', link: '/project/import-export/import-tests-from-cucumber' },
 								{ label: 'Import from CSV/XLS', link: '/project/import-export/import-tests-from-csvxls' },
+								{ label: 'Import JavaScript Tests', link: '/project/import-export/import-js'},
+								{ label: 'Import Cucumber BDD Tests', link: '/project/import-export/import-bdd'},
+								{ label: 'Import PHP Tests', link: '/project/import-export/import-php'},
+								{ label: 'Automated Import', link: '/project/import-export/auto-import'},
 							],
 						},
 						{
@@ -155,44 +189,6 @@ export default defineConfig({
 							],
 						},
 					]
-				},
-				{
-					label: "Importers",
-					items: [
-						{ label: 'Import JavaScript Tests', link: '/reference/import-js'},
-						{ label: 'Import Cucumber BDD Tests', link: '/reference/import-bdd'},
-						{ label: 'Import PHP Tests', link: '/reference/import-php'},
-						{ label: 'Automated Import', link: '/workflows/import'},
-					]
-				},
-				{
-					label: 'Reporter',
-					// collapsed: true,
-					items: [
-						{ label: 'Reporter Overview', link: '/reference/reporter'},
-						{ label: 'NodeJS Test Frameworks', link: '/reference/reporter/frameworks'},
-						{ label: 'PHP Test Frameworks', link: '/reference/reporter/php'},
-						{ label: 'Python Test Frameworks', link: '/reference/reporter/python'},
-						{ label: 'Java and Other Test Frameworks', link: '/reference/reporter/junit'},
-						{ label: 'Test Artifacts', link: '/reference/reporter/artifacts'},
-						{ label: 'Configuration', link: '/reference/reporter/configuration'},
-						{ label: 'Functions', link: '/reference/reporter/functions'},
-						{ label: 'Logger', link: '/reference/reporter/logger'},
-						{
-							label: 'Pipes',
-							collapsed: false,
-							items: [
-								{ label: 'Overview', link: '/reference/reporter/pipes' },
-								{ label: 'Advanced Options', link: '/reference/reporter/pipes/testomatio' },
-								{ label: 'GitHub', link: '/reference/reporter/pipes/github' },
-								{ label: 'GitLab', link: '/reference/reporter/pipes/gitlab' },
-								{ label: 'BitBucket', link: '/reference/reporter/pipes/bitbucket' },
-								{ label: 'CSV', link: '/reference/reporter/pipes/csv' },
-								{ label: 'HTML', link: '/reference/reporter/pipes/html' },
-							],
-						},
-						{ label: 'Workflows', link: '/reference/reporter/workflows'},
-					],
 				},
 				{
 					label: 'Integrations',
@@ -257,7 +253,10 @@ export default defineConfig({
 							label: 'Company',
 							collapsed: false,
 							items: [
+								{ label: 'Overview', link: '/management/company/overview' },
 								{ label: 'Administration', link: '/management/company/administration' },
+								{ label: 'Trials', link: '/management/company/trials' },
+								{ label: 'Subscriptions', link: '/management/company/subscriptions' },
 							],
 						},
 						{
@@ -269,11 +268,6 @@ export default defineConfig({
 							],
 						},
 					]
-				},
-				{
-					label: 'Subscriptions',
-					// collapsed: true,
-					autogenerate: { directory: 'subscriptions' },
 				},
 				{
 					label: 'Legal',
@@ -339,5 +333,15 @@ export default defineConfig({
 		"/integration/sso": "/integrations/single-sign-on/overview",
 		"/usage/templates": "/management/project/templates",
 		"/usage/jira-plugin": "/advanced/jira-plugin/overview",
+		"/subscriptions/companies": "/management/company/overview",
+		"/subscriptions/subscriptions": "/management/company/subscriptions",
+		"/subscriptions/trials": "/management/company/trials",
+		"/reference/reporter/frameworks": "/project/runs/reporter/frameworks",
+		"/reference/reporter/configuration": "/project/runs/reporter/configuration",
+		"/reference/reporter/functions": "/project/runs/reporter/functions",
+		"/reference/reporter/logger": "/project/runs/reporter/logger",
+		"/reference/reporter/workflows": "/project/runs/reporter/workflows",
+		"/reference/reporter/pipes": "/project/runs/reporter/pipes/overview",
+		"/reference/reporter/pipes/testomatio": "/project/runs/reporter/pipes/testomatio",
 	},
 });
