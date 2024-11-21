@@ -28,6 +28,7 @@ Testomat.io provides integration for Issues Management Systems:
 - [ClickUp](https://docs.testomat.io/integrations/issues-management/clickup)
 - [YouTrack](https://docs.testomat.io/integrations/issues-management/youtrack)
 - [GitLab](https://docs.testomat.io/integrations/issues-management/gitlab)
+- [Shortcut](https://docs.testomat.io/integrations/issues-management/shortcut)
 
 See how to connect your Issues Management System and how to link your tests to issues below.
 

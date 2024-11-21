@@ -205,6 +205,7 @@ export default defineConfig({
 								{ label: 'ClickUp', link: '/integrations/issues-management/clickup' },
 								{ label: 'YouTrack', link: '/integrations/issues-management/youtrack' },
 								{ label: 'GitLab', link: '/integrations/issues-management/gitlab' },
+								{ label: 'Shortcut', link: '/integrations/issues-management/shortcut' },
 							],
 						},
 						{
