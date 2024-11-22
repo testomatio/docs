@@ -43,7 +43,7 @@ Also we use the following subprocessors to perform other service functions for d
 - **SendPulse:** Email and marketing activities. Location: USA. https://sendpulse.com/legal/security
 - **Sendgrid:** Email delivery. Location: USA. https://sendgrid.com/en-us/policies/security
 - **Appsignal:** Logs and monitoring. Location: Germany. https://www.appsignal.com/security
-- **Grog:** AI LLM. Location: USA. https://trust.groq.com/
+- **Groq:** AI LLM. Location: USA. https://trust.groq.com/
 - **Cohere:** AI Embeddings. Location: USA. https://trustcenter.cohere.com
 
 Before Testomat.io decides to use another company or service, we check if the company is safe, secure, and can keep information private.
