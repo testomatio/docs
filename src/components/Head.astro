@@ -14,7 +14,7 @@ const { title, description } = Astro.props.entry.data;
 const website: WithContext<WebSite> = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    title,
+    '@id': Astro.props.id,
     description,
     image: {
         '@type': 'ImageObject',
@@ -23,23 +23,45 @@ const website: WithContext<WebSite> = {
     inLanguage: Astro.props.lang,
     name: Astro.props.siteTitle,
     url: Astro.url.href,
+    "sameAs": [
+        "https://testomat.io/",
+        "https://twitter.com/testomatio",
+        "https://t.me/testomatio_chat",
+        "https://www.facebook.com/testomatio",
+        "https://join.slack.com/t/testomatio/shared_invite/zt-1ac24wnao-EICi76nXmHbW3GQH4d22uA",
+        "https://www.linkedin.com/company/testomatio",
+        "https://www.youtube.com/channel/UCjVETzkhixcVPwK7MYEb5cA/videos",
+        "https://github.com/testomatio/app",
+        "https://www.reddit.com/r/testomatio",
+    ],
 }
 
 const organization: WithContext<Organization> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': Astro.props.id,
-    description,
     image: {
         '@type': 'ImageObject',
         url: 'https://docs.testomat.io/logo.svg'
     },
+    url: Astro.url.href,
+    "sameAs": [
+        "https://testomat.io/",
+        "https://twitter.com/testomatio",
+        "https://t.me/testomatio_chat",
+        "https://www.facebook.com/testomatio",
+        "https://join.slack.com/t/testomatio/shared_invite/zt-1ac24wnao-EICi76nXmHbW3GQH4d22uA",
+        "https://www.linkedin.com/company/testomatio",
+        "https://www.youtube.com/channel/UCjVETzkhixcVPwK7MYEb5cA/videos",
+        "https://github.com/testomatio/app",
+        "https://www.reddit.com/r/testomatio",
+    ],
     logo: {
         '@type': 'ImageObject',
         url: 'https://docs.testomat.io/logo.svg'
     },
     name: Astro.props.siteTitle,
-    url: Astro.url.href,
+    description,
+    '@id': Astro.props.id,
 }
 
 const article: WithContext<Article> = {
