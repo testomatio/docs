@@ -1,6 +1,6 @@
 ---
 title: GitHub Actions
-description: Explore how to integrate continuous testing into your CI/CD pipeline using Testomat.io. This guide explains the setup process for Continuous Integration (CI), allowing users to connect their test management tool with popular CI tools like Jenkins, GitLab, and more. Learn how to automate test runs, manage reports, and streamline your testing workflows within a CI environment for effective test tracking and execution.
+description: This guide explains how to integrate GitHub Actions with Testomat.io for continuous integration. It includes creating workflows, setting up environment variables, using Testomat.io-specific input parameters, and triggering automated tests. The integration allows detailed test reporting and efficient CI workflows.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/github
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
+      content: GitHub Actions, Testomat.io, CI integration, continuous integration, test automation, workflows, input parameters, environment variables, test reporting, automated testing
 ---
 
 1. Create an [access token on GitHub](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) with access to workflow scope:

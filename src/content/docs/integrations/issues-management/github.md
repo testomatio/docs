@@ -1,6 +1,6 @@
 ---
 title: GitHub Issues Configuration
-description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
+description: Configure GitHub Issues integration in Testomat.io to create and manage issues directly from your test management system. This setup involves providing a GitHub username, API token, and repository details. Once configured, Testomat.io can link tests to issues or create defects, automatically generating tickets in GitHub with relevant testing data.
 type: article
 url: https://docs.testomat.io/integrations/issues-management/github
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects
+      content: GitHub Issues, Testomat.io, issue tracking, test management, API token, workflow integration, defect creation, test reporting
 ---
 
 ![CleanShot 2022-11-19 at 18 56 02@2x](./images/202862519-e99c8c8d-7166-4c46-8a66-bc3496bb98bb.jpg)

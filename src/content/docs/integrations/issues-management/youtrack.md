@@ -1,6 +1,6 @@
 ---
 title: YouTrack Configuration
-description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
+description: Learn how to integrate YouTrack with Testomat.io for streamlined issue management. This guide covers retrieving your YouTrack Workspace Name, Personal Access Token, and Project ID, along with detailed steps to set up and configure the integration within Testomat.io.
 type: article
 url: https://docs.testomat.io/integrations/issues-management/youtrack
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects
+      content: YouTrack integration, Testomat.io, issue tracking, personal access token, workspace configuration, project management, test management tools, software testing, bug tracking
 ---
 
 If you already have a workspace and project configured in **YouTrack**, you're ready to integrate it with Testomat.io. To get started, you’ll need your **Workspace Name**, **Personal Access Token**, and **Project ID**. We’ll walk you through each step to locate this information and connect it with Testomat.io.

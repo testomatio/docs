@@ -1,6 +1,6 @@
 ---
 title: ClickUp Configuration
-description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
+description: Learn how to integrate ClickUp with Testomat.io for efficient issue management. This guide provides step-by-step instructions to retrieve your ClickUp API token and List ID, configure Testomat.io, and connect the two systems seamlessly.
 type: article
 url: https://docs.testomat.io/integrations/issues-management/clickup
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects
+      content: ClickUp integration, Testomat.io, issue management, API token, List ID, project management, test management tools, automated testing, manual testing, software testing
 ---
 
 If you already have a workspace set up and configured in **ClickUp**, we can proceed with integrating it with Testomat.io. All you need is a **Personal Access Token** and a **List ID**. We’ll guide you step-by-step on how to retrieve this information and use it to connect with Testomat.io.

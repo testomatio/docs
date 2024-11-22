@@ -1,6 +1,6 @@
 ---
 title: Atlassian Bamboo
-description: Explore how to integrate continuous testing into your CI/CD pipeline using Testomat.io. This guide explains the setup process for Continuous Integration (CI), allowing users to connect their test management tool with popular CI tools like Jenkins, GitLab, and more. Learn how to automate test runs, manage reports, and streamline your testing workflows within a CI environment for effective test tracking and execution.
+description: This guide explains integrating Atlassian Bamboo with Testomat.io for continuous integration. It includes configuring Bamboo plans, setting environment variables, and running tests with the CodeceptJS framework. Steps to connect Bamboo to Testomat.io via API keys and enable reporting are also provided.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/bamboo
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
+      content: Atlassian Bamboo, Testomat.io, CI integration, continuous integration, CodeceptJS, test automation, API token, environment variables, test reporting, Bamboo plan setup
 ---
 
 Let's configure Bamboo CI server to work for CodeceptJS framework:

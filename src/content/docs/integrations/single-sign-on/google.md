@@ -1,6 +1,6 @@
 ---
 title: Google Workspace
-description: Set up Single Sign-On (SSO) for Testomat.io using SAML with various identity providers like Okta, Google Workspace, and Azure AD. This guide walks through configuring the connection, managing user provisioning, and securing access to Testomat.io. It ensures easy login and efficient user management for organizations on an enterprise plan.
+description: Learn how to configure Google Workspace Single Sign-On (SSO) for Testomat.io using SAML authentication. The guide explains the steps to create a custom SAML app, map user attributes, set up the SSO connection, and enable seamless access for company users.
 type: article
 url: https://docs.testomat.io/integrations/single-sign-on/google
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Single Sign-On, SSO, SAML, Okta integration, Google Workspace, Azure AD, custom SAML, identity provider, user provisioning, enterprise security
+      content: Google Workspace, Testomat.io, SSO, Single Sign-On, SAML, user authentication, identity provider, company domain, attribute mapping, test management, integration setup, security
 ---
 
 Inside Google Admin open **Apps** > **Web & Mobile Apps**:

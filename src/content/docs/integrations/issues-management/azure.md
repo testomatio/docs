@@ -1,6 +1,6 @@
 ---
 title: Azure DevOps Configuration
-description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
+description: Integrate Azure DevOps with Testomat.io for efficient issue tracking and test management. This guide explains setting up a profile using an Azure DevOps personal access token, organization name, and project name. Once connected, users can link tests or create defects directly in Azure DevOps with all necessary test data and references.
 type: article
 url: https://docs.testomat.io/integrations/issues-management/azure
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects
+      content: Azure DevOps, Testomat.io, issue tracking, test management, personal access token, defect creation, integration setup, testing workflow
 ---
 
 ![azure](./images/202862531-e95a6201-2205-48dd-84d8-3ceadf72d8fd.jpg)

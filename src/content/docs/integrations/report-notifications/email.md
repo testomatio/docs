@@ -1,6 +1,6 @@
 ---
 title: Email Notifications
-description: Learn how to configure and manage notifications in Testomat.io for various channels, including Email, Slack, MS Teams, and Jira. This guide covers setting up notification rules, both basic and advanced, and demonstrates how to send alerts based on specific test run conditions. Streamline communication with automatic notifications for failed tests, test completion, and other custom triggers.
+description: Learn how to configure email notifications in Testomat.io to receive updates on test run results. This guide covers setting notification rules, customizing fields, and managing multiple email recipients effectively.
 type: article
 url: https://docs.testomat.io/integrations/report-notifications/email
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, notifications, Email alerts, Slack notifications, MS Teams, Jira integration, notification rules, test runs, automated alerts, CI notifications, QA tools
+      content: email notifications, Testomat.io, test reports, run results, notification rules, advanced rules engine, test management, software testing, project updates
 ---
 
 Testomat.io allows sending notifications for finished runs via Email.

@@ -1,6 +1,6 @@
 ---
 title: Jira Notifications
-description: Learn how to configure and manage notifications in Testomat.io for various channels, including Email, Slack, MS Teams, and Jira. This guide covers setting up notification rules, both basic and advanced, and demonstrates how to send alerts based on specific test run conditions. Streamline communication with automatic notifications for failed tests, test completion, and other custom triggers.
+description: Configure Jira notifications in Testomat.io to automate issue creation for failed test runs. This guide explains linking Jira projects, selecting issue types, and setting notification rules to streamline workflows and save time by automating detailed test result reporting.
 type: article
 url: https://docs.testomat.io/integrations/report-notifications/jira
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, notifications, Email alerts, Slack notifications, MS Teams, Jira integration, notification rules, test runs, automated alerts, CI notifications, QA tools
+      content: Jira integration, Testomat.io, notifications, test automation, issue management, failed test runs, project management, software testing, test reporting
 ---
 
 Testomat.io allows to create Jira issue for failed test runs automatically. This option can be enabled in settings.

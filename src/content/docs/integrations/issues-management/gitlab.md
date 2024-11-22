@@ -1,6 +1,6 @@
 ---
 title: GitLab Configuration
-description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
+description: Learn how to integrate GitLab with Testomat.io for issue management. This guide walks you through obtaining your Group Name, Project ID, and Project Access Token, and configuring Testomat.io to streamline workflows.
 type: article
 url: https://docs.testomat.io/integrations/issues-management/gitlab
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects
+      content: GitLab integration, Testomat.io, issue management, project management, access token, Group Name, Project ID, software testing, test management tools
 ---
 
 If you already have a **Group** and **Project** set up and configured in **GitLab**, we can proceed with integrating it with Testomat.io. All you need is a **Group Name**, **Project ID**  and a **Project Access Token**. We’ll guide you step-by-step on how to retrieve this information and use it to connect with Testomat.io.

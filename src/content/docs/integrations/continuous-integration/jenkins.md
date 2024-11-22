@@ -1,6 +1,6 @@
 ---
 title: Jenkins
-description: Explore how to integrate continuous testing into your CI/CD pipeline using Testomat.io. This guide explains the setup process for Continuous Integration (CI), allowing users to connect their test management tool with popular CI tools like Jenkins, GitLab, and more. Learn how to automate test runs, manage reports, and streamline your testing workflows within a CI environment for effective test tracking and execution.
+description: Learn how to integrate Jenkins with Testomat.io for continuous integration. This guide covers creating Jenkins jobs, configuring parameters, triggering builds remotely, and connecting Jenkins with Testomat.io using API tokens. It also includes steps for passing environment variables for test execution and enabling on-premise setups.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/jenkins
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
+      content: Jenkins, Testomat.io, CI integration, continuous integration, API token, build configuration, test automation, environment variables, test reporting, on-premise setup, Jenkins job setup
 ---
 
 To connect Jenkins to Testomatio you will need a user and an API Token created.

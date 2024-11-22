@@ -1,6 +1,6 @@
 ---
 title: GitLab CI
-description: Explore how to integrate continuous testing into your CI/CD pipeline using Testomat.io. This guide explains the setup process for Continuous Integration (CI), allowing users to connect their test management tool with popular CI tools like Jenkins, GitLab, and more. Learn how to automate test runs, manage reports, and streamline your testing workflows within a CI environment for effective test tracking and execution.
+description: Learn how to integrate GitLab CI with Testomat.io to automate test execution and reporting. The guide covers configuring .gitlab-ci.yml, passing environment variables, and triggering pipelines for seamless CI/CD integration. It also explains setting input variables and running tests directly from the Testomat.io interface.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/gitlab
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
+      content: Testomat.io, GitLab CI, CI/CD integration, automated testing, test reporting, pipelines, environment variables, test execution, .gitlab-ci.yml, input variables
 ---
 
 #1. Add new trigger https://docs.gitlab.com/ee/ci/triggers/#trigger-a-pipeline

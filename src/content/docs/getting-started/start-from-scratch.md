@@ -1,6 +1,6 @@
 ---
 title: Start From Scratch
-description: Learn how to start from scratch with Testomat.io. Create a new project, write your first test cases, and run manual tests with detailed reporting features.
+description: This guide helps users start from scratch with Testomat.io by creating projects, writing test cases, running manual and automated tests, and analyzing results with detailed reporting and analytics. It also includes importing automated tests and tracking automation coverage for optimization.
 type: article
 url: https://docs.testomat.io/getting-started/start-from-scratch/
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Test Reporting, Test Suites, Test Cases, Test Automation, Manual Testing, Cucumber, BDD, Test Management, Analytics, Automation Coverage
+      content: Testomat.io, getting started, manual tests, automated tests, test reporting, project creation, test analytics, automation coverage, test cases, test management system
 ---
 
 <!-- 

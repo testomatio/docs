@@ -1,6 +1,6 @@
 ---
 title: Shortcut Configuration
-description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
+description: Learn how to integrate Shortcut with Testomat.io for effective issue tracking. This guide details how to retrieve your API Access Token and Workflow Name and provides step-by-step instructions to configure the Shortcut integration within Testomat.io seamlessly.
 type: article
 url: https://docs.testomat.io/integrations/issues-management/shortcut
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects
+      content: Shortcut integration, Testomat.io, issue management, API Access Token, Workflow Name, project management, test management tools, software testing, agile development
 ---
 
 If you already have a workspace configured in **Shortcut**, you're ready to integrate it with Testomat.io. To get started, you’ll need your **Workflow Name**, and **API Access Token**. We’ll walk you through each step to locate this information and connect it with Testomat.io.

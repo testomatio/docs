@@ -1,6 +1,6 @@
 ---
 title: Linear Configuration
-description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
+description: Integrate Linear with Testomat.io to streamline issue tracking directly from your test management system. This setup involves configuring a profile with your Linear Personal Access Token and team name. Once integrated, you can link tests or create defects, automatically generating tickets in Linear with testing data for easy tracking.
 type: article
 url: https://docs.testomat.io/integrations/issues-management/linear
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects
+      content: Linear integration, Testomat.io, issue tracking, Personal Access Token, defect creation, test management, team configuration, testing workflows
 ---
 
 ![CleanShot 2023-02-24 at 10 05 03@2x](./images/221125478-2a9f340a-927e-4893-9f36-a4469f6fdb09.jpg)

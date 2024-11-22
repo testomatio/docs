@@ -1,6 +1,6 @@
 ---
 title: Azure Pipelines
-description: Explore how to integrate continuous testing into your CI/CD pipeline using Testomat.io. This guide explains the setup process for Continuous Integration (CI), allowing users to connect their test management tool with popular CI tools like Jenkins, GitLab, and more. Learn how to automate test runs, manage reports, and streamline your testing workflows within a CI environment for effective test tracking and execution.
+description: Integrate Azure Pipelines with Testomat.io to automate test execution and reporting. This guide explains setting up CI connections, creating input variables, and configuring pipelines to run tests with tools like CodeceptJS, Jest, or Playwright. It also details passing custom variables and specifying branches for targeted testing.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/azure
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
+      content: Azure Pipelines, Testomat.io, CI/CD integration, automated testing, test reporting, CodeceptJS, Jest, Playwright, input variables, environment configuration
 ---
 
 1. Create a Personal Access Token in your user account with permission to Read & Execute Build
