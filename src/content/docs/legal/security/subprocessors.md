@@ -24,18 +24,26 @@ Testomat.io uses the following subprocessor for hosting customer data and provid
   - **Description/Purpose:** Cloud infrastructure
   - **Server Locations:** Germany, Netherlands
   - **Security:** https://www.digitalocean.com/security
+- **Entity:** Hetzner
+  - **Description/Purpose:** Cloud infrastructure
+  - **Server Locations:** Germany, Netherlands
+  - **Security:** [https://www.hetzner.com/unternehmen/zertifizierung/](https://www.hetzner.com/unternehmen/zertifizierung/)
+
+
 
 ## Other Subprocessors
 
 Also we use the following subprocessors to perform other service functions for different kinds of help, like customer support and payment processing:
 
-- **Crisp:** Customer support. Location: France
-- **GitHub:** Issue management. Location: USA
-- **Pipedrive:** Customer support. Location: Estonia
-- **Calendly:** Planning online meetings. Location: USA
-- **Stripe:** Payments services. Location: USA
-- **SendPulse:** Email and marketing activities. Location: USA
-- **Sendgrid:** Email delivery. Location: USA
-- **Appsignal:** Logs and monitoring. Location: Germany
+- **Crisp:** Customer support. Location: France. https://help.crisp.chat/en/category/legal-security-1t29poq/
+- **GitHub:** Issue management. Location: USA. https://github.com/security
+- **Pipedrive:** Customer support. Location: Estonia. https://www.pipedrive.com/en/trust-center
+- **Calendly:** Planning online meetings. Location: USA. https://calendly.com/security
+- **Stripe:** Payments services. Location: USA. https://stripe.com/en-pl/legal/privacy-center
+- **SendPulse:** Email and marketing activities. Location: USA. https://sendpulse.com/legal/security
+- **Sendgrid:** Email delivery. Location: USA. https://sendgrid.com/en-us/policies/security
+- **Appsignal:** Logs and monitoring. Location: Germany. https://www.appsignal.com/security
+- **Grog:** AI LLM. Location: USA. https://trust.groq.com/
+- **Cohere:** AI Embeddings. Location: USA. https://trustcenter.cohere.com
 
 Before Testomat.io decides to use another company or service, we check if the company is safe, secure, and can keep information private.
