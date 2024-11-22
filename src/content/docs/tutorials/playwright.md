@@ -1,5 +1,18 @@
 ---
 title: Playwright
+description: Learn how to integrate Playwright with Testomat.io for efficient test management and reporting. The guide covers importing Playwright tests, managing parameterized tests, reporting artifacts like screenshots and logs, enabling the Trace Viewer, and configuring parallel execution reporting for CI workflows.
+type: article
+url: https://docs.testomat.io/tutorials/playwright
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/New_b1BS3EKN_2024-08-29.DGrFkMLR_ZOOgn1.webp
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Playwright, Testomat.io, test reporting, automation, test management, artifacts, parallel execution, trace viewer, parameterized tests, S3 integration, CI workflows, test import, browser automation
 ---
 <!-- 
     ## Importing Playwright Tests

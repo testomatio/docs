@@ -1,6 +1,6 @@
 ---
 title: Bitbucket Pipelines
-description: Explore how to integrate continuous testing into your CI/CD pipeline using Testomat.io. This guide explains the setup process for Continuous Integration (CI), allowing users to connect their test management tool with popular CI tools like Jenkins, GitLab, and more. Learn how to automate test runs, manage reports, and streamline your testing workflows within a CI environment for effective test tracking and execution.
+description: Integrate Bitbucket Pipelines with Testomat.io to streamline test execution and reporting. This guide explains setting up API tokens, configuring pipeline parameters, and running tests with environment variables like TESTOMATIO. It includes instructions for handling grep options, on-premise setups, and connecting Testomat.io for seamless CI/CD integration.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/bitbucket
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
+      content: Bitbucket Pipelines, Testomat.io, CI/CD integration, automated testing, test reporting, API tokens, environment variables, test management, on-premise setups
 ---
 
 To connect Bitbucket to Testomatio you will need a API Token created. API token can be added on "Repository settings" page of current user:

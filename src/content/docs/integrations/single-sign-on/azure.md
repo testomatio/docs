@@ -1,6 +1,6 @@
 ---
 title: Azure AD
-description: Set up Single Sign-On (SSO) for Testomat.io using SAML with various identity providers like Okta, Google Workspace, and Azure AD. This guide walks through configuring the connection, managing user provisioning, and securing access to Testomat.io. It ensures easy login and efficient user management for organizations on an enterprise plan.
+description: Learn how to set up Single Sign-On (SSO) for Testomat.io with Azure AD using SAML authentication. This guide explains configuring the Azure portal, mapping user attributes, assigning users, and setting up the SSO connection in Testomat.io to enable secure and seamless user access.
 type: article
 url: https://docs.testomat.io/integrations/single-sign-on/azure
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Single Sign-On, SSO, SAML, Okta integration, Google Workspace, Azure AD, custom SAML, identity provider, user provisioning, enterprise security
+      content: Azure AD, Testomat.io, SSO, Single Sign-On, SAML, user authentication, identity provider, attribute mapping, company domain, integration setup, test management, security
 ---
 
 Open Azure portal and search for Entra ID service:

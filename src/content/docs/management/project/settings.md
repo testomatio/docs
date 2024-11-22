@@ -1,6 +1,6 @@
 ---
 title: Project setup and management
-description: You will learn how to set up and manage a project.
+description: Discover how to manage project settings in Testomat.io, including configuring the project timezone for teams across different regions. This guide outlines step-by-step instructions to adjust settings for accurate time synchronization and project administration.
 type: article
 url: https://docs.testomat.io/management/project/settings
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Project Management, Project Setup, Project Timezone
+      content: Testomat.io, project settings, timezone configuration, project management, test management tools, team collaboration, software testing, administration
 ---
 
 ## Project Timezone

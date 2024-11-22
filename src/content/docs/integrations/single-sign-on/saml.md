@@ -1,6 +1,6 @@
 ---
 title: Custom SAML
-description: Set up Single Sign-On (SSO) for Testomat.io using SAML with various identity providers like Okta, Google Workspace, and Azure AD. This guide walks through configuring the connection, managing user provisioning, and securing access to Testomat.io. It ensures easy login and efficient user management for organizations on an enterprise plan.
+description: This guide explains integrating custom SAML providers with Testomat.io for Single Sign-On (SSO). It includes steps to configure the SAML application, set user attributes like email and name, and provide necessary provider details (e.g., certificate, entity ID, login URL). Users are mapped to projects and authenticated securely.
 type: article
 url: https://docs.testomat.io/integrations/single-sign-on/saml
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Single Sign-On, SSO, SAML, Okta integration, Google Workspace, Azure AD, custom SAML, identity provider, user provisioning, enterprise security
+      content: Custom SAML, Testomat.io, SSO, Single Sign-On, SAML authentication, identity provider, user attributes, certificate, entity ID, secure login, test management, integration setup
 ---
 
 SAML providers can have different UI and different terms. In this section we will try to narrow down what configuration should be done to integrate any custom SAML provider without getting into the details.

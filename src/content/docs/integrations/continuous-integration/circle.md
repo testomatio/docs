@@ -1,6 +1,6 @@
 ---
 title: Circle CI
-description: Explore how to integrate continuous testing into your CI/CD pipeline using Testomat.io. This guide explains the setup process for Continuous Integration (CI), allowing users to connect their test management tool with popular CI tools like Jenkins, GitLab, and more. Learn how to automate test runs, manage reports, and streamline your testing workflows within a CI environment for effective test tracking and execution.
+description: Integrate CircleCI with Testomat.io to automate test execution and reporting. This guide explains configuring the config.yml workflow, setting parameters, and passing environment variables for streamlined CI integration. It covers running tests via the Testomat.io interface and accessing test reports post-execution.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/circle
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
+      content: CircleCI, Testomat.io, CI integration, automated testing, test reporting, config.yml, environment variables, CI workflows, Testomatio runs
 ---
 
 1. Create an [access token on Circle CI](https://circleci.com/docs/2.0/api-developers-guide/#add-an-api-token):

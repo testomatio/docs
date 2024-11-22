@@ -1,6 +1,6 @@
 ---
 title: Teamcity
-description: Explore how to integrate continuous testing into your CI/CD pipeline using Testomat.io. This guide explains the setup process for Continuous Integration (CI), allowing users to connect their test management tool with popular CI tools like Jenkins, GitLab, and more. Learn how to automate test runs, manage reports, and streamline your testing workflows within a CI environment for effective test tracking and execution.
+description: Integrate TeamCity with Testomat.io for automated test execution and reporting. The guide details creating projects and build configurations in TeamCity, setting up access keys, defining project parameters, and adding build steps for executing tests. It ensures seamless CI/CD workflows with direct connections to Testomat.io.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/teamcity
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
+      content: TeamCity, Testomat.io, CI/CD integration, automated testing, build configurations, access keys, test reporting, project parameters, test management
 ---
 
 Let's create a new project in your Teamcity workspace:

@@ -1,6 +1,6 @@
 ---
 title: Administration
-description: You will learn how to manage your company.
+description: This page outlines administrative controls available to company owners in Testomat.io, including managing all projects within an organization. Owners can oversee projects created by other users, add themselves to any project, and view comprehensive lists of all company projects for enhanced team management.
 type: article
 url: https://docs.testomat.io/management/company/administration
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, Company Management, Administration, Company Owner, Oversight, Control
+      content: Testomat.io, administration, company management, project oversight, team management, company owner, project control, user roles, organizational tools, test management platform
 ---
 
 ## Owner Access To Manage Team Projects
