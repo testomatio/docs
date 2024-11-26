@@ -164,3 +164,29 @@ Let's see what we can do here:
 4. Add more tests to the Run
 5. Add tests from another test plan
 6. Don't foget to save ;)
+
+## How To Track Test Time
+
+You may find it useful to track the time spent on runs and specific test cases. For this purpose, Testomat.io has developed flexible time tracking.
+
+The first thing you need to do is start a run. Сlick on the button with the stopwatch icon **(1)** and then click on the **Track** button **(2)**. Every 10 seconds will be displayed in the time record. The time is also displayed next to the title of each test case.
+
+![Testomat.io - Track Test Time](./images/New_0VGArmlZ_2024-11-26.png)
+
+You can stop the tracking time if you need to leave during the testing process. And continue in the same way when you are ready.
+
+![Testomat.io - Pause Tracking](./images/New_Ul6KGUJk_2024-11-26.png)
+
+If necessary, you can set the time manually. Сlick on the button with the stopwatch icon **(1)**, enter the time **(2)** using arrows or enter it from the keyboard and then click on the **Set Time** button **(2)**.
+
+![Testomat.io - Set Time](./images/New_LRNFE60W_2024-11-26.png)
+
+What's more, you can use the **Auto-Track** feature to automatically start the tracking process when you move on to the next test.
+
+![Testomat.io - Auto-Track](./images/New_Iul3pWTV_2024-11-26.png)
+
+At the end of the run, the report will show you the time spent on a particular test case and the total time spent on all the test cases.
+
+![Testomat.io - Run Tracked Time](./images/New_3gSGeoy2_2024-11-26.png)
+
+This can be useful for spreading the workload across all team members in future test runs.
