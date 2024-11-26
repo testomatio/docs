@@ -344,5 +344,8 @@ export default defineConfig({
 		"/reference/reporter/workflows": "/project/runs/reporter/workflows",
 		"/reference/reporter/pipes": "/project/runs/reporter/pipes/overview",
 		"/reference/reporter/pipes/testomatio": "/project/runs/reporter/pipes/testomatio",
+		"/compliance/overview/": "/legal/compliance/overview/",
+		"/security/overview/": "/legal/security/overview/",
+		
 	},
 });
