@@ -346,6 +346,6 @@ export default defineConfig({
 		"/reference/reporter/pipes/testomatio": "/project/runs/reporter/pipes/testomatio",
 		"/compliance/overview/": "/legal/compliance/overview/",
 		"/security/overview/": "/legal/security/overview/",
-		
+		"/security/subprocessors": "/legal/security/subprocessors",		
 	},
 });
