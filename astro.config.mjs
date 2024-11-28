@@ -337,6 +337,8 @@ export default defineConfig({
 		"/subscriptions/companies": "/management/company/overview",
 		"/subscriptions/subscriptions": "/management/company/subscriptions",
 		"/subscriptions/trials": "/management/company/trials",
+		"/reference/import/": "/project/import-export/import-tests-from-source-code",
+		"/reference/reporter/": "/project/runs/reporter/overview/",
 		"/reference/reporter/frameworks": "/project/runs/reporter/frameworks",
 		"/reference/reporter/configuration": "/project/runs/reporter/configuration",
 		"/reference/reporter/functions": "/project/runs/reporter/functions",
