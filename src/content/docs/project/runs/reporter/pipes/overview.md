@@ -43,11 +43,11 @@ Pipes Concepts:
 
 ### Built-in Pipes
 
-- [Testomat.io](./pipes/testomatio.md)
-- [GitHub](./pipes/github.md)
-- [Gitlab](./pipes/gitlab.md)
-- [CSV](./pipes/csv.md)
-- [Bitbucket](./pipes/bitbucket.md)
+- [Testomat.io](https://docs.testomat.io/project/runs/reporter/pipes/testomatio)
+- [GitHub](https://docs.testomat.io/project/runs/reporter/pipes/github)
+- [Gitlab](https://docs.testomat.io/project/runs/reporter/pipes/gitlab)
+- [CSV](https://docs.testomat.io/project/runs/reporter/pipes/csv)
+- [Bitbucket](https://docs.testomat.io/project/runs/reporter/pipes/bitbucket)
 
 ## Custom Pipe
 

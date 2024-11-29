@@ -349,5 +349,10 @@ export default defineConfig({
 		"/compliance/overview/": "/legal/compliance/overview/",
 		"/security/overview/": "/legal/security/overview/",
 		"/security/subprocessors": "/legal/security/subprocessors",		
+		"/usage/continious-integration": "/integrations/continuous-integration/overview",	
+		// "/usage/bdd-syntax": "",	bdd-syntax locate in not-in-use folder
+		"/reference/reporter/pipes/testomatio.html": "/project/runs/reporter/pipes/testomatio",
+		"/usage/templates.html": "/management/project/templates",
+		"/reference/reporter/frameworks.html": "/project/runs/reporter/frameworks",
 	},
 });
