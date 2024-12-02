@@ -8,7 +8,7 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/142726276-7863a036-0347-4cc6-a919-000008bffa92.BfUJRun-_Z7KOcD.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
@@ -17,7 +17,7 @@ head:
 
 To inspect a failing test additional files can be attached to a test. These files are called test artifacts. Testomat.io does not store test artifacts on its own servers. However, you can upload test artifacts to arbitrary S3 compatible storage and allow Testomat.io to display them.
 
-By using external storage Testomat.io allows getting full control over how the storage is used. You can either clean up old test artifacts or contrary extend storage to store all history for all periods. S3 was chosen as a de-facto standard for file storage so all cloud providers support it. 
+By using external storage Testomat.io allows getting full control over how the storage is used. You can either clean up old test artifacts or contrary extend storage to store all history for all periods. S3 was chosen as a de-facto standard for file storage so all cloud providers support it.
 
 ## Set Up S3 Bucket
 
@@ -25,7 +25,7 @@ To have test artifacts uploaded you need to create S3 Object Storage bucket on A
 
 <Aside type="caution" title="Important">
 
-You need to obtain the following credentials: `ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`, `BUCKET`, `REGION`, `ENDPOINT` (not required for AWS) to access S3 bucket. Then to to [Configuration](#configuration) section to enable S3 access. 
+You need to obtain the following credentials: `ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`, `BUCKET`, `REGION`, `ENDPOINT` (not required for AWS) to access S3 bucket. Then to to [Configuration](#configuration) section to enable S3 access.
 </Aside>
 
  If you are unsure how to do that, follow the next section to create S3 bucket on Backblaze and connect it to Testomat.io:
@@ -68,7 +68,7 @@ Now open Settings > Artifacts inside Testomat.io project. Enable `Private URLs` 
 Save the settings and run tests with Testomatio reporter. All stored artifacts will be uploaded so in the end of execution you should see this line:
 
 ```
-[TESTOMATIO] 🗄️ Total X artifacts privately uploaded to S3 bucket  
+[TESTOMATIO] 🗄️ Total X artifacts privately uploaded to S3 bucket
 ```
 
 ## Overview
@@ -98,12 +98,12 @@ Testomat.io will require read access to S3 storage to access those files and pre
 
 ## Configuration
 
-S3 Bucket credentials can be set in Settings > Artifacts page. 
+S3 Bucket credentials can be set in Settings > Artifacts page.
 
 Enable "Share credentials" toggle to pass credentials into reporter.
 Fill in S3 credentials into the form:
 
-* `S3_ACCESS_KEY_ID` 
+* `S3_ACCESS_KEY_ID`
 * `S3_SECRET_ACCESS_KEY`
 * `S3_REGION`
 * `S3_BUCKET`
@@ -129,7 +129,7 @@ S3_BUCKET=
 S3_ENDPOINT=
 
 ```
-> `S3_ENDPOINT` is required only if you use S3 provider other than AWS 
+> `S3_ENDPOINT` is required only if you use S3 provider other than AWS
 
 To disable publishing of artifacts use `TESTOMATIO_DISABLE_ARTIFACTS=1` environment variable.
 
@@ -183,6 +183,32 @@ To allow Testomat.io access stored files it is recommended to apply this policy 
     ]
 }
 ```
+
+If you use **Playwright** and you want to enable trace viewing ensure that CORS policy is enabled for the bucket:
+
+```
+aws s3api put-bucket-cors \
+    --bucket YOUR_BUCKET_NAME \
+    --cors-configuration '{
+    "CORSRules": [
+        {
+            "AllowedHeaders": ["*"],
+            "AllowedMethods": ["GET"],
+            "AllowedOrigins": ["https://app.testomat.io"],
+            "ExposeHeaders": ["Access-Control-Allow-Origin"],
+            "MaxAgeSeconds": 3000
+        },
+        {
+            "AllowedHeaders": ["*"],
+            "AllowedMethods": ["GET"],
+            "AllowedOrigins": ["https://trace.playwright.dev"],
+            "ExposeHeaders": ["Access-Control-Allow-Origin"],
+            "MaxAgeSeconds": 3000
+        }
+    ]
+}'
+```
+
 
 ##### DigitalOcean
 
@@ -239,7 +265,7 @@ require('dotenv').config()
 
 Testomatio Reporter automatically uploads saved artifacts for the following test frameworks:
 
-* Playwright 
+* Playwright
 * CodeceptJS
 * Сypress
 * WebdriverIO
@@ -262,5 +288,4 @@ global.testomatioArtifacts.push({ name: 'Screenshot', path: 'img/file.png' });
 
 Artifacts will be uploaded for the current test when it is finished:
 
-If everything was configured correctly test artifacts will be uploaded on the next run. 
-
+If everything was configured correctly test artifacts will be uploaded on the next run.
