@@ -8,18 +8,18 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/New_b1BS3EKN_2024-08-29.DGrFkMLR_ZOOgn1.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
       content: Playwright, Testomat.io, test reporting, automation, test management, artifacts, parallel execution, trace viewer, parameterized tests, S3 integration, CI workflows, test import, browser automation
 ---
-<!-- 
+<!--
     ## Importing Playwright Tests
-        - import playwright tests 
+        - import playwright tests
         - JS tests (link to example project)
         - TypeScript tests (link to example project)
-        - BDD tests 
+        - BDD tests
         - parametrized tests importing
         - add IDs to tests
 
@@ -29,8 +29,8 @@ head:
         - videos
         - traces (move from Reporting page)
 
-    ## Advanced 
-        - parallel run (link to parallel page) 
+    ## Advanced
+        - parallel run (link to parallel page)
 -->
 
 
@@ -144,6 +144,43 @@ Trace logs in Playwright capture a detailed sequence of browser events. Here’s
 4. In Test Run, click the test, then select `trace.zip` to open.
 
 ![Testomat.io - Open Playwright Trace Viewer](./images/Open-Playwright-Trace.gif)
+
+### Playwright Trace Viewer: Troubleshooting
+
+If traces were uploaded but you don't see them and you get error message, please grant CORS access to the bucket.
+
+If you use the AWS CLI, you can set up CORS for your bucket with the following command:
+
+```
+aws s3api put-bucket-cors \
+    --bucket YOUR_BUCKET_NAME \
+    --cors-configuration '{
+    "CORSRules": [
+        {
+            "AllowedHeaders": ["*"],
+            "AllowedMethods": ["GET"],
+            "AllowedOrigins": ["https://app.testomat.io"],
+            "ExposeHeaders": ["Access-Control-Allow-Origin"],
+            "MaxAgeSeconds": 3000
+        },
+        {
+            "AllowedHeaders": ["*"],
+            "AllowedMethods": ["GET"],
+            "AllowedOrigins": ["https://trace.playwright.dev"],
+            "ExposeHeaders": ["Access-Control-Allow-Origin"],
+            "MaxAgeSeconds": 3000
+        }
+    ]
+}'
+```
+
+If you use S3 other than AWS consider setting CORS settings otherwise. Ensure, that websites:
+
+* `https://trace.playwright.dev`
+* `https://app.testomat.io`
+
+Have access to your S3 bucket and can perform `GET` requests.
+
 
 ---
 
