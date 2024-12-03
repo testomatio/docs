@@ -1,5 +1,19 @@
 ---
-title: WebdriverIO
+title: WebdriverIO  
+description: Learn how to integrate WebdriverIO with Testomat.io for efficient test management and reporting. This guide covers importing WebdriverIO tests, managing parameterized tests, reporting artifacts like screenshots and logs, enabling detailed reporting features, and configuring parallel execution reporting for CI workflows.  
+type: article  
+url: https://docs.testomat.io/tutorials/webdriverio  
+head:  
+  - tag: meta  
+    attrs:  
+      name: og:image  
+      content: https://docs.testomat.io/_astro/New_b1BS3EKN_2024-08-29.DGrFkMLR_ZOOgn1.webp  
+
+  - tag: meta  
+    attrs:  
+      name: keywords  
+      content: WebdriverIO, Testomat.io, test reporting, automation, test management, artifacts, parallel execution, detailed reporting, parameterized tests, S3 integration, test import, browser automation  
+
 ---
 <!-- 
     ## Importing WebdriverIO Tests
