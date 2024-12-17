@@ -77,11 +77,29 @@ const article: WithContext<Article> = {
     inLanguage: Astro.props.lang,
 }
 
+const ogImageUrl = new URL(
+    `/og/${Astro.props.id.replace(/\.\w+$/, '.png')}`,
+    Astro.site,
+)
+
+const pageAlreadyHasOgImage = Astro.props.entry.data.head.some(
+    (meta) => meta.tag === 'meta' && meta.attrs['name'] === 'og:image',
+)
+
 ---
 
 <VtbotStarlight {...Astro.props}>
     <StarlightHead {...Astro.props}><slot /></StarlightHead>
 </VtbotStarlight>
+
+{!pageAlreadyHasOgImage && (
+    <>
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={ogImageUrl} />
+    </>
+)}
 
 <script>
     document.addEventListener("astro:before-swap", (e) => {

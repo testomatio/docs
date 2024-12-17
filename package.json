@@ -29,6 +29,7 @@
     "@octokit/core": "^5.1.0",
     "@pagefind/default-ui": "^1.2.0",
     "astro": "^4.16.17",
+    "astro-og-canvas": "^0.5.5",
     "astro-rehype-relative-markdown-links": "^0.17.0",
     "astro-vtbot": "^1.10.7",
     "bunosh": "^0.1.5",
