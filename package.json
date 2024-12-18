@@ -33,6 +33,7 @@
     "astro-rehype-relative-markdown-links": "^0.17.0",
     "astro-vtbot": "^1.10.7",
     "bunosh": "^0.1.5",
+    "canvaskit-wasm": "^0.39.1",
     "dotenv": "^16.4.7",
     "gray-matter": "^4.0.3",
     "meilisearch-docsearch": "^0.7.0",
