@@ -13,9 +13,6 @@ export default defineConfig({
 		service: passthroughImageService()
 	},
 	prefetch: true,
-	legacy: {
-		collections: true
-	},
 	integrations: [
 		starlight({
 			plugins: [
