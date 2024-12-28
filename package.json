@@ -30,7 +30,7 @@
     "@pagefind/default-ui": "^1.3.0",
     "astro": "^5.1.1",
     "astro-og-canvas": "^0.5.5",
-    "astro-rehype-relative-markdown-links": "^0.17.3",
+    "astro-rehype-relative-markdown-links": "^0.18.1",
     "astro-vtbot": "^1.10.7",
     "bunosh": "^0.1.5",
     "canvaskit-wasm": "^0.39.1",
