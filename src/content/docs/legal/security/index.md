@@ -2,7 +2,7 @@
 title: Testomat.io Security Overview
 description: Testomat.io’s Security Overview outlines robust measures to ensure data integrity, confidentiality, and availability. It features encryption, access controls, regular audits, and compliance with standards such as SOC 2. Security protocols include continuous monitoring, secure hosting on DigitalOcean, and regular system backups. Development and incident response practices prioritize vulnerability management and user privacy.
 type: article
-url: https://docs.testomat.io/legal/security/overview
+url: https://docs.testomat.io/legal/security
 head:
   - tag: meta
     attrs:
@@ -14,6 +14,9 @@ head:
       name: keywords
       content: Testomat.io security, data protection, encryption, SOC 2, network monitoring, secure development, access control, vulnerability management, privacy, compliance
 ---
+
+- [JIRA Plugin Permissions and Security](/legal/security/jira)
+- [Subprocessors](/legal/security/subprocessors)
 
 At Testomat.io, we prioritize the security of our users' data and information. We implement rigorous security measures and protocols to ensure the integrity, confidentiality, and availability of our users' data.
 
@@ -229,7 +232,7 @@ Check out a short summary of our privacy policy:
 - **Data Security:** The service employs commercially acceptable means to protect user data, acknowledging that no method is 100% secure.
 - **Children’s Privacy:** The service does not intentionally collect data from children under 13 and has measures to prevent such collection.
 - **Policy Changes:** Users will be notified of any changes to the Privacy Policy via email or a notice on the service.
-- **Contact:** For inquiries regarding the Privacy Policy, users can contact the company via email or the [contact page](/contact-us/contact-us) on the website.
+- **Contact:** For inquiries regarding the Privacy Policy, users can contact the company via email or the [contact page](/support) on the website.
 
 For a comprehensive understanding of our practices and your rights, we encourage you to review the full version of our Privacy Policy at [Privacy Policy](https://testomat.io/privacy). 
 

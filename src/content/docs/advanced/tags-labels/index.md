@@ -2,7 +2,7 @@
 title: Labels And Custom Fields
 description: Discover how to use labels and custom fields in Testomat.io to enhance your test management. This guide explains how to categorize and organize tests with labels, define custom fields for tailored test information, and filter by these fields for improved workflow efficiency. Learn to configure labels and custom fields to streamline testing and improve data accessibility.
 type: article
-url: https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields
+url: https://docs.testomat.io/advanced/tags-labels
 head:
   - tag: meta
     attrs:

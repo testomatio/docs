@@ -2,7 +2,7 @@
 title: Running Tests Manually
 description: Learn how to execute manual tests using Testomat.io. This guide covers creating test plans, running multi-environment tests, and executing manual tests as checklists. It also provides instructions for editing launched test runs and running automated tests manually with full test reporting and tracking.
 type: article
-url: https://docs.testomat.io/project/runs/running-tests-manually/
+url: https://docs.testomat.io/project/runs/running-tests-manually
 head:
   - tag: meta
     attrs:

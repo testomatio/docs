@@ -2,7 +2,7 @@
 title: Testomat.io Compliance Overview
 description: Testomat.io’s Compliance Overview emphasizes adherence to legal standards, ensuring trust and transparency for users. Key practices include 24/7 system monitoring, HTTPS encryption, regular updates, and strict data protection. It outlines data collection and processing protocols, ensuring compliance with global regulations while maintaining security and privacy for user data.
 type: article
-url: https://docs.testomat.io/legal/compliance/overview
+url: https://docs.testomat.io/legal/compliance
 head:
   - tag: meta
     attrs:
@@ -14,6 +14,10 @@ head:
       name: keywords
       content: Testomat.io compliance, legal standards, data protection, system monitoring, encryption, data processing, privacy, GDPR compliance, security, updates
 ---
+
+- [GDPR Commitment](/legal/compliance/gdpr)
+- [Privacy Policy](/legal/compliance/privacy)
+- [Terms of Service](/legal/compliance/terms)
 
 Compliance rules is really important to us. We work hard to make sure we meet all the legal standards and do everything right. This way, we can make sure our services are trustworthy and reliable for our users, clients, and partners.
 
@@ -71,7 +75,7 @@ Check out a short summary of our Terms of Service:
 - **Termination:** Accounts may be terminated or suspended immediately, without prior notice or liability, under the sole discretion of the company, for any breach of Terms.
 - **Governing Law:** These Terms shall be governed and construed in accordance with the laws of Krakow, Poland.
 - **Amendments To Terms:** Terms may be amended at any time, and it is the users’ responsibility to review these Terms periodically.
-- **Contact:** Feedback, comments, and requests for technical support can be sent by email by visiting the [contact page](/contact-us/contact-us) on the website.
+- **Contact:** Feedback, comments, and requests for technical support can be sent by email by visiting the [contact page](/support) on the website.
 
 For a comprehensive understanding of our terms and your rights, we encourage you to review the full version of our terms at [Terms of Service](https://testomat.io/terms). 
 

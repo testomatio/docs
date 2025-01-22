@@ -2,7 +2,7 @@
 title: Single Sign-On
 description: Set up Single Sign-On (SSO) for Testomat.io using SAML with various identity providers like Okta, Google Workspace, and Azure AD. This guide walks through configuring the connection, managing user provisioning, and securing access to Testomat.io. It ensures easy login and efficient user management for organizations on an enterprise plan.
 type: article
-url: https://docs.testomat.io/integrations/single-sign-on/overview
+url: https://docs.testomat.io/integrations/single-sign-on
 head:
   - tag: meta
     attrs:

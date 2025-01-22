@@ -2,7 +2,7 @@
 title: Issues Management Systems
 description: Learn how to integrate issues management systems like Jira, GitHub, Azure DevOps with Testomat.io. This guide covers configuring connections to these systems, creating issues from test results, and linking tests to tickets. Streamline defect management by reporting failed tests directly from the test management platform, improving traceability and issue resolution.
 type: article
-url: https://docs.testomat.io/integrations/issues-management/overview
+url: https://docs.testomat.io/integrations/issues-management
 head:
   - tag: meta
     attrs:
