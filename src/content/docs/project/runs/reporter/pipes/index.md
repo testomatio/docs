@@ -14,6 +14,14 @@ head:
       name: keywords
       content: Testomat.io, Pipes, test reporting, GitHub integration, GitLab, CSV reports, CI pipelines, custom pipes, environment variables, test frameworks
 ---
+
+- [Advanced Options](/project/runs/reporter/pipes/testomatio)
+- [Github](/project/runs/reporter/pipes/github)
+- [GitLab](/project/runs/reporter/pipes/gitlab)
+- [Bitbucket](/project/runs/reporter/pipes/bitbucket)
+- [CSV](/project/runs/reporter/pipes/csv)
+- [HTML](/project/runs/reporter/pipes/html)
+
 ## 📯 Pipes
 
 ### What are Pipes?

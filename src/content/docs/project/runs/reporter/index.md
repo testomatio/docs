@@ -15,6 +15,16 @@ head:
       content: Testomat.io, Node.js, Jest, Playwright, JUnit, test reporting, real-time reports, CI integration, test artifacts, automated testing, test management
 ---
 
+- [NodeJS Test Frameworks](/project/runs/reporter/frameworks)
+- [PHP Test Frameworks](/project/runs/reporter/php)
+- [Python Test Frameworks](/project/runs/reporter/python)
+- [JUnit Reporter](/project/runs/reporter/junit)
+- [Artifacts](/project/runs/reporter/artifacts)
+- [Configuration](/project/runs/reporter/configuration)
+- [Functions](/project/runs/reporter/functions)
+- [Logger](/project/runs/reporter/logger)
+- [Workflows](/project/runs/reporter/workflows)
+
 Testomat.io reporter is NodeJS package that sends test results to [app.testomat.io](https://app.testomat.io)
 
 ::: note

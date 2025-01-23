@@ -2,7 +2,7 @@
 title: Jira Plugin
 description: Learn how to integrate Testomat.io with Jira using the Jira plugin. This guide covers connecting Testomat.io projects to Jira, linking/unlinking tests, suites, and test plans to Jira issues, and running manual or automated tests directly from Jira. Manage BDD feature files, attach test reports, and utilize the traceability matrix for comprehensive test coverage in sprints.
 type: article
-url: https://docs.testomat.io/advanced/jira-plugin/overview
+url: https://docs.testomat.io/advanced/jira-plugin
 head:
   - tag: meta
     attrs:
@@ -14,6 +14,10 @@ head:
       name: keywords
       content: Jira plugin, Testomat.io, test management, test coverage, BDD, feature files, automated tests, manual tests, Jira integration, traceability matrix, test reporting
 ---
+
+- [Work with Tests in Jira](/advanced/jira-plugin/work-in-jira)
+- [Work with Branches in Jira](/advanced/jira-plugin/branches)
+- [Creating Jira Issue](/advanced/jira-plugin/jira-issue)
 
 The Testomat.io Jira Plugin enhances your Jira experience, enabling a host of actions to be performed directly and seamlessly from Jira, streamlining your workflow and boosting efficiency.
 

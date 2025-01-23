@@ -161,7 +161,7 @@ On this page we collect the reference to them. Learn how to install and configur
 
 ${content}`)});
 
-    const response2 = await axios.get(`https://raw.githubusercontent.com/testomatio/php-list-tests/master/README.md`);
+    const response2 = await axios.get(`https://raw.githubusercontent.com/testomatio/php-list-tests/0.2.x/README.md`);
     let content2 = (await response2.data).toString();
     content2 = content2.split('\n').slice(3).join('\n').replace(/#\s/g, '## ')
 

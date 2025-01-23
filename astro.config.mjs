@@ -65,6 +65,7 @@ export default defineConfig({
 				Head: './src/components/Head.astro',
 				SocialIcons: './src/components/Links.astro',
 				Search: './src/components/Search.astro',
+				PageTitle: './src/components/PageTitle.astro',
 
 			},
 
@@ -72,27 +73,33 @@ export default defineConfig({
 				{
 					label: 'Getting Started',
 					items: [
-						{ label: 'Start from Scratch', link: '/getting-started/start-from-scratch'},
+						{ label: 'Start from Scratch', link: '/getting-started'},
 					],
 				},
         			{
 					label: 'Tutorials',
-					autogenerate: { directory: 'tutorials' },        
+						items: [
+							{ label: 'Overview', link: '/tutorials'},
+							{ label: 'Playwright', link: '/tutorials/playwright'},
+							{ label: 'Webdriver', link: '/tutorials/webdriver'},
+						],
        				},
         			{
 					label: 'Project',
 					items: [
+						{ label: 'Overview', link: '/project' },
 						{
 							label: 'Tests',
 							collapsed: false,
 							items: [
-								{ label: 'Test Design', link: '/project/tests/test-design' },
+								{ label: 'Test Design', link: '/project/tests' },
 							],
 						},
 						{
 							label: 'Runs',
 							collapsed: false,
 							items: [
+								{ label: 'Overview', link: '/project/runs' },
 								{ label: 'Running Tests Manually', link: '/project/runs/running-tests-manually' },
 								{ label: 'Running Automated Tests', link: '/project/runs/running-automated-tests' },
 								{ label: 'Managing Runs', link: '/project/runs/managing-runs' },
@@ -100,7 +107,7 @@ export default defineConfig({
 									label: 'Reporter',
 									// collapsed: true,
 									items: [
-										{ label: 'Overview', link: '/project/runs/reporter/overview'},
+										{ label: 'Overview', link: '/project/runs/reporter'},
 										{ label: 'NodeJS Test Frameworks', link: '/project/runs/reporter/frameworks'},
 										{ label: 'PHP Test Frameworks', link: '/project/runs/reporter/php'},
 										{ label: 'Python Test Frameworks', link: '/project/runs/reporter/python'},
@@ -113,7 +120,7 @@ export default defineConfig({
 											label: 'Pipes',
 											collapsed: false,
 											items: [
-												{ label: 'Overview', link: '/project/runs/reporter/pipes/overview' },
+												{ label: 'Overview', link: '/project/runs/reporter/pipes' },
 												{ label: 'Advanced Options', link: '/project/runs/reporter/pipes/testomatio' },
 												{ label: 'GitHub', link: '/project/runs/reporter/pipes/github' },
 												{ label: 'GitLab', link: '/project/runs/reporter/pipes/gitlab' },
@@ -127,14 +134,18 @@ export default defineConfig({
 								},
 							],
 						},
-						{ 
-							label: 'Plans', link: '/project/plans/test-plans',
-							attrs: { style: 'font-size: var(--sl-text-base); color: var(--sl-color-white); font-weight: 600;'},
+						{
+							label: 'Plans',
+							collapsed: false,
+							items: [
+								{ label: 'Plans', link: '/project/plans', },
+							],
 						},
 						{
 							label: 'Steps',
 							collapsed: false,
 							items: [
+								{ label: 'Overview', link: '/project/steps-snippets' },
 								{ label: 'Steps', link: '/project/steps-snippets/steps' },
 								{ label: 'Snippets', link: '/project/steps-snippets/snippets' },
 							],
@@ -143,13 +154,14 @@ export default defineConfig({
 							label: 'Pulse',
 							collapsed: false,
 							items: [
-								{ label: 'Overview', link: '/project/pulse/overview' },
+								{ label: 'Overview', link: '/project/pulse' },
 							],
 						},
 						{
 							label: 'Import & Export',
 							collapsed: false,
 							items: [
+								{ label: 'Overview', link: '/project/import-export' },
 								{ label: 'Import from Source Code', link: '/project/import-export/import-tests-from-source-code' },
 								{ label: 'Import from Cucumber', link: '/project/import-export/import-tests-from-cucumber' },
 								{ label: 'Import from CSV/XLS', link: '/project/import-export/import-tests-from-csvxls' },
@@ -163,7 +175,7 @@ export default defineConfig({
 							label: 'Analytics',
 							collapsed: false,
 							items: [
-								{ label: 'Overview', link: '/project/analytics/overview' },
+								{ label: 'Overview', link: '/project/analytics' },
 							],
 						},
 					],
@@ -171,18 +183,62 @@ export default defineConfig({
 				{
 					label: "Advanced",
 					items: [
-						{ label: 'Tags, Labels & Custom fields', link: '/advanced/tags-labels/labels-and-custom-fields' },
-						{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder/bulk-edit' },
-						{ label: 'Branches', link: '/advanced/branches-folder/branches' },
-						{ label: 'Artifacts', link: '/advanced/artifacts/test-artifacts' },
-						{ label: 'TQL', link: '/advanced/tql/query-language' },
-						{ label: 'Keyboard Shortcuts', link: '/advanced/shortcuts/keyboard-shortcuts' },
-						{ label: 'Living Documentation', link: '/advanced/living-doc/living-documentation' },
+						{ label: 'Overview', link: '/advanced' },
+						{
+							label: 'Tags, Labels & Custom fields',
+							collapsed: false,
+							items: [
+								{ label: 'Tags, Labels & Custom fields', link: '/advanced/tags-labels' }
+							],
+						},
+						{
+							label: 'Bulk Edit',
+							collapsed: false,
+							items: [
+								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder' }
+							],
+						},
+						{
+							label: 'Branches',
+							collapsed: false,
+							items: [
+								{ label: 'Branches', link: '/advanced/branches-folder' }
+							],
+						},
+						{
+							label: 'Artifacts',
+							collapsed: false,
+							items: [
+								{ label: 'Artifacts', link: '/advanced/artifacts' }
+							],
+						},
+						{
+							label: 'TQL',
+							collapsed: false,
+							items: [
+								{ label: 'TQL', link: '/advanced/tql' }
+							],
+						},
+						{
+							label: 'Keyboard Shortcuts',
+							collapsed: false,
+							items: [
+								{ label: 'Keyboard Shortcuts', link: '/advanced/shortcuts' }
+							],
+						},
+						{
+							label: 'Living Documentation',
+							collapsed: false,
+							items: [
+								{ label: 'Living Documentation', link: '/advanced/living-doc' }
+							],
+						},
+
 						{
 							label: 'Jira Plugin',
 							collapsed: false,
 							items: [
-								{ label: 'Overview', link: '/advanced/jira-plugin/overview' },
+								{ label: 'Overview', link: '/advanced/jira-plugin' },
 								{ label: 'Tests in Jira', link: '/advanced/jira-plugin/work-in-jira' },
 								{ label: 'Branches in Jira', link: '/advanced/jira-plugin/branches' },
 								{ label: 'Creating Jira Issue', link: '/advanced/jira-plugin/jira-issue' },
@@ -193,11 +249,12 @@ export default defineConfig({
 				{
 					label: 'Integrations',
 					items: [
+						{ label: 'Overview', link: '/integrations' },
 						{
 							label: 'Issues Management',
 							collapsed: false,
 							items: [
-								{ label: 'Overview', link: '/integrations/issues-management/overview' },
+								{ label: 'Overview', link: '/integrations/issues-management' },
 								{ label: 'Jira', link: '/integrations/issues-management/jira' },
 								{ label: 'GitHub Issues', link: '/integrations/issues-management/github' },
 								{ label: 'Azure DevOps', link: '/integrations/issues-management/azure' },
@@ -212,7 +269,7 @@ export default defineConfig({
 							label: 'Continuous Integration',
 							collapsed: false,
 							items: [
-								{ label: 'Overview', link: '/integrations/continuous-integration/overview' },
+								{ label: 'Overview', link: '/integrations/continuous-integration' },
 								{ label: 'Jenkins', link: '/integrations/continuous-integration/jenkins' },
 								{ label: 'Atlassian Bamboo', link: '/integrations/continuous-integration/bamboo' },
 								{ label: 'GitHub Actions', link: '/integrations/continuous-integration/github' },
@@ -227,6 +284,7 @@ export default defineConfig({
 							label: 'Report Notifications',
 							collapsed: false,
 							items: [
+								{ label: 'Overview', link: '/integrations/report-notifications' },
 								{ label: 'Notification Rules', link: '/integrations/report-notifications/rules' },
 								{ label: 'Email', link: '/integrations/report-notifications/email' },
 								{ label: 'Slack', link: '/integrations/report-notifications/slack' },
@@ -238,7 +296,7 @@ export default defineConfig({
 							label: 'Single Sign On',
 							collapsed: false,
 							items: [
-								{ label: 'Overview', link: '/integrations/single-sign-on/overview' },
+								{ label: 'Overview', link: '/integrations/single-sign-on' },
 								{ label: 'Okta', link: '/integrations/single-sign-on/okta' },
 								{ label: 'Google Workspace', link: '/integrations/single-sign-on/google' },
 								{ label: 'Azure AD', link: '/integrations/single-sign-on/azure' },
@@ -250,11 +308,12 @@ export default defineConfig({
 				{
 					label: 'Management',
 					items: [
+						{ label: 'Overview', link: '/management' },
 						{
 							label: 'Company',
 							collapsed: false,
 							items: [
-								{ label: 'Overview', link: '/management/company/overview' },
+								{ label: 'Overview', link: '/management/company' },
 								{ label: 'Administration', link: '/management/company/administration' },
 								{ label: 'Trials', link: '/management/company/trials' },
 								{ label: 'Subscriptions', link: '/management/company/subscriptions' },
@@ -264,6 +323,7 @@ export default defineConfig({
 							label: 'Project',
 							collapsed: false,
 							items: [
+								{ label: 'Overview', link: '/management/project' },
 								{ label: 'Settings', link: '/management/project/settings' },
 								{ label: 'Templates', link: '/management/project/templates' },
 							],
@@ -273,11 +333,12 @@ export default defineConfig({
 				{
 					label: 'Legal',
 					items: [
+						{ label: 'Overview', link: '/legal' },
 						{
 							label: 'Compliance',
 							collapsed: false,
 							items: [
-								{ label: 'Compliance Overview', link: '/legal/compliance/overview' },
+								{ label: 'Compliance Overview', link: '/legal/compliance' },
 								{ label: 'GDPR', link: '/legal/compliance/gdpr' },
 								{ label: 'Privacy Policy', link: '/legal/compliance/privacy' },
 								{ label: 'Terms of Service', link: '/legal/compliance/terms' },
@@ -287,7 +348,7 @@ export default defineConfig({
 							label: 'Security',
 							collapsed: false,
 							items: [
-								{ label: 'Security Overview', link: '/legal/security/overview' },
+								{ label: 'Security Overview', link: '/legal/security' },
 								{ label: 'JIRA Plugin Security', link: '/legal/security/jira' },
 								{ label: 'Subprocessors', link: '/legal/security/subprocessors' },
 							]
@@ -298,7 +359,7 @@ export default defineConfig({
 					label: 'Support',
 					collapsed: false,
 					items: [
-						{ label: 'Contact Us', link: '/support/contact-us'},
+						{ label: 'Contact Us', link: '/support'},
 					],
 				},				
 			],
@@ -308,48 +369,48 @@ export default defineConfig({
 		rehypePlugins: [[rehypeAstroRelativeMarkdownLinks, options]],
 	},
 	redirects: {
-		"/getting-started/test-plans": "/project/plans/test-plans",
+		"/getting-started/test-plans": "/project/plans",
 		"/getting-started/import-tests-from-cucumber": "/project/import-export/import-tests-from-cucumber",
 		"/getting-started/import-tests-from-source-code": "/project/import-export/import-tests-from-source-code",
 		"/getting-started/import-tests-from-csvxls": "/project/import-export/import-tests-from-csvxls",
-		"/getting-started/test-design": "/project/tests/test-design",
+		"/getting-started/test-design": "/project/tests",
 		"/getting-started/running-tests-manually": "/project/runs/running-tests-manually",
 		"/getting-started/running-automated-tests": "/project/runs/running-automated-tests",
 		"/getting-started/managing-runs": "/project/runs/managing-runs",
 		"/usage/steps-database": "/project/steps-snippets/steps",
-		"/usage/pulse": "/project/pulse/overview",
-		"/usage/analytics": "/project/analytics/overview",
-		"/usage/labels-and-custom-fields": "/advanced/tags-labels/labels-and-custom-fields",
-		"/usage/bulk-edit": "/advanced/bulk-edit-folder/bulk-edit",
-		"/usage/branches": "/advanced/branches-folder/branches",
+		"/usage/pulse": "/project/pulse",
+		"/usage/analytics": "/project/analytics",
+		"/usage/labels-and-custom-fields": "/advanced/tags-labels",
+		"/usage/bulk-edit": "/advanced/bulk-edit-folder",
+		"/usage/branches": "/advanced/branches-folder",
 		"/usage/test-artifacts": "/advanced/artifacts/test-artifacts",
-		"/usage/query-language": "/advanced/tql/query-language",
-		"/usage/keyboard-shortcuts": "/advanced/shortcuts/keyboard-shortcuts",
-		"/usage/living-documentation": "/advanced/living-doc/living-documentation",
+		"/usage/query-language": "/advanced/tql",
+		"/usage/keyboard-shortcuts": "/advanced/shortcuts",
+		"/usage/living-documentation": "/advanced/living-doc",
 		"/contact-us/contact-us": "/support/contact-us",
-		"/integration/issues-management-systems": "/integrations/issues-management/overview",
+		"/integration/issues-management-systems": "/integrations/issues-management",
 		"/integration/jira": "/integrations/issues-management/jira",
 		"/usage/continuous-integration": "/integrations/continuous-integration/overview",
 		"/usage/notifications": "/integrations/report-notifications/rules",
-		"/integration/sso": "/integrations/single-sign-on/overview",
+		"/integration/sso": "/integrations/single-sign-on",
 		"/usage/templates": "/management/project/templates",
-		"/usage/jira-plugin": "/advanced/jira-plugin/overview",
-		"/subscriptions/companies": "/management/company/overview",
+		"/usage/jira-plugin": "/advanced/jira-plugin",
+		"/subscriptions/companies": "/management/company",
 		"/subscriptions/subscriptions": "/management/company/subscriptions",
 		"/subscriptions/trials": "/management/company/trials",
 		"/reference/import/": "/project/import-export/import-tests-from-source-code",
-		"/reference/reporter/": "/project/runs/reporter/overview/",
+		"/reference/reporter/": "/project/runs/reporter",
 		"/reference/reporter/frameworks": "/project/runs/reporter/frameworks",
 		"/reference/reporter/configuration": "/project/runs/reporter/configuration",
 		"/reference/reporter/functions": "/project/runs/reporter/functions",
 		"/reference/reporter/logger": "/project/runs/reporter/logger",
 		"/reference/reporter/workflows": "/project/runs/reporter/workflows",
-		"/reference/reporter/pipes": "/project/runs/reporter/pipes/overview",
+		"/reference/reporter/pipes": "/project/runs/reporter/pipes",
 		"/reference/reporter/pipes/testomatio": "/project/runs/reporter/pipes/testomatio",
-		"/compliance/overview/": "/legal/compliance/overview/",
-		"/security/overview/": "/legal/security/overview/",
+		"/compliance/overview/": "/legal/compliance",
+		"/security/overview/": "/legal/security",
 		"/security/subprocessors": "/legal/security/subprocessors",		
-		"/usage/continious-integration": "/integrations/continuous-integration/overview",	
+		"/usage/continious-integration": "/integrations/continuous-integration",
 		// "/usage/bdd-syntax": "",	bdd-syntax locate in not-in-use folder
 		"/reference/reporter/pipes/testomatio.html": "/project/runs/reporter/pipes/testomatio",
 		"/usage/templates.html": "/management/project/templates",

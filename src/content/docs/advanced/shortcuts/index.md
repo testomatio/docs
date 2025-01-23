@@ -2,7 +2,7 @@
 title: Keyboard Shortcuts
 description: This guide covers keyboard shortcuts in Testomat.io to enhance efficiency when creating and editing tests. It includes shortcuts for opening windows, saving, creating test cases or suites, and using markdown for formatting. Both Windows and macOS keyboard combinations are provided to streamline the workflow.
 type: article
-url: https://docs.testomat.io/advanced/shortcuts/keyboard-shortcuts
+url: https://docs.testomat.io/advanced/shortcuts
 head:
   - tag: meta
     attrs:

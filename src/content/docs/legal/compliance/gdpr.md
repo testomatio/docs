@@ -17,7 +17,7 @@ head:
 
 Testomat.io, or just Testomat, is really serious about following the GDPR rules that started on May 25, 2018. GDPR is a big deal because it helps protect people’s data in Europe. Testomat has to follow these rules because it works with people in Europe.
 
-We want our users to know that we’re doing everything we can to follow these rules. If you have questions or worries about this, you can email our legal team at [contact page](/contact-us/contact-us).
+We want our users to know that we’re doing everything we can to follow these rules. If you have questions or worries about this, you can email our legal team at [contact page](/support).
 
 ## Controls Implementation Summary
 
@@ -55,7 +55,7 @@ We want our users to know that we’re doing everything we can to follow these r
   - Users will be informed of any changes to the Privacy Policy.
 
 - **Contact:** 
-  - For inquiries regarding the Privacy Policy, users can contact the company via email or the [contact page](/contact-us/contact-us) on the website.
+  - For inquiries regarding the Privacy Policy, users can contact the company via email or the [contact page](/support) on the website.
 
 For a comprehensive understanding of our practices and your rights, we encourage you to review the full version of our Privacy Policy at [Privacy Policy](https://testomat.io/privacy). 
 
@@ -93,7 +93,7 @@ Please check https://docs.testomat.io/security/subprocessors for more details ab
 No, GDPR asks companies to protect data properly, but it doesn’t say exactly how, like saying it has to be encrypted.
 
 #### 10. **Does your app have any compliance certifications?**
-Our application has completed the CAIQ Lite Questionnaire, which provides comprehensive answers covering all compliance and security levels. We strictly adhere to all CAIQ points, ensuring that our security practices align with industry standards and best practices for safeguarding user data. We are committed to maintaining full compliance in areas such as data protection, risk management, and access control. We provide our CAIQ Lite Questionnaire responses upon request via email. [Contact](/contact-us/contact-us) our support team, and we will be happy to assist you.
+Our application has completed the CAIQ Lite Questionnaire, which provides comprehensive answers covering all compliance and security levels. We strictly adhere to all CAIQ points, ensuring that our security practices align with industry standards and best practices for safeguarding user data. We are committed to maintaining full compliance in areas such as data protection, risk management, and access control. We provide our CAIQ Lite Questionnaire responses upon request via email. [Contact](/support) our support team, and we will be happy to assist you.
 
 
 ### Note:

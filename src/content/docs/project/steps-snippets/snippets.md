@@ -2,7 +2,7 @@
 title: Snippets
 description: A snippet - is a piece of text or collection of steps that can be used as autocompletion during creating tests. This can be used for any part of a test case. 
 type: article
-url: https://docs.testomat.io/project/steps-snippets/snippets/
+url: https://docs.testomat.io/project/steps-snippets/snippets
 head:
   - tag: meta
     attrs:
