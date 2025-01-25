@@ -77,10 +77,7 @@ const article: WithContext<Article> = {
     inLanguage: Astro.props.lang,
 }
 
-const ogImageUrl = new URL(
-    `/og/${Astro.props.id.replace(/\.\w+$/, '.png')}`,
-    Astro.site,
-)
+const ogImageUrl = new URL(`/og/${Astro.props.id || 'index'}.png`, Astro.site)
 
 const pageAlreadyHasOgImage = Astro.props.entry.data.head.some(
     (meta) => meta.tag === 'meta' && meta.attrs['name'] === 'og:image',
