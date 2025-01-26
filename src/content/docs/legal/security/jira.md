@@ -53,7 +53,7 @@ Namely, you can:
 - Use tracebility matrix and reports to check test coverage in sprints and project.
 - Manage project branches.
 
-For details on how to use Testomat.io JIRA Plugin, please refer to [JIRA guide](/usage/jira-plugin) in our documentation.
+For details on how to use Testomat.io JIRA Plugin, please refer to [JIRA guide](../../advanced/jira-plugin/index.md) in our documentation.
 
 ## FAQ
 
@@ -68,4 +68,4 @@ Our application has completed the CAIQ Lite Questionnaire, which provides compre
 
 
 ## Additional Information
-For any concerns or additional information regarding the permissions and security of the Testomat.io JIRA plugin, please refer to our [Security Page](/security/overview) or [Contact](/support) support team.
+For any concerns or additional information regarding the permissions and security of the Testomat.io JIRA plugin, please refer to our [Security Page](/legal/security) or [Contact](/support) support team.

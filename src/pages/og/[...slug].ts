@@ -1,7 +1,7 @@
 import { getCollection } from 'astro:content'
 import { OGImageRoute } from 'astro-og-canvas'
 
-const logoPath = './src/pages/og/logo.png';
+const logoPath = './src/pages/og/_logo.png';
 
 const entries = await getCollection('docs')
 

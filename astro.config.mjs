@@ -2,6 +2,7 @@ import { defineConfig, passthroughImageService } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom'
 import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
+import starlightLinksValidator from 'starlight-links-validator'
 
 const options = {
 	contentPath: 'src/content/docs',
@@ -17,6 +18,11 @@ export default defineConfig({
 		starlight({
 			plugins: [
 				starlightImageZoom(),
+				starlightLinksValidator({
+					errorOnRelativeLinks: false,
+					errorOnInvalidHashes: false,
+					errorOnLocalLinks: false,
+				}),
 			],
 			title: 'Testomatio',
 			pagefind: false,
