@@ -80,4 +80,4 @@ Switch to Input variables tab and enable variables that was configured for param
 
 Click "Save" and check the connection.
 
-Now you can run a test or a group of tests via Jenkins CI. For a custom configuration read about [Environment Variables](#environment-configuration)
+Now you can run a test or a group of tests via Jenkins CI. For a custom configuration read about [Environment Variables](./index.md#environment-configuration)

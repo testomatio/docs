@@ -67,7 +67,7 @@ You will need to enter the following
 
 ![image](./images/113137542-57d9b080-922d-11eb-9672-c4a06c00255d.png)
 
-You can pass more input variables if you set them in [Environment Configuration](#environment-configuration)
+You can pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration)
 
 9. When the connection is saved, open a test and select "Run in CI". Select a target ref and click "Launch"
 

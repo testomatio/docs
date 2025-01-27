@@ -59,7 +59,7 @@ A project and plan keys can be found from URL:
 
 ![image](./images/113136335-ebaa7d00-922b-11eb-9012-72d0d9646380.png)
 
-You can pass more input variables if you set them in [Environment Configuration](#environment-configuration)
+You can pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration)
 
 3. Open Runs page (or any test or suite) then select `Run in CI` option in extra menu.
 

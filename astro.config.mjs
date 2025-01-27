@@ -21,7 +21,6 @@ export default defineConfig({
 				starlightLinksValidator({
 					errorOnRelativeLinks: false,
 					errorOnInvalidHashes: false,
-					errorOnLocalLinks: false,
 				}),
 			],
 			title: 'Testomatio',
