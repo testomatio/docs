@@ -67,7 +67,7 @@ Do not set defaults to this variable and tick "Let users override this value whe
 ```
 > If you use Jest, Playwright, Cucumber, Cypress, etc replace  `npx codeceptjs run` with the execution command of your test runner.
 
-You can pass more custom variables into a pipeline defining them in a Pipeline UI first and listing them in Testomat.io configuration as well. These variables should be set in Azure  in the same way as `grep`. See [Environment Configuration](#environment-configuration) to see how they can be configured in Testomat.io
+You can pass more custom variables into a pipeline defining them in a Pipeline UI first and listing them in Testomat.io configuration as well. These variables should be set in Azure  in the same way as `grep`. See [Environment Configuration](./index.md#environment-configuration) to see how they can be configured in Testomat.io
 
 To specify a different branch to run tests add `ref` parameter on Configuration tab specifying target ref.
 
