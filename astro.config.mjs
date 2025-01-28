@@ -1,8 +1,10 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightImageZoom from 'starlight-image-zoom'
+import starlightImageZoom from 'starlight-image-zoom';
 import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
-import starlightLinksValidator from 'starlight-links-validator'
+import starlightLinksValidator from 'starlight-links-validator';
+import { rehypeHeadingIds } from '@astrojs/markdown-remark';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 const options = {
 	contentPath: 'src/content/docs',
@@ -31,6 +33,7 @@ export default defineConfig({
 			},
 			customCss: [
 				'./src/styles/custom.css',
+				'./src/styles/headings.css',
 			],
 
       editLink: {
@@ -371,7 +374,17 @@ export default defineConfig({
 		}),
 	],
 	markdown: {
-		rehypePlugins: [[rehypeAstroRelativeMarkdownLinks, options]],
+		rehypePlugins: [
+			[rehypeAstroRelativeMarkdownLinks, options],
+			rehypeHeadingIds,
+			[
+				rehypeAutolinkHeadings,
+				{
+					behavior: 'wrap',
+				},
+			],
+
+		],
 	},
 	redirects: {
 		"/getting-started/test-plans": "/project/plans",
