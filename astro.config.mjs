@@ -433,5 +433,8 @@ export default defineConfig({
 		"/reference/reporter/pipes/testomatio.html": "/project/runs/reporter/pipes/testomatio",
 		"/usage/templates.html": "/management/project/templates",
 		"/reference/reporter/frameworks.html": "/project/runs/reporter/frameworks",
+		"/legal/compliance/overview": "/legal/compliance",
+		"/legal/security/overview": "/legal/security",
+		"/reference": "/project/runs",
 	},
 });
