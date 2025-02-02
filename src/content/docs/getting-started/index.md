@@ -85,7 +85,7 @@ Before you execute your tests, you might want to specify the run environment opt
 
 ![Testomat.io - Select test plan](./images/New_FcKm9wJz_2024-07-10.png)
 
-You will see the list of all test cases when the test execution is launched. Mark them as passed, skipped or failed. When a test check fails, you can write the description of the failure and attach a relevant image.
+You will see the list of all test cases when the test execution is launched. Mark them as passed, skipped or failed. When a test check fails, you can write the description of the failure, attach a relevant image or link/create a defect.
 
 ![Testomat.io - Execute tests](./images/New_3ccsUbOe_2024-07-10.png)
 
@@ -101,7 +101,7 @@ Or another case:
 
 ![Testomat.io - Import automated tests another way](././images/New_GhgayW5f_2024-07-25.png)
 
-In the **Import** section, you are asked to pick the framework, programming language and and operating system you are using for testing.
+In the **Import** section, you are asked to pick the framework, programming language and operating system you are using for testing.
 
 ![Testomat.io - Copy instructions](./images/New_eUYumU81_2024-07-25.png)
 
