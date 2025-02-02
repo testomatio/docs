@@ -436,5 +436,8 @@ export default defineConfig({
 		"/legal/compliance/overview": "/legal/compliance",
 		"/legal/security/overview": "/legal/security",
 		"/reference": "/project/runs",
+		"/advanced/artifacts/test-artifacts": "/advanced/artifacts",
+		"/support/contact-us": "/support",
+		"/integrations/continuous-integration/overview": "/integrations/continuous-integration",
 	},
 });
