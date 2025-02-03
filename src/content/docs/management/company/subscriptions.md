@@ -216,7 +216,7 @@ Q: Can I cancel subscription at any time?\
 A: Yes, please go to billing portal page and cancel subscription.
 
 Q: Can I manage my subscription from mobile?\
-A: No, you should use deskotp browser to access subscription, mobile version is not supported.
+A: No, you should use desktop browser to access the subscription, the mobile version is not supported.
 
 Q: I don't use testomat.io, do you refund subscription?\
 A: No, we do not issue refunds for subscriptions as outlined in our terms and conditions available at https://testomat.io/terms/. You should cancel your subscription when you find it no longer necessary. Please be advised that you take full responsibility for any actions taken within the billing portal.
