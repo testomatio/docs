@@ -23,8 +23,8 @@ Tests that are not automated (yet) can be executed by QA engineers in manual tes
 
 To launch a Manual Test Run you need: 
 
-1. Click on Run button on left-side menu
-2. Choose Manual Run button
+1. Click the Run button in the left-side menu.
+2. Select the Manual Run button
 
 ![CleanShot 2022-05-26 at 11 47 39@2x](./images/170453790-f6c2c54b-9716-4a05-b1d9-bdbf1da77836.jpg)
 
