@@ -531,7 +531,7 @@ You may need to move your tests within a project, for example to another suite. 
 
 ## How to restore deleted tests?
 
-The **Trash Bin** feature is designed to enhance data recovery and user experience by allowing users to easily restore accidentally deleted suites or test cases. This feature ensures that valuable testing data is not permanently lost and can be quickly recovered without the need for complex restoration processes.
+The **Trash Bin** feature is designed to enhance data recovery and user experience by allowing users to easily restore accidentally deleted suites or test cases. Revisions are stored for up to 90 days, ensuring that valuable testing data is not permanently lost and can be quickly recovered without the need for complex restoration processes.
 
 ![Testomat.io - Trash Bin](./images/New_vzUGVzmP_2024-08-13.gif)
 
