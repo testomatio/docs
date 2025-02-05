@@ -149,8 +149,8 @@ As your testing journey unfolds, you might encounter new scenarios that warrant 
 
 You can update your Test Run any time in few easy steps: 
 
-1. open the Run
-2. click Edit button
+1. Open the Run
+2. Click the Edit button
 
 ![Add test](./images/1.png)
 
