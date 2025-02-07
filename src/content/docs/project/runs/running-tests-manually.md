@@ -190,3 +190,25 @@ At the end of the run, the report will show you the time spent on a particular t
 ![Testomat.io - Run Tracked Time](./images/New_3gSGeoy2_2024-11-26.png)
 
 This can be useful for spreading the workload across all team members in future test runs.
+
+ ## How To Track Test Case History During One Test Run
+
+During a test run, the state or status of a test case may change multiple times. In some situations it can be important to review the history of all state changes, comments, and statuses for a specific test case before finishing the test run.
+ 
+ For this purpose, Testomat.io provides the test case history feature within the test run, displayed in chronological order beneath the selected test case.
+
+ To check the test case history, follow these steps:
+
+ 1. Open the test run
+ 2. Click 'Continue' button
+
+![Testomat.io - Test Case History](./images/test_run.png)
+
+ 3. Click on the test case to see last 3 changes
+ 4. Click the arrow to expand the whole history, if needed
+
+![Testomat.io - Test Case History](./images/test_case_history_1.png)
+
+Now you are can see the whole test case history
+
+![Testomat.io - Test Case History](./images/test_case_history_2.png)
