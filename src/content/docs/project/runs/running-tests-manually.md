@@ -165,6 +165,20 @@ Let's see what we can do here:
 5. Add tests from another test plan
 6. Don't foget to save ;)
 
+## How To Adjust Test Case Description Block
+
+In case you want to adjust the size of the test description block to see more details without scrolling or to minimize it, you can easily resize it by following these steps:
+
+1. Locate the vertical bar at the bottom of the test description block.
+2. Hover your cursor over the bar until it changes to a resize indicator (an up-and-down arrow).
+3. Click and hold the left mouse button on the bar.
+4. Drag the bar up to decrease the block size or down to increase it.
+5. Release the mouse button once you've adjusted the size to your preference.
+
+![Testomat.io - Test Case Description Block Adjustment](.images/Testcase_block_adjustment.png)
+
+This way, you can customize the view to match your workflow.
+
 ## How To Track Test Time
 
 You may find it useful to track the time spent on runs and specific test cases. For this purpose, Testomat.io has developed flexible time tracking.
