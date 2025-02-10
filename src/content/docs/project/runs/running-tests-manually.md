@@ -8,7 +8,7 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/170301515-667bf871-6c49-4059-ae3e-3e561ef92a01.CyiV0dJU_tdLPA.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
@@ -17,11 +17,11 @@ head:
 
 ## Running Tests Manually
 
-Tests that are not automated (yet) can be executed by QA engineers in manual testing mode. In this mode, a user can check manual tests and mark them as passed or failed. It is possible to create a list of tests to check in test plan and assign users to a run. 
+Tests that are not automated (yet) can be executed by QA engineers in manual testing mode. In this mode, a user can check manual tests and mark them as passed or failed. It is possible to create a list of tests to check in test plan and assign users to a run.
 
 ### **How To Run All Tests**
 
-To launch a Manual Test Run you need: 
+To launch a Manual Test Run you need:
 
 1. Click the Run button in the left-side menu
 2. Select the Manual Run button
@@ -39,7 +39,7 @@ On Manual Run screen you need:
 
 ### How To Create a Test Plan
 
-If you need to create a Test Plan you should click on + New Test Plan 
+If you need to create a Test Plan you should click on + New Test Plan
 
 ![CleanShot 2022-05-26 at 11 57 49@2x](./images/170455198-d13d4a17-9d0e-40e3-9dc6-cc4b13f4782b.jpg)
 
@@ -50,12 +50,12 @@ Or you can go to **Plans** page and create a new Test Plan there:
 Now your next steps are:
 
 1. Add a title to your Test Plan
-2. Pick a suite/ tests 
+2. Pick a suite/ tests
 3. Click on the Save Plan button
 
 ![CleanShot 2022-05-26 at 12 11 53@2x](./images/170457848-5f9b29a5-ec4f-4837-95d6-6871c2219f0a.jpg)
 
-The new Test Plan will appear on Manual Run screen 
+The new Test Plan will appear on Manual Run screen
 
 ![CleanShot 2022-05-26 at 12 16 22@2x](./images/170458242-40b1bf88-842c-421a-b562-d64370139b76.jpg)
 
@@ -99,7 +99,7 @@ Once all environments were added click on Save button
 
 ![CleanShot 2022-05-26 at 12 41 28@2x](./images/170462854-c2eb8d29-b091-4d32-a26c-da8d515d7b81.jpg)
 
-Now you have environment information updated on Manual Run screen 
+Now you have environment information updated on Manual Run screen
 
 ![CleanShot 2022-05-26 at 12 37 55@2x](./images/170462012-a1b0f380-3a36-411b-ac44-05f448bffbe9.jpg)
 
@@ -135,7 +135,7 @@ When creating Manual Test Run automated tests are disabled by default.
 
 ![CleanShot 2022-05-26 at 12 56 14@2x](./images/170465244-e499ce33-aa91-463f-8c3f-8be3dfd4abe7.jpg)
 
-But you can enable them with **Run Automated as Manual** toggle. 
+But you can enable them with **Run Automated as Manual** toggle.
 
 ![CleanShot 2022-05-26 at 13 04 30@2x](./images/170466621-1cf8b57b-6321-4bd7-97f1-19696f824cb6.jpg)
 
@@ -147,7 +147,7 @@ So can run automated tests manually as regular manual tests and see Code Descrip
 
 As your testing journey unfolds, you might encounter new scenarios that warrant immediate attention. Fear not, Testomat.io provides you with options to inject additional tests into your already launched test runs. Discover how to expand your test scope effortlessly, ensuring that even the most unforeseen scenarios are accounted for without disrupting your testing momentum.
 
-You can update your Test Run any time in few easy steps: 
+You can update your Test Run any time in few easy steps:
 
 1. Open the Run
 2. Click the Edit button
@@ -164,6 +164,29 @@ Let's see what we can do here:
 4. Add more tests to the Run
 5. Add tests from another test plan
 6. Don't foget to save ;)
+
+### **How To Reassign Multiple Test Cases**
+
+If you need to reassign test cases to a different user, you no longer have to update each test case separately. Instead, follow these easy steps:
+
+1. Open the test run
+2. Click "Continue" button
+
+![Alt text](<images/CleanShot 2025-02-09 at 16.14.15@2x.png>)
+
+3. Click Multi-Select
+4. Select the specific tests you would like to reassign
+5. Click the "Assign to" button at the bottom
+6. Select a user you would like to reassign
+7. Click "OK" in the "Are you sure you want to assign (username) to all selected tests?" pop-up window
+
+![Alt text](<images/CleanShot 2025-02-09 at 16.16.31 2@2x.png>)
+
+This feature significantly reduces manual effort and speeds up the reassignment process during test run.
+
+Let’s check how tests look like after changes.
+
+![Alt text](<images/CleanShot 2025-02-09 at 16.18.18@2x.png>)
 
 ## How To Track Test Time
 
