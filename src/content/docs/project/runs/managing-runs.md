@@ -97,7 +97,7 @@ Let's check how a table with a custom view looks like.
 
 4. Click the Settings icon to access Runs List Settings.
 
-![Alt text](<images/CleanShot 2025-02-12 at 18.02.20@2x.png>)
+![Alt text](./images/CleanShot 2025-02-12 at 18.02.20@2x.png>)
 
 Then, you can customize the table layout:
 
@@ -105,11 +105,11 @@ Then, you can customize the table layout:
 6. Set the column width (px) if needed to improve readability
 7. Click Save button to apply your changes
 
-![Alt text](<images/CleanShot 2025-02-12 at 18.13.09@2x.png>)
+![](./images/CleanShot 2025-02-12 at 18.13.09@2x.png>)
 
 Here is what the updated table looks like.
 
-![Alt text](<images/CleanShot 2025-02-12 at 18.14.49@2x.png>)
+![Alt text](./images/CleanShot 2025-02-12 at 18.14.49@2x.png>)
 ￼
 This feature allows you to personalize the table view, helping you focus on the most important details and making your workflow more efficient.
 
