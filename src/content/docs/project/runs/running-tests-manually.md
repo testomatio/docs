@@ -176,7 +176,7 @@ In case you want to adjust the size of the test description block to see more de
 4. Drag the bar up to decrease the block size or down to increase it.
 5. Release the mouse button once you've adjusted the size to your preference.
 
-![Testomat.io - Test Case Description Block Adjustment](.images/Testcase_block_adjustment.png)
+![Testomat.io - Test Case Description Block Adjustment](./images/Testcase_block_adjustment.png)
 
 This way, you can customize the view to match your workflow.
 
@@ -187,7 +187,7 @@ If you need to reassign test cases to a different user, you no longer have to up
 1. Open the test run
 2. Click "Continue" button
 
-![Alt text](<images/CleanShot 2025-02-09 at 16.14.15@2x.png>)
+![Alt text](./images/CleanShot 2025-02-09 at 16.14.15@2x.png>)
 
 3. Click Multi-Select
 4. Select the specific tests you would like to reassign
@@ -195,13 +195,13 @@ If you need to reassign test cases to a different user, you no longer have to up
 6. Select a user you would like to reassign
 7. Click "OK" in the "Are you sure you want to assign (username) to all selected tests?" pop-up window
 
-![Alt text](<images/CleanShot 2025-02-09 at 16.16.31 2@2x.png>)
+![Alt text](./images/CleanShot 2025-02-09 at 16.16.31 2@2x.png>)
 
 This feature significantly reduces manual effort and speeds up the reassignment process during test run.
 
 Let’s check how tests look like after changes.
 
-![Alt text](<images/CleanShot 2025-02-09 at 16.18.18@2x.png>)
+![Alt text](./images/CleanShot 2025-02-09 at 16.18.18@2x.png>)
 
 ## How To Track Test Time
 
@@ -232,7 +232,7 @@ This can be useful for spreading the workload across all team members in future 
  ## How To Track Test Case History During One Test Run
 
 During a test run, the state or status of a test case may change multiple times. In some situations it can be important to review the history of all state changes, comments, and statuses for a specific test case before finishing the test run.
- 
+
  For this purpose, Testomat.io provides the test case history feature within the test run, displayed in chronological order beneath the selected test case.
 
  To check the test case history, follow these steps:
