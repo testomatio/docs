@@ -97,7 +97,7 @@ Let's check how a table with a custom view looks like.
 
 4. Click the Settings icon to access Runs List Settings.
 
-![Alt text](<images/CleanShot 2025-02-12 at 18.02.20@2x.png>)
+![Alt text](./images/CleanShot 2025-02-12 at 18.02.20@2x.png>)
 
 Then, you can customize the table layout:
 
