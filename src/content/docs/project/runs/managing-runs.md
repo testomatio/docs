@@ -105,7 +105,7 @@ Then, you can customize the table layout:
 6. Set the column width (px) if needed to improve readability
 7. Click Save button to apply your changes
 
-![Alt text](<images/CleanShot 2025-02-12 at 18.13.09@2x.png>)
+![](./images/CleanShot 2025-02-12 at 18.13.09@2x.png>)
 
 Here is what the updated table looks like.
 
