@@ -109,7 +109,7 @@ Then, you can customize the table layout:
 
 Here is what the updated table looks like.
 
-![Alt text](<images/CleanShot 2025-02-12 at 18.14.49@2x.png>)
+![Alt text](./images/CleanShot 2025-02-12 at 18.14.49@2x.png>)
 ￼
 This feature allows you to personalize the table view, helping you focus on the most important details and making your workflow more efficient.
 
