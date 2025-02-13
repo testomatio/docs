@@ -411,6 +411,20 @@ After saving the changes in the edit mode, you will see a preview of the drawing
 
 ![Testomatio.io - Draw Preview](./images/New_1hpi4Xy4_2024-10-07.png)
 
+## How to Resize Attached Images in a Test Case
+
+All images attached to a test case are displayed on the preview page at their default size.
+
+To change the size of an attached image for a better view, follow these steps:
+
+1. Hover over the attachment.
+2. Click on the displayed button.
+
+![Testomatio.io - Image resize](./images/resize_image.png)
+
+By clicking on the resize button on one image, all attachments in the test case will automatically resize.
+
+
 ## How To Save Your Tests
 
 Testomat.io Editor offers options designed to streamline your test and suite management workflow. Lets have look:

@@ -179,12 +179,16 @@ Before diving into the details of variables, it's important to understand that v
 | archived          | Match runs by archived                                 | `archived`                                        |
 | unarchived        | Match runs by unarchived                               | `unarchived`                                      |
 | with_defect       | Match runs that have linked defects                    | `with_defect`                                     |
+| has_defect        | Match runs containing tests with linked defect by defect title or ID | `has_defect in [‘TST-1’ , ‘github.com#123123’]`|
+| | | `has_defect == ‘{JIRA_ID}’`|
 | has_test          | Match runs containing tests by their title or ID       | `has_test == '{TEST_ID}'`                         |
 |                   |                                                        | `has_test % 'Important test'`                     |
 | has_test_tag      | Match runs containing tests with specific tags         | `has_test_tag == 'regression'`                    |
 | has_test_label    | Match runs containing tests with specific labels       | `has_test_label == 'Automatable'`                 |
 | has_suite         | Match runs containing suites by their title or ID      | `has_suite % 'Users'`                             |
 | has_message       | Match runs containing tests with messages              | `has_message == "Result message"`                 |
+| has_custom_status | Match runs containing tests with custom status | `has_custom_status in [‘Expected behaviour’ , ‘Known issue’]` |
+| | | `has_custom_status  == ‘Expected behaviour’`|
 | has_assigned_to   | Match runs containing tests assigned to specific users | `has_assigned_to IN ['John Doe', 'Jane Smith']`   |
 | has_retries       | Match runs containing tests with retries               | `has_retries > 2`                                 |
 | has_test_duration | Match runs containing tests with specific durations    | `has_test_duration <= 1.minute`                   |
