@@ -1,6 +1,7 @@
 {
   "name": "@testomatio/docs",
   "version": "0.0.1",
+  "packageManager": "pnpm@8.15.0",
   "description": "Testomatio Documentation ",
   "main": "index.js",
   "authors": {

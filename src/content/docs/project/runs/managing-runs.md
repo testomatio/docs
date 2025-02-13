@@ -8,7 +8,7 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/New_iWaZSQo7_2024-08-03.DjYRaTwD_Ysioy.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
@@ -47,7 +47,7 @@ You can see such options here: 1. a list of tests 2. overview of all executed te
 
 ![Report Details](./images/5.png)
 
-You can sort suites by Name and by Failed status in the Overview widget. 
+You can sort suites by Name and by Failed status in the Overview widget.
 
 ![Averview widget](./images/6.gif)
 
@@ -78,11 +78,40 @@ To put Manual Run to a RunGroup you need to open it and click on Add Manual Run 
 
 ![put Manual Run](./images/10.png)
 
-To put an Automated Run to a RunGroup you need to execute your tests with Testomat.io providing TESTOMATIO_RUNGROUP_TITLE="Build ${BUILD_ID}". 
+To put an Automated Run to a RunGroup you need to execute your tests with Testomat.io providing TESTOMATIO_RUNGROUP_TITLE="Build ${BUILD_ID}".
 
 Now you can see Test Runs in a created RunGroup
 
 ![Test Runs in a created RunGroup](./images/11.png)
+
+### How to Customize Your Runs List View
+
+When working with test runs in RunGroup, you can adjust the table layout to fit your needs. Instead of using the default view, you can customize the table by following these simple steps:
+
+1. Click Runs button in the sidebar
+2. Select RunGroup
+3. Click the Custom view button
+   ￼
+
+Let's check how a table with a custom view looks like.
+
+4. Click the Settings icon to access Runs List Settings.
+
+![Alt text](./images/CleanShot 2025-02-12 at 18.02.20@2x.png>)
+
+Then, you can customize the table layout:
+
+5. Select or deselect columns to show only the data you need
+6. Set the column width (px) if needed to improve readability
+7. Click Save button to apply your changes
+
+![](./images/CleanShot 2025-02-12 at 18.13.09@2x.png>)
+
+Here is what the updated table looks like.
+
+![Alt text](./images/CleanShot 2025-02-12 at 18.14.49@2x.png>)
+￼
+This feature allows you to personalize the table view, helping you focus on the most important details and making your workflow more efficient.
 
 ### RunGroup Chart
 
@@ -134,7 +163,7 @@ Here you will need to 1. Select testing Environment 2. Enter a name for merged r
 
 ![merge runs steps](./images/15.png)
 
-Your merged run will appear in the list of runs on the Runs page 
+Your merged run will appear in the list of runs on the Runs page
 
 ![merged run](./images/16.png)
 
@@ -176,14 +205,14 @@ On the Runs page you will see a copy of your Test Run with new tests results:
 
 ## Archive Runs & Groups
 
-Archive provides you with the ability to declutter the main Runs board, ensuring that only relevant and active test runs take center stage while preserving historical data. The Runs page displays the 30 most recent Runs and Groups, while all other runs go to Archive. 
+Archive provides you with the ability to declutter the main Runs board, ensuring that only relevant and active test runs take center stage while preserving historical data. The Runs page displays the 30 most recent Runs and Groups, while all other runs go to Archive.
 
 ![Testomat.io - Archive Runs and Groups](./images/New_d9qEAJjX_2024-08-24.png)
 
 You can also forcefully archive a Run or Group. To do this you need:
 
-1. Сlick the menu button. 
-2. Click the Archive button. 
+1. Сlick the menu button.
+2. Click the Archive button.
 3. Confirm.
 
 Forcedly archived Runs and Groups get the **archived** badge!
@@ -216,11 +245,11 @@ Furthermore, you can sort the groups in a variety of ways.
 
 ### More About Archives
 
-* Automatically archived Runs and Groups can be un-archived. This allows them to be displayed on the main board.
-* When archiving a group - all runs within it get the **archived** badge.
-* If you restore from an archived group, then this group and the parent group will also be unarchived.
-* When a group is restored, all of the archived runs will be restored as well.
-* If automated run starts in archived group - this group restore from archive.
+- Automatically archived Runs and Groups can be un-archived. This allows them to be displayed on the main board.
+- When archiving a group - all runs within it get the **archived** badge.
+- If you restore from an archived group, then this group and the parent group will also be unarchived.
+- When a group is restored, all of the archived runs will be restored as well.
+- If automated run starts in archived group - this group restore from archive.
 
 ## Filtering Test Runs
 
@@ -246,11 +275,11 @@ Multiselection allows the bulk application options to many runs with one click. 
 2. Move - move runs to/from Run Group
 3. Download - export selected run reports to spreadsheet
 4. Labels - apply/remove [labels](https://docs.testomat.io/usage/labels-and-custom-fields/#how-to-setup-a-label) to runs
-5. Merge - merge selected runs 
+5. Merge - merge selected runs
 6. Compare - opens Compare runs view
 7. Archive - archive selected runs
 8. Link - link selected runs to [JIRA](https://docs.testomat.io/integration/jira/#connecting-to-jira-project), [GitHub](https://docs.testomat.io/integration/issues-management-systems/#github-issues-configuration), [Azure](https://docs.testomat.io/integration/issues-management-systems/#azure-devops-configuration),[Linear](https://docs.testomat.io/integration/issues-management-systems/#linear-configuration) or other issue.
-9. Delete - delete selected runs 
+9. Delete - delete selected runs
 
 ![Multiselection Options](./images/28.png)
 
@@ -283,13 +312,3 @@ This feature allows to pass **Runs** and **Runs Archive** filter parameters dire
 Specify the necessary filtering parameters on the **Runs** or **Runs Archive** page, copy the URL and share it with interested members.
 
 ![Testomatio.io - Share Runs Filter](./images/New_FRXL06AF_2024-10-08.png)
-
-
-
-
-
-
-
-
-
-
