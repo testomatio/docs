@@ -247,6 +247,6 @@ During a test run, the state or status of a test case may change multiple times.
 
 ![Testomat.io - Test Case History](./images/test_case_history_1.png)
 
-Now you are can see the whole test case history
+Now you can see the whole test case history
 
 ![Testomat.io - Test Case History](./images/test_case_history_2.png)

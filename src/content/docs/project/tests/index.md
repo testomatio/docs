@@ -348,6 +348,58 @@ Beyond Feature Files lies the individual tests. Here, the BDD Editor grants you 
 7. Save - save your work
 8. Close - escape the editor
 
+## **Edit Steps in Test Case Preview**
+
+After your test cases are created, Testomat.io offers a convenient feature for quick editing - **Edit Steps**. This allows you to modify steps and expected results directly from the test case preview page.
+
+To use this feature, ensure that the **Steps** title is included in the test case description. Once that is set, you will see the **Edit Steps** option near the **Steps** title.
+
+To edit steps from the test case preview window, follow these steps:
+
+1. Click the Edit Steps button.
+
+![Edit steps](./images/Edit_steps_1.png)
+
+2. Click Add Step button on displayed modal.
+
+![Edit steps](./images/Edit_steps_2.png)
+
+3. Add steps and expected results, if needed.
+4. Click Save button.
+
+![Edit steps](./images/Edit_steps_3.png)
+
+Example of test case after editing:
+
+![Edit steps](./images/Edit_steps_4.png)
+
+:::note
+
+    If you want to use the **Edit Steps** feature on a test case that already has steps added, be aware that it will affect the previous formatting!
+
+:::
+
+For example, if you used the pattern displayed below, after clicking **Edit Steps** you need to delete **Expected result** wording as it will be added automatically after you save changes.
+
+```
+## Steps
+
+* Step 1
+    Expected result: Step 1
+* Step 2
+    Expected result: Step 2
+* Step 3
+    Expected result: Step 2
+```
+
+Test Case before editing:
+
+![Edit steps](./images/Edit_steps_5.png)
+
+Test Case after editing:
+
+![Edit steps](./images/Edit_steps_6.png)
+
 ## **URL/ID Quick Copy**
 
 Depending on your needs, you can set up a convenient way to copy **URL/IDs** in **Test Cases**, **Suites** and **Runs**.
