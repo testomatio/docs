@@ -375,7 +375,7 @@ Example of test case after editing:
 
 :::note
 
-    If you want to use the **Edit Steps** feature on a test case that already has steps added, be aware that it will affect the previous formatting!
+If you want to use the **Edit Steps** feature on a test case that already has steps added, be aware that it will affect the previous formatting!
 
 :::
 
