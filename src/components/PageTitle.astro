@@ -1,11 +1,10 @@
 ---
 import Default from "@astrojs/starlight/components/PageTitle.astro";
-import type { Props } from '@astrojs/starlight/props';
 import { Breadcrumbs } from "astro-breadcrumbs";
 
 import "astro-breadcrumbs/breadcrumbs.css";
 
-const hideTitle = Astro.props.hideTitle;
+const hideTitle = Astro.locals.starlightRoute.hideTitle;
 ---
 
 <Breadcrumbs linkTextFormat="sentence">
@@ -24,7 +23,7 @@ const hideTitle = Astro.props.hideTitle;
     </svg>
 </Breadcrumbs>
 
-{!hideTitle && <Default {...Astro.props} />}
+{!hideTitle && <Default/>}
 
 <style>
 	h1 {
