@@ -1,5 +1,4 @@
 ---
-import type { Props } from '@astrojs/starlight/props';
 import StarlightHead from '@astrojs/starlight/components/Head.astro';
 import VtbotStarlight from 'astro-vtbot/components/starlight/Base.astro';
 import type {
@@ -9,19 +8,19 @@ import type {
     WithContext
 } from 'schema-dts'
 
-const { title, description } = Astro.props.entry.data;
+const { title, description } = Astro.locals.starlightRoute.entry.data;
 
 const website: WithContext<WebSite> = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': Astro.props.id,
+    '@id': Astro.locals.starlightRoute.id,
     description,
     image: {
         '@type': 'ImageObject',
         url: 'https://docs.testomat.io/logo.svg'
     },
-    inLanguage: Astro.props.lang,
-    name: Astro.props.siteTitle,
+    inLanguage: Astro.locals.starlightRoute.lang,
+    name: Astro.locals.starlightRoute.siteTitle,
     url: Astro.url.href,
     "sameAs": [
         "https://testomat.io/",
@@ -59,9 +58,9 @@ const organization: WithContext<Organization> = {
         '@type': 'ImageObject',
         url: 'https://docs.testomat.io/logo.svg'
     },
-    name: Astro.props.siteTitle,
+    name: Astro.locals.starlightRoute.siteTitle,
     description,
-    '@id': Astro.props.id,
+    '@id': Astro.locals.starlightRoute.id,
 }
 
 const article: WithContext<Article> = {
@@ -74,19 +73,19 @@ const article: WithContext<Article> = {
         '@type': 'ImageObject',
         url: 'https://docs.testomat.io/logo.svg'
     },
-    inLanguage: Astro.props.lang,
+    inLanguage: Astro.locals.starlightRoute.lang,
 }
 
-const ogImageUrl = new URL(`/og/${Astro.props.id || 'index'}.png`, Astro.site)
+const ogImageUrl = new URL(`/og/${Astro.locals.starlightRoute.id || 'index'}.png`, Astro.site)
 
-const pageAlreadyHasOgImage = Astro.props.entry.data.head.some(
+const pageAlreadyHasOgImage = Astro.locals.starlightRoute.entry.data.head.some(
     (meta) => meta.tag === 'meta' && meta.attrs['name'] === 'og:image',
 )
 
 ---
 
-<VtbotStarlight {...Astro.props}>
-    <StarlightHead {...Astro.props}><slot /></StarlightHead>
+<VtbotStarlight>
+    <StarlightHead><slot /></StarlightHead>
 </VtbotStarlight>
 
 {!pageAlreadyHasOgImage && (

@@ -439,5 +439,6 @@ export default defineConfig({
 		"/advanced/artifacts/test-artifacts": "/advanced/artifacts",
 		"/support/contact-us": "/support",
 		"/integrations/continuous-integration/overview": "/integrations/continuous-integration",
+		"/reference/import-js": "/project/import-export/import-js",
 	},
 });
