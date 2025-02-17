@@ -194,8 +194,43 @@ Some example:
     3. Verify that CVV code is accepted
 * Submit payment and confirmation page loads
     1. Verify that Payment is processed
-
 ```
+
+:::note
+
+In case you use numbered list for your steps and unordered list for expected result or sub-steps, to see the correct formatting, **add 4 spaces or 1 tab** before unordered list. Check the relevant case below.
+
+:::
+```
+## Steps
+
+1. Step 1
+    - Expected result: Step 1.1
+    - Expected result: Step 1.2
+2. Step 2
+    - Expected result: Step 2.1
+    - Expected result: Step 2.2
+3. Step 3
+    - Expected result: Step 3.1
+    - Expected result: Step 3.1
+```
+
+Some example:
+```
+## Steps
+
+1.  Go to the payment page
+    - Verify that Payment page loads
+    - Verify that payment page matches the design
+2. Enter credit card details and submit
+    - Verify that Credit card number is accepted
+    - Verify that Expiration date is accepted
+    - Verify that CVV code is accepted
+3. Submit payment and confirmation page loads
+    - Verify that Payment is processed
+```
+
+![Edit Test Case](./images/Edit_test_case_numbered_list.gif)
 
 ---
 ### Steps with Separated Expected Results
