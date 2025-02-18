@@ -39,17 +39,17 @@ head:
 -->
 
 
-# WebDriver Integration with Testomat.io
+# WebdriverIO Integration with Testomat.io
 
 WebdriverIO is an all in one framework for your web app development. It enables you to run small and lightweight component tests as well as running e2e test scenarios in the browser or on a mobile device. This guarantees that you to do the testing in an environment used by your users.
 
-This guide demonstrates how to integrate WebDriver with [Testomat.io](https://app.testomat.io) for efficient test management and detailed reporting.
+This guide demonstrates how to integrate WebdriverIO with [Testomat.io](https://app.testomat.io) for efficient test management and detailed reporting.
 
 ---
 
-## Importing WebDriver Tests
+## Importing WebdriverIO Tests
 
-You can easily import your WebDriver tests into Testomat.io on the **Imports** page.
+You can easily import your WebdriverIO tests into Testomat.io on the **Imports** page.
 
 ![Testomat.io - Import Project from Source Code](./images/wdio-import.png)
 
@@ -66,11 +66,11 @@ You can easily import your WebDriver tests into Testomat.io on the **Imports** p
 - **Disable Detached Tests**: Disables tests marked as detached.
 - **Prefer Source Code Structure**: Maintains your project’s source code structure in the test hierarchy.
 
-![Testomat.io - Set up WebDriver project import](./images/wdio-import2.png)
+![Testomat.io - Set up WebdriverIO project import](./images/wdio-import2.png)
 
 After setting up, copy the generated command and run it in your project’s terminal. Your tests will then appear on the Tests page in Testomat.io.
 
-**Example**: Try importing using the [Testomat.io WebDriver example project](https://github.com/testomatio/examples/tree/master/wdio/v8).
+**Example**: Try importing using the [Testomat.io WebdriverIO example project](https://github.com/testomatio/examples/tree/master/wdio/v8).
 
 For more details, refer to the [Import Tests from Source Code documentation](https://docs.testomat.io/getting-started/import-tests-from-source-code/).
 
@@ -121,7 +121,7 @@ IDs will be automatically assigned in your code and appear in Testomat.io.
 
 ---
 
-## Reporting WebDriver Tests
+## Reporting WebdriverIO Tests
 
 WebdriverIO allows you to leverage various types of reports, including screenshots, to improve error detection and debugging. Here's how you can enhance your testing workflow:
 
@@ -160,7 +160,7 @@ Artifacts like screenshots, videos, and logs are essential for debugging. With t
 
 #### Steps to Configure Artifacts:
 
-1. Enable options in WebDriver (e.g., `takeScreenshot`, `captureLogs`).
+1. Enable options in WebdriverIO (e.g., `takeScreenshot`, `captureLogs`).
 2. Link your S3 bucket with Testomat.io.
 3. Access artifacts in Testomat.io for easy debugging.
 
@@ -201,4 +201,4 @@ TESTOMATIO_SHARED_RUN_TIMEOUT=120 TESTOMATIO_SHARED_RUN=1 <actual run command>
 
 ---
 
-This guide outlines the process of integrating WebDriver with Testomat.io for effective test management and reporting. For more information, visit the [Testomat.io Documentation](https://testomat.io/documentation).
+This guide outlines the process of integrating WebdriverIO with Testomat.io for effective test management and reporting. For more information, visit the [Testomat.io Documentation](https://testomat.io/documentation).
