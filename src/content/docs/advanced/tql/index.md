@@ -194,6 +194,7 @@ Before diving into the details of variables, it's important to understand that v
 | has_test_duration | Match runs containing tests with specific durations    | `has_test_duration <= 1.minute`                   |
 | created_at        | Match runs by creation time                            | `created_at <= 1.week_ago`                        |
 | updated_at        | Match runs by last update                              | `updated_at >= 5.days_ago`                        |
+| launched_at       | Match runs by launch time                              | `launched_at > 2.days_ago AND launched_at < 1000.seconds_ago`|
 | finished_at       | Match runs by finish time                              | `finished_at < 7.days_ago`                        |
 
 #### Examples
