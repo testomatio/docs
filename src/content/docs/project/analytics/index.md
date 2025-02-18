@@ -23,7 +23,25 @@ As a test management system, Testomat.io Team intends to provide our users with 
 
 Testomat.io tracks your automated and manual tests, aggregates their statuses history, analyzes them, defines tests by Analytics categories, and shows them to you. You can configure these metrics. So you can give a more precise glance to prevent bugs. This also means that Analytics widgets are updated and supplemented with each completed Test Run.
 
-Let's have more close look at it!
+All available widgets are selected and displayed on the main analytics board by default. However, you can customize your board by selecting/unselecting widgets to meet your specific needs.
+
+To change the board view, follow these steps:
+
+1. Go to Settings.
+2. Select the widgets you need.
+3. Click Save button.
+
+![Testomat.io - Analytics board set up](./images/set_up_board.gif)
+
+To restore all settings to default:
+
+1. Go to Settings.
+2. Click Default.
+3. Click Save button.
+
+![Testomat.io - Analytics board default](./images/default_board.gif)
+
+Let's have more close look at each widget!
 
 ## Analytics range 
 
