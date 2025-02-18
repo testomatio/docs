@@ -89,7 +89,7 @@ export default defineConfig({
 						items: [
 							{ label: 'Overview', link: '/tutorials'},
 							{ label: 'Playwright', link: '/tutorials/playwright'},
-							{ label: 'Webdriver', link: '/tutorials/webdriver'},
+							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
 						],
        				},
         			{
