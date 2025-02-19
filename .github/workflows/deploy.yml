@@ -35,9 +35,7 @@ jobs:
   #         accountId: 60b76f40370d8320885e92e3daa114b1
   #         projectName: docs
   #         directory: dist
-
   run-scraper:
-    needs: deploy
     name: Run Search Scraper
     runs-on: ubuntu-latest
     steps:
@@ -47,6 +45,7 @@ jobs:
         HOST_URL: ${{ secrets.MEILISEARCH_HOST_URL }}
         API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
       run: |
+        sleep 30
         docker run -t --rm \
           -e MEILISEARCH_HOST_URL=$HOST_URL \
           -e MEILISEARCH_API_KEY=$API_KEY \
