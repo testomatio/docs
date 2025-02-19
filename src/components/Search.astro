@@ -1,7 +1,6 @@
 ---
 import "meilisearch-docsearch/css";
 const apiKey = import.meta.env.PUBLIC_MEILISEARCH_KEY;
-const hostUrl = import.meta.env.PUBLIC_MEILISEARCH_HOST_URL;
 ---
 
 <div id="docsearch"></div>
@@ -16,7 +15,7 @@ src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"
     const { docsearch } = window.__docsearch_meilisearch__;
     docsearch({
         container: "#docsearch",
-        host: hostUrl,
+        host: 'https://search.testomat.io',
         apiKey: apiKey,
         indexUid: "docs",
     });
