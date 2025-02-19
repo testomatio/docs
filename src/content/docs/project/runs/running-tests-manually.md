@@ -184,24 +184,26 @@ This way, you can customize the view to match your workflow.
 
 If you need to reassign test cases to a different user, you no longer have to update each test case separately. Instead, follow these easy steps:
 
-1. Open the test run
-2. Click "Continue" button
+1. Click "Runs" button at the sidebar
+2. Open the test run
+3. Click "Continue" button
 
-![Alt text](./images/CleanShot 2025-02-09 at 16.14.15@2x.png>)
+![reassign test cases](images/att1_1054.png)
 
-3. Click Multi-Select
-4. Select the specific tests you would like to reassign
-5. Click the "Assign to" button at the bottom
-6. Select a user you would like to reassign
-7. Click "OK" in the "Are you sure you want to assign (username) to all selected tests?" pop-up window
+4. Click Multi-Select
+5. Select the specific tests you would like to reassign
+6. Click the "Assign to" button at the bottom
+7. Select a user you would like to reassign
+8. Click "OK" in the "Are you sure you want to assign (username) to all selected tests?" pop-up window
 
-![Alt text](./images/CleanShot 2025-02-09 at 16.16.31 2@2x.png>)
+![reassign test cases](images/att2_1054.png)
+
 
 This feature significantly reduces manual effort and speeds up the reassignment process during test run.
 
 Let’s check how tests look like after changes.
 
-![Alt text](./images/CleanShot 2025-02-09 at 16.18.18@2x.png>)
+![reassign test cases](images/att3_1054.png)
 
 ## How To Track Test Time
 
