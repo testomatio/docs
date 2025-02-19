@@ -89,7 +89,7 @@ export default defineConfig({
 						items: [
 							{ label: 'Overview', link: '/tutorials'},
 							{ label: 'Playwright', link: '/tutorials/playwright'},
-							{ label: 'Webdriver', link: '/tutorials/webdriver'},
+							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
 						],
        				},
         			{
@@ -439,5 +439,6 @@ export default defineConfig({
 		"/advanced/artifacts/test-artifacts": "/advanced/artifacts",
 		"/support/contact-us": "/support",
 		"/integrations/continuous-integration/overview": "/integrations/continuous-integration",
+		"/reference/import-js": "/project/import-export/import-js",
 	},
 });

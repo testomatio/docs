@@ -165,6 +165,21 @@ Let's see what we can do here:
 5. Add tests from another test plan
 6. Don't foget to save ;)
 
+
+## How To Adjust Test Case Description Block
+
+In case you want to adjust the size of the test description block to see more details without scrolling or to minimize it, you can easily resize it by following these steps:
+
+1. Locate the vertical bar at the bottom of the test description block.
+2. Hover your cursor over the bar until it changes to a resize indicator (an up-and-down arrow).
+3. Click and hold the left mouse button on the bar.
+4. Drag the bar up to decrease the block size or down to increase it.
+5. Release the mouse button once you've adjusted the size to your preference.
+
+![Testomat.io - Test Case Description Block Adjustment](./images/Testcase_block_adjustment.png)
+
+This way, you can customize the view to match your workflow.
+
 ### **How To Reassign Multiple Test Cases**
 
 If you need to reassign test cases to a different user, you no longer have to update each test case separately. Instead, follow these easy steps:
@@ -182,6 +197,7 @@ If you need to reassign test cases to a different user, you no longer have to up
 8. Click "OK" in the "Are you sure you want to assign (username) to all selected tests?" pop-up window
 
 ![reassign test cases](images/att2_1054.png)
+
 
 This feature significantly reduces manual effort and speeds up the reassignment process during test run.
 
@@ -214,3 +230,25 @@ At the end of the run, the report will show you the time spent on a particular t
 ![Testomat.io - Run Tracked Time](./images/New_3gSGeoy2_2024-11-26.png)
 
 This can be useful for spreading the workload across all team members in future test runs.
+
+ ## How To Track Test Case History During One Test Run
+
+During a test run, the state or status of a test case may change multiple times. In some situations it can be important to review the history of all state changes, comments, and statuses for a specific test case before finishing the test run.
+
+ For this purpose, Testomat.io provides the test case history feature within the test run, displayed in chronological order beneath the selected test case.
+
+ To check the test case history, follow these steps:
+
+ 1. Open the test run
+ 2. Click 'Continue' button
+
+![Testomat.io - Test Case History](./images/test_run.png)
+
+ 3. Click on the test case to see last 3 changes
+ 4. Click the arrow to expand the whole history, if needed
+
+![Testomat.io - Test Case History](./images/test_case_history_1.png)
+
+Now you can see the whole test case history
+
+![Testomat.io - Test Case History](./images/test_case_history_2.png)

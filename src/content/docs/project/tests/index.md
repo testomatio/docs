@@ -194,8 +194,43 @@ Some example:
     3. Verify that CVV code is accepted
 * Submit payment and confirmation page loads
     1. Verify that Payment is processed
-
 ```
+
+:::note
+
+In case you use numbered list for your steps and unordered list for expected result or sub-steps, to see the correct formatting, **add 4 spaces or 1 tab** before unordered list. Check the relevant case below.
+
+:::
+```
+## Steps
+
+1. Step 1
+    - Expected result: Step 1.1
+    - Expected result: Step 1.2
+2. Step 2
+    - Expected result: Step 2.1
+    - Expected result: Step 2.2
+3. Step 3
+    - Expected result: Step 3.1
+    - Expected result: Step 3.1
+```
+
+Some example:
+```
+## Steps
+
+1.  Go to the payment page
+    - Verify that Payment page loads
+    - Verify that payment page matches the design
+2. Enter credit card details and submit
+    - Verify that Credit card number is accepted
+    - Verify that Expiration date is accepted
+    - Verify that CVV code is accepted
+3. Submit payment and confirmation page loads
+    - Verify that Payment is processed
+```
+
+![Edit Test Case](./images/Edit_test_case_numbered_list.gif)
 
 ---
 ### Steps with Separated Expected Results
@@ -348,6 +383,58 @@ Beyond Feature Files lies the individual tests. Here, the BDD Editor grants you 
 7. Save - save your work
 8. Close - escape the editor
 
+## **Edit Steps in Test Case Preview**
+
+After your test cases are created, Testomat.io offers a convenient feature for quick editing - **Edit Steps**. This allows you to modify steps and expected results directly from the test case preview page.
+
+To use this feature, ensure that the **Steps** title is included in the test case description. Once that is set, you will see the **Edit Steps** option near the **Steps** title.
+
+To edit steps from the test case preview window, follow these steps:
+
+1. Click the Edit Steps button.
+
+![Edit steps](./images/Edit_steps_1.png)
+
+2. Click Add Step button on displayed modal.
+
+![Edit steps](./images/Edit_steps_2.png)
+
+3. Add steps and expected results, if needed.
+4. Click Save button.
+
+![Edit steps](./images/Edit_steps_3.png)
+
+Example of test case after editing:
+
+![Edit steps](./images/Edit_steps_4.png)
+
+:::note
+
+If you want to use the **Edit Steps** feature on a test case that already has steps added, be aware that it will affect the previous formatting!
+
+:::
+
+For example, if you used the pattern displayed below, after clicking **Edit Steps** you need to delete **Expected result** wording as it will be added automatically after you save changes.
+
+```
+## Steps
+
+* Step 1
+    Expected result: Step 1
+* Step 2
+    Expected result: Step 2
+* Step 3
+    Expected result: Step 2
+```
+
+Test Case before editing:
+
+![Edit steps](./images/Edit_steps_5.png)
+
+Test Case after editing:
+
+![Edit steps](./images/Edit_steps_6.png)
+
 ## **URL/ID Quick Copy**
 
 Depending on your needs, you can set up a convenient way to copy **URL/IDs** in **Test Cases**, **Suites** and **Runs**.
@@ -410,6 +497,20 @@ You'll see a window with a set of drawing tools. You can select different elemen
 After saving the changes in the edit mode, you will see a preview of the drawing in the test case description:
 
 ![Testomatio.io - Draw Preview](./images/New_1hpi4Xy4_2024-10-07.png)
+
+## How to Resize Attached Images in a Test Case
+
+All images attached to a test case are displayed on the preview page at their default size.
+
+To change the size of an attached image for a better view, follow these steps:
+
+1. Hover over the attachment.
+2. Click on the displayed button.
+
+![Testomatio.io - Image resize](./images/resize_image.png)
+
+By clicking on the resize button on one image, all attachments in the test case will automatically resize.
+
 
 ## How To Save Your Tests
 

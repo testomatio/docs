@@ -129,7 +129,7 @@ Testomat.io Reporter has built-in support for test artifacts of following framew
 - Playwright
 - CodeceptJS
 - Cypress
-- webdriverio
+- WebdriverIO
 
 If a screenshot, a video, or a trace was saved and attached to test, Testomat.io reporter will automatically upload any of these as artifacts.
 
