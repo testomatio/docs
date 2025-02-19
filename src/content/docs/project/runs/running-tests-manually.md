@@ -37,6 +37,29 @@ On Manual Run screen you need:
 
 ![CleanShot 2022-05-26 at 11 52 23@2x](./images/170454961-7b6a8c26-addc-43c8-bc62-200a63824f9e.jpg)
 
+### Setting Test Case Results in Manual Run
+
+Once a manual test run is launched, you need to set a Result for each test case. The available options are:
+
+- PASSED – The test case was successfully executed
+- FAILED – The test case did not meet the expected result
+- SKIPPED – The test case was not executed
+
+**Steps to Set a Result**
+
+1. Click on a test case
+2. Select the appropriate result (PASSED, FAILED, or SKIPPED)
+3. Once you select a result, the Result message options will appear automatically. Choose a message from the available options
+
+![TestCaseResults](images/att5_4812.png)
+
+4. Repeat the process for all test cases.
+5. Click the ‘Finish Run’ button to complete the process
+
+![FinishRun](<images/CleanShot 2025-02-19 at 07.37.16@2x.png>)
+
+If you need to configure different result messages, click here: <a href="https://docs.testomat.io/management/project/settings/#custom-statuses" target="_blank">Custom Statuses</a>
+
 ### How To Create a Test Plan
 
 If you need to create a Test Plan you should click on + New Test Plan
@@ -165,7 +188,6 @@ Let's see what we can do here:
 5. Add tests from another test plan
 6. Don't foget to save ;)
 
-
 ## How To Adjust Test Case Description Block
 
 In case you want to adjust the size of the test description block to see more details without scrolling or to minimize it, you can easily resize it by following these steps:
@@ -229,21 +251,21 @@ At the end of the run, the report will show you the time spent on a particular t
 
 This can be useful for spreading the workload across all team members in future test runs.
 
- ## How To Track Test Case History During One Test Run
+## How To Track Test Case History During One Test Run
 
 During a test run, the state or status of a test case may change multiple times. In some situations it can be important to review the history of all state changes, comments, and statuses for a specific test case before finishing the test run.
 
- For this purpose, Testomat.io provides the test case history feature within the test run, displayed in chronological order beneath the selected test case.
+For this purpose, Testomat.io provides the test case history feature within the test run, displayed in chronological order beneath the selected test case.
 
- To check the test case history, follow these steps:
+To check the test case history, follow these steps:
 
- 1. Open the test run
- 2. Click 'Continue' button
+1.  Open the test run
+2.  Click 'Continue' button
 
 ![Testomat.io - Test Case History](./images/test_run.png)
 
- 3. Click on the test case to see last 3 changes
- 4. Click the arrow to expand the whole history, if needed
+3.  Click on the test case to see last 3 changes
+4.  Click the arrow to expand the whole history, if needed
 
 ![Testomat.io - Test Case History](./images/test_case_history_1.png)
 
