@@ -32,6 +32,43 @@ To do this, follow these steps:
 
 ![Testomatio.io - Project Timezone](./images/New_0oOC4blY_2024-10-07.png)
 
+## Project Testing Framework & Language
+
+A testing framework provides a structured set of rules and best practices to ensure effective and reliable test automation. It helps testers create and manage test cases more efficiently, reducing effort and improving consistency. By using a testing framework, teams can minimize testing time and costs, decrease the risk of errors, and enhance test accuracy.
+
+### How to Change the Testing Framework
+
+You can change the testing framework to meet your needs. To do this, follow these steps:
+
+1. Click on **’Settings’** in the sidebar
+2. Click the **’Project’** button
+3. Enable **’Administration’** mode
+4. Click **’OK’** in the popup **’Are you sure?’**
+
+![Administration_Mode](images/att1_crisp.png)
+
+5. Select **’Project Framework’** from the dropdown
+6. Select a programming language you use in **’Project Language’** dropdown
+7. Click **’Update’** button
+8. Click **’OK’** to save the changes
+
+![Project Framework&Language’](images/att2_crisp.png)
+
+Once **’Administration’** mode is activated, you can:
+
+1. Delete the project – Click the **’Delete Project’** button
+2. Then confirm by clicking **’OK’** in the popup
+
+![DeleteProject](images/att3_crisp.png)
+
+3. Archive the project – Click the **’Archive’** button
+4. Then confirm by clicking **’OK’** in the popup
+
+![ArchiveProject](images/att4_crisp.png)
+
+If you don’t see **’Administration’** mode, please note that this option is available only to users with **Manager** or **Owner** roles at the company level.
+For more details on **’How to Manage Company Roles’**, please explore here <a href="https://docs.testomat.io/management/company/#how-to-manage-company-team-members">Manage Company Roles</a>
+
 ## Custom Statuses
 
 While default statuses are available, you can configure the list of them to align your testing workflow better.
