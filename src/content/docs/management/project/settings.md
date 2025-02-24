@@ -45,26 +45,26 @@ You can change the testing framework to meet your needs. To do this, follow thes
 3. Enable **’Administration’** mode
 4. Click **’OK’** in the popup **’Are you sure?’**
 
-![Administration_Mode](images/att1_crisp.png)
+![Administration_Mode](images/att1_238.png)
 
 5. Select **’Project Framework’** from the dropdown
 6. Select a programming language you use in **’Project Language’** dropdown
 7. Click **’Update’** button
 8. Click **’OK’** to save the changes
 
-![Project Framework&Language’](images/att2_crisp.png)
+![Project_Framework&Language](images/att2_238.png)
 
-Once **’Administration’** mode is activated, you can:
+In addition, when **’Administration’** mode is activated, you can:
 
 1. Delete the project – Click the **’Delete Project’** button
 2. Then confirm by clicking **’OK’** in the popup
 
-![DeleteProject](images/att3_crisp.png)
+![Delete_Project](images/att3_238.png)
 
 3. Archive the project – Click the **’Archive’** button
 4. Then confirm by clicking **’OK’** in the popup
 
-![ArchiveProject](images/att4_crisp.png)
+![Archive_Project](images/att4_238.png)
 
 If you don’t see **’Administration’** mode, please note that this option is available only to users with **Manager** or **Owner** roles at the company level.
 For more details on **’How to Manage Company Roles’**, please explore here <a href="https://docs.testomat.io/management/company/#how-to-manage-company-team-members">Manage Company Roles</a>
