@@ -168,7 +168,7 @@ Custom Field with List type allows creating a list of your choice. You can put t
 
 ![Testomatio - Multi-assign Label & Custom Field](./images/Mass_assign_set_label_temporary.png)
 
-## How to Filter by Labels
+## How to Filter by Labels and Custom Fields
 
 You can click the Label on the Filter Bar
 
@@ -177,6 +177,12 @@ You can click the Label on the Filter Bar
 Or enable Filters, pick fields and values then click Apply
 
 ![Testomatio - Filter Label & Custom Field](./images/Filter_by_label_2.png)
+
+:::note
+
+In case you need to filter your test cases by a few Labels and Custom Fields with multiple values, Testomat.io recommends using TQL for such search queries.
+
+:::
 
 ## Multiple Values for Custom Fields
 
