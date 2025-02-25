@@ -91,7 +91,7 @@ You can easily customize the selection of Test Plans during your Run using the M
 
 This will allow you to add multiple Test Plans to your Run with ease.
 
-![Testomat.io - How to include Multiple Test Plans in Your Run](./images/Test_Plan_multiselect.png)
+![Testomat.io - How to include Multiple Test Plans in Your Run](./images/multiselect_TestPlans.png)
 
 
 ## Automated
