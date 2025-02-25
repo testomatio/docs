@@ -78,6 +78,22 @@ For more details on using the Query Language, visit the [dedicated page](https:/
 
 ![Testomat.io - Run Automated tests as Manual using toggle](./images/New_ARLJc69t_2024-09-21.png)
 
+**How to Include Multiple Test Plans in Your Run**
+
+You can easily customize the selection of Test Plans during your Run using the Multiselect checkbox. Follow these simple steps to include more than one Test Plan in your run:
+
+1. Go to the Runs section.
+2. Create a New Run Group or select an existing one.
+3. Create a New Manual Run.
+4. Search for the Test Plans you want to include.
+5. Enable Multiselect by checking the box next to the Test Plans search field.
+6. Select all the Test Plans that match your criteria.
+
+This will allow you to add multiple Test Plans to your Run with ease.
+
+![Testomat.io - How to include Multiple Test Plans in Your Run](./images/multiselect_TestPlans.png)
+
+
 ## Automated
 
 By choosing automated plan, you need to configure **Continuous Integration**. Also, tests need to have IDs. This can be done by adding the `--update-ids` option when importing tests.
