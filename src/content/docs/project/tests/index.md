@@ -8,7 +8,7 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/class_editor.DFw30t7Y_1wUwhr.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
@@ -25,46 +25,46 @@ When a new project is created, there are multiple options to start:
 
 ## Creating a test
 
-Tests are created within a suite. 
+Tests are created within a suite.
 
 ![Create suite](./images/2023-08-03_00.40.35@2x.png)
 
-To create a new suite use "+" button or input field. 
+To create a new suite use "+" button or input field.
 Open a newly created suite.
 
-To add a new test to the suite you are currently in,  click on **New Test** button.
+To add a new test to the suite you are currently in, click on **New Test** button.
 
 ![Create a test](./images/2023-08-03_00.42.32@2x.png)
 
-Then input the name and the description of your test. 
+Then input the name and the description of your test.
 
 ![Create test name and test description](./images/2023-08-03_00.45.26@2x.png)
 
-It is also possible to the test straightaway from this screen. Simply input the test's title and click on the **Create** button. You can add the description at any time later. 
+It is also possible to the test straightaway from this screen. Simply input the test's title and click on the **Create** button. You can add the description at any time later.
 
 ![Quick test creation](./images/2023-08-03_00.49.14@2x.png)
 
 Repeating these steps, you can easily add as many tests as you need within a reasonable period of time.
 
-Also, you can use shortcut commands to create/edit Test Cases or Suites. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more. 
+Also, you can use shortcut commands to create/edit Test Cases or Suites. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more.
 
 ## **Test Case Editor**
 
 Test Case Editor is a dynamic interface, designed to accommodate the diverse requirements of test case formulation. Through this platform, testers wield the power to architect meticulously structured test scenarios, encompassing a range of variables, actions, expected results, and potential outcomes.
 
-Regarding test case creation, Testomat.io offers two distinct editor types: the **Classical** Editor and the **BDD** (Behavior-Driven Development) Editor. Each caters to different testing methodologies and user preferences, enabling testers to choose the approach that best aligns with their needs. 
+Regarding test case creation, Testomat.io offers two distinct editor types: the **Classical** Editor and the **BDD** (Behavior-Driven Development) Editor. Each caters to different testing methodologies and user preferences, enabling testers to choose the approach that best aligns with their needs.
 
 Let's have a look at each of them.
 
 ## **Classical Editor Review**
 
-Introducing the Classical Editor, a tool that places the art of test editing firmly in your hands. Crafting tests becomes a seamless endeavor as you immerse yourself in the Classical Editor's capabilities. 
+Introducing the Classical Editor, a tool that places the art of test editing firmly in your hands. Crafting tests becomes a seamless endeavor as you immerse yourself in the Classical Editor's capabilities.
 
 ![Classical Editor](./images/class_editor.png)
 
 1. Test title field - enter here your test title and tags (if needed)
 2. Toolbar with formatting options
-3. Editing Area - a place for preconditions, steps and expected results 
+3. Editing Area - a place for preconditions, steps and expected results
 4. Preview button that allows you to see live representation of how the test will appear
 5. Attachments button opens attachments dialog
 6. Extra menu button
@@ -90,7 +90,7 @@ However, the Classical Editor's influence transcends singular tests. With Pre-Re
 8. Full screen button - offers you a seamless transition distraction-free environment
 9. Save - save your work
 10. Close - escape the editor
-              
+
 ### Why Do We Use Markdown In Classical Editor?
 
 Markdown is a lightweight and versatile markup language that revolutionizes the way content is formatted and presented. It combines the simplicity of plain text with the ability to produce well-structured documents, making it a favored choice for various applications, including software documentation and test case creation. Here are its benefits:
@@ -106,7 +106,6 @@ Markdown is a lightweight and versatile markup language that revolutionizes the 
 **Media Integration:** Beyond text, Markdown accommodates image and file embedding. Testers can attach screenshots, diagrams, or supplementary documentation directly within test cases. This integration injects valuable context, aiding in comprehension and enabling more accurate bug reproduction.
 
 **Consistency and Templates:** Markdown's consistent structure allows for the creation of reusable test case templates. This ensures that test cases adhere to a standardized format, streamlining comprehension and navigation across a myriad of test scenarios.
-
 
 ### Examples Of Markdown Written Test Cases
 
@@ -136,13 +135,11 @@ Some example:
     Expected result: Payment is processed and confirmation page loads
 ```
 
-
-
 ---
+
 ### Expected Results as steps one after another
 
 This pattern is similar to the previous one, but instead of listing the expected results right after each step as plain text, they are listed after all the steps have been documented. This approach will give you ability to use autocompletion and expected results will be stored in steps database.
-
 
 ```
 ## Steps
@@ -155,6 +152,7 @@ This pattern is similar to the previous one, but instead of listing the expected
 ```
 
 Some example:
+
 ```
 ## Steps
 * Go to the payment page
@@ -163,8 +161,8 @@ Some example:
 * Verify that Payment is processed and confirmation page loads
 ```
 
-
 ---
+
 ### Steps with Expected Results as nested list
 
 This format is useful for breaking down each step into multiple sub-steps, each with its own expected result. This can be helpful when a step is complex and has several different parts or when there are multiple expected behaviors that need to be documented for each step. By nesting the expected results under each step, it's easy to see which expected results are related to which sub-steps, making it easier to track and verify expected behaviors.
@@ -183,6 +181,7 @@ This format is useful for breaking down each step into multiple sub-steps, each 
 ```
 
 Some example:
+
 ```
 ## Steps
 
@@ -201,6 +200,7 @@ Some example:
 In case you use numbered list for your steps and unordered list for expected result or sub-steps, to see the correct formatting, **add 4 spaces or 1 tab** before unordered list. Check the relevant case below.
 
 :::
+
 ```
 ## Steps
 
@@ -216,6 +216,7 @@ In case you use numbered list for your steps and unordered list for expected res
 ```
 
 Some example:
+
 ```
 ## Steps
 
@@ -233,6 +234,7 @@ Some example:
 ![Edit Test Case](./images/Edit_test_case_numbered_list.gif)
 
 ---
+
 ### Steps with Separated Expected Results
 
 Instead of listing the verification actions after each step, they are listed under a separate section for expected results. This can be a good way to provide a summary of the expected behavior and can be helpful in identifying any gaps in the test coverage.
@@ -250,6 +252,7 @@ Instead of listing the verification actions after each step, they are listed und
 ```
 
 Some example:
+
 ```
 ## Steps
 
@@ -290,8 +293,7 @@ Some example:
 | Submit payment                 | Payment is processed and confirmation page loads           |
 ```
 
-![Testomat.io - Table inside test case description](./images/New_10TBA7jV_2024-08-03.png)
----
+## ![Testomat.io - Table inside test case description](./images/New_10TBA7jV_2024-08-03.png)
 
 ### Steps with Expected Results as Subheadings
 
@@ -339,16 +341,16 @@ Some example:
 
 ### Submit payment
 
-* Verify that Payment is processed 
+* Verify that Payment is processed
 * Verify that Confirmation page loads
 
 ```
 
-Use Markdown shortcuts to edit test case description quickly and easily. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more. 
+Use Markdown shortcuts to edit test case description quickly and easily. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more.
 
 ## **BDD Editor Review**
 
-As you embark on the journey of crafting and refining BDD scenarios, this innovative platform empowers you to shape narratives into meticulously executable tests. At its core, the BDD Editor encapsulates the essence of collaboration, precision, and agility, delivering a comprehensive solution for modern testing workflows. Here, you'll create user stories, scenarios, and document expected behaviors with an eloquence that bridges the gap between technical and non-technical stakeholders. 
+As you embark on the journey of crafting and refining BDD scenarios, this innovative platform empowers you to shape narratives into meticulously executable tests. At its core, the BDD Editor encapsulates the essence of collaboration, precision, and agility, delivering a comprehensive solution for modern testing workflows. Here, you'll create user stories, scenarios, and document expected behaviors with an eloquence that bridges the gap between technical and non-technical stakeholders.
 
 **Feature File Editor**
 
@@ -450,7 +452,7 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 
 ## **Cross-Linking Tests, Suites and Folders**
 
-Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window. 
+Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window.
 
 All you need to do is copy their IDs and paste it into a test/suite description:
 
@@ -458,7 +460,7 @@ All you need to do is copy their IDs and paste it into a test/suite description:
 
 ## Add Attachments to Test
 
-First of all, you need to open the test that you want to add the attachment to. 
+First of all, you need to open the test that you want to add the attachment to.
 
 ![Open test](./images/2023-08-03_01.05.06@2x.png)
 
@@ -474,7 +476,7 @@ You can also add attachmennts to the test descrption:
 
 1. Click on the **Attachment** button.
 2. Select a file from your PC, or drag and drop it onto the area. You can also paste a file from the clipboard.
-3. Click on the image that has been downloaded. 
+3. Click on the image that has been downloaded.
 
 ![Testomatio.io - Insert attachment in a test description](./images/New_9mLj3wh3_2024-10-07.png)
 
@@ -511,7 +513,6 @@ To change the size of an attached image for a better view, follow these steps:
 
 By clicking on the resize button on one image, all attachments in the test case will automatically resize.
 
-
 ## How To Save Your Tests
 
 Testomat.io Editor offers options designed to streamline your test and suite management workflow. Lets have look:
@@ -526,8 +527,6 @@ Save + Go To Suite: save your changes and seamlessly navigate to the suite you'r
 
 Save + Close All: ensures all open tests and suites are saved and closed simultaneously.
 
-
-
 ## Suites and folders
 
 Unlike other test management systems, **Testomat.io doesn't allow suite to include other suites and tests**. That's why you can either create a suite (a collection of tests) or folder (collection of suites).
@@ -538,14 +537,13 @@ When creating a suite you have to explicitly set its type: a suite or a folder.
 
 ![New suite](./images/2023-08-03_00.53.02@2x.png)
 
-This was designed so tests structure could match the filesystem. For instance, if you use BDD project, feature file can contain scenarios, but can't contain other feature files. The same for automated tests, a file can contain tests but can't contain other files. 
+This was designed so tests structure could match the filesystem. For instance, if you use BDD project, feature file can contain scenarios, but can't contain other feature files. The same for automated tests, a file can contain tests but can't contain other files.
 
 It's assumed that in any moment a manual test can be automated, so it is important to keep the filesystem structure in a project.
 
 An empty suite can be converted to folder or vice versa
 
 ![Empty suite](./images/2023-08-03_00.54.46@2x.png)
-
 
 Also you can set an emoji icon for the suite
 
@@ -564,7 +562,6 @@ This option is the easiest one! You simply need to add the label's name (preceed
 And now you can see your label/tag in the test list next to the test's title.
 
 ![See the test with tag](./images/2023-08-03_01.01.17@2x.png)
-
 
 ## **How to assign a test to a user**
 
@@ -600,29 +597,93 @@ Also, you will see set priority in your suite
 
 ## **How to add parameters to a test**
 
-If you need to add parameters to your test you need to click on the vertical ellipsis button
+Parameters are used to create data-driven tests. Each parameter will be treated as a separate test during a manual or automated run.
 
-![Open test case additional actions](./images/2023-08-03_01.21.06@2x.png)
+**To add parameters to your test**:
 
-Then choose Add Parameter from the menu
+1. Navigate to ‘Tests’ in the sidebar
+2. Select specific test
+3. Click the **’Horizontal Ellipsis’** icon
+4. Select **’Add Parameter’** from the menu
 
-![Add parameter](./images/2023-08-03_01.21.41@2x.png)
+![Add_Parameter](images/att1_4962.png)
 
-You will see a pop-up with instructions. Now you can add your parameters using a comma
+After a modal with instructions will appear,
 
-![Give parameter set by comma](./images/2023-08-03_01.23.41@2x.png)
+1. Add parameter headers:
 
-Click on Create button to apply your parameters
+- Enter a name for the header
+- A new 'Parameter header' will appear automatically for each additional header
 
-![Create parameter](./images/2023-08-03_01.24.31@2x.png)
+2. Click **’Save’** button after adding all necessary headers
 
-You will see your added parameters on the bottom of the pop-up
+![Parameter_header](images/att2_4962.png)
 
-![See parameter](./images/2023-08-03_01.25.30@2x.png)
+3. Add parameter names
+4. Click **’Save’** button
 
-And on the test description page
+![Parameter_names](images/att3_4962.png)
 
-![See parameter](./images/2023-08-03_01.25.47@2x.png)
+Now, your parameters are added, and you can see them at the bottom of the modal,
+
+![Added_parameters](images/att4_4962.png)
+
+or under the test description.
+
+![Added_parameters_desc](images/att5_4962.png)
+
+### **How to edit test parameters**
+
+You are able to edit existing parameters or parameter headers in two methods:
+
+**Method 1: Editing directly under the test description**
+
+1. Click the **‘Edit’** icon next to the parameter
+
+![Edit_icon](images/att6_4962.png)
+
+2. Update the parameter name
+3. Click the **‘Save’** button
+
+![Edit_parameter_name](images/att7_4962.png)
+
+4. Click the **‘Edit Header’** button
+
+![Edit_Header](images/att8_4962.png)
+
+5. Update the header name
+6. Click the **‘Save’** button
+
+![Update_Header_Name](images/att9_4962.png)
+
+To delete a parameter:
+
+1. Click the **‘Trash’** icon
+2. A pop-up will appear: **’Are you sure you want to delete this param?’**
+3. Click **‘OK’** to confirm
+
+![Delete_parameter](images/att10_4962.png)
+
+**Method 2: Editing via the parameter menu**
+
+1. Click the **‘Horizontal Ellipsis’** icon
+2. Select **‘Add Parameter’** from the menu
+
+![Second_Method_delete](images/att11_4962.png)
+
+3. Follow the same steps as in Method 1:
+
+- Click the **‘Edit’** icon next to the parameter
+- Update the parameter name
+- Click **‘Save’**
+
+![Second_Method_Edit_Parameter_Name](images/att12_4962.png)
+
+- Click **‘Edit Header’** button
+- Update the header name
+- Click **‘Save’**
+
+![Second_Method_Edit_Header_Name](images/att13_4962.png)
 
 ## **Drag and Drop Your Tests**
 

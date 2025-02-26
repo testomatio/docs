@@ -220,7 +220,6 @@ If you need to reassign test cases to a different user, you no longer have to up
 
 ![reassign test cases](images/att2_1054.png)
 
-
 This feature significantly reduces manual effort and speeds up the reassignment process during test run.
 
 Let’s check how tests look like after changes.
