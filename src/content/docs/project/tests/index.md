@@ -601,9 +601,9 @@ Parameters are used to create data-driven tests. Each parameter will be treated 
 
 **To add parameters to your test**:
 
-1. Navigate to ‘Tests’ in the sidebar
+1. Navigate to **‘Tests’** in the sidebar
 2. Select specific test
-3. Click the **’Horizontal Ellipsis’** icon
+3. Click the **’Extra button’** icon
 4. Select **’Add Parameter’** from the menu
 
 ![Add_Parameter](images/att1_4962.png)
@@ -613,7 +613,7 @@ After a modal with instructions will appear,
 1. Add parameter headers:
 
 - Enter a name for the header
-- A new 'Parameter header' will appear automatically for each additional header
+- A new **'Parameter header'** will appear automatically for each additional header
 
 2. Click **’Save’** button after adding all necessary headers
 
@@ -666,7 +666,7 @@ To delete a parameter:
 
 **Method 2: Editing via the parameter menu**
 
-1. Click the **‘Horizontal Ellipsis’** icon
+1. Click the **‘Extra button’** icon
 2. Select **‘Add Parameter’** from the menu
 
 ![Second_Method_delete](images/att11_4962.png)
