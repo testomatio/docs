@@ -1,5 +1,5 @@
 ---
-title: Audit Logs
+title: Audit Log
 description: Explore an Audit Log feature that is available inside the Testomat.io. It is available on a Company level for Owners and Manageres. It monitors creation details, updates, and offers a history of data changes.
 type: article
 url: https://docs.testomat.io/management/company/audit-log
