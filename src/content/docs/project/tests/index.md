@@ -606,7 +606,7 @@ Parameters are used to create data-driven tests. Each parameter will be treated 
 3. Click the **’Extra button’** icon
 4. Select **’Add Parameter’** from the menu
 
-![Add_Parameter](images/att1_4962.png)
+![Add_Parameter](./images/att1_4962.png)
 
 After a modal with instructions will appear,
 
@@ -617,20 +617,20 @@ After a modal with instructions will appear,
 
 2. Click **’Save’** button after adding all necessary headers
 
-![Parameter_header](images/att2_4962.png)
+![Parameter_header](./images/att2_4962.png)
 
 3. Add parameter names
 4. Click **’Save’** button
 
-![Parameter_names](images/att3_4962.png)
+![Parameter_names](./images/att3_4962.png)
 
 Now, your parameters are added, and you can see them at the bottom of the modal,
 
-![Added_parameters](images/att4_4962.png)
+![Added_parameters](./images/att4_4962.png)
 
 or under the test description.
 
-![Added_parameters_desc](images/att5_4962.png)
+![Added_parameters_desc](./images/att5_4962.png)
 
 ### **How to edit test parameters**
 
@@ -640,21 +640,21 @@ You are able to edit existing parameters or parameter headers in two methods:
 
 1. Click the **‘Edit’** icon next to the parameter
 
-![Edit_icon](images/att6_4962.png)
+![Edit_icon](./images/att6_4962.png)
 
 2. Update the parameter name
 3. Click the **‘Save’** button
 
-![Edit_parameter_name](images/att7_4962.png)
+![Edit_parameter_name](./images/att7_4962.png)
 
 4. Click the **‘Edit Header’** button
 
-![Edit_Header](images/att8_4962.png)
+![Edit_Header](./images/att8_4962.png)
 
 5. Update the header name
 6. Click the **‘Save’** button
 
-![Update_Header_Name](images/att9_4962.png)
+![Update_Header_Name](./images/att9_4962.png)
 
 To delete a parameter:
 
@@ -662,14 +662,14 @@ To delete a parameter:
 2. A pop-up will appear: **’Are you sure you want to delete this param?’**
 3. Click **‘OK’** to confirm
 
-![Delete_parameter](images/att10_4962.png)
+![Delete_parameter](./images/att10_4962.png)
 
 **Method 2: Editing via the parameter menu**
 
 1. Click the **‘Extra button’** icon
 2. Select **‘Add Parameter’** from the menu
 
-![Second_Method_delete](images/att11_4962.png)
+![Second_Method_delete](./images/att11_4962.png)
 
 3. Follow the same steps as in Method 1:
 
@@ -677,13 +677,13 @@ To delete a parameter:
 - Update the parameter name
 - Click **‘Save’**
 
-![Second_Method_Edit_Parameter_Name](images/att12_4962.png)
+![Second_Method_Edit_Parameter_Name](./images/att12_4962.png)
 
 - Click **‘Edit Header’** button
 - Update the header name
 - Click **‘Save’**
 
-![Second_Method_Edit_Header_Name](images/att13_4962.png)
+![Second_Method_Edit_Header_Name](./images/att13_4962.png)
 
 ## **Drag and Drop Your Tests**
 

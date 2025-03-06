@@ -51,7 +51,7 @@ Once a manual test run is launched, you need to set a Result for each test case.
 2. Select the appropriate result (PASSED, FAILED, or SKIPPED)
 3. Once you select a result, the Result message options will appear automatically. Choose a message from the available options
 
-![TestCaseResults](images/att5_4812.png)
+![TestCaseResults](./images/att5_4812.png)
 
 4. Repeat the process for all test cases.
 5. Click the ‘Finish Run’ button to complete the process
@@ -214,7 +214,7 @@ If you need to reassign test cases to a different user, you no longer have to up
 2. Open the test run you’re working on
 3. Click **‘Continue’** button
 
-![reassign test cases](images/att1_1054.png)
+![reassign test cases](./images/att1_1054.png)
 
 4. Click **‘Multi-Select’** button
 5. Select the specific tests you would like to reassign
@@ -222,13 +222,13 @@ If you need to reassign test cases to a different user, you no longer have to up
 7. Select a user you would like to reassign
 8. Click **'OK'** in the **'Are you sure you want to assign (username) to all selected tests?'** pop-up window
 
-![reassign test cases](images/att2_1054.png)
+![reassign test cases](./images/att2_1054.png)
 
 This feature significantly reduces manual effort and speeds up the reassignment process during test run.
 
 Let’s check how tests look like after changes.
 
-![reassign test cases](images/att3_1054.png)
+![reassign test cases](./images/att3_1054.png)
 
 ### How to Multi-Select Result Messages for Test Cases
 
@@ -238,20 +238,20 @@ While running tests and selecting the appropriate status with a result message, 
 2. Open a test run you’re working on
 3. Click **‘Continue’** button
 
-![Run a test](images/att1_878.png)
+![Run a test](./images/att1_878.png)
 
 4. Click **‘Multi-Select’** button
 5. Select the specific tests
 6. Click the **‘Result message’** button at the bottom
 
-![Result Message appears](images/att2_878.png)
+![Result Message appears](./images/att2_878.png)
 
 7. Select an appropriate status, e.g., **‘PASSED’**
 8. Choose a result message, e.g., **‘Expected behaviour’**
 9. Also, type a result message in the provided field
 10. Click the **‘Apply’** button
 
-![Apply changes](images/att3_878.png)
+![Apply changes](./images/att3_878.png)
 
 This feature allows testers to update multiple test cases efficiently, ensuring consistency in reporting results.
 
@@ -259,7 +259,7 @@ By using bulk actions, you streamline test management, improve workflow efficien
 
 Let’s verify the multiple message results in these test cases:
 
-![Bulk result message](images/gif1_878.gif)
+![Bulk result message](./images/gif1_878.gif)
 
 ## How To Track Test Time
 
