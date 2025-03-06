@@ -45,26 +45,26 @@ You can change the testing framework to meet your needs. To do this, follow thes
 3. Enable **’Administration’** mode
 4. Click **’OK’** in the popup **’Are you sure?’**
 
-![Administration_Mode](images/att1_238.png)
+![Administration_Mode](./images/att1_238.png)
 
 5. Select **’Project Framework’** from the dropdown
 6. Select a programming language you use in **’Project Language’** dropdown
 7. Click **’Update’** button
 8. Click **’OK’** to save the changes
 
-![Project_Framework&Language](images/att2_238.png)
+![Project_Framework&Language](./images/att2_238.png)
 
 In addition, when **’Administration’** mode is activated, you can:
 
 1. Delete the project – Click the **’Delete Project’** button
 2. Then confirm by clicking **’OK’** in the popup
 
-![Delete_Project](images/att3_238.png)
+![Delete_Project](./images/att3_238.png)
 
 3. Archive the project – Click the **’Archive’** button
 4. Then confirm by clicking **’OK’** in the popup
 
-![Archive_Project](images/att4_238.png)
+![Archive_Project](./images/att4_238.png)
 
 If you don’t see **’Administration’** mode, please note that this option is available only to users with **Manager** or **Owner** roles at the company level.
 For more details on **’How to Manage Company Roles’**, please explore here <a href="https://docs.testomat.io/management/company/#how-to-manage-company-team-members">Manage Company Roles</a>
@@ -76,15 +76,15 @@ While default statuses are available, you can configure the list of them to alig
 1. Open **‘Settings’** in the sidebar
 2. Click on the **‘Custom Statuses’** button
 
-![Custom Statuses](images/att1_4812.png)
+![Custom Statuses](./images/att1_4812.png)
 
 Now, you’re able to add or edit existing conditions by clicking on the field where you are interested in making changes. Let’s check how it works.
 
-![Custom Statuses](images/gif3_4812.gif)
+![Custom Statuses](./images/gif3_4812.gif)
 
 3. Write a report message per line, for example, **‘Needs Review’**
 4. Click the **‘Update’** button to save changes
 
-![Custom Statuses](images/att3_4812.png)
+![Custom Statuses](./images/att3_4812.png)
 
 **Note:** The same actions can be applied to each field, such as ‘Custom statuses when test is **failed**’ or ‘Custom statuses when test is **skipped**’.
