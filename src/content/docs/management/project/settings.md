@@ -80,19 +80,11 @@ While default statuses are available, you can configure the list of them to alig
 
 Now, you’re able to add or edit existing conditions by clicking on the field where you are interested in making changes. Let’s check how it works.
 
-<<<<<<< Updated upstream
-![Custom Statuses](./images/gif3_4812.gif)
-=======
-![Expand fields](images/gif1_4812.gif)
->>>>>>> Stashed changes
+![Expand Custom Statuses](images/gif1_4812-1.gif)
 
-3. Write a report message per line, for example, **‘Needs review’**
-4. Click the **‘Update’** button to save changes
+3. Write a report message per line, for example, ‘Needs Review’
+4. Click the ‘Update’ button to save changes
 
-<<<<<<< Updated upstream
-![Custom Statuses](./images/att3_4812.png)
-=======
-![Updated Custom Status](images/att2_4812.png)
->>>>>>> Stashed changes
+![Updated Custom Statuses](images/att2_4812-1.png)
 
-**Note:** The same actions can be applied to each field, such as ‘Custom statuses when test is **failed**’ or ‘Custom statuses when test is **skipped**’.
+**Note**: The same actions can be applied to each field, such as ‘Custom statuses when test is **failed**’ or ‘Custom statuses when test is **skipped**’.
