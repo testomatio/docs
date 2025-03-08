@@ -15,7 +15,6 @@ head:
       content: Python test frameworks, Pytest, Testomat.io, test synchronization, test reporting, test artifacts, automation, S3 storage, test configuration, API integration, continuous integration, environment setup
 ---
 
-
 :::note
  Taken from [Pytestomatio Reporter Readme](https://github.com/testomatio/pytestomatio)
 :::
@@ -114,7 +113,7 @@ https://docs.testomat.io/usage/test-artifacts/
 Analyser needs to be aware of the cloud storage credentials.
 There are two options:
 1. Enable **Share credentials with testomat.io Reporter** option in testomat.io Settings -> Artifacts.
-2. Use environment variables   `ACCESS_KEY_ID, SECRET_ACCESS_KEY, ENDPOINT, BUCKET`
+2. Use environment variables   `ACCESS_KEY_ID, SECRET_ACCESS_KEY, ENDPOINT, BUCKET, BUCKET_PATH`
 
 You would need to decide when you want to upload your test artifacts to cloud storage
 
@@ -219,11 +218,18 @@ def test_example():
 - test run labels, tags
 
 ## TODO
+- retry test run update with less attributes, we get 500 from api
+- handler non configured s3 bucket error
 - Fix test duration
 
 ## Contribution
-1. `pip install -e .`
-2. `cz commit`
-3. `cz bump`
-4. `git push remoteName branchName --tags`
+Use python 3.12
+
+1. `pip install ".[dev]"`
+1. `python ./smoke.py`
+1. Test things manually
+1. Verify no regression bugs
+1. `cz commit`
+1. `cz bump`
+1. `git push remoteName branchName --tags`
 

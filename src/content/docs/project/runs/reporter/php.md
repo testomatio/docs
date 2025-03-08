@@ -15,7 +15,6 @@ head:
       content: Testomat.io, PHP, Codeception, PHPUnit, test reporting, automated testing, CI integration, API keys, real-time reports, test management
 ---
 
-
 :::note
  Taken from [PHP Reporter Readme](https://github.com/testomatio/php-reporter)
 :::
@@ -28,6 +27,9 @@ composer require testomatio/reporter --dev
 ```
 
 ### Codeception
+
+> [!NOTE]
+> For Codeception 4.x install `testomatio/php-reporter` version 0.4.0, for Codeception 5+ install `1.0.0` version of this reporter.
 
 Get API key from Testomatio application and set it as `TESTOMATIO` environment variable.
 Run your tests with`Testomatio\Reporter\Codeception` extension enabled: 

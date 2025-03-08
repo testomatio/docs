@@ -8,7 +8,7 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/reporter-pipes.Dp5rm29d_1cQLBw.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
@@ -21,6 +21,7 @@ head:
 - [Bitbucket](/project/runs/reporter/pipes/bitbucket)
 - [CSV](/project/runs/reporter/pipes/csv)
 - [HTML](/project/runs/reporter/pipes/html)
+- [Debug](/project/runs/reporter/pipes/debug)
 
 ## 📯 Pipes
 
@@ -56,10 +57,10 @@ Pipes Concepts:
 - [Gitlab](https://docs.testomat.io/project/runs/reporter/pipes/gitlab)
 - [CSV](https://docs.testomat.io/project/runs/reporter/pipes/csv)
 - [Bitbucket](https://docs.testomat.io/project/runs/reporter/pipes/bitbucket)
+- [Debugging](https://docs.testomat.io/project/runs/reporter/pipes/debug)
 
 ## Custom Pipe
 
 _to be updated_
 
 ....
-
