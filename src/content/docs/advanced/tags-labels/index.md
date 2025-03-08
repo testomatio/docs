@@ -223,6 +223,24 @@ To edit Labels & Custom fields or add a new one click **Manage labels** button d
 
 ![Testomatio - Multi-assign Label & Custom Field](./images/Manage_Labels.png)
 
+## How to Set Up Labels and Custom Fields as Required
+
+If you want to have some Labels and Custom Fields as required by default when creating Test Cases or Suites, create a Template with those labels and set it up as the default:
+
+1. Go to Settings -> Templates.
+2. Open an existing Template or create a new one.
+3. Enable Default option. 
+4. Select Labels & Custom Fields you want to make required.
+5. Click Update button.
+
+![Testomatio - Required Labels](./images/Required_Labels.png)
+
+6. Go to Tests.
+7. Click '+' to create new Test Case.
+8. Add values to Custom fields via Set Labels page.
+
+![Testomatio - Required Labels](./images/Required_Labels_2.gif)
+
 ## How to Filter by Labels and Custom Fields
 
 You can click the Label on the Filter Bar
