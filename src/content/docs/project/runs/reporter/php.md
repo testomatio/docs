@@ -80,4 +80,3 @@ On Windows
 set TESTOMATIO={apiKey}&& php vendor/bin/phpunit
 ```
 
-

@@ -232,4 +232,3 @@ Use python 3.12
 1. `cz commit`
 1. `cz bump`
 1. `git push remoteName branchName --tags`
-

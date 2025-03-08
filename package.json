@@ -15,7 +15,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "publish": "./runok.js docs && npm --prefix src run build"
+    "docs": "node ./src/scripts/runok.js docs",
+    "publish": "npm run docs && npm run build"
   },
   "license": "MIT",
   "devDependencies": {

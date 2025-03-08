@@ -102,7 +102,7 @@ module.exports = {
     const capitalize = s => s && s[0].toUpperCase() + s.slice(1)
 
     for (const file of files) {
-      if (path.basename(file, '.md') == 'index') continue;
+      if (['index', 'php', 'python'].includes(path.basename(file, '.md'))) continue;
       if (path.basename(file, '.md') == 'pipes') {
         console.log('Deleting pipes file', file);
         fs.unlinkSync(file);
@@ -119,7 +119,6 @@ module.exports = {
       contents = contents.replace(/^#\s.+/gm, '');
       // fix links
       // contents = transformLinks(contents)
-      console.log(fileHeaders[path.basename(file, '.md')] || '---\ntitle: ' + title + '\n---');
 
       contents = `${fileHeaders[path.basename(file, '.md')] || '---\ntitle: ' + title + '\n---'}\n${contents}\n`;
 
@@ -127,20 +126,21 @@ module.exports = {
     }
 
     let phpContents = fs.readFileSync(phpReadme).toString().replace(/^#\s.+/gm, '');
-    phpContents = `\n:::note\n Taken from [PHP Reporter Readme](${phpReporterUrl})\n:::\n ${phpContents}\n`
+    phpContents = phpContents.replace(/^---[\s\S]+?^---/m, '');
+    phpContents = phpContents.replace(/^#\s.+/gm, '');
+    phpContents = `\n\n:::note\n Taken from [PHP Reporter Readme](${phpReporterUrl})\n:::\n ${phpContents}\n`
 
-    writeToFile('../content/docs/project/runs/reporter/php.md', cfg => {
-      cfg.line(fileHeaders.php || '---\nPHP Reporter\n---');
-      cfg.line(phpContents);
-    });
+    fs.writeFileSync(path.join(destinationFolder, '/php.md'), fileHeaders.php + phpContents)
 
     let pytestContents = fs.readFileSync(pytestReadme).toString().split('## Change')[0];
-    pytestContents = `\n:::note\n Taken from [Pytestomatio Reporter Readme](${pytestReporterUrl})\n:::\n\n${pytestContents}\n`
+    pytestContents = pytestContents.replace(/^---[\s\S]+?^---/m, '');
+    pytestContents = `\n\n:::note\n Taken from [Pytestomatio Reporter Readme](${pytestReporterUrl})\n:::\n\n${pytestContents}\n`
 
-    writeToFile('../content/docs/project/runs/reporter/python.md', cfg => {
-      cfg.line(fileHeaders.python || '---\nPython Reporter\n---');
-      cfg.line(pytestContents);
-  });
+    fs.writeFileSync(path.join(destinationFolder, '/python.md'), fileHeaders.python + pytestContents)
+    // writeToFile(destinationFolder + '/python.md', cfg => {
+    //   cfg.line(fileHeaders.python || '---\nPython Reporter\n---');
+    //   cfg.line(pytestContents);
+    // });
 
 
 
