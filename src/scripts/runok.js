@@ -101,13 +101,18 @@ module.exports = {
 
     const capitalize = s => s && s[0].toUpperCase() + s.slice(1)
 
+    const filesToDelete = ['pipes', 'debugging', 'stacktrace']
+    for (const file of filesToDelete) {
+      console.log('Deleting pipes file', file);
+      try {
+        fs.unlinkSync(path.join(destinationFolder, file + '.md'));
+      } catch (error) {
+        // console.error(`Error deleting file ${file}: ${error.message}`);
+      }
+    }
+
     for (const file of files) {
       if (['index', 'php', 'python'].includes(path.basename(file, '.md'))) continue;
-      if (path.basename(file, '.md') == 'pipes') {
-        console.log('Deleting pipes file', file);
-        fs.unlinkSync(file);
-        continue;
-      }
       let title = humanize(path.basename(file, '.md')).trim();
       title[0] = title[0].toUpperCase();
       const titleId = title.toUpperCase();
@@ -115,7 +120,12 @@ module.exports = {
       if (titleId === 'FRAMEWORKS') title = "NodeJS Test Frameworks";
       if (titleId === 'TESTOMATIO') title = "Advanced Options"
       if (titleId === 'JUNIT') title = "JUnit Reporter"
-      let contents = fs.readFileSync(file).toString()
+      let contents;
+      try {
+        contents = fs.readFileSync(file).toString()
+      } catch (error) {
+        continue;
+      }
       contents = contents.replace(/^#\s.+/gm, '');
       // fix links
       // contents = transformLinks(contents)
