@@ -111,7 +111,8 @@ module.exports = {
       }
     }
 
-    for (const file of files) {
+    const updatedFiles = globSync(`${destinationFolder}/**/*.md`);
+    for (const file of updatedFiles) {
       if (['index', 'php', 'python'].includes(path.basename(file, '.md'))) continue;
       let title = humanize(path.basename(file, '.md')).trim();
       title[0] = title[0].toUpperCase();
