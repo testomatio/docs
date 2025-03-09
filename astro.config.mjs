@@ -215,13 +215,6 @@ export default defineConfig({
 							],
 						},
 						{
-							label: 'Artifacts',
-							collapsed: false,
-							items: [
-								{ label: 'Artifacts', link: '/advanced/artifacts' }
-							],
-						},
-						{
 							label: 'TQL',
 							collapsed: false,
 							items: [
@@ -404,6 +397,7 @@ export default defineConfig({
 		"/usage/bulk-edit": "/advanced/bulk-edit-folder",
 		"/usage/branches": "/advanced/branches-folder",
 		"/usage/test-artifacts": "/project/runs/reporter/artifacts",
+		"/advanced/artifacts": "/project/runs/reporter/artifacts",
 		"/advanced/artifacts/test-artifacts": "/project/runs/reporter/artifacts",
 		"/usage/query-language": "/advanced/tql",
 		"/usage/keyboard-shortcuts": "/advanced/shortcuts",
@@ -439,7 +433,7 @@ export default defineConfig({
 		"/legal/compliance/overview": "/legal/compliance",
 		"/legal/security/overview": "/legal/security",
 		"/reference": "/project/runs",
-		"/advanced/artifacts/test-artifacts": "/advanced/artifacts",
+
 		"/support/contact-us": "/support",
 		"/integrations/continuous-integration/overview": "/integrations/continuous-integration",
 		"/reference/import-js": "/project/import-export/import-js",
