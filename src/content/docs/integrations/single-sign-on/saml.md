@@ -37,9 +37,9 @@ We will need the following information from SAML provider to proceed with config
 
 Add users into SAML connection to ensure that they will be able to login to Testomat.io
 
-Now, open Company page in [Testomat.io](https://app.testomat.io/companies) and select Single Sign On options
+Now, open Company page in [Testomat.io](https://app.testomat.io/companies) and select Authentification option
 
-![Company Settings](./images/image-3.png)
+![Company Settings](./images/Auto-Provision_access.png)
 
 > If you don't see Single Sign On option, check that you are an owner of this company
 
