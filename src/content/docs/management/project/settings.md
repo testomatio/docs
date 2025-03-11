@@ -74,17 +74,17 @@ For more details on **’How to Manage Company Roles’**, please explore here <
 While default statuses are available, you can configure the list of them to align your testing workflow better.
 
 1. Open **‘Settings’** in the sidebar
-2. Click on the **‘Custom Statuses’** button
+2. Click on the **‘Custom Statuses’** tab
 
 ![Custom Statuses](./images/att1_4812.png)
 
 Now, you’re able to add or edit existing conditions by clicking on the field where you are interested in making changes. Let’s check how it works.
 
-![Custom Statuses](./images/gif3_4812.gif)
+![Expand Custom Statuses](images/gif1_4812-1.gif)
 
-3. Write a report message per line, for example, **‘Needs Review’**
-4. Click the **‘Update’** button to save changes
+3. Write a report message per line, for example, ‘Needs Review’
+4. Click the ‘Update’ button to save changes
 
-![Custom Statuses](./images/att3_4812.png)
+![Updated Custom Statuses](images/att2_4812-1.png)
 
-**Note:** The same actions can be applied to each field, such as ‘Custom statuses when test is **failed**’ or ‘Custom statuses when test is **skipped**’.
+**Note**: The same actions can be applied to each field, such as ‘Custom statuses when test is **failed**’ or ‘Custom statuses when test is **skipped**’.
