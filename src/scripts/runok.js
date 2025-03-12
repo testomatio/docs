@@ -68,12 +68,24 @@ module.exports = {
     execSync('rm -rf tmp/php-reporter');
     execSync('rm -rf tmp/pytest-reporter');
 
-    const destinationFolder = path.resolve(path.join(__dirname, '../content/docs/reference/reporter'));
+    const destinationFolder = path.resolve(path.join(__dirname, '../content/docs/project/runs/reporter'));
 
     console.log(destinationFolder);
 
     if (!fs.existsSync(destinationFolder)) {
       fs.mkdirSync(destinationFolder, { recursive: true });
+    }
+
+    // saving headers of files
+    const files = globSync(`${destinationFolder}/**/*.md`);
+
+    let fileHeaders = {}
+    for (const file of files) {
+      const content = fs.readFileSync(file, 'utf8');
+      const match = content.match(/^---[\s\S]+?^---/m);
+      if (match) {
+        fileHeaders[path.basename(file, '.md')] = match[0];
+      }
     }
 
     execSync(`git clone https://github.com/testomatio/reporter.git tmp/reporter --depth=1`);
@@ -89,9 +101,19 @@ module.exports = {
 
     const capitalize = s => s && s[0].toUpperCase() + s.slice(1)
 
-    const files = globSync(`${destinationFolder}/**/*.md`);
+    const filesToDelete = ['pipes', 'debugging', 'stacktrace']
+    for (const file of filesToDelete) {
+      console.log('Deleting pipes file', file);
+      try {
+        fs.unlinkSync(path.join(destinationFolder, file + '.md'));
+      } catch (error) {
+        // console.error(`Error deleting file ${file}: ${error.message}`);
+      }
+    }
 
-    for (const file of files) {
+    const updatedFiles = globSync(`${destinationFolder}/**/*.md`);
+    for (const file of updatedFiles) {
+      if (['index', 'php', 'python'].includes(path.basename(file, '.md'))) continue;
       let title = humanize(path.basename(file, '.md')).trim();
       title[0] = title[0].toUpperCase();
       const titleId = title.toUpperCase();
@@ -99,42 +121,46 @@ module.exports = {
       if (titleId === 'FRAMEWORKS') title = "NodeJS Test Frameworks";
       if (titleId === 'TESTOMATIO') title = "Advanced Options"
       if (titleId === 'JUNIT') title = "JUnit Reporter"
-      let contents = fs.readFileSync(file).toString()
+      let contents;
+      try {
+        contents = fs.readFileSync(file).toString()
+      } catch (error) {
+        continue;
+      }
       contents = contents.replace(/^#\s.+/gm, '');
       // fix links
       // contents = transformLinks(contents)
 
-      contents = `---\ntitle: ${capitalize(title)}\n---\n${contents}\n`;
+      contents = `${fileHeaders[path.basename(file, '.md')] || '---\ntitle: ' + title + '\n---'}\n${contents}\n`;
 
       fs.writeFileSync(file, contents)
     }
 
     let phpContents = fs.readFileSync(phpReadme).toString().replace(/^#\s.+/gm, '');
-    phpContents = `\n:::note\n Taken from [PHP Reporter Readme](${phpReporterUrl})\n:::\n ${phpContents}\n`
+    phpContents = phpContents.replace(/^---[\s\S]+?^---/m, '');
+    phpContents = phpContents.replace(/^#\s.+/gm, '');
+    phpContents = `\n\n:::note\n Taken from [PHP Reporter Readme](${phpReporterUrl})\n:::\n ${phpContents}\n`
 
-    writeToFile('../content/docs/reference/reporter/php.md', cfg => {
-      cfg.line('---');
-      cfg.line(`title: PHP Test Frameworks`);
-      cfg.line('---\n');
-      cfg.line(phpContents);
-    });
+    fs.writeFileSync(path.join(destinationFolder, '/php.md'), fileHeaders.php + phpContents)
 
     let pytestContents = fs.readFileSync(pytestReadme).toString().split('## Change')[0];
-    pytestContents = `\n:::note\n Taken from [Pytestomatio Reporter Readme](${pytestReporterUrl})\n:::\n\n${pytestContents}\n`
+    pytestContents = pytestContents.replace(/^---[\s\S]+?^---/m, '');
+    pytestContents = `\n\n:::note\n Taken from [Pytestomatio Reporter Readme](${pytestReporterUrl})\n:::\n\n${pytestContents}\n`
 
-    writeToFile('../content/docs/reference/reporter/python.md', cfg => {
-      cfg.line('---');
-      cfg.line(`title: Python Test Frameworks`);
-      cfg.line('---\n');
-      cfg.line(pytestContents);
-    });
+    fs.writeFileSync(path.join(destinationFolder, '/python.md'), fileHeaders.python + pytestContents)
+    // writeToFile(destinationFolder + '/python.md', cfg => {
+    //   cfg.line(fileHeaders.python || '---\nPython Reporter\n---');
+    //   cfg.line(pytestContents);
+    // });
+
+
 
 
   },
 
   async docsImporter() {
 
-    const destinationFolder = '../content/docs/reference/importer';
+    const destinationFolder = '../content/docs/project/import-export';
 
     if (!fs.existsSync(destinationFolder)) {
       fs.mkdirSync(destinationFolder, { recursive: true });
@@ -145,11 +171,25 @@ module.exports = {
     content = content.split('\n');
     content = content.slice(content.indexOf('## CLI') + 2).join('\n').replace(/#\s/g, '## ')
 
-    writeToFile('../content/docs/reference/import-js.md', cfg => {
+    writeToFile('../content/docs/project/import-export/import-js.md', cfg => {
       cfg.line(`---
 title: Import JavaScript Tests
+description: Import JavaScript tests into Testomat.io using the CLI tool with support for various frameworks like Cypress, TestCafe, and Protractor. This guide covers commands for importing, synchronizing, and managing test IDs, as well as options for handling parametrized tests, disabling detached tests, and importing into specific suites or branches.
+type: article
+url: https://docs.testomat.io/project/import-export/import-js
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://user-images.githubusercontent.com/24666922/78563263-505d1280-7838-11ea-8fbc-18e942d48485.png
+
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, JavaScript test import, automated tests, test management, CLI tool, test synchronization, parametrized tests, Test IDs, Cypress, TestCafe, Protractor, QA tools
 ---
 
+<!-- DO NOT EDIT THIS FILE DIRECTLY. IT IS GENERATED FROM open-source project https://github.com/testomatio/check-tests -->
 
 Testomat.io can import automated tests into a project.
 We provide CLI tools for different frameworks so you get visibility of your tests in seconds.
@@ -166,11 +206,25 @@ ${content}`)});
     content2 = content2.split('\n').slice(3).join('\n').replace(/#\s/g, '## ')
 
 
-    writeToFile('../content/docs/reference/import-php.md', cfg => {
+    writeToFile('../content/docs/project/import-export/import-php.md', cfg => {
       cfg.line(`---
 title: Import PHP Tests
+description: Import PHP tests into Testomat.io using the list-tests CLI utility, which supports PHPUnit and Codeception. This guide explains how to install the tool, print and export test lists in markdown format, and import tests directly into Testomat.io by passing the API key for your project. Easily manage PHP tests and maintain live documentation with this integration.
+type: article
+url: https://docs.testomat.io/project/import-export/import-php
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
+
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, PHP test import, PHPUnit, Codeception, CLI tool, test management, live documentation, markdown export, test synchronization, API key, QA tools
 ---
 
+<!-- DO NOT EDIT THIS FILE DIRECTLY. IT IS GENERATED FROM open-source project https://github.com/testomatio/php-list-tests -->
 
 > 📑 This documentation is taken from open-source project [testomatio/php-list-tests](https://github.com/testomatio/php-list-tests)
 
@@ -182,10 +236,25 @@ ${content2}`)
     content3 = content3.slice(content3.indexOf('## Cli') + 2).join('\n')
 
 
-    writeToFile('../content/docs/reference/import-bdd.md', cfg => {
+    writeToFile('../content/docs/project/import-export/import-bdd.md', cfg => {
       cfg.line(`---
 title: Import Cucumber BDD Tests
+description: Import Cucumber BDD tests into Testomat.io using the check-cucumber CLI tool. This guide covers commands to synchronize tests, assign test IDs, manage detached tests, and clean or import tests into specific suites, branches, or keep source code structure intact. It also supports both manual and automated BDD test imports, allowing efficient test management and version control.
+type: article
+url: https://docs.testomat.io/project/import-export/import-bdd
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://user-images.githubusercontent.com/24666922/78559548-2dc7fb00-7832-11ea-8c69-0722222a82fe.png
+
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, Cucumber BDD, CLI tool, test import, test IDs, test synchronization, automated tests, manual tests, test management, QA tools
 ---
+
+<!-- DO NOT EDIT THIS FILE DIRECTLY. IT IS GENERATED FROM open-source project [testomatio/check-cucumber](https://github.com/testomatio/check-cucumber) -->
 
 > 📑 This documentation is taken from open-source project [testomatio/check-cucumber](https://github.com/testomatio/check-cucumber)
 

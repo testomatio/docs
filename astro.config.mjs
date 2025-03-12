@@ -122,14 +122,15 @@ export default defineConfig({
 										{ label: 'Java and Other Test Frameworks', link: '/project/runs/reporter/junit'},
 										{ label: 'Test Artifacts', link: '/project/runs/reporter/artifacts'},
 										{ label: 'Configuration', link: '/project/runs/reporter/configuration'},
+										{ label: 'Advanced Options', link: '/project/runs/reporter/pipes/testomatio' },
+										{ label: 'CLI', link: '/project/runs/reporter/cli'},
 										{ label: 'Functions', link: '/project/runs/reporter/functions'},
 										{ label: 'Logger', link: '/project/runs/reporter/logger'},
 										{
 											label: 'Pipes',
-											collapsed: false,
+											collapsed: true,
 											items: [
 												{ label: 'Overview', link: '/project/runs/reporter/pipes' },
-												{ label: 'Advanced Options', link: '/project/runs/reporter/pipes/testomatio' },
 												{ label: 'GitHub', link: '/project/runs/reporter/pipes/github' },
 												{ label: 'GitLab', link: '/project/runs/reporter/pipes/gitlab' },
 												{ label: 'BitBucket', link: '/project/runs/reporter/pipes/bitbucket' },
@@ -211,13 +212,6 @@ export default defineConfig({
 							collapsed: false,
 							items: [
 								{ label: 'Branches', link: '/advanced/branches-folder' }
-							],
-						},
-						{
-							label: 'Artifacts',
-							collapsed: false,
-							items: [
-								{ label: 'Artifacts', link: '/advanced/artifacts' }
 							],
 						},
 						{
@@ -323,6 +317,7 @@ export default defineConfig({
 							items: [
 								{ label: 'Overview', link: '/management/company' },
 								{ label: 'Administration', link: '/management/company/administration' },
+								{ label: 'Audit Log', link: '/management/company/audit-log' },
 								{ label: 'Trials', link: '/management/company/trials' },
 								{ label: 'Subscriptions', link: '/management/company/subscriptions' },
 							],
@@ -369,7 +364,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Contact Us', link: '/support'},
 					],
-				},				
+				},
 			],
 		}),
 	],
@@ -401,7 +396,9 @@ export default defineConfig({
 		"/usage/labels-and-custom-fields": "/advanced/tags-labels",
 		"/usage/bulk-edit": "/advanced/bulk-edit-folder",
 		"/usage/branches": "/advanced/branches-folder",
-		"/usage/test-artifacts": "/advanced/artifacts/test-artifacts",
+		"/usage/test-artifacts": "/project/runs/reporter/artifacts",
+		"/advanced/artifacts": "/project/runs/reporter/artifacts",
+		"/advanced/artifacts/test-artifacts": "/project/runs/reporter/artifacts",
 		"/usage/query-language": "/advanced/tql",
 		"/usage/keyboard-shortcuts": "/advanced/shortcuts",
 		"/usage/living-documentation": "/advanced/living-doc",
@@ -423,11 +420,11 @@ export default defineConfig({
 		"/reference/reporter/functions": "/project/runs/reporter/functions",
 		"/reference/reporter/logger": "/project/runs/reporter/logger",
 		"/reference/reporter/workflows": "/project/runs/reporter/workflows",
-		"/reference/reporter/pipes": "/project/runs/reporter/pipes",
+		"/reference/reporter/pipes": "/project/runs/reporter/pipes/index",
 		"/reference/reporter/pipes/testomatio": "/project/runs/reporter/pipes/testomatio",
 		"/compliance/overview/": "/legal/compliance",
 		"/security/overview/": "/legal/security",
-		"/security/subprocessors": "/legal/security/subprocessors",		
+		"/security/subprocessors": "/legal/security/subprocessors",
 		"/usage/continious-integration": "/integrations/continuous-integration",
 		// "/usage/bdd-syntax": "",	bdd-syntax locate in not-in-use folder
 		"/reference/reporter/pipes/testomatio.html": "/project/runs/reporter/pipes/testomatio",
@@ -436,7 +433,7 @@ export default defineConfig({
 		"/legal/compliance/overview": "/legal/compliance",
 		"/legal/security/overview": "/legal/security",
 		"/reference": "/project/runs",
-		"/advanced/artifacts/test-artifacts": "/advanced/artifacts",
+
 		"/support/contact-us": "/support",
 		"/integrations/continuous-integration/overview": "/integrations/continuous-integration",
 		"/reference/import-js": "/project/import-export/import-js",

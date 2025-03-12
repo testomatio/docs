@@ -55,6 +55,23 @@ You can use ↓ and ↑ keys to navigate the tests and have a quick view of deta
 
 ![navigate with arrows](./images/CleanShot-2023-12-29-at-094607.gif)
 
+**Test Case History**
+
+When you launch a test run and make changes to test case title or description - a new entry is added to the test case's history. This entry records who made the edit and when it occurred. 
+
+1. Navigate to the Runs section.
+2. Launch a new Run or continue an existing Run.
+3. Click the three dots menu next to the test case you want to edit.
+4. Select **Edit**.
+5. Modify the test case title or description as needed.
+6. Click **Save** to apply the changes.
+7. The new history entry will appear directly in the test case block, showing who edited the test case and the date and time of the change.
+
+![test case history](./images/Test_Case_History.png)
+
+Please note that the test case history is only available while the test run is in progress.
+
+
 ## RunGroups
 
 You can group your Runs within Testomat.io. To do this you need to click on New Group button

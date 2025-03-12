@@ -16,8 +16,10 @@ head:
 ---
 
 - [Administration](/management/company/administration)
+- [Audit Log](/management/company/audit-log)
 - [Trials](/management/company/trials)
 - [Subscriptions](/management/company/subscriptions)
+
 
 Testomat.io Team implemented Companies feature to simplify work with your team and subscriptions.
 Now your projects are stored in Companies. Each user may have one company, so you will not shuffle your projects with others.

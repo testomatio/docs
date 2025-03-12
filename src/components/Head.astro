@@ -98,6 +98,7 @@ const pageAlreadyHasOgImage = Astro.locals.starlightRoute.entry.data.head.some(
 )}
 
 <script>
+    [...document.scripts].forEach(s=>s.dataset.astroExec="");
     document.addEventListener("astro:before-swap", (e) => {
         document
             .querySelectorAll('link[rel="stylesheet"][href*="client.crisp.chat"]')
