@@ -57,7 +57,7 @@ Enables company users to create and share living documentation without requiring
 
 1. Enable this feature at the company level
 
-![Toggle](images/gif1_263.gif)
+![Living Documentation](images/att11_263.png)
 
 2. Navigate to the general **'Settings'** tab in the sidebar
 3. Click the **'Project'** tab
@@ -72,7 +72,7 @@ Allows company users to share test reports with anyone, either using a passcode 
 
 1. Enable this feature at the Company level
 
-![Enable Public Shared Report](images/gift2_263.gif)
+![Public Shared Report](images/att10_263.png)
 
 2. Navigate to the General **'Settings'** tab in the sidebar
 3. Click the **'Project'** tab
@@ -117,7 +117,7 @@ How to enable built-in AI?
 3. Click the **'AI'** option
 4. Enable the **'AI Features'** option
 
-![Bult-in AI](images/gift3_263.gif)
+![AI Features](images/att12_263.png)
 
 **Custom AI Provider**
 
