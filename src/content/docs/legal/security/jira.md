@@ -89,7 +89,9 @@ GET /rest/api/2/search
 
 ### Required Permissions
 
-Users should have the following JIRA permissions:
+It's recommended to create a dedicated service account with appropriate permissions for the integration, rather than using individual user accounts. This service account should have:
+
+This service user should have the following JIRA permissions:
 
 1. **Project Level Permissions:**
    - Browse Project
@@ -98,13 +100,12 @@ Users should have the following JIRA permissions:
    - Link Issues
 
 2. **Global Permissions:**
-   - Browse Users
-   - Manage Webhooks (Admin)
+   - Manage Webhooks (Admin) *optional*
 
 3. **Property Management:**
    - Manage Project Properties (Admin)
    - Manage Issue Properties
-   - Manage User Properties
+   - Manage User Properties *optional*
 
 ## Security Note
 While Testomat.io has access to all issues of a project it is enabled on, it is important to note that there are no restrictions on the JIRA API regarding which issues Testomat.io has access to. However, Testomat.io is committed to maintaining the highest standards of data integrity and security and only accesses data essential for the functionality of the app.
