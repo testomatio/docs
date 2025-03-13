@@ -23,15 +23,88 @@ Testomat.io’s JIRA plugin is designed to enhance the integration between your 
 - **Write Properties:** Testomat.io can write properties to save tests data into JIRA storage attached to a specific issue. This is the only write operation performed by Testomat.io.
 - **No Update or Delete Operations:** Testomat.io does not update or delete any issues on your JIRA. It strictly adheres to read and write properties operations to ensure the integrity of your JIRA issues.
 
-## API Endpoints Accessed
-Testomat.io accesses the following JIRA API endpoints:
-- `GET /search?jql="epic link"=${key}&maxResults=1000`
-- `GET /issue/:id`
-- `GET /issue/${issueId}/properties/${slug}.testomatio.tests`
-- `GET /search?jql=parent=${key}&maxResults=1000`
-- `GET /search?jql=sprint=${sprintId}&maxResults=1000`
-- `GET /search?jql=project=${projectId}&maxResults=1000`
-- `GET /user/properties/testomatio.token`
+Based on the code, here's a comprehensive list of JIRA API endpoints used and the required permissions:
+
+### REST API Endpoints Used
+
+1. **Webhook Management**
+```
+POST /rest/webhooks/1.0/webhook
+```
+
+To unlink test cases when an issue is deleted (optionally)
+
+2. **Issue Operations**
+```
+GET /rest/api/2/issue/{issueId}
+POST /rest/api/2/issue
+PUT /rest/api/2/issue/{issueId}
+```
+To link, create and update jira issues for tests and defects
+
+3. **Issue Properties**
+```
+GET /rest/api/2/issue/{issueId}/properties
+GET /rest/api/2/issue/{issueId}/properties/{propertyKey}
+PUT /rest/api/2/issue/{issueId}/properties/{propertyKey}
+DELETE /rest/api/2/issue/{issueId}/properties/{propertyKey}
+```
+To store test cases and runs data inside Jira
+
+4. **Project Operations**
+```
+GET /rest/api/2/project/{projectKey}
+GET /rest/api/2/project/{projectKey}/properties/{propertyKey}
+PUT /rest/api/2/project/{projectKey}/properties/{propertyKey}
+DELETE /rest/api/2/project/{projectKey}/properties/{propertyKey}
+```
+
+5. **Issue Metadata**
+```
+GET /rest/api/2/issue/createmeta
+GET /rest/api/2/issue/createmeta/{projectKey}/issuetypes
+GET /rest/api/2/issue/createmeta/{projectKey}/issuetypes/{issueTypeId}
+```
+To read all current issue types when creating a new issue
+
+6. **Remote Links**
+```
+GET /rest/api/2/issue/{issueId}/remotelink
+POST /rest/api/2/issue/{issueId}/remotelink
+DELETE /rest/api/2/issue/{issueId}/remotelink/{linkId}
+```
+To attach reports to issues
+
+8. **User Properties**
+```
+PUT /rest/api/2/user/properties/{propertyKey}
+DELETE /rest/api/2/user/properties/{propertyKey}
+```
+To store auth data (optionally)
+
+9. **Search**
+```
+GET /rest/api/2/search
+```
+
+### Required Permissions
+
+Users should have the following JIRA permissions:
+
+1. **Project Level Permissions:**
+   - Browse Project
+   - Create Issues
+   - Edit Issues
+   - Link Issues
+
+2. **Global Permissions:**
+   - Browse Users
+   - Manage Webhooks (Admin)
+
+3. **Property Management:**
+   - Manage Project Properties (Admin)
+   - Manage Issue Properties
+   - Manage User Properties
 
 ## Security Note
 While Testomat.io has access to all issues of a project it is enabled on, it is important to note that there are no restrictions on the JIRA API regarding which issues Testomat.io has access to. However, Testomat.io is committed to maintaining the highest standards of data integrity and security and only accesses data essential for the functionality of the app.
