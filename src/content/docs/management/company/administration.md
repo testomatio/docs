@@ -46,6 +46,10 @@ In Testomat.io, owners of a company under the **Enterprise plan** have access to
 
 ![Testomatio.io - Auto_provision](./images/Auto-Provision_access.png)
 
+On the Sign On Settings page, you can enter a domain in the corresponding field and then either select a specific project from the dropdown menu or choose all projects by checking the "Select All" checkbox. This will automatically add all users with the specified domain to your company and the selected projects.
+
+![Testomatio.io - Sign-On Settings Page](./images/SignOnSettingsPage.png)
+
 For more detailed instructions on how to set up auto-provisioning, check the official documentation:  
 [Single Sign-On in Testomat.io](https://docs.testomat.io/integrations/single-sign-on/)
 
