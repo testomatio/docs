@@ -51,7 +51,7 @@ Once a manual test run is launched, you need to set a Result for each test case.
 2. Select the appropriate result (PASSED, FAILED, or SKIPPED)
 3. Once you select a result, the Result message options will appear automatically. Choose a message from the available options
 
-![TestCaseResults](images/att5_4812.png)
+![TestCaseResults](./images/att5_4812.png)
 
 4. Repeat the process for all test cases.
 5. Click the ‘Finish Run’ button to complete the process
@@ -202,30 +202,62 @@ In case you want to adjust the size of the test description block to see more de
 
 This way, you can customize the view to match your workflow.
 
+## Bulk Actions in Test Runs
+
+Managing test cases efficiently is crucial for smooth test execution. With bulk actions, you can perform multiple operations at once, reducing manual effort and saving time. Below are the available bulk actions you can use within test runs.
+
 ### **How To Reassign Multiple Test Cases**
 
 If you need to reassign test cases to a different user, you no longer have to update each test case separately. Instead, follow these easy steps:
 
-1. Click "Runs" button at the sidebar
-2. Open the test run
-3. Click "Continue" button
+1. Click **‘Runs’** button on the sidebar
+2. Open the test run you’re working on
+3. Click **‘Continue’** button
 
-![reassign test cases](images/att1_1054.png)
+![reassign test cases](./images/att1_1054.png)
 
-4. Click Multi-Select
+4. Click **‘Multi-Select’** button
 5. Select the specific tests you would like to reassign
-6. Click the "Assign to" button at the bottom
+6. Click the **'Assign to'** button at the bottom
 7. Select a user you would like to reassign
-8. Click "OK" in the "Are you sure you want to assign (username) to all selected tests?" pop-up window
-
-![reassign test cases](images/att2_1054.png)
-
+8. Click **'OK'** in the **'Are you sure you want to assign (username) to all selected tests?'** pop-up window
 
 This feature significantly reduces manual effort and speeds up the reassignment process during test run.
 
 Let’s check how tests look like after changes.
 
-![reassign test cases](images/att3_1054.png)
+![reassign test cases](./images/att3_1054.png)
+
+### How to Multi-Select Result Messages for Test Cases
+
+While running tests and selecting the appropriate status with a result message, you can multi-select result messages for test cases. Follow these steps to complete the process:
+
+1. Click **‘Runs’** button on the sidebar
+2. Open a test run you’re working on
+3. Click **‘Continue’** button
+
+![Run a test](./images/att1_878.png)
+
+4. Click **‘Multi-Select’** button
+5. Select the specific tests
+6. Click the **‘Result message’** button at the bottom
+
+![Result Message appears](./images/att2_878.png)
+
+7. Select an appropriate status, e.g., **‘PASSED’**
+8. Choose a result message, e.g., **‘Expected behaviour’**
+9. Also, type a result message in the provided field
+10. Click the **‘Apply’** button
+
+![Apply changes](./images/att3_878.png)
+
+This feature allows testers to update multiple test cases efficiently, ensuring consistency in reporting results.
+
+By using bulk actions, you streamline test management, improve workflow efficiency, and maintain consistency across test runs.
+
+Let’s verify the multiple message results in these test cases:
+
+![Bulk result message](./images/gif1_878.gif)
 
 ## How To Track Test Time
 

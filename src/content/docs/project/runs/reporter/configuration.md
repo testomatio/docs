@@ -24,7 +24,7 @@ Environment variables can be either passed inline, or from `.env` file or from s
 
 ## Variables List
 
-#### `TESTOMATIO` 
+#### `TESTOMATIO`
 
 Alternatively, `TESTOMATIO_TOKEN` or `TESTOMATIO_API_KEY`
 
@@ -32,7 +32,11 @@ Your Project API key for reporting to Testomat.io.
 
 #### `TESTOMATIO_CREATE`
 
-Create test IDs.
+Create test IDs
+
+```
+TESTOMATIO={API_KEY} TESTOMATIO_CREATE=1 <actual run command>
+```
 
 #### `TESTOMATIO_DISABLE_BATCH_UPLOAD`
 
@@ -90,15 +94,37 @@ Example:
 TESTOMATIO_INTERCEPT_CONSOLE_LOGS=true <actual run command>
 ```
 
-#### `TESTOMATIO_MAX_REQUEST_FAILURES_COUNT`
+#### `TESTOMATIO_MARK_DETACHED`
 
-Maximum number of failed requests within 60 seconds. Default is 10.
+If some tests from a project were not reported in this run, you can mark them as detached.
+
+**This works only for XML reports**
 
 Example:
 
 ```
-TESTOMATIO_MAX_REQUEST_FAILURES_COUNT=5 <actual run command>
+TESTOMATIO_MARK_DETACHED=true npx @testomatio/reporter xml "tests/**/*.xml"
 ```
+
+If you pass a tag, only absent tests with this tag will be marked as detached:
+
+```
+TESTOMATIO_MARK_DETACHED=@core npx @testomatio/reporter xml "tests/**/*.xml"
+```
+
+#### `TESTOMATIO_MAX_REQUEST_FAILURES`
+
+Maximum number of failed requests. If more requests fail, reporting will stop.
+
+Example:
+
+```
+TESTOMATIO_MAX_REQUEST_FAILURES=5 <actual run command>
+```
+
+#### `TESTOMATIO_REQUEST_TIMEOUT`
+
+Max request timeout in **milli**seconds. Default is 20 sec.
 
 #### `TESTOMATIO_PROCEED`
 
@@ -107,12 +133,8 @@ Do not finalize the run.
 Example:
 
 ```
-TESTOMATIO_PREPEND_DIR="MyTESTS" TESTOMATIO=1111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js"
+TESTOMATIO={API_KEY} TESTOMATIO_PROCEED=1 <actual run command>
 ```
-
-#### `TESTOMATIO_PREPEND_DIR`
-
-Place all imported tests into a specific suite (folder).
 
 #### `TESTOMATIO_RUN`
 
@@ -128,15 +150,34 @@ Example:
 TESTOMATIO={API_KEY} TESTOMATIO_RUNGROUP_TITLE="Build ${BUILD_ID}" <actual run command>
 ```
 
+Use `/` separator to create a nested rungroup:
+
+```
+TESTOMATIO={API_KEY} TESTOMATIO_RUNGROUP_TITLE="Builds/${BUILD_ID}" <actual run command>
+```
+
+
 #### `TESTOMATIO_SHARED_RUN`
 
-Report parallel execution to the same run.
+Report parallel execution to the same run matching it by title. **If the run was created more than 20 minutes ago, a new run will be created instead.** To change the timeout use `TESTOMATIO_SHARED_RUN_TIMEOUT` variable.
 
 Example:
 
 ```
 TESTOMATIO={API_KEY} TESTOMATIO_TITLE="report for commit ${GIT_COMMIT}" TESTOMATIO_SHARED_RUN=1 <actual run command>
 ```
+
+#### `TESTOMATIO_SHARED_RUN_TIMEOUT`
+
+Changes timeout of a shared run. After timeout, shared run won't accept other runs with same name, and new runs will be created instead. Timeout is set in minutes, default is 20 minutes.
+
+Example:
+
+```
+TESTOMATIO={API_KEY} TESTOMATIO_TITLE="Today's Build"  TESTOMATIO_SHARED_RUN=1 TESTOMATIO_SHARED_RUN_TIMEOUT=120 <actual run command>
+```
+
+In this case all tests will be added to the same run if it was created less than 120 minutes ago.
 
 #### `TESTOMATIO_STACK_FILTER`
 
@@ -162,29 +203,32 @@ Example:
 TESTOMATIO={API_KEY} TESTOMATIO_TITLE="title for the report" <actual run command>
 ```
 
-#### `TESTOMATIO_TITLE_IDS`
+#### `TESTOMATIO_UPDATE_CODE`
 
-Configure title IDs.
-
-
+Sends the `code` of your tests to Testomat.io on each run. (If not enabled (default) assumes the code is pushed using [check-tests](https://github.com/testomatio/check-tests#cli)).
 
 ### Artifacts
 
-Configuration for artifacts storage.
+Configuration for artifacts storage. Those variables can be obtained from Testomat.io if "Share credentials" in Project Settings > Artifacts is enabled.
 
-* `S3_ACCESS_KEY_ID`: Your S3 access key ID.
-* `S3_BUCKET`: Your S3 bucket name.
-* `S3_ENDPOINT`: Your S3 endpoint URL.
-* `S3_REGION`: Your S3 region.
-* `S3_SECRET_ACCESS_KEY`: Your S3 secret access key.
+- `S3_ACCESS_KEY_ID`: Your S3 access key ID.
+- `S3_BUCKET`: Your S3 bucket name.
+- `S3_ENDPOINT`: Your S3 endpoint URL.
+- `S3_REGION`: Your S3 region.
+- `S3_SECRET_ACCESS_KEY`: Your S3 secret access key.
+- `TESTOMATIO_PRIVATE_ARTIFACTS`: Store artifacts in a bucket privately.
+
+These variables are used to define how artifacts are uploaded:
+
+- `TESTOMATIO_DISABLE_ARTIFACTS`: disable all artifacts uploading. All artifacts can be uploaded later with `npx @testomatio/reporter upload-artifacts` command.
+- `TESTOMATIO_ARTIFACT_MAX_SIZE_MB`: disable uploading artifacts larger than X size in Mb. Other artifacts can be uploaded later with `npx @testomatio/reporter upload-artifacts` command.
 
 ### Pipes
 
 Configuration for CI/CD pipelines.
 
-* `GH_PAT`: Your GitHub personal access token (to enable GitHub Pipe)
-* `GITLAB_PAT`: Your GitLab personal access token (to enable Gitlab Pipe).
-
+- `GH_PAT`: Your GitHub personal access token (to enable GitHub Pipe)
+- `GITLAB_PAT`: Your GitLab personal access token (to enable Gitlab Pipe).
 
 ## Loading configuration from `.env` file
 

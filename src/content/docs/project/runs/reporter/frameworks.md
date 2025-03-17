@@ -492,3 +492,4 @@ If you want to have artifacts attached, use `System.out.println` to print an abs
 ```java
 System.out.println("file://" + pathToScreenshot);
 ```
+

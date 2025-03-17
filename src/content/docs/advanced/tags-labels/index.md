@@ -15,7 +15,7 @@ head:
       content: Testomat.io, tags, labels, custom fields, test management, categorization, testing workflow, custom data, test organization, filter tests, QA, test case management
 ---
 
-Tags, Labels & Custom Fields are powerful features in a test management system that allow users to categorize and organize their testing data.
+**Tags, Labels & Custom Fields** are powerful features in a test management system that allow users to categorize and organize their testing data.
 
 **Tags and Labels** are keywords or phrases that can be applied to individual tests or test suites to provide an at-a-glance summary of the test's status, type, priority, or any other relevant information. They make it easy for users to filter and sort their tests to quickly find what they need.
 
@@ -30,7 +30,7 @@ While both **Tags** and **Labels** help organize and categorize your tests, they
 **Tags** are typically used to assign a specific keyword or category to test cases, making it easier to group, filter, or search for related tests. They are often used for ad-hoc categorization and usually have no strict hierarchy. 
 For example, Tags can represent various attributes, such as the type of test (for ex., @Regression, @Smoke, @E2E), associated features, or testing phases.
 
-In automation testing, a **Tag** is a segment of extra metadata that you can include on an individual test case or a group of tests.These tags are directly embedded in the test code, and allows you to specify additional information for your tests, which you can use to enhance your test runs. The testing tool will execute only tests containing that piece of information, as almost all modern testing tools and frameworks have integrated support for running a subset of tests, using tags. For example, execute all tests tagged as @Regression but skip @Smoke tests.
+In automation testing, a **Tag** is a segment of extra metadata that you can include on an individual test case or a group of tests. These tags are directly embedded in the test code, and allows you to specify additional information for your tests, which you can use to enhance your test runs. The testing tool will execute only tests containing that piece of information, as almost all modern testing tools and frameworks have integrated support for running a subset of tests, using tags. For example, execute all tests tagged as @Regression but skip @Smoke tests.
 
 ![Testomatio - Tag in BDD](./images/Tags_in_BDD.png)
 
@@ -91,7 +91,7 @@ In case if you don't see a previously created tag in the autocomplete dropdown, 
 Labels can be easily added in Project Settings
 
 1. Go to Settings.
-2. Select Labels & Custom Fields.
+2. Select Labels & Fields.
 3. Enter a title for the label.
 4. Click Create button.
 
@@ -121,24 +121,27 @@ Now it's time to set up your label!
 
 ![Testomatio - Setup Label](./images/Setup_Labels.png)
 
-You can also use **Quick create label** feature to create labels directly from a Test Case or Suite:
+You can also use **Quick create label** feature to create labels faster:
 
-1. Open Test Case/ Suite.
-2. Click Extra button.
-3. Click Labels.
-4. Type Label name in 'Quick create label' field.
-5. Click Create button.
-6. Select newly Created Label.
+1. Go to Steps
+2. Select Step
+3. Click Extra button.
+4. Click Labels.
+5. Type Label name in 'Quick create label' field.
+6. Click Create button.
+7. Select newly Created Label.
 
 ![Testomatio - Quick Create Label](./images/Quick_create_label.gif)
 
 :::note
 
+**Quick create label** feature available only on Set Labels page for **Runs**, **Plans** and **Steps**.
+
 Labels created via **Quick Create Label** feature use default minimal settings and can be assigned only to the entity level where it was created. You can modify these settings later by navigating to **Settings -> Labels&Fields**.
 
 :::
 
-Example of default settings for Label, created via **Quick create label** feature on Suite level:
+Example of default settings for Label, created via **Quick create label** feature on Step level:
 
 ![Testomatio - Quick Create Label](./images/Quick_create_label_settings.png)
 
@@ -183,9 +186,21 @@ Custom Field with List type allows creating a list of your choice. You can put t
 
 ![Testomatio - Assign Label & Custom Field](./images/Assing_Label.png)
 
-4. Select Labels & Custom Fields.
+4. Select Labels.
+5. Click Add Custom Field.
+6. Select Custom Fields.
+7. Click Save button.
 
-![Testomatio - Assign Label & Custom Field](./images/Set_Labels.png)
+![Testomatio - Assign Label & Custom Field](./images/Set_Labels.gif)
+
+OR: 
+
+1. Open a Suite/ Test.
+2. Click Set Labels button the title name.
+3. Select Labels & Custom Fields.
+4. Click Save button.
+
+![Testomatio - Assign Label & Custom Field](./images/Set_Labels_2.gif)
 
 - Mass-assign labels using our multiselection mode
 
@@ -198,7 +213,33 @@ Custom Field with List type allows creating a list of your choice. You can put t
 4. Select Labels & Custom Fields.
 5. Click Add.
 
-![Testomatio - Multi-assign Label & Custom Field](./images/Mass_assign_set_label_temporary.png)
+![Testomatio - Multi-assign Label & Custom Field](./images/Mass_assign_set_1.png)
+
+:::note
+
+To edit Labels & Custom fields or add a new one click **Manage labels** button directly from **Set Labels** page -> it will redirect you to **Labels** page.
+
+:::
+
+![Testomatio - Multi-assign Label & Custom Field](./images/Manage_Labels.png)
+
+## How to Set Up Labels and Custom Fields as Required
+
+If you want to have some Labels and Custom Fields as required by default when creating Test Cases or Suites, create a Template with those labels and set it up as the default:
+
+1. Go to Settings -> Templates.
+2. Open an existing Template or create a new one.
+3. Enable Default option. 
+4. Select Labels & Custom Fields you want to make required.
+5. Click Update button.
+
+![Testomatio - Required Labels](./images/Required_Labels.png)
+
+6. Go to Tests.
+7. Click '+' to create new Test Case.
+8. Add values to Custom fields via Set Labels page.
+
+![Testomatio - Required Labels](./images/Required_Labels_2.gif)
 
 ## How to Filter by Labels and Custom Fields
 
@@ -228,8 +269,7 @@ Lets see how this works:
 2. Click Extra button.
 3. Click Labels.
 4. Select Custom Field with multiple values.
-5. Choose a value (type value and click Enter if you use Custom Field Number or String).
-6. Choose the same Custom Field with another value.
+5. Choose values from the displayed list for List Custom Field (or type a few values, separated by "," for Custom Field String).
 
 ![Testomatio - Multi-select Custom Field](./images/Multi-select_custom_field.gif)
 
