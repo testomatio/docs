@@ -437,5 +437,6 @@ export default defineConfig({
 		"/support/contact-us": "/support",
 		"/integrations/continuous-integration/overview": "/integrations/continuous-integration",
 		"/reference/import-js": "/project/import-export/import-js",
+		"/getting-started/start-from-scratch": "/getting-started",
 	},
 });

@@ -77,8 +77,6 @@ Assign users to this application so they could join Testomat.io:
 
 Now, open Company page in Testomat.io and select Single Sign On options
 
-![Company Settings](./images/image-3.png)
-
 > If you don't see Single Sign On option, check that you are an owner of this company
 
 Fill in the form:
