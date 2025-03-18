@@ -74,12 +74,8 @@ You decided to upgrade your Subscription at Testomat.io. First, you need to crea
 
 2. Click on Create button
 
-![image](./images/134371212-c296a7a7-c345-4ba4-bfbf-b29718170068.png)
-
 3. Enter the name for your company
 4. Click on Create button
-
-![image](./images/134371353-d8506558-fea2-49c7-88f0-3f49a4c39ffd.png)
 
 5. Now your Company is created
 
@@ -111,8 +107,6 @@ Your seat count can be adjusted in the Companies section. The number of seats in
 If you want to reduce the amount you’re charged, you’ll need to first delete people under Company Team Members and then reduce your seat count by taking the steps below. Along the same lines, you may need to increase your seat count before you’re able to invite more people to your Testomat.io account. Note that a reduced amount of seats will apply with the next subscription payment.
 
 1. Go to the Companies tab on a dashboard and click the Edit button
-
-![image](./images/135045215-656098fb-84ca-472f-9a2a-eebbfdb46ecc.png)
 
 2. Click on the Manage Subscription button
 
