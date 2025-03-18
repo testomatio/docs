@@ -322,6 +322,7 @@ export default defineConfig({
 							collapsed: false,
 							items: [
 								{ label: 'Overview', link: '/management/company' },
+								{ label: 'Users and Permissions', link: '/management/company/users-and-permissions'},
 								{ label: 'Administration', link: '/management/company/administration' },
 								{ label: 'Audit Log', link: '/management/company/audit-log' },
 								{ label: 'Trials', link: '/management/company/trials' },

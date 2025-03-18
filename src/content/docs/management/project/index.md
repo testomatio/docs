@@ -2,5 +2,5 @@
 title: Overview
 ---
 
-- [Project setup and management](/management/project/settings)
+- [Project Setup and Management](/management/project/settings)
 - [Templates](/management/project/templates)
