@@ -15,6 +15,30 @@ head:
       content: Testomat.io, administration, company management, project oversight, team management, company owner, project control, user roles, organizational tools, test management platform
 ---
 
+## How to Create a Company
+
+In Testomat.io, a Company is required to manage projects and enable subscriptions.
+
+:::note
+
+Each user can create only one Company as an owner. If you already own a Company, the **‘Create’** button will not be available.
+
+:::
+
+To create a Company in Testomat.io, follow these steps:
+
+1. Open the **’Companies**’ tab
+2. Click the **’Create’** button
+
+![Create Company](images/att1_253.png)
+
+3. Enter the Company Name in the **’Title’** field
+4. Click the **’Create’** button to finalize the process
+
+![Company Created](images/att2_253.png)
+
+Once your Company is created, you can proceed with [Enabling a Subscription](https://docs.testomat.io/management/company/subscriptions/#how-to-enable-subscription).
+
 ## Company Settings
 
 The **'Company Settings'** section allows owners to manage company-specific configurations, including updating the company name, adjusting sharing options, and utilize AI features. These settings ensure the proper access control and facilitate the sharing of specific data within the company. Below is an overview of the main functionalities:
