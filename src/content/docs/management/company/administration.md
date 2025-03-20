@@ -210,3 +210,31 @@ Global Search is available from the Dashboard, Companies and Analytics tabs. You
 
 ![Testomatio.io - Global-search-icon](./images/global_search.png)
 
+
+## Managing Projects on the Project Board
+
+Company Owners and Managers can administer projects via the **Project board** in the **Company** section.
+
+### To access the board:
+
+1. Log in to your account.
+2. Go to the **Companies** section.
+3. Select your company.
+4. Click the three dots (⋮) next to the **Manage Subscription** button.
+5. Select **Projects**.
+![Testomatio.io - Projects-Board-Access](./images/Projects_Board.png)
+
+Once you’ve selected **Projects**, you’ll be directed to the Project board for your Company.
+
+## Project Actions:
+Next to each project in the list, you'll find a three-dot (⋮) menu. You can perform the following actions:
+
+- **Edit**: Change the project’s name.
+- **Change Owner**: Assign a new owner from the list.
+- **Clone**: Duplicate the project along with all test data (excluding user access).
+- **Archive/Unarchive**: Archive a project to prevent edits while retaining read-only access. Unarchive when needed.
+- **Delete**: Permanently delete a project. **Note:** This action is irreversible.
+
+![Testomatio.io - Projects-Management-Menu](./images/maage_projects.png)
+
+
