@@ -56,7 +56,7 @@ To invite a support user to your project, follow these steps:
 4. Select **‘Invite Support User’** button
 5. Click **‘OK’** to confirm that you give permission
 
-![Invited Support User](images/att1_2818.png)
+![Invite Support User](images/att1_2818.png)
 
 **Important**: The Testomat.io support user can access data in the project and will be removed automatically after 1 week.
 
