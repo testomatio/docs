@@ -48,6 +48,7 @@ In case you want tests with tag A excluding tests that contain tag B, this shoul
 ```ruby
 tag == 'A' and not (tag == 'B')
 ```
+
 or the same with `!=`
 
 ```ruby
@@ -81,6 +82,7 @@ tag = 'A' <- won't work !!!!
 
 tag == 'A' <- will work
 ```
+
 ### Multiple values
 
 It may be necessary to find multiple values associated with a single variable. Fortunately, TQL provides a straightforward solution. The following syntax can be used to achieve this:
@@ -95,37 +97,39 @@ jira in ['LMP-100', 'LMP-104', 'LMP-144', 'LMP-214', 'LMP-219']
 
 In previous section we used `tag` in the query. `tag` is an allowed query variable. Here is a comprehenisve list of variables you can use in the query:
 
-
-| Variable     | Description                                | Example                              |
-|--------------|--------------------------------------------|--------------------------------------|
-| tag          | Match tests by tag                          | `tag == 'important'`                |
-| label        | Match tests by label or custom field        | `label == 'Automatable'`            |
-|              |                                            | `label == 'Severity:🔥Critical'` (please note that you need to include emojis if you use them as value in custom fields)    |
-| priority     | Match tests by priority                     | `priority >= 'normal'`              |
-|              |                                            | `priority == 'critical'`            |
-| issue        | Match tests by issue as URL or Jira issue key| `issue == 'https://github.com/o/r/issues/1'` |
-|              |                                            | `issue == 'JST-2'`                   |
-| jira         | Match tests by Jira issue key               | `jira == 'JST-2'`                    |
-| state        | Match tests by automation state             | `state == 'automated'`              |
-|              |                                            | `state == 'manual'`                 |
-|              |                                            | `state == 'sync'`                   |
-|              |                                            | `state == 'unsync'`                 |
-| status       | Match tests by run status                   | `status == 'passed'`                |
-|              |                                            | `status == 'failed'`                |
-| created_at   | Match tests by creation date                | `created_at >= 3.days_ago`          |
-|              |                                            | `created_at < 1.month_ago`          |
-|              |                                            | `created_at == today()`             |
-|              |                                            | `created_at <= '2023-12-31'`        |
-| updated_at   | Match tests by last update                  | `updated_at >= 3.days_ago`          |
-|              |                                            | `updated_at <= '2023-12-31'`        |
-| run_at       | Match tests by last execution date          | `run_at < 1.week_ago`               |
-|              |                                            | `run_at == today()`                 |
-| created_by   | Match tests by author's name                | `created_by == 'Antonio Primus'`   |
-| assigned_to  | Match tests by assignee's name              | `assigned_to == 'Antonio Primus'`  |
-| suite        | Match tests inside a folder or suite        | `suite % 'Checkout'`                |
-|              |                                            | `suite == '{SUITE_ID}'`             |
-| test         | Match tests by title or ID                  | `test % 'User login'`               |
-|              |                                            | `test == '{TEST_ID}'`               |
+| Variable      | Description                                   | Example                                                                                                                  |
+| ------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| tag           | Match tests by tag                            | `tag == 'important'`                                                                                                     |
+| label         | Match tests by label or custom field          | `label == 'Automatable'`                                                                                                 |
+|               |                                               | `label == 'Severity:🔥Critical'` (please note that you need to include emojis if you use them as value in custom fields) |
+| priority      | Match tests by priority                       | `priority >= 'normal'`                                                                                                   |
+|               |                                               | `priority == 'critical'`                                                                                                 |
+| issue         | Match tests by issue as URL or Jira issue key | `issue == 'https://github.com/o/r/issues/1'`                                                                             |
+|               |                                               | `issue == 'JST-2'`                                                                                                       |
+| jira          | Match tests by Jira issue key                 | `jira == 'JST-2'`                                                                                                        |
+| state         | Match tests by automation state               | `state == 'automated'`                                                                                                   |
+|               |                                               | `state == 'manual'`                                                                                                      |
+|               |                                               | `state == 'sync'`                                                                                                        |
+|               |                                               | `state == 'unsync'`                                                                                                      |
+| status        | Match tests by run status                     | `status == 'passed'`                                                                                                     |
+|               |                                               | `status == 'failed'`                                                                                                     |
+| custom_status | Match tests by custom status                  | `custom_status == 'Known issue'`                                                                                         |
+|               |                                               | `custom_status IN [‘Expected error’ , ‘Known issue’]`                                                                    |
+|               |                                               | `custom_status % 'issue' `                                                                                               |
+| created_at    | Match tests by creation date                  | `created_at >= 3.days_ago`                                                                                               |
+|               |                                               | `created_at < 1.month_ago`                                                                                               |
+|               |                                               | `created_at == today()`                                                                                                  |
+|               |                                               | `created_at <= '2023-12-31'`                                                                                             |
+| updated_at    | Match tests by last update                    | `updated_at >= 3.days_ago`                                                                                               |
+|               |                                               | `updated_at <= '2023-12-31'`                                                                                             |
+| run_at        | Match tests by last execution date            | `run_at < 1.week_ago`                                                                                                    |
+|               |                                               | `run_at == today()`                                                                                                      |
+| created_by    | Match tests by author's name                  | `created_by == 'Antonio Primus'`                                                                                         |
+| assigned_to   | Match tests by assignee's name                | `assigned_to == 'Antonio Primus'`                                                                                        |
+| suite         | Match tests inside a folder or suite          | `suite % 'Checkout'`                                                                                                     |
+|               |                                               | `suite == '{SUITE_ID}'`                                                                                                  |
+| test          | Match tests by title or ID                    | `test % 'User login'`                                                                                                    |
+|               |                                               | `test == '{TEST_ID}'`                                                                                                    |
 
 #### Examples
 
@@ -149,53 +153,53 @@ Testomat.io has implemented a Query Language for Runs to make the search more fl
 
 Before diving into the details of variables, it's important to understand that variables starting with `has_` are used to filter **test runs** by whether they match certain **test criteria**. Specifically:
 
-* `has_test`: This variable allows you to filter runs based on whether they contain specific tests, which are identified by their title or ID. In other words, you can use `has_test` to find test runs that include tests that match a given name or ID.
+- `has_test`: This variable allows you to filter runs based on whether they contain specific tests, which are identified by their title or ID. In other words, you can use `has_test` to find test runs that include tests that match a given name or ID.
 
-| Variable          | Description                                            | Example                                           |
-|-------------------|--------------------------------------------------------|---------------------------------------------------|
-| title             | Match runs by title                                    | `title == 'Run title'`                            |
-|                   |                                                        | `title % 'Manual tests'`                          |
-| plan              | Match runs by plan                                     | `plan == '{PLAN_ID}'`                             |
-|                   |                                                        | `plan % 'Smoke tests'`                            |
-| env               | Match runs by environment                              | `env == 'Production'`                             |
-|                   |                                                        | `env in ['Windows', 'Linux']`                          |
-| tag               | Match runs by tag                                      | `tag == 'slow'`                                   |
-| label             | Match runs by label or custom field                    | `label IN ['Severity:🔥Critical', 'Automatable']` |
-| jira              | Match runs by jira_id or Jira issue key                | `jira == 'JST-1'`                                 |
-| duration          | Match runs by duration in seconds                      | `duration < 1000`                                 |
-| passed_count      | Match runs by number of passed tests                   | `passed_count > 100`                              |
-| failed_count      | Match runs by number of failed tests                   | `failed_count < 10`                               |
-| skipped_count     | Match runs by number of skipped tests                  | `skipped_count < 10`                              |
-| automated         | Match runs by automated                                | `automated`                                       |
-| manual            | Match runs by manual                                   | `manual`                                          |
-| mixed             | Match runs by mixed                                    | `mixed`                                           |
-| finished          | Match runs by finished                                 | `finished`                                        |
-| unfinished        | Match runs by unfinished                               | `unfinished`                                      |
-| passed            | Match runs by passed status                            | `passed`                                          |
-| failed            | Match runs by failed status                            | `failed`                                          |
-| terminated        | Match runs by terminated                               | `terminated`                                      |
-| published         | Match runs by published                                | `published`                                       |
-| private           | Match runs by private                                  | `private`                                         |
-| archived          | Match runs by archived                                 | `archived`                                        |
-| unarchived        | Match runs by unarchived                               | `unarchived`                                      |
-| with_defect       | Match runs that have linked defects                    | `with_defect`                                     |
-| has_defect        | Match runs containing tests with linked defect by defect title or ID | `has_defect in [‘TST-1’ , ‘github.com#123123’]`|
-| | | `has_defect == ‘{JIRA_ID}’`|
-| has_test          | Match runs containing tests by their title or ID       | `has_test == '{TEST_ID}'`                         |
-|                   |                                                        | `has_test % 'Important test'`                     |
-| has_test_tag      | Match runs containing tests with specific tags         | `has_test_tag == 'regression'`                    |
-| has_test_label    | Match runs containing tests with specific labels       | `has_test_label == 'Automatable'`                 |
-| has_suite         | Match runs containing suites by their title or ID      | `has_suite % 'Users'`                             |
-| has_message       | Match runs containing tests with messages              | `has_message == "Result message"`                 |
-| has_custom_status | Match runs containing tests with custom status | `has_custom_status in [‘Expected behaviour’ , ‘Known issue’]` |
-| | | `has_custom_status  == ‘Expected behaviour’`|
-| has_assigned_to   | Match runs containing tests assigned to specific users | `has_assigned_to IN ['John Doe', 'Jane Smith']`   |
-| has_retries       | Match runs containing tests with retries               | `has_retries > 2`                                 |
-| has_test_duration | Match runs containing tests with specific durations    | `has_test_duration <= 1.minute`                   |
-| created_at        | Match runs by creation time                            | `created_at <= 1.week_ago`                        |
-| updated_at        | Match runs by last update                              | `updated_at >= 5.days_ago`                        |
-| launched_at       | Match runs by launch time                              | `launched_at > 2.days_ago AND launched_at < 1000.seconds_ago`|
-| finished_at       | Match runs by finish time                              | `finished_at < 7.days_ago`                        |
+| Variable          | Description                                                          | Example                                                       |
+| ----------------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| title             | Match runs by title                                                  | `title == 'Run title'`                                        |
+|                   |                                                                      | `title % 'Manual tests'`                                      |
+| plan              | Match runs by plan                                                   | `plan == '{PLAN_ID}'`                                         |
+|                   |                                                                      | `plan % 'Smoke tests'`                                        |
+| env               | Match runs by environment                                            | `env == 'Production'`                                         |
+|                   |                                                                      | `env IN ['Windows', 'Linux']`                                 |
+| tag               | Match runs by tag                                                    | `tag == 'slow'`                                               |
+| label             | Match runs by label or custom field                                  | `label IN ['Severity:🔥Critical', 'Automatable']`             |
+| jira              | Match runs by jira_id or Jira issue key                              | `jira == 'JST-1'`                                             |
+| duration          | Match runs by duration in seconds                                    | `duration < 1000`                                             |
+| passed_count      | Match runs by number of passed tests                                 | `passed_count > 100`                                          |
+| failed_count      | Match runs by number of failed tests                                 | `failed_count < 10`                                           |
+| skipped_count     | Match runs by number of skipped tests                                | `skipped_count < 10`                                          |
+| automated         | Match runs by automated                                              | `automated`                                                   |
+| manual            | Match runs by manual                                                 | `manual`                                                      |
+| mixed             | Match runs by mixed                                                  | `mixed`                                                       |
+| finished          | Match runs by finished                                               | `finished`                                                    |
+| unfinished        | Match runs by unfinished                                             | `unfinished`                                                  |
+| passed            | Match runs by passed status                                          | `passed`                                                      |
+| failed            | Match runs by failed status                                          | `failed`                                                      |
+| terminated        | Match runs by terminated                                             | `terminated`                                                  |
+| published         | Match runs by published                                              | `published`                                                   |
+| private           | Match runs by private                                                | `private`                                                     |
+| archived          | Match runs by archived                                               | `archived`                                                    |
+| unarchived        | Match runs by unarchived                                             | `unarchived`                                                  |
+| with_defect       | Match runs that have linked defects                                  | `with_defect`                                                 |
+| has_defect        | Match runs containing tests with linked defect by defect title or ID | `has_defect IN [‘TST-1’ , ‘github.com#123123’]`               |
+|                   |                                                                      | `has_defect == ‘{JIRA_ID}’`                                   |
+| has_test          | Match runs containing tests by their title or ID                     | `has_test == '{TEST_ID}'`                                     |
+|                   |                                                                      | `has_test % 'Important test'`                                 |
+| has_test_tag      | Match runs containing tests with specific tags                       | `has_test_tag == 'regression'`                                |
+| has_test_label    | Match runs containing tests with specific labels                     | `has_test_label == 'Automatable'`                             |
+| has_suite         | Match runs containing suites by their title or ID                    | `has_suite % 'Users'`                                         |
+| has_message       | Match runs containing tests with messages                            | `has_message == "Result message"`                             |
+| has_custom_status | Match runs containing tests with custom status                       | `has_custom_status IN [‘Expected behaviour’ , ‘Known issue’]` |
+|                   |                                                                      | `has_custom_status == ‘Expected behaviour’`                   |
+| has_assigned_to   | Match runs containing tests assigned to specific users               | `has_assigned_to IN ['John Doe', 'Jane Smith']`               |
+| has_retries       | Match runs containing tests with retries                             | `has_retries > 2`                                             |
+| has_test_duration | Match runs containing tests with specific durations                  | `has_test_duration <= 1.minute`                               |
+| created_at        | Match runs by creation time                                          | `created_at <= 1.week_ago`                                    |
+| updated_at        | Match runs by last update                                            | `updated_at >= 5.days_ago`                                    |
+| launched_at       | Match runs by launch time                                            | `launched_at > 2.days_ago AND launched_at < 1000.seconds_ago` |
+| finished_at       | Match runs by finish time                                            | `finished_at < 7.days_ago`                                    |
 
 #### Examples
 
@@ -249,7 +253,6 @@ Searched text should be longer than 4 chars.
 
 This also works for suites, so you can select all tests from a suite containing `User` word:
 
-
 ```ruby
 # when searching for tests from a suite
 suite % 'User'
@@ -259,7 +262,6 @@ has_suite % 'User'
 ```
 
 However, if there are multiple suites with word User in their title, **only the first suite will be selected**.
-
 
 ## Dates
 
@@ -290,7 +292,6 @@ To list all tests created for the previous week use `1.week_ago` with `>` operat
 ```ruby
 created_at > 1.week_ago
 ```
-
 
 ## Users
 
