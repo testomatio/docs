@@ -8,7 +8,7 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/134368580-7aa5e926-39df-4a03-ae10-4c54d4d4f864.DB0OAJ5b_qJwDU.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
@@ -18,9 +18,9 @@ head:
 Testomat.io is accessible in the cloud on 3 subscription levels, more details [here ](https://testomat.io/#pricing) and on-premise to be installed on your servers with an Enterprise plan. See more info below.
 Also, Testomat.io provides two trials for you to evaluate all features: a 30 Days Trial and an additional extra 14 Days Trial.
 
-## How To Use Testomat.io as a Free Subscription Plan 
+## How To Use Testomat.io as a Free Subscription Plan
 
-When you register a user in Testomat.io, there is much more than a free trial. Testomat.io on the Free plan, is a free service that will not expire. You can continue using the features available on the Free plan for as long as needed. 
+When you register a user in Testomat.io, there is much more than a free trial. Testomat.io on the Free plan, is a free service that will not expire. You can continue using the features available on the Free plan for as long as needed.
 
 Testomat.io offers a Free subscription level. This is not a trial period: there is no cut-off date on using Testomat.io as a free service. You can create **2 projects with 2 users** for free and continue using them for free as long as needed.
 
@@ -52,7 +52,8 @@ Note that if you revert to a Free plan after being on a Professional or Enterpri
 ## Subscription Levels
 
 Testomat.io is available on three different subscription levels:
-- Free 
+
+- Free
 - Professional (for small and medium-sized businesses)
 - Enterprise (for larger businesses)
 
@@ -62,42 +63,32 @@ Each subscription level includes varying access to features such as Bug trackers
 
 You can choose to pay for your Teamup subscription on a monthly or yearly basis.
 
-All Testomat.io paid subscriptions are billed automatically; if you pay on a monthly basis, then each month you will be automatically charged for your continuing subscription. If you pay on a yearly basis, then you will be automatically charged annually for your continuing subscription. 
- 
+All Testomat.io paid subscriptions are billed automatically; if you pay on a monthly basis, then each month you will be automatically charged for your continuing subscription. If you pay on a yearly basis, then you will be automatically charged annually for your continuing subscription.
+
 ## How To Enable Subscription
 
-You decided to upgrade your Subscription at Testomat.io. First, you need to create a company. Subscription can be enabled only within a company. Let's have a look how to do this:
+You decided to upgrade your Subscription at Testomat.io. After creating a Company, follow these steps to enable it:
 
-1. Go to the Companies tab on a dashboard
+1. Navigate to the **’Companies’** tab
+2. Open the Company you created
+3. Click on the **’Upgrate’** button
 
-![image](./images/134371042-78686e98-5b7e-467b-8ff5-b77402aa9540.png)
+![Upgrate button](images/att3_253-1.png)
 
-2. Click on Create button
+4. Select a plan: Professional or Enterprise
+5. Select Monthly or Yearly billing
+6. Specify the Users limit
+7. Click the **‘Upgrade’** button to proceed
 
-3. Enter the name for your company
-4. Click on Create button
+![Confirm upgrate](images/att4_253-1.png)
 
-5. Now your Company is created
+8. You will be redirected to the Payments page. Enter your payment details and click on the **’Pay and Subscribe’** button.
 
-![image](./images/134372022-6e0c2ede-a16a-49f5-8e33-f1cd7a51226a.png)
+Congratulations! 🎉 Your subscription has been successfully upgraded.
 
-6. Now you can click on the Upgrade button
+![subscription has been upgraded](images/att5_253-1.png)
 
-![image](./images/134372289-c75542cc-7f62-4855-ab19-81bbd02ad1d4.png)
-
-7. Pick Subscription Plan, amount of users, and type of payment (1)and click on the Upgrade button (2)
-
-![image](./images/134368580-7aa5e926-39df-4a03-ae10-4c54d4d4f864.png)
-
-8. You will be redirected to the Payments page. Here you need to enter payment data and click on the Subscribe button
-
-![image](./images/134369809-8131148e-b249-495a-b2e9-b71098b52ac2.png)
-
-9. Congratulations! 🎉 You upgraded your subscription 
-
-![image](./images/134372540-edc6e445-67a0-4b27-9207-1e0e0c6248ba.png)
-
-## How To Manage Team Members Within a Company 
+## How To Manage Team Members Within a Company
 
 How To Increase And Decrease Amount Of Team Members
 You can change the number of seats in your team account at any time.
@@ -128,10 +119,9 @@ If you want to reduce the amount you’re charged, you’ll need to first delete
 
 ![image](./images/134407002-4d2f7680-591f-42dd-965d-5b6c8b0710ee.png)
 
-7. In Testomat.io you also will see updated amount of users 
+7. In Testomat.io you also will see updated amount of users
 
 ![image](./images/135050703-6abbc4f8-78b8-43b5-bd7b-9375994c0308.png)
-
 
 ## How To Upgrade And Downgrade Subscription Plan
 
@@ -139,11 +129,11 @@ You can upgrade your subscription at any time, from Free to a paid plan or from 
 
 To do this you need to use steps 1-3 described above to get to the billing page.
 
-4. Pick the subscription plan you want to use and click the Continue button 
+4. Pick the subscription plan you want to use and click the Continue button
 
 ![image](./images/135110702-e3f1925c-2a68-4359-ad19-a3f3481cc87d.png)
 
-5. Check the billing information and click on Confirm button 
+5. Check the billing information and click on Confirm button
 
 ![image](./images/135111106-e7b04eac-cd96-435b-aab6-a24bfd1e5d69.png)
 
@@ -171,37 +161,37 @@ You will continue to have access to your current subscription level until the en
 
 ## Edit Your Billing Data
 
- > Please note, that there is no way to change Billing data for old bills.
+> Please note, that there is no way to change Billing data for old bills.
 
- To update / edit your Billing data you should go to Companies page > Manage subscription > Billing Iinformation > Update information
+To update / edit your Billing data you should go to Companies page > Manage subscription > Billing Iinformation > Update information
 
- ![upd bill info 1](./images/edit-bill-1.png)
+![upd bill info 1](./images/edit-bill-1.png)
 
- ![upd bill info 2](./images/edit-bill-2.png)
+![upd bill info 2](./images/edit-bill-2.png)
 
- Enter your data such as email, phone number, address, Tax ID > Save
+Enter your data such as email, phone number, address, Tax ID > Save
 
- ![upd bill 3](<./images/CleanShot 2024-01-09 at 09.08.52@2x.png>)
+![upd bill 3](<./images/CleanShot 2024-01-09 at 09.08.52@2x.png>)
 
- See your Billing information was updated
+See your Billing information was updated
 
- ![upd bill 4](<./images/CleanShot 2024-01-09 at 09.09.49@2x.png>)
+![upd bill 4](<./images/CleanShot 2024-01-09 at 09.09.49@2x.png>)
 
- If you need to edit some specific Billing data please contact us support@testomat.io.
+If you need to edit some specific Billing data please contact us support@testomat.io.
 
 ## What Happens To Locked Projects And Users
 
-When your subscription is canceled your company is set to Free plan with appropriate limitations. Some of your projects may be locked, but not lost. Member added above Free Plan limit will be moved to removed section in Companies section and won't have access to projects. You can contact support to get the data from the locked projects or upgrade to unlock it. 
+When your subscription is canceled your company is set to Free plan with appropriate limitations. Some of your projects may be locked, but not lost. Member added above Free Plan limit will be moved to removed section in Companies section and won't have access to projects. You can contact support to get the data from the locked projects or upgrade to unlock it.
 
 ![image](./images/135133257-c34357db-2d9f-461f-9618-54c41774ffc6.png)
 
 ## Frequently Asked Questions
 
 Q: I'd like to collaborate with a user who already has their own subscription. Should I purchase a seat for the user to collaborate on my projects?\
-A: Yes, in Testomat.io you pay for the number of licenses in your account. To start the collaboration, you may either invite the user to your account or ask them to invite you. 
+A: Yes, in Testomat.io you pay for the number of licenses in your account. To start the collaboration, you may either invite the user to your account or ask them to invite you.
 
 Q: What currency am I going to be charged in?\
-A: Testomat.io accepts US currency only ($USD). 
+A: Testomat.io accepts US currency only ($USD).
 
 Q: Can I share one license/seat with several members?\
 A: No, as it's one member per seat. However, you can release the license by removing a member and invite another person to the vacant seat.
