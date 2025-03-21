@@ -439,5 +439,6 @@ export default defineConfig({
 		"/integrations/continuous-integration/overview": "/integrations/continuous-integration",
 		"/reference/import-js": "/project/import-export/import-js",
 		"/getting-started/start-from-scratch": "/getting-started",
+		"/legal/advanced/jira-plugin/index.md": "/legal/security/jira",
 	},
 });
