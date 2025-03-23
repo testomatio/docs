@@ -1,6 +1,6 @@
 ---
 title: Users and Permissions
-description: Explore how Testomat.io simplifies managing teams and subscriptions with the Companies feature. This guide explains how to invite and manage users, assign roles (like Owner, Manager, Developer, and Read-Only), and create or assign teams to projects. It also covers managing billing users, archiving projects, and maintaining efficient team workflows.
+description: Explore how Testomat.io simplifies managing teams and subscriptions with the Companies feature. This guide explains how to invite and manage users, assign roles (like Owner, Manager, QA, and Read-Only), and create or assign teams to projects. It also covers managing accountant users, archiving projects, and maintaining efficient team workflows.
 type: article
 url: https://docs.testomat.io/management/company
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, companies, team management, roles, project access, billing users, read-only users, subscription management, team workflows, project archive, QA tools
+      content: Testomat.io, companies, team management, roles, project access, accountant users, read-only users, subscription management, team workflows, project archive, QA tools
 ---
 
 
@@ -29,7 +29,7 @@ Each user may have only one company, so you will not shuffle your projects with 
 
 On the Companies page, you have a list of companies you participate in with mentioning your role in them.
 
-![Testomatio - Companies](./images/Companies_2.png)
+![Testomatio - Companies](./images/Companies_n.png)
 ## Roles Within a Company
 
 Testomat.io provides different roles within projects and companies to make your testing process more convenient.
@@ -37,8 +37,8 @@ Different team members have different access levels to management options:
 
 - **Owner** is a team member who created a company, can purchase a subscription, invite members to a company and a project, change other team members roles inside the company, create projects, and has access to all features within the project.
 - **Manager** is a team member who can purchase a subscription, create projects, invite members to a company and a project, can change other team members roles inside the company, except the owner role, and has access to all features within the project.
-- **Developer** is a team member who can create projects and has access to all features within the project.
-- **Billing** is a team member who can only update subscriptions and it is free of charge.
+- **QA** is a team member who can create projects and has access to all features within the project.
+- **Accountant** is a team member who can only update subscriptions and it is free of charge.
 - **Read-only** is a team member who has permissions for viewing or reading information, but can't make any changes. It is free of charge and available in Professional and Enterprise plans.
 
 ## How to Create a Company
@@ -51,7 +51,7 @@ OR
 
 Go to 'Companies' page and click 'Create' button
 
-![Testomatio - Create company](./images/Create_company_2.png)
+![Testomatio - Create company](./images/Create_company_2n.png)
 
 After, enter a Company name or keep the name displayed by default and click 'Create' button
 
@@ -68,57 +68,57 @@ Follow these steps to invite users to your company:
 1. Go to the 'Companies' page.
 2. Click 'Invite' button.
 
-![Testomatio - Invite_users](./images/Invite_users.png)
+![Testomatio - Invite_users](./images/Invite_users_n.png)
 
 3. Enter user's mail (or a few, if needed).
 
-![Testomatio - Invite_users](./images/Invite_users_2.png)
+![Testomatio - Invite_users](./images/Invite_users_2n.png)
 
-4. Select a role 'Billing User' or 'Read Only Mode', if needed.
+4. Select a role 'Accountant User' or 'Read Only Mode', if needed.
 
 5. Click 'Invite' button.
 
-![Testomatio - Invite_users](./images/Invite_users_3.png)
+![Testomatio - Invite_users](./images/Invite_users_3n.png)
 
 6. Click on 'Actions' button and pick 'Projects Access' option or click on member's name.
 
-![Testomatio - Invite_users](./images/Invite_users_4.png)
+![Testomatio - Invite_users](./images/Invite_users_4n.png)
 
 7. Choose the project via 'Add to Project' button or add to all projects with one click via 'Add to All Projects' button.
 
-![Testomatio - Invite_users](./images/Invite_users_5.png)
+![Testomatio - Invite_users](./images/Invite_users_5n.png)
 
 8. See that member was successfully added to projects and click 'Back' button.
 
-![Testomatio - Invite_users](./images/Invite_users_6.png)
+![Testomatio - Invite_users](./images/Invite_users_6n.png)
 
 9. See that projects appeared in added member's line.
 
-![Testomatio - Invite_users](./images/Invite_users_7.png)
+![Testomatio - Invite_users](./images/Invite_users_7n.png)
 
 ## How to Manage Company Team Members
 
-All invited members have a Developer role by default. You can change the member's role on the Company Team Members page ('Companies' page -> Select Company -> 'Actions' button). 
+All invited members have a QA role by default. You can change the member's role on the Company Team Members page ('Companies' page -> Select Company -> 'Actions' button). 
 
-![Testomatio - Manage team member](./images/Manage_team_member_1.png)
+![Testomatio - Manage team member](./images/Manage_team_member_1n.png)
  
 You can delete a team member by clicking on the 'Delete' button
 
-![Testomatio - Delete team member](./images/Delete_team_member.png)
+![Testomatio - Delete team member](./images/Delete_team_member_n.png)
 
 With this action deleted team members will be moved to the **Removed** section
 
-![Testomatio - Delete team member](./images/Delete_team_member_2.png)
+![Testomatio - Delete team member](./images/Delete_team_member_2n.png)
 
 So you can reactivate them at any time with previous role by clicking on the 'Reactivate' button or with Read-Only permissions by clicking on the 'Make Read-Only' button
 
-![Testomatio - Reactivate team member](./images/Reactivate.png)
+![Testomatio - Reactivate team member](./images/Reactivate_n.png)
 
 ## Export Users List
 
 You may need to get data about users who are members of your company. Fortunately, Testomat.io makes it easy and convenient:
 
-![Testomat.io - Export Users List](./images/New_Hj9V2azU_2024-10-15.png)
+![Testomat.io - Export Users List](./images/Export_Users_List_n.png)
 
 :::note
 
@@ -128,14 +128,14 @@ Only users with Owner or Manager roles can export Users List
 
 The exported .csv file contains the following information about the company's users:
 
-1. Name	
-2. Email	
-3. Role	
-4. Status	
-5. Paused At (UTC)	
-6. Last Login (UTC)
+1. Name.
+2. Email.
+3. Role.
+4. Status.
+5. Paused At (UTC).
+6. Last Login (UTC).
 
-![Testomat.io - Exported File](./images/Export_file.png)
+![Testomat.io - Exported File](./images/Exported_File_n.png)
 
 ## Teams 
 
@@ -151,12 +151,12 @@ To create a Team you need:
 1. Go to the 'Companies' page.
 2. Open your Company. 
 
-![Testomat.io - Teams](./images/Team_1.png)
+![Testomat.io - Teams](./images/Team_1n.png)
 
 3. Click 'Extra menu' button.
 4. Select 'Teams' option from the list.
 
-![Testomat.io - Teams](./images/Team_2.png)
+![Testomat.io - Teams](./images/Team_2n.png)
 
 5. Click 'Create New Team' button.
 
@@ -210,7 +210,7 @@ Namely, you can:
 ![Testomat.io - Edit Team](./images/Edit_team_2.png)
 
 
-## Read-Only Users
+## Read-Only User
 
 Some of your company members such as managers, BA, or other stakeholders may need to have read-only access to Tests, Run Reports, and Analytics in order to read, but not change any data. You can invite read-only users or make existing users read-only on the Company page. 
 
@@ -224,21 +224,21 @@ Some of your company members such as managers, BA, or other stakeholders may nee
 3. Select 'Read Only Mode' option.
 4. Click 'Invite' button.
 
-![Testomat.io - Read-Only](./images/Read_only.png)
+![Testomat.io - Read-Only](./images/Read_only_n.png)
 
 ### Make a Company Member Read-Only 
 
 1. Click on 'Actions' button for selected member from Company page.
 2. Click on 'Make Read-Only' option from the dropdown menu.
 
-![Testomat.io - Read-Only](./images/Read_only_2.png)
+![Testomat.io - Read-Only](./images/Read_only_2n.png)
 
 ### Make the Read-Only Users a Member
 
 1. Click on 'Actions' button for selected Read-Only user from Company page.
 2. Click on 'Grant Write Access' option from the dropdown menu.
 
-![Testomat.io - Read-Only](./images/Read_only_3.png)
+![Testomat.io - Read-Only](./images/Read_only_3n.png)
 
 :::note
 
@@ -246,24 +246,38 @@ Read-Only users are free of charge and available in Professional and Enterprise 
 
 :::
 
-## Billing User
+## Accountant User
 
-The billing user is meant to access to the billing and account management features, allowing them to update payment methods, manage subscriptions, or modify billing details. They are typically the primary point of contact for any billing-related inquiries or issues.
+The Accountant user in a system is a role assigned to a user responsible for managing financial records, tracking expenses, and overseeing payments. They are typically the primary point of contact for any billing-related inquiries or issues.
 
-Our system allows the addition of billing users for free, it means that multiple individuals or entities can be designated as billing users without incurring any additional charges specifically for that role. This can be advantageous for businesses or organizations that require multiple people to manage the billing and financial aspects of their accounts.
+**Common Permissions for Accountant User:**
 
-### How to Add a Billing User
+1. **View Invoices & Transactions** – Access to all past and current invoices, receipts, and payment history.
+2. **Manage Billing Information** – Update company billing details, tax information, and payment methods.
+3. **Download Financial Reports** – Export financial summaries, statements, or transaction reports.
+4. **Monitor Subscription Plans** – Review and track active subscriptions or service plans.
+5. **Limited Payment Permissions** – In some systems, accountants can process payments; in others, they can only review them.
 
-There are 2 ways to add a Billing user:
+**Restricted Permissions for Accountant User:**
 
-1. You can invite the Billing user to your company.
+1. No access to system administration settings.
+2. No ability to modify user roles or permissions.
+3. Limited or no access to operational features beyond financial management.
 
-![Testomat.io - Billing](./images/Billing_1.png)
+### How to Add an Accountant User to a Company
+
+Our system allows the addition of Accountant users for free, it means that multiple individuals or entities can be designated as Accountant users without incurring any additional charges specifically for that role. This can be advantageous for businesses or organizations that require multiple people to manage the billing and financial aspects of their accounts.
+
+There are 2 ways to add a Accountant user:
+
+1. You can invite the Accountant user to your company.
+
+![Testomat.io - Accountant](./images/Accountant_n.png)
 
 
-2. You can make existing company user Billing.
+2. You can make existing company user Accountant.
 
-![Testomat.io - Billing](./images/Billing_2.png)
+![Testomat.io - Accountant](./images/Accountant_2n.png)
 
 
 ## Project Archive 
@@ -276,7 +290,7 @@ There may be completed projects that are not being developed or paused for some 
 2. Click on 'Extra manu' button.
 3. Select 'Projects' option.
 
-![Testomat.io - Archive](./images/Archive.png)
+![Testomat.io - Archive](./images/Archive_n.png)
 
 4. Click on 'Extra menu' button for project that you want to archive.
 5. Click on 'Archive' option.
