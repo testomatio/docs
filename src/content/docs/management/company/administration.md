@@ -222,6 +222,7 @@ Company Owners and Managers can administer projects via the **Project board** in
 3. Select your company.
 4. Click the three dots (⋮) next to the **Manage Subscription** button.
 5. Select **Projects**.
+
 ![Testomatio.io - Projects-Board-Access](./images/Projects_Board.png)
 
 Once you’ve selected **Projects**, you’ll be directed to the Project board for your Company.
@@ -235,6 +236,6 @@ Next to each project in the list, you'll find a three-dot (⋮) menu. You can pe
 - **Archive/Unarchive**: Archive a project to prevent edits while retaining read-only access. Unarchive when needed.
 - **Delete**: Permanently delete a project. **Note:** This action is irreversible.
 
-![Testomatio.io - Projects-Management-Menu](./images/maage_projects.png)
+![Testomatio.io - Projects-Management-Menu](./images/manage_project.png)
 
 
