@@ -102,32 +102,53 @@ Now you can see Test Runs in a created RunGroup
 
 ### How to Customize Your Runs List View
 
-When working with test runs in RunGroup, you can adjust the table layout to fit your needs. Instead of using the default view, you can customize the table by following these simple steps:
+When working with test runs in RunGroup or Runs Dashboard Flow, you can adjust the table layout to fit your needs. Instead of using the default view, you can customize the table by following these simple steps:
 
-1. Click Runs button in the sidebar
+**RunGroup Flow**
+
+1. Click the **Runs** button in the sidebar
 2. Select RunGroup
-3. Click the Custom view button
-   ￼
+3. Click the **Custom view** button
+
+![Custom View option](images/att1_4995.png)
 
 Let's check how a table with a custom view looks like.
 
-4. Click the Settings icon to access Runs List Settings.
+4. Click the **Settings** icon to access **Runs List Settings**.
 
-![Alt text](./images/CleanShot 2025-02-12 at 18.02.20@2x.png>)
+![Custom View](images/att2_4995.png)
 
 Then, you can customize the table layout:
 
 5. Select or deselect columns to show only the data you need
 6. Set the column width (px) if needed to improve readability
-7. Click Save button to apply your changes
+7. Click the **Save** button to apply your changes
 
-![](./images/CleanShot 2025-02-12 at 18.13.09@2x.png>)
+![Save changes](images/att3_4995.png)
 
-Here is what the updated table looks like.
+Here's how your customized table in RunGroup will appear.
 
-![Alt text](./images/CleanShot 2025-02-12 at 18.14.49@2x.png>)
+![Updated Custom View](images/att4_4995.png)
+
+**Runs Dashboard Flow**
+
+Similarly, you can customize the view in the Runs Dashboard Flow by following these steps:
+
+1. Click the **Runs** button in the sidebar
+2. Click the **Custom view** button
+
+![Custom view button](images/att1_1190.png)
+
+3. Customize your view in the **Runs list settings**
+4. Click the **Save** button to apply your changes
+
+![Save changes](images/att2_1190.png)
+
+Here's how your customized table will appear.
+
+![Updated view](images/att3_1190.png)
 ￼
-This feature allows you to personalize the table view, helping you focus on the most important details and making your workflow more efficient.
+With these customization options, you can tailor the Runs View to display only the most relevant details, improving clarity and efficiency.
 
 ### RunGroup Chart
 
