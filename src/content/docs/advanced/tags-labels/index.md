@@ -277,3 +277,26 @@ Testomat.io also allows you to filter your test cases by one or a few Custom Fie
 
 ![Testomatio - Multi-select Custom Field Filtering](./images/Custom_field_filter.gif)
 
+## Permissions for Labels and Custom Fields
+
+To manage Labels and Custom Fields at the Project level, Testomat.io introduces 'Labels Permission' feature, which allows you to have a better control over metadata, maintain consistency, and prevent unauthorized modifications of Labels and Custom Fields.
+
+By default, this permission is disabled, allowing all users to create, edit, or delete Labels and Custom Fields. However, if the **Labels Permission** is enabled, only users with the **Owner** or **Manager** roles can create, edit, or delete Labels and Custom Fields. Team members with lower access levels can still use existing Labels and Custom Fields but will not be able to alter them. 
+
+This feature improves project organization, enhances security, and streamlines collaboration by ensuring structured and standardized test management.
+
+To enable **Labels Permission** on Project level:
+
+1. Open your project and go to Settings.
+2. Select Project.
+3. Enable **Labels permission**.
+
+![Testomatio - Label Permission](./images/Permissions.png)
+
+:::note
+
+The **Owner** and **Manager** roles should be assigned to users in **Project Settings -> Users**.
+
+:::
+
+![Testomatio - Users](./images/Users.png)
