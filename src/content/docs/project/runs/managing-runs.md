@@ -106,15 +106,15 @@ When working with test runs in RunGroup or Runs Dashboard Flow, you can adjust t
 
 **RunGroup Flow**
 
-1. Click the **'Runs'** button in the sidebar
+1. Click the **Runs** button in the sidebar
 2. Select RunGroup
-3. Click the **'Custom view'** button
+3. Click the **Custom view** button
 
 ![Custom View option](images/att1_4995.png)
 
 Let's check how a table with a custom view looks like.
 
-4. Click the **'Settings'** icon to access **'Runs List Settings'**.
+4. Click the **Settings** icon to access **Runs List Settings**.
 
 ![Custom View](images/att2_4995.png)
 
@@ -122,7 +122,7 @@ Then, you can customize the table layout:
 
 5. Select or deselect columns to show only the data you need
 6. Set the column width (px) if needed to improve readability
-7. Click the **'Save'** button to apply your changes
+7. Click the **Save** button to apply your changes
 
 ![Save changes](images/att3_4995.png)
 
@@ -134,13 +134,13 @@ Here's how your customized table in RunGroup will appear.
 
 Similarly, you can customize the view in the Runs Dashboard Flow by following these steps:
 
-1. Click the **’Runs’** button in the sidebar
-2. Click the **’Custom view’** button
+1. Click the **Runs** button in the sidebar
+2. Click the **Custom view** button
 
 ![Custom view button](images/att1_1190.png)
 
-3. Customize your view in the **‘Runs list settings’**
-4. Click the **’Save’** button to apply your changes
+3. Customize your view in the **Runs list settings**
+4. Click the **Save** button to apply your changes
 
 ![Save changes](images/att2_1190.png)
 
