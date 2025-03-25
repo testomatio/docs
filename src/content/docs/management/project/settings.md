@@ -40,17 +40,17 @@ A testing framework provides a structured set of rules and best practices to ens
 
 You can change the testing framework to meet your needs. To do this, follow these steps:
 
-1. Click on **’Settings’** in the sidebar
-2. Click the **’Project’** button
-3. Enable **’Administration’** mode
-4. Click **’OK’** in the popup **’Are you sure?’**
+1. Click on **Settings** in the sidebar
+2. Click the **Project** button
+3. Enable **Administration** mode
+4. Click **OK** in the popup **’Are you sure?’**
 
 ![Administration_Mode](./images/att1_238.png)
 
 5. Select **’Project Framework’** from the dropdown
 6. Select a programming language you use in **’Project Language’** dropdown
-7. Click **’Update’** button
-8. Click **’OK’** to save the changes
+7. Click **Update** button
+8. Click **OK** to save the changes
 
 ![Project_Framework&Language](./images/att2_238.png)
 
@@ -68,6 +68,22 @@ In addition, when **’Administration’** mode is activated, you can:
 
 If you don’t see **’Administration’** mode, please note that this option is available only to users with **Manager** or **Owner** roles at the company level.
 For more details on **’How to Manage Company Roles’**, please explore here <a href="https://docs.testomat.io/management/company/#how-to-manage-company-team-members">Manage Company Roles</a>
+
+## Purge Old Runs
+
+Archived test runs are stored in the dedicated [Runs Archive](https://docs.testomat.io/project/runs/managing-runs/#runs-archive) section, providing easy access to historical data without cluttering the main board. You can manage how long old test runs are kept in the archive and automatically delete them after a specified number of days (up to 365 days).
+
+1. Click on **Settings** in the sidebar
+2. Click the **Project** button
+3. In the **Purge Old Runs** section, set the number of days (up to 365) you wish to keep the test runs
+4. Click the **Save** button to apply the changes
+
+After saving, a confirmation message will appear:
+**’Purge Old Runs settings have been successfully updated.’**
+
+![Purge Old Runs settings have been successfully updated](images/att1_1207.png)
+
+Once the storage period has been configured, old test runs are automatically deleted on a daily basis according to the specified number of days, with a maximum storage period of 365 days.
 
 ## Custom Statuses
 
