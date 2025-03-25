@@ -29,6 +29,35 @@ After that, you should select the type of plan you want to create:
 
 ![Testomat.io - New Plan](./images/New_BVGb17Wo_2024-09-10.png)
 
+---
+
+You can also add a description to your test plan to clarify its purpose, scope, objectives etc. This helps provide context, specify the type of tests, and ensure alignment within the team.
+
+### To Add a Description to Your Test Plan:
+
+1. Go to **Plans**.
+2. Select the plan you want to edit.
+3. Click **Edit**.
+4. Provide a description in the **Description** field.
+5. Click **Save**.
+
+![Testomat.io - Test Plan Description](./images/TestPlan_Description.png)
+
+   The **'full view'** button will appear under the plan’s detailed view.
+
+![Testomat.io - Test Plan Description Full View](./images/TestPlan_Description_fullview.png)
+
+6. Click **full view** to see the complete description in an additional layer.
+
+ You can also view the Test Plan full description in the Runs section:
+
+1. Go to **Runs**.
+2. Select a **Run**.
+3. Click **full view** in the Run's detailed view to see the full description.
+
+![Testomat.io - Test Plan Description Full View - Runs](./images/TS_Description_Runs.png)
+
+
 ## Manual
 
 By choosing manual plan, you can easily customize your selection of test cases:
