@@ -179,6 +179,18 @@ See your Billing information was updated
 
 If you need to edit some specific Billing data please contact us support@testomat.io.
 
+## How to Download Your Invoice
+
+1. Navigate to the billing page via the **Manage Subscription** button.
+2. Scroll down to the **Invoice History** section at the bottom of the page.
+3. Click on the invoice you wish to download.
+4. On the next page, click **Download Invoice**.
+
+
+![image Invoice History](./images/Invoice_History.png)
+![image Download Invoice button](./images/Download_invoice.png)
+
+
 ## What Happens To Locked Projects And Users
 
 When your subscription is canceled your company is set to Free plan with appropriate limitations. Some of your projects may be locked, but not lost. Member added above Free Plan limit will be moved to removed section in Companies section and won't have access to projects. You can contact support to get the data from the locked projects or upgrade to unlock it.
