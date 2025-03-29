@@ -70,7 +70,7 @@ Follow these steps to invite users to your company:
 
 ![Testomatio - Invite_users](./images/Invite_users_n.png)
 
-3. Enter user's mail (or a few, if needed).
+3. Enter user's mail (to invite multiple users, use a comma as a separator and enter the users' emails that you need).
 
 ![Testomatio - Invite_users](./images/Invite_users_2n.png)
 
@@ -80,21 +80,61 @@ Follow these steps to invite users to your company:
 
 ![Testomatio - Invite_users](./images/Invite_users_3n.png)
 
-6. Click on 'Actions' button and pick 'Projects Access' option or click on member's name.
+After the users are added to a Company you can add them to your Project.
+
+## How to Add a User to a Project
+
+There are two ways to add a user to a Project: from the **Company Settings** or directly from the **Project Settings**.
+
+### How to Add a User to a Project from the Company Settings
+
+1. Go to the ‘Companies’ page.
+2. Select Company.
+
+![Testomat.io - Company](./images/Team_1n.png)
+
+3. Click on ‘Actions’ button and pick ‘Projects Access’ option or click on member’s name.
 
 ![Testomatio - Invite_users](./images/Invite_users_4n.png)
 
-7. Choose the project via 'Add to Project' button or add to all projects with one click via 'Add to All Projects' button.
+4. Choose the project via ‘Add to Project’ button or add to all projects with one click via ‘Add to All Projects’ button.
 
 ![Testomatio - Invite_users](./images/Invite_users_5n.png)
 
-8. See that member was successfully added to projects and click 'Back' button.
+5. See that a member was successfully added to projects and click ‘Back’ button.
 
-![Testomatio - Invite_users](./images/Invite_users_6n.png)
+![Testomatio - Invite_users](./images/Invite_users_6n_.png)
 
-9. See that projects appeared in added member's line.
+6. See that projects appeared in added member’s line.
 
 ![Testomatio - Invite_users](./images/Invite_users_7n.png)
+
+### How to Add a User to a Project from the Project Settings
+
+1. Go to the ‘Dashboard’ page.
+2. Select Company and Project.
+
+![Testomat.io - Project](./images/User_1.png)
+
+3. Go to Settings-> Users.
+4. Click ‘Invite’ button.
+
+![Testomat.io - Project](./images/User_2.png)
+
+5. Choose a User from the dropdown list.
+6. Click ‘Send’ button.
+
+![Testomat.io - Project](./images/User_3.png)
+
+7. Invitation has been sent.
+
+![Testomat.io - Project](./images/User_4.png)
+
+:::note
+
+Only company members can be added to the Project via Project Settings.
+
+:::
 
 ## How to Manage Company Team Members
 
