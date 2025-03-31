@@ -106,7 +106,9 @@ RunGroups allow you to organize test runs into structured folders, making it eas
 
 Before proceeding, make sure you have created a RunGroup. For detailed instructions on how to create and manage RunGroups, refer to this [guide](https://docs.testomat.io/project/runs/managing-runs/#rungroups) for more details.
 
-**Enabling RunGroups for New Runs**
+**Enabling RunGroups for New Runs** (Optional Setting)
+
+This setting is optional and can be enabled if you need it. Overall, you can freely create runs inside and out of groups.
 
 1. Navigate to the **Settings** in the sidebar
 2. Click on the **Project** tab
