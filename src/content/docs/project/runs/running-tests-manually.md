@@ -19,7 +19,7 @@ head:
 
 Tests that are not automated (yet) can be executed by QA engineers in manual testing mode. In this mode, a user can check manual tests and mark them as passed or failed. It is possible to create a list of tests to check in test plan and assign users to a run.
 
-### **How To Run All Tests**
+### How to Run All Tests
 
 To launch a Manual Test Run you need:
 
@@ -60,7 +60,7 @@ Once a manual test run is launched, you need to set a Result for each test case.
 
 If you need to configure different result messages, click here: <a href="https://docs.testomat.io/management/project/settings/#custom-statuses" target="_blank">Custom Statuses</a>
 
-### How To Create a Test Plan
+### How to Create a Test Plan
 
 If you need to create a Test Plan you should click on + New Test Plan
 
@@ -82,16 +82,25 @@ The new Test Plan will appear on Manual Run screen
 
 ![CleanShot 2022-05-26 at 12 16 22@2x](./images/170458242-40b1bf88-842c-421a-b562-d64370139b76.jpg)
 
-### **How To Filter Tests For a Test Plan**
+### How to Filter Tests for a Test Plan
+
+Testomat.io allows users to refine test selection when creating a test plan by filtering tests and excluding unwanted ones.
 
 Tests can be filtered in several ways:
 
-1. By tags
-2. Manually picked up from existing suites
+ 1. Manually picked up from existing suites.
+ 2. By Tags.
+ 3. By Priority.
+ 4. By Assignee.
+ 5. By Labels and Custom Fields.
 
-![CleanShot 2022-05-26 at 12 19 41@2x](./images/170458829-e754859b-536b-487b-922a-55482e469972.jpg)
+ ![Testomat.io - Filter tests](./images/Filter.png)
 
-### **How To Select Environment**
+After you applied filters to narrow down the test list, you can exclude unwanted tests by deselecting individual tests from the filtered list **manually by unchecking them one by one** or **excluding multiple tests at once using TQL queries**. This will provide greater flexibility and control during test plan setup.
+
+![Testomat.io - Exclude tests](./images/Exclude_tests.gif)
+
+### How to Select Environment
 
 To select a testing environment you need:
 
@@ -100,11 +109,11 @@ To select a testing environment you need:
 
 ![CleanShot 2022-05-26 at 12 29 39@2x](./images/170460669-b8b8c3dc-ef75-4b31-a3ba-3dfa7c8d9926.jpg)
 
-## **Multi Environment Tests**
+## Multi Environment Tests
 
 Multi environment tests are used for performing the same tests in different environments. This option is very useful in cases when you need to perform testing with different types of operating systems/ browsers/ devices. They can be performed simultaneously or in a sequence. Let's get a look at this option.
 
-### **How To Add More Environments**
+### How to Add More Environments
 
 To add more environment you need to click on the plus button
 
@@ -126,19 +135,19 @@ Now you have environment information updated on Manual Run screen
 
 ![CleanShot 2022-05-26 at 12 37 55@2x](./images/170462012-a1b0f380-3a36-411b-ac44-05f448bffbe9.jpg)
 
-### **How To Run Multi Environment Tests in Sequence**
+### How to Run Multi Environment Tests in Sequence
 
 To run Multi Environment Tests in sequence you need to click on Launch in Sequence button
 
 ![CleanShot 2022-05-26 at 12 43 45@2x](./images/170463243-2cfb6d2c-7382-425b-b607-90bd6203236b.jpg)
 
-### **How To Run All Multi Environment Tests**
+### How to Run All Multi Environment Tests
 
 To run Multi Environment Tests in sequence you need to click on Launch All button
 
 ![CleanShot 2022-05-26 at 12 45 40@2x](./images/170463403-0e791a50-e563-4e9d-8752-0feba409876c.jpg)
 
-## **How To Run Tests As Checklist**
+## How to Run Tests As Checklist
 
 Checklists are widely used in day-to-day manual testing to quickly execute a set of tests without distracting to the additional details. In this mode, the test description is hidden by default. But you can still view the description when you click on the Description button.
 
@@ -150,7 +159,7 @@ To enable Checklist mode you need to launch Manual Run and switch on the Checkli
 
 ![CleanShot 2022-05-25 at 18 35 05@2x](./images/170301515-667bf871-6c49-4059-ae3e-3e561ef92a01.jpg)
 
-## **How To Run Automated Tests Manually**
+## How to Run Automated Tests Manually
 
 When creating Manual Test Run automated tests are disabled by default.
 
@@ -166,7 +175,7 @@ So can run automated tests manually as regular manual tests and see Code Descrip
 
 ![CleanShot 2022-05-26 at 13 13 12@2x](./images/170468049-5c87bcb2-cf8b-4c03-909d-2cb0a495acae.jpg)
 
-## **How Make Changes in The Launched Test Run**
+## How Make Changes in the Launched Test Run
 
 As your testing journey unfolds, you might encounter new scenarios that warrant immediate attention. Fear not, Testomat.io provides you with options to inject additional tests into your already launched test runs. Discover how to expand your test scope effortlessly, ensuring that even the most unforeseen scenarios are accounted for without disrupting your testing momentum.
 
@@ -188,7 +197,7 @@ Let's see what we can do here:
 5. Add tests from another test plan
 6. Don't foget to save ;)
 
-## How To Adjust Test Case Description Block
+## How to Adjust Test Case Description Block
 
 In case you want to adjust the size of the test description block to see more details without scrolling or to minimize it, you can easily resize it by following these steps:
 
@@ -206,7 +215,7 @@ This way, you can customize the view to match your workflow.
 
 Managing test cases efficiently is crucial for smooth test execution. With bulk actions, you can perform multiple operations at once, reducing manual effort and saving time. Below are the available bulk actions you can use within test runs.
 
-### **How To Reassign Multiple Test Cases**
+### How to Reassign Multiple Test Cases
 
 If you need to reassign test cases to a different user, you no longer have to update each test case separately. Instead, follow these easy steps:
 
@@ -259,7 +268,7 @@ Let’s verify the multiple message results in these test cases:
 
 ![Bulk result message](./images/gif1_878.gif)
 
-## How To Track Test Time
+## How to Track Test Time
 
 You may find it useful to track the time spent on runs and specific test cases. For this purpose, Testomat.io has developed flexible time tracking.
 
@@ -285,7 +294,7 @@ At the end of the run, the report will show you the time spent on a particular t
 
 This can be useful for spreading the workload across all team members in future test runs.
 
-## How To Track Test Case History During One Test Run
+## How to Track Test Case History During One Test Run
 
 During a test run, the state or status of a test case may change multiple times. In some situations it can be important to review the history of all state changes, comments, and statuses for a specific test case before finishing the test run.
 
