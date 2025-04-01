@@ -109,7 +109,48 @@ To select a testing environment you need:
 
 ![CleanShot 2022-05-26 at 12 29 39@2x](./images/170460669-b8b8c3dc-ef75-4b31-a3ba-3dfa7c8d9926.jpg)
 
+
+### How to Run Tests in RunGroups?
+
+RunGroups allow you to organize test runs into structured folders, making it easier to manage and analyze test execution. By grouping related runs, you can maintain better visibility over different testing phases, environments, or specific test suites.
+
+Before proceeding, make sure you have created a RunGroup. For detailed instructions on how to create and manage RunGroups, refer to this [guide](https://docs.testomat.io/project/runs/managing-runs/#rungroups) for more details.
+
+**Enabling RunGroups for New Runs** (Optional Setting)
+
+This setting is optional and can be enabled if you need it. Overall, you can freely create runs inside and out of groups.
+
+1. Navigate to the **Settings** in the sidebar
+2. Click on the **Project** tab
+3. In the **Runs settings**, enable the option to require a RunGroup for new runs
+
+![Enable Run Settings](images/att1_214.png)
+
+Once the RunGroup is enabled, you can start your runs within folders. Make sure the **RunGroup Structure** is also enabled.
+
+**Launching Runs in a Folder**
+
+1. Navigate to the **Runs** tab
+2. Click the **Manual Run** button
+
+![Manual Run button](images/att2_214.png)
+
+3. Select the required **RunGroup** from the dropdown
+4. Click the **Launch** button
+
+![Launch button](images/att4_214.png)
+
+**Important:** If no RunGroup is selected, the field will be highlighted in red, and a warning message will appear, prompting you to choose a group before proceeding.
+
+![Group field is required](images/att3_214.png)
+
+By following these steps, you can organize test runs within RunGroups, ensuring a structured and manageable testing workflow. See the result below:
+
+![Runs into Folders](images/att5_214.png)
+
+
 ## Multi Environment Tests
+
 
 Multi environment tests are used for performing the same tests in different environments. This option is very useful in cases when you need to perform testing with different types of operating systems/ browsers/ devices. They can be performed simultaneously or in a sequence. Let's get a look at this option.
 
