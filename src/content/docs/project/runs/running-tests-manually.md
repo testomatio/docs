@@ -150,6 +150,33 @@ To enable Checklist mode you need to launch Manual Run and switch on the Checkli
 
 ![CleanShot 2022-05-25 at 18 35 05@2x](./images/170301515-667bf871-6c49-4059-ae3e-3e561ef92a01.jpg)
 
+## How to Run Test With Steps Execution
+
+Test execution by steps is a feature that enhances manual testing by allowing testers to track and manage the results of individual test steps. This ensures better traceability, improved defect detection, and a structured approach to test execution. By marking each step separately, QA teams gain deeper insights into the testing process and can effectively address issues as they arise.
+
+1. Click the **Runs** in the sidebar
+2. Launch a new manual run
+
+![Launch a new run](images/att1_306.png)
+
+3. Select the test with detailed steps you want to execute
+4. Mark steps regarding the results:
+
+- Click a step once to mark it as **Passed**
+- Click a step twice to mark it as **Failed**
+- Click a step three times to mark it as **Skipped**
+
+5. Add a result with a message (optionally) for the test
+6. Click **Finish Run** to complete the test execution
+
+![Finish run](images/gif1_306.gif)
+
+Test execution by steps introduces a structured, transparent, and efficient way to conduct manual testing. By breaking down test results into individual actions, QA teams can improve accuracy, streamline defect resolution, and optimize their testing workflow. This feature plays a crucial role in ensuring high-quality software delivery by providing detailed insights into each phase of test execution.
+
+Take a look at how the test result with step execution looks:
+
+![Test execution](images/att2_306.png)
+
 ## **How To Run Automated Tests Manually**
 
 When creating Manual Test Run automated tests are disabled by default.
