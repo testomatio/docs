@@ -102,12 +102,12 @@ Once selected, the chart will automatically reflect the applied colour.
 
 This feature gives you greater control over the visual presentation of your custom charts by allowing you to select colours for each query.
 
-### Timelines
+### Timeline
 
-Timelines for Custom Charts, a feature that allows you to visualize data trends over a specified period. A timeline is a graphical representation of events or data points in chronological order. It helps in understanding trends, patterns, and changes over time by displaying information in a linear format.
+**Timeline** for Custom Charts, a feature that allows you to visualize data trends over a specified period. A timeline is a graphical representation of events or data points in chronological order. It helps in understanding trends, patterns, and changes over time by displaying information in a linear format.
 
-- Search Query-Based Timelines: When creating custom charts, you can now set up a timeline period based on your test search queries.
-- Data Collection: Testomat will collect data for the specified test search queries over the selected period.
+- Search Query-Based Timeline: When creating custom charts, you can now set up a timeline period based on your test search queries.
+- Data Collection: Testomat.io will collect data for the specified test search queries over the selected period.
 - Timeline Chart View: The collected data is displayed in a timeline chart view, providing a clear visual representation of how your test metrics evolve over time.
 
 This feature enhances your ability to track progress, identify trends, and make informed decisions based on historical test data.
@@ -117,6 +117,21 @@ This feature enhances your ability to track progress, identify trends, and make 
 Each timeline is associated with a unique URL, which can be copied and shared with other members of the project team.
 
 ![Testomat.io - Unique URL for timelines](./images/New_E5IK2JjS_2024-09-24.png)
+
+:::note 
+
+Timeline feature is also available for other widgets, such as:
+- Automation Coverage.
+- Failures.
+- Issues.
+- Defects.
+- Ever Failing Tests.
+- Flaky Tests.
+- Jira.
+
+:::
+
+![Testomat.io - timeline for widgets](./images/Timeline.png)
 
 ## Failures Board
 
