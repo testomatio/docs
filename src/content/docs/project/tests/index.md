@@ -553,6 +553,34 @@ If your test is deeply nested within suites and folders, you can use breadcrumbs
 
 ![Testomat.io - Breadcrumbs tooltip](./images/New_g6FZ3V7n_2024-08-10.png)
 
+## **How to Copy your Tests, Test Suites, and Folders**
+
+You can copy a single test from a test suite, an entire test suite, or even a folder containing a set of test suites. You can copy these items either within your current project or to a different project.
+
+### Copying Tests or Test Suites Within Your Project
+
+1. Go to the **Tests** section.
+2. Select the item you want to copy (e.g., a test suite).
+3. Open the drop-down menu by clicking the **three dots** next to the **Edit** button.
+4. Click **Copy**.
+5. Select the destination folder where you want to move your test suite.
+
+![Testomat.io - 'Copy' button](./images/Copy_option_Tests.png)
+![Testomat.io - 'Copy tests' pop-up](./images/copy_test_inside_project.png)
+
+### Copying Tests or Test Suites to Another Project
+
+1. Go to the **Tests** section.
+2. Select the item you want to copy (e.g., a test suite).
+3. Open the drop-down menu by clicking the **three dots** next to the **Edit** button.
+4. Click **Copy**.
+5. In the pop-up menu, click **'Change project'**.
+6. Select the specific project from the drop-down list.
+7. Select the destination folder where you want to move your test suite.
+
+![Testomat.io - 'Change project' button](./images/change_project_button.png)
+
+
 ## **How to add a label/tag to a test**
 
 This option is the easiest one! You simply need to add the label's name (preceeded by @ char) in the name field of the test. The drop-down list of tags already used in projects appears, when you type the @ symbol.
