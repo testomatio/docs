@@ -5,14 +5,10 @@ const apiKey = import.meta.env.PUBLIC_MEILISEARCH_KEY;
 
 <div id="docsearch"></div>
 
-<script
-is:inline
-src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"
-></script>
+<script is:inline type="module" async define:vars={{ apiKey }}>
 
+    import { docsearch } from "https://cdn.jsdelivr.net/npm/meilisearch-docsearch@latest/dist/index.bundled.esm.js"
 
-<script  define:vars={{ apiKey }}>
-    const { docsearch } = window.__docsearch_meilisearch__;
     docsearch({
         container: "#docsearch",
         host: 'https://search.testomat.io',
