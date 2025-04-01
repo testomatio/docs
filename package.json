@@ -1,7 +1,7 @@
 {
   "name": "@testomatio/docs",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.6.4",
+  "packageManager": "pnpm@10.7.0",
   "description": "Testomatio Documentation ",
   "main": "index.js",
   "authors": {
@@ -20,7 +20,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "axios": "^1.8.3",
+    "axios": "^1.8.4",
     "dasherize": "^2.0.0",
     "glob": "^10.4.2",
     "runok": "^0.9.3",
@@ -28,9 +28,9 @@
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^6.3.1",
-    "@astrojs/starlight": "^0.32.3",
+    "@astrojs/starlight": "^0.32.5",
     "@octokit/core": "^5.1.0",
-    "astro": "^5.5.3",
+    "astro": "^5.5.5",
     "astro-breadcrumbs": "^3.3.1",
     "astro-og-canvas": "^0.7.0",
     "astro-rehype-relative-markdown-links": "^0.15.0",
@@ -39,7 +39,7 @@
     "canvaskit-wasm": "^0.39.1",
     "dotenv": "^16.4.7",
     "gray-matter": "^4.0.3",
-    "meilisearch-docsearch": "^0.7.0",
+    "meilisearch-docsearch": "^0.7.1",
     "rehype-autolink-headings": "^7.1.0",
     "schema-dts": "^1.1.5",
     "sharp": "^0.33.5",
