@@ -171,13 +171,27 @@ export default defineConfig({
 							collapsed: false,
 							items: [
 								{ label: 'Overview', link: '/project/import-export' },
-								{ label: 'Import from Source Code', link: '/project/import-export/import-tests-from-source-code' },
-								{ label: 'Import from Cucumber', link: '/project/import-export/import-tests-from-cucumber' },
-								{ label: 'Import from CSV/XLS', link: '/project/import-export/import-tests-from-csvxls' },
-								{ label: 'Import JavaScript Tests', link: '/project/import-export/import-js'},
-								{ label: 'Import Cucumber BDD Tests', link: '/project/import-export/import-bdd'},
-								{ label: 'Import PHP Tests', link: '/project/import-export/import-php'},
-								{ label: 'Automated Import', link: '/project/import-export/auto-import'},
+								{
+									label: 'Export tests',
+									collapsed: false,
+									items: [
+										{ label: 'Export Test Suites and Cases', link: '/project/import-export/export-tests' },
+									],
+								},
+								{
+									label: 'Import',
+									collapsed: false,
+									items: [
+										{ label: 'Overview', link: '/project/import-export/import' },
+										{ label: 'Import from Source Code', link: '/project/import-export/import/import-tests-from-source-code' },
+										{ label: 'Import from Cucumber', link: '/project/import-export/import/import-tests-from-cucumber' },
+										{ label: 'Import from CSV/XLS', link: '/project/import-export/import/import-tests-from-csvxls' },
+										{ label: 'Import JavaScript Tests', link: '/project/import-export/import/import-js'},
+										{ label: 'Import Cucumber BDD Tests', link: '/project/import-export/import/import-bdd'},
+										{ label: 'Import PHP Tests', link: '/project/import-export/import/import-php'},
+										{ label: 'Automated Import', link: '/project/import-export/import/auto-import'},
+									],
+								},
 							],
 						},
 						{
