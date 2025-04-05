@@ -30,16 +30,33 @@ Each user may have only one company, so you will not shuffle your projects with 
 On the Companies page, you have a list of companies you participate in with mentioning your role in them.
 
 ![Testomatio - Companies](./images/Companies_n.png)
-## Roles Within a Company
+
+## Users Roles
 
 Testomat.io provides different roles within projects and companies to make your testing process more convenient.
-Different team members have different access levels to management options:
+Different team members have different access levels to management options. 
 
-- **Owner** is a team member who created a company, can purchase a subscription, invite members to a company and a project, change other team members roles inside the company, create projects, and has access to all features within the project.
-- **Manager** is a team member who can purchase a subscription, create projects, invite members to a company and a project, can change other team members roles inside the company, except the owner role, and has access to all features within the project.
+### Roles Within a Company 
+
+- **Owner** is a team member who created a company, can purchase a subscription, invite/delete members to a company and a project, change other team members' roles inside the company, create projects, and has access to all features within the project.
+- **Manager** is a team member who can purchase a subscription, create projects, invite members to a company and a project, can change other team members' roles inside the company, except the owner role, and has access to all features within the project.
 - **QA** is a team member who can create projects and has access to all features within the project.
 - **Accountant** is a team member who can only update subscriptions and it is free of charge.
 - **Read-only** is a team member who has permissions for viewing or reading information, but can't make any changes. It is free of charge and available in Professional and Enterprise plans.
+
+### Roles Within a Project
+
+- **Owner** is a team member who created a project, can invite/delete members and Support user to a project, change other team members' roles inside the project, and has access to all features within the project.
+- **Manager** - is a team member who has almost the same rights as the project owner: can invite/delete members and Support user to a project, has access to all features within the project but can't change other team members' roles inside the project.
+- **Regular User** - is a team member who has access to all project features but limited access to project settings, can't invite or delete members and Support user to a project, nor change their roles within the project.
+- **Read-only** - is a team member who has permissions for viewing or reading information, but can't make any changes. All team members with a read-only role at the company level automatically have a read-only role at the project level, and this role can only be changed to a non-read-only role at the company level.
+
+:::note
+
+The role within the **company** does not always match the role within the **project**. For example, user with the owner role at the company level may be added to the project within the company as the regular user or read-only.
+As well, the same user within a company may have different role on different projects.
+
+:::
 
 ## How to Create a Company
 
@@ -136,23 +153,42 @@ Only company members can be added to the Project via Project Settings.
 
 :::
 
-## How to Manage Company Team Members
+## How to Manage Team Members on Company Level
 
-All invited members have a QA role by default. You can change the member's role on the Company Team Members page ('Companies' page -> Select Company -> 'Actions' button). 
+All invited members have a **QA** role by default. You can change the member's role on the Company Team Members page ('Companies' page -> Select Company -> 'Actions' button). 
 
 ![Testomatio - Manage team member](./images/Manage_team_member_1n.png)
  
-You can delete a team member by clicking on the 'Delete' button
+You can delete a team member by clicking on the 'Delete' button.
 
 ![Testomatio - Delete team member](./images/Delete_team_member_n.png)
 
-With this action deleted team members will be moved to the **Removed** section
+With this action deleted team members will be moved to the **Removed** section. 
 
 ![Testomatio - Delete team member](./images/Delete_team_member_2n.png)
 
 So you can reactivate them at any time with previous role by clicking on the 'Reactivate' button or with Read-Only permissions by clicking on the 'Make Read-Only' button
 
 ![Testomatio - Reactivate team member](./images/Reactivate_n.png)
+
+## How to Manage Team Members on Project Level
+
+You can manage team members not only at **Company Level** but as well at **Project Level**.
+
+All invited to the project members have a **Regular User** role by default. You can change the member's role within the project on the Users page (Select Project -> Settings -> Users -> click on 'Extra menu' button).
+
+![Testomatio - Manage team member Project](./images/Users_roles.png)
+
+You can delete a team member from the project by clicking on the 'Remove' button.
+
+![Testomatio - Manage team member Project](./images/Remove_user.png)
+
+:::note
+
+In case, if a user deleted at the **company level** - they will be automatically **deleted from all projects** within the company.
+In case, if a user removed at the **project level** - they will be deleted **only from that project**, but remain in the company and can be added to a project again at any time.
+
+:::
 
 ## Export Users List
 
