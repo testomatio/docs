@@ -53,8 +53,8 @@ Different team members have different access levels to management options.
 
 :::note
 
-The role within the **company** does not always match the role within the **project**. For example, user with the owner role at the company level may be added to the project within the company as the regular user or read-only.
-As well, the same user within a company may have different role on different projects.
+The role within the **Company** does not always match the role within the **Project**. For example, user with the owner role at the Company level may be added to the Project within the Company as the regular user or read-only.
+As well, the same user within a Company may have different roles on different projects.
 
 :::
 
