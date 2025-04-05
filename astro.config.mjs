@@ -451,8 +451,9 @@ export default defineConfig({
 
 		"/support/contact-us": "/support",
 		"/integrations/continuous-integration/overview": "/integrations/continuous-integration",
-		"/reference/import-js": "/project/import-export/import-js",
+		"/reference/import-js": "/project/import-export/import/import-js",
 		"/getting-started/start-from-scratch": "/getting-started",
 		"/legal/advanced/jira-plugin/index.md": "/legal/security/jira",
+		"/project/import-export/import-js/": "/project/import-export/import/import-js",
 	},
 });
