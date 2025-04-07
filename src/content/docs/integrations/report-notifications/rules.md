@@ -20,17 +20,24 @@ Testomat.io allows sending notifications for finished runs:
 - Notify team members of failed tests
 - Configure on which condition notification should be sent
 
-Testomatio has powerful rule engine which can be used to define on which conditions a notification should be sent. You can have multiple notification types with different notification channels in use for a single project.
+Testomat.io has powerful rule engine which can be used to define on which conditions a notification should be sent. You can have multiple notification types with different notification channels in use for a single project.
 
 ## Basic Rules
 
-There is a basic and advanced rules engine:
+There is a basic and advanced rules engine.
 
-![image](./images/114849114-1f6ad280-9de8-11eb-9621-699f534196d6.png)
+Inside Basic rules you can define simple conditions on which notifications should be sent:
 
-Inside Basic rules you can define simple conditions on which notifications should be sent. For instance, here is the rule for all manual with "Release" word to be reported:
+1. Runs with title.
+2. Runs of RunGroup with title.
+3. Run Type.
+4. Run Status.
 
-![image](./images/114849446-6ce73f80-9de8-11eb-950c-55d4921a51c4.png)
+![Testomat.io - Basic Rules](./images/Basic_Rules.png)
+
+For instance, here is the rule for all manual runs with **"Release"** word in title to be reported:
+
+![Testomat.io - Basic Rules](./images/Basic_Rules_1.png)
 
 ## Advanced Rules
 
@@ -131,18 +138,48 @@ contains(run, "[CI]") and has_failed
 automated and was_terminated
 ```
 
+### Examples for Runs Notifications
+
+**Notify when a Run has failed between 10 PM and 9 AM:**
+
+```
+has_failed and (finished_at.hour > 22 or finished_at.hour < 9)
+```
+
+**Notify when an automated Run has failed on alpha environment:**
+
+```
+automated and has_failed and contains (env, "alpha”)
+```
+
+**Notify when a Run that contains at least one test with the word "autocomplete" in the title has passed:**
+
+```
+has_passed and passed_tests.filter(test, contains(test["title"], "autocomplete")).size > 0
+```
+
+For example: 
+
+![Testomat.io - Run Rules](./images/Run_rule.png)
+
+And Run that matches this Notification rule:
+
+![Testomat.io - Run Rules](./images/Run_rule_1.png)
+
 ## Run Group Notifications
 
-<Aside> 
-Please note that Run Group Notifications are available for Email notification type only
-</Aside>
+:::note
 
-To configure Notification Rule for Run Group you need to:
+Please note that Run Group Notifications are available for **Email notification** type only.
 
-1. pick rungroup for Notification rule context
-2. add your Rule Expression, for example, you can use `rungroup_finished` variable if you want to get notification when all Run report inside the group are finished.
+:::
 
-![Alt text](./images/rungroup-notifs.png)
+To configure Notification Rule for Run Group you need:
+
+1. Select rungroup for Notification rule context
+2. Add your Rule Expression, for example, you can use `rungroup_finished` variable if you want to get notification when all Run report inside the group are finished.
+
+![Alt text](./images/Rungroup.png)
 
 ### Rules for Run Group Notifications
 
@@ -156,3 +193,47 @@ A list of allowed variables:
 * `finished_runs` - collection. A list of finished (passed or failed) runs inside a rungroup
 * `ongoing_runs` - collection. A list of pending runs (scheduled, in progress) runs inside a rungroup
 * `failed_runs` - collection. A list of failed runs inside a rungroup
+
+### Examples for Run Groups Notifications
+
+**Notify when all runs within one Run Group (Run Group include more than 1 run) are finished:**
+
+```
+(runs.size > 1) and rungroup_finished
+```
+
+**Notify when there is at least one run in the `finished_runs` collection whose `finished_at` timestamp is older than 100 seconds ago:**
+
+```
+finished_runs.filter(run, run['finished_at'] < 100.seconds_ago).size > 0
+```
+
+**Notify when there are no currently ongoing runs in the run Group (means all runs are finished):**
+
+```
+ongoing_runs.filter(run, run['created_at'] <= 0.seconds_ago).size == 0
+```
+
+**Notify when next rules are met:**
+- the title of the Run Group contains the substring 'str-' and 
+- all runs within this Run Group are finished and
+- at least one of the runs within this Run Group has a title that contains the exact string 'islast: true'
+
+```
+contains(title, "str-") and rungroup_finished and (runs.select(run, contains(run["title"], "islast: true")).size > 0)
+```
+For example: 
+
+![Testomat.io - RunGroup Rules](./images/RunGroup_rule.png)
+
+And Run Group that matches this Notification rule:
+
+![Testomat.io - RunGroup Rules](./images/RunGroup_rule_1.png)
+
+:::note
+
+Testomat.io allows you to check which of your Runs or Run Groups match the created notification rule:
+
+![Testomat.io - Rule Check](./images/Rule_check.gif)
+
+:::
