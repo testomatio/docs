@@ -553,7 +553,7 @@ If your test is deeply nested within suites and folders, you can use breadcrumbs
 
 ![Testomat.io - Breadcrumbs tooltip](./images/New_g6FZ3V7n_2024-08-10.png)
 
-## **How to Copy your Tests, Test Suites, and Folders**
+## How to Copy your Tests, Test Suites, and Folders
 
 You can copy a single test from a test suite, an entire test suite, or even a folder containing a set of test suites. You can copy these items either within your current project or to a different project.
 
@@ -581,7 +581,7 @@ You can copy a single test from a test suite, an entire test suite, or even a fo
 ![Testomat.io - 'Change project' button](./images/change_project_button.png)
 
 
-## **How to add a label/tag to a test**
+## How to add a label/tag to a test
 
 This option is the easiest one! You simply need to add the label's name (preceeded by @ char) in the name field of the test. The drop-down list of tags already used in projects appears, when you type the @ symbol.
 
@@ -591,7 +591,7 @@ And now you can see your label/tag in the test list next to the test's title.
 
 ![See the test with tag](./images/2023-08-03_01.01.17@2x.png)
 
-## **How to assign a test to a user**
+## How to assign a test to a user
 
 If you want to assign a certain test to a certain user, you should click on this user icon in the upper right corner of the window, as shown in the picture.
 
@@ -605,7 +605,7 @@ Now you can see that this test is assigned to a certain user. The user icon has 
 
 ![See assigned person](./images/2023-08-03_01.12.54@2x.png)
 
-## **How to set a priority to a test**
+## How to set a priority to a test
 
 First, you should open the test and click on the checkbox icon next to the test title, as shown in the picture.
 
@@ -623,7 +623,7 @@ Also, you will see set priority in your suite
 
 ![Priorities in test tree](./images/2023-08-03_01.19.08@2x.png)
 
-## **How to add parameters to a test**
+## How to add parameters to a test
 
 Parameters are used to create data-driven tests. Each parameter will be treated as a separate test during a manual or automated run.
 
@@ -660,7 +660,7 @@ or under the test description.
 
 ![Added_parameters_desc](./images/att5_4962.png)
 
-### **How to edit test parameters**
+### How to edit test parameters
 
 You are able to edit existing parameters or parameter headers in two methods:
 
@@ -713,11 +713,22 @@ To delete a parameter:
 
 ![Second_Method_Edit_Header_Name](./images/att13_4962.png)
 
-## **Drag and Drop Your Tests**
+## Move Your Tests
 
-You may need to move your tests within a project, for example to another suite. For this purpose, you can use drag and drop. You need to drag a test and drop it into a suite. Please note, you should drop a test to suite name on the top of the suite.
+You may need to move your tests within a project, for example to another suite. For this purpose, you can use **Move** functionality. 
 
-![Alt text](./images/2023-08-03_01.29.33.gif)
+1. Go to the Tests section.
+2. Select the item you want to move (e.g., a test suite).
+3. Open the drop-down menu by clicking the three dots next to the Edit button.
+4. Click **Move**.
+
+![Alt Move tests button ](./images/Move_Tests.png)
+
+5. Select the destination folder where you want to move your tests.
+
+![Alt Move tests button ](./images/Move_test_popup.png)
+
+
 
 ## How to restore deleted tests?
 
