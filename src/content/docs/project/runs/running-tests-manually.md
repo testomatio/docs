@@ -37,28 +37,67 @@ On Manual Run screen you need:
 
 ![CleanShot 2022-05-26 at 11 52 23@2x](./images/170454961-7b6a8c26-addc-43c8-bc62-200a63824f9e.jpg)
 
-### Setting Test Case Results in Manual Run
+### How to Set Test Case Results in Manual Run
 
 Once a manual test run is launched, you need to set a Result for each test case. The available options are:
 
-- PASSED – The test case was successfully executed
-- FAILED – The test case did not meet the expected result
-- SKIPPED – The test case was not executed
+- PASSED – The test case was successfully executed;
+- FAILED – The test case did not meet the expected result;
+- SKIPPED – The test case was not executed;
 
-**Steps to Set a Result**
+**Steps to Set Test Case Results, Messages, and Attach Files**:
 
 1. Click on a test case
-2. Select the appropriate result (PASSED, FAILED, or SKIPPED)
-3. Once you select a result, the Result message options will appear automatically. Choose a message from the available options
+2. Select the appropriate result: PASSED, FAILED, or SKIPPED
 
-![TestCaseResults](./images/att5_4812.png)
+![Appropriate results](./images/att1_301.png)
 
-4. Repeat the process for all test cases.
-5. Click the ‘Finish Run’ button to complete the process
+3. Once the result is selected, you have the following options for the Test Result message field:
 
-![FinishRun](<images/CleanShot 2025-02-19 at 07.37.16@2x.png>)
+- Choose one of the available messages, but leave the field empty;
+- Type your own message manually without choosing any of the available messages;
+- Leave the field empty without choosing any message;
+- Select a message from the available options and also type your own message in the field (as shown in the example below)
+
+![Test Result message](./images/att2_301.png)
+
+4. Once the **'Attaching a file'** field appears, allowing you to browse or drag-and-drop a file (e.g., screenshot, log file) to provide additional context for the result. This can help document evidence related to the test case, such as error logs or screenshots of the issue.
+
+![Attaching a file field](./images/att3_301.png)
+
+5. You can also configure the view of attached files with the following options:
+
+- Large Thumbnails;
+- Small Thumbnails;
+- Grid View;
+- List View;
+
+![Configuration view](./images/att4_301.png)
+
+6. Additionally, there are also two ways to view the specific file:
+
+- **Open and fit to width**;
+
+![Open and fit to width](./images/att8_301.png)
+
+- Open and view a **Full screen** of the specific file;
+
+![Full screen](./images/att7_301.png)
+
+7. To delete an attached file, click on the **trash** icon
+8. After warning message **'Are you sure?'** appears, click **OK** button to confirm deletion
+
+![Delete attachments](./images/att5_301.png)
+
+9. Once all test cases are completed, click the **Finish Run** button to end the process
+
+![Finish Run button](./images/att6_301.png)
+
+:::note
 
 If you need to configure different result messages, click here: <a href="https://docs.testomat.io/management/project/settings/#custom-statuses" target="_blank">Custom Statuses</a>
+
+:::
 
 ### How to Create a Test Plan
 
@@ -88,13 +127,13 @@ Testomat.io allows users to refine test selection when creating a test plan by f
 
 Tests can be filtered in several ways:
 
- 1. Manually picked up from existing suites.
- 2. By Tags.
- 3. By Priority.
- 4. By Assignee.
- 5. By Labels and Custom Fields.
+1.  Manually picked up from existing suites.
+2.  By Tags.
+3.  By Priority.
+4.  By Assignee.
+5.  By Labels and Custom Fields.
 
- ![Testomat.io - Filter tests](./images/Filter.png)
+![Testomat.io - Filter tests](./images/Filter.png)
 
 After you applied filters to narrow down the test list, you can exclude unwanted tests by deselecting individual tests from the filtered list **manually by unchecking them one by one** or **excluding multiple tests at once using TQL queries**. This will provide greater flexibility and control during test plan setup.
 
@@ -108,7 +147,6 @@ To select a testing environment you need:
 2. Choose the environment that you need
 
 ![CleanShot 2022-05-26 at 12 29 39@2x](./images/170460669-b8b8c3dc-ef75-4b31-a3ba-3dfa7c8d9926.jpg)
-
 
 ### How to Run Tests in RunGroups?
 
@@ -148,9 +186,7 @@ By following these steps, you can organize test runs within RunGroups, ensuring 
 
 ![Runs into Folders](images/att5_214.png)
 
-
 ## Multi Environment Tests
-
 
 Multi environment tests are used for performing the same tests in different environments. This option is very useful in cases when you need to perform testing with different types of operating systems/ browsers/ devices. They can be performed simultaneously or in a sequence. Let's get a look at this option.
 
@@ -200,7 +236,6 @@ To enable Checklist mode you need to launch Manual Run and switch on the Checkli
 
 ![CleanShot 2022-05-25 at 18 35 05@2x](./images/170301515-667bf871-6c49-4059-ae3e-3e561ef92a01.jpg)
 
-
 ## How to Run Test With Steps Execution
 
 Test execution by steps is a feature that enhances manual testing by allowing testers to track and manage the results of individual test steps. This ensures better traceability, improved defect detection, and a structured approach to test execution. By marking each step separately, QA teams gain deeper insights into the testing process and can effectively address issues as they arise.
@@ -228,9 +263,7 @@ Take a look at how the test result with step execution looks:
 
 ![Test execution](images/att2_306.png)
 
-
 ## How to Run Automated Tests Manually
-
 
 When creating Manual Test Run automated tests are disabled by default.
 
