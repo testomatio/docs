@@ -352,13 +352,30 @@ Testomat provides option to export Run Reports as spreadsheet so you can get you
 
 ## Compare Test Runs
 
-Select test runs and see a visual display of the similarities and differences. Compare your run reports and analyze them by such parameters as Flaky, Revieved, Degraded, and more. To do this 1. Enable Multiselection 2. Pick Runs 3. Click Compare
+Select test runs and see a visual display of the similarities and differences. Compare your run reports and analyze them by such parameters as Flaky, Revieved, Degraded, and more. To do this:
 
-![Compare Test Runs](./images/compare-runs.gif)
+1. Enable Multiselection.
+2. Pick Runs.
+3. Click 'Compare' button.
 
-Also this option is applicable for Run Groups. 1. Open Run group 2. Click Combined Report
+![Testomat.io - Compare Test Runs](./images/compare-runs.gif)
 
-![Combined Report](./images/31.png)
+Also this feature is available for Run Groups and allows you to compare test results from different runs within a single run group. 
+
+1. Open Run group.
+2. Click 'Combined Report' button.
+
+![Testomat.io - Combined Report](./images/Combined_report.png)
+
+3. Click on 'Compare to' button to select the run you want to compare with others.
+
+![Testomat.io - Combined Report](./images/Combined_report_1.png)
+
+:::note
+
+'Combined Report' feature for Run Groups doesn't allow you to combine test results of all runs inside one Run Group into one report, it only allows you **to compare** test results of all runs inside this Run Group.
+
+:::
 
 ## Share Runs Filter
 
