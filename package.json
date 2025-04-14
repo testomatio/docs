@@ -1,7 +1,7 @@
 {
   "name": "@testomatio/docs",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.8.1",
   "description": "Testomatio Documentation ",
   "main": "index.js",
   "authors": {
@@ -28,23 +28,23 @@
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^6.3.1",
-    "@astrojs/starlight": "^0.32.5",
+    "@astrojs/starlight": "^0.33.2",
     "@octokit/core": "^5.1.0",
-    "astro": "^5.5.6",
+    "astro": "^5.6.2",
     "astro-breadcrumbs": "^3.3.1",
     "astro-og-canvas": "^0.7.0",
     "astro-rehype-relative-markdown-links": "^0.15.0",
     "astro-vtbot": "^2.1.2",
     "bunosh": "^0.1.5",
     "canvaskit-wasm": "^0.40.0",
-    "dotenv": "^16.4.7",
+    "dotenv": "^16.5.0",
     "gray-matter": "^4.0.3",
     "meilisearch-docsearch": "^0.7.1",
     "rehype-autolink-headings": "^7.1.0",
     "schema-dts": "^1.1.5",
-    "sharp": "^0.33.5",
-    "starlight-image-zoom": "^0.11.1",
-    "starlight-links-validator": "^0.14.3"
+    "sharp": "^0.34.1",
+    "starlight-image-zoom": "^0.12.0",
+    "starlight-links-validator": "^0.16.0"
   },
   "type": "module"
 }
