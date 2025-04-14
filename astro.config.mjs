@@ -172,13 +172,6 @@ export default defineConfig({
 							items: [
 								{ label: 'Overview', link: '/project/import-export' },
 								{
-									label: 'Export tests',
-									collapsed: false,
-									items: [
-										{ label: 'Export Test Suites and Cases', link: '/project/import-export/export-tests' },
-									],
-								},
-								{
 									label: 'Import',
 									collapsed: false,
 									items: [
@@ -190,6 +183,13 @@ export default defineConfig({
 										{ label: 'Import Cucumber BDD Tests', link: '/project/import-export/import/import-bdd'},
 										{ label: 'Import PHP Tests', link: '/project/import-export/import/import-php'},
 										{ label: 'Automated Import', link: '/project/import-export/import/auto-import'},
+									],
+								},
+								{
+									label: 'Export tests',
+									collapsed: false,
+									items: [
+										{ label: 'Export Test Suites and Cases', link: '/project/import-export/export-tests' },
 									],
 								},
 							],

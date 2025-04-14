@@ -98,7 +98,7 @@ The result file will be available in the **Account files** tab after it is fille
 
 ![Account files and a link](./images/att12_285-1.png)
 
-### Multi-Select option:
+### Export Tests With Multiselection
 
 1. Click on the **Tests** in the sidebar
 2. Click **Multi-Select**
