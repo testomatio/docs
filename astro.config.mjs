@@ -179,6 +179,7 @@ export default defineConfig({
 										{ label: 'Import from Source Code', link: '/project/import-export/import/import-tests-from-source-code' },
 										{ label: 'Import from Cucumber', link: '/project/import-export/import/import-tests-from-cucumber' },
 										{ label: 'Import from CSV/XLS', link: '/project/import-export/import/import-tests-from-csvxls' },
+										{ label: 'Import Tests From TestRail', link: '/project/import-export/import/import-tests-from-testrail' },
 										{ label: 'Import JavaScript Tests', link: '/project/import-export/import/import-js'},
 										{ label: 'Import Cucumber BDD Tests', link: '/project/import-export/import/import-bdd'},
 										{ label: 'Import PHP Tests', link: '/project/import-export/import/import-php'},
