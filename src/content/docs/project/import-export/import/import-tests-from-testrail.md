@@ -1,13 +1,13 @@
 ---
 title: Import Tests From TestRail
-description: Learn how to export tests from TestRail using three different methods: CSV export, the built-in UI tool, and the migration script. This guide walks you through the process of exporting test cases from TestRail, whether you're using the CSV export feature for easy data transfer, the intuitive UI tool for streamlined export, or the migration script for more advanced needs. Each method is explained in detail, allowing you to choose the best option for exporting your test data efficiently.
+description: Learn how to export tests from TestRail using three different methods CSV export, the built-in UI tool, and the migration script. This guide walks you through the process of exporting test cases from TestRail, whether you're using the CSV export feature for easy data transfer, the intuitive UI tool for streamlined export, or the migration script for more advanced needs. Each method is explained in detail, allowing you to choose the best option for exporting your test data efficiently.
 type: article
 url: https://docs.testomat.io/project/import-export/import-tests-from-testrail
 head:
   - tag: meta
     attrs:
       name: og:image
-      content: https://docs.testomat.io/_astro/149755082-09d0526f-5950-4b03-bb7c-dda84f3ea9c0.B2bV02xq_Z2qBOs3.webp
+      content:
       
   - tag: meta
     attrs:
