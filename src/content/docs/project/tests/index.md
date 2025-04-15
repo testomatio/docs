@@ -718,7 +718,7 @@ To delete a parameter:
 You may need to move your tests within a project, for example to another suite. For this purpose, you can use **Move** functionality. 
 
 1. Go to the Tests section.
-2. Select the item you want to move (e.g., a test suite).
+2. Select the item you want to move (e.g. a test suite).
 3. Open the drop-down menu by clicking the three dots next to the Edit button.
 4. Click **Move**.
 
@@ -726,7 +726,7 @@ You may need to move your tests within a project, for example to another suite. 
 
 5. Select the destination folder where you want to move your tests.
 
-![Alt Move tests button ](./images/Move_test_popup.png)
+![Alt Move tests button ](./images/move_tests.png)
 
 
 
