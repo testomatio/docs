@@ -7,7 +7,6 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content:
       
   - tag: meta
     attrs:
