@@ -17,7 +17,7 @@ head:
 
 > If you have existing tests in TestRail and wish to migrate to Testomat.io, this guide will walk you through the process of importing your tests into Testomat.io.
 
-Currently, Testomat.io supports three methods for exporting tests from TestRail:
+Currently, Testomat.io supports three methods for exporting tests from TestRail
 
 - Import via CSV
 - Built-in UI tool (via API)
