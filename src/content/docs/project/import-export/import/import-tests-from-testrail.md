@@ -36,11 +36,17 @@ Currently, Testomat.io supports three methods for exporting tests from TestRail
 
 ![image Import from CSV file](./images/import_tests_from_CSV_link.png)
 
-5. From the dropdown menu, choose **TestRail**
+5. From the dropdown menu, choose **TestRail**.
 6. Select the CSV file containing your exported TestRail tests.
 7. Click the **Create** button to complete the import.
 
 ![image Import from Testrail CSV](./images/import_testrail_csv.png)
+
+## Example Files For Import 
+
+Below is a sample of the supported format:
+
+[TestRail](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/TestRail.csv)
 
 
 ## Import TestRail Project via Build-in UI Tool (via API)
