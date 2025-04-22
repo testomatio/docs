@@ -390,7 +390,7 @@ export default defineConfig({
 		"/getting-started/test-plans": "/project/plans",
 		"/getting-started/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
 		"/getting-started/import-tests-from-source-code": "/project/import-export/import/import-tests-from-source-code",
-		"/getting-started/import-tests-from-csvxls": "/project/import-export/import-tests-from-csvxls",
+		"/getting-started/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
 		"/getting-started/test-design": "/project/tests",
 		"/getting-started/running-tests-manually": "/project/runs/running-tests-manually",
 		"/getting-started/running-automated-tests": "/project/runs/running-automated-tests",
@@ -447,5 +447,6 @@ export default defineConfig({
 		"/project/import-export/import-js": "/project/import-export/import/import-js",
 		"/project/import-export/import-tests-from-source-code": "/project/import-export/import/import-tests-from-source-code",
 		"/project/import-export/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
+		"/project/import-export/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
 	},
 });
