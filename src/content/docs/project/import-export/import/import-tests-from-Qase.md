@@ -7,6 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
+      content: https://docs.testomat.io/_astro/149749728-40f8b5b0-f945-4a41-b1f7-62b11d45a774.DssWsV2b_ZCxRTl.webp
       
   - tag: meta
     attrs:
@@ -18,13 +19,17 @@ head:
 
 ## How to Import Tests from Qase to Testomat.io
 
-1. Open your project in Testomat.io.
-2. Click on the **Imports** tab.
-3. Click the Import from CSV button.
+1. If you're creating a brand new project, the **Import from Spreadsheet** button will be available under the Test tab.
+
+![image Import from Spreadsheet button](./images/import_from_spreadsheet_button.png)
+
+2. If you're working in an existing project, open it in Testomat.io.
+3. Click on the **Imports** tab.
+4. Click the Import from CSV button.
 
 ![image Import from CSV button](./images/import_from_csv_button.png)
 
-4. From the dropdown menu, choose **Qase**.
+5. From the dropdown menu, choose **Qase**.
 6. Select the CSV file containing your exported Qase tests.
 7. Click the **Create** button to complete the import.
 
@@ -35,3 +40,5 @@ head:
 Below is a sample of the supported format:
 
 [Qase](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/Qase.csv)
+
+![image Import from Qase CSV](./images/qase_csv_sample.png)

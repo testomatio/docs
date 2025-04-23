@@ -7,6 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
+      content: https://docs.testomat.io/_astro/import_from_testrail_button.CWNnrpnC_JhLel.webp
       
   - tag: meta
     attrs:
