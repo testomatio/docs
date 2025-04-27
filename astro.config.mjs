@@ -258,6 +258,14 @@ export default defineConfig({
 								{ label: 'Creating Jira Issue', link: '/advanced/jira-plugin/jira-issue' },
 							],
 						},
+
+						{
+							label: 'AI-Powered Features',
+							collapsed: false,
+							items: [
+								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features' }
+							],
+						},
 					]
 				},
 				{
