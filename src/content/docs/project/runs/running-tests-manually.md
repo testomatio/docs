@@ -139,12 +139,90 @@ After you applied filters to narrow down the test list, you can exclude unwanted
 
 ![Testomat.io - Exclude tests](./images/Exclude_tests.gif)
 
+### How to Assign Users to the Test Run
+
+By default, only the user who created the Test Run is added to it. However, Testomat.io allows you to assign multiple users to one Test Run:
+
+1. Click on **'Manual run'** button.
+
+![Testomat.io - Assign Users](./images/Assign_users_1.png)
+
+2. Click on **'Assign users'** option.
+
+![Testomat.io - Assign Users](./images/Assign_users_2.png)
+
+3. Click on **'Assign to'** dropdown list and select users.
+
+![Testomat.io - Assign Users](./images/Assign_users_3.png)
+
+After selecting users, you can choose an assignment strategy, add a description, select/create a test plan, select an environment, etc., and then launch the test run.
+
+**Test Assignment Strategies:**
+
+- **None:** Users won't be automatically assigned to tests within this run. All users in the run can pick any test to assign, or you, as a manager, can manually assign users when run is started.
+
+- **Prefer test assignee:** The system respects assignments made at the test and suite levels. Tests within this run will be automatically assigned to users responsible for them.
+
+- **Randomly distribute tests between team members:** Tests within this run will be equally split between assigned team members. Manager won't be assigned to any test.
+
+To select Test Assignment Strategies:
+
+1. Assign at least one user to a Test Run.
+2. Click on **'Auto-Assign Users'** button.
+3. Select a strategy from the list.
+
+![Testomat.io - Assignment Strategy](./images/Assign_strategy.png)
+
+### How to Assign User to Specific Test Cases/Suites within a Test Run
+
+During the Test Run you can assign different users to specific Test Cases, Suites or Folders within one Test Run.
+
+:::note
+
+First, you need to assign users to the Test Run, and only after this you can assign them to specific Test Cases, Suites and Folders.
+
+:::
+
+**To Assign a User to a Suite/Folder:**
+
+1. Open Test Run with assigned users.
+2. Click on **'Continue'** button.
+
+![Testomat.io - Assign Suite](./images/Assign_suite.png)
+
+3. Click on **'Assign to'** icon for specific Suite/Folder.
+4. Select a user for assignment from the list.
+
+![Testomat.io - Assign Suite](./images/Assign_suite_2.png)
+
+**To Assign a User to Test Cases:**
+
+You can assign specific Test Cases only via **Multi-Select** button.
+
+1. Open Test Run with assigned users.
+2. Click **‘Continue’** button.
+
+![Testomat.io - Assign Suite](./images/Assign_suite.png)
+
+3. Click **‘Multi-Select’** button.
+4. Select the Test Cases you would like to assign.
+5. Click the **'Assign to'** button at the bottom.
+6. Select a user for assignment from the list.
+
+![Testomat.io - Assign TC](./images/Assign_TC.png)
+
+7. Click **'OK'** in the **'Are you sure you want to assign (username) to all selected tests?'** pop-up window.
+
+Your Test Cases and Suites are now successfully assigned to different users.
+
+![Testomat.io - Assign TC](./images/Assign_TC_1.png)
+
 ### How to Select Environment
 
 To select a testing environment you need:
 
-1. Click on Environment field
-2. Choose the environment that you need
+1. Click on Environment field.
+2. Choose the environment that you need.
 
 ![CleanShot 2022-05-26 at 12 29 39@2x](./images/170460669-b8b8c3dc-ef75-4b31-a3ba-3dfa7c8d9926.jpg)
 

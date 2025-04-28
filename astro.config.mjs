@@ -3,8 +3,6 @@ import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
 import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
 import starlightLinksValidator from 'starlight-links-validator';
-import { rehypeHeadingIds } from '@astrojs/markdown-remark';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 const options = {
 	contentPath: 'src/content/docs',
@@ -33,7 +31,6 @@ export default defineConfig({
 			},
 			customCss: [
 				'./src/styles/custom.css',
-				'./src/styles/headings.css',
 			],
 
       editLink: {
@@ -180,9 +177,17 @@ export default defineConfig({
 										{ label: 'Import from Cucumber', link: '/project/import-export/import/import-tests-from-cucumber' },
 										{ label: 'Import from CSV/XLS', link: '/project/import-export/import/import-tests-from-csvxls' },
 										{ label: 'Import Tests From TestRail', link: '/project/import-export/import/import-tests-from-testrail' },
+
+                    
 										{ label: 'Import Tests From QTest', link: '/project/import-export/import/import-tests-from-qtest' },
 										{ label: 'Import Tests From Zephyr', link: '/project/import-export/import/import-tests-from-zephyr' },
 										{ label: 'Import Tests From Qase', link: '/project/import-export/import/import-tests-from-qase' },
+
+										{ label: 'Import Tests From Testmo', link: '/project/import-export/import/import-tests-from-testmo' },
+										{ label: 'Import Tests From QMetry', link: '/project/import-export/import/import-tests-from-qmetry' },
+										{ label: 'Import Tests From TestCaseLabs', link: '/project/import-export/import/import-tests-from-testcaselabs' },
+										{ label: 'Import Tests From XRay', link: '/project/import-export/import/import-tests-from-xray' },
+                    
 										{ label: 'Import JavaScript Tests', link: '/project/import-export/import/import-js'},
 										{ label: 'Import Cucumber BDD Tests', link: '/project/import-export/import/import-bdd'},
 										{ label: 'Import PHP Tests', link: '/project/import-export/import/import-php'},
@@ -390,21 +395,13 @@ export default defineConfig({
 	markdown: {
 		rehypePlugins: [
 			[rehypeAstroRelativeMarkdownLinks, options],
-			rehypeHeadingIds,
-			[
-				rehypeAutolinkHeadings,
-				{
-					behavior: 'wrap',
-				},
-			],
-
 		],
 	},
 	redirects: {
 		"/getting-started/test-plans": "/project/plans",
 		"/getting-started/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
 		"/getting-started/import-tests-from-source-code": "/project/import-export/import/import-tests-from-source-code",
-		"/getting-started/import-tests-from-csvxls": "/project/import-export/import-tests-from-csvxls",
+		"/getting-started/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
 		"/getting-started/test-design": "/project/tests",
 		"/getting-started/running-tests-manually": "/project/runs/running-tests-manually",
 		"/getting-started/running-automated-tests": "/project/runs/running-automated-tests",
@@ -461,5 +458,6 @@ export default defineConfig({
 		"/project/import-export/import-js": "/project/import-export/import/import-js",
 		"/project/import-export/import-tests-from-source-code": "/project/import-export/import/import-tests-from-source-code",
 		"/project/import-export/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
+		"/project/import-export/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
 	},
 });
