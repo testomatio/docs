@@ -175,7 +175,7 @@ export default defineConfig({
 										{ label: 'Overview', link: '/project/import-export/import' },
 										{ label: 'Import from Source Code', link: '/project/import-export/import/import-tests-from-source-code' },
 										{ label: 'Import from Cucumber', link: '/project/import-export/import/import-tests-from-cucumber' },
-										{ label: 'Import from CSV/XLS', link: '/project/import-export/import/import-tests-from-csvxls' },
+										{ label: 'Import from TMS', link: '/project/import-export/import/import-tests-from-csvxls' },
 										{ label: 'Import Tests From TestRail', link: '/project/import-export/import/import-tests-from-testrail' },
 
                     
