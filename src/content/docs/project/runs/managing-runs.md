@@ -73,7 +73,10 @@ Please note that the test case history is only available while the test run is i
 
 ## RunGroups
 
-You can group your Runs within Testomat.io. To do this you need to click on New Group button
+First, let's clarify what Run Groups are in Testomat.io. 
+They allow you to organize and group multiple test runs together based on criteria like sprint, release, functional area, or any other logical grouping. This helps in analyzing aggregated results and getting a consolidated view of your testing efforts.
+
+To create a new Run Group, click on New Group button:
 
 ![New Group button](./images/7.png)
 
@@ -178,17 +181,95 @@ Here are steps: 1. Open Run Group 2. Click Extra menu 3. Click Copy 4. Pick conf
 
 ![Copy group 3](./images/34.png)
 
-## Merge Strategy
+## Merge Strategies
 
-With Testomat.io you can use different Merge Strategies for Test Runs analysis. It helps to aggregate results when a group contains multiple runs.
+Testomat.io provides different **'Merge Strategies'** to aggregate the results of the individual test runs within a Run Group. This is crucial when you have multiple executions of the same tests (e.g., retries, parallel execution, runs on different environments) and want a single, representative status for the tests within the group.
 
-You can use it when merging few Runs:
+You need to select a **Merge Strategy** when you create a new Run Group:
 
-![merge str](./images/12.png)
+1. Go to Runs.
+2. Click on 'New Group' button.
 
-Or when you add/edit RunGroup
+![Testomat.io - merge str](./images/New_RunGroup_1.png)
 
-![merge str 2](./images/13.png)
+3. Select **Merge strategy**.
+
+![Testomat.io - merge str](./images/New_RunGroup.png)
+
+:::note
+
+You can change **Merge Strategy** later, any time you want, after the Run Group is already created.
+
+:::
+
+To change the Merge Strategy:
+
+1. Select the Run Group.
+2. Click on **'Extra menu'** button.
+3. Click on **'Edit'** option.
+
+![Testomat.io - merge str](./images/New_RunGroup_2.png)
+
+You also need to select the **Merge Strategy** when merging multiple runs into one:
+
+1. Go to Runs.
+2. Click on 'Multi-select' icon.
+3. Select a few runs that you want to merge.
+4. Click on 'Extra menu' button at the bottom menu.
+5. Select 'Merge' option.
+
+![Testomat.io - merge str](./images/Merge_runs.png)
+
+6. Select **Merge Strategy**.
+
+![Testomat.io - merge str](./images/Merge_runs_1.png)
+
+**Testomat.io offers you three different Merge strategies:**
+
+- **Realistic:** this strategy is based on test results from the last executed run (excluding skipped tests). If your Run Group includes test runs with different test cases, it will summarize and display the results from the last executed runs with unique test cases.
+
+- **Optimistic:** this strategy will mark a test as passed if it passed in at least one of the runs within the group, even if it failed in others. This approach provides a more lenient view, focusing on the positive outcomes.
+
+- **Pessimistic:** unlike the optimistic strategy, this strategy will mark a test as failed if it failed in at least one of the runs within the group. It prioritizes identifying potential issues.
+
+
+### Merge Strategy Examples
+
+**Example #1:**
+
+Let's imagine that you have 2 Test Runs with the same test cases for different environments. In one Test Run, the first 3 test cases failed while the others passed, and in another Test Run last 2 test cases failed and the others - passed.
+In this case, the results with the different strategies will be as follows:
+
+1. **Realistic** - the result will match the result of the last executed test run, in this case 2 test cases - failed, and others - passed.
+
+![Testomat.io - merge str](./images/Realistic_1.png)
+
+2. **Optimistic** - all test cases - passed, as each test case passed in at least one test run.
+
+![Testomat.io - merge str](./images/Optimistic_1.png)
+
+3. **Pessimistic** - by this strategy 5 test cases - failed, because in total 5 unique test cases failed in these 2 test runs.
+
+![Testomat.io - merge str](./images/Pessimistic_1.png)
+
+**Example #2:**
+
+In this example, you added 2 more Test Runs with unique test cases (for instance, to test another feature in the module under test) to your previous 2 Test Runs. In one of the added Test Runs, the last 2 test cases failed, and in the other Test Run, the first 3 test cases failed. In these 2 runs, each test case failed and passed at least once.
+As a result, the outcome with the different strategies will be as follows:
+
+1. **Realistic** - 5 test cases - failed, as it will summarize the results of last two runs with unique test cases.
+
+![Testomat.io - merge str](./images/Realistic_2.png)
+
+2. **Optimistic** - all test cases - passed, as each test case passed in at least one test run.
+
+![Testomat.io - merge str](./images/Optimistic_2.png)
+
+3. **Pessimistic** - by this strategy 10 test cases - failed, because in total 10 unique test cases failed in these 4 test runs.
+
+![Testomat.io - merge str](./images/Pessimistic_2.png)
+
+As you can see, **Merge Strategies** for Run Groups in Testomat.io help you aggregate and analyze test results from multiple runs and how the system determines the final status of a test case within a Run Group, providing a unified view of your overall testing outcomes.
 
 ## Merge Runs
 
