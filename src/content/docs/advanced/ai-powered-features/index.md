@@ -38,7 +38,7 @@ Also you can copy (1) AI answer or regenarate (2) it if needed.
 
 ![Testomat.io - AI-powered](./images/AI_2.png)
 
-## Suggest Tests Cases
+## Suggest Test Cases
 
 You can also use AI to improve your test coverage by creating more test cases based on test cases that you already have in your Suite.
 
