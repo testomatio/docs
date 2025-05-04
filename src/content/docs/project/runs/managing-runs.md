@@ -178,6 +178,23 @@ Here are steps: 1. Open Run Group 2. Click Extra menu 3. Click Copy 4. Pick conf
 
 ![Copy group 3](./images/34.png)
 
+## How to Pin a Run or Run Group
+
+Testomat.io allows users to pin Run Groups or individual Runs to the top of the Dashboard for quick access to critical or frequently used tests. This supports faster navigation, improved focus, and customizable workflows — ideal for monitoring regression tests, environment-specific runs, or production hotfixes.
+ 
+1. Go to the **Runs** tab.
+2. Find the Run or Run Group you want to pin.
+3. Click the **three dots menu** aligned next to the item.
+4. Choose **"Pin"** from the dropdown options.
+5. The selected Run or Run Group will now appear **pinned at the top** of the list for quick and easy access.
+
+![Pin a Run](<images/Pin_a_Run.png>)
+
+**Pin** option is also available in the detailed view menu.
+
+![Pin a Run Detailed Menu view](<images/Pin_a_Run_Detailed_Menu.png>)
+
+
 ## Merge Strategy
 
 With Testomat.io you can use different Merge Strategies for Test Runs analysis. It helps to aggregate results when a group contains multiple runs.
