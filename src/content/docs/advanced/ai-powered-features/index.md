@@ -34,7 +34,7 @@ You can automatically generate a suite description by analyzing the test cases w
 
 :::
 
-Also you can copy (1) AI answer or regenared (2) it if needed.
+Also you can copy (1) AI answer or regenarate (2) it if needed.
 
 ![Testomat.io - AI-powered](./images/AI_2.png)
 
