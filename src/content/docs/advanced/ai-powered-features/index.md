@@ -18,7 +18,6 @@ You can enbable AI at any time by following the instructions in the [Administrat
 
 :::
 
-
 ## Summarize Suite Description Based on Tests
 
 You can automatically generate a suite description by analyzing the test cases within it. This saves time by eliminating the need for manual suite documentation and ensures descriptions accurately reflect test content:
@@ -38,6 +37,52 @@ You can automatically generate a suite description by analyzing the test cases w
 Also you can copy (1) AI answer or regenared (2) it if needed.
 
 ![Testomat.io - AI-powered](./images/AI_2.png)
+
+## Suggest Tests Cases
+
+You can also use AI to improve your test coverage by creating more test cases based on test cases that you already have in your Suite.
+
+1. Open Suite Case with already added Test Cases.
+2. Click on 'Extra menu' button.
+3. Select **'Suggest Tests'** option.
+
+![Testomat.io - AI-powered](./images/AI_8.gif)
+
+## Suggest Test Case Description
+
+This feature allows you to create test case description based just on its name or improve description that you previously added to your test case.
+
+1. Open Test Case.
+2. Click on **'Suggest Description'** button.
+
+![Testomat.io - AI-powered](./images/AI_9.gif)
+
+## Analyze Requirements
+
+When you link a Jira issue as a requirement in Testomat.io, the system will analyze the issue’s description and automatically suggest a structured requirement description. Based on the analysis, you’ll be offered two intelligent options:
+
+- Generate a new test suite with suggested test cases.
+- Analyze existing suites and suggest test coverage improvements.
+
+This feature is available both at the **project level** and within individual **test suites**, enabling flexible, requirements-driven testing whether you’re planning at a high level or working in a focused domain.
+
+**Key benefits:**
+
+- Automates the transition from requirements to test cases.
+- Ensures traceability and alignment between business goals and test coverage.
+- Reduces manual effort and potential gaps in test planning.
+
+![Testomat.io - AI-powered](./images/AI_10.gif)
+
+## Generate Bug Description Based on the Test Case
+
+When you executing tests and creating a new defect, Testomat.io will automatically suggest a concise, context-aware bug title and a description. These suggestions are based on the test case content and its execution results, helping teams report issues faster and more consistently.
+
+**Why is this useful:**
+
+- **Speeding up defect logging:** Testers can instantly use or refine AI-suggested bug details, reducing time spent writing repetitive or obvious issue reports.
+- **Maintaining consistent bug reporting standards:** The AI helps standardize descriptions across team members, which improves clarity and communication with developers.
+- **Assisting less experienced testers:** Junior team members or non-technical testers can rely on AI-generated suggestions as a starting point, ensuring important details aren’t missed.
 
 ## Generate Test Description Based on Test Code
 
@@ -63,17 +108,41 @@ Test Summary is created:
 
 Provide a test description, and the AI generates the corresponding test automation code. Please note that generated code may be not completely comprehensive.
 
-## Ask Questions About Your Projects Based on Tests
+## Analyze Failed Automated Tests
 
-Interact with your test data using natural language queries to extract insights, identify gaps, or troubleshoot issues. Simplifies test analysis, making it easier to find information without navigating through large datasets manually.
+Use AI to analyze your failed automated tests to understand ans summarize main reasons for your tests to fail.
+
+:::note
+
+Shows only for finished, automated runs with 5+ failures.
+
+:::
+
+1. Go to Runs.
+2. Open finished automated run.
+3. Click on 'Clusterize Errors' button.
+
+![Testomat.io - AI-powered](./images/AI_5.png)
+
+Example of errors clustarization:
+
+![Testomat.io - AI-powered](./images/AI_6.png)
 
 ## Explain Autotest Failures Based on Logs
 
-Analyzes test execution logs to identify and explain reasons behind failures. Reduces debugging time by providing actionable insights directly within the Testomat UI.
+Analyzes test execution logs to identify and explain reasons behind failures. Reduces debugging time by providing actionable insights directly within the Testomat UI. It also offers you a possible fixes.
 
-## Check Jira Requirement for Suites Linked to Jira Issues
+The same as in the previous case, it also available only for finished, automated runs with 5+ failures.
 
-Automatically verifies if test suites meet the requirements of their linked Jira issues. Provides visibility between testing efforts and business requirements, improving traceability and accountability.
+1. Go to Runs.
+2. Open finished automated run.
+3. Click on Failed Test Case.
+4. Click on 'Explain Failure' button.
 
-## Check Jira Requirements for Automated Test Cases
-Ensures that automated test case is aligned with the requirements in Jira, closing the loop between automation and requirement coverage.
+![Testomat.io - AI-powered](./images/AI_7.gif)
+
+:::note
+
+**AI-powered features** are available for Classic and BDD projects.
+
+:::
