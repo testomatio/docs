@@ -71,6 +71,30 @@ When you launch a test run and make changes to test case title or description - 
 
 Please note that the test case history is only available while the test run is in progress.
 
+## How to Create a Test Case within a Run
+
+You can create test cases directly within a test Run, avoiding additional navigation and ensuring the new tests are automatically included in the associated test plan.
+
+1. Go to the **Runs** tab.
+
+2. Start the desired test run.
+
+3. Scroll to the bottom of the test suite.
+
+4. Click the **Create test** button.
+
+![Create test case](./images/Create_Test_button.png)
+
+5. Enter the test case details in the provided field.
+
+6. Click the checkmark **✔️** icon to add the new test case, or the **X** icon to discard it.
+
+![Create test case](./images/Test_Case_Creation.png)
+
+> The **Create Test** button can be hidden via the **Hide Test Creation** option in the **Run** dropdown menu.
+
+![Create test case](./images/Hide_test_creatio.png)
+
 ## RunGroups
 
 You can group your Runs within Testomat.io. To do this you need to click on New Group button
