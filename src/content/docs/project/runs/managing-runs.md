@@ -355,17 +355,70 @@ Multiselection allows the bulk application options to many runs with one click. 
 
 ![Multiselection Options](./images/28.png)
 
-## How To Download Run Report
+## How To Download Run Report as Spreadsheet
 
-Testomat provides option to export Run Reports as spreadsheet so you can get your data in xlsx file. See how it works.
+Testomat.io provides option to export Run Reports as spreadsheet so you can get your data in xlsx file.
+See how it works.
 
-**Download few run reports in one file**: 1. Enable Multiselection 2. Pick Runs 3. Click Download
+**Download few run reports in one file**: 
 
-![export with multiselect](./images/29.png)
+1. Go to Runs.
+2. Enable **'Multi-select'**.
+3. Select Runs.
+4. Click on **'Extra menu'** button.
+5. Select **'Download'** option.
 
-**Download a separate Run Report**: 1. Open Run Report 2. Click Run 3. Click Extra button 4. Download as Spreadsheet.
+![Testomat.io - export as Spreadsheet](./images/Export_1.png)
 
-![export report](./images/30-1.png)
+**Download a separate Run Report**: 
+1. Go to Runs.
+2. Select Run Report.
+3. Click on **'Report'** button.
+
+![Testomat.io - export as Spreadsheet](./images/Export_2.png)
+
+4. Click on **'Extra menu'** button.
+5. Select **'Download as Spreadsheet'** option.
+
+![Testomat.io - export as Spreadsheet](./images/Export_3.png)
+
+## How To Export Run Report in PDF Format
+
+Testomat.io also allows you to export your test run results as a PDF report. This feature enables easy sharing and archiving of test outcomes outside of Testomat.io. 
+
+**There are two ways to generate a structured report with test execution details in PDF format:**
+
+1. Go to Runs.
+2. Select Run Report.
+3. Click on **'Extra menu'** button.
+4. Select **'Export as PDF'** option.
+
+![Testomat.io - export as PDF](./images/Export_4.png)
+
+**OR**
+
+1. Go to Runs.
+2. Select Run Report.
+3. Click on **'Report'** button.
+
+![Testomat.io - export as PDF](./images/Export_5.png)
+
+4. Click on **'Extra menu'** button.
+5. Select **'Export as PDF'** option.
+
+![Testomat.io - export as PDF](./images/Export_6.png)
+
+**Example of Test Run Report in PDF format:**
+
+![Testomat.io - export as PDF](./images/Export_7.png)
+
+**Use cases:**
+
+- **Sharing results with stakeholders:** Quickly generate a portable summary of test outcomes for product owners, QA managers, or external partners who may not have access to the platform.
+
+- **Audit and compliance documentation:** Maintain a formal record of test results in a fixed format for compliance, certification, or audit purposes.
+
+- **Team retrospectives and reviews:** Use the PDF report to review test coverage and outcomes during retrospectives or sprint reviews without relying on live access to the system.
 
 ## Compare Test Runs
 
