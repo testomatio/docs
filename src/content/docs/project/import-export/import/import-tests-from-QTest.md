@@ -1,5 +1,5 @@
 ---
-title: Import Tests From qTest
+title: Import Tests From QTest
 description: Learn how to import tests from qTest using the CSV import feature in Testomat.io. This guide walks you through formatting and uploading your test cases, making it easy to migrate or bulk add tests efficiently.
 type: article
 url: https://docs.testomat.io/project/import-export/import-tests-from-qtest
