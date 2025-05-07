@@ -464,7 +464,7 @@ All you need to do is copy test cases/suites IDs and paste them into a test/suit
 
 ### For BDD Project
 
-The BDD format is stricter, so you need to follow certain rules to maintain your test structure.
+In the projects that use BDD format, you need to follow certain rules to maintain your test structure.
 If you want to add clickable references to a test or suite in a BDD project, use **#** followed by their IDs. Clicking the link will open the test or suite in detail view, making navigation and traceability more seamless.
 
 ![Testomat.io - Use ID In Tests](./images/link_bdd.gif)
