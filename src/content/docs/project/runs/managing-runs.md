@@ -124,6 +124,22 @@ Now you can see Test Runs in a created RunGroup
 
 ![Test Runs in a created RunGroup](./images/11.png)
 
+## How to Move a Run to a RunGroup
+
+You may need to move a Run to a specific RunGroup—for example, to associate it with a particular release or build. To do this, use the **Move** functionality.
+
+1. Navigate to the **Runs** section.
+2. Select the Run you want to move.
+3. Click the three-dot menu (...) next to the **Edit** button.
+4. Select **Move** from the dropdown menu.
+
+![Move Run option in the dropdown menu](./images/Move_Run_Option.png)
+
+5. In the pop-up window, choose the destination **RunGroup**.
+6. Click **Move** to confirm.
+
+![Destination RunGroup selection dialog](./images/Destination_RunGroup.png)
+
 ### How to Customize Your Runs List View
 
 When working with test runs in RunGroup or Runs Dashboard Flow, you can adjust the table layout to fit your needs. Instead of using the default view, you can customize the table by following these simple steps:
@@ -180,9 +196,9 @@ The chart displays up to 50 of the latest test runs belonging to the group. If y
 
 ![Testomat.io - RunGroup Chart](./images/New_iWaZSQo7_2024-08-03.png)
 
-## Copy Run Group
+## Copy RunGroup
 
-You can easily create a new Run Group, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
+You can easily create a new RunGroup, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
 
 **Assignee**: Define assignee details separately, preventing them from being copied.
 
@@ -194,7 +210,7 @@ You can easily create a new Run Group, completely independent of any previous ru
 
 **Nested Structure**: Preserve or exclude the nested structure of your test groups as you duplicate them.
 
-Here are steps: 1. Open Run Group 2. Click Extra menu 3. Click Copy 4. Pick configurations 5. Save 6. See Run Group created.
+Here are steps: 1. Open RunGroup 2. Click Extra menu 3. Click Copy 4. Pick configurations 5. Save 6. See RunGroup created.
 
 ![Copy group 1](./images/32.png)
 
