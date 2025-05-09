@@ -23,7 +23,7 @@ When a new project is created, there are multiple options to start:
 2. Import automated tests from source code
 3. Import tests from CSV file from another Test Management System
 
-## Creating a test
+## Creating a Test
 
 Tests are created within a suite.
 
@@ -48,7 +48,7 @@ Repeating these steps, you can easily add as many tests as you need within a rea
 
 Also, you can use shortcut commands to create/edit Test Cases or Suites. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more.
 
-## **Test Case Editor**
+## Test Case Editor
 
 Test Case Editor is a dynamic interface, designed to accommodate the diverse requirements of test case formulation. Through this platform, testers wield the power to architect meticulously structured test scenarios, encompassing a range of variables, actions, expected results, and potential outcomes.
 
@@ -56,7 +56,7 @@ Regarding test case creation, Testomat.io offers two distinct editor types: the 
 
 Let's have a look at each of them.
 
-## **Classical Editor Review**
+## Classical Editor Review
 
 Introducing the Classical Editor, a tool that places the art of test editing firmly in your hands. Crafting tests becomes a seamless endeavor as you immerse yourself in the Classical Editor's capabilities.
 
@@ -91,7 +91,7 @@ However, the Classical Editor's influence transcends singular tests. With Pre-Re
 9. Save - save your work
 10. Close - escape the editor
 
-### Why Do We Use Markdown In Classical Editor?
+### Why Do We Use Markdown in Classical Editor?
 
 Markdown is a lightweight and versatile markup language that revolutionizes the way content is formatted and presented. It combines the simplicity of plain text with the ability to produce well-structured documents, making it a favored choice for various applications, including software documentation and test case creation. Here are its benefits:
 
@@ -107,7 +107,7 @@ Markdown is a lightweight and versatile markup language that revolutionizes the 
 
 **Consistency and Templates:** Markdown's consistent structure allows for the creation of reusable test case templates. This ensures that test cases adhere to a standardized format, streamlining comprehension and navigation across a myriad of test scenarios.
 
-### Examples Of Markdown Written Test Cases
+### Examples of Markdown Written Test Cases
 
 In the realm of Markdown-based test case creation, the handling of test unveils an array of versatile techniques. Below, we delve into several illustrative examples that showcase various methods for incorporating steps and expected results into your test cases.
 
@@ -137,7 +137,7 @@ Some example:
 
 ---
 
-### Expected Results as steps one after another
+### Expected Results as Steps One After Another
 
 This pattern is similar to the previous one, but instead of listing the expected results right after each step as plain text, they are listed after all the steps have been documented. This approach will give you ability to use autocompletion and expected results will be stored in steps database.
 
@@ -163,7 +163,7 @@ Some example:
 
 ---
 
-### Steps with Expected Results as nested list
+### Steps with Expected Results as Nested List
 
 This format is useful for breaking down each step into multiple sub-steps, each with its own expected result. This can be helpful when a step is complex and has several different parts or when there are multiple expected behaviors that need to be documented for each step. By nesting the expected results under each step, it's easy to see which expected results are related to which sub-steps, making it easier to track and verify expected behaviors.
 
@@ -348,7 +348,7 @@ Some example:
 
 Use Markdown shortcuts to edit test case description quickly and easily. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more.
 
-## **BDD Editor Review**
+## BDD Editor Review
 
 As you embark on the journey of crafting and refining BDD scenarios, this innovative platform empowers you to shape narratives into meticulously executable tests. At its core, the BDD Editor encapsulates the essence of collaboration, precision, and agility, delivering a comprehensive solution for modern testing workflows. Here, you'll create user stories, scenarios, and document expected behaviors with an eloquence that bridges the gap between technical and non-technical stakeholders.
 
@@ -385,7 +385,7 @@ Beyond Feature Files lies the individual tests. Here, the BDD Editor grants you 
 7. Save - save your work
 8. Close - escape the editor
 
-## **Edit Steps in Test Case Preview**
+## Edit Steps in Test Case Preview
 
 After your test cases are created, Testomat.io offers a convenient feature for quick editing - **Edit Steps**. This allows you to modify steps and expected results directly from the test case preview page.
 
@@ -437,7 +437,7 @@ Test Case after editing:
 
 ![Edit steps](./images/Edit_steps_6.png)
 
-## **URL/ID Quick Copy**
+## URL/ID Quick Copy
 
 Depending on your needs, you can set up a convenient way to copy **URL/IDs** in **Test Cases**, **Suites** and **Runs**.
 
@@ -450,13 +450,24 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 
 ![Testomat.io - URL/ID Copy](./images/New_1pgghaYx_2024-08-08.png)
 
-## **Cross-Linking Tests, Suites and Folders**
+## Cross-Linking Tests, Suites and Folders
 
-Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window.
+Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window. 
 
-All you need to do is copy their IDs and paste it into a test/suite description:
+This feature is available for Classical and BDD projects but have a difference in formating.
+
+### For Classical Project
+
+All you need to do is copy test cases/suites IDs and paste them into a test/suite description:
 
 ![Testomat.io - Use ID In Tests](./images/New_0ldrsL29_2024-10-05.gif)
+
+### For BDD Project
+
+In the projects that use BDD format, you need to follow certain rules to maintain your test structure.
+If you want to add clickable references to a test or suite in a BDD project, use **#** followed by their IDs. Clicking the link will open the test or suite in detail view, making navigation and traceability more seamless.
+
+![Testomat.io - Use ID In Tests](./images/link_bdd.gif)
 
 ## Add Attachments to Test
 
