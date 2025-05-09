@@ -71,6 +71,30 @@ When you launch a test run and make changes to test case title or description - 
 
 Please note that the test case history is only available while the test run is in progress.
 
+## How to Create a Test Case within a Run
+
+You can create test cases directly within a test Run, avoiding additional navigation and ensuring the new tests are automatically included in the associated test plan.
+
+1. Go to the **Runs** tab.
+
+2. Start the desired test run.
+
+3. Scroll to the bottom of the test suite.
+
+4. Click the **Create test** button.
+
+![Create test case](./images/Create_Test_button.png)
+
+5. Enter the test case details in the provided field.
+
+6. Click the checkmark **✔️** icon to add the new test case, or the **X** icon to discard it.
+
+![Create test case](./images/Test_Case_Creation.png)
+
+> The **Create Test** button can be hidden via the **Hide Test Creation** option in the **Run** dropdown menu.
+
+![Create test case](./images/Hide_test_creatio.png)
+
 ## RunGroups
 
 You can group your Runs within Testomat.io. To do this you need to click on New Group button
@@ -99,6 +123,22 @@ To put an Automated Run to a RunGroup you need to execute your tests with Testom
 Now you can see Test Runs in a created RunGroup
 
 ![Test Runs in a created RunGroup](./images/11.png)
+
+## How to Move a Run to a RunGroup
+
+You may need to move a Run to a specific RunGroup—for example, to associate it with a particular release or build. To do this, use the **Move** functionality.
+
+1. Navigate to the **Runs** section.
+2. Select the Run you want to move.
+3. Click the three-dot menu (...) next to the **Edit** button.
+4. Select **Move** from the dropdown menu.
+
+![Move Run option in the dropdown menu](./images/Move_Run_Option.png)
+
+5. In the pop-up window, choose the destination **RunGroup**.
+6. Click **Move** to confirm.
+
+![Destination RunGroup selection dialog](./images/Destination_RunGroup.png)
 
 ### How to Customize Your Runs List View
 
@@ -156,9 +196,9 @@ The chart displays up to 50 of the latest test runs belonging to the group. If y
 
 ![Testomat.io - RunGroup Chart](./images/New_iWaZSQo7_2024-08-03.png)
 
-## Copy Run Group
+## Copy RunGroup
 
-You can easily create a new Run Group, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
+You can easily create a new RunGroup, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
 
 **Assignee**: Define assignee details separately, preventing them from being copied.
 
@@ -170,7 +210,7 @@ You can easily create a new Run Group, completely independent of any previous ru
 
 **Nested Structure**: Preserve or exclude the nested structure of your test groups as you duplicate them.
 
-Here are steps: 1. Open Run Group 2. Click Extra menu 3. Click Copy 4. Pick configurations 5. Save 6. See Run Group created.
+Here are steps: 1. Open RunGroup 2. Click Extra menu 3. Click Copy 4. Pick configurations 5. Save 6. See RunGroup created.
 
 ![Copy group 1](./images/32.png)
 
