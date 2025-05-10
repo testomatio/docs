@@ -263,7 +263,8 @@ export default defineConfig({
 							label: 'AI-Powered Features',
 							collapsed: false,
 							items: [
-								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features' }
+								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features' },
+								{ label: 'AI-Requirements', link: '/advanced/ai-requirements' }
 							],
 						},
 					]

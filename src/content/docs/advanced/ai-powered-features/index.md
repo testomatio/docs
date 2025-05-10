@@ -13,14 +13,14 @@ Testomat.io uses **Groq** (not Grok designed by xAI by Elon Musk) as the main AI
 
 :::note
 
-By default, AI-powered generative features are disabled for Company in Company Settings. 
-You can enbable AI at any time by following the instructions in the [Administration section](https://docs.testomat.io/management/company/administration/#ai).
+By default, AI-powered generative features are disabled for your confidence. 
+You can enbable AI at any time on Company Settings page by following the instructions in the [Administration section](https://docs.testomat.io/management/company/administration/#ai).
 
 :::
 
-## Summarize Suite Description Based on Tests
+## Summarize Suite Description Based on Test Cases
 
-You can automatically generate a suite description by analyzing the test cases within it. This saves time by eliminating the need for manual suite documentation and ensures descriptions accurately reflect test content:
+You can automatically generate a suite description by analyzing the test cases within it. This saves time by eliminating the need for manual suite documentation and ensures descriptions accurately reflect the test content:
 
 1. Go to 'Tests'.
 2. Select Suite with test cases.
@@ -30,23 +30,49 @@ You can automatically generate a suite description by analyzing the test cases w
 
 :::note
 
-**'Summarize'** button shows only when the Suite has tests (testCount > 0) and 'Suite Summary' modal is opened.
+**'Summarize'** button appears only when the Suite contains tests (testCount > 0) and 'Suite Summary' modal is open.
 
 :::
 
-Also you can copy (1) AI answer or regenarate (2) it if needed.
+AI-generated response will include the suggested **suite summary** and **suggested actions**.
+
+
+You can copy (1) AI-generated response, regenarate it (2), and as well, you can edit it, improve, change formatting, or add specific sections using **'Follow up'** input field (3) if suggestion is unsatisfactory:
 
 ![Testomat.io - AI-powered](./images/AI_2.png)
 
+On **'Suggested Actions'** side, you can directly save the description to your suite (4).
+
+If your suite already has a description, you can click the 'Show Diff' button (5) to compare your current description with the AI’s suggestion.
+
+
+![Testomat.io - AI-powered](./images/AI_11.png)
+
 ## Suggest Test Cases
 
-You can also use AI to improve your test coverage by creating more test cases based on test cases that you already have in your Suite.
+You can also use AI to enhance your test coverage by creating additional test cases based on test cases that you already have in your test suite, as well they can be created based on Suite description or Requirements.
 
-1. Open Suite Case with already added Test Cases.
+1. Open Test Suite that already contains Test Cases.
 2. Click on 'Extra menu' button.
 3. Select **'Suggest Tests'** option.
 
 ![Testomat.io - AI-powered](./images/AI_8.gif)
+
+To generate more test cases, click the **'Suggest More Tests'** button (1). Testomat.io recommends adding only the necessary tests cases to your suite. 
+
+IIf your test suite is linked to requirements (e.g., User story in Jira), AI will suggest checking your existing test cases for redundancy by clicking the **'Remove Redundant Tests'** button (2).
+
+![Testomat.io - AI-powered](./images/AI_12.png)
+
+You can remove redundant test cases directly within the AI-assistance window:
+
+![Testomat.io - AI-powered](./images/AI_13.gif)
+
+:::note
+
+You always need explicitly select which test cases to add or remove.
+
+:::
 
 ## Suggest Test Case Description
 
@@ -57,34 +83,7 @@ This feature allows you to create test case description based just on its name o
 
 ![Testomat.io - AI-powered](./images/AI_9.gif)
 
-## Analyze Requirements
-
-When you link a Jira issue as a requirement in Testomat.io, the system will analyze the issue’s description and automatically suggest a structured requirement description. Based on the analysis, you’ll be offered two intelligent options:
-
-- Generate a new test suite with suggested test cases.
-- Analyze existing suites and suggest test coverage improvements.
-
-This feature is available both at the **project level** and within individual **test suites**, enabling flexible, requirements-driven testing whether you’re planning at a high level or working in a focused domain.
-
-**Key benefits:**
-
-- Automates the transition from requirements to test cases.
-- Ensures traceability and alignment between business goals and test coverage.
-- Reduces manual effort and potential gaps in test planning.
-
-![Testomat.io - AI-powered](./images/AI_10.gif)
-
-## Generate Bug Description Based on the Test Case
-
-When you executing tests and creating a new defect, Testomat.io will automatically suggest a concise, context-aware bug title and a description. These suggestions are based on the test case content and its execution results, helping teams report issues faster and more consistently.
-
-**Why is this useful:**
-
-- **Speeding up defect logging:** Testers can instantly use or refine AI-suggested bug details, reducing time spent writing repetitive or obvious issue reports.
-- **Maintaining consistent bug reporting standards:** The AI helps standardize descriptions across team members, which improves clarity and communication with developers.
-- **Assisting less experienced testers:** Junior team members or non-technical testers can rely on AI-generated suggestions as a starting point, ensuring important details aren’t missed.
-
-## Generate Test Description Based on Test Code
+## Generate Test Case Description Based on Test Code
 
 Use AI to analyze your test code and produce detailed test descriptions. Bridges the gap between technical code and human-readable documentation, improving collaboration between technical and non-technical team members:
 
@@ -100,15 +99,32 @@ Test Summary is created:
 
 :::note
 
-**'Write Description from Code'** button shows only when the test has code (model.code exists) and 'Test Summar' modal is opened.
+**'Write Description from Code'** button shows only when the test has code.
 
 :::
 
-## Generate Code Based on Test Description
+## Generate Code Based on Test Casse Description
 
 Provide a test description, and the AI generates the corresponding test automation code. Please note that generated code may be not completely comprehensive.
 
-## Analyze Failed Automated Tests
+Code will be created based on the project framework settings and other tests in this suite.
+Use it as boilerplate code only.
+
+To check your Project framework settings go to Project Settings page:
+
+![Testomat.io - AI-powered](./images/Project_settings.png)
+
+## Generate Bug Description Based on the Test Case
+
+When you executing tests and creating a new defect, Testomat.io will automatically suggest a concise, context-aware bug title and a description. These suggestions are based on the test case content and its execution results, helping teams report issues faster and more consistently.
+
+**Why is this useful:**
+
+- **Speeding up defect logging:** Testers can instantly use or refine AI-suggested bug details, reducing time spent writing repetitive or obvious issue reports.
+- **Maintaining consistent bug reporting standards:** The AI helps standardize descriptions across team members, which improves clarity and communication with developers.
+- **Assisting less experienced testers:** Junior team members or non-technical testers can rely on AI-generated suggestions as a starting point, ensuring important details aren’t missed.
+
+## Analyze Failed Automated Test Cases
 
 Use AI to analyze your failed automated tests to understand ans summarize main reasons for your tests to fail.
 
@@ -130,7 +146,7 @@ Example of errors clustarization:
 
 ## Explain Autotest Failures Based on Logs
 
-Analyzes test execution logs to identify and explain reasons behind failures. Reduces debugging time by providing actionable insights directly within the Testomat UI. It also offers you a possible fixes.
+Using stack trace, code of test, test execution logs and screenshot of failure, AI will identify and explain reasons behind failures. It helps to reduce debugging time by providing actionable insights directly within the Testomat UI. It also offers you a possible fixes.
 
 The same as in the previous case, it also available only for finished, automated runs with 5+ failures.
 
