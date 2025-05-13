@@ -217,7 +217,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', link: '/advanced' },
 						{
-							label: 'Tags, Labels & Custom fields',
+							label: 'Tags, Custom fields',
 							collapsed: true,
 							items: [
 								{ label: 'Tags, Labels & Custom fields', link: '/advanced/tags-labels' }
