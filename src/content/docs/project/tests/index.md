@@ -48,6 +48,46 @@ Repeating these steps, you can easily add as many tests as you need within a rea
 
 Also, you can use shortcut commands to create/edit Test Cases or Suites. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more.
 
+## Multiselection for Tests
+
+The **Multiselection** feature on the **Tests** page allows users to perform bulk actions on multiple tests, entire test suites, or folders.
+
+### To enable Multiselection:
+
+1. Click the **Multiselection** button located at the top left corner of the **Tests** page.
+
+   ![Multiselection button](./images/Multiselect_button_tests.png)
+
+2. Select the desired tests, test suites, or folders.
+
+3. Once selected, the **Multiselection options** toolbar will appear at the bottom of the page.
+
+   ![Multiselection options](./images/Multiselection_options.png)
+
+---
+
+### Available Multiselection Actions:
+
+1. **Run** – Launches a test run containing the selected items.
+
+2. **Labels** – Add or remove labels or custom fields for the selected tests.  
+   [Learn more about labels →](https://docs.testomat.io/usage/labels-and-custom-fields/#how-to-setup-a-label)
+
+3. **Copy** – Copy selected tests within the current project or to another project.  
+   
+4. **Move** – Move tests to another test suite or folder within the same project.
+
+5. **Tags** – Assign existing tags or create new ones for the selected tests.  
+   [More on using tags →](https://docs.testomat.io/advanced/tags-labels/#_top)
+
+6. **+ Link** – Open a pop-up to link a related defect to the selected tests.
+
+7. **Priority** – Set priority levels for the selected tests.
+
+8. **More options (⋯)** – Contains additional action **Download** – Export selected tests to a spreadsheet.
+
+9. **Delete** – Permanently remove the selected tests.
+
 ## Test Case Editor
 
 Test Case Editor is a dynamic interface, designed to accommodate the diverse requirements of test case formulation. Through this platform, testers wield the power to architect meticulously structured test scenarios, encompassing a range of variables, actions, expected results, and potential outcomes.
