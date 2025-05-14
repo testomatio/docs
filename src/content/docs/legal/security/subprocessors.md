@@ -40,7 +40,7 @@ Also we use the following subprocessors to perform other service functions for d
 - **Pipedrive:** Customer support. Location: Estonia. https://www.pipedrive.com/en/trust-center
 - **Calendly:** Planning online meetings. Location: USA. https://calendly.com/security
 - **Stripe:** Payments services. Location: USA. https://stripe.com/en-pl/legal/privacy-center
-- **SendPulse:** Email and marketing activities. Location: USA. https://sendpulse.com/legal/security
+- **SendPulse:** Email and marketing activities. Location: EU. https://sendpulse.com/legal/security
 - **Sendgrid:** Email delivery. Location: USA. https://sendgrid.com/en-us/policies/security
 - **Appsignal:** Logs and monitoring. Location: Germany. https://www.appsignal.com/security
 - **Groq:** AI LLM. Location: USA. https://trust.groq.com/
