@@ -71,6 +71,30 @@ When you launch a test run and make changes to test case title or description - 
 
 Please note that the test case history is only available while the test run is in progress.
 
+## How to Create a Test Case within a Run
+
+You can create test cases directly within a test Run, avoiding additional navigation and ensuring the new tests are automatically included in the associated test plan.
+
+1. Go to the **Runs** tab.
+
+2. Start the desired test run.
+
+3. Scroll to the bottom of the test suite.
+
+4. Click the **Create test** button.
+
+![Create test case](./images/Create_Test_button.png)
+
+5. Enter the test case details in the provided field.
+
+6. Click the checkmark **✔️** icon to add the new test case, or the **X** icon to discard it.
+
+![Create test case](./images/Test_Case_Creation.png)
+
+> The **Create Test** button can be hidden via the **Hide Test Creation** option in the **Run** dropdown menu.
+
+![Create test case](./images/Hide_test_creatio.png)
+
 ## RunGroups
 
 First, let's clarify what Run Groups are in Testomat.io. 
@@ -102,6 +126,22 @@ To put an Automated Run to a RunGroup you need to execute your tests with Testom
 Now you can see Test Runs in a created RunGroup
 
 ![Test Runs in a created RunGroup](./images/11.png)
+
+## How to Move a Run to a RunGroup
+
+You may need to move a Run to a specific RunGroup—for example, to associate it with a particular release or build. To do this, use the **Move** functionality.
+
+1. Navigate to the **Runs** section.
+2. Select the Run you want to move.
+3. Click the three-dot menu (...) next to the **Edit** button.
+4. Select **Move** from the dropdown menu.
+
+![Move Run option in the dropdown menu](./images/Move_Run_Option.png)
+
+5. In the pop-up window, choose the destination **RunGroup**.
+6. Click **Move** to confirm.
+
+![Destination RunGroup selection dialog](./images/Destination_RunGroup.png)
 
 ### How to Customize Your Runs List View
 
@@ -159,9 +199,9 @@ The chart displays up to 50 of the latest test runs belonging to the group. If y
 
 ![Testomat.io - RunGroup Chart](./images/New_iWaZSQo7_2024-08-03.png)
 
-## Copy Run Group
+## Copy RunGroup
 
-You can easily create a new Run Group, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
+You can easily create a new RunGroup, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
 
 **Assignee**: Define assignee details separately, preventing them from being copied.
 
@@ -173,7 +213,7 @@ You can easily create a new Run Group, completely independent of any previous ru
 
 **Nested Structure**: Preserve or exclude the nested structure of your test groups as you duplicate them.
 
-Here are steps: 1. Open Run Group 2. Click Extra menu 3. Click Copy 4. Pick configurations 5. Save 6. See Run Group created.
+Here are steps: 1. Open RunGroup 2. Click Extra menu 3. Click Copy 4. Pick configurations 5. Save 6. See RunGroup created.
 
 ![Copy group 1](./images/32.png)
 
@@ -293,6 +333,22 @@ Here you will need to 1. Select testing Environment 2. Enter a name for merged r
 Your merged run will appear in the list of runs on the Runs page
 
 ![merged run](./images/16.png)
+
+## How to Pin a Run or Run Group
+
+Testomat.io allows users to pin Run Groups or individual Runs to the top of the Dashboard for quick access to critical or frequently used tests. This supports faster navigation, improved focus, and customizable workflows — ideal for monitoring regression tests, environment-specific runs, or production hotfixes.
+ 
+1. Go to the **Runs** tab.
+2. Find the Run or Run Group you want to pin.
+3. Click the **three dots menu** aligned next to the item.
+4. Choose **"Pin"** from the dropdown options.
+5. The selected Run or Run Group will now appear **pinned at the top** of the list for quick and easy access.
+
+![Pin a Run](<images/Pin_a_Run.png>)
+
+**Pin** option is also available in the detailed view menu.
+
+![Pin a Run Detailed Menu view](<images/Pin_a_Run_Detailed_Menu.png>)
 
 ## Relaunch Runs
 
@@ -428,17 +484,70 @@ Multiselection allows the bulk application options to many runs with one click. 
 
 ![Multiselection Options](./images/28.png)
 
-## How To Download Run Report
+## How To Download Run Report as Spreadsheet
 
-Testomat provides option to export Run Reports as spreadsheet so you can get your data in xlsx file. See how it works.
+Testomat.io provides option to export Run Reports as spreadsheet so you can get your data in xlsx file.
+See how it works.
 
-**Download few run reports in one file**: 1. Enable Multiselection 2. Pick Runs 3. Click Download
+**Download few run reports in one file**: 
 
-![export with multiselect](./images/29.png)
+1. Go to Runs.
+2. Enable **'Multi-select'**.
+3. Select Runs.
+4. Click on **'Extra menu'** button.
+5. Select **'Download'** option.
 
-**Download a separate Run Report**: 1. Open Run Report 2. Click Run 3. Click Extra button 4. Download as Spreadsheet.
+![Testomat.io - export as Spreadsheet](./images/Export_1.png)
 
-![export report](./images/30-1.png)
+**Download a separate Run Report**: 
+1. Go to Runs.
+2. Select Run Report.
+3. Click on **'Report'** button.
+
+![Testomat.io - export as Spreadsheet](./images/Export_2.png)
+
+4. Click on **'Extra menu'** button.
+5. Select **'Download as Spreadsheet'** option.
+
+![Testomat.io - export as Spreadsheet](./images/Export_3.png)
+
+## How To Export Run Report in PDF Format
+
+Testomat.io also allows you to export your test run results as a PDF report. This feature enables easy sharing and archiving of test outcomes outside of Testomat.io. 
+
+**There are two ways to generate a structured report with test execution details in PDF format:**
+
+1. Go to Runs.
+2. Select Run Report.
+3. Click on **'Extra menu'** button.
+4. Select **'Export as PDF'** option.
+
+![Testomat.io - export as PDF](./images/Export_4.png)
+
+**OR**
+
+1. Go to Runs.
+2. Select Run Report.
+3. Click on **'Report'** button.
+
+![Testomat.io - export as PDF](./images/Export_5.png)
+
+4. Click on **'Extra menu'** button.
+5. Select **'Export as PDF'** option.
+
+![Testomat.io - export as PDF](./images/Export_6.png)
+
+**Example of Test Run Report in PDF format:**
+
+![Testomat.io - export as PDF](./images/Export_7.png)
+
+**Use cases:**
+
+- **Sharing results with stakeholders:** Quickly generate a portable summary of test outcomes for product owners, QA managers, or external partners who may not have access to the platform.
+
+- **Audit and compliance documentation:** Maintain a formal record of test results in a fixed format for compliance, certification, or audit purposes.
+
+- **Team retrospectives and reviews:** Use the PDF report to review test coverage and outcomes during retrospectives or sprint reviews without relying on live access to the system.
 
 ## Compare Test Runs
 

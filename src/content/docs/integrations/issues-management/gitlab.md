@@ -17,6 +17,9 @@ head:
 
 If you already have a **Group** and **Project** set up and configured in **GitLab**, we can proceed with integrating it with Testomat.io. All you need is a **Group Name**, **Project ID**  and a **Project Access Token**. We’ll guide you step-by-step on how to retrieve this information and use it to connect with Testomat.io.
 
+Testomat.io now supports both GitLab SaaS and self-hosted GitLab instances. When setting up your
+integration, you'll be able to specify which type you're using.
+
 ![Testomat.io - GitLab Project](./images/New_4H9kJ6as_2024-11-12.png)
 
 To get the **Group Name**: 
@@ -74,10 +77,14 @@ After collecting all necessary data, we can move on to Testomat.io.
 ![Testomat.io - Connect to GitLab](./images/New_2sLMqMyg_2024-11-12.png)
 
 2. Enter a **Profile Name**
-3. Paste GitLab **Group Name**
-4. Paste GitLab **Project Access Token**
-5. Paste GitLab **Project ID**
-6. Click on **Save** button
+3.  Select your GitLab type:
+**GitLab SaaS** for the cloud version
+**Self-hosted GitLab** for your own installation
+4. If using Self-hosted GitLab, enter your GitLab URL (e.g., https://gitlab.yourdomain.com )
+5. Paste GitLab **Group Name**
+6. Paste GitLab **Project Access Token**
+7. Paste GitLab **Project ID**
+8. Click on **Save** button
 
 ![Testomat.io - GitLab Configuration](./images/New_I3kRnywM_2024-11-12.png)
 

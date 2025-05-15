@@ -23,7 +23,7 @@ When a new project is created, there are multiple options to start:
 2. Import automated tests from source code
 3. Import tests from CSV file from another Test Management System
 
-## Creating a test
+## Creating a Test
 
 Tests are created within a suite.
 
@@ -48,7 +48,7 @@ Repeating these steps, you can easily add as many tests as you need within a rea
 
 Also, you can use shortcut commands to create/edit Test Cases or Suites. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more.
 
-## **Test Case Editor**
+## Test Case Editor
 
 Test Case Editor is a dynamic interface, designed to accommodate the diverse requirements of test case formulation. Through this platform, testers wield the power to architect meticulously structured test scenarios, encompassing a range of variables, actions, expected results, and potential outcomes.
 
@@ -56,7 +56,7 @@ Regarding test case creation, Testomat.io offers two distinct editor types: the 
 
 Let's have a look at each of them.
 
-## **Classical Editor Review**
+## Classical Editor Review
 
 Introducing the Classical Editor, a tool that places the art of test editing firmly in your hands. Crafting tests becomes a seamless endeavor as you immerse yourself in the Classical Editor's capabilities.
 
@@ -91,7 +91,7 @@ However, the Classical Editor's influence transcends singular tests. With Pre-Re
 9. Save - save your work
 10. Close - escape the editor
 
-### Why Do We Use Markdown In Classical Editor?
+### Why Do We Use Markdown in Classical Editor?
 
 Markdown is a lightweight and versatile markup language that revolutionizes the way content is formatted and presented. It combines the simplicity of plain text with the ability to produce well-structured documents, making it a favored choice for various applications, including software documentation and test case creation. Here are its benefits:
 
@@ -107,7 +107,7 @@ Markdown is a lightweight and versatile markup language that revolutionizes the 
 
 **Consistency and Templates:** Markdown's consistent structure allows for the creation of reusable test case templates. This ensures that test cases adhere to a standardized format, streamlining comprehension and navigation across a myriad of test scenarios.
 
-### Examples Of Markdown Written Test Cases
+### Examples of Markdown Written Test Cases
 
 In the realm of Markdown-based test case creation, the handling of test unveils an array of versatile techniques. Below, we delve into several illustrative examples that showcase various methods for incorporating steps and expected results into your test cases.
 
@@ -137,7 +137,7 @@ Some example:
 
 ---
 
-### Expected Results as steps one after another
+### Expected Results as Steps One After Another
 
 This pattern is similar to the previous one, but instead of listing the expected results right after each step as plain text, they are listed after all the steps have been documented. This approach will give you ability to use autocompletion and expected results will be stored in steps database.
 
@@ -163,7 +163,7 @@ Some example:
 
 ---
 
-### Steps with Expected Results as nested list
+### Steps with Expected Results as Nested List
 
 This format is useful for breaking down each step into multiple sub-steps, each with its own expected result. This can be helpful when a step is complex and has several different parts or when there are multiple expected behaviors that need to be documented for each step. By nesting the expected results under each step, it's easy to see which expected results are related to which sub-steps, making it easier to track and verify expected behaviors.
 
@@ -348,7 +348,7 @@ Some example:
 
 Use Markdown shortcuts to edit test case description quickly and easily. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more.
 
-## **BDD Editor Review**
+## BDD Editor Review
 
 As you embark on the journey of crafting and refining BDD scenarios, this innovative platform empowers you to shape narratives into meticulously executable tests. At its core, the BDD Editor encapsulates the essence of collaboration, precision, and agility, delivering a comprehensive solution for modern testing workflows. Here, you'll create user stories, scenarios, and document expected behaviors with an eloquence that bridges the gap between technical and non-technical stakeholders.
 
@@ -385,7 +385,7 @@ Beyond Feature Files lies the individual tests. Here, the BDD Editor grants you 
 7. Save - save your work
 8. Close - escape the editor
 
-## **Edit Steps in Test Case Preview**
+## Edit Steps in Test Case Preview
 
 After your test cases are created, Testomat.io offers a convenient feature for quick editing - **Edit Steps**. This allows you to modify steps and expected results directly from the test case preview page.
 
@@ -437,7 +437,7 @@ Test Case after editing:
 
 ![Edit steps](./images/Edit_steps_6.png)
 
-## **URL/ID Quick Copy**
+## URL/ID Quick Copy
 
 Depending on your needs, you can set up a convenient way to copy **URL/IDs** in **Test Cases**, **Suites** and **Runs**.
 
@@ -450,13 +450,24 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 
 ![Testomat.io - URL/ID Copy](./images/New_1pgghaYx_2024-08-08.png)
 
-## **Cross-Linking Tests, Suites and Folders**
+## Cross-Linking Tests, Suites and Folders
 
-Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window.
+Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window. 
 
-All you need to do is copy their IDs and paste it into a test/suite description:
+This feature is available for Classical and BDD projects but have a difference in formating.
+
+### For Classical Project
+
+All you need to do is copy test cases/suites IDs and paste them into a test/suite description:
 
 ![Testomat.io - Use ID In Tests](./images/New_0ldrsL29_2024-10-05.gif)
+
+### For BDD Project
+
+In the projects that use BDD format, you need to follow certain rules to maintain your test structure.
+If you want to add clickable references to a test or suite in a BDD project, use **#** followed by their IDs. Clicking the link will open the test or suite in detail view, making navigation and traceability more seamless.
+
+![Testomat.io - Use ID In Tests](./images/link_bdd.gif)
 
 ## Add Attachments to Test
 
@@ -553,7 +564,7 @@ If your test is deeply nested within suites and folders, you can use breadcrumbs
 
 ![Testomat.io - Breadcrumbs tooltip](./images/New_g6FZ3V7n_2024-08-10.png)
 
-## **How to Copy your Tests, Test Suites, and Folders**
+## How to Copy your Tests, Test Suites, and Folders
 
 You can copy a single test from a test suite, an entire test suite, or even a folder containing a set of test suites. You can copy these items either within your current project or to a different project.
 
@@ -581,7 +592,7 @@ You can copy a single test from a test suite, an entire test suite, or even a fo
 ![Testomat.io - 'Change project' button](./images/change_project_button.png)
 
 
-## **How to add a label/tag to a test**
+## How to add a label/tag to a test
 
 This option is the easiest one! You simply need to add the label's name (preceeded by @ char) in the name field of the test. The drop-down list of tags already used in projects appears, when you type the @ symbol.
 
@@ -591,7 +602,7 @@ And now you can see your label/tag in the test list next to the test's title.
 
 ![See the test with tag](./images/2023-08-03_01.01.17@2x.png)
 
-## **How to assign a test to a user**
+## How to assign a test to a user
 
 If you want to assign a certain test to a certain user, you should click on this user icon in the upper right corner of the window, as shown in the picture.
 
@@ -605,7 +616,7 @@ Now you can see that this test is assigned to a certain user. The user icon has 
 
 ![See assigned person](./images/2023-08-03_01.12.54@2x.png)
 
-## **How to set a priority to a test**
+## How to set a priority to a test
 
 First, you should open the test and click on the checkbox icon next to the test title, as shown in the picture.
 
@@ -623,7 +634,7 @@ Also, you will see set priority in your suite
 
 ![Priorities in test tree](./images/2023-08-03_01.19.08@2x.png)
 
-## **How to add parameters to a test**
+## How to add parameters to a test
 
 Parameters are used to create data-driven tests. Each parameter will be treated as a separate test during a manual or automated run.
 
@@ -660,7 +671,7 @@ or under the test description.
 
 ![Added_parameters_desc](./images/att5_4962.png)
 
-### **How to edit test parameters**
+### How to edit test parameters
 
 You are able to edit existing parameters or parameter headers in two methods:
 
@@ -713,11 +724,34 @@ To delete a parameter:
 
 ![Second_Method_Edit_Header_Name](./images/att13_4962.png)
 
-## **Drag and Drop Your Tests**
+## Move Your Tests
 
-You may need to move your tests within a project, for example to another suite. For this purpose, you can use drag and drop. You need to drag a test and drop it into a suite. Please note, you should drop a test to suite name on the top of the suite.
+You may need to move your tests within a project, for example to another suite. For this purpose, you can use **Move** or **Drag and Drop** functionality. 
 
-![Alt text](./images/2023-08-03_01.29.33.gif)
+**Move** menu action
+
+1. Go to the Tests section.
+2. Select the item you want to move (e.g. a test suite).
+3. Open the drop-down menu by clicking the three dots next to the Edit button.
+4. Click **Move**.
+
+![Alt Move tests button ](./images/Move_Tests.png)
+
+5. Select the destination folder where you want to move your tests.
+
+![Alt Move tests button ](./images/move_tests.png)
+
+**Drag and Drop** option
+
+1. Go to the Tests section.
+2. Expand the folder or suite where you want to move your test(s).
+3. Hover over the test, suite, or folder you want to move until the drag handle (⠿) appears.
+4. Click and hold the drag handle, then drag the item to your desired location.
+5. Position the item slightly below the item you want it to appear under. When space opens up, release to drop.
+
+![Alt Move tests button ](./images/drag_and_drop.gif)
+
+
 
 ## How to restore deleted tests?
 

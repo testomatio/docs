@@ -1,5 +1,5 @@
 ---
-title: Import Tests From CSV/XLS
+title: Import Tests From TMS
 description: Learn how to import tests from CSV or XLS files into Testomat.io. This guide covers the process of importing test cases from systems like TestRail, Zephyr, Qase, and more. It also introduces an experimental feature to convert CSV/XLS data into BDD scenarios, and provides instructions for creating custom XLS files for importing.
 type: article
 url: https://docs.testomat.io/project/import-export/import-tests-from-csvxls
@@ -12,62 +12,25 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, CSV, XLS, test import, BDD scenarios, TestRail, Zephyr, Qase, QTest, manual tests, automated tests, test management, custom XLS
+      content: Testomat.io, CSV, XLS, TMS, test import, BDD scenarios, TestRail, Zephyr, Qase, QTest, Testmo, XRay manual tests, automated tests, test management, custom XLS
 ---
 
 > If you have tests in CSV/XLS format - follow this guide to learn how to import your tests to Testomat.io
 
-For now, Testomat.io supports import from CSV/XLS for these systems:
+## Supported Test Management Systems
 
-- TestRail
-- Zephyr
-- Qase
-- QTest
-- Testomat.io 
+Testomat.io supports importing test cases from a wide range of popular test management systems.  
+**Click any tool name below to view a step-by-step guide for importing from that specific system**:
 
-## How To Import Tests From CSV/XLS
-
-You can use **Import from CSV** button on Tests page :
-
-![image](./images/149749728-40f8b5b0-f945-4a41-b1f7-62b11d45a774.png)
-
-Or use **Imports** button on the side menu:
-
-![image](./images/149753594-80142936-904c-48bd-8446-22d941f7c257.png)
-
-Then click on the Menu button and pick **Import From CSV**
-
-![image](./images/149753979-19e83701-d1bc-407f-993c-52b7701f2c38.png)
-
-Pick the format you are going to import:
-
-![image](./images/149754376-e6dc82ad-2ee5-416b-be50-51227255f3a2.png)
-
-Click on **Choose file** and pick your file:
-
-![image](./images/149755082-09d0526f-5950-4b03-bb7c-dda84f3ea9c0.png)
-
-Now click on **Create** button
-
-![image](./images/149755688-4bacbc4e-6c37-4094-ad91-9d4de42afdd9.png)
-
-And see Testomat.io importing your tests 
-
-![Import From TR](./images/149757000-33a76baa-503f-4fbe-b9db-4339eff07e20.gif)
-
-## Example Files For Import 
-
-Here you can find samples for each of supported formats:
-
-- [TestRail](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/TestRail.csv
-)
-- [Zephyr](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/Zephyr.xls
-)
-- [Qase](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/Qase.csv)
-- [QTest](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/qtest.xls
-)
-- [Testomat.io](https://testomatio-artifacts.ams3.digitaloceanspaces.com/documentation/testomatio.xlsx)
-
+- [Qase](https://docs.testomat.io/project/import-export/import/import-tests-from-qase/)
+- [QTest](https://docs.testomat.io/project/import-export/import/import-tests-from-qtest/)
+- [QMetry](https://docs.testomat.io/project/import-export/import/import-tests-from-qmetry/)
+- [TestCaseLabs](https://docs.testomat.io/project/import-export/import/import-tests-from-testcaselabs/)
+- [Testmo](https://docs.testomat.io/project/import-export/import/import-tests-from-testmo/)
+- [Testomat.io](https://docs.testomat.io/project/import-export/import/import-tests-from-csvxls/)
+- [TestRail](https://docs.testomat.io/project/import-export/import/import-tests-from-testrail/)
+- [XRay](https://docs.testomat.io/project/import-export/import/import-tests-from-xray/)
+- [Zephyr](https://docs.testomat.io/project/import-export/import/import-tests-from-zephyr/)
 
 
 ## Import CSV/XLS As BDD

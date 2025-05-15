@@ -95,14 +95,14 @@ export default defineConfig({
 						{ label: 'Overview', link: '/project' },
 						{
 							label: 'Tests',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Test Design', link: '/project/tests' },
 							],
 						},
 						{
 							label: 'Runs',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/runs' },
 								{ label: 'Running Tests Manually', link: '/project/runs/running-tests-manually' },
@@ -142,14 +142,14 @@ export default defineConfig({
 						},
 						{
 							label: 'Plans',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Plans', link: '/project/plans', },
 							],
 						},
 						{
 							label: 'Steps',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/steps-snippets' },
 								{ label: 'Steps', link: '/project/steps-snippets/steps' },
@@ -158,25 +158,36 @@ export default defineConfig({
 						},
 						{
 							label: 'Pulse',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/pulse' },
 							],
 						},
 						{
 							label: 'Import & Export',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/import-export' },
 								{
 									label: 'Import',
-									collapsed: false,
+									collapsed: true,
 									items: [
 										{ label: 'Overview', link: '/project/import-export/import' },
 										{ label: 'Import from Source Code', link: '/project/import-export/import/import-tests-from-source-code' },
 										{ label: 'Import from Cucumber', link: '/project/import-export/import/import-tests-from-cucumber' },
-										{ label: 'Import from CSV/XLS', link: '/project/import-export/import/import-tests-from-csvxls' },
+										{ label: 'Import from TMS', link: '/project/import-export/import/import-tests-from-csvxls' },
 										{ label: 'Import Tests From TestRail', link: '/project/import-export/import/import-tests-from-testrail' },
+
+                    
+										{ label: 'Import Tests From QTest', link: '/project/import-export/import/import-tests-from-qtest' },
+										{ label: 'Import Tests From Zephyr', link: '/project/import-export/import/import-tests-from-zephyr' },
+										{ label: 'Import Tests From Qase', link: '/project/import-export/import/import-tests-from-qase' },
+
+										{ label: 'Import Tests From Testmo', link: '/project/import-export/import/import-tests-from-testmo' },
+										{ label: 'Import Tests From QMetry', link: '/project/import-export/import/import-tests-from-qmetry' },
+										{ label: 'Import Tests From TestCaseLabs', link: '/project/import-export/import/import-tests-from-testcaselabs' },
+										{ label: 'Import Tests From XRay', link: '/project/import-export/import/import-tests-from-xray' },
+                    
 										{ label: 'Import JavaScript Tests', link: '/project/import-export/import/import-js'},
 										{ label: 'Import Cucumber BDD Tests', link: '/project/import-export/import/import-bdd'},
 										{ label: 'Import PHP Tests', link: '/project/import-export/import/import-php'},
@@ -185,7 +196,7 @@ export default defineConfig({
 								},
 								{
 									label: 'Export tests',
-									collapsed: false,
+									collapsed: true,
 									items: [
 										{ label: 'Export Test Suites and Cases', link: '/project/import-export/export-tests' },
 									],
@@ -194,7 +205,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Analytics',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/analytics' },
 							],
@@ -206,43 +217,43 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', link: '/advanced' },
 						{
-							label: 'Tags, Labels & Custom fields',
-							collapsed: false,
+							label: 'Tags, Custom fields',
+							collapsed: true,
 							items: [
 								{ label: 'Tags, Labels & Custom fields', link: '/advanced/tags-labels' }
 							],
 						},
 						{
 							label: 'Bulk Edit',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder' }
 							],
 						},
 						{
 							label: 'Branches',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Branches', link: '/advanced/branches-folder' }
 							],
 						},
 						{
 							label: 'TQL',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'TQL', link: '/advanced/tql' }
 							],
 						},
 						{
 							label: 'Keyboard Shortcuts',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Keyboard Shortcuts', link: '/advanced/shortcuts' }
 							],
 						},
 						{
 							label: 'Living Documentation',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Living Documentation', link: '/advanced/living-doc' }
 							],
@@ -250,12 +261,20 @@ export default defineConfig({
 
 						{
 							label: 'Jira Plugin',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/advanced/jira-plugin' },
 								{ label: 'Tests in Jira', link: '/advanced/jira-plugin/work-in-jira' },
 								{ label: 'Branches in Jira', link: '/advanced/jira-plugin/branches' },
 								{ label: 'Creating Jira Issue', link: '/advanced/jira-plugin/jira-issue' },
+							],
+						},
+
+						{
+							label: 'AI-Powered Features',
+							collapsed: true,
+							items: [
+								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features' }
 							],
 						},
 					]
@@ -266,7 +285,7 @@ export default defineConfig({
 						{ label: 'Overview', link: '/integrations' },
 						{
 							label: 'Issues Management',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/integrations/issues-management' },
 								{ label: 'Jira', link: '/integrations/issues-management/jira' },
@@ -281,7 +300,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Continuous Integration',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/integrations/continuous-integration' },
 								{ label: 'Jenkins', link: '/integrations/continuous-integration/jenkins' },
@@ -296,7 +315,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Report Notifications',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/integrations/report-notifications' },
 								{ label: 'Notification Rules', link: '/integrations/report-notifications/rules' },
@@ -308,7 +327,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Single Sign On',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/integrations/single-sign-on' },
 								{ label: 'Okta', link: '/integrations/single-sign-on/okta' },
@@ -325,7 +344,7 @@ export default defineConfig({
 						{ label: 'Overview', link: '/management' },
 						{
 							label: 'Company',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/management/company' },
 								{ label: 'Users and Permissions', link: '/management/company/users-and-permissions'},
@@ -337,7 +356,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Project',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/management/project' },
 								{ label: 'Settings', link: '/management/project/settings' },
@@ -352,7 +371,7 @@ export default defineConfig({
 						{ label: 'Overview', link: '/legal' },
 						{
 							label: 'Compliance',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Compliance Overview', link: '/legal/compliance' },
 								{ label: 'GDPR', link: '/legal/compliance/gdpr' },
@@ -362,7 +381,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Security',
-							collapsed: false,
+							collapsed: true,
 							items: [
 								{ label: 'Security Overview', link: '/legal/security' },
 								{ label: 'JIRA Plugin Security', link: '/legal/security/jira' },
@@ -390,7 +409,7 @@ export default defineConfig({
 		"/getting-started/test-plans": "/project/plans",
 		"/getting-started/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
 		"/getting-started/import-tests-from-source-code": "/project/import-export/import/import-tests-from-source-code",
-		"/getting-started/import-tests-from-csvxls": "/project/import-export/import-tests-from-csvxls",
+		"/getting-started/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
 		"/getting-started/test-design": "/project/tests",
 		"/getting-started/running-tests-manually": "/project/runs/running-tests-manually",
 		"/getting-started/running-automated-tests": "/project/runs/running-automated-tests",
@@ -447,5 +466,6 @@ export default defineConfig({
 		"/project/import-export/import-js": "/project/import-export/import/import-js",
 		"/project/import-export/import-tests-from-source-code": "/project/import-export/import/import-tests-from-source-code",
 		"/project/import-export/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
+		"/project/import-export/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
 	},
 });
