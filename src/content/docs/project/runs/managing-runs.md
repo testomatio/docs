@@ -226,12 +226,21 @@ You also need to select the **Merge Strategy** when merging multiple runs into o
 
 **Testomat.io offers you three different Merge strategies:**
 
-- **Realistic:** this strategy is based on test results from the last executed run (excluding skipped tests). If your Run Group includes test runs with different test cases, it will summarize and display the results from the last executed runs with unique test cases.
+For instance, let's say we have 2 runs inside a Rungroup with the same tests A and B:
 
-- **Optimistic:** this strategy will mark a test as passed if it passed in at least one of the runs within the group, even if it failed in others. This approach provides a more lenient view, focusing on the positive outcomes.
+- Run 1: A - failed, B - failed
+- Run 2: A - passed, B - passed
 
-- **Pessimistic:** unlike the optimistic strategy, this strategy will mark a test as failed if it failed in at least one of the runs within the group. It prioritizes identifying potential issues.
+What counter numbers should contain Rungroup? Both answers: "Passed: 2, Failed: 0" or "Failed 2, Passed 0" are absolutely valid depending on how you calculate those numbers. That's why Testomat.io provides customizable Merge strategies:
 
+- **Realistic:** this strategy is based on test results from the last executed run (excluding skipped tests). If your Run Group includes test runs with different test cases, it will summarize and display the results from the last executed runs with unique test cases. 
+In our example, results will be next: **Passed: 2, Failed: 0**, as Run 2 was added later.
+
+- **Optimistic:** this strategy will mark a test as passed if it passed in at least one of the runs within the group, even if it failed in others. This approach provides a more lenient view, focusing on the positive outcomes. 
+In other words, it prefers passed tests over failed: **Passed: 2, Failed: 0** in our example.
+
+- **Pessimistic:** unlike the optimistic strategy, this strategy will mark a test as failed if it failed in at least one of the runs within the group. It prioritizes identifying potential issues. 
+Simply to say, it prefers failed tests over passed: **Passed: 0, Failed: 2**.
 
 ### Merge Strategy Examples
 
