@@ -51,6 +51,7 @@ If your suite already has a description, you can click the 'Show Diff' button (5
 ## Suggest Test Cases
 
 You can also use AI to enhance your test coverage by creating additional test cases based on test cases that you already have in your test suite, as well they can be created based on Suite description or Requirements.
+This feature makes it easier to create comprehensive test suites. 
 
 1. Open Test Suite that already contains Test Cases.
 2. Click on 'Extra menu' button.
@@ -58,9 +59,12 @@ You can also use AI to enhance your test coverage by creating additional test ca
 
 ![Testomat.io - AI-powered](./images/AI_8.gif)
 
-To generate more test cases, click the **'Suggest More Tests'** button (1). Testomat.io recommends adding only the necessary tests cases to your suite. 
+You can review the suggested tests, select those that align with their needs, and directly add them to the suite.
+As well, you can generate more test cases, by clicking the **'Suggest More Tests'** button (1). 
 
-IIf your test suite is linked to requirements (e.g., User story in Jira), AI will suggest checking your existing test cases for redundancy by clicking the **'Remove Redundant Tests'** button (2).
+Testomat.io recommends adding only the necessary tests cases to your suite!
+
+If your test suite is linked to requirements (e.g., User story in Jira), AI will suggest checking your existing test cases for redundancy by clicking the **'Remove Redundant Tests'** button (2).
 
 ![Testomat.io - AI-powered](./images/AI_12.png)
 
@@ -73,6 +77,8 @@ You can remove redundant test cases directly within the AI-assistance window:
 You always need explicitly select which test cases to add or remove.
 
 :::
+
+This feature accelerates test creation, enhances coverage by identifying overlooked scenarios, and streamlines workflows by reducing manual effort while maintaining test quality.
 
 ## Suggest Test Case Description
 
