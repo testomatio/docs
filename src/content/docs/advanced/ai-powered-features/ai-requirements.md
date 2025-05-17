@@ -22,3 +22,9 @@ This feature is available both at the **project level** and within individual **
 - Reduces manual effort and potential gaps in test planning.
 
 ![Testomat.io - AI-powered](./images/AI_10.gif)
+
+:::note
+
+To use AI-Requirements feature, first connect Testomat.io to your Jira project. See detailed instructions in the [Connecting to JIRA project section](https://docs.testomat.io/integrations/issues-management/jira/#connecting-to-jira-project).
+
+:::
