@@ -735,11 +735,11 @@ You may need to move your tests within a project, for example to another suite. 
 3. Open the drop-down menu by clicking the three dots next to the Edit button.
 4. Click **Move**.
 
-![Alt Move tests button ](./images/Move_Tests.png)
+![Alt Move tests button ](./images/move_tests_1.png)
 
 5. Select the destination folder where you want to move your tests.
 
-![Alt Move tests button ](./images/move_tests.png)
+![Alt Move tests button ](./images/move_tests_2.png)
 
 **Drag and Drop** option
 
