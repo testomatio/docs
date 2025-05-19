@@ -15,23 +15,47 @@ head:
       content: Jira integration, Testomat.io, notifications, test automation, issue management, failed test runs, project management, software testing, test reporting
 ---
 
-Testomat.io allows to create Jira issue for failed test runs automatically. This option can be enabled in settings.
-To do this, you need to connect Jira project with Testomat.io. Please see dedicated  [documentation. ](https://docs.testomat.io/integration/jira/#connecting-to-jira-project)
+Testomat.io allows to create Jira issue for failed test runs automatically. This option can be enabled in **Settings**.
+To do this, you need to connect Jira project with Testomat.io. Please see dedicated  [documentation.](https://docs.testomat.io/integration/jira/#connecting-to-jira-project)
 
-1. Enter a name to your Notification rule
-2. Pick Jira from Notification Type drop-down
+After the Jira is connected with Testomat.io, go to the **Settings (1) -> Report Notifications(2)** and click on **Add Notification Rule (3)**.
 
-![image](./images/128397211-1e2aa7d8-3014-4e38-a6a6-4e1fc17adb1b.png)
+![Testomat.io - Notification Jira](./images/Notification.png)
 
-3. Pick your dedicated Jira project from Jira Project drop-down
-4. Pick needed issue type from Issue Type drop-down
-5. Configure rules to define on which conditions this notification should be sent
-6.  Click on Save button
+To create a new Notification Rule for Jira follow next steps:
 
-![image](./images/128397891-3d29412d-6d31-40a2-9b8f-df166c7e6943.png)
+1. Add a title for Notification Rule.
+2. Choose **Jira** from the dropdown list.
+
+![Testomat.io - Notification Jira](./images/Jira_1.png)
+
+3. Select your dedicated Jira project from **Jira Project** dropdown list.
+4. Select needed issue type from **Issue Type** dropdown list.
+5. Select **'Publish a report and use public link in report notification'** option, if you need it.
+6. Configure rules to define on which conditions this notification should be sent in **BASIC RULES** section
+
+OR
+
+use **ADVANCED RULES ENGINE** to enter your rule expression.
+7. Click on **Save** button.
+
+**BASIC RULES:**
+
+![Testomat.io - Notification Jira](./images/Jira_2.png)
+
+**ADVANCED RULES ENGINE:** 
+
+![Testomat.io - Notification Jira](./images/Jira_3.png)
 
 Now Testomat.io will create an issue with detailed information on Test Run results within your Jira project for failed Test Runs. So you don't need to put all the data on each Test Run manually. This helps to save time and notify all contributors in a convenient way.
 
-![image](./images/128398229-af615eaa-cccc-4251-8d3d-79cc69685f2e.png)
+![Testomat.io - Notification Jira](./images/Jira_4.png)
 
-![image](./images/128398538-dc5f3fed-babb-4e10-bd7a-fe7ccc9b3bd2.png)
+
+:::note
+
+When **'Publish a report and use public link in report notification'** option is enabled, the public report will be generated and everyone who has this link will be able to see it.
+
+![Testomat.io - Notification Email](./images/Public_Report.png)
+
+:::

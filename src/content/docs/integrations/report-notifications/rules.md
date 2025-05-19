@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: https://docs.testomat.io/_astro/114756835-d4a77700-9d63-11eb-994c-c49e6dd2b36d.DjOg-ijg_2iRmrc.webp
+      content: https://docs.testomat.io/_astro/Basic_Rules.BGM4UhZJ_Z1Yiri8.webp
       
   - tag: meta
     attrs:
@@ -15,12 +15,28 @@ head:
       content: Testomat.io, notifications, Email alerts, Slack notifications, MS Teams, Jira integration, notification rules, test runs, automated alerts, CI notifications, QA tools
 ---
 
+**Notification** is one of the attractive Agile testing tool features. Test management web application Testomat.io provides for collaborative purposes notification QA team, development team and business. So, keeping the teams engaged with project updates and getting fast feedback from business owners is simpler than ever! In addition, you as the test manager or team owner through **Team Management Dashboard** will have end-to-end visibility on your collaboration process.
+
+**Available to notify by:**
+- Email notifications.
+- Slack notification.
+- Jira Notification.
+- MS Teams.
+- Azure DevOps.
+
 Testomat.io allows sending notifications for finished runs:
-- Send brief reports to stakeholders
-- Notify team members of failed tests
-- Configure on which condition notification should be sent
+- Send brief reports to stakeholders.
+- Notify team members of failed or passed tests.
+- Notify test results after test executions.
+- Configure on which condition notification should be sent.
 
 Testomat.io has powerful rule engine which can be used to define on which conditions a notification should be sent. You can have multiple notification types with different notification channels in use for a single project.
+
+## How to Setup Notification
+
+Sending configuration thanks to seamless integration is really simple. Enable notification you can on **Settings Dashboard** -> **Report Notification**. You are free to select an environment and configure condition notification should be sent. Simply fill the fields using **Basic rules**. Then modify your notification scheme to notify a group of people of your choice. Also, notification settings might be configured through the **Advanced rules engine** with using variables.
+
+You can read more about how to setup your notification in the sections below.
 
 ## Basic Rules
 

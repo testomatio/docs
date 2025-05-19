@@ -17,33 +17,64 @@ head:
 
 Testomat.io allows sending notifications for finished runs via Email.
 Let's see how it works!
-First, you need to set up Email notifications in the Settings tab. 
-Click on **Report Notifications** and click on **Add Notification Rule**
 
-![notif](./images/114755380-3cf55900-9d62-11eb-90ed-47f5599af45e.jpg)
+First, you need to set up Email notifications in the Settings tab:
+
+1. Go to **Settings**.
+2. Select **Report Notifications** option.
+3. Click on **Add Notification Rule**.
+
+![Testomat.io - Notification Email](./images/Notification.png)
 
 At this point your next steps are:
 
-1. Enter a title for Notification Rule
-2. Choose **Email** from the list
+4. Add a title for Notification Rule.
+5. Choose **Email** from the dropdown list.
 
-![notif 1](./images/114756835-d4a77700-9d63-11eb-994c-c49e6dd2b36d.jpg)
+![Testomat.io - Notification Email](./images/Email_2.png)
 
-3. Enter Email or multiple Emails you want to response
-4. Customize these fields in BASIC RULES or use ADVANCED RULES ENGINE to enter your rule expression
-5. Click on Save button
+6. Enter one or multiple email addresses (separated by coma) to receive notifications.
+7. Select **'Publish a report and use public link in report notification'** option, if you need it.
+8. Select **Notification rule context**: Run or RunGroup.
+9. Add notification rules in **BASIC RULES** section
 
-![notif 2](./images/114757338-66af7f80-9d64-11eb-82cb-c52de1b2a967.jpg)
+OR
+
+use **ADVANCED RULES ENGINE** to enter your rule expression.
+10. Click on **Save** button.
+
+**BASIC RULES:**
+
+![Testomat.io - Notification Email](./images/Email_3.png)
+
+**ADVANCED RULES ENGINE:** 
+
+![Testomat.io - Notification Email](./images/Email_4.png)
 
 Now you have Email Notification enabled for the project. 
 
-![notif 4](./images/114757724-df164080-9d64-11eb-962a-f095ce83c288.jpg)
+![Testomat.io - Notification Email](./images/Email_5.png)
 
-How does it work?
+
+**How does it work?**
 Each time Testomat.io creates Run Report which corresponds to your Email Notification Rule it will be sent to email.
 
-![notif 6](./images/114760162-b5aae400-9d67-11eb-8df0-f404ede91377.jpg)
+![Testomat.io - Notification Email](./images/Email_6.png)
 
-Please note, that you can set up multiple Email Notifications for different Run reports.
+:::note
 
-![notif 7](./images/114759624-14bc2900-9d67-11eb-8ed7-958bd403726d.jpg)
+You can set up multiple Email Notifications for different Run reports.
+
+![Testomat.io - Notification Email](./images/Email_7.png)
+
+:::
+
+:::note
+
+When **'Publish a report and use public link in report notification'** option is enabled, the public report will be generated and everyone who has this link will be able to see it.
+
+![Testomat.io - Notification Email](./images/Public_Report.png)
+
+:::
+
+
