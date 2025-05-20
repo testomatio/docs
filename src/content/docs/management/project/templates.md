@@ -8,119 +8,207 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/make-default.DaaTuaif_Z1WGTAO.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
       content: Testomat.io, templates, test templates, defect templates, template management, testing workflow, Jira integration, GitHub integration, test organization, default templates, QA management
 ---
 
-The Templates feature in Testomat allows users to create and manage pre-defined templates for tests, suites, code, and reporting defects. These templates streamline the test creation and defect reporting processes by providing a standardized starting point.
+Templates provide a structured way to standardize test cases, test suites, code snippets, defects, and test run metadata. They help streamline the creation and maintenance of test assets across the project. By using templates, teams can apply consistent formatting, reduce manual input, and improve clarity in test documentation and reporting.
+
+## Types of Templates
+
+- **Test Templates**: used to define the structure and content for individual test cases;
+- **Suite Templates**: used to define the structure and content of individual test suites;
+- **Code Templates**: used to define the default code structure for automated tests using dynamic variables;
+- **Defect Templates**: used to automatically prefill the issue summary and description fields when reporting defects to integrations like Jira, GitHub, or Azure;
+- **Defect Description Templates**: used to structure the description field for defects inside Testomat;
+- **Meta Templates**: used to define custom metadata fields that are shown in test run reports and help enrich report context;
+
+:::note
+
+You can mark any template as the default template during creation or editing by checking the **Default** checkbox. Only one default template can exist in each type. If a template is set, it is automatically applied when creating new tests, suites, defects, etc.
+
+:::
 
 ## Managing Templates
 
+Use the Templates section in Settings to create, edit, or delete reusable content structures for tests, suites, defects, and more. Templates help maintain consistency and reduce repetitive manual input when documenting or reporting within your project.
+
 ### How To Create Templates
 
-To access the Templates feature, navigate to **Project > Settings > Templates** in the Testomat interface.
+All templates share a similar creation flow:
 
-![Locate Templates](./images/locate-templates.png)
+1. Navigate to **Settings** in the sidebar
+2. Click on **Templates**
+3. Click the **`+`** icon next to the relevant template type
 
-1. Click on **Test Templates** in the Settings section.
-2. Click on the "Create Template" plus button.
-3. Fill in the necessary information for the test template.
-4. Save the template.
+![Create a new template](./images/963_1.png)
 
-![create-template](./images/create-template-1.png)
+Once the **Add template** sidebar opens,
+
+3. Fill in the following fields:
+
+- **Title** (required): enter a unique title and optionally add tags using @ syntax (e.g., @smoke);
+- **Type**: select template type from the dropdown (e.g., test, suite, code, meta, defect, defect-details);
+- **Default** (optional): check the **Default** option if necessary;
+- **Labels & Custom Fields**: select from dropdown; if you want to add more, see <a href="https://docs.testomat.io/advanced/tags-labels/#how-to-add-labels--custom-fields" target="_blank">Labels & Custom Fields</a> documentation;
+- **Template** (required): Add body content using dynamic variables and logic;
+
+4. Click **Save** button to apply changes or **Cancel** button to discard
+
+![Save template](./images/963_2.png)
+
+:::note
+
+Only **Test** and **Suite** Templates include additional configuration options for Labels & Custom Fields.
+
+:::
 
 ### How To Edit Templates
 
-1. Locate the template you want to edit.
-2. Click on the template to open its details.
-3. Make the necessary changes.
-4. Click update.
+1. Navigate to **Settings** in the sidebar
+2. Click **Templates**
+3. Click a template you want to edit
+4. Modify content as needed
+5. Click **Update** button to save changes
 
-![edit-template](./images/edit-templates.png)
+![Update template](./images/963_3.png)
 
 ### How To Delete Templates
 
-1. Find the template you wish to delete.
-2. Hover this template.
-3. Click on the "Delete" icon.
-4. Confirm the deletion.
+1. Navigate to **Settings** in the sidebar
+2. Click **Templates**
+3. Hover over the needed template and click the **Delete** icon
 
-![delete-template](./images/delete-template.png)
+![Delete template](./images/963_4.png)
 
-## Template Configuration
+4. Click the **Delete** button in the **'Are you sure?'** pop-up to confirm deletion
 
-### Assigning Labels
+![Confirm deletion](./images/963_5.png)
 
-When creating or editing a template, assign relevant labels to categorize and organize templates effectively. Those labels will be applied to your **tests** and **suites** accordingly.
+:::note
 
-Please note, only labels can be used for templates, custom fields are not supported for templates.
+Default templates do not have a **Delete** icon. To delete a default template, you must first assign another template as a default.
 
-![template-labels](./images/tamplate-labels.png)
+:::
 
-### Adding Tags 
+## Using Variables in Templates
 
-Enhance template searchability and grouping by adding tags during template creation or editing. Those tags will be applied to your **tests** and **suites** accordingly.
+Templates in **Testomat.io** support dynamic content using variables. Variables are enclosed within double curly braces {{ }}. This syntax ensures they are correctly parsed and rendered with the corresponding value.
 
-![template-tags](./images/tags-templates.png)
+**Example**: {{ test.title }}
 
-### Default Templates
+### Supported Variables
 
-Mark templates as default by checking the designated option. Default templates are automatically applied when creating new tests and suites, ensuring a consistent and efficient starting point for your projects.
+Below is an overview of which variables are supported for each template type:
 
-Please note, that there can be only one default template in each category.
+| Template Type    | Supported Variables                                                                                  |
+| ---------------- | ---------------------------------------------------------------------------------------------------- |
+| Test Templates   | test.title, test.description, test.tags, test.labels, test.attachments                               |
+| Suite Templates  | suite.title, suite.description, suite.tags, suite.labels                                             |
+| Code Templates   | test.title, test.description, suite.title, suite.description, body                                   |
+| Defect Templates | test.title, test.description, test.assignee, test.priority, test.tags, test.attachments, jira.issues |
 
-![Default Templates](./images/make-default.png)
+### Conditional Rendering
 
-### Configure Defect Templates 
+Templates support conditional logic using {{#if}} statements. This allows you to display content only if certain conditions are met.
 
-You can create templates for defects in Jira, Github, Azure, etc. You can automatically prefill summary and description fields using variables described below:
+- `{{#if test.tags}}`
+  Tags: `{{ test.tags }}`
+  `{{/if}}`
 
-- `{{ description }}`: This variable represents the defect description.
-- `{{ assignee }}`: Indicates the person assigned to the test.
-- `{{ title }}`: Represents the title of the test case.
-- `{{ priority }}`: Indicates the priority assigned to the test case.
-- `{{ tags }}`: Represents any tags associated with the test case.
-- `{{ jira-issues }}`: Provides a link or reference to Jira issues related to the test case.
-- `{{ test-description }}`: This variable represents the detailed description of the test case. It includes information about the purpose of the test, test steps, and expected outcomes.
-- `{{ test-attachments }}`: Refers to any attachments associated with the test case. This could include images, documents, or other files relevant to the test.
-- `{{ attachments }}`: Represents any attachments related to test failures or defects. This may include screenshots, log files, or other evidence documenting the failure.
+**Explanation**:
 
-![defect-template](./images/defect-template.png)
+- The block will render Tags: [actual tags] only if test.tags has a value;
+- If test.tags is empty or undefined, nothing will be displayed;
 
 ## Applying Templates
 
+Templates can be applied either automatically (when marked as default) or manually while working on tests, suites, defects, or code structures in your project.
+
 ### Applying Templates To Tests And Suites
 
-1. Navigate to the test or suite that you want to edit within your project.
-2. Enter the edit mode to make changes to the test or suite.
-3. Click "Advanced Edit Settings".
+1. Go to **Tests** tab
+2. Open the relevant test case or suite in **Edit** mode
+3. Select the needed template in the **Use Template** dropdown
 
-![Advanced Edit Settings](./images/advanced-edit.png)
+![Use Template](./images/963_6.png)
 
-4. Open the dropdown menu to reveal a list of available templates.
+4. Confirm your selection - the template will be applied to the current item
 
-![select template](./images/select-template.png)
+![Confirm selection](./images/963_7.png)
 
-5. Each template is accompanied by a brief description, aiding users in selecting the most appropriate template for their needs.
-6. Choose the desired template from the dropdown menu.
-7. Confirm the selection to apply the template to the current test or suite
+The selected template will automatically populate the fields (like title or description) using the defined variables.
+
+::: note
+
+When you create a new test or suite, the default template (if configured) will be applied automatically. This helps ensure consistent formatting and structure without manual selection.
+
+:::
+
+### Applying Code Templates
+
+1. Go to **Tests** tab
+2. Open the relevant test case in the **CODE TEMPLATE** tab
+3. Select the needed template in the extra menu
+
+![Apply Code Template](./images/963_8.png)
 
 ### Applying Templates To Defects
 
-When creating new issue you can use created templates for defects in Jira, Github, Azure and etc. Setup templates to automatically prefill summary and description fields.
+1. Go to **Runs** tab
+2. Open the relevant ongoing run
+3. Click the **Continue** button
 
-1. Click Template dropdown to apply Defect Templates to automatically prefill summary and description fields. 
+![Continue ongoing run](./images/963_9.png)
 
-2. Click Description Template to apply templates for description field of defect inside Testomat.
+4. Click the **Link Defect** in the failed test
 
-![Alt text](./images/apply-defect.png)
+![Link Defect button](./images/963_10.png)
+
+5. Click the **Create new issue** button
+
+![Create new issue button](./images/963_11.png)
+
+When the **Create New Issue** modal window is opened, fill in the required fields:
+
+6. Select profile (e.g. Jira Integration) from the dropdown list
+7. Select Jira Issue Type from the dropdown list (e.g. bug)
+8. Select Template from the dropdown to apply Defect Templates to automatically prefill the summary and description fields
+9. Add a title to the field
+10. Click the **'Create Jira Issue'** button
+
+![Create Jira Issue button](./images/963_12.png)
+
+### Applying Meta Templates
+
+1. Go to **Runs** tab
+2. Open the relevant ongoing run
+3. Click the **Continue** button
+
+![Continue ongoing run](./images/963_9.png)
+
+4. Click the **Edit metafields** button under the test result
+
+![Edit metafields button](./images/963_13.png)
+
+5. Fill in the **Key** and **Value**
+6. Click the **Save** button
+
+![Save Meta Data](./images/963_14.png)
+
+7. Click the **Finish Run** button
+
+![Finish Run button](./images/963_16.png)
+
+8. Open the test in run report to see how meta data is applied
+
+![Meta data](./images/963_15.png)
 
 ## Best Practices
 
-- Regularly review and update templates to ensure relevance.
-- Utilize labels and tags strategically for efficient organization.
-- Encourage collaboration to create standardized templates across teams.
-
+- Regularly review and update templates to ensure relevance
+- Utilize labels and tags strategically for efficient organization
+- Encourage collaboration to create standardized templates across teams
