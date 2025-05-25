@@ -3,24 +3,14 @@ title: Jira Notifications
 description: Configure Jira notifications in Testomat.io to automate issue creation for failed test runs. This guide explains linking Jira projects, selecting issue types, and setting notification rules to streamline workflows and save time by automating detailed test result reporting.
 type: article
 url: https://docs.testomat.io/integrations/report-notifications/jira
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/128397891-3d29412d-6d31-40a2-9b8f-df166c7e6943.BgdFDPtw_2vlG1Q.webp
-      
-  - tag: meta
-    attrs:
-      name: keywords
-      content: Jira integration, Testomat.io, notifications, test automation, issue management, failed test runs, project management, software testing, test reporting
 ---
 
 Testomat.io allows to create Jira issue for failed test runs automatically. This option can be enabled in **Settings**.
-To do this, you need to connect Jira project with Testomat.io. Please see dedicated  [documentation.](https://docs.testomat.io/integration/jira/#connecting-to-jira-project)
+To do this, you need to connect Jira project with Testomat.io. Please see dedicated documentation [Connecting to JIRA project.](https://docs.testomat.io/integration/jira/#connecting-to-jira-project)
 
 After the Jira is connected with Testomat.io, go to the **Settings (1) -> Report Notifications(2)** and click on **Add Notification Rule (3)**.
 
-![Testomat.io - Notification Jira](./images/Notification.png)
+![Testomat.io - Notification](./images/Notification.png)
 
 To create a new Notification Rule for Jira follow next steps:
 
@@ -56,6 +46,6 @@ Now Testomat.io will create an issue with detailed information on Test Run resul
 
 When **'Publish a report and use public link in report notification'** option is enabled, the public report will be generated and everyone who has this link will be able to see it.
 
-![Testomat.io - Notification Email](./images/Public_Report.png)
+![Testomat.io - Notification](./images/Public_Report.png)
 
 :::

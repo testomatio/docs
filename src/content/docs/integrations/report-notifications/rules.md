@@ -32,6 +32,8 @@ Testomat.io allows sending notifications for finished runs:
 
 Testomat.io has powerful rule engine which can be used to define on which conditions a notification should be sent. You can have multiple notification types with different notification channels in use for a single project.
 
+![Testomat.io - Notification](./images/Rules.png)
+
 ## How to Setup Notification
 
 Sending configuration thanks to seamless integration is really simple. Enable notification you can on **Settings Dashboard** -> **Report Notification**. You are free to select an environment and configure condition notification should be sent. Simply fill the fields using **Basic rules**. Then modify your notification scheme to notify a group of people of your choice. Also, notification settings might be configured through the **Advanced rules engine** with using variables.

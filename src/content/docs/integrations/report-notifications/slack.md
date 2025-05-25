@@ -3,44 +3,78 @@ title: Slack Notifications
 description: Learn to configure Slack notifications in Testomat.io to receive test run updates directly in a Slack channel. The guide explains creating a Slack app, enabling webhooks, generating a Webhook URL, and linking it to Testomat.io for seamless updates.
 type: article
 url: https://docs.testomat.io/integrations/report-notifications/slack
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/114853537-8db19400-9dec-11eb-8b28-667cd98995b1.RLNXUM6o_ZFNtgh.webp
-      
-  - tag: meta
-    attrs:
-      name: keywords
-      content: Slack integration, Testomat.io, notifications, webhook URL, test updates, software testing, report notifications, test management tools, team collaboration
 ---
 
-Testomatio can send notifications to a specific Slack channel. Prepare a channel inside Slack workspace to which notifications will be sent:
+Testomat.io can send Notifications to a specific **Slack channel**. Prepare a channel inside Slack workspace to which notifications will be sent:
 
-![image](./images/114852582-92297d00-9deb-11eb-8da9-a4d6525f7e9e.png)
+![Testomat.io - Notification Slack](./images/Slack_1.png)
 
-To enable Slack notification [create an incoming webhook by opening this link](https://api.slack.com/messaging/webhooks). Create a new Slack App:
+To enable Slack notification [create an incoming webhook by opening this link](https://api.slack.com/messaging/webhooks) and following the instructions:
 
-![image](./images/114852675-a79ea700-9deb-11eb-9670-71da8c3016cc.png)
+1. Click on 'Create your Slack App' button.
 
-Activate webhooks for this app:
+![Testomat.io - Notification Slack](./images/Slack_2.png)
 
-![image](./images/114852767-c13fee80-9deb-11eb-8e95-6794b562da78.png)
+2. Select **'From scratch'** option.
 
-![image](./images/114852831-d1f06480-9deb-11eb-8196-f9e92399ed7a.png)
+![Testomat.io - Notification Slack](./images/Slack_3.png)
 
-Add a new webhook for app:
+3. Add App title.
+4. Pick a workspace to develop your app in from the dropdown list.
+5. Click on 'Create App' button
 
-![image](./images/114853120-2398ef00-9dec-11eb-9790-e314ba5513da.png)
+![Testomat.io - Notification Slack](./images/Slack_4.png)
 
-Select a channel to which notification will be sent:
+6. Activate Incoming Webhooks for this app -> toggle on.
+7. Add a new Webhook for app -> Click on **'Add New Webhook'** button
 
-![image](./images/114853283-4c20e900-9dec-11eb-9b99-16818252f4f4.png)
+![Testomat.io - Notification Slack](./images/Slack_5.png)
 
-Copy Webhook URL:
+8. Select a channel to which notification will be sent.
 
-![image](./images/114853409-6c50a800-9dec-11eb-8955-6ebd75b7c9dc.png)
+![Testomat.io - Notification Slack](./images/Slack_6.png)
 
-Create a new notification in Testomatio, select "Slack" and paste webhook URL into Url:
+9. Copy Webhook URL.
 
-![image](./images/114853537-8db19400-9dec-11eb-8b28-667cd98995b1.png)
+![Testomat.io - Notification Slack](./images/Slack_7.png)
+
+After Slack is Set up, open your Project in Testomat.io and go to the **Settings (1) -> Report Notifications(2)** and click on **Add Notification Rule (3)**.
+
+![Testomat.io - Notification](./images/Notification.png)
+
+Create a new Notification Rule for Slack following next steps:
+
+1. Add a title for Notification Rule.
+2. Choose **Slack** from the dropdown list.
+
+![Testomat.io - Notification Slack](./images/Slack_8.png)
+
+3. Paste Slack Webhook URL.
+4. Select **'Publish a report and use public link in report notification'** option, if you need it.
+5. Configure rules to define on which conditions this notification should be sent in **BASIC RULES** section
+
+OR
+
+use **ADVANCED RULES ENGINE** to enter your rule expression.
+6. Click on **Save** button.
+
+**BASIC RULES:**
+
+![Testomat.io - Notification Slack](./images/Slack_9.png)
+
+**ADVANCED RULES ENGINE:** 
+
+![Testomat.io - Notification Slack](./images/Slack_10.png)
+
+**How does it work?**
+Each time Testomat.io creates Run Report, which corresponds to your Slack Notification Rule, it will be sent to selected Slack channel.
+
+![Testomat.io - Notification Slack](./images/Slack_11.png)
+
+:::note
+
+When **'Publish a report and use public link in report notification'** option is enabled, the public report will be generated and everyone who has this link will be able to see it.
+
+![Testomat.io - Notification](./images/Public_Report.png)
+
+:::

@@ -323,6 +323,7 @@ export default defineConfig({
 								{ label: 'Slack', link: '/integrations/report-notifications/slack' },
 								{ label: 'Microsoft Teams', link: '/integrations/report-notifications/ms-teams' },
 								{ label: 'Jira', link: '/integrations/report-notifications/jira' },
+								{label: 'Azure DevOps', link: '/integrations/report-notifications/azure-devops'}
 							],
 						},
 						{
