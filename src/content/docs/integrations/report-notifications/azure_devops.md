@@ -27,6 +27,7 @@ To enable Notification for Azure DevOps follow next steps:
 OR 
 
 use **ADVANCED RULES ENGINE** to enter your rule expression.
+
 6. Click on **Save** button.
 
 | **Basic Rules**             | **Advanced Rules Engine**             |

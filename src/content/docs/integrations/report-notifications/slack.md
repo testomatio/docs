@@ -56,6 +56,7 @@ Create a new Notification Rule for Slack following next steps:
 OR
 
 use **ADVANCED RULES ENGINE** to enter your rule expression.
+
 6. Click on **Save** button.
 
 | **Basic Rules**             | **Advanced Rules Engine**             |

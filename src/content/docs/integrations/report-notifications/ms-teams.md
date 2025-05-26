@@ -46,6 +46,7 @@ Create a new Notification Rule for Teams in Testomat.io following next steps:
 OR
 
 using **ADVANCED RULES ENGINE** to enter your rule expression.
+
 6. Click on **Save** button.
 
 | **Basic Rules**             | **Advanced Rules Engine**             |

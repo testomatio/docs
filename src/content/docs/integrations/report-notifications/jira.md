@@ -27,6 +27,7 @@ To create a new Notification Rule for Jira follow next steps:
 OR
 
 use **ADVANCED RULES ENGINE** to enter your rule expression.
+
 7. Click on **Save** button.
 
 | **Basic Rules**             | **Advanced Rules Engine**             |

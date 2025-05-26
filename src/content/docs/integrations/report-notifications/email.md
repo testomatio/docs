@@ -31,6 +31,7 @@ At this point your next steps are:
 OR
 
 use **ADVANCED RULES ENGINE** to enter your rule expression.
+
 10. Click on **Save** button.
 
 | **Basic Rules**             | **Advanced Rules Engine**             |
