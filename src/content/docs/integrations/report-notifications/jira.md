@@ -6,7 +6,7 @@ url: https://docs.testomat.io/integrations/report-notifications/jira
 ---
 
 Testomat.io allows to create Jira issue for failed test runs automatically. This option can be enabled in **Settings**.
-To do this, you need to connect Jira project with Testomat.io. Please see dedicated documentation [Connecting to JIRA project.](https://docs.testomat.io/integration/jira/#connecting-to-jira-project)
+To do this, you need to connect Jira project with Testomat.io. Please see dedicated documentation - [Connecting to JIRA project.](https://docs.testomat.io/integration/jira/#connecting-to-jira-project)
 
 After the Jira is connected with Testomat.io, go to the **Settings (1) -> Report Notifications(2)** and click on **Add Notification Rule (3)**.
 
