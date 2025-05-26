@@ -37,7 +37,6 @@ Now Testomat.io will create an issue with detailed information on Test Run resul
 
 ![Testomat.io - Notification Jira](./images/Jira_4.png)
 
-
 :::note
 
 When **'Publish a report and use public link in report notification'** option is enabled, the public report will be generated and everyone who has this link will be able to see it.
