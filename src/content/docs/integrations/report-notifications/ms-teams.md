@@ -45,16 +45,12 @@ Create a new Notification Rule for Teams in Testomat.io following next steps:
 
 OR
 
-use **ADVANCED RULES ENGINE** to enter your rule expression.
+using **ADVANCED RULES ENGINE** to enter your rule expression.
 6. Click on **Save** button.
 
-**BASIC RULES:**
-
-![Testomat.io - Notification Teams](./images/Teams_4.png)
-
-**ADVANCED RULES ENGINE:** 
-
-![Testomat.io - Notification Teams](./images/Teams_5.png)
+| **Basic Rules**             | **Advanced Rules Engine**             |
+| --------------------------- | ------------------------------------- |
+| ![Testomat.io - Basic rule](./images/Teams_4.png) | ![Testomat.io - Advanced Rules Engine](./images/Teams_5.png) |
 
 **How does it work?**
 Each time Testomat.io creates Run Report, which corresponds to your Teams Notification Rule, it will be sent to selected Teams channel.

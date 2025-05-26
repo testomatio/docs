@@ -29,13 +29,9 @@ OR
 use **ADVANCED RULES ENGINE** to enter your rule expression.
 7. Click on **Save** button.
 
-**BASIC RULES:**
-
-![Testomat.io - Notification Jira](./images/Jira_2.png)
-
-**ADVANCED RULES ENGINE:** 
-
-![Testomat.io - Notification Jira](./images/Jira_3.png)
+| **Basic Rules**             | **Advanced Rules Engine**             |
+| --------------------------- | ------------------------------------- |
+| ![Testomat.io - Basic rule](./images/Jira_2.png) | ![Testomat.io - Advanced Rules Engine](./images/Jira_3.png) |
 
 Now Testomat.io will create an issue with detailed information on Test Run results within your Jira project for failed Test Runs. So you don't need to put all the data on each Test Run manually. This helps to save time and notify all contributors in a convenient way.
 

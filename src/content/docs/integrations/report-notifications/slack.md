@@ -58,13 +58,9 @@ OR
 use **ADVANCED RULES ENGINE** to enter your rule expression.
 6. Click on **Save** button.
 
-**BASIC RULES:**
-
-![Testomat.io - Notification Slack](./images/Slack_9.png)
-
-**ADVANCED RULES ENGINE:** 
-
-![Testomat.io - Notification Slack](./images/Slack_10.png)
+| **Basic Rules**             | **Advanced Rules Engine**             |
+| --------------------------- | ------------------------------------- |
+| ![Testomat.io - Basic rule](./images/Slack_9.png) | ![Testomat.io - Advanced Rules Engine](./images/Slack_10.png) |
 
 **How does it work?**
 Each time Testomat.io creates Run Report, which corresponds to your Slack Notification Rule, it will be sent to selected Slack channel.

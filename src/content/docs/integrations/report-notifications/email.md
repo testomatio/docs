@@ -33,18 +33,13 @@ OR
 use **ADVANCED RULES ENGINE** to enter your rule expression.
 10. Click on **Save** button.
 
-**BASIC RULES:**
-
-![Testomat.io - Notification Email](./images/Email_3.png)
-
-**ADVANCED RULES ENGINE:** 
-
-![Testomat.io - Notification Email](./images/Email_4.png)
+| **Basic Rules**             | **Advanced Rules Engine**             |
+| --------------------------- | ------------------------------------- |
+| ![Testomat.io - Basic rule](./images/Email_3.png) | ![Testomat.io - Advanced Rules Engine](./images/Email_4.png) |
 
 Now you have Email Notification enabled for the project. 
 
 ![Testomat.io - Notification Email](./images/Email_5.png)
-
 
 **How does it work?**
 Each time Testomat.io creates Run Report, which corresponds to your Email Notification Rule, it will be sent to email.

@@ -22,20 +22,16 @@ To enable Notification for Azure DevOps follow next steps:
 
 3. Select **Azure DevOps integration** from dropdown list.
 4. Select **'Publish a report and use public link in report notification'** option, if you need it.
-5. Configure rules to define on which conditions this notification should be sent in **BASIC RULES** section
+5. Configure rules to define on which conditions this notification should be sent in **BASIC RULES** section 
 
-OR
+OR 
 
 use **ADVANCED RULES ENGINE** to enter your rule expression.
 6. Click on **Save** button.
 
-**BASIC RULES:**
-
-![Testomat.io - Notification Azure DevOps](./images/Azure_DevOps_2.png)
-
-**ADVANCED RULES ENGINE:** 
-
-![Testomat.io - Notification Azure DevOps](./images/Azure_DevOps_3.png)
+| **Basic Rules**             | **Advanced Rules Engine**             |
+| --------------------------- | ------------------------------------- |
+| ![Testomat.io - Basic rule](./images/Azure_DevOps_2.png) | ![Testomat.io - Advanced Rules Engine](./images/Azure_DevOps_3.png) |
 
 Testomat.io will now automatically create an issue with detailed Test Run results in your Azure DevOps project for any failed Test Runs. This eliminates the need to manually input data for each Test Run, saving you time and ensuring that all contributors are notified in a convenient way.
 
