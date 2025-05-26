@@ -15,19 +15,51 @@ head:
       content: Microsoft Teams integration, Testomat.io, notifications, incoming webhook, Webhook URL, test updates, software testing, report notifications, collaboration tools
 ---
 
-To send noitifcations in MS Teams you need to set up incoming webhooks for your channel. Steps to configure:
-* Navigate to "Apps" panel 
+To send noitifcations in MS Teams, first you need to set up **Incoming Webhooks** for your channel.
 
-![image](./images/115186669-ca320800-a0ea-11eb-9a32-9984a9569427.png)
+Steps to configure:
 
-* Search for "Incoming Webhook" and add it
+1. Navigate to **Apps** panel.
+2. Search for **Incoming Webhook** and add it ([read more here](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook?tabs=newteams%2Cdotnet)).
 
-![image](./images/115186740-ed5cb780-a0ea-11eb-9bda-6f5b1bd6201d.png)
+![Testomat.io - Notification Teams](./images/Teams_1.png)
 
-* Configure it and copy webhook url
+3. Configure it and copy Webhook URL.
 
-![image](./images/115186899-2301a080-a0eb-11eb-8a11-0b44b4e7fbe9.png)
+![Testomat.io - Notification Teams](./images/Teams_2.png)
 
-* Create a new notification in Testomatio, select "ms_teams" and paste webhook URL into Url:
+After Teams is Set up, open your Project in Testomat.io and go to the **Settings (1) -> Report Notifications(2)** and click on **Add Notification Rule (3)**.
 
-![image](./images/115187240-a7542380-a0eb-11eb-88d1-ac8c3bb204a0.png)
+![Testomat.io - Notification](./images/Notification.png)
+
+Create a new Notification Rule for Teams in Testomat.io following next steps:
+
+1. Add a title for Notification Rule.
+2. Choose **Microsoft Teams** from the dropdown list.
+
+![Testomat.io - Notification Teams](./images/Teams_3.png)
+
+3. Paste Teams Webhook URL.
+4. Select **'Publish a report and use public link in report notification'** option, if you need it.
+5. Configure rules to define on which conditions this notification should be sent in **BASIC RULES** section
+
+OR
+
+using **ADVANCED RULES ENGINE** to enter your rule expression.
+
+6. Click on **Save** button.
+
+| **Basic Rules**             | **Advanced Rules Engine**             |
+| --------------------------- | ------------------------------------- |
+| ![Testomat.io - Basic rule](./images/Teams_4.png) | ![Testomat.io - Advanced Rules Engine](./images/Teams_5.png) |
+
+**How does it work?**
+Each time Testomat.io creates Run Report, which corresponds to your Teams Notification Rule, it will be sent to selected Teams channel.
+
+:::note
+
+When **'Publish a report and use public link in report notification'** option is enabled, the public report will be generated and everyone who has this link will be able to see it.
+
+![Testomat.io - Notification](./images/Public_Report.png)
+
+:::
