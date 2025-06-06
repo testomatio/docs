@@ -61,7 +61,30 @@ As a management system for automated tests, Testomat.io team created an Automati
 
 ## Custom Charts
 
-Custom charts are a powerful addition to analytics. They allow you to customise the display of data that is important to you.
+Custom charts are a powerful addition to analytics. They allow you to customise the display of data that is important to you — not only for tests, but now also for **Test Runs**.
+
+You can now build custom charts based on **Test Run** data using search queries. This enables a more comprehensive analysis of your test execution process, improving visibility into trends, completion metrics, and performance of your testing pipeline.
+
+**Use Cases:**
+
+**Label-Based Metrics:** Track the number of test runs with a specific label, e.g., os:windows to monitor test execution on the Windows platform.
+
+**Run Duration Analysis:** Visualize average or total duration of Test Runs over time.
+
+**Custom Querying:** Filter and chart test runs using attributes such as title, created, updated, or any defined label/tag.
+
+### How to Use Custom Charts with Test Runs
+In the **Edit Chart** mode, create a new query by selecting **"Test Run"** as the target entity.
+
+Then configure the chart view as before, with options for:
+
+**Label View:** Customize the label display.
+**Color Coding:** Apply custom colours for each query.
+**Data Display:** Show raw numbers, percentages, or both.
+
+Once configured, save the chart and it will appear on your dashboard.
+
+This extended chart functionality enhances your ability to make data-driven decisions by offering insight into both tests and test runs.
 
 ![Testomat.io - Custom Charts](./images/New_3EOUAwBN_2024-08-04.png)
 
