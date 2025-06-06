@@ -469,5 +469,6 @@ export default defineConfig({
 		"/project/import-export/import-tests-from-source-code": "/project/import-export/import/import-tests-from-source-code",
 		"/project/import-export/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
 		"/project/import-export/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
+		"/project/import-export/import-bdd": "/project/import-export/import/import-bdd",
 	},
 });
