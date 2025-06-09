@@ -29,6 +29,7 @@ Testomat.io provides integration for Issues Management Systems:
 - [YouTrack](https://docs.testomat.io/integrations/issues-management/youtrack)
 - [GitLab](https://docs.testomat.io/integrations/issues-management/gitlab)
 - [Shortcut](https://docs.testomat.io/integrations/issues-management/shortcut)
+- [Confluence](https://docs.testomat.io/integrations/issues-management/confluence)
 
 See how to connect your Issues Management System and how to link your tests to issues below.
 

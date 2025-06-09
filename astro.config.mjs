@@ -297,6 +297,7 @@ export default defineConfig({
 								{ label: 'YouTrack', link: '/integrations/issues-management/youtrack' },
 								{ label: 'GitLab', link: '/integrations/issues-management/gitlab' },
 								{ label: 'Shortcut', link: '/integrations/issues-management/shortcut' },
+								{ label: 'Confluence', link: '/integrations/issues-management/confluence'},
 							],
 						},
 						{
