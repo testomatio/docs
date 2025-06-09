@@ -25,7 +25,7 @@ This feature is available both at the **project level** and within individual **
 
 ## Jira as a Requirement Source
 
-To add Jira as a Requirement Source:
+**To add Jira as a Requirement Source:**
 
 1. Open your Project in Testomat.io.
 2. Click on **'Extra menu'** button.
@@ -37,7 +37,7 @@ To add Jira as a Requirement Source:
 
 ![Testomat.io - AI-powered](./images/AI_Jira_1.gif)
 
-After the requirement is linked to Testomat.io you can use AI Assistante to analyze requirements for edge cases and potential solutions. You can also create suites and test cases based on these requirements.
+After the requirement is linked to Testomat.io you can use AI Assistant to analyze requirements for edge cases and potential solutions. You can also create suites and test cases based on these requirements.
 
 :::note
 

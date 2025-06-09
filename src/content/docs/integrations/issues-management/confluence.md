@@ -7,7 +7,7 @@ url: https://docs.testomat.io/integrations/issues-management/confluence
 
 Testomat.io allows you to link your Confluence space to a Testomat.io project and use it as a source of requirements.
 
-To connect your Confluence space with Testomat.io you need to open **Settings (1) -> Issues Management (2)** and click on **'Connect to IMS' (3)** button.
+To connect your **Confluence space** with Testomat.io you need to open **Settings (1) -> Issues Management (2)** and click on **'Connect to IMS' (3)** button.
 
 ![Testomat.io - IMS](./images/Connect_IMS.png)
 
