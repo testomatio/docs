@@ -68,20 +68,18 @@ After Jenkins is set up, go to Testomat.io and create a new **CI connection** in
 2. Select **Continuous Integration**.
 3. Click **'Connect to CI'**.
 
-![Testomatio - Jenkins](./images/Jenkins_6.png)
+![Testomatio - CI](./images/CI_4.png)
 
 4. Select **'Jenkins'** and fill in all required fields:
 
-- `Jenkins Hostname` - URL of Jenkins host
-- `Username` - a user on Jenkins which will trigger builds
+- `Jenkins Hostname` - URL of Jenkins host.
+- `Username` - a user on Jenkins which will trigger builds.
 - `API Token` - a token we created previously in the user's settings.
-- `Job Name` - the name of a job we just created
+- `Job Name` - the name of a job we just created.
 
 ![Testomatio - Jenkins](./images/Jenkins_7.png)
 
 5. Switch to **'Input variables'** tab and enable variables that was configured for parametrized builds
-
-![Testomatio - Jenkins](./images/Jenkins_8.png)
 
 :::note
 
@@ -90,6 +88,8 @@ Don't forget to select `testomatio_url` if you use on-premise version.
 :::
 
 6. Click **'Save'** button and check the connection.
+
+![Testomatio - Jenkins](./images/Jenkins_8.png)
 
 Now you can run a test or a group of tests via Jenkins CI. 
 For a custom configuration read about [Environment Variables](./index.md#environment-configuration)

@@ -17,58 +17,83 @@ head:
 
 Let's configure Bamboo CI server to work for CodeceptJS framework:
 
-1. Create a plan for testomatio to run in testomatio
+1. Create a plan in Bamboo for Testomat.io to run in Testomat.io.
 
-![Configure](./images/107243443-02fe9280-6a53-11eb-91e9-862a30c8daa3.png)
+![Testomatio - Bamboo](./images/Bamboo_1.png)
 
-2. Note the plan key. In this case its "TES"
-3. Configure the job to install node dependencies
-![install](./images/107244050-9f289980-6a53-11eb-8942-f508c2f643ce.png)
+2. Note the **'Plan key'**. In this case its **'TES'**.
+3. Configure the job to install node dependencies.
 
-4. Add the script to run codeceptJS tests:
+![Testomatio - Bamboo](./images/Bamboo_2.png)
+
+4. Add the script to run CodeceptJS tests:
 
 ```
 TESTOMATIO_RUN=${bamboo.run} npx codeceptjs run --grep "${bamboo.grep}"
 ```
 Following environment variables must be set:
 
-* **Add `TESTOMATIO` environment variable with API key of Testomatio project.**
-* If you are running a self-hosted Testomatio instance, add `TESTOMATIO_URL` variable to specify a host to which reports will be sent.
+- **Add `TESTOMATIO` environment variable with API key of Testomatio project.**
+- If you are running a self-hosted Testomatio instance, add `TESTOMATIO_URL` variable to specify a host to which reports will be sent.
 
-![Script](./images/107244927-95536600-6a54-11eb-94d7-812ddbe6d917.png)
+![Testomatio - Bamboo](./images/Bamboo_3.png)
 
 5. Set an input variable. Open Plan configuration:
 
-![image](./images/113134762-e2b8ac00-9229-11eb-863c-21697595ae04.png)
+![Testomatio - Bamboo](./images/Bamboo_4.png)
 
-add  `grep` and `run` variables with an empty string as a default value
+add `grep` and `run` variables with an empty string as a default value
 
-![image](./images/113135720-1f38d780-922b-11eb-9fda-1efe77951d98.png)
+![Testomatio - Bamboo](./images/Bamboo_5.png)
 
-Now, configure Bamboo integration at Testomatio:
+Now, as Bamboo is configured, you need to configure Bamboo integration at Testomat.io:
 
-1. Go to settings > CI and enter the details of Bamboo server. [Check this](https://confluence.atlassian.com/bamboo/personal-access-tokens-976779873.html) to generate API token
+1. Go to Settings.
+2. Select Continuous Integration.
+3. Click 'Connect to CI'. 
 
-![CI settings](./images/107245863-a51f7a00-6a55-11eb-89d9-52f66402ba0f.png)
+![Testomatio - CI](./images/CI_4.png)
+
+4. Select **'Atlassian Bamboo'** and enter the details of Bamboo server on **'Connection'** tab:
+
+- `Bamboo Hostname` - URL of Bamboo host.
+- `API Token` - to generate API token [check this](https://confluence.atlassian.com/bamboo/personal-access-tokens-976779873.html).
+- `Project Key` - Chars ID, in our example its `EX`.
+- `Plan Key` - Chars ID, in our example its `TES`.
 
 A project and plan keys can be found from URL:
 
-![image](./images/108208802-2ea80980-7132-11eb-9315-cf0465826f55.png)
+![Testomatio - Bamboo](./images/Bamboo_6.png)
 
-2. Enable `run` option on Input Variables tab. This allows CI to send a report to a specific Run inside Testomatio.
+![Testomatio - Bamboo](./images/Bamboo_7.png)
 
-![image](./images/113136335-ebaa7d00-922b-11eb-9012-72d0d9646380.png)
+5. Enable `run` option on **'Input Variables'** tab. This allows CI to send a report to a specific Run inside Testomat.io.
+6. Click **'Save'** button and check the connection.
 
-You can pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration)
+![Testomatio - Bamboo](./images/Bamboo_8.png)
 
-3. Open Runs page (or any test or suite) then select `Run in CI` option in extra menu.
+:::note
 
-![image](./images/113136648-46dc6f80-922c-11eb-9e72-3a3356c5f647.png)
+You can pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration).
 
-Select "Bamboo" profile in a list. Optionally, configure a Run Title and select a Test Plan.
+:::
 
-![image](./images/113136785-6f646980-922c-11eb-9dc0-d001bdf13610.png)
+7a. Open **'Runs'** page then select `Run Automated Tests in CI` option in extra menu.
 
-4. Launch a run and wait for the results.
+![Testomatio - Bamboo](./images/Bamboo_9.png)
 
-![Runs view](./images/107249055-f67d3880-6a58-11eb-9794-539cfa797002.png)
+8a. Select **'Bamboo'** profile in a list. Optionally, select a **Test Plan** or create a new one.
+
+![Testomatio - Bamboo](./images/Bamboo_10.png)
+
+OR
+
+7b. On **'Tests'** page select any automated suite or test case -> click **'Extra menu'** button -> select **'Run Tests'** option -> open **'Run in CI'** tab.
+
+8b. Select **'Bamboo'** profile in a list.
+
+![Testomatio - Bamboo](./images/Bamboo_9a.gif)
+
+9. Launch a Run and wait for the results.
+
+![Testomatio - Bamboo](./images/Bamboo_11.png)
