@@ -76,7 +76,7 @@ Fill in the form:
 
 ![Alt text](./images/image-6.png)
 
-4. Set **Azure ID Idenitifier** (or Azure Entra ID) from Azure AD as **IdP Entity ID**. Should be like (https://sts.windows.net/...)
+4. Set **Azure ID Idenitifier** (or Azure Entra ID) from Azure AD as **IdP Entity ID**. Should be like `https://sts.windows.net/.../` (ensure it ends with `/`)
 5. Set **Login URL** from Azure AD as **Sign In URL**
 6. Upload certificate.
 
