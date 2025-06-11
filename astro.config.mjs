@@ -97,7 +97,7 @@ export default defineConfig({
 							label: 'Tests',
 							collapsed: true,
 							items: [
-								{ label: 'Test Design', link: '/project/tests' },
+								{ label: 'Overview', link: '/project/tests' },
 							],
 						},
 						{
@@ -108,6 +108,7 @@ export default defineConfig({
 								{ label: 'Running Tests Manually', link: '/project/runs/running-tests-manually' },
 								{ label: 'Running Automated Tests', link: '/project/runs/running-automated-tests' },
 								{ label: 'Managing Runs', link: '/project/runs/managing-runs' },
+								{ label: 'Custom Statuses', link: '/project/runs/custom-statuses' },
 								{
 									label: 'Reporter',
 									// collapsed: true,
