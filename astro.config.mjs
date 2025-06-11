@@ -98,6 +98,10 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								{ label: 'Test Design', link: '/project/tests' },
+								{ label: 'Test Design', link: '/project/classical_editor' },
+								{ label: 'Test Design', link: '/project/bdd_editor' },
+								{ label: 'Test Design', link: '/project/copy_move_tests' },
+								{ label: 'Test Design', link: '/project/test_design_features' },
 							],
 						},
 						{
