@@ -1,5 +1,5 @@
 ---
-title: Test Design
+title: Other Features for Test case Design
 description: Learn how to use Testomat.io's test design features to manage test cases, apply design techniques, and organize your test structure effectively for automation and collaboration.
 type: article
 url: https://docs.testomat.io/project/test_design_features
