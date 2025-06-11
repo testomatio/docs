@@ -1,7 +1,7 @@
 {
   "name": "@testomatio/docs",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.12.1",
   "description": "Testomatio Documentation ",
   "main": "index.js",
   "authors": {
@@ -30,11 +30,11 @@
     "@astrojs/markdown-remark": "^6.3.2",
     "@astrojs/starlight": "^0.34.3",
     "@octokit/core": "^5.1.0",
-    "astro": "^5.9.0",
+    "astro": "^5.9.2",
     "astro-breadcrumbs": "^3.3.1",
     "astro-og-canvas": "^0.7.0",
     "astro-rehype-relative-markdown-links": "^0.15.0",
-    "astro-vtbot": "^2.1.4",
+    "astro-vtbot": "^2.1.5",
     "bunosh": "^0.1.5",
     "canvaskit-wasm": "^0.40.0",
     "dotenv": "^16.5.0",
