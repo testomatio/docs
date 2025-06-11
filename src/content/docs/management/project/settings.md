@@ -84,23 +84,3 @@ After saving, a confirmation message will appear:
 ![Purge Old Runs settings have been successfully updated](images/att1_1207.png)
 
 Once the storage period has been configured, old test runs are automatically deleted on a daily basis according to the specified number of days, with a maximum storage period of 365 days.
-
-## Custom Statuses
-
-While default statuses are available, you can configure the list of them to align your testing workflow better.
-
-1. Open **‘Settings’** in the sidebar
-2. Click on the **‘Custom Statuses’** tab
-
-![Custom Statuses](./images/att1_4812.png)
-
-Now, you’re able to add or edit existing conditions by clicking on the field where you are interested in making changes. Let’s check how it works.
-
-![Expand Custom Statuses](images/gif1_4812-1.gif)
-
-3. Write a report message per line, for example, ‘Needs Review’
-4. Click the ‘Update’ button to save changes
-
-![Updated Custom Statuses](images/att2_4812-1.png)
-
-**Note**: The same actions can be applied to each field, such as ‘Custom statuses when test is **failed**’ or ‘Custom statuses when test is **skipped**’.
