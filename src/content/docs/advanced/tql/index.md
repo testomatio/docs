@@ -27,6 +27,12 @@ This will open an extended TQL editor which allows to write queries in a dedicat
 
 ![Alt text](./images/image-10.png)
 
+:::note
+
+Alternatively, enter `=` in the Search field at the beginning of your query.
+
+:::
+
 A query can select tests by comparing its fields. The basic comparison operators are: `==` for 'equals' and `!=` for 'not equals'.
 
 The most popular use case would be selecting tests by tag A or by tag B.
