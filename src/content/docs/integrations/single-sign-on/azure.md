@@ -25,7 +25,7 @@ Add new Enterprise application
 
 On the next screen create a new Application
 
-![Create Appliaction](./images/image-15.png)
+![Create Application](./images/image-15.png)
 
 Enter the "Testomat" as the name of integration, select Integrate any other application you don't find in the gallery (Non-gallery) and click Create. 
 
@@ -44,14 +44,11 @@ Remove default attributes.
 
 Add the following attributes that will be sent to Testomat.io:
 
-* `name` attribute:
-  * Name: `name`
-  * Source: Attribute
-  * Source attribute: `user.displayname`
-* `email` attribute:
-  * Name: `email`
-  * Source: Attribute
-  * Source attribute: `user.mail`
+* `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` → `email`
+* `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`         → `name`
+* `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname`    → `first_name`
+* `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname`      → `last_name`
+
 
 Close the dialog. 
 
