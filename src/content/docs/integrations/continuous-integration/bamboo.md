@@ -3,16 +3,11 @@ title: Atlassian Bamboo
 description: This guide explains integrating Atlassian Bamboo with Testomat.io for continuous integration. It includes configuring Bamboo plans, setting environment variables, and running tests with the CodeceptJS framework. Steps to connect Bamboo to Testomat.io via API keys and enable reporting are also provided.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/bamboo
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/107243443-02fe9280-6a53-11eb-91e9-862a30c8daa3.BauIFFjd_yu79I.webp
-      
+head:    
   - tag: meta
     attrs:
       name: keywords
-      content: Atlassian Bamboo, Testomat.io, CI integration, continuous integration, CodeceptJS, test automation, API token, environment variables, test reporting, Bamboo plan setup
+      content: Atlassian Bamboo, Testomat.io, CI integration, CI connection, continuous integration, CodeceptJS, test automation, API token, environment variables, test reporting, Bamboo plan setup, configuration, workflows
 ---
 
 Let's configure Bamboo CI server to work for CodeceptJS framework:

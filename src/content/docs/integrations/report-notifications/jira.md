@@ -3,6 +3,11 @@ title: Jira Notifications
 description: Configure Jira notifications in Testomat.io to automate issue creation for failed test runs. This guide explains linking Jira projects, selecting issue types, and setting notification rules to streamline workflows and save time by automating detailed test result reporting.
 type: article
 url: https://docs.testomat.io/integrations/report-notifications/jira
+head:   
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, Jira, automatic issue creation, failed test runs, Notification rules, Report Notifications, Add Notification Rule, Jira project, publish report, public link, basic rules, advanced rules engine, detailed test run results, test management, test automation, software testing
 ---
 
 Testomat.io allows to create Jira issue for failed test runs automatically. This option can be enabled in **Settings**.

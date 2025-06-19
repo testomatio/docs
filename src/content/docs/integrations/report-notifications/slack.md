@@ -3,6 +3,11 @@ title: Slack Notifications
 description: Learn to configure Slack notifications in Testomat.io to receive test run updates directly in a Slack channel. The guide explains creating a Slack app, enabling webhooks, generating a Webhook URL, and linking it to Testomat.io for seamless updates.
 type: article
 url: https://docs.testomat.io/integrations/report-notifications/slack
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, notifications, Slack notifications, notification rules, automated alerts, CI notifications, QA tools, notification channels, Report Notification, Basic rules, Advanced rules engine, Run Group Notifications, test management, test automation, software testing, Slack channel, incoming webhook 
 ---
 
 Testomat.io can send Notifications to a specific **Slack channel**. Prepare a channel inside Slack workspace to which notifications will be sent:

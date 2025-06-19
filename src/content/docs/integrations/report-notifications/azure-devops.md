@@ -3,6 +3,11 @@ title: Azure DevOps Notifications
 description: Configure Azure DevOps notifications in Testomat.io to automate issue creation for failed test runs. This guide explains linking Azure DevOps projects, and setting notification rules to streamline workflows and save time by automating detailed test result reporting.
 type: article
 url: https://docs.testomat.io/integrations/report-notifications/azure-devops
+head:   
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Azure DevOps, Testomat.io, issue tracking, Notification rules,  Report Notifications, Azure DevOps integration, publish report, detailed test run results, test management, test automation, software testing, basic rules, advanced rules engine
 ---
 
 Testomat.io allows to create issue for failed test runs automatically in Azure DevOps. This option can be enabled in **Settings**.
