@@ -6,11 +6,6 @@ url: https://docs.testomat.io/project/import-export/import-php
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, PHP test import, PHPUnit, Codeception, CLI tool, test management, live documentation, markdown export, test synchronization, API key, QA tools
 ---

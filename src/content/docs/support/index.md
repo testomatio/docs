@@ -6,11 +6,6 @@ url: https://docs.testomat.io/support
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: Contact Testomat.io, support, product questions, feature requests, technical support, demo scheduling, bug reporting, Testomat.io team, customer support, Testomat.io pricing
 ---

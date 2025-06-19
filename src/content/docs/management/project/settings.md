@@ -6,11 +6,6 @@ url: https://docs.testomat.io/management/project/settings
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, project settings, timezone configuration, project management, test management tools, team collaboration, software testing, administration
 ---

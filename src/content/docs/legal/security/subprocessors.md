@@ -6,11 +6,6 @@ url: https://docs.testomat.io/legal/security/subprocessors
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
       content: Subprocessors, Testomat.io, DigitalOcean, cloud infrastructure, customer support, GitHub, Stripe, payment processing, security, privacy, email management
 ---

@@ -6,11 +6,6 @@ url: https://docs.testomat.io/project/runs/reporter/logger
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, logger, test reporting, Playwright, Winston, Pino, Mocha, Jest, log interception, test automation, console logs
 ---

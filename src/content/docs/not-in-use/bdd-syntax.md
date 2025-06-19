@@ -6,11 +6,6 @@ url: https://docs.testomat.io/usage/bdd-syntax/
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
       content: BDD syntax, Gherkin, Testomat.io, Behavior-driven development, Feature, Scenario, Given, When, Then, test automation, Scenario Outline, feature file structure, test documentation
 ---
