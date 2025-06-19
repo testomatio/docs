@@ -3,48 +3,48 @@ title: Jenkins
 description: Learn how to integrate Jenkins with Testomat.io for continuous integration. This guide covers creating Jenkins jobs, configuring parameters, triggering builds remotely, and connecting Jenkins with Testomat.io using API tokens. It also includes steps for passing environment variables for test execution and enabling on-premise setups.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/jenkins
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/116780079-e33f9f00-aa82-11eb-8678-3f2b5638b196.D7Y2cqI3_Z9GgQv.webp
-      
-  - tag: meta
-    attrs:
-      name: keywords
-      content: Jenkins, Testomat.io, CI integration, continuous integration, API token, build configuration, test automation, environment variables, test reporting, on-premise setup, Jenkins job setup
 ---
 
-To connect Jenkins to Testomatio you will need a user and an API Token created.
-API token can be added on "Configure" page of current user:
+To connect Jenkins to Testomat.io you will need a user and an API Token created on Jenkins.
+API token can be added on **'Configure'** page of the current user:
 
-![image](./images/116779414-06684f80-aa7f-11eb-9a63-0231dd19f1be.png)
+![Testomatio - Jenkins](./images/Jenkins.png)
 
-Then create a new Jenkins job. Select "Freestyle project".
+Then, follow the instructions added below:
 
-![image](./images/116780134-3154a280-aa83-11eb-8da9-3714a7909c48.png)
+1. Create a new Jenkins job. Select **'Freestyle project'**.
 
-> It is recommended to avoid spaces in job name to prevent issues with connecting to this job via URL
+![Testomatio - Jenkins](./images/Jenkins_1.png)
 
-Make this build parametrized:
+:::note
 
-![image](./images/116779732-bc806900-aa80-11eb-9b3b-0415fe67b172.png)
+It is recommended to avoid spaces in Job Name to prevent issues with connecting to this job via URL.
 
-Add the following parameters as a string with empty default values:
+:::
 
-* `run`
-* `testomatio`
-* `grep`
+2. Make this build parametrized
 
-If you use on-premise Testomatio setup you will also need to add `testomatio_url` parameter.
+![Testomatio - Jenkins](./images/Jenkins_2.png)
 
-Inside "Build Triggers" select "Trigger build remotely"
+3. Add the following parameters as a string with empty default values:
 
-![image](./images/116779858-80013d00-aa81-11eb-840d-c272df2e5937.png)
+- `run`
+- `testomatio`
+- `grep`
 
-Proceed with configuring the job and set all required parameters like SCM and build steps.
+:::note
 
-![image](./images/116779906-bb9c0700-aa81-11eb-8de1-448ba9ddffd3.png)
+If you use on-premise Testomat.io setup you will also need to add `testomatio_url` parameter.
+
+:::
+
+4. Go to **'Build Triggers'** and select **'Trigger build remotely'**.
+
+![Testomatio - Jenkins](./images/Jenkins_3.png)
+
+5. Proceed with configuring the Job and set all required parameters like SCM and build steps.
+
+![Testomatio - Jenkins](./images/Jenkins_4.png)
 
 Within a step pass in configured parameters as environment variables into the test runner. Let's take CodeceptJS command as an example:
 
@@ -52,32 +52,65 @@ Within a step pass in configured parameters as environment variables into the te
 TESTOMATIO_RUN=${run} TESTOMATIO=${testomatio} npx codeceptjs run --grep "${grep}"
 ```
 
-> Prepend `TESTOMATIO_URL=${testomatio_url}` if you use on-premise versoin
+:::note
 
-![image](./images/116780412-5518e800-aa85-11eb-88b8-b35853381a91.png)
+Prepend `TESTOMATIO_URL=${testomatio_url}` if you use on-premise version
 
+:::
 
-Save the build and switch to Testomat.io.
+![Testomatio - Jenkins](./images/Jenkins_5.png)
 
-Open Settings and Connect a new CI:
+6. Save the build.
 
-![image](./images/116780055-bb503b80-aa82-11eb-90b0-6287cdbe56c2.png)
+After Jenkins is set up, go to Testomat.io and create a new **CI connection** inside your project: 
 
-Select "Jenkins" and fill in all required fields:
+1. Go to **'Settings'**.
+2. Select **'Continuous Integration'**.
+3. Click **'Connect to CI'**.
 
-![image](./images/116780079-e33f9f00-aa82-11eb-8678-3f2b5638b196.png)
+![Testomatio - CI](./images/CI_4.png)
 
-* `Jenkins Hostname` - URL of Jenkins host
-* `Username` - a user on Jenkins which will trigger builds
-* `API Token` - a token we created previously in the user's settings.
-* `Job Name` - the name of a job we just created
+4. Select **'Jenkins'** and fill in all required fields:
 
-Switch to Input variables tab and enable variables that was configured for parametrized builds:
+- `Jenkins Hostname` - URL of Jenkins host.
+- `Username` - a user on Jenkins which will trigger builds.
+- `API Token` - a token we created previously in the user's settings.
+- `Job Name` - the name of a job we just created.
 
-![image](./images/116780159-6d880300-aa83-11eb-9c8d-242c76accde2.png)
+![Testomatio - Jenkins](./images/Jenkins_7.png)
 
-> Select `testomatio_url` if you use on-premise version.
+5. Switch to **'Input variables'** tab and enable variables that were configured for parametrized builds.
 
-Click "Save" and check the connection.
+:::note
 
-Now you can run a test or a group of tests via Jenkins CI. For a custom configuration read about [Environment Variables](./index.md#environment-configuration)
+Don't forget to select `testomatio_url` if you use on-premise version.
+
+:::
+
+You can pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration). For example: test environment, browser, branch, etc.
+
+6. Click **'Save'** button and check the connection.
+
+![Testomatio - Jenkins](./images/Jenkins_8.png)
+
+Now you can run a test or a group of tests via Jenkins CI. 
+
+7a. Open **'Runs'** page then select `Run Automated Tests in CI` option in extra menu.
+
+![Testomatio - CI Run](./images/CI_Run_1.png)
+
+8a. Select **'Jenkins'** profile in a list. Optionally, select a **Test Plan** or create a new one.
+
+![Testomatio - Jenkins](./images/Jenkins_9.png)
+
+OR
+
+7b. On **'Tests'** page select any automated suite or test case -> click **'Extra menu'** button -> select **'Run Tests'** option -> open **'Run in CI'** tab.
+
+8b. Select **'Jenkins'** profile in a list.
+
+![Testomatio - Jenkins](./images/Jenkins_9a.gif)
+
+9. Launch a Run and wait for the results.
+
+![Testomatio - Jenkins](./images/Jenkins_10.png)
