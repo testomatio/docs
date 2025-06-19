@@ -18,19 +18,24 @@ And follow the instructions below:
 
 ![Testomatio - Azure Pipeline](./images/Azure_D_2.png)
 
-3. Create a new **CI connection** inside your project in Testomat.io: go to **Settings -> Continuous Integration ->** click **'Connect to CI'** select **'Azure Pipeline'**
+3. Create a new **CI connection** inside your project in Testomat.io: go to **'Settings' -> 'Continuous Integration' ->** click **'Connect to CI'** select **'Azure Pipeline'**
 
 ![Testomatio - Azure Pipeline](./images/Azure_D_3.png)
 
-4. Fill in 'PAT', 'Organization name', 'Project name', 'Pipeline ID'.
+4. Enter following details on the **'Connection'** tab:
+
+- `Personal Access Token` - PAT created, in Azure DevOps during Step 1.
+- `Azure DevOps Organization`.
+- `Azure DevOps Project`.
+- `Azure DevOps Pipeline Id` - open a pipeline and copy a number value of `definitionId` param from URL (in our case `definitionId = 1`).
 
 ![Testomatio - Azure Pipeline](./images/Azure_D_4.png)
 
 5. Switch to **'Input Variables'** tab and select checkboxes:
 
-- Send Run ID as 'run' input (required for scheduled jobs).
-- Send Testomat.io API key as 'testomatio' input.
-- Send Testomat.io Server URL as 'testomatio_url' input (if you use on-premise setup).
+- Send Run ID as `run` input (required for scheduled jobs).
+- Send Testomat.io API key as `testomatio` input.
+- Send Testomat.io Server URL as `testomatio_url` input (if you use on-premise setup).
 
 6. Save the conection
 

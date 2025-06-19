@@ -64,8 +64,8 @@ Prepend `TESTOMATIO_URL=${testomatio_url}` if you use on-premise version
 
 After Jenkins is set up, go to Testomat.io and create a new **CI connection** inside your project: 
 
-1. Go to **Settings**.
-2. Select **Continuous Integration**.
+1. Go to **'Settings'**.
+2. Select **'Continuous Integration'**.
 3. Click **'Connect to CI'**.
 
 ![Testomatio - CI](./images/CI_4.png)
@@ -79,7 +79,7 @@ After Jenkins is set up, go to Testomat.io and create a new **CI connection** in
 
 ![Testomatio - Jenkins](./images/Jenkins_7.png)
 
-5. Switch to **'Input variables'** tab and enable variables that was configured for parametrized builds
+5. Switch to **'Input variables'** tab and enable variables that were configured for parametrized builds.
 
 :::note
 
@@ -87,9 +87,30 @@ Don't forget to select `testomatio_url` if you use on-premise version.
 
 :::
 
+You can pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration). For example: test environment, browser, branch, etc.
+
 6. Click **'Save'** button and check the connection.
 
 ![Testomatio - Jenkins](./images/Jenkins_8.png)
 
 Now you can run a test or a group of tests via Jenkins CI. 
-For a custom configuration read about [Environment Variables](./index.md#environment-configuration)
+
+7a. Open **'Runs'** page then select `Run Automated Tests in CI` option in extra menu.
+
+![Testomatio - CI Run](./images/CI_Run_1.png)
+
+8a. Select **'Jenkins'** profile in a list. Optionally, select a **Test Plan** or create a new one.
+
+![Testomatio - Jenkins](./images/Jenkins_9.png)
+
+OR
+
+7b. On **'Tests'** page select any automated suite or test case -> click **'Extra menu'** button -> select **'Run Tests'** option -> open **'Run in CI'** tab.
+
+8b. Select **'Jenkins'** profile in a list.
+
+![Testomatio - Jenkins](./images/Jenkins_9a.gif)
+
+9. Launch a Run and wait for the results.
+
+![Testomatio - Jenkins](./images/Jenkins_10.png)

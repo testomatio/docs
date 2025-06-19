@@ -3,27 +3,22 @@ title: GitHub Actions
 description: This guide explains how to integrate GitHub Actions with Testomat.io for continuous integration. It includes creating workflows, setting up environment variables, using Testomat.io-specific input parameters, and triggering automated tests. The integration allows detailed test reporting and efficient CI workflows.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/github
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/108279592-84f26800-7185-11eb-93a9-a5862f0548e4.l4dPi24m_Z1CfwNn.webp
-      
-  - tag: meta
-    attrs:
-      name: keywords
-      content: GitHub Actions, Testomat.io, CI integration, continuous integration, test automation, workflows, input parameters, environment variables, test reporting, automated testing
 ---
 
-1. Create an [access token on GitHub](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) with access to workflow scope:
+To set up connection between GitHub and Testomat.io, first, you need to configure your GitHub account:
 
-![image](./images/107864711-9971f000-6e67-11eb-845d-9155aee9c85e.png)
+1. Create a Personal Access Token on GitHub with access to workflow scope (follow the instructions by link - [Create PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)).
 
-2. Create a workflow in a GitHub repository. Go to "Actions" tab in repository and click "Create Workflow" button. Then you will get a workflow template. A workflow filename will be used by Testomatio to call a specific workflow.
+![Testomatio - GitHub](./images/Github_1.png)
 
-![image](./images/108279592-84f26800-7185-11eb-93a9-a5862f0548e4.png)
+2. Create a Workflow in a GitHub Repository: Go to **'Actions'** tab in Repository -> Select Workflow template -> Click **'Configure'** button. Then you will get a workflow template. 
+**A workflow filename will be used by Testomat.io to call a specific workflow.**
 
-3. This workflow will be used solely by Testomatio so it should start only on `workflow_dispatch` event. The event should be defined with the following input parameters:
+![Testomatio - GitHub](./images/Github_2.png)
+
+![Testomatio - GitHub](./images/Github_3.png)
+
+3. This workflow will be used solely by Testomat.io, so it should start only on `workflow_dispatch` event. The event should be defined with the following input parameters:
 
 ```yaml
 name: Testomatio Tests
@@ -41,7 +36,7 @@ on:
         required: false
 ```
 
-4. The job should include a step where the test runner is executed with `--grep` option and TESTOMATIO environment variables passed in. For instance:
+4. The **Job** should include a step where the test runner is executed with `--grep` option and `TESTOMATIO` environment variables passed in. For instance:
 
 ```yaml
     - run: npx codeceptjs run --grep "${{ github.event.inputs.grep }}"
@@ -50,27 +45,59 @@ on:
         TESTOMATIO_RUN: "${{ github.event.inputs.run }}"
 ```
 
-5. Connect a GitHub Actions CI in Testomatio:
+After configuring your GitHub account, integrate GitHub Actions CI with your Testomat.io project:
 
-![image](./images/108280170-78224400-7186-11eb-8b1c-86f399b630a3.png)
+1. Go to **'Settings'**.
+2. Select **'Continuous Integration'**.
+3. Click **'Connect to CI'**.
 
-You will need to enter the following
+![Testomatio - CI](./images/CI_4.png)
 
-* GitHub Username
-* OAuth token (created at step 1)
-* organization/repository (or user/repository)
-* workflow name, a file name with a workflow, like `testomatio.yml`
+4. Select **'GitHub'** and enter following details on the **'Connection'** tab:
 
-7. Save your connection
-8. Now, open "Configuration" tab and check the default `ref` value. `ref` is a target branch or a tag on which a tests will be executed. By default, it is set to `master` (most of the repositories still use master as the main branch name, but we will adjust defaults accordingly when things change), but you can choose a different one, like `main`.
-9. `run` and `testomatio` inputs are passed from Testomatio. Enable them on Input Variables tab
+- `GitHub Username`.
+- `API token` - PAT created, in GitHub during Step 1.
+- `Organization/Repository (or User/Repository)`.
+- `Workflow` - name of a workflow in GitHub Actions, in our case `testomatio.yml`.
 
-![image](./images/113137542-57d9b080-922d-11eb-9672-c4a06c00255d.png)
+![Testomatio - GitHub](./images/Github_4.png)
 
-You can pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration)
+5. Open **'Configuration'** tab and check the default `ref` value. `ref` specifies the target branch or tag for test execution. By default, it is set to `master`, but you can adjust this if your main branch uses a different name, such as `main`.
 
-9. When the connection is saved, open a test and select "Run in CI". Select a target ref and click "Launch"
+![Testomatio - GitHub](./images/Github_5.png)
 
-![image](./images/108280786-5d040400-7187-11eb-810a-d639396c8a3e.png)
+6. Go to **'Input Variables'** tab and enable `run` and `testomatio` inputs, to pass them from Testomat.io.
 
-10. This will start a new job in GitHub Actions, please check that the job was successfully triggered and completed. After the job has finished a run report will be available on Runs page of Testomatio
+:::note
+
+You can set and pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration). Like in our case, test environments were set.
+
+:::
+
+7. Click on **'Save'** button to save the connection.
+
+![Testomatio - GitHub](./images/Github_6.png)
+
+8a. When the connection is saved, open **'Runs'** page and select `Run Automated Tests in CI` option in extra menu.
+
+![Testomatio - CI Run](./images/CI_Run_2.png)
+
+9a. Select **'GitHub'** profile in a list, select a target ref and any other variables, if any were configured. Optionally, select a **Test Plan** or create a new one.
+
+10a. Click on **'Launch'** button and wait for the results.
+
+![Testomatio - GitHub](./images/Github_7.png)
+
+OR
+
+8b. On **'Tests'** page select any automated suite or test case -> click **'Extra menu'** button -> select **'Run Tests'** option -> open **'Run in CI'** tab.
+
+9b. Select **'GitHub'** profile in a list, as well, select a target ref and any other variables, if any were configured.
+
+10b. Click on **'Launch'** button and wait for the results.
+
+![Testomatio - GitHub](./images/Github_7b.gif)
+
+This will start a new job in GitHub Actions, please check that the job was successfully triggered and completed. After the job has finished, a run report will be available on Runs page of Testomat.io.
+
+![Testomatio - GitHub](./images/Github_8.png)

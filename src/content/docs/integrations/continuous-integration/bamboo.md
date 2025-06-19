@@ -33,8 +33,8 @@ TESTOMATIO_RUN=${bamboo.run} npx codeceptjs run --grep "${bamboo.grep}"
 ```
 Following environment variables must be set:
 
-- **Add `TESTOMATIO` environment variable with API key of Testomatio project.**
-- If you are running a self-hosted Testomatio instance, add `TESTOMATIO_URL` variable to specify a host to which reports will be sent.
+- **Add `TESTOMATIO` environment variable with API key of Testomat.io project.**
+- If you are running a self-hosted Testomat.io instance, add `TESTOMATIO_URL` variable to specify a host to which reports will be sent.
 
 ![Testomatio - Bamboo](./images/Bamboo_3.png)
 
@@ -48,9 +48,9 @@ add `grep` and `run` variables with an empty string as a default value
 
 Now, as Bamboo is configured, you need to configure Bamboo integration at Testomat.io:
 
-1. Go to Settings.
-2. Select Continuous Integration.
-3. Click 'Connect to CI'. 
+1. Go to **'Settings'**.
+2. Select **'Continuous Integration'**.
+3. Click **'Connect to CI'**.
 
 ![Testomatio - CI](./images/CI_4.png)
 
@@ -74,13 +74,13 @@ A project and plan keys can be found from URL:
 
 :::note
 
-You can pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration).
+You can pass more input variables if you set them in [Environment Configuration](./index.md#environment-configuration). For example: test environment, browser, branch, etc.
 
 :::
 
 7a. Open **'Runs'** page then select `Run Automated Tests in CI` option in extra menu.
 
-![Testomatio - Bamboo](./images/Bamboo_9.png)
+![Testomatio - CI Run](./images/CI_Run_1.png)
 
 8a. Select **'Bamboo'** profile in a list. Optionally, select a **Test Plan** or create a new one.
 
