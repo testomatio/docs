@@ -1,6 +1,6 @@
 ---
-title: Azure AD
-description: Learn how to set up Single Sign-On (SSO) for Testomat.io with Azure AD using SAML authentication. This guide explains configuring the Azure portal, mapping user attributes, assigning users, and setting up the SSO connection in Testomat.io to enable secure and seamless user access.
+title: Microsoft Entra ID (formerly Azure AD)
+description: Learn how to set up Single Sign-On (SSO) for Testomat.io with Microsoft Entra ID (formerly Azure AD) using SAML authentication. This guide explains configuring the Azure portal, mapping user attributes, assigning users, and setting up the SSO connection in Testomat.io to enable secure and seamless user access.
 type: article
 url: https://docs.testomat.io/integrations/single-sign-on/azure
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Azure AD, Testomat.io, SSO, Single Sign-On, SAML, user authentication, identity provider, attribute mapping, company domain, integration setup, test management, security
+      content: Azure AD, Microsoft Entra ID, Testomat.io, SSO, Single Sign-On, SAML, user authentication, identity provider, attribute mapping, company domain, integration setup, test management, security
 ---
 
 Open Azure portal and search for Entra ID service:
@@ -73,8 +73,8 @@ Fill in the form:
 
 ![Alt text](./images/image-6.png)
 
-4. Set **Azure ID Idenitifier** (or Azure Entra ID) from Azure AD as **IdP Entity ID**. Should be like `https://sts.windows.net/.../` (ensure it ends with `/`)
-5. Set **Login URL** from Azure AD as **Sign In URL**
+4. Set **Azure ID Idenitifier** (or Azure Entra ID) from Microsoft Entra ID (formerly Azure AD) as **IdP Entity ID**. Should be like `https://sts.windows.net/.../` (ensure it ends with `/`)
+5. Set **Login URL** from Microsoft Entra ID as **Sign In URL**
 6. Upload certificate.
 
 ![Alt text](./images/image-5.png)
@@ -90,6 +90,6 @@ urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
 And save the form.
 
 
-Now, use any assigned user from Azure AD to Log In into Testomat.io. Select "SSO" on the Sign In page, enter the email, and if everything is correct user will get inside Testomat.io, assigned to your company and added to default projects.
+Now, use any assigned user from Microsoft Entra ID (formerly Azure AD) to Log In into Testomat.io. Select "SSO" on the Sign In page, enter the email, and if everything is correct user will get inside Testomat.io, assigned to your company and added to default projects.
 
-> In case user sees 404 page on Azure AD, check that Single Sign-On URL was correctly set.
+> In case user sees 404 page on Microsoft Entra ID (formerly Azure AD), check that Single Sign-On URL was correctly set.
