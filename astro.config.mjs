@@ -341,7 +341,7 @@ export default defineConfig({
 								{ label: 'Overview', link: '/integrations/single-sign-on' },
 								{ label: 'Okta', link: '/integrations/single-sign-on/okta' },
 								{ label: 'Google Workspace', link: '/integrations/single-sign-on/google' },
-								{ label: 'Azure AD', link: '/integrations/single-sign-on/azure' },
+								{ label: 'Microsoft Entra ID (formerly Azure AD)', link: '/integrations/single-sign-on/azure' },
 								{ label: 'Custom SAML', link: '/integrations/single-sign-on/saml' },
 							],
 						},
