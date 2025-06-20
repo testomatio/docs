@@ -3,12 +3,7 @@ title: Functions
 description: Explore Testomat.io's flexible reporting functions to enhance your test reports. Learn to use functions like artifact, log, and step for adding files, logging additional information, and describing test actions. Integrates seamlessly with frameworks like Playwright, Jest, and Mocha, supporting custom reporting needs.
 type: article
 url: https://docs.testomat.io/project/runs/reporter/functions
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-      
+head:   
   - tag: meta
     attrs:
       name: keywords

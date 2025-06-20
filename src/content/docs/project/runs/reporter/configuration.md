@@ -3,12 +3,7 @@ title: Configuration
 description: This guide outlines how to configure Testomat.io Reporter using environment variables. It explains how to pass variables inline, via .env files, or CI secrets, and provides a comprehensive list of configuration options such as setting API keys, managing test reports, and customizing parallel test executions. Additionally, it covers artifact storage and pipeline configurations for GitHub and GitLab integrations.
 type: article
 url: https://docs.testomat.io/project/runs/reporter/configuration
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-      
+head: 
   - tag: meta
     attrs:
       name: keywords

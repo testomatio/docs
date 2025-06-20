@@ -3,12 +3,7 @@ title: Privacy Policy
 description: Testomat.io's Privacy Policy explains how user data is collected, used, and protected. It covers the collection of personal data (e.g., names, emails), its use for service improvement, and how third parties like Google Analytics and Stripe may access data. Users retain rights to access, modify, or delete their data, in accordance with regulations like GDPR and CCPA.
 type: article
 url: https://docs.testomat.io/legal/compliance/privacy
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-      
+head:   
   - tag: meta
     attrs:
       name: keywords

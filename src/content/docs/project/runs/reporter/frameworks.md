@@ -6,11 +6,6 @@ url: https://docs.testomat.io/project/runs/reporter/frameworks
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, testing frameworks, automated testing, test reports, Mocha, Jasmine, Jest, integration, debugging, error handling, test automation
 ---

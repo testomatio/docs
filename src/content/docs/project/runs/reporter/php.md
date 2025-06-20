@@ -6,11 +6,6 @@ url: https://docs.testomat.io/project/runs/reporter/php
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, PHP, Codeception, PHPUnit, test reporting, automated testing, CI integration, API keys, real-time reports, test management
 ---

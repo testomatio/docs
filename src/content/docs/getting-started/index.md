@@ -3,12 +3,7 @@ title: Start From Scratch
 description: This guide helps users start from scratch with Testomat.io by creating projects, writing test cases, running manual and automated tests, and analyzing results with detailed reporting and analytics. It also includes importing automated tests and tracking automation coverage for optimization.
 type: article
 url: https://docs.testomat.io/getting-started/start-from-scratch/
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/test-reporting-heat-map.CoE-TwPN_Z20qVi.webp
-      
+head:  
   - tag: meta
     attrs:
       name: keywords
