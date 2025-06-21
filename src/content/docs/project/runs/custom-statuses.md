@@ -3,6 +3,11 @@ title: Custom Statuses
 description: Learn how to use custom test result statuses in Testomat.io. This guide explains how to configure additional result messages, apply them during manual test runs, and use them for advanced analytics and reporting.
 type: article
 url: https://docs.testomat.io/project/runs/custom-statuses
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: custom test statuses, manual test management, QA test result customization, software testing workflow, test result labeling, advanced test filtering, test case tracking, QA reporting tools, testing analytics, filter test runs, query language for testing, RQL TQL filters, custom test outcomes, passed failed skipped test status, categorize test results, improve test visibility, test execution tracking, test result analysis, quality assurance tools, test automation support, testing dashboard customization, test case result statuses, manual QA process optimization
 ---
 
 ## Custom Statuses
