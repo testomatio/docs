@@ -130,7 +130,7 @@ In previous section we used `tag` in the query. `tag` is an allowed query variab
 |               |                                               | `updated_at <= '2023-12-31'`                                                                                             |
 | last_run_at   | Match tests by last execution date            | `last_run_at < 1.week_ago`                                                                                               |
 |               |                                               | `last_run_at == today()`                                                                                                 |
-| executed_at   | Match tests by execution date                 | `executed_at == < 1.week_ago`                                                                                            |
+| executed_at   | Match tests by execution date                 | `executed_at < 1.week_ago`                                                                                               |
 |               |                                               | `executed_at == today()`                                                                                                 |
 | created_by    | Match tests by author's name                  | `created_by == 'Antonio Primus'`                                                                                         |
 | assigned_to   | Match tests by assignee's name                | `assigned_to == 'Antonio Primus'`                                                                                        |
