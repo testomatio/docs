@@ -28,7 +28,7 @@ You can use **'Chat with Tests'** feature on Project or Folder level.
 
 ### Use 'Chat with Tests' Feature at the Project Level
 
-1. Go to **'Tests'** page.
+1. Go to 'Tests' page.
 2. Click on **'Chat with tests'** AI icon displayed in the header.
 
 ![Testomat.io - AI-powered](./images/AI_Chat_1.png)
@@ -53,8 +53,8 @@ Create you own AI-promt.
 
 You can also use **'Chat with Tests'** on folder level to analyze and summarize information within the selected folder:
 
-1. Go to **'Tests'** page.
-2. Select the **Folder**.
+1. Go to 'Tests' page.
+2. Select the Folder.
 3. Click on **'Chat with Tests'** button.
 
 ![Testomat.io - AI-powered](./images/AI_Chat_3.gif)
@@ -181,9 +181,9 @@ Shows only for finished, automated runs with 5+ failures.
 
 :::
 
-1. Go to Runs.
+1. Go to 'Runs' page.
 2. Open finished automated run.
-3. Click on 'Clusterize Errors' button.
+3. Click on **'Clusterize Errors'** button.
 
 ![Testomat.io - AI-powered](./images/AI_5.png)
 
@@ -197,10 +197,10 @@ Using stack trace, code of test, test execution logs and screenshot of failure, 
 
 The same as in the previous case, it also available only for finished, automated runs with 5+ failures.
 
-1. Go to Runs.
+1. Go to 'Runs' page.
 2. Open finished automated run.
 3. Click on Failed Test Case.
-4. Click on 'Explain Failure' button.
+4. Click on **'Explain Failure'** button.
 
 ![Testomat.io - AI-powered](./images/AI_7.gif)
 
@@ -209,8 +209,8 @@ The same as in the previous case, it also available only for finished, automated
 Testomat.io allows you to use AI-powered feature to analyze and summarize your finished test runs. It highlights risk areas and provides recommendations for improvements based on test results.
 
 1. Go to 'Runs' page.
-2. Select finished test run statistics snalysis.
-3. Click on 'Run Summary' button.
+2. Select finished test run for statistics snalysis.
+3. Click on **'Run Summary'** button.
 
 ![Testomat.io - AI-powered](./images/AI_run_summary_1.png)
 
