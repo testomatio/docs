@@ -264,6 +264,18 @@ By following these steps, you can organize test runs within RunGroups, ensuring 
 
 ![Runs into Folders](images/att5_214.png)
 
+**Launching Runs with Test Multiselection**
+
+Ensure the **Require RunGroup for new runs** option is enabled to launch runs for individual tests or suites.
+
+1. Navigate to **Tests**.
+2. Enable multiselection.
+3. Select one or more individual tests or suites.
+4. Click the **Run** button in the bottom menu.
+5. In the pop-up window, click **Launch**.
+
+![Runs with multiselect](images/run_tests_multiselect.png)
+
 ## Multi Environment Tests
 
 Multi environment tests are used for performing the same tests in different environments. This option is very useful in cases when you need to perform testing with different types of operating systems/ browsers/ devices. They can be performed simultaneously or in a sequence. Let's get a look at this option.
