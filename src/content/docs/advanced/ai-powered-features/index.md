@@ -23,6 +23,47 @@ You can enbable AI at any time on Company Settings page by following the instruc
 
 :::
 
+## AI-Powered Chat with Tests
+
+**'Chat with Tests'** feature — an AI-powered assistant that allows you to ask questions about existing tests in your project. The AI analyzes your test repository and responds with insights, summaries, or clarifications based on the actual test content.
+
+This interactive capability makes it easier to explore, understand, and manage large sets of tests without manually browsing through them.
+
+You can use **'Chat with Tests'** feature on Project or Folder level.
+
+### Use 'Chat with Tests' Feature at the Project Level
+
+1. Go to 'Tests' page.
+2. Click on **'Chat with tests'** AI icon displayed in the header.
+
+![Testomat.io - AI-powered](./images/AI_Chat_1.png)
+
+3. Select a pre-configured AI promt offered by Testomat.io, update it as needed:
+
+- **Summarize this project, list all features tested, separate by sections, use bullet points** - if you want to have short overview on your project.
+
+- **Suggest new test cases for the first suite in the project** - if you want AI to gerenare new test cases.
+
+- **Create plan with 30 tests for smoke testing max. Pick at least one test from each suite, trying to cover most crucial features** - if you want AI to generate smoke test plan for you.
+
+OR
+
+Create you own AI-promt.
+
+4. Click on **'Ask'** button.
+
+![Testomat.io - AI-powered](./images/AI_Chat_2.gif)
+
+### Use 'Chat with Tests' at the Folder Level
+
+You can also use **'Chat with Tests'** on folder level to analyze and summarize information within the selected folder:
+
+1. Go to 'Tests' page.
+2. Select the Folder.
+3. Click on **'Chat with Tests'** button.
+
+![Testomat.io - AI-powered](./images/AI_Chat_3.gif)
+
 ## Summarize Suite Description Based on Test Cases
 
 You can automatically generate a suite description by analyzing the test cases within it. This saves time by eliminating the need for manual suite documentation and ensures descriptions accurately reflect the test content:
@@ -145,9 +186,9 @@ Shows only for finished, automated runs with 5+ failures.
 
 :::
 
-1. Go to Runs.
+1. Go to 'Runs' page.
 2. Open finished automated run.
-3. Click on 'Clusterize Errors' button.
+3. Click on **'Clusterize Errors'** button.
 
 ![Testomat.io - AI-powered](./images/AI_5.png)
 
@@ -161,12 +202,24 @@ Using stack trace, code of test, test execution logs and screenshot of failure, 
 
 The same as in the previous case, it also available only for finished, automated runs with 5+ failures.
 
-1. Go to Runs.
+1. Go to 'Runs' page.
 2. Open finished automated run.
 3. Click on Failed Test Case.
-4. Click on 'Explain Failure' button.
+4. Click on **'Explain Failure'** button.
 
 ![Testomat.io - AI-powered](./images/AI_7.gif)
+
+## Test Run Summary 
+
+Testomat.io allows you to use AI-powered feature to analyze and summarize your finished test runs. It highlights risk areas and provides recommendations for improvements based on test results.
+
+1. Go to 'Runs' page.
+2. Select finished test run for statistics snalysis.
+3. Click on **'Run Summary'** button.
+
+![Testomat.io - AI-powered](./images/AI_run_summary_1.png)
+
+![Testomat.io - AI-powered](./images/AI_run_summary_2.png)
 
 :::note
 

@@ -28,6 +28,13 @@ This feature is available both at the **project level** and within individual **
 
 ![Testomat.io - AI-powered](./images/AI_10.gif)
 
+:::note
+
+By default, AI-powered generative features are disabled for your confidence. 
+You can enbable AI at any time on Company Settings page by following the instructions in the [Administration section](https://docs.testomat.io/management/company/administration/#ai).
+
+:::
+
 ## Jira as a Requirement Source
 
 **To add Jira as a Requirement Source:**
