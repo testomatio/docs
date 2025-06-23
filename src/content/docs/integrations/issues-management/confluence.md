@@ -3,6 +3,11 @@ title: Confluence
 description: Learn how to connect your Confluence space with Testomat.io for issue management. This guide walks you through obtaining your Project Access Token on Atlassian and configuring Testomat.io to streamline workflows.
 type: article
 url: https://docs.testomat.io/integrations/issues-management/confluence
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Confluence, Testomat.io, Confluence integration, requirements management, issues management, Confluence space, Atlassian, API token, traceability, project management, test management tools, automated testing, manual testing, software testing
 ---
 
 Testomat.io allows you to link your Confluence space to a Testomat.io project and use it as a source of requirements.

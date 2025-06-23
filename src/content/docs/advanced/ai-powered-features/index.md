@@ -3,6 +3,11 @@ title: AI-Powered Features
 description: Learn how to use AI-powered generative features to simplify and enhance your test management workflows in Testomat.io. This guide covers how to work with AI-powered generative features on Suites, Tests, Test Code levels, explain autotest failures Based on Logs, check Jira requirement for Suites linked to Jira issues.
 type: article
 url: https://docs.testomat.io/advanced/ai-powered-features
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, AI-powered features, test management, automate test documentation, Groq, summarize suite description, suggest test cases, generate test case description, generate code, generate bug description, analyze failed automated test cases, explain autotest failures, test coverage, test automation, debugging, defect logging, test coverage improvements, requirements-driven testing, traceability, alignment, AI Assistant, test design, software testing
 ---
 
 Testomat.io introduces **AI-powered generative features** to simplify and enhance your test management workflows. These tools leverage artificial intelligence to assist QA engineers by automating test documentation, generating actionable insights, and providing answers about their projects.

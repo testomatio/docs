@@ -3,6 +3,11 @@ title: Circle CI
 description: Integrate CircleCI with Testomat.io to automate test execution and reporting. This guide explains configuring the config.yml workflow, setting parameters, and passing environment variables for streamlined CI integration. It covers running tests via the Testomat.io interface and accessing test reports post-execution.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/circle
+head:    
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Circle CI, Testomat.io, CI connection, CI Integration, CircleCI workflow, Personal API Token, Continuous Integration, Test Automation, Test Management, input variables, configuration, Circle CI Trigger URL
 ---
 
 To connect Circle CI to Testomat.io, lets start with configuring your Circle CI:

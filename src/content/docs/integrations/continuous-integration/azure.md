@@ -3,6 +3,11 @@ title: Azure Pipelines
 description: Integrate Azure Pipelines with Testomat.io to automate test execution and reporting. This guide explains setting up CI connections, creating input variables, and configuring pipelines to run tests with tools like CodeceptJS, Jest, or Playwright. It also details passing custom variables and specifying branches for targeted testing.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/azure
+head:  
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Azure DevOps, Testomat.io, CI connection, CI Integration, Azure Pipeline, Personal Access Token, Continious Integration, Test Automation, Test Management, Microsoft Azure, input variables, configuration, workflows, test reporting
 ---
 
 To connect Azure DevOps to Testomat.io, first you need to create an Private Access Token (PAT).

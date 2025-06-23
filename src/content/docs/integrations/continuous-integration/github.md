@@ -3,6 +3,11 @@ title: GitHub Actions
 description: This guide explains how to integrate GitHub Actions with Testomat.io for continuous integration. It includes creating workflows, setting up environment variables, using Testomat.io-specific input parameters, and triggering automated tests. The integration allows detailed test reporting and efficient CI workflows.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/github
+head:  
+  - tag: meta
+    attrs:
+      name: keywords
+      content: GitHub, Testomat.io, CI connection, CI Integration, GitHub Actions, Personal Access Token, Continuous Integration, Test Automation, Test Management, input parameters, environment variables, API token, Workflow, test reporting
 ---
 
 To set up connection between GitHub and Testomat.io, first, you need to configure your GitHub account:

@@ -3,6 +3,11 @@ title: Email Notifications
 description: Learn how to configure email notifications in Testomat.io to receive updates on test run results. This guide covers setting notification rules, customizing fields, and managing multiple email recipients effectively.
 type: article
 url: https://docs.testomat.io/integrations/report-notifications/email
+head:   
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, Email notifications, Report Notifications, Add Notification Rule, Run context, RunGroup context, basic rules, advanced rules engine, Run Report, multiple notifications, test management, test automation, software testing
 ---
 
 Testomat.io allows sending Notifications for finished runs via Email.

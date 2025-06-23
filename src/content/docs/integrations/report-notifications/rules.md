@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, notifications, Email alerts, Slack notifications, MS Teams, Jira integration, notification rules, test runs, automated alerts, CI notifications, QA tools
+      content: Testomat.io, notifications, Email alerts, Email notifications, Slack notifications, MS Teams, Jira integration, Jira Notification, Azure DevOps, notification rules, test runs, automated alerts, CI notifications, QA tools, notification channels, Report Notification, Basic rules, Advanced rules engine, Run Group Notifications, test management, test automation, software testing
 ---
 
 **Notification** is one of the attractive Agile testing tool features. Test management web application Testomat.io provides for collaborative purposes notification QA team, development team and business. So, keeping the teams engaged with project updates and getting fast feedback from business owners is simpler than ever! In addition, you as the test manager or team owner through **Team Management Dashboard** will have end-to-end visibility on your collaboration process.

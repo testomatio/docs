@@ -3,6 +3,11 @@ title: GitLab CI
 description: Learn how to integrate GitLab CI with Testomat.io to automate test execution and reporting. The guide covers configuring .gitlab-ci.yml, passing environment variables, and triggering pipelines for seamless CI/CD integration. It also explains setting input variables and running tests directly from the Testomat.io interface.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/gitlab
+head:  
+  - tag: meta
+    attrs:
+      name: keywords
+      content: GitLab, Testomat.io, CI connection, CI Integration, GitLab CI, Pipeline Trigger, Continuous Integration, Test Automation, Test Management, environment variables, GitLab Host, GitLab CI Trigger URL, Workflow, API
 ---
 
 To set up connection between GitLab and Testomat.io, first, you need to configure your GitLab account:

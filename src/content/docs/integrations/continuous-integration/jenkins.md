@@ -3,6 +3,11 @@ title: Jenkins
 description: Learn how to integrate Jenkins with Testomat.io for continuous integration. This guide covers creating Jenkins jobs, configuring parameters, triggering builds remotely, and connecting Jenkins with Testomat.io using API tokens. It also includes steps for passing environment variables for test execution and enabling on-premise setups.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/jenkins
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Jenkins, Testomat.io, CI connection, CI Integration, Jenkins API Token, Freestyle project, build triggers, remote build, environment variables, CodeceptJS, Jenkins Hostname, input variables, environment configuration, automated tests, test plan
 ---
 
 To connect Jenkins to Testomat.io you will need a user and an API Token created on Jenkins.

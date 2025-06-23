@@ -6,13 +6,8 @@ url: https://docs.testomat.io/integrations/continuous-integration
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/New_RtsIVB63_2024-08-26.Bw6arZ-4_Z103qFK.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
-      content: Testomat.io, Continuous Integration, CI/CD, test automation, test management, Jenkins, GitLab, automated testing, CI tools, testing workflow, test reports
+      content: Testomat.io, Continuous Integration, CI connection, CI Integration, CI/CD, test automation, test management, Jenkins, Atlassian Bamboo, BitBucket Pipelines, TeamCity, GitHub Actions, GitLab CI, Circle CI, Azure Pipelines, automated testing, CI tools, CI job, testing workflow, test reports, input variables, environment configuration, custom variables
 ---
 
 Testomat.io allows executing tests on CI from its interface.

@@ -6,13 +6,8 @@ url: https://docs.testomat.io/integrations/report-notifications/ms-teams
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/115186669-ca320800-a0ea-11eb-9a32-9984a9569427.DVyIJmc0_Z26Tsf7.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
-      content: Microsoft Teams integration, Testomat.io, notifications, incoming webhook, Webhook URL, test updates, software testing, report notifications, collaboration tools
+      content: Microsoft Teams integration, Testomat.io, failed test runs, Notification rules, Report Notifications, Add Notification Rule, publish report, public link, basic rules, advanced rules engine, detailed test run results, test management, test automation, software testing
 ---
 
 To send noitifcations in MS Teams, first you need to set up **Incoming Webhooks** for your channel.

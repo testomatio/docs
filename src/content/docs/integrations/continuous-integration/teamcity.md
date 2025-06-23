@@ -6,13 +6,8 @@ url: https://docs.testomat.io/integrations/continuous-integration/teamcity
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/New_VaIvGQ00_2024-08-26.ya6mJB8K_2glHuD.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
-      content: TeamCity, Testomat.io, CI/CD integration, automated testing, build configurations, access keys, test reporting, project parameters, test management
+      content: TeamCity, Testomat.io, CI/CD integration,  CI connection, CI Integration, TeamCity project, automated testing, build configurations, Access Token, access keys, test reporting, project parameters, test management, environment variables, automated tests
 ---
 
 Before configuring the TeamCity and Testomat.io integration, create a new project in your TeamCity workspace:

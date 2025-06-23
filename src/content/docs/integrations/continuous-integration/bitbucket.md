@@ -3,16 +3,11 @@ title: BitBucket Pipelines
 description: Integrate Bitbucket Pipelines with Testomat.io to streamline test execution and reporting. This guide explains setting up API tokens, configuring pipeline parameters, and running tests with environment variables like TESTOMATIO. It includes instructions for handling grep options, on-premise setups, and connecting Testomat.io for seamless CI/CD integration.
 type: article
 url: https://docs.testomat.io/integrations/continuous-integration/bitbucket
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/New_RtsIVB63_2024-08-26.Bw6arZ-4_Z103qFK.webp
-      
+head:  
   - tag: meta
     attrs:
       name: keywords
-      content: Bitbucket Pipelines, Testomat.io, CI/CD integration, automated testing, test reporting, API tokens, environment variables, test management, on-premise setups
+      content: Bitbucket Pipelines, Testomat.io, CI/CD integration, CI connection, CI Integration, automated testing, test reporting, API tokens, environment variables, test management, on-premise setups
 ---
 
 To connect BitBucket to Testomat.io you will need a API Token created in your BitBucket account.
