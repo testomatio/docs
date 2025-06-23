@@ -128,8 +128,10 @@ In previous section we used `tag` in the query. `tag` is an allowed query variab
 |               |                                               | `created_at <= '2023-12-31'`                                                                                             |
 | updated_at    | Match tests by last update                    | `updated_at >= 3.days_ago`                                                                                               |
 |               |                                               | `updated_at <= '2023-12-31'`                                                                                             |
-| run_at        | Match tests by last execution date            | `run_at < 1.week_ago`                                                                                                    |
-|               |                                               | `run_at == today()`                                                                                                      |
+| last_run_at   | Match tests by last execution date            | `last_run_at < 1.week_ago`                                                                                               |
+|               |                                               | `last_run_at == today()`                                                                                                 |
+| executed_at   | Match tests by execution date                 | `executed_at < 1.week_ago`                                                                                               |
+|               |                                               | `executed_at == today()`                                                                                                 |
 | created_by    | Match tests by author's name                  | `created_by == 'Antonio Primus'`                                                                                         |
 | assigned_to   | Match tests by assignee's name                | `assigned_to == 'Antonio Primus'`                                                                                        |
 | suite         | Match tests inside a folder or suite          | `suite % 'Checkout'`                                                                                                     |
@@ -167,6 +169,8 @@ Before diving into the details of variables, it's important to understand that v
 |                   |                                                                      | `title % 'Manual tests'`                                      |
 | plan              | Match runs by plan                                                   | `plan == '{PLAN_ID}'`                                         |
 |                   |                                                                      | `plan % 'Smoke tests'`                                        |
+| rungroup          | Match runs by rungroup title                                         | `rungroup == '{RUNGROUP_ID}'`                                 |
+|                   |                                                                      | `rungroup % 'Rungroup Title'`                                 |
 | env               | Match runs by environment                                            | `env == 'Production'`                                         |
 |                   |                                                                      | `env IN ['Windows', 'Linux']`                                 |
 | tag               | Match runs by tag                                                    | `tag == 'slow'`                                               |
@@ -202,6 +206,8 @@ Before diving into the details of variables, it's important to understand that v
 | has_assigned_to   | Match runs containing tests assigned to specific users               | `has_assigned_to IN ['John Doe', 'Jane Smith']`               |
 | has_retries       | Match runs containing tests with retries                             | `has_retries > 2`                                             |
 | has_test_duration | Match runs containing tests with specific durations                  | `has_test_duration <= 1.minute`                               |
+| has_priority      | Match runs containing tests with specific priority                   | `has_priority in ['low', 'critical']`                         |
+|                   |                                                                      | `has_priority == 'important'`                                 |
 | created_at        | Match runs by creation time                                          | `created_at <= 1.week_ago`                                    |
 | updated_at        | Match runs by last update                                            | `updated_at >= 5.days_ago`                                    |
 | launched_at       | Match runs by launch time                                            | `launched_at > 2.days_ago AND launched_at < 1000.seconds_ago` |
