@@ -6,11 +6,6 @@ url: https://docs.testomat.io/project/bdd_editor
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/class_editor.DFw30t7Y_1wUwhr.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: test design, test cases, test management, test automation, testing techniques, Testomat.io, BDD, Gherkin, Cucumber, test scenarios, project workflow, software testing
 ---

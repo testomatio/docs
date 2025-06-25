@@ -6,11 +6,6 @@ url: https://docs.testomat.io/project/tests
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/class_editor.DFw30t7Y_1wUwhr.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: test case creation, test design, test management, test automation, testing tools, Testomat.io, software testing, test scenarios, automated tests, testing workflow
 ---

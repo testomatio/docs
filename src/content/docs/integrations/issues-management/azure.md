@@ -3,12 +3,7 @@ title: Azure DevOps Configuration
 description: Integrate Azure DevOps with Testomat.io for efficient issue tracking and test management. This guide explains setting up a profile using an Azure DevOps personal access token, organization name, and project name. Once connected, users can link tests or create defects directly in Azure DevOps with all necessary test data and references.
 type: article
 url: https://docs.testomat.io/integrations/issues-management/azure
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/202862865-0d592bdf-9eb8-47bf-9a26-197ac7372c5e.Bj2zkF4G_vFBly.webp
-      
+head: 
   - tag: meta
     attrs:
       name: keywords
