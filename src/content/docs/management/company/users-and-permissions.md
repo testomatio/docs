@@ -3,12 +3,7 @@ title: Users and Permissions
 description: Explore how Testomat.io simplifies managing teams and subscriptions with the Companies feature. This guide explains how to invite and manage users, assign roles (like Owner, Manager, QA, and Read-Only), and create or assign teams to projects. It also covers managing accountant users, archiving projects, and maintaining efficient team workflows.
 type: article
 url: https://docs.testomat.io/management/company
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/139676288-74ad80ee-6eb7-41c6-af59-fb7d5e115283.P9abRdTD_ZNRBUO.webp
-      
+head:    
   - tag: meta
     attrs:
       name: keywords

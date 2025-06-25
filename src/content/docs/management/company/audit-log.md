@@ -6,11 +6,6 @@ url: https://docs.testomat.io/management/company/audit-log
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/139676288-74ad80ee-6eb7-41c6-af59-fb7d5e115283.P9abRdTD_ZNRBUO.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, companies, team management, roles, project access, company owner, audit log, activity history
 ---

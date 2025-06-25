@@ -3,12 +3,7 @@ title: Import Tests From QMetry
 description: Learn how to import tests from QMetry using a customizable migration script for more advanced, tailored imports. 
 type: article
 url: https://docs.testomat.io/project/import-export/import-tests-from-qmetry
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/149749728-40f8b5b0-f945-4a41-b1f7-62b11d45a774.DssWsV2b_ZCxRTl.webp
-      
+head: 
   - tag: meta
     attrs:
       name: keywords
