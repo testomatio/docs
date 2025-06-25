@@ -1,6 +1,6 @@
 ---
-title: Bulk Edit
-description: Learn how to use the Bulk Edit feature in Testomat.io to efficiently manage large test projects. This guide explains how to restructure suites and tests, reorder, create, or delete tests in YAML format, and apply changes with live previews. It also covers keyboard shortcuts, file patterns, and bulk test creation for improved test management.
+title: Using Bulk Edit and YAML Format in Testomat.io
+description: Discover how to manage large test projects in Testomat.io using the Bulk Edit feature. Learn how to restructure test suites, create and delete tests using YAML format, preview changes, and use keyboard shortcuts for efficient test management.
 type: article
 url: https://docs.testomat.io/advanced/bulk-edit-folder
 head:
@@ -15,7 +15,7 @@ head:
       content: bulk edit, test management, Testomat.io, YAML, test suite, reorder tests, create tests, delete tests, bulk test creation, file patterns, test restructuring, automation
 ---
 
-Bulk edit is an advanced tool that allows to restructure tests in a project. With Bulk edit, you can
+Bulk Edit is an advanced tool that allows to restructure tests within a project. With Bulk edit, you can
 
 * reorder tests
 * create new suites
@@ -26,13 +26,34 @@ Bulk edit is an advanced tool that allows to restructure tests in a project. Wit
 
 Bulk edit mode can be opened from the Tests screen:
 
-![image](./images/107284429-7e1d7400-6a66-11eb-8b34-651d914d8b69.png)
+![How to enable bulk edit in Testomat.io interface](./images/enabling_bulk_edit.png)
 
 A bulk editor may look confusing at first:
 
-![image](./images/107284522-9f7e6000-6a66-11eb-9ba3-1a9f91fa143f.png)
+![Bulk editor overeview](./images/Bulk_editor_review.png)
 
-It has an editor with a project represented in text format, a live-preview and a button to apply changes. Don't worry, clicking "Preview" won't execute any changes on the project. You will see the list of planned changes and a confirmation button to accept them. To make yourself comfortable with bulk editor follow the next sections:
+## Bulk Editor Overview
+
+The Bulk Editor provides a powerful interface for managing your project in a structured text format. Here's a breakdown of its key features:
+
+1. **Text-Based Editor** - Edit your project directly in YAML format for precise control and bulk updates.
+
+2. **Live Preview** - Instantly see a visual representation of your changes as you make them.
+
+3. **YAML Guide Link** - Access a quick reference guide to better understand and work with the YAML format.
+
+4. **‘Learn More’ Button** - Opens a mini-tutorial section with tips and examples for using the Bulk Editor effectively.
+
+5. **‘Read Docs’ Link** - Redirects you to the official [Testomatio documentation]([https://testomatio.com/docs](https://docs.testomat.io/advanced/bulk-edit-folder/)) for in-depth guidance.
+
+6. **‘Show Tests’ Toggle** - Switch between viewing both test suites and test cases or just the test suites.
+
+7. **‘Preview’ Button**  - Displays a summary of your changes before applying them.  
+   > *Note:* Don't worry, clicking "Preview" won't execute any changes on the project. You will see the list of planned changes and a confirmation button to accept them. 
+
+8. **‘Cancel’ Button** - Closes the editor and discards any unsaved changes.
+
+To make yourself comfortable with bulk editor follow the next sections:
 
 ## YAML format
 
@@ -45,7 +66,7 @@ In "Bulk Edit" mode all suites and tests are presented in YAML format.
 ![image](./images/107280279-cc2f7900-6a60-11eb-80fb-5c29d105ee2f.png)
 
 It may be hard to understand it from start. 
-But let's explain it step by step:
+Let's explain it step by step:
 
 * On the top-level we have a list of suites:
 * Each element on the top level should start with `- ` char to indicate that it is a part of suites list.
@@ -108,11 +129,11 @@ Let's sum up what we learned so far:
 
 * listing existing suites and tests
 
-![image](./images/107282607-e28b0400-6a63-11eb-9c72-a2e28935a0f0.png)
+![Listing existing suites and tests](./images/SuiteID-TestID.png)
 
-* adding a new tests and suites:
+* adding new tests and suites:
 
-![image](./images/107282791-25e57280-6a64-11eb-8b98-bcc8f4c141e1.png)
+![image](./images/Bulk_edit_adding_elements.png)
 
 ## Keyboard Shortcuts
 
@@ -135,57 +156,3 @@ To unleash the full power of bulk edit learn these keyboard combinations that wi
 
 ![replace](./images/107284209-1830ec80-6a66-11eb-9737-3e672ff149d3.gif)
 
-
-
-## Demos
-
-Let's see how powerful bulk edit mode is in actoin.
-
-### Creating Tests in Empty Suites
-
-Let's create multiple tests in different suites with bulk edit
-
-<video width="960" controls>
-  <source src="https://user-images.githubusercontent.com/220264/107265760-55d54b80-6a4d-11eb-9de4-80191bccace1.mp4" type="video/mp4">
-</video>
-
-### Replace Root Suite
-
-If a project contains only one root suite it is possible to remove it and move all tests higher to make them more visible.
-
-<video width="960" controls>
-  <source src="https://user-images.githubusercontent.com/220264/107341764-113ac600-6ac8-11eb-9b6e-d34dcacc4115.mp4" type="video/mp4">
-</video>
-
-
-
-## File and Folder Patterns
-
-In order to reflect the BDD paradigm in the best way and to support the consistency of the project structure, Testomat.io provides a Folder and File pattern. 
-A suite with tests is considered to be a **file** (like a file with tests in your filesystem).
-A suite that contains other suites is a **folder** (like in a filesystem).
-So the main rule here is **suite can contain only tests or suites but not both**.
-
-## How to Use Bulk Edit on Suite Level
-
-Your project may contain a huge amount of tests and suites. So it will be more convenient to edit tests at the suite level. See how it works: 
-
-![CleanShot 2022-05-23 at 16 36 22@2x](./images/169832053-494c7134-e117-4cc9-8837-2272e69e790b.jpg)
-
-![CleanShot 2022-05-23 at 16 40 43@2x](./images/169832839-f67f3cad-73b7-43ff-ba00-b4ecd4296c2f.jpg)
-
-![CleanShot 2022-05-23 at 16 43 01@2x](./images/169833139-498a319e-5449-4c92-b16e-8e7c08987150.jpg)
-
-[![CleanShot 2022-05-27 at 20 21 06@2x](./images/170759894-469aac18-08b7-407f-938e-eda4037dc4b8.jpg)](https://youtu.be/Cp7XJynF7u4)
-
-## Bulk Tests Creation
-
-You want to enter only tests' names and save them for further completion. Our Bulk Tests Creation feature is intended to help you. You only need to create a suite, enable Bulk toggle, enter a test per line and click Create. 
-
-![CleanShot 2022-05-24 at 11 33 02@2x](./images/169987645-2cb28827-6569-4457-bf88-112c3c9d9c9e.jpg)
-
-![CleanShot 2022-05-24 at 11 38 38@2x](./images/169989236-8963210b-a603-4759-879e-76e76d2830d2.jpg)
-
-![CleanShot 2022-05-24 at 11 44 10@2x](./images/169989963-978d9064-245b-486f-9715-2a9e349b5199.jpg)
-
-[![CleanShot 2022-05-27 at 20 19 26@2x](./images/170759254-e6d4379b-733e-4521-98f3-abccca6eaffa.jpg)](https://youtu.be/jnJwZsRQjTQ)
