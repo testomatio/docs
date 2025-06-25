@@ -233,7 +233,9 @@ export default defineConfig({
 							label: 'Bulk Edit',
 							collapsed: true,
 							items: [
-								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder' }
+								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder' },
+								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder-demos' },
+								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder-suites-and-tests' }
 							],
 						},
 						{
