@@ -3,12 +3,7 @@ title: Import Tests From TMS
 description: Learn how to import tests from CSV or XLS files into Testomat.io. This guide covers the process of importing test cases from systems like TestRail, Zephyr, Qase, and more. It also introduces an experimental feature to convert CSV/XLS data into BDD scenarios, and provides instructions for creating custom XLS files for importing.
 type: article
 url: https://docs.testomat.io/project/import-export/import-tests-from-csvxls
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/149755082-09d0526f-5950-4b03-bb7c-dda84f3ea9c0.B2bV02xq_Z2qBOs3.webp
-      
+head:    
   - tag: meta
     attrs:
       name: keywords

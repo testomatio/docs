@@ -6,11 +6,6 @@ url: https://docs.testomat.io/management/project/templates
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/make-default.DaaTuaif_Z1WGTAO.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, templates, test templates, defect templates, template management, testing workflow, Jira integration, GitHub integration, test organization, default templates, QA management
 ---

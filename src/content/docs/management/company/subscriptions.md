@@ -6,11 +6,6 @@ url: https://docs.testomat.io/management/company/subscriptions
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/134368580-7aa5e926-39df-4a03-ae10-4c54d4d4f864.DB0OAJ5b_qJwDU.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, subscriptions, subscription levels, billing, upgrade subscription, team management, Professional plan, Enterprise plan, Free plan, QA tools, project access
 ---

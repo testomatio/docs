@@ -6,11 +6,6 @@ url: https://docs.testomat.io/project/import-export/import-tests-from-xray
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/149749728-40f8b5b0-f945-4a41-b1f7-62b11d45a774.DssWsV2b_ZCxRTl.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, CSV, XRay, test import, XRay migration, manual tests, automated tests, test management
 ---

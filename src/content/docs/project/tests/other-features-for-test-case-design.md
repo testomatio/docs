@@ -6,11 +6,6 @@ url: https://docs.testomat.io/project/test_design_features
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/class_editor.DFw30t7Y_1wUwhr.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: test design, test case management, test automation, Testomat.io, test organization, software testing, testing tools, test suites, test structure, multiselection, labels, tags
 ---

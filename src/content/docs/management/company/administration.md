@@ -6,11 +6,6 @@ url: https://docs.testomat.io/management/company/administration
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/New_Hj9V2azU_2024-10-15.BJeDKnnV_O3QYE.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, administration, company management, project oversight, team management, company owner, project control, user roles, organizational tools, test management platform
 ---
