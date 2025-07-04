@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: https://docs.testomat.io/_astro/shared_artifacts.B-l29chE_ZH695H.webp
+      content: https://docs.testomat.io/_astro/shared_artifacts.B-l29chE_ZH695H.webp 
       
   - tag: meta
     attrs:
