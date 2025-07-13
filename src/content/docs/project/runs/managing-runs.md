@@ -97,7 +97,7 @@ You can create test cases directly within a test Run, avoiding additional naviga
 
 ## RunGroups
 
-First, let's clarify what Run Groups are in Testomat.io. 
+First, let's clarify what Run Groups are in Testomat.io.
 They allow you to organize and group multiple test runs together based on criteria like sprint, release, functional area, or any other logical grouping. This helps in analyzing aggregated results and getting a consolidated view of your testing efforts.
 
 To create a new Run Group, click on New Group button:
@@ -273,14 +273,14 @@ For instance, let's say we have 2 runs inside a Rungroup with the same tests A a
 
 What counter numbers should contain Rungroup? Both answers: "Passed: 2, Failed: 0" or "Failed 2, Passed 0" are absolutely valid depending on how you calculate those numbers. That's why Testomat.io provides customizable Merge strategies:
 
-- **Realistic:** this strategy is based on test results from the last executed run (excluding skipped tests). If your Run Group includes test runs with different test cases, it will summarize and display the results from the last executed runs with unique test cases. 
-In our example, results will be next: **Passed: 2, Failed: 0**, as Run 2 was added later.
+- **Realistic:** this strategy is based on test results from the last executed run (excluding skipped tests). If your Run Group includes test runs with different test cases, it will summarize and display the results from the last executed runs with unique test cases.
+  In our example, results will be next: **Passed: 2, Failed: 0**, as Run 2 was added later.
 
-- **Optimistic:** this strategy will mark a test as passed if it passed in at least one of the runs within the group, even if it failed in others. This approach provides a more lenient view, focusing on the positive outcomes. 
-In other words, it prefers passed tests over failed: **Passed: 2, Failed: 0** in our example.
+- **Optimistic:** this strategy will mark a test as passed if it passed in at least one of the runs within the group, even if it failed in others. This approach provides a more lenient view, focusing on the positive outcomes.
+  In other words, it prefers passed tests over failed: **Passed: 2, Failed: 0** in our example.
 
-- **Pessimistic:** unlike the optimistic strategy, this strategy will mark a test as failed if it failed in at least one of the runs within the group. It prioritizes identifying potential issues. 
-Simply to say, it prefers failed tests over passed: **Passed: 0, Failed: 2**.
+- **Pessimistic:** unlike the optimistic strategy, this strategy will mark a test as failed if it failed in at least one of the runs within the group. It prioritizes identifying potential issues.
+  Simply to say, it prefers failed tests over passed: **Passed: 0, Failed: 2**.
 
 ### Merge Strategy Examples
 
@@ -337,18 +337,18 @@ Your merged run will appear in the list of runs on the Runs page
 ## How to Pin a Run or Run Group
 
 Testomat.io allows users to pin Run Groups or individual Runs to the top of the Dashboard for quick access to critical or frequently used tests. This supports faster navigation, improved focus, and customizable workflows — ideal for monitoring regression tests, environment-specific runs, or production hotfixes.
- 
+
 1. Go to the **Runs** tab.
 2. Find the Run or Run Group you want to pin.
 3. Click the **three dots menu** aligned next to the item.
 4. Choose **"Pin"** from the dropdown options.
 5. The selected Run or Run Group will now appear **pinned at the top** of the list for quick and easy access.
 
-![Pin a Run](<images/Pin_a_Run.png>)
+![Pin a Run](images/Pin_a_Run.png)
 
 **Pin** option is also available in the detailed view menu.
 
-![Pin a Run Detailed Menu view](<images/Pin_a_Run_Detailed_Menu.png>)
+![Pin a Run Detailed Menu view](images/Pin_a_Run_Detailed_Menu.png)
 
 ## Relaunch Runs
 
@@ -415,13 +415,27 @@ Incomplete Runs or Groups with such runs cannot be archived forcibly or automati
 
 Archived runs find a new home in the dedicated **Runs Archive** section. This segregated space ensures that your archived data is easily accessible without cluttering the main board. The Runs Archive comes equipped with filtering capabilities.
 
-![Runs Archive](images/att6_5226.png)
-
-You can set the period after which old Test Runs will be deleted from the archive. You can do this through the menu button on the Runs Archive page, then click on the **Purge Old Runs** button, specify the period and confirm. Alternatively, you can specify a term in **Project Settings**.
+![Runs Archive](./images/att6_5226.png)
 
 In addition, all archived runs can be displayed as a group, which can be organized by clicking the **'Rungroup Structure'** button.
 
-![Rungroup Structure button](images/att_5226.png)
+![Rungroup Structure button](./images/att_5226.png)
+
+#### Purge Old Runs
+
+You can configure the storage period for all test runs — **both archived and unarchived** — directly from the Runs Archive page. Once this period is exceeded, runs are permanently deleted across the entire system.
+
+1. Click the extra menu button
+2. Click the **'Purge Old Runs'** option
+
+![Purge Old Runs](./images/att1_410.png)
+
+3. Specify how many days you want to keep the runs
+4. Click **'Save'** button
+
+![Save Purge Old Runs](./images/att2_410.png)
+
+Alternatively, you can configure this setting under [Purge Old Runs in Settings](https://docs.testomat.io/management/project/settings/#purge-old-runs).
 
 ### Groups Archive
 
@@ -489,7 +503,7 @@ Multiselection allows the bulk application options to many runs with one click. 
 Testomat.io provides option to export Run Reports as spreadsheet so you can get your data in xlsx file.
 See how it works.
 
-**Download few run reports in one file**: 
+**Download few run reports in one file**:
 
 1. Go to Runs.
 2. Enable **'Multi-select'**.
@@ -499,7 +513,8 @@ See how it works.
 
 ![Testomat.io - export as Spreadsheet](./images/Export_1.png)
 
-**Download a separate Run Report**: 
+**Download a separate Run Report**:
+
 1. Go to Runs.
 2. Select Run Report.
 3. Click on **'Report'** button.
@@ -513,7 +528,7 @@ See how it works.
 
 ## How To Export Run Report in PDF Format
 
-Testomat.io also allows you to export your test run results as a PDF report. This feature enables easy sharing and archiving of test outcomes outside of Testomat.io. 
+Testomat.io also allows you to export your test run results as a PDF report. This feature enables easy sharing and archiving of test outcomes outside of Testomat.io.
 
 **There are two ways to generate a structured report with test execution details in PDF format:**
 
@@ -559,7 +574,7 @@ Select test runs and see a visual display of the similarities and differences. C
 
 ![Testomat.io - Compare Test Runs](./images/compare-runs.gif)
 
-Also this feature is available for Run Groups and allows you to compare test results from different runs within a single run group. 
+Also this feature is available for Run Groups and allows you to compare test results from different runs within a single run group.
 
 1. Open Run group.
 2. Click 'Combined Report' button.
