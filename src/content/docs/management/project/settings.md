@@ -66,7 +66,7 @@ For more details on **’How to Manage Company Roles’**, please explore here <
 
 ## Purge Old Runs
 
-Archived test runs are stored in the dedicated [Runs Archive](https://docs.testomat.io/project/runs/managing-runs/#runs-archive) section, providing easy access to historical data without cluttering the main board. You can manage how long old test runs are kept in the archive and automatically delete them after a specified number of days (up to 365 days).
+Archived test runs are stored in the dedicated [Runs Archive](https://docs.testomat.io/project/runs/managing-runs/#runs-archive) section, providing easy access to historical data without cluttering the main board. You can manage how long old test runs are kept in the project and automatically delete them after a specified number of days (up to 365 days). This action applies to all runs in the project.
 
 1. Click on **Settings** in the sidebar
 2. Click the **Project** button
