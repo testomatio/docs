@@ -155,7 +155,7 @@ Test Summary is created:
 
 :::
 
-## Generate Code Based on Test Casse Description
+## Generate Code Based on Test Case Description
 
 Provide a test description, and the AI generates the corresponding test automation code. Please note that generated code may be not completely comprehensive.
 
