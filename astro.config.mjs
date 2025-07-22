@@ -361,7 +361,7 @@ export default defineConfig({
         					label: 'Users and Permissions',
         					collapsed: true,
         					items: [
-          						{ label: 'Overview', link: '/management/company/users-and-permissions/managing-users-and-permissions' },
+          						{ label: 'Overview', link: '/management/company/users-and-permissions' },
           						{ label: 'Teams', link: '/management/company/users-and-permissions/teams' },
           						{ label: 'Read-Only User Role', link: '/management/company/users-and-permissions/read-only-user' },
           						{ label: 'Accountant User Role', link: '/management/company/users-and-permissions/accountant' },

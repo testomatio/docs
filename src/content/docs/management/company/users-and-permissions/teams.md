@@ -102,7 +102,7 @@ Once added, all team members automatically gain access to these projects.
 
 :::note
 
-Users must already be members of the company. Learn how to invite users [here](https://docs.testomat.io/management/company/users-and-permissions/managing-users-and-permissions/#how-to-invite-a-user-to-a-company).
+Users must already be members of the company. Learn how to invite users [here](https://docs.testomat.io/management/company/users-and-permissions/#how-to-invite-a-user-to-a-company).
 
 :::
 
