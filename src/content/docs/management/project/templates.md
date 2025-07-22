@@ -21,7 +21,7 @@ Templates provide a structured way to standardize test cases, test suites, code 
 - **Defect Description Templates**: used to structure the description field for defects inside Testomat;
 - **Meta Templates**: used to define custom metadata fields that are shown in test run reports and help enrich report context;
 
-:::note
+:::note 
 
 You can mark any template as the default template during creation or editing by checking the **Default** checkbox. Only one default template can exist in each type. If a template is set, it is automatically applied when creating new tests, suites, defects, etc.
 
