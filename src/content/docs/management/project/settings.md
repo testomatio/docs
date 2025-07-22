@@ -76,6 +76,7 @@ To help manage storage and keep your test runs organized, the system automatical
 
 To adjust the storage period:
 
+
 1. Click on **Settings** in the sidebar
 2. Click the **Project** button
 3. In the **Purge Old Runs** section, set the number of days (up to 365) you wish to keep the test runs
