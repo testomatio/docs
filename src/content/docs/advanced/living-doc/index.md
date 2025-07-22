@@ -79,13 +79,13 @@ To embed a test you have to :
 To embed tests by `@smoke` tag you need to follow this template (don't forget to replace {project_slug} with the real value):
 
 ```
-<iframe src="https://beta.testomat.io/docs/projects/{project_slug}/tests/embed?tag=@smoke"></iframe>
+<iframe src="https://app.testomat.io/docs/projects/{project_slug}/tests/embed?tag=@smoke"></iframe>
 ```
 
 To embed test with Jira id you need to follow this template (don't forget to replace {project_slug} and {jira_id} with the real values):
 
 ```
-<iframe src="https://beta.testomat.io/docs/projects/{project_slug}/tests/embed?jira_id={jira_id}"></iframe>
+<iframe src="https://app.testomat.io/docs/projects/{project_slug}/tests/embed?jira_id={jira_id}"></iframe>
 ```
 
 ## Tests parameters
@@ -100,7 +100,7 @@ You can provide extra parameters in the query string:
 Example
 
 ```
-<iframe src="https://beta.testomat.io/docs/projects/{project_slug}/tests/embed?tag=@smoke&frame_params[expand_all]=1&frame_params[hide_code]=1"></iframe>
+<iframe src="https://app.testomat.io/docs/projects/{project_slug}/tests/embed?tag=@smoke&frame_params[expand_all]=1&frame_params[hide_code]=1"></iframe>
 ```
 
 ## Embed Link For Confluence 
