@@ -39,8 +39,6 @@ You can create test cases directly within a test Run, avoiding additional naviga
 5. Enter the test case details in the provided field.
 6. Click the checkmark **✔️** icon to add the new test case, or the **X** icon to discard it.
 
-![Testomat.io - Create test case](./images/Test_Case_Creation.png)
-
 :::note
 
 The **'Create Test'** button can be hidden via the **'Hide Test Creation'** option in the **'Extra menu'** dropdown menu.

@@ -1,0 +1,228 @@
+---
+title: Users Roles & Access Overview
+description: Manage users and permissions in Testomat.io with ease. Learn how to invite users, assign roles (Owner, Manager, QA, Accountant, Read-Only), add users to projects, manage teams, and perform bulk user management efficiently.
+type: article
+url: https://docs.testomat.io/management/company/users-and-permissions
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: user roles, access control, test management permissions, company roles, project roles, invite users, manage user roles, assign permissions, team management, read-only access, bulk user management, Testomat.io user roles, Testomat.io access control
+---
+
+import DirectoryLinks from "/src/components/DirectoryLinks.astro";
+
+<DirectoryLinks directory="management/company/users-and-permissions" />
+
+Managing users and permissions in Testomat.io is essential for effective team collaboration and project organization. Everything starts at the Company level — this is where you create your team space, invite users, and assign roles.
+
+Before you begin managing users and their permissions, make sure your company is created. If you haven’t created a company yet, follow this guide to get started: [How to Create a Company](https://docs.testomat.io/management/company/administration/#how-to-create-a-company)
+
+:::note
+
+Each user may belong to only one company to ensure project separation and clear access control.
+
+:::
+
+On the Companies page, you have a list of companies you participate in with mentioning your role in them.
+
+![Company dashboard](./images/att1_356.png)
+
+Once your company is ready, you can:
+
+- Invite users and assign roles (Owner, Manager, QA, Accountant, or Read-Only)
+- Add users to specific projects within the company
+- Manage user permissions and roles at the company and project levels
+- Organize users into teams for easier access control
+- Use bulk management options for large teams
+
+Use this section to learn how to effectively manage your users and ensure your team has the right access to get the job done.
+
+## Users Roles Overview
+
+Testomat.io provides different roles within projects and companies to make your testing process more convenient.
+Different team members have different access levels to management options.
+
+### Roles Within a Company
+
+- **Owner** is a team member who created a company, can purchase a subscription, invite/delete members to a company and a project, change other team members' roles inside the company, create projects, and has access to all features within the project.
+- **Manager** is a team member who can purchase a subscription, create projects, invite members to a company and a project, can change other team members' roles inside the company, except the owner role, and has access to all features within the project.
+- **QA** is a team member who can create projects and has access to all features within the project.
+- **Accountant** is a team member who can only update subscriptions and it is free of charge.
+- **Read-only** is a team member who has permissions for viewing or reading information, but can't make any changes. It is free of charge and available in Professional and Enterprise plans.
+
+### Roles Within a Project
+
+- **Owner** is a team member who created a project, can invite/delete members and Support user to a project, change other team members' roles inside the project, and has access to all features within the project.
+- **Manager** is a team member who has almost the same rights as the project owner: can invite/delete members and Support user to a project, has access to all features within the project but can't change other team members' roles inside the project.
+- **Regular User** is a team member who has access to all project features but limited access to project settings, can't invite or delete members and Support user to a project, nor change their roles within the project.
+- **Read-only** is a team member who has permissions for viewing or reading information, but can't make any changes. All team members with a read-only role at the company level automatically have a read-only role at the project level, and this role can only be changed to a non-read-only role at the company level.
+
+:::note
+
+The role within the **Company** does not always match the role within the **Project**. For example, user with the owner role at the Company level may be added to the Project within the Company as the regular user or read-only.
+As well, the same user within a Company may have different roles on different projects.
+
+:::
+
+## How to Invite a User to a Company
+
+Follow these steps to invite users to your company:
+
+1. Go to the 'Companies' page.
+2. Click 'Invite' button.
+
+![Testomatio - Invite_users](./images/Invite_users_n.png)
+
+3. Enter user's mail (to invite multiple users, use a comma as a separator and enter the users' emails that you need).
+
+![Testomatio - Invite_users](./images/Invite_users_2n.png)
+
+4. Select a role 'Accountant User' or 'Read Only Mode', if needed.
+
+5. Click 'Invite' button.
+
+![Testomatio - Invite_users](./images/Invite_users_3n.png)
+
+After the users are added to a Company you can add them to your Project.
+
+## How to Add a User to a Project
+
+There are two ways to add a user to a Project: from the **Company Settings** or directly from the **Project Settings**.
+
+### How to Add a User to a Project from the Company Settings
+
+1. Go to the ‘Companies’ page.
+2. Select Company.
+
+![Testomat.io - Company](./images/Team_1n.png)
+
+3. Click on ‘Actions’ button and pick ‘Projects Access’ option or click on member’s name.
+
+![Testomatio - Invite_users](./images/Invite_users_4n.png)
+
+4. Choose the project via ‘Add to Project’ button or add to all projects with one click via ‘Add to All Projects’ button.
+
+![Testomatio - Invite_users](./images/Invite_users_5n.png)
+
+5. See that a member was successfully added to projects and click ‘Back’ button.
+
+![Testomatio - Invite_users](./images/Invite_users_6n_.png)
+
+6. See that projects appeared in added member’s line.
+
+![Testomatio - Invite_users](./images/Invite_users_7n.png)
+
+### How to Add a User to a Project from the Project Settings
+
+1. Go to the ‘Dashboard’ page.
+2. Select Company and Project.
+
+![Testomat.io - Project](./images/User_1.png)
+
+3. Go to Settings-> Users.
+4. Click ‘Invite’ button.
+
+![Testomat.io - Project](./images/User_2.png)
+
+5. Choose a User from the dropdown list.
+6. Click ‘Send’ button.
+
+![Testomat.io - Project](./images/User_3.png)
+
+7. Invitation has been sent.
+
+![Testomat.io - Project](./images/User_4.png)
+
+:::note
+
+Only company members can be added to the Project via Project Settings.
+
+:::
+
+## How to Manage Team Members on Company Level
+
+All invited members have a **QA** role by default. You can change the member's role on the Company Team Members page ('Companies' page -> Select Company -> 'Actions' button).
+
+![Testomatio - Manage team member](./images/Manage_team_member_1n.png)
+
+You can delete a team member by clicking on the 'Delete' button.
+
+![Testomatio - Delete team member](./images/Delete_team_member_n.png)
+
+With this action deleted team members will be moved to the **Removed** section.
+
+![Testomatio - Delete team member](./images/Delete_team_member_2n.png)
+
+So you can reactivate them at any time with previous role by clicking on the 'Reactivate' button or with Read-Only permissions by clicking on the 'Make Read-Only' button
+
+![Testomatio - Reactivate team member](./images/Reactivate_n.png)
+
+## How to Manage Team Members on Project Level
+
+You can manage team members not only at **Company Level** but as well at **Project Level**.
+
+All members invited to the project have a **Regular User** role by default. You can change the member's role within the project on the Users page (Select Project -> Settings -> Users -> click on 'Extra menu' button).
+
+![Testomatio - Manage team member Project](./images/Users_roles.png)
+
+You can delete a team member from the project by clicking on the 'Remove' button.
+
+![Testomatio - Manage team member Project](./images/Remove_user.png)
+
+:::note
+
+In case, if a user deleted at the **company level** - they will be automatically **deleted from all projects** within the company.
+In case, if a user removed at the **project level** - they will be deleted **only from that project**, but remain in the company and can be added to a project again at any time.
+
+:::
+
+## Bulk User Management
+
+For faster and more convenient user management, Testomat.io provides a Bulk Actions menu. This menu appears when you select one or more users via checkboxes:
+
+- Selecting the checkbox in the header row selects all users on the page
+- Selecting a checkbox next to a specific user selects only that user
+
+Once selected, a dropdown menu and Execute button will appear, allowing you to apply actions to one or multiple users at once.
+
+![Bulk Actions](./images/att2_356.png)
+
+### **Available Bulk Actions**
+
+Here’s what you can do from the bulk actions menu:
+
+- Add to Project(s): Add selected users to one or more projects within the company
+- Remove from Project(s): Remove selected users from one or more projects
+- Make Manager: Assign the 'Manager' role to selected users at the company level
+- Make QA: Assign the 'QA' role to selected users at the company level
+- Make Accountant: Assign the 'Accountant' role at the company level
+- Make Read-only: Change user access to read-only mode
+- Grant Write Access: Upgrade from read-only to a regular role (QA or Manager depending on previous role)
+- Delete Users: Remove selected users from the company (they will be moved to the Removed section)
+- Export Users: Download selected users’ data into .csv and .xlsx files (includes Name, Email, Role, Status, etc.)
+
+Using bulk actions is especially helpful for managing teams at scale — saving time and reducing manual effort when updating permissions or organizing access across multiple projects.
+
+## Export Users List
+
+You may need to get data about users who are members of your company. Fortunately, Testomat.io makes it easy and convenient:
+
+![Testomat.io - Export Users List](./images/Export_Users_List_n.png)
+
+:::note
+
+Only users with Owner or Manager roles can export Users List
+
+:::
+
+The exported .csv file contains the following information about the company's users:
+
+- Name.
+- Email.
+- Role.
+- Status.
+- Paused At (UTC).
+- Last Login (UTC).
+
+![Testomat.io - Exported File](./images/Exported_File_n.png)

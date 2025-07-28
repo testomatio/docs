@@ -66,16 +66,22 @@ For more details on **’How to Manage Company Roles’**, please explore here <
 
 ## Purge Old Runs
 
-Archived test runs are stored in the dedicated [Runs Archive](https://docs.testomat.io/project/runs/managing-runs/#runs-archive) section, providing easy access to historical data without cluttering the main board. You can manage how long old test runs are kept in the archive and automatically delete them after a specified number of days (up to 365 days).
+To help manage storage and keep your test runs organized, the system automatically removes old runs based on a configurable storage period. Below are key details and guidelines about how this feature works and how you can control it:
+
+- By default, all test runs (both archived and unarchived) are stored for **90 days**
+- Only users with **Owner** or **Manager** roles can change the storage period to any value **up to 365 days**
+- Test runs (both archived and unarchived) that exceed the configured storage period are **automatically and permanently deleted** on a daily basis
+- Changing the storage period affects the next daily purge according to the new setting
+- Deletion is permanent and irreversible — deleted runs (both archived and unarchived) **cannot be restored**, even via the Pulse page
+
+To adjust the storage period:
+
 
 1. Click on **Settings** in the sidebar
 2. Click the **Project** button
 3. In the **Purge Old Runs** section, set the number of days (up to 365) you wish to keep the test runs
 4. Click the **Save** button to apply the changes
 
-After saving, a confirmation message will appear:
-**’Purge Old Runs settings have been successfully updated.’**
+After saving, a confirmation message will appear: **'Purge Old Runs settings have been successfully updated'**
 
-![Purge Old Runs settings have been successfully updated](images/att1_1207.png)
-
-Once the storage period has been configured, old test runs are automatically deleted on a daily basis according to the specified number of days, with a maximum storage period of 365 days.
+![Purge Old Runs settings have been successfully updated](./images/att_1207.png)

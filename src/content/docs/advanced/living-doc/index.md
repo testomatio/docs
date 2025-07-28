@@ -15,7 +15,22 @@ head:
       content: Living Documentation, Testomat.io, dynamic documentation, test management, Jira integration, test suites, embedding tests, iframe, real-time documentation, Confluence integration
 ---
 
-Testomatio allows generating Living Documentation which is a dynamic document that provides information that is current, accurate, and easy to understand.
+Living Documentation is a dynamic, always-up-to-date view of your tests, test suites and system behavior. Instead of relying on static documents that quickly become outdated, teams can use Living Documentation to share **test coverage, scenario details, and real-time results** directly within their development tools. Living Documentation provides a single source of truth that evolves with your code and test cases. In Testomat.io, this means your automated tests don’t just verify functionality — they also become readable, shareable, and traceable documentation that supports collaboration and decision-making across the team.
+
+- Non-technical stakeholders (e.g., Product Managers, Compliance Teams) can view test coverage and feature behavior without diving into code.
+Makes it easy to review acceptance criteria or BDD scenarios.
+
+- You can embed tests tied to specific Jira tickets directly in documentation or dashboards.
+Easily include documentation in Confluence pages, sprint reports, or product specs.
+
+- You can trace a test to a suite, feature, user story, or Jira ID.
+
+- In Behavior-Driven Development (BDD), living documentation becomes the specification.
+
+- Make tests or suites publicly viewable, or embed internally for team access.
+Useful for partners, clients, or external QA vendors.
+
+
 
 ## How To Enable Living Documentation
 
@@ -23,13 +38,10 @@ Living Documentation can be enabled in Project Settings:
 
 1. Go to Settings
 2. Click on the Project tab
-3. Click on the Enable Live Documentation checkbox
-4. Click on the Update button
-5. See the confirmation and generated link for Living Documentation
+3. Enable **Share Living Docs** toggle
+4. See the confirmation and generated link for Living Documentation
 
-![image](./images/126028691-257eb2a2-c8c2-43af-8cb4-260afecf6ea9.png)
-
-![image](./images/126028734-59df8280-2224-405f-960c-6a5de4a4b7d9.png)
+![Enabling Living Docs](./images/enabling_living_docs.png)
 
 ## How To Embed Living Documentation
 
@@ -41,36 +53,39 @@ Living documentation can be embedded into your website, you have a possibility t
 
 ## Suite
 
-To embed a suite you have to go to a suite page in living documentation and press the button
+To embed a suite you have to:
+1. Select a suite on a living documentation page.
+2. Open a drop-down menu under three dots (...) 
+3. Select **Copy embed URL** option.
+4. See the confirmation message that embed URL has been copied to your clipboard.
 
-![image](./images/130801014-45e91892-25a5-474b-9d49-031a6be18401.png)
+![Embed a suite](./images/embed_suite.png)
 
-Now embed URL is in your clipboard
-
-![image](./images/130801649-8e99f6ff-1632-44c7-a057-105c8dd2c2b8.png)
 
 ## Test
 
-To embed a test you have to go to a test page and press the button
+To embed a test you have to :
 
-![image](./images/130801915-38fdf9d1-d241-47ff-9424-fd40abe7e55d.png)
+1. Select a specific test on a living documentation page.
+2. Open a drop-down menu under three dots (...) 
+3. Select **Copy embed URL** option.
+4. See the confirmation message that embed URL has been copied to your clipboard.
 
-Now embed URL is in your clipboard
+![Embed a test](./images/embed_a_test.png)
 
-![image](./images/130802115-186917ac-ca9c-4200-80f9-bcaea4ae30a0.png)
 
 ## Tests by Tag or Jira ID
 
 To embed tests by `@smoke` tag you need to follow this template (don't forget to replace {project_slug} with the real value):
 
 ```
-<iframe src="https://beta.testomat.io/docs/projects/{project_slug}/tests/embed?tag=@smoke"></iframe>
+<iframe src="https://app.testomat.io/docs/projects/{project_slug}/tests/embed?tag=@smoke"></iframe>
 ```
 
 To embed test with Jira id you need to follow this template (don't forget to replace {project_slug} and {jira_id} with the real values):
 
 ```
-<iframe src="https://beta.testomat.io/docs/projects/{project_slug}/tests/embed?jira_id={jira_id}"></iframe>
+<iframe src="https://app.testomat.io/docs/projects/{project_slug}/tests/embed?jira_id={jira_id}"></iframe>
 ```
 
 ## Tests parameters
@@ -85,7 +100,7 @@ You can provide extra parameters in the query string:
 Example
 
 ```
-<iframe src="https://beta.testomat.io/docs/projects/{project_slug}/tests/embed?tag=@smoke&frame_params[expand_all]=1&frame_params[hide_code]=1"></iframe>
+<iframe src="https://app.testomat.io/docs/projects/{project_slug}/tests/embed?tag=@smoke&frame_params[expand_all]=1&frame_params[hide_code]=1"></iframe>
 ```
 
 ## Embed Link For Confluence 
@@ -93,21 +108,21 @@ Example
 With Testomat.io Living documentation, you can enrich your Confluence by adding tests or suites.
 This can be done within a Confluence page:
 
-1. click on the Insert button
-2. type 'iframe' in search field
-3. pick Iframe plugin
+1. Open your Confluence page editor - click Insert
+2. Type 'iframe' in search field
+3. Select Iframe plugin
 
-![image](./images/130810167-eb154e62-2722-425f-b469-72acdd83b2f8.png)
+![Iframe plugin in Confluence](./images/confluence_iframe.png)
 
-4. enter the embed URL you generated in the Living documentation
-5. fill in the fields of your choice
-6. click on Publish button
+4. Enter the embed URL you generated in the Living documentation
+5. Fill in the fields of your choice
 
-![image](./images/130811206-e30402e6-5fc2-4dd2-9638-8e5152813898.png)
+For example: display: block; border: none; height: 100vh; width: 100%; height:100%;
 
-Example 
+![Embed URL in Confluence](./images/confluence_embed_URLD.png)
 
-![image](./images/130814083-bab61314-ecd0-4510-858a-54eafdbe5418.png)
+6. Click Publish.
+
 
 
 

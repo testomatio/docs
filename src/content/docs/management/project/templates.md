@@ -6,11 +6,6 @@ url: https://docs.testomat.io/management/project/templates
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/make-default.DaaTuaif_Z1WGTAO.webp
-
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, templates, test templates, defect templates, template management, testing workflow, Jira integration, GitHub integration, test organization, default templates, QA management
 ---
@@ -26,7 +21,7 @@ Templates provide a structured way to standardize test cases, test suites, code 
 - **Defect Description Templates**: used to structure the description field for defects inside Testomat;
 - **Meta Templates**: used to define custom metadata fields that are shown in test run reports and help enrich report context;
 
-:::note
+:::note 
 
 You can mark any template as the default template during creation or editing by checking the **Default** checkbox. Only one default template can exist in each type. If a template is set, it is automatically applied when creating new tests, suites, defects, etc.
 
@@ -104,12 +99,69 @@ Templates in **Testomat.io** support dynamic content using variables. Variables 
 
 Below is an overview of which variables are supported for each template type:
 
-| Template Type    | Supported Variables                                                                                  |
-| ---------------- | ---------------------------------------------------------------------------------------------------- |
-| Test Templates   | test.title, test.description, test.tags, test.labels, test.attachments                               |
-| Suite Templates  | suite.title, suite.description, suite.tags, suite.labels                                             |
-| Code Templates   | test.title, test.description, suite.title, suite.description, body                                   |
-| Defect Templates | test.title, test.description, test.assignee, test.priority, test.tags, test.attachments, jira.issues |
+| **Template Type** | **Supported Variables**                                                          |
+| ----------------- | -------------------------------------------------------------------------------- |
+| Test Templates    | `test.title`, `test.description`, `test.tags`, `test.labels`, `test.attachments` |
+| Suite Templates   | `suite.title`, `suite.description`, `suite.tags`, `suite.labels`                 |
+| Code Templates    | `test.title`, `test.description`, `suite.title`, `suite.description`, `body`     |
+
+Supported Variables in **Defect Templates**
+
+- **Test-related**
+
+```
+test.title
+test.id
+test.priority
+test.tags
+test.labels
+test.assignee
+test.steps
+test.attachments
+test.jiraissues
+```
+
+- **Testrun-related**
+
+```
+  testrun.title
+  testrun.status
+  testrun.message
+  testrun.stack
+  testrun.attachments
+  testrun.assignee
+  testrun.retries
+```
+
+- **Run-related**
+
+```
+run.title
+run.executed
+run.assignee
+run.creator
+run.environment
+run.finished
+run.created
+run.duration
+run.project
+run.tests
+run.id
+run.plan
+run.passed
+run.failed
+run.skipped
+run.failures
+run.labels
+run.attachments
+```
+
+- **Report-related**
+
+```
+report.title
+report.id
+```
 
 ### Conditional Rendering
 
@@ -121,8 +173,8 @@ Templates support conditional logic using {{#if}} statements. This allows you to
 
 **Explanation**:
 
-- The block will render Tags: [actual tags] only if test.tags has a value;
-- If test.tags is empty or undefined, nothing will be displayed;
+- The block will render Tags: {{ test.tags }} only if test.tags has a value.
+- If test.tags is empty or undefined, nothing will be displayed.
 
 ## Applying Templates
 

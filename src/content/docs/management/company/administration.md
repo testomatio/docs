@@ -6,13 +6,8 @@ url: https://docs.testomat.io/management/company/administration
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/New_Hj9V2azU_2024-10-15.BJeDKnnV_O3QYE.webp
-
-  - tag: meta
-    attrs:
       name: keywords
-      content: Testomat.io, administration, company management, project oversight, team management, company owner, project control, user roles, organizational tools, test management platform
+      content: Testomat.io, administration, company management, project oversight, team management, company owner, project control, user roles, organizational tools, project archive, restore archived project, test management platform
 ---
 
 ## How to Create a Company
@@ -210,7 +205,6 @@ Global Search is available from the Dashboard, Companies and Analytics tabs. You
 
 ![Testomatio.io - Global-search-icon](./images/global_search.png)
 
-
 ## Managing Projects on the Project Board
 
 Company Owners and Managers can administer projects via the **Project board** in the **Company** section.
@@ -227,7 +221,8 @@ Company Owners and Managers can administer projects via the **Project board** in
 
 Once you’ve selected **Projects**, you’ll be directed to the Project board for your Company.
 
-## Project Actions:
+## Project Actions
+
 Next to each project in the list, you'll find a three-dot (⋮) menu. You can perform the following actions:
 
 - **Edit**: Change the project’s name.
@@ -238,4 +233,31 @@ Next to each project in the list, you'll find a three-dot (⋮) menu. You can pe
 
 ![Testomatio.io - Projects-Management-Menu](./images/manage_project.png)
 
+## Project Archive
 
+There may be completed projects that are not being developed or paused for some reason. So you may need to **archive** such projects not to mix up current work. In this case the archived project is removed from the Dashboard but still displayed on Company Projects page with **Archived** status, so it can be easily accessed and restored at any time.
+
+### How to Archive Project
+
+1. Go to Company page.
+2. Click on 'Extra manu' button.
+3. Select 'Projects' option.
+
+![Testomat.io - Archive](./images/Archive_n.png)
+
+4. Click on 'Extra menu' button for project that you want to archive.
+5. Click on 'Archive' option.
+
+![Testomat.io - Archive](./images/Archive_2.png)
+
+### How to Restore Archived Project
+
+1. Select your company on Dashboard page.
+2. Click on 'Manage' button.
+
+![Testomat.io - Archive](./images/Restore_1.png)
+
+3. Click on 'Extra menu' button for project with **Archived** status.
+4. Click on 'Unarchive' option.
+
+![Testomat.io - Archive](./images/Restore_2.png)

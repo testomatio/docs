@@ -153,6 +153,9 @@ label == 'Automatable' and priority > 'normal'
 
 # list recently created tests
 created_at < 1.month_ago
+
+# list of tests with a label in selected suites
+(suite % 'suite title 1' or  suite % 'suite title 2') and  label == 'Automatable'
 ```
 
 ## Runs Variables

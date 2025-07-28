@@ -2,7 +2,7 @@
 title: AI-Powered Features
 description: Learn how to use AI-powered generative features to simplify and enhance your test management workflows in Testomat.io. This guide covers how to work with AI-powered generative features on Suites, Tests, Test Code levels, explain autotest failures Based on Logs, check Jira requirement for Suites linked to Jira issues.
 type: article
-url: https://docs.testomat.io/advanced/ai-powered-features
+url: https://docs.testomat.io/advanced/ai-features/ai-powered-features
 head:
   - tag: meta
     attrs:
@@ -155,7 +155,7 @@ Test Summary is created:
 
 :::
 
-## Generate Code Based on Test Casse Description
+## Generate Code Based on Test Case Description
 
 Provide a test description, and the AI generates the corresponding test automation code. Please note that generated code may be not completely comprehensive.
 
@@ -226,3 +226,28 @@ Testomat.io allows you to use AI-powered feature to analyze and summarize your f
 **AI-powered features** are available for Classic and BDD projects.
 
 :::
+
+## Project Runs Status Report
+
+**AI-Powered Project Runs Status Report** feature automatically generates a **high-level status report** based on the latest project's test runs information — powered by AI.
+
+The **Runs Status Report** gives you a quick overview of test stability, critical issues, and performance trends across recent runs. It helps QA teams and stakeholders understand what’s working well and where attention is needed — without digging through individual test logs.
+
+**What’s included:**
+
+- **Summary Overview** – Total test runs, overall pass rate, trends, and key action items.
+- **Area-Specific Stability** – Performance insights grouped by feature areas (e.g. subscriptions, user roles, etc.).
+- **Flaky & Failed Tests** – Highlights of recurring issues or flaky behavior with potential risk.
+- **Execution Time Trends** – How test durations are behaving over time.
+- **Top Errors** – Most frequent failure messages to help speed up debugging.
+- **Systematic Failures** – Pinpointed test cases that failed consistently and may block critical flows.
+- **Note** - Hightlights the test runs that were analyzed in the Run Status Report by AI.
+
+**To access this feature:**
+
+1. Go to 'Runs' page.
+2. Click on **'Run Status Report'** button. 
+
+![Testomat.io - AI-powered Project Runs Status Report](./images/AI_14.gif)
+
+This report is available automatically based on recent test run history, giving your team instant visibility into the health of your project.

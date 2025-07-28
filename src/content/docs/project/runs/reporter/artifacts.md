@@ -6,11 +6,6 @@ url: https://docs.testomat.io/project/runs/reporter/artifacts
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/shared_artifacts.B-l29chE_ZH695H.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, test artifacts, S3 storage, public access, private access, test management, test reports, automation, artifact upload, S3 configuration, QA tools
 ---

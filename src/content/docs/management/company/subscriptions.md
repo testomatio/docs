@@ -6,26 +6,38 @@ url: https://docs.testomat.io/management/company/subscriptions
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/134368580-7aa5e926-39df-4a03-ae10-4c54d4d4f864.DB0OAJ5b_qJwDU.webp
-
-  - tag: meta
-    attrs:
       name: keywords
-      content: Testomat.io, subscriptions, subscription levels, billing, upgrade subscription, team management, Professional plan, Enterprise plan, Free plan, QA tools, project access
+      content: Testomat.io, test management, QA tools, test automation, manual testing, Free plan, Professional plan, Enterprise plan, subscription levels, billing, upgrade subscription, team management, unlimited users, project access, Jira integration, public reports
 ---
 
-Testomat.io is accessible in the cloud on 3 subscription levels, more details [here ](https://testomat.io/#pricing) and on-premise to be installed on your servers with an Enterprise plan. See more info below.
-Also, Testomat.io provides two trials for you to evaluate all features: a 30 Days Trial and an additional extra 14 Days Trial.
+Testomat.io is a modern, AI-powered test management tool designed for teams that want to move faster with confidence. Whether you're running automated tests at scale or managing manual QA workflows, Testomat.io helps you streamline everything in one place.
 
-## How To Use Testomat.io as a Free Subscription Plan
+Testomat.io is available in two main formats:
 
-When you register a user in Testomat.io, there is much more than a free trial. Testomat.io on the Free plan, is a free service that will not expire. You can continue using the features available on the Free plan for as long as needed.
+- **Cloud-based** with three flexible plans: **Free**, **Professional**, and **Enterprise**
+- **On-Premise** (self-hosted) available with the Enterprise plan
 
-Testomat.io offers a Free subscription level. This is not a trial period: there is no cut-off date on using Testomat.io as a free service. You can create **2 projects with 2 users** for free and continue using them for free as long as needed.
+When you first sign up, your team automatically receives a Free 30-day Trial, which gives you full access to Enterprise features. For more details, see [How the Free Trial Works](https://docs.testomat.io/management/company/trials/).
 
-Here is an overview of what is included in a Testomat.io Free plan :
+## Subscription Levels Overview
 
+Testomat.io offers flexible plans tailored for different team sizes and needs:
+
+- **Free** — unlimited-time plan with basic features, supporting up to 2 users and 2 projects
+- **Professional** — ideal for small and medium-sized QA teams
+- **Enterprise** — includes full feature set and On-Premise options for large organizations
+
+Each plan provides different access to features like Jira integration and branch management. For a detailed comparison of plans, see: [Compare all plans.](https://testomat.io/pricing/)
+
+## How to Use the Free Plan
+
+The Free Plan is perfect for individuals or small teams just starting out. It includes essential features like automated test integrations, test case management, and manual testing — with no time restrictions.
+
+This is not a trial — there is no expiration date for using Testomat.io as a free service. You can create up to **2 projects with 2 users** for free and continue using them indefinitely.
+
+Here is an overview of what is included in the Testomat.io Free plan:
+
+- Read-Only users: **Unlimited**
 - Test case management
 - Automated tests frameworks support (Codecept.js, Codeception, Wdio, Cucumber, Jest, Cypress, Protractor, Test Cafe)
 - Automated tests reporter (Codecept.js, Cucumber, Wdio, Playwright, Cypress)
@@ -47,157 +59,226 @@ Here is an overview of what is included in a Testomat.io Free plan :
 - CI/CD Pipeline Integration (Jenkins, Bamboo, GitLab, GitHub)
 - Notifications (email)
 
-Note that if you revert to a Free plan after being on a Professional or Enterprise plan, features over the Free plan limit will no longer be available. However, their data is not lost. If you reinstate a Professional or Enterprise plan, you will be able to access those features once again.
+:::note
 
-## Subscription Levels
+If you downgrade from Professional or Enterprise to Free, features beyond the Free plan limits will be disabled, but data will be saved and accessible again if you upgrade.
 
-Testomat.io is available on three different subscription levels:
+:::
 
-- Free
-- Professional (for small and medium-sized businesses)
-- Enterprise (for larger businesses)
+## How to Start a Subscription
 
-Each subscription level includes varying access to features such as Bug trackers integration (Jira) or Branches. See full details [here](https://testomat.io/#pricing)
+You can enable a paid subscription at any time, whether you're still using the Trial or have already been moved to the Free plan.
 
-## Monthly Or Yearly Billing
+:::note
 
-You can choose to pay for your Teamup subscription on a monthly or yearly basis.
+Once payment is completed, your company immediately switches from the current plan — whether Free or Trial — to the selected paid plan. All data remains intact, and your upgraded features are activated instantly. No separate steps are required — the upgrade is applied automatically.
 
-All Testomat.io paid subscriptions are billed automatically; if you pay on a monthly basis, then each month you will be automatically charged for your continuing subscription. If you pay on a yearly basis, then you will be automatically charged annually for your continuing subscription.
+:::
 
-## How To Enable Subscription
+To enable a paid subscription, follow these steps:
 
-You decided to upgrade your Subscription at Testomat.io. After creating a Company, follow these steps to enable it:
+1. Navigate to the **'Companies'** tab
+2. Open the company you created
+3. Click on the **'Upgrade'** button
 
-1. Navigate to the **’Companies’** tab
-2. Open the Company you created
-3. Click on the **’Upgrate’** button
+![Upgrade button](./images/att_1.png)
 
-![Upgrate button](images/att3_253-1.png)
+:::note
 
-4. Select a plan: Professional or Enterprise
-5. Select Monthly or Yearly billing
+If you would like to enable a paid subscription from the **Enterprise Trial Plan**, click the **'Manage Subscription'** button
+
+![Manage Subscription button](./images/att_2.png)
+
+:::
+
+4. Select a plan: **Professional** or **Enterprise**
+5. Choose to pay for your subscription **Monthly** or **Yearly**
+
+- **Monthly** billing: charged automatically every month
+- **Yearly** billing: charged once per year at **a discounted rate**
+
 6. Specify the Users limit
-7. Click the **‘Upgrade’** button to proceed
+7. Click the **'Upgrade'** button to proceed
 
-![Confirm upgrate](images/att4_253-1.png)
+![Upgrade button](./images/att_3.png)
 
-8. You will be redirected to the Payments page. Enter your payment details and click on the **’Pay and Subscribe’** button.
+You will be redirected to the Payments page, where you can enter your payment details and click the **'Pay and subscribe'** button.
 
-Congratulations! 🎉 Your subscription has been successfully upgraded.
+![Pay and subscribe button](./images/att_4.png)
 
-![subscription has been upgraded](images/att5_253-1.png)
+Well done! Your subscription is now active, and you can access your upgraded features.
 
-## How To Manage Team Members Within a Company
+## How to Add or Remove Seats
 
-How To Increase And Decrease Amount Of Team Members
-You can change the number of seats in your team account at any time.
+You can adjust the number of seats in your team anytime. The seat count affects billing and limits active users.
 
-Your seat count can be adjusted in the Companies section. The number of seats in your account determines the amount you’re billed upon subscription renewal as well as the maximum number of people who can be active in your account.
+- To reduce seats, first remove users under Company Team Members, then lower the seat count. The new seat count applies at the next billing cycle
+- To increase seats, raise the seat count before inviting more users
 
-If you want to reduce the amount you’re charged, you’ll need to first delete people under Company Team Members and then reduce your seat count by taking the steps below. Along the same lines, you may need to increase your seat count before you’re able to invite more people to your Testomat.io account. Note that a reduced amount of seats will apply with the next subscription payment.
+1. Navigate to the **'Companies'** tab
+2. Open the company you created
+3. Click the **'Manage Subscription'** button
 
-1. Go to the Companies tab on a dashboard and click the Edit button
+![Manage Subscription](./images/att_5.png)
 
-2. Click on the Manage Subscription button
+4. After the page is redirected to the billing page, click the **'Update subscription'** button
 
-![image](./images/134401557-75e1c3ca-7549-4577-a3f8-dbc27603ccdf.png)
+![Update subscription](./images/att_6.png)
 
-3. You will be redirected to the billing page. Here you need to click on the Update Plan button
+5. Under current subscription, change the number of seats (increase or decrease)
+6. Click the **'Continue'** button
 
-![image](./images/135114221-9cf0d0ef-fba6-4b8d-b860-bf90195bf141.png)
+![Continue button](./images/att_7.png)
 
-4. Pick the Update quantity button
+7. Review and confirm your updates by clicking the **'Subscribe and pay'** button
 
-![image](./images/135114492-40815b7e-2b50-483c-8fa3-3e9b543c9ef1.png)
+![Subscribe and pay button](./images/att_8.png)
 
-5. Set the needed number of members and click Confirm button
+8. Click **'Return to Testomat.io'** link and see the updated amount of seats
 
-![image](./images/134404348-d6ba6a4d-fb4a-494b-803b-6099211c6d4d.png)
+![Return to testomat.io](./images/att_9.png)
 
-6. Now you see changed amount of users in your Companyand can go back to Testomat.io
+![updated amount of users](./images/att_10.png)
 
-![image](./images/134407002-4d2f7680-591f-42dd-965d-5b6c8b0710ee.png)
+## How to Upgrade or Downgrade Your Plan
 
-7. In Testomat.io you also will see updated amount of users
+You can switch between paid subscription plans at any time. The same steps apply whether you’re upgrading or downgrading your plan.
 
-![image](./images/135050703-6abbc4f8-78b8-43b5-bd7b-9375994c0308.png)
+Here’s how to do it:
 
-## How To Upgrade And Downgrade Subscription Plan
+1. Navigate to the **'Companies'** tab
+2. Open the company you created
+3. Click the **'Manage Subscription'** button
 
-You can upgrade your subscription at any time, from Free to a paid plan or from one paid plan to another. Select the plan you wish as an upgrade on a billing page, and click the Confirmation button. When you upgrade your plan, you will be charged for the difference in price and the upgrade will be applied to your company immediately.
+![Manage Subscription](./images/att_5.png)
 
-To do this you need to use steps 1-3 described above to get to the billing page.
+After the page is redirected to the billing page, click the **'Update subscription'** button
 
-4. Pick the subscription plan you want to use and click the Continue button
+![Update subscription](./images/att_6.png)
 
-![image](./images/135110702-e3f1925c-2a68-4359-ad19-a3f3481cc87d.png)
+4. Click the **'Select'** button next to the subscription plan you want to switch to
 
-5. Check the billing information and click on Confirm button
+![Select button](./images/att_15.png)
 
-![image](./images/135111106-e7b04eac-cd96-435b-aab6-a24bfd1e5d69.png)
+5. Set the number of active users
+6. Click the **'Continue'** button
 
-6. See your subscription plan was changed
+![Continue](./images/att_14.png)
 
-![image](./images/135111719-479ca4f3-d965-45b4-a11b-ecba7e4cd041.png)
+7. Review and confirm your updates by clicking the **'Subscribe and pay'** button
 
-7. In Testomat.io you also will see updated subscription plan
+![Subscribe and pay](./images/att_16.png)
 
-![image](./images/135112171-c5784376-31e3-4800-b423-c4085b8c5788.png)
+8. Return to Testomat.io and see your updated subscription plan
 
-With the same steps, you can downgrade your subscription.
+![Updated subscription plan](./images/att_17.png)
 
-## Renew Your Subscription
+Once your payment is successfully processed, you will receive a confirmation email.
 
-Since billing occurs automatically, there is no need to manually renew your plan. At the end of your current billing period, your plan will automatically renew and you will be charged for the next subscription period.
+![confirmation email](./images/att_18.png)
 
-## Cancel Your Subscription
+When you change your subscription plan or adjust the number of seats, the update takes effect immediately, and your billing is automatically recalculated based on the remaining time in your current billing cycle.
 
-To cancel your subscription, click the Cancel button on the billing page:
+- If the new plan costs more, you’ll be charged the difference for the rest of the billing period
+- If the new plan costs less, the unused portion of your previous payment will be credited to your account and applied toward future payments
+- You can track all charges, credits, and upcoming payments on the billing page
 
-![image](./images/135117844-c7da2a7c-31a4-4dd4-bfa9-b1e56fbacffb.png)
+## How Subscription Renewal Works
+
+Since billing occurs automatically, there is no need to manually renew your plan. At the end of your current billing period, your plan will automatically renew, and you will be charged for the next subscription period.
+
+## How to Cancel Your Subscription
+
+If you need to cancel your subscription, here’s how to do it:
+
+1. Navigate to the **'Companies'** tab
+2. Open the company you created
+3. Click the **'Manage Subscription'** button
+
+![Manage Subscription](./images/att_5.png)
+
+4. Click the **'Cancel subscription'** button
+
+![Cancel subscription](./images/att_19.png)
+
+5. Confirm cancellation by clicking the **'Cancel subscription'** button one more time
+
+![Cancel subscription](./images/att_20.png)
 
 You will continue to have access to your current subscription level until the end of your current (already paid) billing period. At that point, any features beyond those allowed on the Free plan will be deactivated. If you renew or upgrade your subscription, your deactivated features and projects will be available again.
 
-## Edit Your Billing Data
+## How to Add a New Payment Method
 
-> Please note, that there is no way to change Billing data for old bills.
+You can add a new payment method for your subscription at any time. To do this:
 
-To update / edit your Billing data you should go to Companies page > Manage subscription > Billing Iinformation > Update information
+1. Navigate to the **'Companies'** tab
+2. Open the company you created
+3. Click the **'Manage Subscription'** button
 
-![upd bill info 1](./images/edit-bill-1.png)
+![Manage Subscription](./images/att_5.png)
 
-![upd bill info 2](./images/edit-bill-2.png)
+4. Scroll down to the **'Payment methods'** section and click the **'Add payment method'** link
 
-Enter your data such as email, phone number, address, Tax ID > Save
+![Add payment method](./images/att_21.png)
 
-![upd bill 3](<./images/CleanShot 2024-01-09 at 09.08.52@2x.png>)
+5. Enter your payment information and click the **'Add'** button
 
-See your Billing information was updated
+![Add new payment method](./images/att_22.png)
 
-![upd bill 4](<./images/CleanShot 2024-01-09 at 09.09.49@2x.png>)
+Once added, the new payment method will appear in the **'Payment methods'** section. It will be automatically used for future billing cycles if **'Use as default payment method'** was selected.
 
-If you need to edit some specific Billing data please contact us support@testomat.io.
+## How to Edit Billing Information
+
+:::note
+
+Please note that there is no way to change billing data for old bills.
+
+:::
+
+1. Navigate to the **'Companies'** tab
+2. Open the company you created
+3. Click on **'Manage subscription'** button
+
+![Manage Subscription](./images/att_5.png)
+
+4. Click **'Update information'** button at the billing information section
+
+![Update information](./images/att_26.png)
+
+5. Update billing information:
+
+- Enter your data such as Email, Address, Phone number, Tax ID
+
+6. Click **'Save'** button
+
+![Update billing information](./images/att_27.png)
+
+Your billing information has been updated. If you need to edit some specific billing data please contact us support@testomat.io.
 
 ## How to Download Your Invoice
 
-1. Navigate to the billing page via the **Manage Subscription** button.
-2. Scroll down to the **Invoice History** section at the bottom of the page.
-3. Click on the invoice you wish to download.
-4. On the next page, click **Download Invoice**.
+1. Navigate to the **'Companies'** tab
+2. Open the company you created
+3. Click the **'Manage Subscription'** button
 
+![Manage Subscription](./images/att_5.png)
 
-![image Invoice History](./images/Invoice_History.png)
-![image Download Invoice button](./images/Download_invoice.png)
+4. Scroll down to the **Invoice History** section at the bottom of the page
+5. Click on the invoice you want to download
 
+![Invoice history](./images/att_24.png)
+
+6. On the next page, click the **'Download invoice'** or **'Download receipt'** button
+
+![Download invoice_receipt](./images/att_23.png)
 
 ## What Happens To Locked Projects And Users
 
-When your subscription is canceled your company is set to Free plan with appropriate limitations. Some of your projects may be locked, but not lost. Member added above Free Plan limit will be moved to removed section in Companies section and won't have access to projects. You can contact support to get the data from the locked projects or upgrade to unlock it.
+When your subscription is canceled your company is set to Free plan with appropriate limitations. Some of your projects may be locked, but not lost. Members added beyond the Free plan limit will be moved to removed section in Companies section and won't have access to projects. You can contact support to retrieve data from locked projects or upgrade your plan to regain access.
 
-![image](./images/135133257-c34357db-2d9f-461f-9618-54c41774ffc6.png)
+![Locked Projects](./images/att_25.png)
 
-## Frequently Asked Questions
+## Frequently Asked Questions (FAQ)
 
 **Q: I'd like to collaborate with a user who already has their own subscription. Should I purchase a seat for the user to collaborate on my projects?**\
 A: Yes, in Testomat.io you pay for the number of licenses in your account. To start the collaboration, you may either invite the user to your account or ask them to invite you.
@@ -211,7 +292,7 @@ A: No, as it's one member per seat. However, you can release the license by remo
 **Q: Can multiple users use the same account?**\
 A: No, concurrent use of the same account by multiple users is prohibited according to the terms of Service: https://testomat.io/terms/. This includes, but is not limited to, sharing login credentials or allowing multiple users to operate a single account.
 
-**Q: Can I cancel subscription at any time?**\
+**Q: Can I cancel my subscription at any time?**\
 A: Yes, please go to billing portal page and cancel subscription.
 
 **Q: Can I manage my subscription from mobile?**\
@@ -225,3 +306,11 @@ A: No, free read-only users are available in Professional and Enterprise plans.
 
 **Q: Can I change Billing data for already paid bills?**\
 A: No, Billing data can't be changed for old bills.
+
+**Q: Why do my users have a 'Paused' status?**\
+A: This usually happens because:
+
+- Your company switched to the Free plan after the Trial ended, and you had more users than the Free plan allows — extra users are automatically paused.
+- There was a payment issue, causing users to be paused until the payment is completed.
+
+After successful payment, all paused users will automatically return to Active status.
