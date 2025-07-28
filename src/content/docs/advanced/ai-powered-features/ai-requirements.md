@@ -2,7 +2,7 @@
 title: AI-Requirements
 description: Discover Testomat.io's AI-powered features that analyze your requirements from Jira to enhance test coverage. Learn how this intelligent analysis helps improve requirement management at various levels within your projects and test suites levels.
 type: article
-url: https://docs.testomat.io/advanced/ai-powered-features/ai-requirements
+url: https://docs.testomat.io/advanced/ai-features/ai-requirements
 head:
   - tag: meta
     attrs:

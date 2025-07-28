@@ -8,27 +8,23 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/139681457-b60419cc-575c-4958-90b1-55bdeba2d3bd.UdrYqNwE_1NHlqV.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
       content: Testomat.io, free trial, 30-day trial, 14-day trial, unlimited users, test management, test automation, Jira integration, public reports, QA tools
 ---
 
-Testomat.io provides two trials for you to evaluate all features: a 30 Days Trial and an additional extra 14 Days Trial, which you can use after the 30 Days Trial ends if you need more time to make a decision.
+Your journey with Testomat.io begins with a **free 30-Day Trial** plan that gives you full access to the Enterprise feature set — no limitations, no credit card required. If you need more time to evaluate, you can activate a one-time **14-day Extra Trial** at any point after the initial trial ends. Let’s explore both options in detail.
 
-## Free 30 Days Trial
+![Welcome page](./images/att_13.png)
 
-All new users are given a free trial to evaluate Testomat.io features without a commitment. The free trial period allows getting familiar with our features and benefits of delivery with simplified test management using out-of-the-box test automation integration capabilities.
+## Free 30-Day Trial
 
-![image](./images/135104795-40c1a6e9-59b4-4265-a200-f604b9979391.png)
+All new users receive an automatic 30-day free trial. It provides full access to all Enterprise features, including:
 
-**Duration**
-The free trial is offered to all new users and lasts for 30 days from the moment of account creation.
-
-**Limitations**
-During the trial, users get **unlimited users and projects limits** and free access to **all features** without exception, namely:
-
+- Unlimited users
+- Unlimited projects
 - Branches
 - Bug trackers integration (Jira)
 - Jira plugin (BDD, Classical tests)
@@ -38,30 +34,42 @@ During the trial, users get **unlimited users and projects limits** and free acc
 - Documentation management integration (Confluence)
 - Rerun failed manual/automated tests
 - Runs and Runs Groups Archive
-- Attachment 2Mb per unit
-- Unlimited Runs History 
+- Attachment 100 Mb per attachment
+- Unlimited Runs History
 
-## Extra Free 14 Days Trial
+Enjoy the full power of Testomat.io without any limits — invite your whole team and explore every feature freely.
 
-For some reason, you may need more time to weigh up the advantages of Testomat.io. For such cases, you are offered Extra Free 14 Days Trial. All features listed above are available during this period.
+## Extended 14-Day Trial
 
-**Duration**
-An extra free trial lasts for 14 days from the moment of its activation. It is available only once per user registration. It may be picked after the ending 30 days trial at any time. It may be postponed, but it can't be paused. 
+Need more time to evaluate? We’ve got you covered. You can activate an additional **14-day trial** once per company — completely free.
 
-## When Trial Ends
+- Available after the 30-day trial ends
+- Cannot be paused once started
+- Grants full Enterprise access again
 
-Please note, when the Free Trial ends features over the Free plan limit will no longer be available. However, their data is not lost. If you subscribe to a Professional or Enterprise plan, you will be able to access those features and content again. If you are interested in the paid options supported by Testomat.io, see our [**pricing plan**](https://testomat.io/pricing/) for more details. 
+### How To Activate
 
-## How Can I Request Free Trial
+1. Click your avatar icon in the top-right corner of the screen
+2. Select **'Request a Free Trial'** from the dropdown menu
 
-You can request Free Trial here:
+![Request a Free Trial](./images/att_11.png)
 
-1. click on the avatar icon 
-2. in the menu click on Request a Free Trial 
-3. your 30 days Free Trial is activated 
+3. Confirm your request by clicking the **'Request Trial'** button
 
-![image](./images/139681457-b60419cc-575c-4958-90b1-55bdeba2d3bd.png)
+![Request Trial](./images/att_12.png)
 
-## How Can I Ask a Question
- 
-If you are a large company or if you have specific requirements, or for some reason you need more than the above-listed limits, write us at contact@testomat.io
+Your extended trial will begin immediately — use this opportunity to explore advanced features, automate more tests, and collaborate effectively with your team.
+
+## When the Trial Ends
+
+Once your trial ends:
+
+- Your company will be moved to the **Free Plan**
+- Advanced features will be disabled
+- All your data and projects will be safely retained
+
+You can upgrade to the **Professional** or **Enterprise** plan anytime to regain access to premium features. For details, check our [**pricing plans**](https://testomat.io/pricing/).
+
+## Need Help?
+
+If you are a large company, have specific requirements, or if your evaluation requires more flexibility than the limits described above, feel free to contact us at **[contact@testomat.io](mailto:contact@testomat.io)**
