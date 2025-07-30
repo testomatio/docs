@@ -113,6 +113,10 @@ export default defineConfig({
 								{ label: 'Running Tests Manually', link: '/project/runs/running-tests-manually' },
 								{ label: 'Running Automated Tests', link: '/project/runs/running-automated-tests' },
 								{ label: 'Managing Runs', link: '/project/runs/managing-runs' },
+								{ label: 'RunGroups', link: '/project/runs/rungroups' },
+								{ label: 'Merge Strategies', link: '/project/runs/merge-strategies' },
+								{ label: 'Archive Runs & RunGroups', link: '/project/runs/archive-runs-and-groups' },
+								{ label: 'Run Reports', link: '/project/runs/reports' },
 								{ label: 'Custom Statuses', link: '/project/runs/custom-statuses' },
 								{
 									label: 'Reporter',
