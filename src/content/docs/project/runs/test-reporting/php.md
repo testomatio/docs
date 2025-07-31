@@ -2,7 +2,7 @@
 title: PHP Test Frameworks
 description: Learn how to integrate PHP test frameworks like Codeception and PHPUnit with Testomat.io. The guide covers installation, setting API keys, and configuring test reporting. It supports seamless integration for automated test results with real-time reporting, enhancing test management workflows.
 type: article
-url: https://docs.testomat.io/project/runs/reporter/php
+url: https://docs.testomat.io/test-reporting/php
 head:
   - tag: meta
     attrs:

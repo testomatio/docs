@@ -2,13 +2,8 @@
 title: Bitbucket
 description: Learn how to integrate Testomat.io with Bitbucket Pipes to streamline test reporting in pull requests. Automatically add test run summaries, including status, failed/passed/skipped test counts, stack traces, and screenshots. Configure Bitbucket with access tokens for seamless integration into your CI/CD pipeline using Playwright.
 type: article
-url: https://docs.testomat.io/project/runs/reporter/pipes/bitbucket
+url: https://docs.testomat.io/test-reporting/pipes/bitbucket
 head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/bitbucket.DCXWS1as_18rWNn.webp
-      
   - tag: meta
     attrs:
       name: keywords
