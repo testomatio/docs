@@ -53,12 +53,12 @@ The **'Create Test'** button can be hidden via the **'Hide Test Creation'** opti
 - **Capturing exploratory test cases:** Testers conducting exploratory testing can log and formalize new test cases as they go, ensuring useful insights are not lost.
 - **Collaborative test planning in real time:** During team sessions or test reviews, testers can collectively identify and add new tests based on discussion or observed issues.
 
-## How to Add a Test Case from Tests Page
+## How to Add a Test Case to the Run from Tests Page
 
 Add test case to your unfinished run directly from **'Tests'** page.
 
 1. Go to the **'Tests'** page.
-2. Click on test case that you want to add.
+2. Click on Test Case that you want to add.
 3. Click the **'Extra menu'** button on test case page.
 4. Select **'Add to Run'** option from the dropdown menu.
 
@@ -82,6 +82,54 @@ As well you can use **'Multi-select'** option to add several tests to a run simu
 5. Select **'Add to Run'** option.
 
 ![Testomat.io - add a few tests from Tests page](./images/Add_Multiple_Tests_1.png)
+
+The selected tests will be immediately added to the active test run, helping you to keep your execution plan up-to-date even while a run is already in progress.
+
+## How to Run a Suite from Tests Page
+
+Testomat.io allows you to launch a run of a single suite or multiple suites directly from the **'Tests'** page.
+
+### Run a Single Suite
+
+1. Go to the **'Tests'** page.
+2. Click on Suite that you want to Launch.
+3. Click the **'Extra menu'** button on suite page.
+4. Select **'Run Tests'** option from the dropdown menu.
+
+![Testomat.io - add suite from Tests page](./images/Add_Suite_1.png)
+
+5. Click the **'Launch'** button on the displayed modal.
+
+![Testomat.io - add suite from Tests page](./images/Add_Suite_2.png)
+
+The Run window, displaying all test cases within the selected Suite, will appear automatically.
+
+![Testomat.io - add suite from Tests page](./images/Add_Suite_3.png)
+
+### Run Several Suites
+
+Use the **'Multi-select'** option to launch multiple suites in a single run.
+
+1. Go to the **'Tests'** page.
+2. Enable **'Multi-select'** option.
+3. Select a few suites.
+4. Click the **'Run'** button.
+
+![Testomat.io - add several suites from Tests page](./images/Add_Suite_4.png)
+
+5. Click the **'Launch'** button on the displayed modal.
+
+![Testomat.io - add several suites from Tests page](./images/Add_Suite_5.png)
+
+If you need to set up additional run settings (like RunGroup or environment), click the **'Additional Settings'** link on the displayed modal.
+
+:::note
+
+You can Launch not only **manual** suites but also **automated** or **mixed** suites from **'Tests'** page, if Continuous Integration for your project is set up. Learn more about it on the relevant page on [Continuous Integration](https://docs.testomat.io/integrations/continuous-integration/) section.
+
+![Testomat.io - run automated suite Tests page](./images/Automated_Suite_1.gif)
+
+:::
 
 ## Test Case History
 
