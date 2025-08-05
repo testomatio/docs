@@ -23,7 +23,7 @@ Let's see how powerful bulk edit mode is in action.
 This demo shows how to create multiple tests across different suites using the YAML editor. Instead of clicking through the UI, you can define everything in structured text and apply changes in bulk.
 
 <video width="960" controls>
-  <source src="https://user-images.githubusercontent.com/220264/107265760-55d54b80-6a4d-11eb-9de4-80191bccace1.mp4" type="video/mp4">
+  <source src="./images/Bulk_edit_create_tests.mp4" type="video/mp4">
 </video>
 
 ### Replace Root Suite
@@ -31,5 +31,5 @@ This demo shows how to create multiple tests across different suites using the Y
 In cases where your project has only one root suite, you can simplify the structure by removing it. This demo shows how to flatten the hierarchy by moving all tests up one level.
 
 <video width="960" controls>
-  <source src="https://user-images.githubusercontent.com/220264/107341764-113ac600-6ac8-11eb-9b6e-d34dcacc4115.mp4" type="video/mp4">
+  <source src="./images/change_root_suite.mp4" type="video/mp4">
 </video>

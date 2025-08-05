@@ -57,12 +57,12 @@ Sometimes, you may want to quickly add multiple test cases by name and save them
 
 4. Click **Create** to add all the tests at once.
 
-![CleanShot 2022-05-24 at 11 33 02@2x](./images/bulk_edit_toggle.png)
+![CleanShot 2022-05-24 at 11 33 02@2x](./images/bulk_edit_toggle2.png)
 
-![CleanShot 2022-05-24 at 11 38 38@2x](./images/add_tests_click_create.png)
+![CleanShot 2022-05-24 at 11 38 38@2x](./images/add_tests_click_create2.png)
 
 5. Your tests will appear immediately under the newly created suite.
 
-![CleanShot 2022-05-24 at 11 44 10@2x](./images/see_your_tests_created.png)
+![CleanShot 2022-05-24 at 11 44 10@2x](./images/see_your_tests_created2.png)
 
 [![CleanShot 2022-05-27 at 20 19 26@2x](./images/170759254-e6d4379b-733e-4521-98f3-abccca6eaffa.jpg)](https://youtu.be/jnJwZsRQjTQ)
