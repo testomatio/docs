@@ -50,7 +50,7 @@ Conversely, Labels offer greater flexibility. You can mark test cases/ suites wi
 
 By understanding their strengths, you can leverage both Tags and Labels effectively to organize and manage your testing efforts.
 
-::: note
+:::note
 
 Learn how to create and assign **Tags** in Testomat.io to organize your test cases and suites on the [Tags](https://docs.testomat.io/advanced/tags-labels/tags) page.
 
