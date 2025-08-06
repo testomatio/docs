@@ -68,7 +68,7 @@ module.exports = {
     execSync('rm -rf tmp/php-reporter');
     execSync('rm -rf tmp/pytest-reporter');
 
-    const destinationFolder = path.resolve(path.join(__dirname, '../content/docs/project/runs/reporter'));
+    const destinationFolder = path.resolve(path.join(__dirname, '../content/docs/test-reporting'));
 
     console.log(destinationFolder);
 
