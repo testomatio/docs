@@ -12,7 +12,9 @@ head:
 
 A snippet - is a piece of text or collection of steps that can be used as autocompletion during creating tests. This can be used for any part of a test case. 
 
-When a new test case needs to be created, you can simply call a previously created snippets, to add information that you need with one click. This makes test creation faster and simplier.
+When a new test case or suite needs to be created, you can simply call a previously created snippets, to add information that you need with one click. This makes test creation faster and simplier.
+
+As well you can use snippets for creating and managing test data.
 
 ## How to Create a Snippet
 
@@ -62,7 +64,5 @@ You can find your snippets in the relevant section on 'Steps' page and update th
 The snippet content is successfully added to the test case.
 
 ![Testomat.io - Snippet](./images/Create_snippet_7.png)
-
-You can use snippets not only for creating and managing tect cases or suites, but also for creating and managing test data.
 
 [![CleanShot 2022-05-27 at 20 15 05@2x](./images/170756914-83b1e618-b039-45f5-b051-7f6fab0821aa.jpg)](https://youtu.be/k8WVtGDiUjs)
