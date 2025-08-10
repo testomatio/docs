@@ -6,29 +6,63 @@ url: https://docs.testomat.io/project/steps-snippets/snippets
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/170580949-1b2801c9-5248-4fa9-84cf-15608a2635ad.AR8WCUvD_Z1LzgQ2.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
       content: Testomat.io, Snippets, Test Management, QA Tools
 ---
 
-## Snippets
-
 A snippet - is a piece of text or collection of steps that can be used as autocompletion during creating tests. This can be used for any part of a test case. 
 
-![CleanShot 2022-05-27 at 00 05 21@2x](./images/170580949-1b2801c9-5248-4fa9-84cf-15608a2635ad.jpg)
+When a new test case needs to be created, you can simply call a previously created snippets, to add information that you need with one click. This makes test creation faster and simplier.
 
-![CleanShot 2022-05-27 at 00 12 05@2x](./images/170581388-abd59f51-ab50-40d3-8889-421e0bffcb15.jpg)
+## How to Create a Snippet
 
-![CleanShot 2022-05-27 at 00 29 35@2x](./images/170583311-aa3cdf02-1fef-4c55-a8d6-2dc6222b88d7.jpg)
+1. Go to **'Steps'** page.
+2. Click **'+'** icon.
+3. Select **'Snippet'** option from the dropdown.
 
-![CleanShot 2022-05-27 at 00 30 48@2x](./images/170583486-ab165c69-bfb7-4a6e-bc43-dce5877a7b40.jpg)
+![Testomat.io - Snippet](./images/Create_snippet_1.png)
 
-![CleanShot 2022-05-27 at 00 33 45@2x](./images/170583982-8d30e746-e133-492e-bdd5-922852cbca58.jpg)
+4. Enter **'Title'** for snippet.
+5. Add a piecce of text or steps.
+6. Click **'Save'** button.
 
-![CleanShot 2022-05-27 at 00 36 20@2x](./images/170584308-f28309f1-797f-475f-9bf2-e5f51520a23e.jpg)
+![Testomat.io - Snippet](./images/Create_snippet_2.png)
+
+After snippet is created you can use it during your test case creation.
+
+:::note
+
+You can find your snippets in the relevant section on 'Steps' page and update them at any time.
+
+![Testomat.io - Snippet](./images/Snippet.png)
+
+:::
+
+## How to Add Snippet to Test Case
+
+1. Go to **'Tests'** page.
+2. Click **'+Test'** button to add a new test case (or open the one that you want to edit).
+
+![Testomat.io - Snippet](./images/Create_snippet_3.png)
+
+3. Select the Suite.
+4. Click **'Select'** button.
+
+![Testomat.io - Snippet](./images/Create_snippet_4.png)
+
+5. Add test case title.
+6. Click **'Trigger suggestions'** button.
+
+![Testomat.io - Snippet](./images/Create_snippet_5.png)
+
+7. Select the snippet that you want to use from the suggested list.
+
+![Testomat.io - Snippet](./images/Create_snippet_6.png)
+
+The snippet content is successfully added to the test case.
+
+![Testomat.io - Snippet](./images/Create_snippet_7.png)
+
+You can use snippets not only for creating and managing tect cases or suites, but also for creating and managing test data.
 
 [![CleanShot 2022-05-27 at 20 15 05@2x](./images/170756914-83b1e618-b039-45f5-b051-7f6fab0821aa.jpg)](https://youtu.be/k8WVtGDiUjs)
