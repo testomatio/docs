@@ -276,44 +276,6 @@ Ensure the **Require RunGroup for new runs** option is enabled to launch runs fo
 
 ![Runs with multiselect](images/run_tests_multiselect.png)
 
-## Multi Environment Tests
-
-Multi environment tests are used for performing the same tests in different environments. This option is very useful in cases when you need to perform testing with different types of operating systems/ browsers/ devices. They can be performed simultaneously or in a sequence. Let's get a look at this option.
-
-### How to Add More Environments
-
-To add more environment you need to click on the plus button
-
-![CleanShot 2022-05-26 at 12 32 09@2x](./images/170460988-72f3eba4-bb70-49b9-a4a8-9ed0d3b3f0df.jpg)
-
-You will see a pop-up window where you should click on Add Environment button
-
-![CleanShot 2022-05-26 at 12 33 48@2x](./images/170461201-b903576c-71d8-4d76-be43-c242faf59146.jpg)
-
-Then click on Environment field and choose the environment that you need
-
-![CleanShot 2022-05-26 at 12 35 25@2x](./images/170461507-23cf41cf-d92d-4d7c-9eea-63ada1664ed2.jpg)
-
-Once all environments were added click on Save button
-
-![CleanShot 2022-05-26 at 12 41 28@2x](./images/170462854-c2eb8d29-b091-4d32-a26c-da8d515d7b81.jpg)
-
-Now you have environment information updated on Manual Run screen
-
-![CleanShot 2022-05-26 at 12 37 55@2x](./images/170462012-a1b0f380-3a36-411b-ac44-05f448bffbe9.jpg)
-
-### How to Run Multi Environment Tests in Sequence
-
-To run Multi Environment Tests in sequence you need to click on Launch in Sequence button
-
-![CleanShot 2022-05-26 at 12 43 45@2x](./images/170463243-2cfb6d2c-7382-425b-b607-90bd6203236b.jpg)
-
-### How to Run All Multi Environment Tests
-
-To run Multi Environment Tests in sequence you need to click on Launch All button
-
-![CleanShot 2022-05-26 at 12 45 40@2x](./images/170463403-0e791a50-e563-4e9d-8752-0feba409876c.jpg)
-
 ## How to Run Tests As Checklist
 
 Checklists are widely used in day-to-day manual testing to quickly execute a set of tests without distracting to the additional details. In this mode, the test description is hidden by default. But you can still view the description when you click on the Description button.
