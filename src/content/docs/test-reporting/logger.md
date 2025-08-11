@@ -2,7 +2,7 @@
 title: Logger
 description: Learn how to use Testomat.io’s Logger to intercept and attach log messages from various logging frameworks (e.g., Winston, Pino) to your test reports. The Logger offers convenient syntax for logging, customizes output formats, and supports popular frameworks like Playwright, Jest, and Mocha.
 type: article
-url: https://docs.testomat.io/project/runs/reporter/logger
+url: https://docs.testomat.io/test-reporting/logger
 head:
   - tag: meta
     attrs:
@@ -12,7 +12,7 @@ head:
 
 
 - intercepts `console` logs by default (requires `TESTOMATIO_INTERCEPT_CONSOLE_LOGS` to be set for some frameworks)
-- intercepts any logger messages (winston, pino, etc., specified by user))
+- intercepts any logger messages (winston, pino, etc., specified by user)
 - attaches intercepted log messages to your report
 - provides own methods to add any info to your report (like `logger.info()`, `logger.debug()`, etc.)
 - has a varied and convenient syntax

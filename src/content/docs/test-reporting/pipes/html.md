@@ -2,13 +2,8 @@
 title: HTML
 description: Discover how to use Testomat.io's HTML Pipe to generate detailed HTML reports from your test runs. Learn how to configure environment variables to save reports, customize output paths, and view essential test data like execution time and status.
 type: article
-url: https://docs.testomat.io/project/runs/reporter/pipes/html
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/html-pipe.DcWwRyWV_1EqHcU.webp
-      
+url: https://docs.testomat.io/test-reporting/pipes/html
+head:   
   - tag: meta
     attrs:
       name: keywords

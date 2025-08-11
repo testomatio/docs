@@ -2,7 +2,7 @@
 title: Debug
 description: The Debug Pipe is used to store data for debugging purposes in a temporary json file.
 type: article
-url: https://docs.testomat.io/project/runs/reporter/pipes/debug
+url: https://docs.testomat.io/test-reporting/pipes/debug
 ---
 
 ## Debug Pipe

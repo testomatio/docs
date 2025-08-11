@@ -1,7 +1,14 @@
 ---
-title: cli
+title: CLI
+description: Learn how to use the Testomat.io Reporter CLI, a powerful command-line tool for managing and automating test runs. This guide covers installation and general usage, along with specific commands for starting, finishing, and executing test runs. It also explains how to parse XML reports and upload artifacts, making it a versatile tool for integrating Testomat.io into CI/CD pipelines.
+type: article
+url: https://docs.testomat.io/test-reporting/cli
+head: 
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io Reporter, CLI, command-line tool, test runs, managing test runs, CI/CD pipelines, test reporting, parse XML reports, upload artifacts, @testomatio/reporter, API key, environment variables, JUnit, NUnit, xUnit, TRX, S3 artifacts configuration, test runner, test automation, software testing
 ---
-
 
 The Testomat.io Reporter CLI is a powerful tool for managing test runs, parsing XML reports, and uploading artifacts. CLI can be used to start and finish test runs, run tests, parse XML reports, and upload artifacts. It can be used in CI/CD pipelines or locally.
 

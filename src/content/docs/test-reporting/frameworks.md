@@ -2,7 +2,7 @@
 title: NodeJS Test Frameworks
 description: The Testomat.io framework integration guide explains how to implement different testing frameworks and reporting tools. It details configuration options for test reporting, integrating frameworks like Mocha, Jasmine, and Jest, and the generation of reports from automated tests. Additionally, the guide covers debugging, error handling, and customizing test reports to fit specific project needs.
 type: article
-url: https://docs.testomat.io/project/runs/reporter/frameworks
+url: https://docs.testomat.io/test-reporting/frameworks
 head:
   - tag: meta
     attrs:
