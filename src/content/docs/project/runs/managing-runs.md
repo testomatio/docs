@@ -53,84 +53,6 @@ The **'Create Test'** button can be hidden via the **'Hide Test Creation'** opti
 - **Capturing exploratory test cases:** Testers conducting exploratory testing can log and formalize new test cases as they go, ensuring useful insights are not lost.
 - **Collaborative test planning in real time:** During team sessions or test reviews, testers can collectively identify and add new tests based on discussion or observed issues.
 
-## How to Add a Test Case to the Run from Tests Page
-
-Add test case to your unfinished run directly from **'Tests'** page.
-
-1. Go to the **'Tests'** page.
-2. Click on Test Case that you want to add.
-3. Click the **'Extra menu'** button on test case page.
-4. Select **'Add to Run'** option from the dropdown menu.
-
-![Testomat.io - add test case from Tests page](./images/Add_Test_1.png)
-
-5. Select the unfinished run to which you want to add this test.
-6. Click the **'Add to Run'** button.
-
-![Testomat.io - add test case from Tests page](./images/Add_Test_2.png)
-
-The test case is successfully added to the selected ongoing run:
-
-![Testomat.io - add test case from Tests page](./images/Add_Test_3.png)
-
-As well you can use **'Multi-select'** option to add several tests to a run simultaneously.
-
-1. Go to the **'Tests'** page.
-2. Enable **'Multi-select'** option.
-3. Select a few test cases.
-4. Click the **'Extra menu'** button in the multi-select menu panel.
-5. Select **'Add to Run'** option.
-
-![Testomat.io - add a few tests from Tests page](./images/Add_Multiple_Tests_1.png)
-
-The selected tests will be immediately added to the active test run, helping you to keep your execution plan up-to-date even while a run is already in progress.
-
-## How to Run a Suite from Tests Page
-
-Testomat.io allows you to launch a run of a single suite or multiple suites directly from the **'Tests'** page.
-
-### Run a Single Suite
-
-1. Go to the **'Tests'** page.
-2. Click on Suite that you want to Launch.
-3. Click the **'Extra menu'** button on suite page.
-4. Select **'Run Tests'** option from the dropdown menu.
-
-![Testomat.io - add suite from Tests page](./images/Add_Suite_1.png)
-
-5. Click the **'Launch'** button on the displayed modal.
-
-![Testomat.io - add suite from Tests page](./images/Add_Suite_2.png)
-
-The Run window, displaying all test cases within the selected Suite, will appear automatically.
-
-![Testomat.io - add suite from Tests page](./images/Add_Suite_3.png)
-
-### Run Several Suites
-
-Use the **'Multi-select'** option to launch multiple suites in a single run.
-
-1. Go to the **'Tests'** page.
-2. Enable **'Multi-select'** option.
-3. Select a few suites.
-4. Click the **'Run'** button.
-
-![Testomat.io - add several suites from Tests page](./images/Add_Suite_4.png)
-
-5. Click the **'Launch'** button on the displayed modal.
-
-![Testomat.io - add several suites from Tests page](./images/Add_Suite_5.png)
-
-If you need to set up additional run settings (like RunGroup or environment), click the **'Additional Settings'** link on the displayed modal.
-
-:::note
-
-You can Launch not only **manual** suites but also **automated** or **mixed** suites from **'Tests'** page, if Continuous Integration for your project is set up. Learn more about it on the relevant page on [Continuous Integration](https://docs.testomat.io/integrations/continuous-integration/) section.
-
-![Testomat.io - run automated suite Tests page](./images/Automated_Suite_1.gif)
-
-:::
-
 ## Test Case History
 
 When you launch a test run and make changes to test case title or description, a new entry is added to the test case's history. This entry records who made the edit and when it occurred.
@@ -173,7 +95,7 @@ Testomat.io allows users to pin RunGroups or individual Runs to the top of the D
 - **Customizable Dashboard:** Tailors the Dashboard to individual team workflows and priorities. Example: Pin runs related to production hotfixes or high-impact bugs.
 
 **To Pin Run or RunGroup:**
- 
+
 1. Go to the **'Runs'** page.
 2. Find the Run or RunGroup you want to pin.
 3. Click the **'Extra menu'** button aligned next to the item.
@@ -289,7 +211,7 @@ Only selected test cases will be relaunched for manual re-check or automatically
 
 ## How to Launch a Run Copy
 
-If you need need to re-check tests in your Run, but for some reason, you want to save this Test Run separately, use the **'Launch a copy'** option. 
+If you need need to re-check tests in your Run, but for some reason, you want to save this Test Run separately, use the **'Launch a copy'** option.
 
 **To Lauch a Run Copy you need:**
 
