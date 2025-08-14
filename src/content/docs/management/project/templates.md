@@ -264,19 +264,14 @@ If a variable is empty or undefined, the section will not be rendered.
 - [Additional comments, reproduction frequency, related tickets]
 ```
 
+You can find additional examples of markdown-formatted test cases in the documentation here: [Examples of Markdown Written Test Cases](https://docs.testomat.io/project/tests/classical-test-case-editor/#examples-of-markdown-written-test-cases).
+
 **Suite Template**
 
 ```
 ## Requirements
 
 - [List of requirements or preconditions for the suite]
-
-## Steps
-
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
-   ...
 
 ## Notes
 
