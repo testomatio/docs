@@ -135,8 +135,6 @@ Below are detailed examples showing when tags **are recognized** and when they a
 ```
 With these rules, you can better understand how tags are parsed from titles and avoid common pitfalls such as emails, operators, or invalid symbols.
 
-Perfect 👍 Here’s a concise **Best Practices** subsection you can append to the examples section. It will help readers not only understand the parsing rules but also apply them effectively.
-
 ## Best Practices for Using Tags in Titles
 
 To ensure your tags are recognized consistently and remain easy to manage:
