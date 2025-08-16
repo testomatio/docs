@@ -82,6 +82,7 @@ A complete list of allowed variables:
 * `passed_tests` - collection. A list of all passed tests in a run.
 * `failed_tests` - collection. A list of all failed tests in a run.
 * `skipped_tests` - collection. A list of all skipped tests in a run.
+* `env` - collection. A list of environments.
 
 An expression should return a boolean value. To deal with types other than boolean functions and methods can be used:
 
