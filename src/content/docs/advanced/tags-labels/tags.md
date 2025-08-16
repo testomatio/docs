@@ -40,3 +40,111 @@ In case if you don't see a previously created tag in the autocomplete dropdown, 
 3. Click Apply button
 
 ![Testomatio - Filtering by Tags](./images/Tag_filtering.png)
+
+## Tag Extraction Rules in Titles
+
+When writing titles, Testomat.io automatically detects tags marked with the `@` symbol. However, not every `@` occurrence is considered a valid tag.
+Below are detailed examples showing when tags **are recognized** and when they are **ignored**.
+
+**✅ Valid Tag Examples**
+
+```text
+"title with a simple @tag and some other @tag1"
+→ tags: ["tag", "tag1"]
+
+"@tag1 supertitle with leading tag and @tag inside title"
+→ tags: ["tag1", "tag"]
+
+"title with commed taglist @tag1: @tag2."
+→ tags: ["tag1", "tag2"]
+
+"title with commed taglist @tag1, @tag2.asd"
+→ tags: ["tag1", "tag2.asd"]
+
+"title @tag1. zxc"
+→ tags: ["tag1"]
+
+"title @tag1.asd zxc"
+→ tags: ["tag1.asd"]
+```
+
+**🚫 Ignored or Invalid Tags**
+
+```text
+"title with email test@test.test"
+→ tags: []
+
+"some_text_@tag"
+→ tags: []
+
+"some_text-@tag"
+→ tags: []
+
+"some_text*@tag"
+→ tags: []
+```
+
+**➕ Math Operators in Tags**
+
+```text
+"title with commed taglist @tag1+@tag2=@tag3"
+→ tags: ["tag1"]
+
+"title with commed taglist @tag1-@tag2=@tag3"
+→ tags: ["tag1"]
+
+"title with commed taglist @tag1*@tag2=@tag3"
+→ tags: ["tag1"]
+
+"title with commed taglist @tag1=@tag2=@tag3"
+→ tags: ["tag1"]
+
+"'title @tag1=:-.( asd"
+→ tags: ["tag1"]
+
+"'title @tag1=:-.) asd"
+→ tags: ["tag1=:-.)"]
+```
+
+**🔗 Tags Inside and Outside Brackets**
+
+**Outside brackets (ignored):**
+
+```text
+"some_text (sometext)@tag1 [sometext]@tag3"
+→ tags: []
+```
+
+**Inside brackets (partially detected):**
+
+```text
+"title (text @tag1)asda other text"
+→ tags: ["tag1)asda"]
+
+"title (text @tag1) asda"
+→ tags: ["tag1)"]
+
+"title (text @tag1( asda"
+→ tags: ["tag1"]
+
+"title [text @tag1]asda"
+→ tags: ["tag1"]
+
+"title [text @tag1] asda"
+→ tags: ["tag1"]
+```
+With these rules, you can better understand how tags are parsed from titles and avoid common pitfalls such as emails, operators, or invalid symbols.
+
+Perfect 👍 Here’s a concise **Best Practices** subsection you can append to the examples section. It will help readers not only understand the parsing rules but also apply them effectively.
+
+## Best Practices for Using Tags in Titles
+
+To ensure your tags are recognized consistently and remain easy to manage:
+
+* **Use simple words** → keep tags short, lowercase, and descriptive (e.g., `@smoke`, `@regression`).
+* **Avoid special characters** → symbols like `+`, `-`, `*`, `_`, or `=` can break parsing or truncate tags.
+* **Don’t use emails or URLs** → anything in the form `name@domain.com` is ignored.
+* **Separate tags with spaces or commas** → `@smoke, @ui` is correctly detected, while `@smoke@ui` may not be.
+* **Prefer placing tags at the end of titles** → improves readability and reduces the chance of misparsing inside brackets or punctuation.
+* **Keep consistency across your project** → agree on a common set of tags within your team to make filtering and reporting easier.
+
