@@ -241,9 +241,10 @@ export default defineConfig({
 							label: 'Bulk Edit',
 							collapsed: true,
 							items: [
-								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder' },
-								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder-demos' },
-								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder-suites-and-tests' }
+								{ label: 'Overview', link: '/advanced/bulk-edit-folder' },
+								{ label: 'Bulk Edit Demo', link: '/advanced/bulk-edit-folder/bulk-edit-demos' },
+								{ label: 'Bulk Edit on Suite and Test Levels', link: '/advanced/bulk-edit-folder/bulk-edit-on-suite-and-test-level' },
+								{ label: 'Using Bulk Edit and YAML Format in Testomat.io', link: '/advanced/bulk-edit-folder/what-is-bulk-edit' }
 							],
 						},
 						{
