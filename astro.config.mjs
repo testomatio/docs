@@ -3,9 +3,10 @@ import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
 import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
 import starlightLinksValidator from 'starlight-links-validator';
+import redirects from "./redirects.js";
 
 const options = {
-	contentPath: 'src/content/docs',
+    collectionBase: false,
 };
 
 export default defineConfig({
@@ -111,6 +112,7 @@ export default defineConfig({
 							items: [
 								{ label: 'Overview', link: '/project/runs' },
 								{ label: 'Running Tests Manually', link: '/project/runs/running-tests-manually' },
+								{ label: 'Environments', link: '/project/runs/environments' },
 								{ label: 'Running Automated Tests', link: '/project/runs/running-automated-tests' },
 								{ label: 'Managing Runs', link: '/project/runs/managing-runs' },
 								{ label: 'RunGroups', link: '/project/runs/rungroups' },
@@ -118,36 +120,6 @@ export default defineConfig({
 								{ label: 'Archive Runs & RunGroups', link: '/project/runs/archive-runs-and-groups' },
 								{ label: 'Run Reports', link: '/project/runs/reports' },
 								{ label: 'Custom Statuses', link: '/project/runs/custom-statuses' },
-								{
-									label: 'Reporter',
-									// collapsed: true,
-									items: [
-										{ label: 'Overview', link: '/project/runs/reporter'},
-										{ label: 'NodeJS Test Frameworks', link: '/project/runs/reporter/frameworks'},
-										{ label: 'PHP Test Frameworks', link: '/project/runs/reporter/php'},
-										{ label: 'Python Test Frameworks', link: '/project/runs/reporter/python'},
-										{ label: 'Java and Other Test Frameworks', link: '/project/runs/reporter/junit'},
-										{ label: 'Test Artifacts', link: '/project/runs/reporter/artifacts'},
-										{ label: 'Configuration', link: '/project/runs/reporter/configuration'},
-										{ label: 'Advanced Options', link: '/project/runs/reporter/pipes/testomatio' },
-										{ label: 'CLI', link: '/project/runs/reporter/cli'},
-										{ label: 'Functions', link: '/project/runs/reporter/functions'},
-										{ label: 'Logger', link: '/project/runs/reporter/logger'},
-										{
-											label: 'Pipes',
-											collapsed: true,
-											items: [
-												{ label: 'Overview', link: '/project/runs/reporter/pipes' },
-												{ label: 'GitHub', link: '/project/runs/reporter/pipes/github' },
-												{ label: 'GitLab', link: '/project/runs/reporter/pipes/gitlab' },
-												{ label: 'BitBucket', link: '/project/runs/reporter/pipes/bitbucket' },
-												{ label: 'CSV', link: '/project/runs/reporter/pipes/csv' },
-												{ label: 'HTML', link: '/project/runs/reporter/pipes/html' },
-											],
-										},
-										{ label: 'Workflows', link: '/project/runs/reporter/workflows'},
-									],
-								},
 							],
 						},
 						{
@@ -223,6 +195,35 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Test Reporting',
+					items: [
+						{ label: 'Overview', link: '/test-reporting'},
+						{ label: 'NodeJS Test Frameworks', link: '/test-reporting/frameworks'},
+						{ label: 'PHP Test Frameworks', link: '/test-reporting/php'},
+						{ label: 'Python Test Frameworks', link: '/test-reporting/python'},
+						{ label: 'Java and Other Test Frameworks', link: '/test-reporting/junit'},
+						{ label: 'Test Artifacts', link: '/test-reporting/artifacts'},
+						{ label: 'Configuration', link: '/test-reporting/configuration'},
+						{ label: 'Advanced Options', link: '/test-reporting/pipes/testomatio' },
+						{ label: 'CLI', link: '/test-reporting/cli'},
+						{ label: 'Functions', link: '/test-reporting/functions'},
+						{ label: 'Logger', link: '/test-reporting/logger'},
+						{
+							label: 'Pipes',
+							collapsed: true,
+							items: [
+								{ label: 'Overview', link: '/test-reporting/pipes' },
+								{ label: 'GitHub', link: '/test-reporting/pipes/github' },
+								{ label: 'GitLab', link: '/test-reporting/pipes/gitlab' },
+								{ label: 'BitBucket', link: '/test-reporting/pipes/bitbucket' },
+								{ label: 'CSV', link: '/test-reporting/pipes/csv' },
+								{ label: 'HTML', link: '/test-reporting/pipes/html' },
+									],
+						},
+						{ label: 'Workflows', link: '/test-reporting/workflows'},
+							],
+				},
+				{
 					label: "Advanced",
 					items: [
 						{ label: 'Overview', link: '/advanced' },
@@ -235,16 +236,23 @@ export default defineConfig({
 						},
 						{
 							label: 'Tags, Custom fields',
+							label: 'Tags & Labels',
 							collapsed: true,
 							items: [
-								{ label: 'Tags, Labels & Custom fields', link: '/advanced/tags-labels' }
+								{ label: 'Overview', link: '/advanced/tags-labels' },
+								{ label: 'Tags or Labels', link: '/advanced/tags-labels/tags-or-labels' },
+								{ label: 'Tags', link: '/advanced/tags-labels/tags' },
+								{ label: 'Labels and Custom Fields', link: '/advanced/tags-labels/labels-and-custom-fields' },
 							],
 						},
 						{
 							label: 'Bulk Edit',
 							collapsed: true,
 							items: [
-								{ label: 'Bulk Edit', link: '/advanced/bulk-edit-folder' }
+								{ label: 'Overview', link: '/advanced/bulk-edit-folder' },
+								{ label: 'Bulk Edit Demo', link: '/advanced/bulk-edit-folder/bulk-edit-demos' },
+								{ label: 'Bulk Edit on Suite and Test Levels', link: '/advanced/bulk-edit-folder/bulk-edit-on-suite-and-test-level' },
+								{ label: 'Using Bulk Edit and YAML Format in Testomat.io', link: '/advanced/bulk-edit-folder/what-is-bulk-edit' }
 							],
 						},
 						{
@@ -436,68 +444,5 @@ export default defineConfig({
 			[rehypeAstroRelativeMarkdownLinks, options],
 		],
 	},
-	redirects: {
-		"/getting-started/test-plans": "/project/plans",
-		"/getting-started/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
-		"/getting-started/import-tests-from-source-code": "/project/import-export/import/import-tests-from-source-code",
-		"/getting-started/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
-		"/getting-started/test-design": "/project/tests",
-		"/getting-started/running-tests-manually": "/project/runs/running-tests-manually",
-		"/getting-started/running-automated-tests": "/project/runs/running-automated-tests",
-		"/getting-started/managing-runs": "/project/runs/managing-runs",
-		"/usage/steps-database": "/project/steps-snippets/steps",
-		"/usage/pulse": "/project/pulse",
-		"/usage/analytics": "/project/analytics",
-		"/usage/labels-and-custom-fields": "/advanced/tags-labels",
-		"/usage/bulk-edit": "/advanced/bulk-edit-folder",
-		"/usage/branches": "/advanced/branches-folder",
-		"/usage/test-artifacts": "/project/runs/reporter/artifacts",
-		"/advanced/artifacts": "/project/runs/reporter/artifacts",
-		"/advanced/artifacts/test-artifacts": "/project/runs/reporter/artifacts",
-		"/usage/query-language": "/advanced/tql",
-		"/usage/keyboard-shortcuts": "/advanced/shortcuts",
-		"/usage/living-documentation": "/advanced/living-doc",
-		"/contact-us/contact-us": "/support/contact-us",
-		"/integration/issues-management-systems": "/integrations/issues-management",
-		"/integration/jira": "/integrations/issues-management/jira",
-		"/usage/continuous-integration": "/integrations/continuous-integration/overview",
-		"/usage/notifications": "/integrations/report-notifications/rules",
-		"/integration/sso": "/integrations/single-sign-on",
-		"/usage/templates": "/management/project/templates",
-		"/usage/jira-plugin": "/advanced/jira-plugin",
-		"/subscriptions/companies": "/management/company",
-		"/subscriptions/subscriptions": "/management/company/subscriptions",
-		"/subscriptions/trials": "/management/company/trials",
-		"/reference/import/": "/project/import-export/import/import-tests-from-source-code",
-		"/reference/reporter/": "/project/runs/reporter",
-		"/reference/reporter/frameworks": "/project/runs/reporter/frameworks",
-		"/reference/reporter/configuration": "/project/runs/reporter/configuration",
-		"/reference/reporter/functions": "/project/runs/reporter/functions",
-		"/reference/reporter/logger": "/project/runs/reporter/logger",
-		"/reference/reporter/workflows": "/project/runs/reporter/workflows",
-		"/reference/reporter/pipes": "/project/runs/reporter/pipes/index",
-		"/reference/reporter/pipes/testomatio": "/project/runs/reporter/pipes/testomatio",
-		"/compliance/overview/": "/legal/compliance",
-		"/security/overview/": "/legal/security",
-		"/security/subprocessors": "/legal/security/subprocessors",
-		"/usage/continious-integration": "/integrations/continuous-integration",
-		// "/usage/bdd-syntax": "",	bdd-syntax locate in not-in-use folder
-		"/reference/reporter/pipes/testomatio.html": "/project/runs/reporter/pipes/testomatio",
-		"/usage/templates.html": "/management/project/templates",
-		"/reference/reporter/frameworks.html": "/project/runs/reporter/frameworks",
-		"/legal/compliance/overview": "/legal/compliance",
-		"/legal/security/overview": "/legal/security",
-		"/reference": "/project/runs",
-
-		"/support/contact-us": "/support",
-		"/integrations/continuous-integration/overview": "/integrations/continuous-integration",
-		"/reference/import-js": "/project/import-export/import/import-js",
-		"/getting-started/start-from-scratch": "/getting-started",
-		"/legal/advanced/jira-plugin/index.md": "/legal/security/jira",
-		"/project/import-export/import-js": "/project/import-export/import/import-js",
-		"/project/import-export/import-tests-from-source-code": "/project/import-export/import/import-tests-from-source-code",
-		"/project/import-export/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
-		"/project/import-export/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
-		"/project/import-export/import-bdd": "/project/import-export/import/import-bdd",
-	},
+	redirects: redirects,
 });

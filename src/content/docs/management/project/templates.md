@@ -27,7 +27,7 @@ Learn more: [How to create a Notification Rule](https://docs.testomat.io/integra
 - **Suite Template**: used to define the structure and content of individual test suites/folders;
 - **Code Template**: used to define the default code structure for automated tests with dynamic variables to simplify test automation;
 - **Defect Template**: used to automatically prefill the issue summary and description fields when reporting defects to integrations like Jira, GitHub, or Azure;
-- **Meta Template**: used to define custom metadata fields that are shown in test run reports and help enrich report context;
+- **Meta Template**: defines which meta-data keys are displayed in the Run Report View; it controls how data is shown and helps enrich report context;
 - **Notification Template (Slack / MS Teams)**: used to customize the structure and content of automated messages sent to Slack or Microsoft Teams after a test run is completed;
 
 :::note
@@ -66,6 +66,13 @@ Marking a template as default means it will be auto-applied every time you creat
 
 - **Set labels**: click to open an additional sidebar where you can select from existing Labels and Custom Fields. Only items that were previously configured (as described in the <a href="https://docs.testomat.io/advanced/tags-labels/#how-to-add-labels--custom-fields" target="_blank">How to Add Labels & Custom Fields</a>) will be available for selection. To use new ones, you must define them first using the linked guide;
 - **Add variables** (optional): сhoose from available variables for the selected template type, shown in the dropdown list;
+
+:::note
+
+Variables are not supported for Test and Suite templates.
+
+:::
+
 - **Body** (required): add the template body using Markdown syntax and dynamic variables;
 
 5. Click **Save** button to apply changes or **Cancel** button to discard
@@ -109,42 +116,29 @@ Templates in Testomat.io support dynamic content by using variables. Variables a
 
 **Insertion format:**
 
-`{{#if variable}}### Label: **{{ variable }}**{{/if}}`
+`{{#if variable}}Label: {{ variable }} {{/if}}`
 
 ### Supported Variables
 
-Below is an overview of which variables are supported for each template type:
+The following shows which variables are supported for each type of template that allows variables:
 
-#### Test Templates
+:::note
 
-| **Variable**       | **Inserted As**                                                              |
-| ------------------ | ---------------------------------------------------------------------------- |
-| `test.title`       | `{{#if test.title}}### Title: **{{ test.title }}**{{/if}}`                   |
-| `test.description` | `{{#if test.description}}### Description: **{{ test.description }}**{{/if}}` |
-| `test.tags`        | `{{#if test.tags}}### Tags: **{{ test.tags }}**{{/if}}`                      |
-| `test.labels`      | `{{#if test.labels}}### Labels: **{{ test.labels }}**{{/if}}`                |
-| `test.steps`       | `{{#if test.steps}}### Steps: **{{ test.steps }}**{{/if}}`                   |
-| `test.attachments` | `{{#if test.attachments}}### Attachments: **{{ test.attachments }}**{{/if}}` |
+Test Templates and Suite Templates do not support variables.
 
-#### Suite Templates
-
-| **Variable**        | **Inserted As**                                                                |
-| ------------------- | ------------------------------------------------------------------------------ |
-| `suite.title`       | `{{#if suite.title}}### Title: **{{ suite.title }}**{{/if}}`                   |
-| `suite.description` | `{{#if suite.description}}### Description: **{{ suite.description }}**{{/if}}` |
-| `suite.tags`        | `{{#if suite.tags}}### Tags: **{{ suite.tags }}**{{/if}}`                      |
-| `suite.labels`      | `{{#if suite.labels}}### Labels: **{{ suite.labels }}**{{/if}}`                |
-| `suite.tests`       | `{{#if suite.tests}}### Tests: **{{ suite.tests }}**{{/if}}`                   |
+:::
 
 #### Code Templates
 
-| **Variable**        | **Inserted As**                                                                      |
-| ------------------- | ------------------------------------------------------------------------------------ |
-| `test.title`        | `{{#if test.title}}### Title: **{{ test.title }}**{{/if}}`                           |
-| `test.description`  | `{{#if test.description}}### Description: **{{ test.description }}**{{/if}}`         |
-| `test.body`         | `{{#if test.body}}### Body: **{{ test.body }}**{{/if}}`                              |
-| `suite.title`       | `{{#if suite.title}}### Suite Title: **{{ suite.title }}**{{/if}}`                   |
-| `suite.description` | `{{#if suite.description}}### Suite Description: **{{ suite.description }}**{{/if}}` |
+Depending on the selected framework, the corresponding block with the correct syntax will be inserted. You can use as it is, or modify it as needed.
+
+| **Variable**         | **Inserted As**                   |
+| -------------------- | --------------------------------- |
+| `test.title`         | `{{ test.title }}`                |
+| `test.description`   | `{{ test.description }}`          |
+| `test.body` / `body` | `{{ test.body }}` or `{{ body }}` |
+| `suite.title`        | `{{ suite.title }}`               |
+| `suite.description`  | `{{ suite.description }}`         |
 
 #### Defect Templates
 
@@ -206,9 +200,15 @@ Below is an overview of which variables are supported for each template type:
 
 #### Meta Templates
 
-| **Variable**    | **Inserted As**                                                    |
-| --------------- | ------------------------------------------------------------------ |
-| `project.value` | `{{#if project.value}}### Project: **{{ project.value }}**{{/if}}` |
+| **Variable**    | **Inserted As**        |
+| --------------- | ---------------------- |
+| `project.value` | `{{ project.value }} ` |
+
+:::note
+
+Use any keys **(variables)** that exist in the Run Report View. More info: [Applying Meta Templates](https://docs.testomat.io/management/project/templates/#applying-meta-templates)
+
+:::
 
 #### Notification Templates
 
@@ -235,6 +235,112 @@ Below is an overview of which variables are supported for each template type:
 If a variable is empty or undefined, the section will not be rendered.
 
 :::
+
+### Examples per Template Type
+
+**Test Template**
+
+```
+## Preconditions
+- [Setup, test data, accounts, environment state before execution]
+
+## Steps
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+...
+
+## Expected Result
+- [What should happen if the test passes]
+
+## Postconditions
+- [State of the system after execution — e.g., data created, user logged in/out]
+
+## Attachments
+- Screenshots: [paste them here or provide links]
+- Logs: [paste log file or link here]
+
+## Notes
+- [Additional comments, reproduction frequency, related tickets]
+```
+
+You can find additional examples of markdown-formatted test cases in the documentation here: [Examples of Markdown Written Test Cases](https://docs.testomat.io/project/tests/classical-test-case-editor/#examples-of-markdown-written-test-cases).
+
+**Suite Template**
+
+```
+## Requirements
+
+- [List of requirements or preconditions for the suite]
+
+## Notes
+
+- [Additional comments, related tickets, or other important information]
+```
+
+**Code Template**
+
+```
+test.describe('{{ suite }}', () => {
+  test('{{ test }}', () => {
+{{ body }}
+  });
+});
+
+```
+
+**Defect Template**
+
+```
+## STR
+
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+   ...
+
+## Actual result
+[Describe what actually happened]
+
+## Expected result
+{{ test.title }}
+
+Executed by: {{ run.executed }}
+
+## Test case information
+Tags: **{{ test.tags }}**
+Link to: {{ test.jiraissues }}
+
+## Environment
+
+{{#if run.environment}}Run Environment: {{ run.environment }}{{/if}}
+```
+
+**Meta Template**
+
+Create a template using the keys available in the Run Report View. If the test report doesn’t include a value for a specific key (e.g, ` project.value` or `browser`), the corresponding placeholders will remain empty. More info: [Applying Meta Templates](https://docs.testomat.io/management/project/templates/#applying-meta-templates)
+
+```
+{{ project.value }}
+{{ browser }}
+```
+
+**Notification Template**
+
+```
+{{#if run.title}}Run: {{ run.title }}{{/if}}
+{{#if run.executed}}Run Executed by: {{ run.executed }}{{/if}}
+{{#if run.environment}}Run Environment: {{ run.environment }}{{/if}}
+{{#if run.finished}}Run Finished at: {{ run.finished }}{{/if}}
+{{#if run.created}}Run Created at: {{ run.created }}{{/if}}
+{{#if run.duration}}Run Duration: {{ run.duration }}{{/if}}
+{{#if run.project}}Run Project: {{ run.project }}{{/if}}
+{{#if run.tests}}Run Tests count: {{ run.tests }}{{/if}}
+{{#if run.id}}Run ID: {{ run.id }}{{/if}}
+{{#if run.plan}}Run Plan: {{ run.plan }}{{/if}}
+{{#if run.failures}}List of Failed Launch Tests: {{ run.failures }}{{/if}}
+{{#if run.labels}}Run Labels: {{ run.labels }}{{/if}}
+```
 
 ## Applying Templates
 
@@ -345,6 +451,21 @@ Once the issue is created:
 
 ### Applying Meta Templates
 
+**Meta Template** defines which specific meta-data will be displayed in the Run Report View. It only controls the display of data and does not affect how the meta-data is generated, stored, or passed by the test.
+
+- Unlike other template types, there is **no manual option** to select a **Meta Template** during a test run
+- You specify which keys should be shown
+- Meta-data can be added manually **only for manual runs**
+- It works strictly with **key–value pairs**
+- It is recommended to use **Meta Template** in automated tests to dynamically display important information without manual input
+- **Meta Template** helps standardize meta-data display and focus on key information
+
+#### How it Works for Manual Run
+
+Once the default **Meta Template** is created with specific keys (variables),
+
+![Created meta template](./images/att1.png)
+
 1. Go to **Runs** tab
 2. Open the relevant ongoing run
 3. Click the **Continue** button
@@ -354,6 +475,13 @@ Once the issue is created:
 4. Click the **Edit metafields** button under the test result
 
 5. Fill in the **Key** and **Value**
+
+:::note
+
+Enter the Key exactly as defined in the default **Meta Template**.
+
+:::
+
 6. Click the **Save** button
 
 ![Save meta data](./images/att15_6270.png)
@@ -366,6 +494,27 @@ Once the issue is created:
 
 ![Meta template is applied](./images/att17_6270.png)
 
+:::note
+
+It’s recommended to use default **Meta Template** with automated tests whenever possible to ensure consistency and reduce manual effort.
+
+:::
+
+#### How it Works for Automated Run
+
+When using automated tests, a default **Meta Template** is applied automatically to display meta-data in the Run Report View based on the keys defined in the template.
+
+Once the default **Meta Template** is created with specific keys (variables):
+
+![Meta Template](./images/att2.png)
+
+1. Go to **Runs** tab
+2. Open the relevant finished run
+
+In the Run Report View, the values corresponding to the keys defined in the template are displayed in the order specified in the template.
+
+![Run View with Meta Data](./images/att3.png)
+
 ### Applying Notification Template
 
 Unlike other template types, **there is no manual option to select a Notification Template** during a test run or when sending report notifications.
@@ -377,6 +526,8 @@ Once you have configured Slack or Microsoft Teams integration via the [Slack Not
 :::note
 
 If no Notification Template is configured, the system will automatically generate the notification message using **all supported variables** in the default layout.
+
+Currently, test status counts (e.g., `PASSED 10`, `FAILED 10`, `SKIPPED 10`) are **not configurable** within the template and will appear in the system’s default format.
 
 :::
 

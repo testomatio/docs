@@ -1,0 +1,35 @@
+---
+title: Bulk Edit Demo - Creating and Restructuring Tests with YAML
+description: Watch Bulk Edit in action with real-world examples. This page demonstrates how to create tests, remove a root suite, and restructure test projects in Testomat.io using YAML.
+type: article
+url: https://docs.testomat.io/advanced/bulk-edit-folder-demos
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/169832839-f67f3cad-73b7-43ff-ba00-b4ecd4296c2f.D7I3Huc-_Z21Q63i.webp
+      
+  - tag: meta
+    attrs:
+      name: keywords
+      content: bulk edit, test management, Testomat.io, YAML, test suite, reorder tests, create tests, delete tests, bulk test creation, file patterns, test restructuring, automation
+---
+## Demos
+
+Let's see how powerful bulk edit mode is in action.
+
+### Creating Tests in Empty Suites
+
+This demo shows how to create multiple tests across different suites using the YAML editor. Instead of clicking through the UI, you can define everything in structured text and apply changes in bulk.
+
+<video width="960" controls>
+  <source src="./images/Bulk_edit_create_tests.mp4" type="video/mp4">
+</video>
+
+### Replace Root Suite
+
+In cases where your project has only one root suite, you can simplify the structure by removing it. This demo shows how to flatten the hierarchy by moving all tests up one level.
+
+<video width="960" controls>
+  <source src="./images/change_root_suite.mp4" type="video/mp4">
+</video>
