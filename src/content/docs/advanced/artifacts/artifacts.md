@@ -2,7 +2,7 @@
 title: Artifacts
 description: Learn how Testomat.io handles test artifacts and attachments, such as screenshots, videos, and logs, to enhance test management and reporting. This guide explains how to add and manage attachments during test case creation, manual testing, and automated test execution with S3 cloud storage support. It also covers features like in-platform artifact preview and integrations with various frameworks and tools to streamline debugging and project documentation.
 type: article
-url: https://docs.testomat.io/advanced/test-artifacts
+url: https://docs.testomat.io/advanced/artifacts
 head:
   - tag: meta
     attrs:
