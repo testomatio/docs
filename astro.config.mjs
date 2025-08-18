@@ -230,7 +230,7 @@ export default defineConfig({
 							label: 'Artifacts',
 							collapsed: true,
 							items: [
-								{ label: 'Artifacts', link: '/advanced/artifacts' }
+								{ label: 'Artifacts', link: '/advanced/test-artifacts' }
 							],
 						},
 						{
