@@ -53,36 +53,6 @@ The **'Create Test'** button can be hidden via the **'Hide Test Creation'** opti
 - **Capturing exploratory test cases:** Testers conducting exploratory testing can log and formalize new test cases as they go, ensuring useful insights are not lost.
 - **Collaborative test planning in real time:** During team sessions or test reviews, testers can collectively identify and add new tests based on discussion or observed issues.
 
-## How to Add a Test Case from Tests Page
-
-Add test case to your unfinished run directly from **'Tests'** page.
-
-1. Go to the **'Tests'** page.
-2. Click on test case that you want to add.
-3. Click the **'Extra menu'** button on test case page.
-4. Select **'Add to Run'** option from the dropdown menu.
-
-![Testomat.io - add test case from Tests page](./images/Add_Test_1.png)
-
-5. Select the unfinished run to which you want to add this test.
-6. Click the **'Add to Run'** button.
-
-![Testomat.io - add test case from Tests page](./images/Add_Test_2.png)
-
-The test case is successfully added to the selected ongoing run:
-
-![Testomat.io - add test case from Tests page](./images/Add_Test_3.png)
-
-As well you can use **'Multi-select'** option to add several tests to a run simultaneously.
-
-1. Go to the **'Tests'** page.
-2. Enable **'Multi-select'** option.
-3. Select a few test cases.
-4. Click the **'Extra menu'** button in the multi-select menu panel.
-5. Select **'Add to Run'** option.
-
-![Testomat.io - add a few tests from Tests page](./images/Add_Multiple_Tests_1.png)
-
 ## Test Case History
 
 When you launch a test run and make changes to test case title or description, a new entry is added to the test case's history. This entry records who made the edit and when it occurred.
@@ -125,7 +95,7 @@ Testomat.io allows users to pin RunGroups or individual Runs to the top of the D
 - **Customizable Dashboard:** Tailors the Dashboard to individual team workflows and priorities. Example: Pin runs related to production hotfixes or high-impact bugs.
 
 **To Pin Run or RunGroup:**
- 
+
 1. Go to the **'Runs'** page.
 2. Find the Run or RunGroup you want to pin.
 3. Click the **'Extra menu'** button aligned next to the item.
@@ -241,7 +211,7 @@ Only selected test cases will be relaunched for manual re-check or automatically
 
 ## How to Launch a Run Copy
 
-If you need need to re-check tests in your Run, but for some reason, you want to save this Test Run separately, use the **'Launch a copy'** option. 
+If you need need to re-check tests in your Run, but for some reason, you want to save this Test Run separately, use the **'Launch a copy'** option.
 
 **To Lauch a Run Copy you need:**
 

@@ -15,35 +15,148 @@ head:
       content: manual testing, test plans, test environment, checklist mode, manual test execution, multi-environment testing, Testomat.io, QA testing, test management, automated tests manually
 ---
 
-## Running Tests Manually
+In Testomat.io, manual test runs allow QA Engineers to execute tests that are not automated (yet) or to run automated tests in manual mode.  
+During a manual run, testers can mark each test as **Passed**, **Failed**, or **Skipped**, add messages, attach evidence (screenshots, logs, etc.), and assign tests to specific team members.
 
-Tests that are not automated (yet) can be executed by QA engineers in manual testing mode. In this mode, a user can check manual tests and mark them as passed or failed. It is possible to create a list of tests to check in test plan and assign users to a run.
+There are **two main ways** to start a manual test run:
+
+1.  From the **'Tests'** page – quick launch for selected tests or suites, or adding tests to an already ongoing run without leaving the Tests view
+2.  From the **'Runs'** page – the classic way to create and manage full test runs with complete configuration options
+
+## How to Launch from the Tests Page
+
+From the **'Tests'** page, you can quickly start a run or add tests to an existing run without opening the Runs view. Available options include:
+
+- Add single test case to ongoing run
+- Add multiple test cases to ongoing run
+- Run a single suite
+- Run multiple suites at once
+- Launch **manual**, **automated**, or **mixed** suites if CI is configured
+
+### How to Add a Test Case to the Run from Tests Page
+
+Add a test case to your unfinished run directly from **'Tests'** page.
+
+1. Go to the **'Tests'** page.
+2. Click on the Test Case that you want to add.
+3. Click the **Extra menu** button on test case page.
+4. Select **'Add to Run'** option from the dropdown menu.
+
+![Testomat.io - add test case from Tests page](./images/Add_Test_1.png)
+
+5. Select the unfinished run to which you want to add this test.
+6. Click the **'Add to Run'** button.
+
+![Testomat.io - add test case from Tests page](./images/Add_Test_2.png)
+
+The test case is successfully added to the selected ongoing run:
+
+![Testomat.io - add test case from Tests page](./images/Add_Test_3.png)
+
+As well you can use **Multi-select** option to add several tests to a run simultaneously.
+
+1. Go to the **'Tests'** page.
+2. Enable **'Multi-select'** option.
+3. Select a few test cases.
+4. Click the **'Extra menu'** button in the multi-select menu panel.
+5. Select **'Add to Run'** option.
+
+![Testomat.io - add a few tests from Tests page](./images/Add_Multiple_Tests_1.png)
+
+The selected tests will be immediately added to the ongoing test run, helping you to keep your execution plan up-to-date even while a run is already in progress.
+
+### How to Run a Suite from Tests Page
+
+Testomat.io allows you to launch a run of a single suite or multiple suites directly from the **'Tests'** page.
+
+#### Run a Single Suite
+
+1. Go to the **'Tests'** page.
+2. Click on the Suite that you want to Launch.
+3. Click the **'Extra menu'** button on suite page.
+4. Select **'Run Tests'** option from the dropdown menu.
+
+![Testomat.io - add suite from Tests page](./images/Add_Suite_1.png)
+
+5. Click the **'Launch'** button on the displayed modal.
+
+![Testomat.io - add suite from Tests page](./images/Add_Suite_2.png)
+
+The Run window, displaying all test cases within the selected Suite, will appear automatically.
+
+![Testomat.io - add suite from Tests page](./images/Add_Suite_3.png)
+
+#### Run Several Suites
+
+Use the **'Multi-select'** option to launch multiple suites in a single run.
+
+1. Go to the **'Tests'** page.
+2. Enable **'Multi-select'** option.
+3. Select a few suites.
+4. Click the **'Run'** button.
+
+![Testomat.io - add several suites from Tests page](./images/Add_Suite_4.png)
+
+5. Click the **'Launch'** button on the displayed modal.
+
+![Testomat.io - add several suites from Tests page](./images/Add_Suite_5.png)
+
+If you need to configure additional run settings (such as RunGroup or environment), click the **'Additional Settings'** link on the displayed modal.
+
+:::note
+
+You can Launch not only **manual** suites but also **automated** or **mixed** suites from **'Tests'** page, if Continuous Integration for your project is set up. Learn more about it on the relevant page on [Continuous Integration](https://docs.testomat.io/integrations/continuous-integration/) section.
+
+![Testomat.io - run automated suite Tests page](./images/Automated_Suite_1.gif)
+
+:::
+
+## How to Launch from the Runs Page
+
+From the **Runs** page, you can create and manage test runs with flexible configuration options and full execution control. You can launch runs immediately or prepare and save them for later execution. Runs can include all tests in the project or predefined test plans, allowing you to organize testing according to your workflow.
+
+### How to Configure a Manual Run
+
+When creating a manual run from the **Runs** page, the following options are available for configuration:
+
+1. **Assign users** – define who will execute the tests ([How to Assign Users to the Test Run](https://docs.testomat.io/project/runs/running-tests-manually/#how-to-assign-users-to-the-test-run))
+2. **Title** (optional) – give your run a descriptive name
+3. **Set environment for execution** – choose one or multiple environments ([How to Run Environments](https://docs.testomat.io/project/runs/environments/#how-to-run-with-multi-environments))
+4. **Run as checklist** – hides test descriptions to enable faster execution for experienced testers
+5. **Select RunGroup** – group the run within a specific RunGroup ([How to Run Tests in RunGroups](https://docs.testomat.io/project/runs/running-tests-manually/#how-to-run-tests-in-rungroups))
+6. **Description** (optional) – provide context for this run
+7. **Search** – quickly find existing test plans
+8. **New Test Plan** – create a plan if you need predefined test sets ([Test Plans](https://docs.testomat.io/project/plans/))
+9. **All Manual Tests** – launch all manual tests available in the project
+10. **Select an existing Test Plan** – choose from existing plans if you don’t want to run all tests
+11. **Launch** button - immediately start the run with the configured settings
+12. **Save** button - store the configured run without launching it, so it can be executed later
+
+![Manual Run screen](./images/att1_355.png)
 
 ### How to Run All Tests
 
 To launch a Manual Test Run you need:
 
-1. Click the Run button in the left-side menu
-2. Select the Manual Run button
+1. Click **Runs** in the sidebar
+2. Click on **Manual Run** button
 
-![CleanShot 2022-05-26 at 11 47 39@2x](./images/170453790-f6c2c54b-9716-4a05-b1d9-bdbf1da77836.jpg)
+![Launch Manual Run](./images/att2_362.png)
 
-On Manual Run screen you need:
+Once you have configured the necessary settings,
 
-1. Select a Test Plan
-2. Add a title (optional)
-3. Pick up a testing environment
-4. Click on Launch button
+3. Select **All Manual Tests** option
+4. Click **Launch** to start the run
 
-![CleanShot 2022-05-26 at 11 52 23@2x](./images/170454961-7b6a8c26-addc-43c8-bc62-200a63824f9e.jpg)
+![Lauch All](./images/att2_355.png)
 
 ### How to Set Test Case Results in Manual Run
 
 Once a manual test run is launched, you need to set a Result for each test case. The available options are:
 
-- PASSED – The test case was successfully executed;
-- FAILED – The test case did not meet the expected result;
-- SKIPPED – The test case was not executed;
+- **PASSED** – The test case was successfully executed;
+- **FAILED** – The test case did not meet the expected result;
+- **SKIPPED** – The test case was not executed;
 
 **Steps to Set Test Case Results, Messages, and Attach Files**:
 
@@ -95,49 +208,9 @@ Once a manual test run is launched, you need to set a Result for each test case.
 
 :::note
 
-If you need to configure different result messages, click here: <a href="https://docs.testomat.io/management/project/settings/#custom-statuses" target="_blank">Custom Statuses</a>
+If you need to configure different result messages, click here: <a href="https://docs.testomat.io/project/runs/custom-statuses/" target="_blank">Custom Statuses</a>
 
 :::
-
-### How to Create a Test Plan
-
-If you need to create a Test Plan you should click on + New Test Plan
-
-![CleanShot 2022-05-26 at 11 57 49@2x](./images/170455198-d13d4a17-9d0e-40e3-9dc6-cc4b13f4782b.jpg)
-
-Or you can go to **Plans** page and create a new Test Plan there:
-
-![CleanShot 2022-05-26 at 12 48 54@2x](./images/170464103-df345a62-800f-4a41-be74-5b03bb4fc441.jpg)
-
-Now your next steps are:
-
-1. Add a title to your Test Plan
-2. Pick a suite/ tests
-3. Click on the Save Plan button
-
-![CleanShot 2022-05-26 at 12 11 53@2x](./images/170457848-5f9b29a5-ec4f-4837-95d6-6871c2219f0a.jpg)
-
-The new Test Plan will appear on Manual Run screen
-
-![CleanShot 2022-05-26 at 12 16 22@2x](./images/170458242-40b1bf88-842c-421a-b562-d64370139b76.jpg)
-
-### How to Filter Tests for a Test Plan
-
-Testomat.io allows users to refine test selection when creating a test plan by filtering tests and excluding unwanted ones.
-
-Tests can be filtered in several ways:
-
-1.  Manually picked up from existing suites.
-2.  By Tags.
-3.  By Priority.
-4.  By Assignee.
-5.  By Labels and Custom Fields.
-
-![Testomat.io - Filter tests](./images/Filter.png)
-
-After you applied filters to narrow down the test list, you can exclude unwanted tests by deselecting individual tests from the filtered list **manually by unchecking them one by one** or **excluding multiple tests at once using TQL queries**. This will provide greater flexibility and control during test plan setup.
-
-![Testomat.io - Exclude tests](./images/Exclude_tests.gif)
 
 ### How to Assign Users to the Test Run
 
@@ -173,7 +246,7 @@ To select Test Assignment Strategies:
 
 ![Testomat.io - Assignment Strategy](./images/Assign_strategy.png)
 
-### How to Assign User to Specific Test Cases/Suites within a Test Run
+### How to Assign Users to Specific Test Cases or Suites
 
 During the Test Run you can assign different users to specific Test Cases, Suites or Folders within one Test Run.
 
@@ -217,16 +290,21 @@ Your Test Cases and Suites are now successfully assigned to different users.
 
 ![Testomat.io - Assign TC](./images/Assign_TC_1.png)
 
-### How to Select Environment
+### How to Select a Test Environment
 
 To select a testing environment you need:
 
-1. Click on Environment field.
-2. Choose the environment that you need.
+1. Click on Environment field
+2. Choose one or more environments from the dropdown list
+3. Click **Save** to apply your selection
 
-![CleanShot 2022-05-26 at 12 29 39@2x](./images/170460669-b8b8c3dc-ef75-4b31-a3ba-3dfa7c8d9926.jpg)
+![Select Environment](./images/att3_355.png)
 
-### How to Run Tests in RunGroups?
+Testomat.io supports multiple strategies for running tests across different environments such as browsers, operating systems, devices, and deployment stages. You can run tests in single or multiple environments — sequentially or in parallel — depending on your project needs and infrastructure.
+
+To learn more about configuring, managing, and running tests with environments, including multi-environment execution modes and CI/CD integration, please see the full guide here: [How to Run Environments](https://docs.testomat.io/project/runs/environments/).
+
+### How to Run Tests in RunGroups
 
 RunGroups allow you to organize test runs into structured folders, making it easier to manage and analyze test execution. By grouping related runs, you can maintain better visibility over different testing phases, environments, or specific test suites.
 
@@ -264,67 +342,23 @@ By following these steps, you can organize test runs within RunGroups, ensuring 
 
 ![Runs into Folders](images/att5_214.png)
 
-**Launching Runs with Test Multiselection**
-
-Ensure the **Require RunGroup for new runs** option is enabled to launch runs for individual tests or suites.
-
-1. Navigate to **Tests**.
-2. Enable multiselection.
-3. Select one or more individual tests or suites.
-4. Click the **Run** button in the bottom menu.
-5. In the pop-up window, click **Launch**.
-
-![Runs with multiselect](images/run_tests_multiselect.png)
-
-## Multi Environment Tests
-
-Multi environment tests are used for performing the same tests in different environments. This option is very useful in cases when you need to perform testing with different types of operating systems/ browsers/ devices. They can be performed simultaneously or in a sequence. Let's get a look at this option.
-
-### How to Add More Environments
-
-To add more environment you need to click on the plus button
-
-![CleanShot 2022-05-26 at 12 32 09@2x](./images/170460988-72f3eba4-bb70-49b9-a4a8-9ed0d3b3f0df.jpg)
-
-You will see a pop-up window where you should click on Add Environment button
-
-![CleanShot 2022-05-26 at 12 33 48@2x](./images/170461201-b903576c-71d8-4d76-be43-c242faf59146.jpg)
-
-Then click on Environment field and choose the environment that you need
-
-![CleanShot 2022-05-26 at 12 35 25@2x](./images/170461507-23cf41cf-d92d-4d7c-9eea-63ada1664ed2.jpg)
-
-Once all environments were added click on Save button
-
-![CleanShot 2022-05-26 at 12 41 28@2x](./images/170462854-c2eb8d29-b091-4d32-a26c-da8d515d7b81.jpg)
-
-Now you have environment information updated on Manual Run screen
-
-![CleanShot 2022-05-26 at 12 37 55@2x](./images/170462012-a1b0f380-3a36-411b-ac44-05f448bffbe9.jpg)
-
-### How to Run Multi Environment Tests in Sequence
-
-To run Multi Environment Tests in sequence you need to click on Launch in Sequence button
-
-![CleanShot 2022-05-26 at 12 43 45@2x](./images/170463243-2cfb6d2c-7382-425b-b607-90bd6203236b.jpg)
-
-### How to Run All Multi Environment Tests
-
-To run Multi Environment Tests in sequence you need to click on Launch All button
-
-![CleanShot 2022-05-26 at 12 45 40@2x](./images/170463403-0e791a50-e563-4e9d-8752-0feba409876c.jpg)
-
 ## How to Run Tests As Checklist
 
-Checklists are widely used in day-to-day manual testing to quickly execute a set of tests without distracting to the additional details. In this mode, the test description is hidden by default. But you can still view the description when you click on the Description button.
+Checklists are commonly used in manual testing to quickly execute a set of tests without distractions from additional details. In this mode, test descriptions are hidden by default, but you can still view them by clicking the Toggle Description button.
 
-To enable Checklist mode you need to launch Manual Run and switch on the Checklist toggle.
+In the **New Manual Run** sidebar,
 
-![CleanShot 2022-05-25 at 18 12 38@2x](./images/170297508-40060b9c-ee2f-4b21-aa6d-1de2a6859d98.jpg)
+1. Select a **Test Plan** or **All Manual Tests**
+2. Enable **Run as checklist**
+3. Click the **Launch** button
 
-![CleanShot 2022-05-25 at 18 17 58@2x](./images/170298043-aadb7c63-c56e-4086-a512-31c1917665ed.jpg)
+![Checklist toggle](./images/att4_355.png)
 
-![CleanShot 2022-05-25 at 18 35 05@2x](./images/170301515-667bf871-6c49-4059-ae3e-3e561ef92a01.jpg)
+Once the manual run is launched, test descriptions will be hidden. To view a description for any test:
+
+4. Click the extra menu -> Toggle Description
+
+![Toggle Description](./images/att5_355.png)
 
 ## How to Run Test With Steps Execution
 
@@ -336,7 +370,7 @@ Test execution by steps is a feature that enhances manual testing by allowing te
 ![Launch a new run](images/att1_306.png)
 
 3. Select the test with detailed steps you want to execute
-4. Mark steps regarding the results:
+4. Mark steps according to the results:
 
 - Click a step once to mark it as **Passed**
 - Click a step twice to mark it as **Failed**
@@ -355,41 +389,57 @@ Take a look at how the test result with step execution looks:
 
 ## How to Run Automated Tests Manually
 
-When creating Manual Test Run automated tests are disabled by default.
+Running automated tests manually starts with creating a Test Plan. Automated tests cannot be added to a test plan unless the **Run Automated as Manual toggle** is enabled.
 
-[![CleanShot 2022-05-27 at 20 33 23@2x](./images/170762169-e5e68098-915a-4822-820a-05483e4de353.jpg)](https://youtu.be/_x7oJ8Rp7xo)
+1. Go to **Plans** page
+2. Click **+** to create a new plan
 
-![CleanShot 2022-05-26 at 12 56 14@2x](./images/170465244-e499ce33-aa91-463f-8c3f-8be3dfd4abe7.jpg)
+![New plan button](./images/att7_355.png)
 
-But you can enable them with **Run Automated as Manual** toggle.
+3. Select **Manual** type of a test plan
+4. Enter a title name
+5. Enable the **Run Automated as Manual** toggle in the plan settings
 
-![CleanShot 2022-05-26 at 13 04 30@2x](./images/170466621-1cf8b57b-6321-4bd7-97f1-19696f824cb6.jpg)
+![Run Automated as Manual toggle](./images/att6_355.png)
 
-So can run automated tests manually as regular manual tests and see Code Description for reference
+6. Add the automated tests or test suites you want to include
+7. Save the test plan
 
-![CleanShot 2022-05-26 at 13 13 12@2x](./images/170468049-5c87bcb2-cf8b-4c03-909d-2cb0a495acae.jpg)
+![Save created plan](./images/att8_355.png)
 
-## How Make Changes in the Launched Test Run
+8. Click **Launch** button to execute automated tests as manual tests
 
-As your testing journey unfolds, you might encounter new scenarios that warrant immediate attention. Fear not, Testomat.io provides you with options to inject additional tests into your already launched test runs. Discover how to expand your test scope effortlessly, ensuring that even the most unforeseen scenarios are accounted for without disrupting your testing momentum.
+![Launch automated tests](./images/att9_355.png)
 
-You can update your Test Run any time in few easy steps:
+## How to Make Changes in a Launched Test Run
 
-1. Open the Run
-2. Click the Edit button
+During testing, you might come across new scenarios that need to be added right away. Don’t worry — Testomat.io lets you easily add more tests to a test run that’s already started. This way, you can cover all unexpected cases without stopping your testing process.
 
-![Add test](./images/1.png)
+This helps you stay flexible, keep testing smoothly, and make sure nothing important is missed.
+
+How to update a test run in a few easy steps:
+
+1. Click the Runs in the sidebar
+2. Open the unfinished test run you want to edit
+3. Click on **Edit** button
+
+![Edit button](./images/att10_355.png)
 
 Let's see what we can do here:
 
-![Edit ongoing test run](./images/2-1.png)
+1. Assign more users to the test run
+2. Change the test run title
+3. Add or update the test run description
+4. Add or remove testing environments
+5. Check configuration details
+6. Add more tests to the test run
+7. Add tests from another test plan
+8. Change as per updated test plans
+9. Save your changes
 
-1. Assign more users to the Run
-2. Edit title of the Run
-3. Add/remove testing environments
-4. Add more tests to the Run
-5. Add tests from another test plan
-6. Don't foget to save ;)
+This way, you have full control over the test run and can quickly adapt to any changes during testing.
+
+![Save updated test run](./images/att11_355.png)
 
 ## How to Adjust Test Case Description Block
 

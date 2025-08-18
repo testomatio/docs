@@ -32,14 +32,14 @@ The **Multiselection** feature on the **Tests** page allows users to perform bul
 1. **Run** – Launches a test run containing the selected items.
 
 2. **Labels** – Add or remove labels or custom fields for the selected tests.  
-   [Learn more about labels →](https://docs.testomat.io/usage/labels-and-custom-fields/#how-to-setup-a-label)
+   [Learn more about labels →](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields)
 
 3. **Copy** – Copy selected tests within the current project or to another project.  
    
 4. **Move** – Move tests to another test suite or folder within the same project.
 
 5. **Tags** – Assign existing tags or create new ones for the selected tests.  
-   [More on using tags →](https://docs.testomat.io/advanced/tags-labels/#_top)
+   [More on using tags →](https://docs.testomat.io/advanced/tags-labels/tags/)
 
 6. **+ Link** – Open a pop-up to link a related defect to the selected tests.
 

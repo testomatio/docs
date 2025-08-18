@@ -58,3 +58,10 @@ After collecting all necessary data, we can move on to Testomat.io.
 If everything was done correctly, you will receive a confirmation message indicating that the Shortcut profile was successfully created.
 
 ![Testomat.io - Shortcut Profile](./images/New_58FqfBg9_2024-11-21.png)
+
+## Frequently Asked Questions (FAQ)
+
+**Q: Although linking an already existing Shortcut ticket does not work as I expected. When using **“Link to Issue”** and entering the Shortcut URL, it does not automatically create an external link on Shortcut.**
+
+A: This behavior is expected. When you use the **“Link to Issue”** feature in Testomat.io to attach an existing Shortcut ticket, it will not automatically create a backlink (external link) inside Shortcut. This limitation is caused by Shortcut’s API, which currently does not allow third-party tools to generate external links on already existing tickets.
+

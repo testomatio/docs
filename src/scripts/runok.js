@@ -3,7 +3,7 @@ const { runok, tasks: { exec, writeToFile } } = require('runok');
 const axios = require('axios').default;
 const fs = require('fs');
 const path = require('path');
-const humanize = (s) => s.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase()+' '; });
+const humanize = (s) => s.replace(/-([a-z])/g, (_, c) => ' ' + c.toUpperCase()).replace(/^([a-z])/, (_, c) => c.toUpperCase());
 const slugify = require('slugify')
 const dasherize = (str) => slugify(str.toLowerCase());
 const { globSync } = require('glob');
@@ -68,7 +68,7 @@ module.exports = {
     execSync('rm -rf tmp/php-reporter');
     execSync('rm -rf tmp/pytest-reporter');
 
-    const destinationFolder = path.resolve(path.join(__dirname, '../content/docs/project/runs/reporter'));
+    const destinationFolder = path.resolve(path.join(__dirname, '../content/docs/test-reporting'));
 
     console.log(destinationFolder);
 
