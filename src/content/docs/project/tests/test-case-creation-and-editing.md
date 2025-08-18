@@ -164,6 +164,34 @@ After saving the changes in the edit mode, you will see a preview of the drawing
 
 ![Testomatio.io - Draw Preview](./images/New_1hpi4Xy4_2024-10-07.png)
 
+## How to Delete Attachment from Test Case
+
+Save time by quickly deleting unnecessary attachments, ensuring your test cases remain relevant and clutter-free. To delete attachment: 
+
+1. On 'Tests' page open Test Case.
+2. Click **'Attachments'** tab.
+3. Click **'Delete'** icon on the attachment you want to delete.
+
+![Testomat.io - Delete attachment](./images/Delete_attachment_1.png)
+
+4. Confirm action.
+
+![Testomat.io - Delete attachment](./images/Confirm_deleting_1.png)
+
+OR
+
+1. On 'Tests' page open Test Case.
+2. Click **'Edit'** button.
+
+![Testomat.io - Delete attachment](./images/Delete_attachment_2.png)
+
+3. Click **'Attachments'** tab inside edit mode.
+4. Click **'Delete'** icon on the attachment you want to delete.
+
+![Testomat.io - Delete attachment](./images/Delete_attachment_3.png)
+
+5. Confirm action and Save changes.
+
 ## How to add a label/tag to a test
 
 This option is the easiest one! You simply need to add the label's name (preceeded by @ char) in the name field of the test. The drop-down list of tags already used in projects appears, when you type the @ symbol.
