@@ -156,6 +156,13 @@ created_at < 1.month_ago
 
 # list of tests with a label in selected suites
 (suite % 'suite title 1' or  suite % 'suite title 2') and  label == 'Automatable'
+
+# tests that were last executed today
+last_run_at == today()
+
+# tests executed in July 2025 with failed status
+executed_at >= '2025-07-01' and executed_at <= '2025-07-31' and status == 'failed'
+
 ```
 
 ## Runs Variables
@@ -240,8 +247,15 @@ finished and has_retries > 2
 # list all runs that contain Jira Issues or Issues linked to tests results
 finished and with_defect
 
-# automated tests executed in pruection and had Server error in messages
+# automated tests executed in production and had Server error in messages
 automated and env == 'Production' and has_message % 'Server Error'
+
+# failed runs finished in July 2025
+finished_at >= '2025-07-01' and finished_at <= '2025-07-31' and failed
+
+# runs that started in July 2025 and finished in August 2025
+launched_at >= '2025-07-01' and launched_at <= '2025-07-31' and finished_at >= '2025-08-01' and finished_at <= '2025-08-31'
+
 ```
 
 ## Filter By Priority
