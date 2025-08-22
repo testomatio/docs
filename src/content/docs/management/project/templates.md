@@ -55,8 +55,8 @@ Once the **Add template** sidebar opens,
 4. Fill in the following fields:
 
 - **Title** (required): enter a unique title and optionally add tags using @ syntax (e.g., @smoke);
-- **Type** (required): select the template type from the dropdown: test, suite, code, meta, defect, notification-slack, or notification-ms-teams;
-- **Default** (optional): set this template as the default by clicking the star icon;
+- **Type** (required): select the template type from the dropdown — **test** is selected by default, but you can change it to suite, defect, code, meta, notification-slack, or notification-ms-teams;
+- **Default** (optional): set this template as the default by clicking the **star icon**;
 
 :::note
 
@@ -65,6 +65,13 @@ Marking a template as default means it will be auto-applied every time you creat
 :::
 
 - **Set labels**: click to open an additional sidebar where you can select from existing Labels and Custom Fields. Only items that were previously configured (as described in the <a href="https://docs.testomat.io/advanced/tags-labels/#how-to-add-labels--custom-fields" target="_blank">How to Add Labels & Custom Fields</a>) will be available for selection. To use new ones, you must define them first using the linked guide;
+
+:::note
+
+Additional **Set labels** configuration is available only for **Test and Suite** templates.
+
+:::
+
 - **Add variables** (optional): сhoose from available variables for the selected template type, shown in the dropdown list;
 
 :::note
@@ -73,17 +80,14 @@ Variables are not supported for Test and Suite templates.
 
 :::
 
-- **Body** (required): add the template body using Markdown syntax and dynamic variables;
+- **Body** (required): each template type comes with a predefined default body that you can edit.
+  - You can format it using Markdown;
+  - You can use dynamic variables with most template types, which will be automatically replaced when the template is applied;
+  - For Test and Suite templates, dynamic variables are not supported — here you just work with the plain Markdown content;
 
 5. Click **Save** button to apply changes or **Cancel** button to discard
 
-![Save template](./images/att2_6270.png)
-
-:::note
-
-Additional **Set labels** configuration is available only for **Test and Suite** templates.
-
-:::
+![Save template](./images/att1_5801.png)
 
 ### How To Edit Templates
 
@@ -93,7 +97,7 @@ Additional **Set labels** configuration is available only for **Test and Suite**
 4. Modify content as needed
 5. Click **Update** button to save changes
 
-![Edit Templates](./images/att3_6270.png)
+![Edit Template](./images/att2_5801.png)
 
 ### How To Delete Templates
 
@@ -116,7 +120,7 @@ Templates in Testomat.io support dynamic content by using variables. Variables a
 
 **Insertion format:**
 
-`{{#if variable}}Label: {{ variable }} {{/if}}`
+`{{#if variable}}Label: {{ variable }}{{/if}}`
 
 ### Supported Variables
 
@@ -134,9 +138,11 @@ Depending on the selected framework, the corresponding block with the correct sy
 
 | **Variable**         | **Inserted As**                   |
 | -------------------- | --------------------------------- |
+| `test.id`            | `{{ test.id }}`                   |
 | `test.title`         | `{{ test.title }}`                |
 | `test.description`   | `{{ test.description }}`          |
 | `test.body` / `body` | `{{ test.body }}` or `{{ body }}` |
+| `suite.id`           | `{{ suite.id }}`                  |
 | `suite.title`        | `{{ suite.title }}`               |
 | `suite.description`  | `{{ suite.description }}`         |
 
@@ -379,11 +385,13 @@ If the selected test or suite already contains text, a confirmation window will 
 
 ![Confirm the selection](./images/att6_6270.png)
 
-The selected template will automatically populate the fields (like title or description) using the defined variables.
+The selected template will automatically populate the fields with the predefined structure and content.
 
 ::: note
 
 When you create a new test or suite, the default template (if configured) will be applied automatically. This helps ensure consistent formatting and structure without manual selection.
+
+Keep in mind that required **custom fields** cannot be removed when applying templates, while **labels** remain optional and can be removed.
 
 :::
 
@@ -519,7 +527,7 @@ In the Run Report View, the values corresponding to the keys defined in the temp
 
 Unlike other template types, **there is no manual option to select a Notification Template** during a test run or when sending report notifications.
 
-Once you have configured Slack or Microsoft Teams integration via the [Slack Notification](https://docs.testomat.io/integrations/report-notifications/slack/) or [MS Teams Notification](https://docs.testomat.io/integrations/report-notifications/ms-teams/), and created a default Notification Template, it will be automatically applied to all notifications triggered by your configured Notification Rules.
+Once you have configured Slack or Microsoft Teams integration via the [Slack Notification](https://docs.testomat.io/integrations/report-notifications/slack/) or [MS Teams Notification](https://docs.testomat.io/integrations/report-notifications/ms-teams/), and created a **default** Notification Template, it will be automatically applied to all notifications triggered by your configured Notification Rules.
 
 ![Notification Template](./images/att18_6270.png)
 
