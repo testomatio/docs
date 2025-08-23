@@ -196,12 +196,28 @@ In the opened sidebar window, configure your relaunch (optional):
 1. Enter a custom run title.
 2. Enable **'Create new run'** option (if needed).
 3. Enable **'Keep values'** option (available only if **'Create new run'** is enabled; this shows previous statuses for test cases).
-4. Select the tests that you want to include in your relaunched run (use filtering, sorting, or search options).
+4. Select the tests that you want to include in your relaunched run one by one (use filtering, sorting, or search options).
 5. Click the **'Relaunch'** button.
 
 ![Testomat.io - relaunched Run](./images/Advanced_Relaunch_2.png)
 
+:::note
+
 Only selected test cases will be relaunched for manual re-check or automatically re-run on CI.
+
+:::
+
+If you have many test cases and need to select all of them or only failed ones, you don't have to do it manually. You can use the **'Select'** feature.
+
+**There are two options of how you can select all tests, depending on your needs:**
+
+1. Use **'Checkbox Select'** option by simply clicking on checkbox. This is useful if you want to select a group of tests (like all filtered failed tests) and then manually unselect or add more. With this option, you can easialy edit your selection.
+
+![Testomat.io - relaunched Run](./images/Advanced_Relaunch_3.gif)
+
+2. Use the **'Select All'** option from the **'Select'** dropdown. This is a quick way to select all currently displayed test cases. With this option, you cannot manually add or remove tests from the selection. If you change the filtering, the selection will automatically update to include only the currently displayed tests. Use the **'None'** option to unselect all tests.
+
+![Testomat.io - relaunched Run](./images/Advanced_Relaunch_4.gif)
 
 **Key benefits of Advanced Relaunch:**
 
