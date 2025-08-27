@@ -241,13 +241,35 @@ The **Runs Status Report** gives you a quick overview of test stability, critica
 - **Execution Time Trends** – How test durations are behaving over time.
 - **Top Errors** – Most frequent failure messages to help speed up debugging.
 - **Systematic Failures** – Pinpointed test cases that failed consistently and may block critical flows.
-- **Note** - Hightlights the test runs that were analyzed in the Run Status Report by AI.
+- **Note** - Hightlights the test runs that were analyzed in the Runs Status Report by AI.
 
 **To access this feature:**
 
 1. Go to 'Runs' page.
-2. Click on **'Run Status Report'** button. 
+2. Click on **'Runs Status Report'** button. 
 
 ![Testomat.io - AI-powered Project Runs Status Report](./images/AI_14.gif)
 
 This report is available automatically based on recent test run history, giving your team instant visibility into the health of your project.
+
+## RunGroup Statistic Report
+
+The **'RunGroup Statistic Report'** — a new way to analyze the health and progress of test runs grouped together.
+
+**This report includes:**
+
+- **Run Execution Summary** – a quick breakdown of passed, failed, and skipped tests across all runs in the group.
+- **Detailed Analytics by Run Status** – view trends, patterns, and key metrics within each run.
+- **TOP Failed Tests** - view tests that failed the most in total.
+- **AI-Powered Recommendations** – suggested actions to improve stability and address recurring issues
+Perfect for teams managing large-scale test executions across multiple environments or test types.
+
+**To access this feature:**
+
+1. Go to 'Runs' page.
+2. Select RunGroup you want to analyze.
+3. Click **'RunGroup Statistic Report'** button.
+
+![Testomat.io - AI-powered Project Runs Status Report](./images/AI_RunGroup_Report_1.gif)
+
+This report is perfect for teams managing large-scale test executions across multiple environments or test types.

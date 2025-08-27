@@ -14,15 +14,15 @@ When you run tests with Testomat.io, the system generates a **Run Report** displ
 
 ## Run Report Basic View
 
-Clicking on the Test Run will toggle RunReport screen in basic view.
+Clicking on the Test Run will toggle Run Report screen in basic view.
 
 ![Testomat.io - RunReport](./images/Run_Report_1.png)
 
-**On this basic report you can:**
+**In this basic Run Report, you can:**
 
 1. View a list of test cases.
-2. Check their status (Passed, Failed, Skipped, Pending, Custom statuses).
-3. Reiew general information on the Run Result.
+2. Check their statuses (Passed, Failed, Skipped, Pending, Custom statuses).
+3. Review general information on the Run Result.
 
 ![Testomat.io - RunReport](./images/Run_Report_2.png)
 
@@ -55,7 +55,7 @@ You can also check overall **Statistics** by suites/tags/labels/assignees/priori
 
 Testomat.io allows you to customize the dispalay of test cases within a Run Report.
 
-**This geature helps you:**
+**This feature helps you:**
 
 - **Show or hide columns** such as test status, duration, labels, tags, priority, etc.
 - **Focus only on the data** most reelvant to you or your team.
@@ -127,6 +127,17 @@ Use ↓ and ↑ keys to navigate tests and quickly view details for each test.
 Similar to the basic run report view, click on a test case to see its details or the history of run results.
 
 ![Testomat.io - RunReport](./images/Run_Report_15.gif)
+
+## RunGroup Report
+
+The same as for Runs, you can also view RunGroups Reportes.
+To open **RunGroup Report basic view**, simply click on its name - RunGroup Report window will be displayed with general information and runs summary.
+
+![Testomat.io - Test Runs in a created RunGroup](./images/RunGroup_6.png)
+
+For more information go to the [RunGroup Report Basic View](https://docs.testomat.io/project/runs/rungroups#rungroup-report-basic-view) section **'RunGroups'** page.
+
+From RunGroup Report Basic View you can open **Combined Report for RunGroups**, by clicking on the **'Combined Report'** button. This Report is designed to help you aggregate and analyze the results of multiple test runs within a single view. You can find more information about this report in [Combined Report for RunGroups](https://docs.testomat.io/project/runs/rungroups/#combined-report-for-rungroups) section on **'RunGroups'** page.
 
 ## How to Download Run Report as Spreadsheet
 
@@ -294,19 +305,4 @@ To compare Runs:
 
 ![Testomat.io - Compare Test Runs](./images/compare-runs.gif)
 
-This feature is also available for RunGroups, allowing you to compare test results from different runs within a single RunGroup.
-
-1. Open RunGroup.
-2. Click the **'Combined Report'** button.
-
-![Testomat.io - Combined Report](./images/Combined_report.png)
-
-3. Click the **'Compare to'** button to select the run you want to compare with others.
-
-![Testomat.io - Combined Report](./images/Combined_report_1.png)
-
-:::note
-
-The **'Combined Report'** feature for RunGroups does **not** combine test results of all runs inside one RunGroup into a single report. It only allows you **to compare** test results of all runs within this RunGroup.
-
-:::
+This feature is also available for RunGroups, allowing you to compare test results from different runs within a single RunGroup. You can find more information about it in the [Combined Report for RunGroups](https://docs.testomat.io/project/runs/rungroups/#combined-report-for-rungroups) section on **'RunGroups'** page.

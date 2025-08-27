@@ -39,15 +39,33 @@ The new RunGroup will appear on Runs page and will open automatically after crea
 
 After RunGroup is added, you can create new Manual/Automated/Mixed Runs inside it.
 
+## How to Create a Run in RunGroup
+
 - To create a new **Manual Run**, open the RunGroup and click on **'Manual Run'** button.
 
 ![Testomat.io - put Manual Run](./images/RunGroup_4.png)
 
+After this in the displayed window select a test plan from the list or create a new one, and fill in other data that you need for your run (like: assignee, title, environment, description).
+
+:::note
+
+When you create a manual run from RunGroup, it will be automatically pre-populated on the **'New Manual Run'** window, but you can change it if needed.
+
+:::
+
+![Testomat.io - put Manual Run](./images/RunGroup_7.png)
+
 - To add a new **Automated Run** to a RunGroup, execute your tests with Testomat.io, providing TESTOMATIO_RUNGROUP_TITLE="Build ${BUILD_ID}".
 
-Now you can view Test Runs within your created RunGroup.
+Now, by clicking on expand arrow, you can view Test Runs and their results within created RunGroup.
 
 ![Testomat.io - Test Runs in a created RunGroup](./images/RunGroup_5.png)
+
+Clicking on RunGroup name will toggle RunGroup Report screen in basic view. Here you can view more detail information about the runs inside selected RunGroup and total results.
+
+![Testomat.io - Test Runs in a created RunGroup](./images/RunGroup_6.png)
+
+For more details go to the relevant section - [RunGroup Report in Basic View](https://docs.testomat.io/project/runs/reports/#rungroup-report-in-basic-view) on **'Reports'** page.
 
 ## How to Move a Run to a RunGroup
 
@@ -64,6 +82,28 @@ You may need to move a Run to a specific RunGroup (e.g., to associate it with a 
 6. Click the **'Move'** button to confirm action.
 
 ![Testomat.io - Destination RunGroup selection dialog](./images/Move_Run_2.png)
+
+## RunGroup Report Basic View
+
+You can view RunGroup Report by clicking on its name.
+
+![Testomat.io - Test Runs in a created RunGroup](./images/RunGroup_6.png)
+
+**In this basic RunGroup Report, you can:**
+
+1. View the [RunGroup Chart](https://docs.testomat.io/project/runs/rungroups/#rungroup-chart).
+2. Review **'RunGroup summary section'** with general information based on the selected [Merge Strategy](https://docs.testomat.io/project/runs/merge-strategies/).
+3. View a list of test runs, their statuses with the number of Passed, Failed, Skipped tests, along with the run assignee and executed time.
+4. Customize your RunGroup Report view (Read more in the [How to Customize Runs List View ](https://docs.testomat.io/project/runs/rungroups/#how-to-customize-runs-list-view) section below).
+5. Check **'Combined Report'** (Read more in the [Combined Report for RunGroups](https://docs.testomat.io/project/runs/rungroups/#combined-report-for-rungroups) section below).
+6. Add a new Manual Run to the selected RunGroup.
+7. Generate a [Rungroup Statistic Report](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features/#rungroup-statistic-report)(AI-feature should be enabled on **'Company Settings'** page).
+
+![Testomat.io - RunGroup Report](./images/RunGroup_Report_1.png)
+
+The **'RunGroup summary section'** displays a counter with the number of included and analyzed runs in the RunGroup. Archived runs are excluded from this counter and do not affect the total RunGroup result. You can see how many runs were archived, and by clicking on archived counter, you will be redirected to the **'Groups Archive'** page, where runs are already filtered by selected RunGroup.
+
+![Testomat.io - RunGroup Report](./images/RunGroup_Report_2.png)
 
 ## How to Customize Runs List View 
 
@@ -126,6 +166,42 @@ The chart displays up to 50 of the latest test runs belonging to the group. If y
 
 ![Testomat.io - RunGroup Chart](./images/RunGroup_Chart.png)
 
+## Combined Report for RunGroups
+
+Testomat.io provides a **'Combined Report'** feature for RunGroups. This report is designed to help you aggregate and analyze the results of all test runs within the RunGroup in a single view.
+
+You can open **'Combined Report'** for a RunGroup by clicking on **'Combined Report'** button from the RunGroup Report Basic View window.
+
+![Testomat.io - Combined Report](./images/Combined_report.png)
+
+The comparison of runs is based on the first (main) launch. The statuses counters on the left side are calculated based on the main run. 
+
+To change the main run, click the **'Compare To'** button. Note that the counters of loaded tests is above them. The final summary on the right side is calculated based on the loaded tests.
+
+![Testomat.io - Combined Report](./images/Combined_report_1.png)
+
+:::note
+
+The **'Combined Report'** feature for RunGroups does **not** combine test results of all runs inside one RunGroup into a single report. It only allows you **to compare** test results of all runs within this RunGroup.
+
+:::
+
+Inside the **'Combined Report'**, you can get a quick overview of the pass/fail rates for all tests within the Group. You can also see the total number of tests present in all compared runs, as well as the total number of flaky (unstable tests that passed or failed in different runs), revieved (previously failing that passed in next runs), and degraded (previously passed that failed in next runs) tests. 
+
+Additionally, you can use filters and search features to view the data most relevant to your needs.
+
+![Testomat.io - Combined Report](./images/Combined_report_2.gif)
+
+**Key benefits:**
+
+- **Analyze Trends:** By seeing the results from multiple runs in one place, you can identify trends in test performance and stability over time.
+
+- **Consolidate Data:** The combined report is especially useful for "mixed runs" (runs that include both manual and automated tests), as it consolidates all results into a single, cohesive report.
+
+- **Compare Runs:** Testomat.io also has a separate **'Compare Test Runs'** feature that can be used within a RunGroup. This allows you to side-by-side compare the results of different runs to pinpoint changes, regressions, or improvements. (Go to [Compare Test Runs](https://docs.testomat.io/project/runs/reports/#compare-test-runs) section on **'Run reports'** page to read more about this feature.)
+
+This feature is a powerful tool for project managers, QA leads, and stakeholders who need to make informed decisions based on a holistic view of testing activities, without having to manually compile data from individual reports.
+
 ## How to Copy RunGroup
 
 You can easily create a new RunGroup, completely independent of any previous runs, by copying all relevant tests exactly as they are. You can configure what data should be copied, namely:
@@ -136,7 +212,7 @@ You can easily create a new RunGroup, completely independent of any previous run
 - **Environments**: Control the duplication of environment settings based on your requirements.
 - **Nested Structure**: Preserve or exclude the nested structure of your test groups as you duplicate them.
 
-Follow these steps: 
+**Follow these steps:**
 
 1. Open the RunGroup. 
 2. Click the **'Extra menu'** button.
