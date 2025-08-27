@@ -202,11 +202,12 @@ export default defineConfig({
 						{ label: 'PHP Test Frameworks', link: '/test-reporting/php'},
 						{ label: 'Python Test Frameworks', link: '/test-reporting/python'},
 						{ label: 'Java and Other Test Frameworks', link: '/test-reporting/junit'},
-						{ label: 'Test Artifacts', link: '/test-reporting/artifacts'},
+						{ label: 'Test Artifacts', link: '/test-reporting/artifacts'},						
 						{ label: 'Configuration', link: '/test-reporting/configuration'},
 						{ label: 'Advanced Options', link: '/test-reporting/pipes/testomatio' },
 						{ label: 'CLI', link: '/test-reporting/cli'},
 						{ label: 'Functions', link: '/test-reporting/functions'},
+                        { label: 'Reporting API', link: '/test-reporting/api'},						
 						{ label: 'Logger', link: '/test-reporting/logger'},
 						{
 							label: 'Pipes',
