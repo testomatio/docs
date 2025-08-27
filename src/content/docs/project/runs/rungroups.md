@@ -103,7 +103,7 @@ You can view RunGroup Report by clicking on its name.
 
 The **'RunGroup summary section'** displays a counter with the number of included and analyzed runs in the RunGroup. Archived runs are excluded from this counter and do not affect the total RunGroup result. You can see how many runs were archived, and by clicking on archived counter, you will be redirected to the **'Groups Archive'** page, where runs are already filtered by selected RunGroup.
 
-![Testomat.io - RunGroup Report](./images/RunGroup_Report_2.png)
+![Testomat.io - RunGroup Report](./images/RunGroup_Report_2.gif)
 
 ## How to Customize Runs List View 
 
