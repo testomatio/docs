@@ -16,26 +16,24 @@ jobs:
 #   runs-on: ubuntu-latest
 #   steps:
 #     - uses: actions/checkout@v4
-#     - name: Setup node
-#       uses: actions/setup-node@v4
+#     - name: Setup Bun
+#       uses: oven-sh/setup-bun@v1
 #       with:
-#         node-version: 20.x
-#     - uses: pnpm/action-setup@v4
+#         bun-version: latest
+#     - name: Install bunosh
+#       run: bun add -g bunosh
+#     - run: bun install
+#     - run: bunosh docs
+#     - run: bun run build
+#       env:
+#         PUBLIC_MEILISEARCH_KEY: ${{ secrets.PUBLIC_MEILISEARCH_KEY }}
+#     - name: Publish to Cloudflare Pages
+#       uses: cloudflare/pages-action@v1
 #       with:
-#         version: 10.12.4
-#     - run: pnpm install
-#     - run: cd src/scripts && pnpm install
-#     - run: cd src/scripts && node runok.js docs
-#     - run: pnpm run build
-  #       env:
-  #         PUBLIC_MEILISEARCH_KEY: ${{ secrets.PUBLIC_MEILISEARCH_KEY }}
-  #     - name: Publish to Cloudflare Pages
-  #       uses: cloudflare/pages-action@v1
-  #       with:
-  #         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-  #         accountId: 60b76f40370d8320885e92e3daa114b1
-  #         projectName: docs
-  #         directory: dist
+#         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+#         accountId: 60b76f40370d8320885e92e3daa114b1
+#         projectName: docs
+#         directory: dist
   run-scraper:
     name: Run Search Scraper
     runs-on: ubuntu-latest

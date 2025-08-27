@@ -21,11 +21,9 @@ By using external storage Testomat.io allows getting full control over how the s
 
 To have test artifacts uploaded you need to create S3 Object Storage bucket on AWS, DigitalOcean, or Google Cloud Storage in interoperability mode.
 
-<Aside type="caution" title="Important">
-
-You need to obtain the following credentials: `ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`, `BUCKET`, `REGION`, `ENDPOINT` (not required for AWS) to access S3 bucket. Then to to [Configuration](#configuration) section to enable S3 access.
-
-</Aside>
+> **⚠️ Important**
+>
+> You need to obtain the following credentials: `ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`, `BUCKET`, `REGION`, `ENDPOINT` (not required for AWS) to access S3 bucket. Then to to [Configuration](#configuration) section to enable S3 access.
 
 ## Overview
 
@@ -61,7 +59,7 @@ Then provide the same S3 credentials in "Settings > Artifacts" section of a proj
 
 Links to files will be pre-signed and expire automatically in 10 minutes.
 
-![Testomatio - Private Access](./images/Test_artifacts.png)
+![Testomatio - Private Access](./images/test-artifacts.png)
 
 > Test Artifacts settings are available only to managers and owners of a project!
 
@@ -82,7 +80,7 @@ Recommended way is to set S3 bucket credentials as environment variables:
 
 If you use Testomat.io Application, you can set those variables inside **Settings > Artifacts** page: enable "Share credentials" toggle to pass credentials into reporter and fill in S3 credentials into the displayed form.
 
-![Testomatio - Configuration](./images/Configuration.png)
+![Testomatio - Configuration](./images/configuration.png)
 
 In this case Testomat.io Reporter will obtain S3 credentials for server and use them to save artifacts.
 
@@ -91,7 +89,7 @@ Alternatively, you can configure reporter by using environment variables. If `S3
 We recommend storing S3 configuration in `.env` files when running tests locally and using job configuration when running on the Continuous Integration server.
 Please keep `S3_SECRET_ACCESS_KEY` in secret.
 
-```
+```bash
 
 TESTOMATIO_PRIVATE_ARTIFACTS=1
 
@@ -124,6 +122,8 @@ S3_BUCKET=artifacts
 S3_REGION=us-west-1
 ```
 
+> Use `S3_FORCE_PATH_STYLE` option to enable or disable force path style. Testomat.io expects artifacts URL to be in format: `https://<bucketname>.s3.<region>.amazonzws.com`
+
 To allow Testomat.io access stored files it is recommended to apply this policy to the bucket:
 
 ```json
@@ -154,7 +154,7 @@ To allow Testomat.io access stored files it is recommended to apply this policy 
 
 If you use **Playwright** and you want to enable trace viewing ensure that CORS policy is enabled for the bucket:
 
-```
+```json
 aws s3api put-bucket-cors \
     --bucket YOUR_BUCKET_NAME \
     --cors-configuration '{
@@ -208,7 +208,7 @@ S3_FORCE_PATH_STYLE=true
 
 Google Cloud Storage can work via S3 protocol if **Interoperability mode** is enabled.
 
-![Testomatio - Google Cloud Storage](./images/Google_Cloud.png)
+![Testomatio - Google Cloud Storage](./images/google-cloud.png)
 
 Open Cloud Storage. Create a bucket for artifacts, then inside Settings select "Interoperability". Create `ACCESS_KEY` and `SECRET_ACCESS_KEY` for the current user.
 
@@ -222,9 +222,11 @@ S3_REGION=us-east1
 
 Please note, that you need to enable [Use Private URLs for Test Artifacts](https://docs.testomat.io/project/runs/reporter/artifacts/#privacy) in Testomat.io Project Settings if you configure bucket credentials on Testomat.io side.
 
+### Cloudflare R2
+
 #### Cloudflare R2 and integration with Testomatio
 
-##### 1. Creating a Bucket in Cloudflare R2
+**1. Creating a Bucket in Cloudflare R2**
 
 - **Cloudflare Dashboard:** [https://dash.cloudflare.com/](https://dash.cloudflare.com/)
 - **Steps:**
@@ -232,11 +234,11 @@ Please note, that you need to enable [Use Private URLs for Test Artifacts](https
   - Navigate to the **R2** section and select the option to create a new bucket.
   - Choose a unique name and a region for the bucket.
 
-    ![Create a new bucket](./images/cloudr2-01.png)
+![Testomatio - Create a new bucket](./images/create-bucket-1.png)
 
-    ![Set bucket name](./images/cloudr2-02.png)
+![Testomatio - Set bucket name](./images/create-bucket-2.png)
 
-## 2. Creating API Keys for the Bucket
+**2. Creating API Keys for the Bucket**
 
 - **Purpose:** To ensure secure access to the bucket.
 - **Steps:**
@@ -245,17 +247,45 @@ Please note, that you need to enable [Use Private URLs for Test Artifacts](https
   - Generate a new API key with read/write permissions.
   - Save and verify the generated key.
 
-    ![Generate API keys for bucket](./images/cloudr2-03.png)
+![Testomatio - Generate API keys for bucket](./images/api-key-1.png)
 
-    ![Select Api variant](./images/cloudr2-04.png)
+![Testomatio - Select Api variant](./images/api-key-2.png)
 
-    ![Create Api key](./images/cloudr2-05.png)
+![Testomatio - Create Api key](./images/api-key-3.png)
 
-    ![Set permissions for Api key](./images/cloudr2-06.png)
+![Testomatio - Set permissions for Api key](./images/api-key-4.png)
 
-    ![Copy Api key](./images/cloudr2-07.png)
+> [!WARNING]  
+> If you set permission for bucket "Object..." need setup CORS policy manually, for "Admins" it is not required
 
-## 3. Connecting the Bucket to Testomatio
+**Policy Settings**:
+
+![Testomatio - policy settings 2](./images/policy.png)
+
+Example for Playwright trace policy settings
+
+```json
+[
+  {
+    "AllowedOrigins": ["https://app.testomat.io"],
+    "AllowedMethods": ["GET"],
+    "AllowedHeaders": ["*"],
+    "ExposeHeaders": ["Access-Control-Allow-Origin"],
+    "MaxAgeSeconds": 3000
+  },
+  {
+    "AllowedOrigins": ["https://trace.playwright.dev"],
+    "AllowedMethods": ["GET"],
+    "AllowedHeaders": ["*"],
+    "ExposeHeaders": ["Access-Control-Allow-Origin"],
+    "MaxAgeSeconds": 3000
+  }
+]
+```
+
+![Testomatio - Copy Api key](./images/api-key-5.png)
+
+**3. Connecting the Bucket to Testomatio**
 
 - **Overview:** Integration with R2 streamlines testing and data management.
 - **Configuration:**
@@ -263,7 +293,7 @@ Please note, that you need to enable [Use Private URLs for Test Artifacts](https
   - In the Testomatio panel, enter the API keys and bucket address.
   - Configure the paths and access parameters as required.
 
-    ![Set bucket credentials](./images/cloudr2-08.png)
+![Testomatio - Set bucket credentials](./images/artifacts-testomat.png)
 
 ## Adding Artifacts
 
@@ -285,7 +315,7 @@ Testomat.io Reporter has built-in support and automatically uploads saved artifa
 - Playwright
 - CodeceptJS
 - Сypress
-- WebdriverIO
+- WebdriverIO ([details](./frameworks.md#webdriverio))
 
 If a screenshot, a video, or a trace was saved and attached to test, Testomat.io Reporter will automatically upload any of these as artifacts.
 
@@ -321,7 +351,7 @@ To attach a file to a test as an artifact print the file name into console with 
 
 If S3 credentials are set, files will be uploaded to bucket and attached to test in a report.
 
-##### Java Example:
+#### Java Example
 
 Attaching a screenshot to the Java test
 
@@ -332,7 +362,7 @@ Attaching a screenshot to the Java test
 System.out.println("file://" + pathToScreenshot);
 ```
 
-##### C# Example:
+#### C# Example
 
 Attaching a screenshot to the C# test
 
@@ -360,15 +390,15 @@ puts "file://" + path_to_screenshot
 
 ## Troubleshooting
 
-#### I don't have a S3 Bucket
+### I don't have a S3 Bucket
 
 Well then, just get it. Even if your company doesn't provide one, you can purchase a S3 storage by yourself.
 
-#### Publishing Artifacts from Docker Container
+### Publishing Artifacts from Docker Container
 
 If your tests are running within Docker container pass all environment variables explicitly
 
-```
+```bash
 docker run -e TESTOMATIO_PRIVATE_ARTIFACTS=1 \
 -e S3_ACCESS_KEY_ID=11111111111111111111 \
 -e S3_SECRET_ACCESS_KEY=2222222222222222222222222222222222222222222 \
@@ -377,12 +407,26 @@ docker run -e TESTOMATIO_PRIVATE_ARTIFACTS=1 \
 run-tests
 ```
 
-#### Environment variables for S3 are not working
+### Environment variables for S3 are not working
 
 This can be caused by various reasons. As an alternative approach, you can try to set S3 credentials inside Testomat.io Application and enable shared credentials.
 
-#### How to cleanup old artifacts?
+### How to cleanup old artifacts?
 
 At this moment we don't provide any tools for the cleanup of files.
 It is recommended to write a custom cleanup tool on a S3 bucket.
+
+### Private artifacts uploaded to AWS S3 but not displayed
+
+If a artifact URL is formatted as `https://s3.<region>.amazonzws.com/<bucketname>` there might be issues displayed it.
+
+Please make sure that you don't use `S3_FORCE_PATH_STYLE=true` in `.env` file.
+It is also recommended to explicitly set this value to false:
+
+```
+S3_FORCE_PATH_STYLE=false
+```
+
+Please also make sure your bucket don't use dots in its name.
+The expected bucket format is `https://<bucketname>.s3.<region>.amazonzws.com`. If force path style is enabled, file might not be availble by a presgned link.
 

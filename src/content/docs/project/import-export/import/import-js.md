@@ -25,330 +25,352 @@ On this page we collect the reference to them. Learn how to install and configur
 
 > 📑 This documentation is taken from open-source project [testomatio/check-tests](https://github.com/testomatio/check-tests)
 
-Use this checker as CLI tool with any Continuous Integration service.
-
 Run `check-tests` via npx:
-
 ```sh
 npx check-tests <framework> "<tests>" --no-skipped
 ```
-
 #### Development
-
 To change host of endpoint for receiving data, and set it to other than app.testomat.io use TESTOMATIO_URL environment variable:
-
 TESTOMATIO_URL=http://local.testomat.io
-
 > This checker will fail a build if exclusive tests (with `.only` or `fit` or `fdescribe` found)
-
 #### Arguments:
-
 - test framework
 - glob pattern to match tests in a project, example: `tests/**_test.js'`. **It is important to include glob pattern in double quotes `"` so wildcard could be used correctly.**
-
 #### CLI Options:
-
 - `--no-skipped` - fail when skipped tests found
 - `--typescript` - enable typescript support
 - `-g, --generate-file <fileName>` - Export test details to document
 - `-u, --url <url>`, Github URL to get file link (URL/tree/master)
-
 #### Example
-
-Check tests for CodeceptJS
-
-```
+#### Framework Examples
+##### CodeceptJS
+```bash
+## JavaScript
 npx check-tests codeceptjs "tests/**_test.js"
+## TypeScript
+npx check-tests codeceptjs "tests/**_test.ts" --typescript
 ```
-
-Check tests for Protractor
-
-```
-npx check-tests protractor "spec/**.spec.js"
-```
-
-Check tests for Protractor with TypeScript
-
-```
-npx check-tests protractor "spec/**.spec.ts" --typescript
-```
-
-Check tests for Cypress.io
-
-```
+##### Cypress.io
+```bash
+## JavaScript
 npx check-tests cypress "cypress/integration/**.js"
+npx check-tests cypress.io "cypress/e2e/**.js"
+## TypeScript
+npx check-tests cypress "cypress/integration/**.ts" --typescript
+npx check-tests cypress.io "cypress/e2e/**.spec.ts" --typescript
 ```
-
-Check tests for Testcafe
-
+##### Jasmine
+```bash
+## JavaScript
+npx check-tests jasmine "spec/**/*.spec.js"
+## TypeScript
+npx check-tests jasmine "spec/**/*.spec.ts" --typescript
 ```
+##### Jest
+```bash
+## JavaScript
+npx check-tests jest "tests/**/*.test.js"
+npx check-tests jest "__tests__/**/*.js"
+## TypeScript
+npx check-tests jest "tests/**/*.test.ts" --typescript
+npx check-tests jest "src/**/*.spec.ts" --typescript
+```
+##### Mocha
+```bash
+## JavaScript
+npx check-tests mocha "test/**/*_test.js"
+npx check-tests mocha "tests/**/*.spec.js"
+## TypeScript
+npx check-tests mocha "test/**/*.test.ts" --typescript
+```
+##### Newman (Postman Collections)
+```bash
+## Single collection
+npx check-tests newman "api-tests.postman_collection.json"
+## Multiple collections
+npx check-tests newman "collections/*.json"
+```
+##### Nightwatch
+```bash
+## JavaScript
+npx check-tests nightwatch "tests/**/*.js"
+## TypeScript
+npx check-tests nightwatch "tests/**/*.ts" --typescript
+```
+##### Playwright
+```bash
+## JavaScript
+npx check-tests playwright "tests/**/*.spec.js"
+npx check-tests playwright "e2e/**/*.test.js"
+## TypeScript
+npx check-tests playwright "tests/**/*.spec.ts" --typescript
+npx check-tests playwright "e2e/**/*.test.ts" --typescript
+```
+##### Protractor
+```bash
+## JavaScript
+npx check-tests protractor "spec/**.spec.js"
+npx check-tests protractor "e2e/**/*_spec.js"
+## TypeScript
+npx check-tests protractor "spec/**.spec.ts" --typescript
+npx check-tests protractor "e2e/**/*.spec.ts" --typescript
+```
+##### QUnit
+```bash
+## JavaScript
+npx check-tests qunit "tests/**/*.js"
+## TypeScript
+npx check-tests qunit "tests/**/*.ts" --typescript
+```
+##### TestCafe
+```bash
+## JavaScript
 npx check-tests testcafe "tests/**.js"
+npx check-tests testcafe "fixtures/**/*.test.js"
+## TypeScript
+npx check-tests testcafe "tests/**.ts" --typescript
+npx check-tests testcafe "fixtures/**/*.test.ts" --typescript
 ```
-
+##### Vitest
+```bash
+## JavaScript
+npx check-tests vitest "tests/**/*.test.js"
+npx check-tests vitest "src/**/*.spec.js"
+## TypeScript
+npx check-tests vitest "tests/**/*.test.ts" --typescript
+npx check-tests vitest "src/**/*.spec.ts" --typescript
+```
+##### Gauge
+```bash
+## Gauge specification files
+npx check-tests gauge "specs/**/*.spec"
+npx check-tests gauge "tests/**/*.spec"
+```
+##### Manual Tests (Markdown)
+```bash
+## Markdown-based manual test documentation
+npx check-tests manual "docs/tests/**/*.md"
+npx check-tests manual "manual-tests/*.md"
+```
 #### Sample Output
-
 List CodeceptJS tests
-
 ![](https://user-images.githubusercontent.com/24666922/78563263-505d1280-7838-11ea-8fbc-18e942d48485.png)
-
 When found `.only` test:
-
 ```
 ✗ npx check-tests mocha "test/**/**_test.js"
-
 [[ Tests checker by testomat.io ]]
 Error: Exclusive tests detected. `.only` call found in test/checkout/important_test.js:290
 Remove `.only` to restore test checks
-
 ```
-
 ### Using in Testomatio
-
 This library is used by [Testomatio](https://testomat.io) to import tests.
-
 ### Importing Into Project
-
 Use `TESTOMATIO` environment variable with a valid API key to import data into a project.
 API key can be obtained on project settings page or on "Import From Source" page.
-
 For example:
-
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js"
-
 ```
-
 #### Test code
-
 By default, check-test sends the code of the test hooks to the "client": before, beforeEach and after.
 In the "Codes" section you can see all the additional "context" of the test (Testomat.io).
-
 To exclude hook code from a client test, use the --no-hooks option
-
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --no-hooks
 ```
-
 #### Additional line number to the test code
-
 To include line number code from a client test, use --line-numbers option.
 _(By default Code section exclude "line number")_
-
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --line-numbers
 ```
-
 ### Import Parametrized Tests
-
 It is possible to import parametrized tests if they use template literals with variables in thier names:
-
 ```js
 ['one', 'two', 'three'].forEach(() => {
   it(`this is test number ${parameter}`);
 });
 ```
-
 This test will be imported with its original name including a placeholder:
-
 ```
 this is test number ${parameter}
 ```
-
 When executed test will be reported with 3 results matched to the same test and param values will be added to the report.
-
 ### Disable Detached Tests
-
 If a test from a previous import was not found on next import it is marked as "detached".
 This is done to ensure that deleted tests are not staying in Testomatio while deleted in codebase.
-
 To disable this behavior and don't mark anything on detached on import use `--no-detached` option
-
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --no-detached
 ```
-
 This option could also be set via environment variable `TESTOMATIO_NO_DETACHED=1`.
 If you don't want to pass it each time, create .env file in the root dir of your project with this variable set.
-
 ### Synchronous Import
-
 By default `check-tests` doesn't wait for all tests to be processed. It sends request to Testomatio and exits. To wait for processing to finish use `--sync` option.
-
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --sync
 ```
-
 Please note, that this will take a long time on a large codebase.
-
 ### Auto-assign Test IDs in Source Code
-
 To disable guess matching for tests it is recommend to use Testomatio IDs to map a test in source code to a test in Testomatio. Testomatio IDs can be put automatically into the test names into source code when `--update-ids` option is used:
-
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --update-ids
 ```
-
 Tests imported with `--update-ids` will be processed in synchronouse mode, so the script will finish after all tests are processed.
-
 ### Keep Test IDs Between Projects
-
 To import tests with Test IDs set in source code into another project use `--create` option. In this case, a new project will be populated with the same Test IDs.
-
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --create
 ```
-
 Without `--create` import will fail with a message that ID was not found.
-
 ### Clean Test IDs
-
 If you want to import the synced project as new project, you have to clean the test ids.
 To clean up test ids without connecting to Testomatio project use `--purge` option:
-
 ```
 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --purge
 ```
-
 This method may be unsafe, as it cleans all `@S*` and `@T*` tags from tests and suites. So if you have a tag like `@Test1234` this may also be removed. If you use this option make sure if all the test titles a proper before committing the tests in GIT.
-
 > **Note:** `--purge` is an alias of `--unsafe-clean-ids` option.
-
 To clean only test ids set from a specific project use `--clean-ids` option instead:
-
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --clean-ids
 ```
-
 TESTOMATIO is API key of a project with existing test ids.
-
 ### Import Into a Branch
-
 Tests can be imported into a specific branch if `TESTOMATIO_BRANCH` parameter is used.
 Branch is matched by its id. If branch was not found, it will be created.
-
 ```
 TESTOMATIO_BRANCH=dev TESTOMATIO=1111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js"
 ```
-
 ### Keep Structure of Source Code
-
 When tests in source code have IDs assigned and those tests are imported, Testomat.io uses current structure in a project to put the tests in. If folders in source code doesn't match folders in Testomat.io project, existing structure in source code will be ignored. To force using the structure from the source code, use `--keep-structure` flag on import:
-
 ```
 TESTOMATIO=1111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --keep-structure
 ```
-
 ### Delete Empty Suites
-
 If tests were marked with IDs and imported to already created suites in Testomat.io
 newly imported suites may become empty. Use `--no-empty` option to clean them up after import.
-
 ```
 TESTOMATIO=1111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --no-empty
 ```
-
 > This prevents usage --keep-structure option.
-
-### Import Into a Specific Suite
-
-To put all imported tests into a specific suite (folder) pass in `TESTOMATIO_PREPEND_DIR` environment variable:
-
+#### Import Into a Specific Suite
+To put all imported tests into a specific suite (folder) pass in `TESTOMATIO_PREPEND_DIR` environment variable, avoid using special characters in the directory name. This helps prevent potential errors across different operating systems and command-line environments.
+**Recommendations:**
+Use only letters `(A-Z, a-z)`, numbers `(0-9)`, hyphens `(-)`, and underscores `(_)`.
+Avoid characters like `/, \, :, *, ?, ", <, >, |, &, $, #, %, @,` and the apostrophe `(')`.
+Examples of recommended naming: `MyTests` or `project_tests`.
 ```
 TESTOMATIO_PREPEND_DIR="MyTESTS" TESTOMATIO=1111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js"
 ```
-
 This will use "MyTests" folder in a root of a project or create it if it doesn't exist.
-
 It is also possible to specify a suite by its SID:
-
 ```
 TESTOMATIO_SUITE="1111111" TESTOMATIO=1111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js"
 ```
-
 or use SID with prefix:
-
 ```
 TESTOMATIO_SUITE="S1111111" TESTOMATIO=1111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js"
 TESTOMATIO_SUITE="@S1111111" TESTOMATIO=1111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js"
 ```
-
+### Apply Labels to Tests
+Use `TESTOMATIO_LABELS` to tag all imported tests with labels:
+```bash
+## Apply single label
+TESTOMATIO_LABELS="smoke" TESTOMATIO=1111111 npx check-tests jest "tests/**/*.test.js"
+## Apply multiple labels (comma-separated)
+TESTOMATIO_LABELS="smoke,regression,api" TESTOMATIO=1111111 npx check-tests playwright "tests/**/*.spec.ts"
+## Apply labels with values using label:value format
+TESTOMATIO_LABELS="severity:high,feature:user_account,team:backend" TESTOMATIO=1111111 npx check-tests jest "tests/**/*.test.js"
+## Mix simple labels and label:value pairs
+TESTOMATIO_LABELS="smoke,severity:critical,feature:auth,regression" TESTOMATIO=1111111 npx check-tests playwright "tests/**/*.spec.ts"
+## Use alias for Python SDK compatibility
+TESTOMATIO_SYNC_LABELS="integration,e2e" TESTOMATIO=1111111 npx check-tests cypress "cypress/integration/**/*.js"
+```
+### Remove Path Prefixes
+Use `TESTOMATIO_WORKDIR` to avoid redundant folder nesting:
+```bash
+## Problem: src/tests/API/ creates nested paths in Testomat.io
+## Solution: Set working directory to remove src/tests prefix
+TESTOMATIO_WORKDIR=src/tests TESTOMATIO=1111111 npx check-tests playwright "**/*.spec.ts"
+## Monorepo: Import without parent paths
+TESTOMATIO_WORKDIR=apps/frontend TESTOMATIO=1111111 npx check-tests jest "**/*.test.js"
+```
+### Group Tests by Category
+Use `TESTOMATIO_PREPEND_DIR` to organize tests:
+```bash
+## Group API tests under "API Tests" folder
+TESTOMATIO_PREPEND_DIR="API Tests" TESTOMATIO=1111111 npx check-tests jest "src/api/**/*.test.js"
+## Separate by team
+TESTOMATIO_PREPEND_DIR="Frontend Team" TESTOMATIO=1111111 npx check-tests playwright "tests/ui/**/*.spec.ts"
+```
+### Import to Specific Suite
+Use `TESTOMATIO_SUITE` to target existing suites:
+```bash
+## Import to existing suite by SID
+TESTOMATIO_SUITE=S1234567 TESTOMATIO=1111111 npx check-tests jest "features/**/*.test.js"
+```
 ### TypeScript
-
 For TypeScript projects `@babel/core` and `@babel/plugin-transform-typescript` packages are used. GitHub Action already contains those modules, while CLI version of this tool tries to automatically install them on first run.
-
 If you face issues parsing TypeScript file menitioning `@babel/core` or `@babel/plugin-transform-typescript` try to install them manually:
-
 ```
 npm i @babel/core @babel/plugin-transform-typescript --save-dev
 ```
-
 Now tests TypeScript can be imported with `--typescript` option:
-
 ```
 TESTOMATIO=11111111 npx check-tests CodeceptJS "**/*{.,_}{test,spec}.js" --typescript
 ```
-
+#### ES2023 Support
+Starting from version 0.13.3, the tool supports ES2023 Explicit Resource Management (ERM) syntax including:
+- `using` declarations for automatic resource disposal
+- `[Symbol.dispose]` method definitions
+This allows parsing of modern TypeScript/JavaScript files that use resource management patterns:
+```typescript
+const getResource = () => ({
+  [Symbol.dispose]: () => { /* cleanup code */ },
+});
+test('resource management', () => {
+  using resource = getResource();
+  // resource will be automatically disposed at the end of the scope
+});
+```
 ### Test aliases
-
-Test aliases are used to map tests in source code to tests in Testomat.io. By default `test` and `it` are parsed. But if you rename them or use another function to define tests (e.g. created/extended test object in Playwright), you can add alias (or multiple aliases, separated by comma) via `--alias` option:
-
+Test aliases are used to map tests in source code to tests in Testomat.io. By default `test` and `it` are parsed. But if you rename them or use another function to define tests (e.g. created/extended test object in Playwright), you can add alias (or multiple aliases, separated by comma) via `--test-alias` option:
 ```
-TESTOMATIO=11111111 npx check-tests Playwright "**/*{.,_}{test,spec}.ts" --alias myTest,myCustomFunction
+TESTOMATIO=11111111 npx check-tests Playwright "**/*{.,_}{test,spec}.ts" --test-alias myTest,myCustomFunction
 ```
-
 ### Programmatic API
-
 Import Analyzer from module:
-
 ```js
 const { Analyzer } = require('check-tests');
-
 const framework = 'jest';
 const pathToTests = './tests';
 const pattern = '**/*[._-]{test,spec}.{ts,js}';
-
 const analyzer = new Analyzer(framework, pathToTests);
-
 // to enable typescript...
 analyzer.withTypeScript();
-
 // to enable babel plugins
 analyzer.addPlugin('@babel/plugin-syntax-jsx');
 analyzer.addPlugin('@babel/plugin-syntax-flow');
-
 // to enable babel presets
 analyzer.addPreset('@babel/preset-react');
 analyzer.addPreset('@babel/preset-flow');
-
 analyzer.analyze(pattern);
-
 // stats on processed files
 const stats = analyzer.stats;
-
 // full info on parsed tests
 const data = analyzer.rawTests;
 ```
-
 ### Debugging
-
 Run import with `DEBUG="testomatio:*"` environment variable to get additional logs which may help understanding the cause of an issue. Usually it may happen because of a specific file that couldn't be parsed:
-
 ```
 DEBUG="testomatio:*" npx check-tests@latest ....
 ```
-
 ### API Definition
-
 API Endpoint to import test data into Testomat.io:
-
 [Import API Reference](https://testomatio.github.io/check-tests/)
-
 ### Limitations
-
 - Can't analyze included tests from external files
 - Can't analyze dynamically created tests
-
 ### License MIT
-
 Part of [Testomat.io](https://testomat.io)
-
