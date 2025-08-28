@@ -62,6 +62,8 @@ or:
     <version>0.7.4</version>
 </dependency>
 ```
+
+> **NOTE**: when you read this, the version might be updated (check it here: [JUnit](https://central.sonatype.com/artifact/io.testomat/java-reporter-junit) / [TestNG](https://central.sonatype.com/artifact/io.testomat/java-reporter-testng))
 ---
 ## Synchronizing your test codebase
 By default, this will import ***all*** the tests from the directory you run the query in and recursively from all the directories  
@@ -86,7 +88,7 @@ And this one is for Windows users:
 The `TESTOMATIO_URL` here is the server URL. In general, this will be `https://app.testomat.io` or `https://beta.testomat.io`.   
 `TESTOMATIO` is your project API key that you can get from **Testomat.io > Account > Access-Tokens**.  
 Troubleshooting: check if you haven't missed any whitespaces while editing the query.
->Please note: This command will download the jar file **testomatio.jar** to the directory from which you run the query.  
+>**NOTE**: This command will download the jar file **testomatio.jar** to the directory from which you run the query.  
 >This file will remain in the directory and **won't be removed automatically**.
 
 After you run this command, here is what you are supposed to see:
@@ -105,7 +107,7 @@ After you run this command, here is what you are supposed to see:
 If you already have the `testomatio.jar` in the directory and need to sync again, run this:
 
 ```bash
-java -jar testomatio.jar --url=... --apikey=...
+  java -jar testomatio.jar --url=... --apikey=...
 ```
 
 ### What it does implicitly:
@@ -119,6 +121,7 @@ The **pull-ids** command adds or updates the @TestId annotations to your test me
 ## Command options
 Optionally, you can use a property for the CLI to search for tests in another directory by providing:
 - `--directory=./relative/path/from/current`. This option works for other commands as well.
+---
 
 ## Other commands
 Since the `testomatio.jar` is already in your project, you can use other commands:
@@ -128,9 +131,17 @@ This command will remove all the IDs from test methods and related imports from 
 `--directory` works for this command.
 If you have already removed the jar from the project, you can run the oneliner you used to sync,  
 but change `sync` to `clean-ids`.
+<br/>
+<br/>
+
+
 >`import`
->
-This allows you to import your codebase to Testomat.io without adding/updating the IDs. The same options as for `sync` work here as well.
+> 
+This allows you to import your codebase to Testomat.io without adding/updating the IDs.  
+`--url` and --`apikey` are required(both).  
+`--directory` is optional.
+<br/>
+<br/>
 
 As you can see, the Java-Check-Tests usage is pretty straightforward.  
 If you need more information, have any suggestions, or encounter any problems with this CLI, create an issue in its repository: [Java-check-tests repository](https://github.com/testomatio/java-check-tests/tree/main)
