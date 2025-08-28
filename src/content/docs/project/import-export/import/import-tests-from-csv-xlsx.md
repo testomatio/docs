@@ -79,7 +79,7 @@ Currently, the CSV/XLSX import is an experimental feature. Some data might not b
 
 ## How to Import Tests from CSV/XLSX in BDD Projects
 
-If your project type is **BDD**, the import steps are **exactly the same** as described above for [Classic projects](https://docs.testomat.io/project/import-export/import/import-tests-from-csv-xlsx/#steps-to-import).
+If your project type is **BDD**, the import steps are **exactly the same** as described above for [Classic projects](https://68f51402.docs-c7r.pages.dev/project/import-export/import/import-tests-from-csv-xlsx/#how-to-import-tests-from-csvxlsx-in-classic-projects).
 
 The only difference is the appearance of a new checkbox:
 
@@ -91,7 +91,7 @@ The only difference is the appearance of a new checkbox:
     - Expected Result → **Then**
   - All imported tests are saved as **feature files** in your project.
 
-::: note
+:::note
 
 Currently, the feature works for TestRail and QTest. If you need support for other systems, please [submit a request](https://testomat.nolt.io/).
 
