@@ -158,9 +158,9 @@ Timeline feature is also available for other widgets, such as:
 
 ## Failures Board
 
-Your team may require visualizing your current status on the project. This is implemented with Failures Board. There you can see failures from the latest test runs, navigate to the suite, latest test run, and the failed test itself. For the Failures widget, we added the ability to group and sort failures found on the project.
+To make it easier for your team to track what's going on in the project, we’ve added a Failures Board. It shows failures from the latest test runs and lets you quickly jump to the suite, the test run, or the failed test itself. You can now also group and sort failures in the Failures widget to help make sense of the data faster. On top of that, there’s a new Defect column, so you can see any linked issues right away through IMS links like GitHub, Azure DevOps, or Jira.
 
-![Testomat.io - Failures Board](./images/New_QIy3IApm_2024-08-18.gif)
+![Testomat.io - Failures Board](./images/Analytics_Failures.gif)
 
 ## Issues Board
 
