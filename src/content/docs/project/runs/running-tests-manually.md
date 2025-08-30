@@ -134,6 +134,20 @@ When creating a manual run from the **Runs** page, the following options are ava
 
 ![Manual Run screen](./images/att1_355.png)
 
+### How to Set up Additional Manual Run options
+
+When manual run is launched, the following set up options are available: 
+
+1. **Collapse/Expand all** - expands or collapses all folders, test suites, and test cases within the run structure
+2. **Tree view/list view**  - displays tests as a hierarchical tree or a flat list
+3. **Extra options menu** - displays the list of additional set up options
+4. **Refresh structure** - updates the test list to reflect any structural changes made during the run, such as moving, adding or removing tests
+5. **Show/Hide Test Creation** - enables or disables the visibility of the button used to create and add new test cases during the run
+6. **Show/Hide Labels** - shows or hides labels applicable to individual test cases
+7. **Show/Hide Tags** -  shows or hides tags applicable to individual test cases
+
+![Manual Run Additional Options](./images/additional_manual_run_options.png)
+
 ### How to Run All Tests
 
 To launch a Manual Test Run you need:
