@@ -65,33 +65,102 @@ Add the proper **Maven/Gradle** snippet to your **pom.xml/build.gradle** file.
 
 ## Importing JUnit tests to [Testomat.io](https://app.testomat.io)
 
-It is important to import your test codebase to [Testomat.io](https://app.testomat.io) to see the correct project
-structure and test source code in the UI.
+Before using the reporter, your tests codebase should be imported to the [Testomat.io](https://app.testomat.io) server.  
+This will allow the server to process your run results and tests structure properly, and also it will allow you to see the  
+test methods source code io the UI.
+The importing is possible with Java-Check-Tests CLI - a convenient CLI that allows to sync you codebase with server, add/update IDs  
+and clean IDs from codebase if you don't need them.  
+Its repository can be found [here](https://github.com/testomatio/java-check-tests/tree/main).  
 
-You can easily do this with the following commands:
+***It is important to sync your tests with the Testomat.io server to create proper test folder structure and  
+to be able to see the source code of your tests in the UI***
 
-Here is the command for UNIX/MAC users:
 
+>**Prerequisites:**  
+Reporter dependency is added to your project.
+
+---
+### Synchronizing your test codebase
+By default, this will import ***all*** the tests from the directory you run the query in and recursively from all the directories  
+inside. To change the directory, use the `--directory` property (see below).  
+There is a convenient way to do this in one move - use the oneliners that will download the latest version of  
+**java-check-tests** and run the `sync`(or use `update-ids` alias if you wish) command.  
+Here is one for UNIX/MAC users:
 ```bash
-  export TESTOMATIO_URL=... && \
   export TESTOMATIO=... && \
   curl -L -O https://github.com/testomatio/java-check-tests/releases/latest/download/testomatio.jar && \
   java -jar testomatio.jar sync
 ```
-
-And here is the command for Windows users:
-
+And this one is for Windows users:
 ```cmd
-    set TESTOMATIO_URL=...&& ^
     set TESTOMATIO=...&& ^
     curl -L -O https://github.com/testomatio/java-check-tests/releases/latest/download/testomatio.jar&& ^
     java -jar testomatio.jar sync
 ```
 
-This will download the **testomatio.jar** file – a CLI tool that is used to import tests.
-> NOTE: More information about test importing can be found in the related
-> tutorial [Import tests with Java-Check-Tests CLI](java-check-tests.md)
-> and [Java-Check-Tests repository](https://github.com/testomatio/java-check-tests)
+`TESTOMATIO` is your project API key that you can get from **Testomat.io > Account > Access-Tokens**.  
+You can add `export TESTOMATIO_URL=... && \` or `set TESTOMATIO_URL=...&& ^ \` depending on your OS if the default url  
+https://app.testomat.io needs to be changed.  
+Troubleshooting: check if you haven't missed any whitespaces while editing the query.  
+
+>**NOTE**: This command will download the jar file **testomatio.jar** to the directory from which you run the query.  
+>This file will remain in the directory and ***won't be removed automatically***.
+
+After you run this command, here is what you are supposed to see:
+> **In the terminal:**
+>
+<img src="img/firstSyncConsoleResult.png" alt="First sync command run console result image" style="max-width: 47%; height: auto;">
+
+> **In the Testomat.io UI:**
+>
+<img src="img/uiImportResult.png" alt="UI import result image" style="max-width: 47%; height: auto;">
+
+> **In your test classes:**
+>
+<img src="img/codebaseDiff.png" alt="Codebase diff image after sync" style="max-width: 47%; height: auto;">
+
+If you already have the `testomatio.jar` in the directory and need to sync again, run this:
+
+```bash
+  java -jar testomatio.jar sync --apikey=...
+```
+`--apikey` is not required if you did not restart the terminal session.
+`--url` might be used if you use different url than https://app.testomat.io
+### What it does implicitly:
+The `sync` command runs `import` and `pull-ids` consecutively after import succeeds.  
+The **import** command parses your codebase and imports it to Testomat.io.  
+The **pull-ids** command adds or updates the @TestId annotations to your test methods and related imports to the test classes.
+
+---
+
+### Command options
+Optionally, you can use a property for the CLI to search for tests in another directory by providing:
+- `--directory=./relative/path/from/current`. This option works for other commands as well.
+---
+
+### Other commands
+Since the `testomatio.jar` is already in your project, you can use other commands:
+> `java -jar testomatio clean-ids`
+>
+This command will remove all the IDs from test methods and related imports from the test classes.  
+`--directory` works for this command.
+If you have already removed the jar from the project, you can run the oneliner you used to sync,  
+but change `sync` to `clean-ids`.
+<br/>
+<br/>
+
+
+>`java -jar testomatio import`
+>
+This allows you to import your codebase to Testomat.io without adding/updating the IDs.  
+`--apikey` is not required if you did not restart the terminal session.
+`--url` might be used if you use different url than https://app.testomat.io
+<br/>
+<br/>
+
+As you can see, the Java-Check-Tests usage is pretty straightforward.  
+If you need more information, have any suggestions, or encounter any problems with this CLI, create an issue in its repository: [Java-check-tests repository](https://github.com/testomatio/java-check-tests/tree/main)
+As importing is completed - let's step forward to the Java-Reporter configuration!
 
 ---
 
