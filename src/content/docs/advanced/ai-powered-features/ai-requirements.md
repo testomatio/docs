@@ -35,12 +35,34 @@ You can enbable AI at any time on Company Settings page by following the instruc
 
 :::
 
+## Add Requirements to an Empty Project
+
+You can start a new project by first adding your requirements.
+
+Once a project is created (BDD or Classical), set up the integration for your **Requirement Source** (see detailed instructions for [JIRA](https://docs.testomat.io/integrations/issues-management/jira/#connecting-to-jira-project) and [Confluence](https://docs.testomat.io/integrations/issues-management/confluence)). Then, proceed with adding requirements:
+
+1. Click **'Extra menu'** button.
+2. Select **'Requirements'** option from the dropdown list.
+
+![Testomat.io - Empty Project](./images/Empty_Project_1.png)
+
+3. Click **'+ Add'** button
+4. Select your requirement source (Jira in our case).
+5. Enter **'Jira Issue ID'**.
+6. Click **'Save'** button.
+
+![Testomat.io - Empty Project](./images/Empty_Project_2.png)
+
+After the requirement is linked to Testomat.io you can use AI Assistant to analyze requirements for edge cases and potential solutions. You can also create suites and test cases based on these requirements.
+
 ## Jira as a Requirement Source
+
+Testomat.io not only allows you to start a new project with requirements but also to link requirements to an ongoing project at any time.
 
 **To add Jira as a Requirement Source:**
 
 1. Open your Project in Testomat.io.
-2. Click on **'Extra menu'** button.
+2. Click **'Extra menu'** button.
 3. Select **'Requirements'** option from the dropdown list.
 4. Click **'+ Add'** button.
 5. Select **'Jira'** as your Requirement Source.
@@ -49,11 +71,11 @@ You can enbable AI at any time on Company Settings page by following the instruc
 
 ![Testomat.io - AI-powered](./images/AI_Jira_1.gif)
 
-After the requirement is linked to Testomat.io you can use AI Assistant to analyze requirements for edge cases and potential solutions. You can also create suites and test cases based on these requirements.
+Same as for a new project, after the requirement is linked to your project, you can start using AI-features for analyzing it, and generating suites, test cases, and edge cases to cover your requirements.
 
 :::note
 
-To use AI-Requirements feature, first connect Testomat.io to your Jira project. See detailed instructions in the [Connecting to JIRA project section](https://docs.testomat.io/integrations/issues-management/jira/#connecting-to-jira-project).
+To use AI-Requirements feature, first connect Testomat.io to your Jira project. See detailed instructions in the [Connecting to JIRA project](https://docs.testomat.io/integrations/issues-management/jira/#connecting-to-jira-project) section.
 
 :::
 
@@ -67,7 +89,7 @@ This integration bridges the gap between documentation and test planning, enabli
 
 **To add Confluence as a Requirement into your project:**
 
-1. Click on **'Extra menu'** button.
+1. Click **'Extra menu'** button.
 2. Select **'Requirements'** option from the dropdown list.
 3. Click **'+ Add'** button.
 4. Select **'Confluence'** as your Requirement Source.
@@ -114,26 +136,26 @@ This integration bridges the gap between documentation and test planning, enabli
 
 After adding the Suite Case to your project, you can begin creating your test cases or use AI to generate them for you.
 
-## Generate Test Cases from Requirements
+## Generate Test Cases from Requirements Page
 
 1. Open added Requirement.
 2. Click **'Analyze Requirement'** button.
 
 ![Testomat.io - Jira](./images/AI_Jira_2.png)
 
-3. Click on **'Add tests to {Suite_name} Suite'** option.
+3. Click **'Add tests to {Suite_name} Suite'** option.
 
 ![Testomat.io - Jira](./images/AI_Jira_8.png)
 
-4. Check suggested test cases and add the relevant ones by clicking on **'Add'** button.
+4. Check suggested test cases and add the relevant ones by clicking **'Add'** button.
 
 ![Testomat.io - Jira](./images/AI_Jira_9.png)
 
-5. Click on **'Write Description'** button to add description to the selected test case.
+5. Click **'Write Description'** button to add description to the selected test case.
 
 ![Testomat.io - Jira](./images/AI_Jira_10.png)
 
-6. Click on **'Update Test Description'** button to add genearted test description to the test case.
+6. Click **'Update Test Description'** button to add genearted test description to the test case.
 
 ![Testomat.io - Jira](./images/AI_Jira_11.png)
 
@@ -143,12 +165,30 @@ You always need explicitly select which test cases to add and update their descr
 
 :::
 
+## Suggest Test Cases Based on Requirements from Suite Level
+
+You can also generate test cases directly from a Suite if it has a linked requirement.
+
+1. Open Suite Case with the linked requirement.
+2. Click **'Extra menu'** button on 'Summarize' button.
+3. Select **'Suggest Tests'** option from the dropdown list.
+
+![Testomat.io - Suggest Tests](./images/AI_Suggest_tests_1.png)
+
+Similar to the previous case, review the suggested test cases, add the relevant ones, and write descriptions for the selected test cases directly from the AI-assistant window.
+
+![Testomat.io - Suggest Tests](./images/AI_Suggest_tests_2.gif)
+
+All added test cases will be displayed in your Suite after AI-assistant window is closed.
+
+![Testomat.io - Suggest Tests](./images/AI_Suggest_tests_3.png)
+
 ## Link Requirement to an Existing Suite Case
 
 Testomat.io allows you to link a requirement to an existing suite case directly from suite case page. To do that, follow these steps:
 
 1. Open your Suite Case.
-2. Click on **'Extra menu'** button.
+2. Click **'Extra menu'** button.
 3. Select **'Add Requirements'** option from the dropdown list.
 4. Select the requirement from the list by clicking on **'Attach'** button.
 
