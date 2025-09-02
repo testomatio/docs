@@ -61,7 +61,7 @@ Archived Runs or Groups are removed from the main Runs board and got the **archi
 
 ![Testomat.io - Run overview](./images/Archive_Run_1.png)
 
-OR 
+OR
 
 - Click the **'Extra menu'** button at the top right corner and select the specific archive section that you need.
 
@@ -119,7 +119,6 @@ Furthermore, you can sort groups in various way by clicking the **'Sorting'** bu
 As well, by clicking on archived RunGroup, you can see the RunGroup Report.
 
 ![Testomat.io - RunGroup Report](./images/Archive_Run_16.png)
-
 
 ## How to Unarchive Runs & RunGroups
 

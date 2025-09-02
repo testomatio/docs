@@ -248,7 +248,7 @@ Multiselection allows the bulk application options to many runs with one click. 
 3. **'Labels'** - apply/remove [labels](https://docs.testomat.io/usage/labels-and-custom-fields/#how-to-setup-a-label) from runs.
 4. **'Compare'** - open Compare runs view.
 5. **'Extra menu'** - access additional options.
-6. **'Delete'** - delete selected runs.
+6. **'Purge icon'** - purge selected runs [see more details here](https://docs.testomat.io/project/runs/managing-runs/#purge-runs).
 
 ![Testomatio.io - Multiselection Options](./images/Multi-select_1.png)
 
@@ -284,3 +284,51 @@ This feature allows you to pass **Runs** and **Runs Archive** filter parameters 
 Specify the necessary filtering parameters on the **Runs** or **Runs Archive** page, then copy the URL and share it with interested members.
 
 ![Testomatio.io - Share Runs Filter](./images/Share_Filter.png)
+
+## Purge Runs
+
+Starting from September 2025, Testomat.io introduces a new approach to managing old and unused Runs.
+
+The **Delete** option for Runs is now replaced with a **Purge** option.
+
+![Purge button](./images/att1_444.png)
+
+This change provides a safer and more flexible way to manage Run data by introducing a two-step deletion strategy instead of immediate and irreversible removal.
+
+### Compress and Move to Archive (Purge)
+
+When a Run is purged (either manually or automatically), it is first compressed and moved to the [Archive](https://docs.testomat.io/project/runs/archive-runs-and-groups/).
+
+![Move to Archive](./images/att2_444.png)
+
+Runs that are moved to the Archive receive a specific badge:
+
+- **Purged** – when a run is purged (manually or automatically)
+- **Archived** – when a run is archived manually
+
+During this step:
+
+- Stack traces are removed to reduce storage size.
+- Essential data is preserved, including:
+  - Test results
+  - Artifacts (attachments, logs, screenshots)
+  - Custom statuses
+- Archived Runs remain available for as long as needed and can be restored at any time.
+
+### Permanent Deletion from Archive
+
+:::note
+
+If you remove a Run from the Archive, it is permanently deleted. This step is irreversible — once **deleted**, the Run cannot be restored.
+
+:::
+
+![Delete runs](./images/att3_444.png)
+
+**Automatic Purge Applies Same Logic**
+
+The same two-step logic applies to automatically purged Runs Project Settings → [Purge Old Runs](https://docs.testomat.io/management/project/settings/#purge-old-runs). Instead of being deleted right away, these Runs are first compressed and archived, then eventually fully deleted.
+
+**Summary**
+
+By introducing the Purge option, Testomat.io ensures that Run data is handled with more safety and flexibility. You can keep your workspace clean and optimize storage, while still maintaining the ability to restore important Runs from the Archive when needed.
