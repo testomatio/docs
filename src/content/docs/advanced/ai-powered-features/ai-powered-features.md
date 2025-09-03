@@ -34,7 +34,7 @@ You can use **'Chat with Tests'** feature on Project or Folder level.
 ### Use 'Chat with Tests' Feature at the Project Level
 
 1. Go to 'Tests' page.
-2. Click on **'Chat with tests'** AI icon displayed in the header.
+2. Click **'Chat with tests'** AI icon displayed in the header.
 
 ![Testomat.io - AI-powered](./images/AI_Chat_1.png)
 
@@ -50,7 +50,7 @@ OR
 
 Create you own AI-promt.
 
-4. Click on **'Ask'** button.
+4. Click **'Ask'** button.
 
 ![Testomat.io - AI-powered](./images/AI_Chat_2.gif)
 
@@ -60,7 +60,7 @@ You can also use **'Chat with Tests'** on folder level to analyze and summarize 
 
 1. Go to 'Tests' page.
 2. Select the Folder.
-3. Click on **'Chat with Tests'** button.
+3. Click **'Chat with Tests'** button.
 
 ![Testomat.io - AI-powered](./images/AI_Chat_3.gif)
 
@@ -70,7 +70,7 @@ You can automatically generate a suite description by analyzing the test cases w
 
 1. Go to 'Tests'.
 2. Select Suite with test cases.
-3. Click on **'Summarize'** button.
+3. Click **'Summarize'** button.
 
 ![Testomat.io - AI-powered](./images/AI_1.png)
 
@@ -100,7 +100,7 @@ You can also use AI to enhance your test coverage by creating additional test ca
 This feature makes it easier to create comprehensive test suites. 
 
 1. Open Test Suite that already contains Test Cases.
-2. Click on 'Extra menu' button.
+2. Click **'Extra menu'** button.
 3. Select **'Suggest Tests'** option.
 
 ![Testomat.io - AI-powered](./images/AI_8.gif)
@@ -131,7 +131,7 @@ This feature accelerates test creation, enhances coverage by identifying overloo
 This feature allows you to create test case description based just on its name or improve description that you previously added to your test case.
 
 1. Open Test Case.
-2. Click on **'Suggest Description'** button.
+2. Click **'Suggest Description'** button.
 
 ![Testomat.io - AI-powered](./images/AI_9.gif)
 
@@ -141,7 +141,7 @@ Use AI to analyze your test code and produce detailed test descriptions. Bridges
 
 1. Go to 'Tests'.
 2. Select Test Case with code.
-3. Click on **'Write Description from Code'** button.
+3. Click **'Write Description from Code'** button.
 
 ![Testomat.io - AI-powered](./images/AI_3.png)
 
@@ -188,7 +188,7 @@ Shows only for finished, automated runs with 5+ failures.
 
 1. Go to 'Runs' page.
 2. Open finished automated run.
-3. Click on **'Clusterize Errors'** button.
+3. Click **'Clusterize Errors'** button.
 
 ![Testomat.io - AI-powered](./images/AI_5.png)
 
@@ -205,7 +205,7 @@ The same as in the previous case, it also available only for finished, automated
 1. Go to 'Runs' page.
 2. Open finished automated run.
 3. Click on Failed Test Case.
-4. Click on **'Explain Failure'** button.
+4. Click **'Explain Failure'** button.
 
 ![Testomat.io - AI-powered](./images/AI_7.gif)
 
@@ -215,7 +215,7 @@ Testomat.io allows you to use AI-powered feature to analyze and summarize your f
 
 1. Go to 'Runs' page.
 2. Select finished test run for statistics snalysis.
-3. Click on **'Run Summary'** button.
+3. Click **'Run Summary'** button.
 
 ![Testomat.io - AI-powered](./images/AI_run_summary_1.png)
 
@@ -226,6 +226,29 @@ Testomat.io allows you to use AI-powered feature to analyze and summarize your f
 **AI-powered features** are available for Classic and BDD projects.
 
 :::
+
+## Analyze Suite
+
+**Analyze Suite** tool brings AI-powered analytics directly to individual suites, helping you assess both **functional coverage** and **suite stability** without navigating the entire project view.
+
+**What’s included:**
+
+- **Functional area coverage mapping** – analyzes tests within a suite to determine which parts of your product it covers.
+- **Suite Stability Report** – evaluates recent test execution results to highlight flakiness, instability, or recurring issues.
+- **Focused insight** – ideal for monitoring the health of specific product modules or critical flows.
+
+**To access this feature:**
+
+1. Go to 'Tests'.
+2. Select the Suite that you want to analyze.
+3. Click **'Extra menu'** button on 'Summarize' button.
+4. Select **'Analyze Suite'** option from the dropdown menu.
+
+![Testomat.io - AI-powered](./images/AI_Analyze_Suite_1.png)
+
+By providing actionable insights at the suite level, teams can quickly identify improvement areas, address instability, and maintain high-quality standards in critical parts of their projects.
+
+![Testomat.io - AI-powered](./images/AI_Analyze_Suite_2.gif)
 
 ## Project Runs Status Report
 
@@ -246,8 +269,22 @@ The **Runs Status Report** gives you a quick overview of test stability, critica
 **To access this feature:**
 
 1. Go to 'Runs' page.
-2. Click on **'Run Status Report'** button. 
+2. Click **'Run Status Report'** button. 
 
 ![Testomat.io - AI-powered Project Runs Status Report](./images/AI_14.gif)
 
 This report is available automatically based on recent test run history, giving your team instant visibility into the health of your project.
+
+## Frequently Asked Questions (FAQ)
+
+**Q: What are the available AI provider options in Testomat.io, and what is their approach to data usage and model training?**
+
+A: Testomatio offers flexible options for AI providers to accommodate different company needs and policies. You can choose from the following:
+- [Groq Inc.](https://groq.com/): This is a US-based company that uses open-source models and does not train its own models on user data, so the input data won't be consumed to train new models, as they just provide hosting for it. Testomat.io can provide access to Groq as part of its service.
+- Other Providers: If your company has a specific policy or preferred vendor, you can use an alternative provider like OpenAI, Azure, etc. These can be configured at a global level for the entire organization.
+
+**Q: How is user data handled and secured when using Testomat.io's AI features?**
+
+A: Testomat.io's AI features are designed with data privacy and user control in mind. Here's how it works:
+- **User-Initiated Actions:** No data is sent to the AI provider in the background. A user must manually select a specific test or run and click an AI button to send the data for analysis.
+- **Context-Based Prompts:** The AI prompts are run on specific contexts, including tests, suites, runs, and run results. This ensures that only the relevant, selected data is sent for analysis.
