@@ -157,7 +157,7 @@ export default defineConfig({
 										{ label: 'Overview', link: '/project/import-export/import' },
 										{ label: 'Import from Source Code', link: '/project/import-export/import/import-tests-from-source-code' },
 										{ label: 'Import from Cucumber', link: '/project/import-export/import/import-tests-from-cucumber' },
-										{ label: 'Import from TMS', link: '/project/import-export/import/import-tests-from-csvxls' },
+										{ label: 'Import from CSV/XLSX', link: '/project/import-export/import/import-tests-from-csv-xlsx' },
 										{ label: 'Import Tests From TestRail', link: '/project/import-export/import/import-tests-from-testrail' },
 
                     
@@ -202,11 +202,12 @@ export default defineConfig({
 						{ label: 'PHP Test Frameworks', link: '/test-reporting/php'},
 						{ label: 'Python Test Frameworks', link: '/test-reporting/python'},
 						{ label: 'Java and Other Test Frameworks', link: '/test-reporting/junit'},
-						{ label: 'Test Artifacts', link: '/test-reporting/artifacts'},
+						{ label: 'Test Artifacts', link: '/test-reporting/artifacts'},						
 						{ label: 'Configuration', link: '/test-reporting/configuration'},
 						{ label: 'Advanced Options', link: '/test-reporting/pipes/testomatio' },
 						{ label: 'CLI', link: '/test-reporting/cli'},
 						{ label: 'Functions', link: '/test-reporting/functions'},
+                        { label: 'Reporting API', link: '/test-reporting/api'},						
 						{ label: 'Logger', link: '/test-reporting/logger'},
 						{
 							label: 'Pipes',
