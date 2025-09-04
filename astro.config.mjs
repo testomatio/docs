@@ -229,6 +229,14 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', link: '/advanced' },
 						{
+							label: 'Artifacts',
+							collapsed: true,
+							items: [
+								{ label: 'Artifacts', link: '/advanced/test-artifacts/artifacts' }
+							],
+						},
+						{
+							label: 'Tags, Custom fields',
 							label: 'Tags & Labels',
 							collapsed: true,
 							items: [
