@@ -27,7 +27,18 @@ Testomat.io offers flexible plans tailored for different team sizes and needs:
 - **Professional** — ideal for small and medium-sized QA teams
 - **Enterprise** — includes full feature set and On-Premise options for large organizations
 
-Each plan provides different access to features like Jira integration and branch management. For a detailed comparison of plans, see: [Compare all plans.](https://testomat.io/pricing/)
+:::note
+
+Subscription fees are calculated **per user, per month** or **per user, per year**.
+
+:::
+
+Let's take a look at an example for the **Professional Plan**:
+
+- **Monthly billing:** Charged **per user, per month** (e.g., $30 × 10 users = $300/month).
+- **Yearly billing:** Charged **per user, per year**, at a **10% discounted rate** compared to monthly billing (e.g., $324 × 10 users = $3,240/year).
+
+Each plan provides different access to features like Jira integration and branch management. For a detailed comparison of plans, see: [Compare all plans](https://testomat.io/pricing/).
 
 ## How to Use the Free Plan
 
