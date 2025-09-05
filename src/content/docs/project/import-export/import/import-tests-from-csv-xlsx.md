@@ -27,7 +27,6 @@ Testomat.io supports importing test cases from many popular TMS tools. There are
 - Zephyr
 - QTest
 - Qase
-- XRay
 
 ### Direct Import Guides
 
