@@ -17,9 +17,9 @@ head:
 
 As a test management system, Testomat.io Team intends to provide our users with as much valuable testing data as possible. For this purpose, we developed Analytics Feature.
 
-![Testomat.io - Analytics](./images/Analytics.png)
+![Analytics dashboard](./images/att10_357.png)
 
-## How Does It Work?
+## How Does It Work
 
 Testomat.io tracks your automated and manual tests, aggregates their statuses history, analyzes them, defines tests by Analytics categories, and shows them to you. You can configure these metrics. So you can give a more precise glance to prevent bugs. This also means that Analytics widgets are updated and supplemented with each completed Test Run.
 
@@ -57,73 +57,139 @@ Analytics data loads for the last 4 weeks by default. But you have the option to
 
 As a management system for automated tests, Testomat.io team created an Automation Coverage Board where you can track the progress of automation coverage on the project. You can sort your tests by Suite and Automation indicators.
 
-![Testomat.io - Automation-Coverage](./images/147570053-cb2bf5d9-e98c-4778-9df2-74ed88b96c49.gif)
+![Automation Coverage](./images/gif2_357.gif)
 
 ## Custom Charts
 
-Custom charts are a powerful addition to analytics. They allow you to customise the display of data that is important to you — not only for tests, but now also for **Test Runs**.
+Custom charts are a powerful addition to analytics. They allow you to customize the display of the data most relevant to you — not only for **Tests**, but also for **Test Runs**.
 
-You can now build custom charts based on **Test Run** data using search queries. This enables a more comprehensive analysis of your test execution process, improving visibility into trends, completion metrics, and performance of your testing pipeline.
+You can build custom charts using search queries to get a comprehensive view of your testing process, providing visibility into trends, completion metrics, and overall testing performance.
 
-**Use Cases:**
+Custom charts help teams to visualize key testing metrics at a glance:
 
-**Label-Based Metrics:** Track the number of test runs with a specific label, e.g., os:windows to monitor test execution on the Windows platform.
+- **Environment-Based Metrics**: Track the number of test runs executed on specific platforms or environments, helping you monitor execution across systems.
+- **Label-Based Metrics**: Track tests or test runs associated with specific labels, such as a build version or milestone, to gain insights into particular testing contexts.
+- **Run Duration Analysis**: Visualize average or total duration of Test Runs over time.
+- **Trends Over Time**: With timeline settings, track metrics across a selected period.
+- **Widgets**: Any chart can be added as a widget to your dashboard, giving a separate view alongside other analytics.
 
-**Run Duration Analysis:** Visualize average or total duration of Test Runs over time.
+### How to Create a Custom Chart
 
-**Custom Querying:** Filter and chart test runs using attributes such as title, created, updated, or any defined label/tag.
+The flow for creating a custom chart is the same for both **Tests and Test Runs**. The only difference is which **Data Source** you select.
 
-### How to Use Custom Charts with Test Runs
-In the **Edit Chart** mode, create a new query by selecting **"Test Run"** as the target entity.
+1. Navigate to the **Analytics** tab in the left sidebar
+2. Click **Custom Charts** on the dashboard
 
-Then configure the chart view as before, with options for:
+![Custom Charts](./images/att1_357.png)
 
-**Label View:** Customize the label display.
-**Color Coding:** Apply custom colours for each query.
-**Data Display:** Show raw numbers, percentages, or both.
+3. Click the **+** button to open a new chart
 
-Once configured, save the chart and it will appear on your dashboard.
+![Plus button](./images/att2_357.png)
+
+4. Enter **Title** (required)
+5. Toggle **As widget** (optional)
+
+:::note
+
+By toggling **As widget**, your custom chart will appear as a separate widget on the Analytics dashboard. This allows you to monitor key metrics continuously alongside other analytics without navigating back to the Custom Charts page.
+
+:::
+
+6. Enter **Description** (optional)
+7. Select **Data Source**: (required)
+
+- **Tests:** for Test data
+- **Runs:** for Test Run data
+
+![Data Source](./images/att3_357.png)
+
+After selecting the Data Source, additional configuration options appear:
+
+8. **Chart Type** (required) – choose how data will be visualized (bar, donut, pie, etc.)
+9. **Labels** (required) – customize the display of labels (short query, titles, numbers, title and %, etc.)
+
+**Timeline settings:**
+
+10. **Period** (optional) – enable Timeline to track data changes over a selected period
+11. **Extra Line** (optional) – add an additional line to compare metrics within the Timeline
+12. **Chart type** (optional) – select the visualization style specifically for the timeline chart
+13. Click the **Add Query** button to open the Query Editor:
+
+Configure queries according to your metrics using supported query variables:
+
+- [Tests Variables](https://docs.testomat.io/advanced/tql/#tests-variables)
+- [Runs Variables](https://docs.testomat.io/advanced/tql/#runs-variables)
+
+![Add Query](./images/att4_357.png)
+
+14. Click the **Save** button — it will appear on your dashboard or as a widget if selected.
 
 This extended chart functionality enhances your ability to make data-driven decisions by offering insight into both tests and test runs.
 
-![Testomat.io - Custom Charts](./images/New_3EOUAwBN_2024-08-04.png)
+![Created Custom Chart](./images/att5_357.png)
 
-### How To Customise The Chart View?
+### How To Customize The Chart View
 
-In the **Edit** mode, select the **Labels** field to customise the information on the chart to your preference:
+Custom charts can be tailored to match your reporting needs. In this section, you can adjust how chart information is displayed — by modifying labels, colors, and other visual settings. These options help make your data easier to read and interpret.
 
-| Label                      | View                                                |
-| -------------------------- | --------------------------------------------------- |
-| Query                      | `state == 'manual' and status == 'failed': 9 tests` |
-| Titles                     | `state == 'manual' and status ...: 9 tests`         |
-| Short query                | `Manual - Failed`                                   |
-| Numbers                    | `9`                                                 |
-| Title and tests amount     | `Manual - Failed: 9 tests`                          |
-| Title and %                | `Manual - Failed: 7%`                               |
-| Title, tests amounts and % | `Manual - Failed: 9 tests, 7%`                      |
+- **Labels**
 
-![Testomat.io - Custom Charts Labels](./images/New_Sey1I0ug_2024-08-07.png)
+During chart creation or in the **Edit** mode, select the **Labels** dropdown to customize the information on the chart to your preference:
 
-In addition to customising labels, you can also personalise the colours of your queries in **’Edit Chart’** mode for better data visualisation. To do this, follow these steps:
+For example, if a query `state == 'manual' and status == 'passed'` has been selected:
 
-1. Scroll down to the list of queries displayed under the chart
+| **Label**                  | **View**                                                 |
+| -------------------------- | -------------------------------------------------------- |
+| Query                      | `state == 'manual' and status == 'failed': 9 tests`      |
+| Short query                | `state == 'manual' and status ...: 9 tests`              |
+| Titles                     | `state == 'manual' and status == 'failed'`               |
+| Numbers                    | `9`                                                      |
+| Title and items amount     | `state == 'manual' and status == 'failed': 9 tests`      |
+| Title and %                | `state == 'manual' and status == 'failed': 1% `          |
+| Title, items amounts and % | `state == 'manual' and status == 'failed': 9 tests, 1% ` |
 
-![Queries list](images/att1_4449.png)
+![Labels view](./images/att7_357.png)
 
-2. Click on the colour box next to the query to change colour
-3. After a colour picker appears, select a new colour
-   - Use the colour palette to choose your preferred shade
-   - Alternatively, enter RGB, HSL, or HEX values manually for precise colour selection
+- **Color Customization**
 
-![Set up colour](images/att2_4449.png)
+In addition to customizing labels, you can also personalize the colors of your queries for better data visualization. To do this, follow these steps:
 
-Once selected, the chart will automatically reflect the applied colour.
+1. Open a Custom Chart you want to customize
+2. Scroll down to the list of queries displayed under the chart
 
-4. Click **’Save’** button to apply changes
+![Queries list](./images/att1_4449.png)
 
-![Save button](images/att3_4449.png)
+3. Click the color box next to a query to change its color
+4. After a color picker appears, select a new color
 
-This feature gives you greater control over the visual presentation of your custom charts by allowing you to select colours for each query.
+- Use the color palette to choose your preferred shade
+- Alternatively, enter RGB, HSL, or HEX values manually for precise color selection
+
+![Set up color](./images/att2_4449.png)
+
+Once selected, the chart will automatically reflect the applied color.
+
+5. Click the **Save** button to apply changes
+
+![Save button](./images/att3_4449.png)
+
+This feature gives you greater control over the visual presentation of your custom charts by allowing you to select colors for each query.
+
+- **Additional Features:**
+
+  - **Duplicate Chart**: Quickly create a copy of an existing chart and modify it without starting from scratch
+
+![Duplicate Chart](./images/att9_357.png)
+
+- **Download Chart**: Download your chart as **SVG, PNG, or CSV** for reporting or sharing
+
+![Export Chart](./images/att8_357.png)
+
+- **Sort Queries by Tests/Default**: On Edit Mode, set up the order of queries in the chart
+
+These options give you full control over both the appearance and functionality of your custom charts, making it easier to create professional and insightful visualizations.
+
+![Sort Queries by Tests/Default](./images/gif1_357.gif)
 
 ### Timeline
 
@@ -141,16 +207,17 @@ Each timeline is associated with a unique URL, which can be copied and shared wi
 
 ![Testomat.io - Unique URL for timelines](./images/New_E5IK2JjS_2024-09-24.png)
 
-:::note 
+:::note
 
 Timeline feature is also available for other widgets, such as:
-- Automation Coverage.
-- Failures.
-- Issues.
-- Defects.
-- Ever Failing Tests.
-- Flaky Tests.
-- Jira.
+
+- Automation Coverage
+- Failures
+- Issues
+- Defects
+- Ever Failing Tests
+- Flaky Tests
+- Jira
 
 :::
 
@@ -196,19 +263,19 @@ If a test has been run 14 times and succeeded 7 times, the success rate is calcu
 
 It is well known that automated tests need maintenance and refactoring. The Slowest Tests widget will help you to define such automated tests and help to visualize them. You can sort them by execution duration and passed/failed status to prioritize your work effectively.
 
-![Testomat.io - Slowest Tests](./images/147572823-b5a3917f-55f3-4fc6-88bf-a69b1ec9bfca.gif)
+![Slowest Tests](./images/gif6_357.gif)
 
 ## Never Run Tests
 
 There may be tests that were never executed on your project because they simply got lost or forgotten. To avoid such situations we added Never Run Tests that will show you test those ones.
 
-![Testomat.io - Never-Run-Tests](./images/Never-Run-Tests.gif)
+![Never Run Tests](./images/gif5_357.gif)
 
 ## Ever Failing Tests
 
 Ever Failing Tests is another useful Analytics widget that will show you automated tests that never passed. This feature will help you to pay attention to potential risks in your application.
 
-![Testomat.io - Ever Failing Tests](./images/147574334-3a076e17-9a8e-437b-8a8c-9d1833a29c28.gif)
+![Ever Failing Tests](./images/gif4_357.gif)
 
 ## Labels Statistics
 
@@ -243,8 +310,8 @@ We empowered Testomat.io Run Reports with Overview chart, Flaky and Slowests tes
 
 Overview chart visualizes aggregated tests statuses by suites:
 
-![Testomat.io - image](./images/147571210-e1277094-b480-4b3a-ad5b-b79248203c9e.png)
+![Analytics In Run Reports](./images/gif3_357.gif)
 
 Flaky and Slowests tests widgets show the latest 5 tests and navigate to dedicated Analytics pages:
 
-![Testomat.io - image](./images/147570746-6d5a24be-689a-4209-b246-24aaf8afeda0.png)
+![Flaky and Slowests widgets](./images/att11_357.png)
