@@ -312,3 +312,7 @@ A: Testomatio offers flexible options for AI providers to accommodate different 
 A: Testomat.io's AI features are designed with data privacy and user control in mind. Here's how it works:
 - **User-Initiated Actions:** No data is sent to the AI provider in the background. A user must manually select a specific test or run and click an AI button to send the data for analysis.
 - **Context-Based Prompts:** The AI prompts are run on specific contexts, including tests, suites, runs, and run results. This ensures that only the relevant, selected data is sent for analysis.
+
+**Q: What is the approximate AI usage in terms of tokens or API calls?**
+
+A: AI consumption depends on the size of your project — including test cases, suites, run messages, stack traces, and requirements. In short, the more tests and requirements you have, the larger the prompts will be.
