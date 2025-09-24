@@ -42,6 +42,7 @@ Here you can find useful contacts and links
 ## Invite a Support User to Your Project
 
 Before adding a support user, please make sure you have contacted the Testomat.io team and asked for help.
+Inviting a Support User requires the Manager or Owner role.
 
 To invite a support user to your project, follow these steps:
 
