@@ -3,78 +3,178 @@ title: Steps Database
 description: Learn how to utilize the Steps Database in Testomat.io to store, reuse, and auto-complete test steps across projects. This guide covers creating, editing, renaming steps, and using snippets for efficient test writing. Save time and maintain consistency by leveraging the Steps Database during test creation, including both classical and BDD-style tests.
 type: article
 url: https://docs.testomat.io/project/steps-snippets/steps
-head:
-  - tag: meta
-    attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/New_oVmHkZJz_2024-08-18.ejJvt3aQ_16wl18.webp
-      
+head:  
   - tag: meta
     attrs:
       name: keywords
       content: Testomat.io, Steps Database, test steps, step reuse, test management, BDD tests, classical tests, test automation, QA tools, step autocompletion
 ---
 
-Testomat.io provides functionality for test steps re-using and autocompletion.  
+Testomat.io offers functionality for test steps re-using and autocompletion. This feature helps you save time during test cases creation and make the process faster.
 
-## How To Add A New Step In Steps Database
+## How to Add a New Step to the Steps Database
 
-There are few ways to create steps on the page:
+There are few ways to create steps in the **Steps Database** from the **'Steps'** page:
 
-1. Open **Steps** page.
-2. Enter the step into the field.
-3. Click **Create** button.
+**Option 1**
 
-Or another way:
+1. Open **'Steps'** page.
+2. Enter the step into the empty field.
+3. Click **'Create'** button.
 
-4. Сlick on **Plus** button to add context to the step.
+![Testomat.io - Add Steps](./images/Add_step_1.png)
 
-![Testomat.io - Steps](./images/New_oVmHkZJz_2024-08-18.png)
+**Option 2**
 
-At the New Step screen, you need to add the step itself (1), description (2) and click on the Save button (3).
+1. Open **'Steps'** page.
+2. Сlick **'Plus'** button.
+3. Select **'Step'** option from the dropdown list to add context to the step.
 
-![Testomat.io - Add context to the step](./images/New_DLg3V9rr_2024-08-18.png)
+![Testomat.io - Add Steps](./images/Add_step_2.png)
+
+After the **'New Step'** screen is displayed:
+
+4. Add the step.
+5. Add a step description to describe in which context this step can be used (optional).
+6. Click **'Save'** button.
+
+![Testomat.io - Add context to the step](./images/Add_step_3.png)
 
 The new step has been created!
 
-![Testomat.io - New step created](./images/New_CqZ0FlTE_2024-08-18.png)
+![Testomat.io - New step created](./images/Add_step_4.png)
 
-## How To Add A New Step In Editor for Classical Tests
+:::note
 
-Create your steps during writing your classical tests! Testomat.io Editor gives the ability to save your test description as steps directly to Steps Database.
+You can create Steps for **BDD Projects** in the same way as for Classical Projects, following the same rules.
 
-![CleanShot 2022-05-26 at 20 17 17@2x](./images/170541098-7e4db6b1-6bb5-40f2-9a0a-21394c9578a2.jpg)
+![Testomat.io - New step created](./images/Add_BDD_step_1.png)
 
-❗When you start the lone with the asterisk sign `*` Testomat.io creates a new step❗
+:::
 
-![CleanShot 2022-05-26 at 21 25 59@2x](./images/170552512-0be7cb33-1055-4974-9ee5-b3ed94d2dad1.jpg)
+## How to Add a New Step in Editor for Classical Tests
 
-Save the test and the new step will be placed in the Database.
+Create your steps while writing your classical tests! Testomat.io Editor gives the ability to save your test description as steps directly to the **Steps Database**.
 
-![CleanShot 2022-05-26 at 20 47 46@2x](./images/170546294-7c947478-37fa-42e9-bbbf-8152d6ee971a.jpg)
+Open Test Case Editor and create new steps by starting the line with the asterisk sign `*` or a numbered list (e.g., `1.`).
 
-Next time you need this step start typing it with the asterisk sign `*` and Editor will show it to autocomplete.
+![Testomat.io - Add Steps](./images/Add_step_5.png)
 
-![CleanShot 2022-05-26 at 21 23 43@2x](./images/170552056-25636306-041f-4152-a9b0-4c6a4527bd4e.jpg)
+Save the test, and the new steps will be added in the Database.
 
-## How To Add A New Step In Editor for BDD Tests
+![Testomat.io - Add Steps](./images/Add_step_6.png)
 
-Testomat.io BDD Editor creates steps once a Scenario/ Feature File is saved. So you don't need to add steps separately. 
+:::note
 
-![CleanShot 2022-05-26 at 21 56 58@2x](./images/170557719-d84e39b2-f026-42df-82cb-2668f11e8f92.jpg)
+Only steps created in the Test Editor using `*` or `number list` under a step header (e.g., `## Steps`) will be created/saved in the **Steps Database**.
 
-![CleanShot 2022-05-26 at 22 34 41@2x](./images/170563796-d22bc139-c836-48e8-ab80-fa8f8b457166.jpg)
+:::
+
+:::note
+
+If your recently added steps are not displaying in the autocomplete list, you need to refresh steps in the **Steps Database** to see them. To do this:
+Open **'Steps'** page (1) -> Click **'Extra menu'** button (2) -> Select **'Refresh Steps'** option (3).
+
+![Testomat.io - Refresh Steps](./images/Refresh_Steps.png)
+
+:::
+
+## How to Reuse Steps from Steps Database
+
+Testomat.io recommends reusing steps instead of creating new ones.
+
+Next time you need to use the same step, start typing the step inside the Editor. Use the asterisk sign `*` for an unordered list or number with dot (e.g., `1.`) for an ordered list. The Editor will display the autocomplete list with matching steps.
+**Select** the step from the autocomplete list to add it to your test case.
+
+![Testomat.io - Re-use Steps](./images/Reuse_step_1.png)
+
+You can also use the **'Add Steps (ordered)'** or **'Add Steps (unordered)'** buttons in the Editor panel to trigger the autocomplete list with all available steps.
+
+![Testomat.io - Re-use Steps](./images/Reuse_step_2.png)
+
+:::note
+
+When you use the **'Add Steps (ordered)'** or **'Add Steps (unordered)'** buttons the **'## Steps'** header will be added automatically if it wasn't previously added manually or via a template.
+
+:::
+
+## How to Add a New Step in Editor for BDD Tests
+
+The Testomat.io BDD Editor automatically creates steps and adds them to the Steps Database once a Scenario or Feature File is saved. You do not need to add BDD steps separately.
+
+![Testomat.io - Steps in BDD](./images/BDD_Steps_1.png)
+
+:::note
+
+Don't include Given/When/Then in a step. Each step can be used in any of these contexts.
+
+:::
+
+![Testomat.io - Steps in BDD](./images/BDD_Steps_2.png)
 
 ## How To Rename A Step
 
-There may be situations when you need to update existing tests in order to suit project requirements. You can rename required steps on Steps page. This action will update tests containing changed step, so there is no need to change each tests individually.  
+You may need to update existing steps to suit new project requirements. You can rename required steps on the **'Steps'** page. This action automatically updates all tests containing changed step, so you do not need to change each test individually.
 
-![170700976-73ec0242-2abd-476a-a1d9-a89c0f94bebe](./images/170701425-8412d054-e694-454d-8930-0e45b473186a.jpeg)
+1. Open **'Steps'** page.
+2. Click on the Step you want to update.
+3. Click **'Edit'** button in the displayed window.
 
-![CleanShot 2022-05-27 at 15 40 46@2x](./images/170701239-4d0bc838-4dce-4851-8654-f574dc8a9ffb.jpg)
+![Testomat.io - Steps Update](./images/Update_Steps_1.png)
 
-![CleanShot 2022-05-27 at 15 43 39@2x](./images/170701695-b5aa4671-fe6b-4da4-a64b-e6c1e8616429.jpg)
+4. Update the Step's name.
+5. Click **'Save'** button.
 
-![CleanShot 2022-05-27 at 15 45 02@2x](./images/170701937-bda4438c-506d-4eb2-8306-dcd8f9e94a58.jpg)
+![Testomat.io - Steps Update](./images/Update_Steps_2.png)
 
-[![CleanShot 2022-05-27 at 20 07 43@2x](./images/170752475-7899459d-0533-45b4-904e-1f88e9f61c2c.jpg)](https://youtu.be/z5C3GYtl_HU)
+6. Confirm the action on the displayed pop-up.
+
+![Testomat.io - Steps Update](./images/Update_Steps_3.png)
+
+7. Check description for related Test Cases after the Step is renamed.
+
+![Testomat.io - Steps Update](./images/Update_Steps_4.png)
+
+[![Testomat.io - Steps](./images/170752475-7899459d-0533-45b4-904e-1f88e9f61c2c.jpg)](https://youtu.be/z5C3GYtl_HU)
+
+## How to Merge Steps
+
+There might be a situation when there are a few similar steps in the Steps Database. You can use **'Merge'** feature to unite them into one step, to keep your tests clean. This feature is available for **Classical** and **BDD** projects.
+
+1. Open **'Steps'** page.
+2. Enable **'Multi-select'**.
+3. Select the Steps you want to merge.
+4. Select **'Merge'** option from the bottom menu panel.
+
+![Testomat.io - Merge Steps](./images/Merge_Steps_1.png)
+
+5. Enter the Step that you want to keep (the first step will be pre-selected by default, but you can change it manually based on your needs).
+6. Click **'Merge'** button.
+
+![Testomat.io - Merge Steps](./images/Merge_Steps_2.png)
+
+:::note
+
+After your steps are **Merged**, the description of all tests where these steps are used will be updated.
+
+:::
+
+![Testomat.io - Merge Steps](./images/Merge_Steps_3.png)
+
+## How to Delete Unused Steps
+
+It might be the case when you deleted some test cases, and now some steps are unnecessary. To keep your **Steps Database** clean, you can delete unused steps.
+
+1. Open **'Steps'** page.
+2. Click **'Extra menu'** button.
+3. Select **'Delete Unused Steps'** option.
+
+![Testomat.io - Delete Unused Steps](./images/Delete_Steps_1.png)
+
+4. Confirm action on the displayed menu.
+
+![Testomat.io - Delete Unused Steps](./images/Delete_Steps_2.png)
+
+All unused Steps deleted from **Steps Database**.
+
+![Testomat.io - Delete Unused Steps](./images/Delete_Steps_3.png)
