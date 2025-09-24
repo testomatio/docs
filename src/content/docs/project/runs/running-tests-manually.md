@@ -138,7 +138,7 @@ When creating a manual run from the **Runs** page, the following options are ava
 
 When manual run is launched, the following set up options are available: 
 
-1. **Collapse/Expand all** - expands or collapses all folders, test suites, and test cases within the run structure
+1. **Collapse/Expand all** - expands or collapses test suites within the run structure
 2. **Tree view/list view**  - displays tests as a hierarchical tree or a flat list
 3. **Extra options menu** - displays the list of additional set up options
 4. **Refresh structure** - updates the test list to reflect any structural changes made during the run, such as moving, adding or removing tests
