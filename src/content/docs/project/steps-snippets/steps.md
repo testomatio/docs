@@ -73,6 +73,7 @@ Only steps created in the Test Editor using `*` or `number list` under a step he
 :::note
 
 If your recently added steps are not displaying in the autocomplete list, you need to refresh steps in the **Steps Database** to see them. To do this:
+
 Open **'Steps'** page (1) -> Click **'Extra menu'** button (2) -> Select **'Refresh Steps'** option (3).
 
 ![Testomat.io - Refresh Steps](./images/Refresh_Steps.png)
