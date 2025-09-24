@@ -67,7 +67,7 @@ Beyond Feature Files lies the individual tests. Here, the BDD Editor grants you 
 
 There is an option to save unfinished changes in the feature file as a draft. This is useful when the scenario isn't finalized yet and may contain syntax errors.
 
-Drafts can be applied at both the suite and test levels.
+Drafts can be applied at both the suite and test levels - in other words, Feature and Scenario description.
 When editing a test, if the editor prevents you from saving changes (e.g., due to syntax errors), the relevant error message will appear at the bottom of the screen. If you plan to fix the scenario later but don’t want to lose your changes, you can use the **Save to Draft and View Test** option:
  
 ![Save To Draft and View Test option](./images/Save_To_Draft_and_View_Test.png)
@@ -80,10 +80,7 @@ The next time you open the test in edit mode, you will see two additional button
 
 ![ Apply Draft to description and Delete Draft buttons](./images/apply_draft_or_delete_buttons.png)
 
-
-
-
-
+> **Note:** Only one draft can be saved at a time.
 
 
 ## Cross-Linking Tests, Suites and Folders
