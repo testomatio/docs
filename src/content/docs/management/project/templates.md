@@ -15,7 +15,7 @@ Templates in Testomat.io empower teams to work faster and more consistently by s
 :::note
 
 To ensure newly created **Notification Templates** are applied correctly, you must also create a new **Notification Rule**.  
-Without it, Slack or Microsoft Teams notifications will continue using the default message format with all supported variables.
+Without it, Slack, Telegram or Microsoft Teams notifications will continue using the default message format with all supported variables.
 
 Learn more: [How to create a Notification Rule](https://docs.testomat.io/integrations/report-notifications/rules/)
 
@@ -28,7 +28,7 @@ Learn more: [How to create a Notification Rule](https://docs.testomat.io/integra
 - **Code Template**: used to define the default code structure for automated tests with dynamic variables to simplify test automation;
 - **Defect Template**: used to automatically prefill the issue summary and description fields when reporting defects to integrations like Jira, GitHub, or Azure;
 - **Meta Template**: defines which meta-data keys are displayed in the Run Report View; it controls how data is shown and helps enrich report context;
-- **Notification Template (Slack / MS Teams)**: used to customize the structure and content of automated messages sent to Slack or Microsoft Teams after a test run is completed;
+- **Notification Template (Slack / MS Teams / Telegram)**: used to customize the structure and content of automated messages sent to Slack, Microsoft Teams, or Telegram after a test run is completed;
 
 :::note
 
@@ -55,7 +55,7 @@ Once the **Add template** sidebar opens,
 4. Fill in the following fields:
 
 - **Title** (required): enter a unique title and optionally add tags using @ syntax (e.g., @smoke);
-- **Type** (required): select the template type from the dropdown — **test** is selected by default, but you can change it to suite, defect, code, meta, notification-slack, or notification-ms-teams;
+- **Type** (required): select the template type from the dropdown — **test** is selected by default, but you can change it to suite, defect, code, meta, notification-slack, notification-telegram, or notification-ms-teams;
 - **Default** (optional): set this template as the default by clicking the **star icon**;
 
 :::note
@@ -527,7 +527,7 @@ In the Run Report View, the values corresponding to the keys defined in the temp
 
 Unlike other template types, **there is no manual option to select a Notification Template** during a test run or when sending report notifications.
 
-Once you have configured Slack or Microsoft Teams integration via the [Slack Notification](https://docs.testomat.io/integrations/report-notifications/slack/) or [MS Teams Notification](https://docs.testomat.io/integrations/report-notifications/ms-teams/), and created a **default** Notification Template, it will be automatically applied to all notifications triggered by your configured Notification Rules.
+Once you have configured [Slack Notification](https://docs.testomat.io/integrations/report-notifications/slack/), [MS Teams Notification](https://docs.testomat.io/integrations/report-notifications/ms-teams/), or [Telegram Notification](https://docs.testomat.io/integrations/report-notifications/telegram), and created a default Notification Template, it will be automatically applied to all notifications triggered by your configured Notification Rules.
 
 ![Notification Template](./images/att18_6270.png)
 
