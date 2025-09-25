@@ -131,10 +131,11 @@ Testomat.io uses Groq as the main AI provider. Groq uses only open-source models
 
 How to enable built-in AI?
 
-1. Click **'Companies'** in the header
-2. Click the **'Settings'** button
-3. Click the **'AI'** option
-4. Enable the **'AI Features'** option
+1. Create a Company (see how to do this [here](https://docs.testomat.io/management/company/administration/#how-to-create-a-company))
+2. Click **'Companies'** in the header
+3. Click the **'Settings'** button
+4. Click the **'AI'** option
+5. Enable the **'AI Features'** option
 
 ![AI Features](images/att12_263.png)
 
