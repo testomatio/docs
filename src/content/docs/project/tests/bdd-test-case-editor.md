@@ -62,6 +62,27 @@ Beyond Feature Files lies the individual tests. Here, the BDD Editor grants you 
 11. **Go Back** – Return to the previous screen.  
 12. **Close** – Exit the editor.
 
+
+**Saving changes in the feature file as a draft**
+
+There is an option to save unfinished changes in the feature file as a draft. This is useful when the scenario isn't finalized yet and may contain syntax errors.
+
+Drafts can be applied at both the suite and test levels - in other words, Feature and Scenario description.
+When editing a test, if the editor prevents you from saving changes (e.g., due to syntax errors), the relevant error message will appear at the bottom of the screen. If you plan to fix the scenario later but don’t want to lose your changes, you can use the **Save to Draft and View Test** option:
+ 
+![Save To Draft and View Test option](./images/Save_To_Draft_and_View_Test.png)
+
+The next time you open the test in edit mode, you will see two additional buttons:
+
+1. **Apply Draft to Description** – Applies the last saved draft to the scenario text section.
+
+2. **Delete Draft** – Deletes the existing draft.
+
+![ Apply Draft to description and Delete Draft buttons](./images/apply_draft_or_delete_buttons.png)
+
+> **Note:** Only one draft can be saved at a time.
+
+
 ## Cross-Linking Tests, Suites and Folders
 
 Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window. 
@@ -74,3 +95,4 @@ In the projects that use BDD format, you need to follow certain rules to maintai
 If you want to add clickable references to a test or suite in a BDD project, use **#** followed by their IDs. Clicking the link will open the test or suite in detail view, making navigation and traceability more seamless.
 
 ![Testomat.io - Use ID In Tests](./images/link_bdd.gif)
+
