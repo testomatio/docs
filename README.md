@@ -12,18 +12,53 @@ Documentation is saved as static markdown files under `src/content/docs`.
 
 This static website is built with Astro Starlight.
 
-To start the website locally
+### Prerequisites
 
-* clone this repo
-* install dependencies with npm
-* fetch all documenation pages
+Before starting the website locally, you need to install:
 
-```
-./runok.js docs
-```
-* start a dev server
+1. **Bun** - A fast JavaScript runtime and package manager
+   ```bash
+   # Install Bun
+   curl -fsSL https://bun.sh/install | bash
+   # Or using npm: npm install -g bun
+   ```
 
-```
-npm run dev
-```
+2. **Bunosh** - A modern task runner for JavaScript
+   ```bash
+   bun add -g bunosh
+   ```
+
+### Setup and Development
+
+To start the website locally:
+
+1. **Clone this repo**
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
+
+2. **Install dependencies**
+   ```bash
+   bun install
+   ```
+
+3. **Fetch all documentation pages**
+   ```bash
+   bunosh docs
+   ```
+
+4. **Start the development server**
+   ```bash
+   bun run dev
+   ```
+
+### Available Commands
+
+- `bunosh docs` - Fetch and generate all documentation
+- `bunosh docs:importer` - Import external documentation from GitHub
+- `bunosh docs:reporter` - Generate reporter documentation
+- `bunosh docs:images` - Process documentation images
+- `bun run dev` - Start development server
+- `bun run build` - Build for production
 
