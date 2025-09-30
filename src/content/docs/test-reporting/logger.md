@@ -12,7 +12,7 @@ head:
 
 
 - intercepts `console` logs by default (requires `TESTOMATIO_INTERCEPT_CONSOLE_LOGS` to be set for some frameworks)
-- intercepts any logger messages (winston, pino, etc., specified by user)
+- intercepts any logger messages (winston, pino, etc., specified by user))
 - attaches intercepted log messages to your report
 - provides own methods to add any info to your report (like `logger.info()`, `logger.debug()`, etc.)
 - has a varied and convenient syntax
@@ -29,6 +29,8 @@ Logging functionality is represented by 2 entitites:
 Logger has ability to intercept other loggers. [usage](#usage)
 
 ## Usage
+
+> When you import logger, it automatically intercepts `console` logs inside the test file.
 
 Log messages with different levels:
 
@@ -134,5 +136,5 @@ This feature is under development right now. List of supported frameworks:
 - 🟢 Newman (Postman) (console logs are added by testomatio reporter by default, no need to use logger)
 - 🟢 Playwright
 - 🟢 Puppeteer (using Jest)
-- 🔴 WebdriverIO
+- 🟢 WebdriverIO
 

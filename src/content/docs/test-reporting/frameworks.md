@@ -21,6 +21,7 @@ head:
 - [JUnit](#junit)
 - [Mocha](#mocha)
 - [Newman/Postman](#newman)
+- [Nightwatch](#nightwatch)
 - [Playwright](#playwright)
 - [Protractor](#protractor)
 - [Selenide](#selenide)
@@ -40,7 +41,10 @@ Add plugin to [codecept conf](https://github.com/testomatio/reporter/blob/master
 plugins: {
   testomatio: {
     enabled: true,
+    // new way
     require: '@testomatio/reporter/lib/adapter/codecept',
+    // old way
+    require: '@testomatio/reporter/codecept',
   }
 }
 ```
@@ -81,6 +85,9 @@ Add a reporter to Playwright config:
 reporter: [
   ['list'],
   [
+    // new way
+    '@testomatio/reporter/playwright',
+    // old way
     '@testomatio/reporter/lib/adapter/playwright.js',
     {
       apiKey: process.env.TESTOMATIO,
@@ -108,6 +115,9 @@ TESTOMATIO={API_KEY} npx playwright test
   Register `cypress-plugin` in `cypress/plugins/index.js`:
 
 ```javascript
+// new way
+const testomatioReporter = require('@testomatio/reporter/cypress');
+// old way
 const testomatioReporter = require('@testomatio/reporter/lib/adapter/cypress-plugin');
 
 /**
@@ -129,6 +139,9 @@ For Cypress >= `10.0.0` use `setupNodeEvents` in `cypress.config.js(ts)`
 
 ```javascript
 setupNodeEvents(on, config) {
+  // new way
+  return require('@testomatio/reporter/cypress')(on, config)
+  // old way
   return require('@testomatio/reporter/lib/adapter/cypress-plugin')(on, config)
 }
 ```
@@ -150,6 +163,9 @@ TESTOMATIO={API_KEY} npx cypress run
 Run the following command from you project folder:
 
 ```bash
+
+mocha --reporter @testomatio/reporter/mocha --reporter-options apiKey={API_KEY}
+
 mocha --reporter ./node_modules/@testomatio/reporter/lib/adapter/mocha.js --reporter-options apiKey={API_KEY}
 ```
 
@@ -162,6 +178,9 @@ mocha --reporter ./node_modules/@testomatio/reporter/lib/adapter/mocha.js --repo
 Add the following line to [jest.config.js](https://github.com/testomatio/reporter/blob/master/example/jest/jest.config.js#L100):
 
 ```javascript
+// new way
+reporters: ['default', ['@testomatio/reporter/jest', { apiKey: process.env.TESTOMATIO }]],
+// old way
 reporters: ['default', ['@testomatio/reporter/lib/adapter/jest.js', { apiKey: process.env.TESTOMATIO }]],
 ```
 
@@ -175,6 +194,8 @@ TESTOMATIO={API_KEY} npx jest
 > Do not use `bail` option in your jest config or testrun script. (It cause issues with updating testrun status).
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/jest)
+
+> 📑 [Example Project with ESM syntax](https://github.com/testomatio/examples/tree/master/jest-esm)
 
 > 📺 [Video](https://www.youtube.com/watch?v=RKfIfnEuGys)
 
@@ -192,6 +213,9 @@ npm install @testomatio/reporter --save-dev
 
 ```typescript
 // import reporter
+// new way
+import TestomatioReporter from '@testomatio/reporter/vitest';
+// old way
 import TestomatioReporter from '@testomatio/reporter/lib/adapter/vitest';
 
 export default defineConfig({
@@ -230,6 +254,11 @@ Vitest reporter has some limitations:
 Add the following lines to [wdio.conf.js](https://webdriver.io/docs/configurationfile/):
 
 ```javascript
+// new way
+const testomatio = require('@testomatio/reporter/webdriver');
+// or
+const testomatio = require('@testomatio/reporter/wdio');
+// old way
 const testomatio = require('@testomatio/reporter/lib/adapter/webdriver');
 
 exports.config = {
@@ -247,11 +276,9 @@ exports.config = {
 For making screenshots on failed tests add the following hook to `wdio.conf.js`:
 
 ```js
-    afterTest: function (test, context, { error, result, duration, passed, retries }) {
-        if (error) {
-            browser.takeScreenshot()
-        }
-    },
+afterTest: function (test, context, { error }) {
+  if (error) browser.takeScreenshot()
+}
 ```
 
 Run the following command from you project folder:
@@ -271,6 +298,9 @@ TESTOMATIO={API_KEY} npx start-test-run -c 'npx wdio wdio.conf.js'
 Run the following command from you project folder:
 
 ```bash
+
+TESTOMATIO={API_KEY} npx cucumber-js --format @testomatio/reporter/cucumber
+
 TESTOMATIO={API_KEY} npx cucumber-js --format ./node_modules/@testomatio/reporter/lib/adapter/cucumber.js
 ```
 
@@ -310,6 +340,18 @@ TESTOMATIO={API_KEY} npx newman run {collection_name.json} -r testomatio
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/newman)
 
+### Nightwatch
+
+> 📐 When used with [Testomat.io Application](https://app.testomat.io) it is recommended to import automated tests first via [check-tests](https://github.com/testomatio/check-tests#cli). To create items on the fly set `TESTOMATIO_CREATE=1` env variable.
+
+1. Install Testomatio reporter:
+
+`npm install @testomatio/reporter --save-dev`
+
+2. Add testomatio reporter to your testrun command:
+
+`TESTOMATIO={API_KEY} npx nightwatch --reporter @testomatio/reporter/nightwatch`
+
 ### Detox
 
 > 📐 When used with [Testomat.io Application](https://app.testomat.io) it is recommended to import automated tests first via [check-tests](https://github.com/testomatio/check-tests#cli). To create items on the fly set `TESTOMATIO_CREATE=1` env variable.
@@ -330,6 +372,9 @@ TESTOMATIO={API_KEY} npx detox test -c {configuration_name}
 Add the following lines to [conf.js](https://github.com/angular/protractor/blob/5.4.1/example/conf.js):
 
 ```javascript
+// new way
+const JasmineReporter = require('@testomatio/reporter/jasmine');
+// old way
 const JasmineReporter = require('@testomatio/reporter/lib/adapter/jasmine');
 
 exports.config = {

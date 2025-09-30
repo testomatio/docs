@@ -10,6 +10,7 @@ head:
       content: Testomat.io Reporter, CLI, command-line tool, test runs, managing test runs, CI/CD pipelines, test reporting, parse XML reports, upload artifacts, @testomatio/reporter, API key, environment variables, JUnit, NUnit, xUnit, TRX, S3 artifacts configuration, test runner, test automation, software testing
 ---
 
+
 The Testomat.io Reporter CLI is a powerful tool for managing test runs, parsing XML reports, and uploading artifacts. CLI can be used to start and finish test runs, run tests, parse XML reports, and upload artifacts. It can be used in CI/CD pipelines or locally.
 
 Reporter is designed to work with [Testomat.io](https://testomat.io) service but not exclusively
@@ -193,6 +194,56 @@ TESTOMATIO=tstmt_* npx @testomatio/reporter upload-artifacts
 ```
 
 However, `upload-artifacts` command will upload all files after the run, without blocking the final result.
+
+### 6. replay
+
+The `replay` command allows you to re-send test data from debug files to Testomat.io. This is useful when your original test run failed to upload results properly.
+
+**Important:** To make replay work, tests should be executed with `DEBUG=1` variable set, to ensure they are running in debug mode and save data into a file.
+
+**Usage:**
+```bash
+npx @testomatio/reporter replay [debug-file] [options]
+```
+
+**Arguments:**
+- `debug-file` (optional) - Path to debug file. Defaults to latest created debug file, i.e. `/tmp/testomatio.debug.latest.json`
+
+**Options:**
+- `--dry-run` - Preview the data without sending to Testomat.io
+- `--env-file <envfile>` - Load environment variables from env file
+
+**Examples:**
+
+```bash
+
+TESTOMATIO=<your-api-key> DEBUG=1 npx playwright test
+
+
+TESTOMATIO=<your-api-key> npx @testomatio/reporter replay
+
+
+TESTOMATIO=<your-api-key> npx @testomatio/reporter replay /path/to/debug.json
+
+
+TESTOMATIO=<your-api-key> npx @testomatio/reporter replay --dry-run
+
+
+npx @testomatio/reporter replay --env-file .env.staging
+```
+
+**How it works:**
+
+The replay command uses the `ReplayService` class (located in `src/replay.js`) to:
+
+1. Parse the debug file line by line
+2. Extract environment variables, run parameters, test data, and finish parameters
+3. Restore environment variables (without overriding existing ones)
+4. Create a new test run using the TestomatClient
+5. Send each test result individually
+6. Update the run status when complete
+
+For more details about debug files, see the [Debug Pipe documentation](pipes/debug.md).
 
 ## Environment Variables
 
