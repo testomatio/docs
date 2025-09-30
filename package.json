@@ -1,7 +1,7 @@
 {
   "name": "@testomatio/docs",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.17.1",
   "description": "Testomatio Documentation",
   "main": "index.js",
   "authors": {
@@ -20,30 +20,30 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "axios": "^1.11.0",
+    "axios": "^1.12.2",
     "dasherize": "^2.0.0",
     "glob": "^10.4.2",
     "runok": "^0.9.3",
     "slugify": "^1.6.6"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^6.3.6",
-    "@astrojs/starlight": "^0.35.2",
+    "@astrojs/markdown-remark": "^6.3.7",
+    "@astrojs/starlight": "^0.36.0",
     "@octokit/core": "^5.1.0",
-    "astro": "^5.13.5",
+    "astro": "^5.14.1",
     "astro-breadcrumbs": "^3.3.1",
     "astro-og-canvas": "^0.7.0",
     "astro-rehype-relative-markdown-links": "0.18.1",
     "astro-vtbot": "^2.1.8",
     "bunosh": "^0.4.1",
     "canvaskit-wasm": "^0.40.0",
-    "dotenv": "^17.2.2",
+    "dotenv": "^17.2.3",
     "gray-matter": "^4.0.3",
     "meilisearch-docsearch": "^0.8.0",
     "schema-dts": "^1.1.5",
-    "sharp": "^0.34.3",
+    "sharp": "^0.34.4",
     "starlight-image-zoom": "^0.13.0",
-    "starlight-links-validator": "^0.17.2"
+    "starlight-links-validator": "^0.18.0"
   },
   "type": "module"
 }
