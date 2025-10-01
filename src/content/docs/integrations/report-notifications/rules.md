@@ -8,23 +8,26 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/Basic_Rules.BGM4UhZJ_Z1Yiri8.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, notifications, Email alerts, Email notifications, Slack notifications, MS Teams, Jira integration, Jira Notification, Azure DevOps, notification rules, test runs, automated alerts, CI notifications, QA tools, notification channels, Report Notification, Basic rules, Advanced rules engine, Run Group Notifications, test management, test automation, software testing
+      content: Testomat.io, notifications, Email alerts, Email notifications, Slack notifications, MS Teams, Jira integration, Jira Notification, Azure DevOps, Telegram notification, Notification rules, test runs, automated alerts, CI notifications, QA tools, notification channels, Report Notification, Basic rules, Advanced rules engine, Run Group Notifications, test management, test automation, software testing
 ---
 
 **Notification** is one of the attractive Agile testing tool features. Test management web application Testomat.io provides for collaborative purposes notification QA team, development team and business. So, keeping the teams engaged with project updates and getting fast feedback from business owners is simpler than ever! In addition, you as the test manager or team owner through **Team Management Dashboard** will have end-to-end visibility on your collaboration process.
 
 **Available to notify by:**
-- Email notifications.
-- Slack notification.
-- Jira Notification.
-- MS Teams.
-- Azure DevOps.
+
+- **Email** notifications.
+- **Slack** notification.
+- **Microsoft Teams** notification.
+- **Jira** notification.
+- **Azure DevOps** notification.
+- **Telegram** notification.
 
 Testomat.io allows sending notifications for finished runs:
+
 - Send brief reports to stakeholders.
 - Notify team members of failed or passed tests.
 - Notify test results after test executions.
@@ -69,20 +72,20 @@ manual and contains(run, "Release")
 
 A complete list of allowed variables:
 
-* `automated` - boolean. True if a run is automated
-* `manual` - boolean. True if a run is manual
-* `has_failed` - boolean. True if a run has failed
-* `has_passed` - boolean. True if a run has passed
-* `was_terminated` - boolean. True if a run was terminated
-* `run` - string. Title of a run
-* `rungroup` - title. Title of rungroup a run belongs to
-* `status` - string. Status of run, 'passed' or 'failed' as a string.
-* `started_at` - datetime. Time when the run was started.
-* `finished_at` - datetime. Time when the run was finished
-* `passed_tests` - collection. A list of all passed tests in a run.
-* `failed_tests` - collection. A list of all failed tests in a run.
-* `skipped_tests` - collection. A list of all skipped tests in a run.
-* `env` - collection. A list of environments.
+- `automated` - boolean. True if a run is automated
+- `manual` - boolean. True if a run is manual
+- `has_failed` - boolean. True if a run has failed
+- `has_passed` - boolean. True if a run has passed
+- `was_terminated` - boolean. True if a run was terminated
+- `run` - string. Title of a run
+- `rungroup` - title. Title of rungroup a run belongs to
+- `status` - string. Status of run, 'passed' or 'failed' as a string.
+- `started_at` - datetime. Time when the run was started.
+- `finished_at` - datetime. Time when the run was finished
+- `passed_tests` - collection. A list of all passed tests in a run.
+- `failed_tests` - collection. A list of all failed tests in a run.
+- `skipped_tests` - collection. A list of all skipped tests in a run.
+- `env` - collection. A list of environments.
 
 An expression should return a boolean value. To deal with types other than boolean functions and methods can be used:
 
@@ -96,20 +99,21 @@ contains(run, "New")
 
 **Collection**
 
-Collections contain an array of objects. 
+Collections contain an array of objects.
 
 Use `.size` to check for the size of items in the collection. For instance, this rule is activated when a number of failed tests is more than 10.
 
 ```
 failed_tests.size > 10
 ```
+
 Collection of tests can be filtered. Tests in the collection have following properties:
 
-* `test['title']` - title of a test
-* `test['suite']` - title of a suite of a test
-* `test['id']` - id of a test
-* `test['suite_id']` - id of a suite
-* `test['status']` - status of a test in collection
+- `test['title']` - title of a test
+- `test['suite']` - title of a suite of a test
+- `test['id']` - id of a test
+- `test['suite_id']` - id of a suite
+- `test['status']` - status of a test in collection
 
 For instance, this is how to check if a collection of failed tests contains at least one test with `@important` tag in its name:
 
@@ -121,13 +125,13 @@ failed_tests.filter(test, contains(test["title"], "@important")).size > 0
 
 `started_at` and `finished_at` variables are of datetime type. They have properties from [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) and [DateTime](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/DateTime.html) classes of Ruby that can be used in expressions. Most used ones are:
 
-* `hour`
-* `minute`
-* `day`
-* `wday`
-* `month`
-* `year`
-* [etc](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html)
+- `hour`
+- `minute`
+- `day`
+- `wday`
+- `month`
+- `year`
+- [etc](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html)
 
 For instance, this is how notification can be enabled for reports finished in non-business time:
 
@@ -177,7 +181,7 @@ automated and has_failed and contains (env, "alpha”)
 has_passed and passed_tests.filter(test, contains(test["title"], "autocomplete")).size > 0
 ```
 
-For example: 
+For example:
 
 ![Testomat.io - Run Rules](./images/Run_rule.png)
 
@@ -206,12 +210,12 @@ The rules engine allows writing conditions in a special expression language simi
 
 A list of allowed variables:
 
-* `title` - string. Title of a rungroup
-* `rungroup_finished` -  boolean. True if all runs completed => True if rungroup contains only finished runs.
-* `runs` - collection. A list of all runs inside a rungroup
-* `finished_runs` - collection. A list of finished (passed or failed) runs inside a rungroup
-* `ongoing_runs` - collection. A list of pending runs (scheduled, in progress) runs inside a rungroup
-* `failed_runs` - collection. A list of failed runs inside a rungroup
+- `title` - string. Title of a rungroup
+- `rungroup_finished` - boolean. True if all runs completed => True if rungroup contains only finished runs.
+- `runs` - collection. A list of all runs inside a rungroup
+- `finished_runs` - collection. A list of finished (passed or failed) runs inside a rungroup
+- `ongoing_runs` - collection. A list of pending runs (scheduled, in progress) runs inside a rungroup
+- `failed_runs` - collection. A list of failed runs inside a rungroup
 
 ### Examples for Run Groups Notifications
 
@@ -234,14 +238,16 @@ ongoing_runs.filter(run, run['created_at'] <= 0.seconds_ago).size == 0
 ```
 
 **Notify when next rules are met:**
-- the title of the Run Group contains the substring 'str-' and 
+
+- the title of the Run Group contains the substring 'str-' and
 - all runs within this Run Group are finished and
 - at least one of the runs within this Run Group has a title that contains the exact string 'islast: true'
 
 ```
 contains(title, "str-") and rungroup_finished and (runs.select(run, contains(run["title"], "islast: true")).size > 0)
 ```
-For example: 
+
+For example:
 
 ![Testomat.io - RunGroup Rules](./images/RunGroup_rule.png)
 
