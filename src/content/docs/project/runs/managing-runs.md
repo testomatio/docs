@@ -1,6 +1,6 @@
 ---
 title: Managing Runs
-description: Learn how to manage test runs effectively in Testomat.io. This guide covers generating detailed run reports, organizing runs into groups, apllying merge strategies, relaunching runs, copying runs, and filtering results. Testomat.io also supports creating new test cases directly within runs, managing test case history, pinning important runs, and bulk actions for archiving, merging, and downloading reports for efficient test management.
+description: Learn how to manage test runs effectively in Testomat.io. This guide covers generating detailed run reports, organizing runs into groups, applying merge strategies, relaunching runs, copying runs, and filtering results. Testomat.io also supports creating new test cases directly within runs, managing test case history, pinning important runs, and bulk actions for archiving, merging, and downloading reports for efficient test management.
 
 type: article
 url: https://docs.testomat.io/project/runs/managing-runs
@@ -8,7 +8,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: managing test runs, run reports, merge strategy, rungroups, relaunch runs, copy run, test management, Testomat.io, run comparison, multi-selection, archiving, test reporting, filter test runs, share reports, pin a run, test case history, mixed runs, manual runs, TQL, test reporting.
+      content: content: managing test runs, purge runs, purge logic, purge old runs, delete runs, purge flow, run reports, merge strategy, rungroups, relaunch runs, copy run, test management, Testomat.io, run comparison, multi-selection, archiving, test reporting, filter test runs, share reports, pin a run, test case history, mixed runs, manual runs, TQL.
 ---
 
 Testomat.io offers comprehensive features for managing test runs, catering to both manual and automated testing. Here's how to manage runs within the system:
@@ -331,6 +331,36 @@ During this step:
   - Custom statuses
 - Archived Runs remain available for as long as needed and can be restored at any time.
 
+### Purge Logic for Ongoing Runs
+
+The purge process also applies to **ongoing (in-progress) Runs**, ensuring consistency across all run states.
+
+When a Run (either inside a Run Group or standalone) is **purged while still ongoing**, the following logic applies:
+
+- The Run is automatically **terminated**
+- Test results that were already recorded (e.g., **Passed**, **Failed**, **Skipped**) remain preserved
+- All **Pending** test cases are automatically marked as **Skipped**
+- The Run receives a **terminated** status flag, which remains visible even after restoration
+- The Run is then **compressed and moved to the Archive**, following the same purge-to-archive flow as completed runs
+
+:::note
+
+Restored Runs that were terminated during purge **cannot be resumed**. They retain the **terminated** state but can still be viewed and analyzed in the Archive or after restoration.
+
+:::
+
+This ensures that no partial or inconsistent test data remains in the system and that all purged Runs — even those in progress — are preserved in a clean, final state.
+
+### Automatic Purge Flow
+
+The same **two-step purge-to-archive logic** applies to automatically purged **Runs** via **Project Settings → [Purge Old Runs](https://docs.testomat.io/management/project/settings/#purge-old-runs)**.
+
+When an automatic purge is triggered:
+
+- The **Run** is compressed and moved to the **Archive** page
+- It receives the **purged** badge
+- The Run remains restorable from the Archive, but permanent deletion must still be performed **manually**
+
 ### Permanent Deletion from Archive
 
 :::note
@@ -341,10 +371,6 @@ If you remove a Run from the Archive, it is permanently deleted. This step is ir
 
 ![Delete runs](./images/att3_444.png)
 
-**Automatic Purge Applies Same Logic**
-
-The same two-step logic applies to automatically purged Runs Project Settings → [Purge Old Runs](https://docs.testomat.io/management/project/settings/#purge-old-runs). Instead of being deleted right away, these Runs are first compressed and archived, then eventually fully deleted.
-
-**Summary**
+### Summary
 
 By introducing the Purge option, Testomat.io ensures that Run data is handled with more safety and flexibility. You can keep your workspace clean and optimize storage, while still maintaining the ability to restore important Runs from the Archive when needed.

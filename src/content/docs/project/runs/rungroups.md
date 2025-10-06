@@ -7,11 +7,11 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: managing test runs, run reports, merge strategy, rungroups, relaunch runs, test management, Testomat.io, multi-selection, archiving, test reporting, runGroup flow, runs dashboard flow, RunGroup chart, copy RunGroup, pin a RunGroup, archive RunGroup, unarchive RunGroup.
+      content: managing test runs, run reports, merge strategy, rungroups, relaunch runs, test management, Testomat.io, multi-selection, archiving, purge run groups, purge runs, purge logic, test reporting, runGroup flow, runs dashboard flow, RunGroup chart, copy RunGroup, pin a RunGroup, archive RunGroup, unarchive RunGroup, delete run group, purge flow.
 ---
 
-First, let's clarify what **'RunGroups'** are in Testomat.io. 
-**RunGroups** allows you to organize and group multiple test runs together based on criteria like sprint, release, functional area, or any other logical grouping. This helps in analyzing aggregated results and providing a consolidated view of your testing efforts.
+First, let's clarify what **'RunGroups'** are in Testomat.io.
+**RunGroups** allow you to organize and group multiple test runs together based on criteria like sprint, release, functional area, or any other logical grouping. This helps in analyzing aggregated results and providing a consolidated view of your testing efforts.
 
 ## How to Create a RunGroup
 
@@ -61,7 +61,7 @@ Now, by clicking on expand arrow, you can view Test Runs and their results withi
 
 ![Testomat.io - Test Runs in a created RunGroup](./images/RunGroup_5.png)
 
-Clicking on RunGroup name will toggle RunGroup Report screen in basic view. Here you can view more detail information about the runs inside selected RunGroup and total results.
+Clicking on RunGroup name will toggle RunGroup Report screen in basic view. Here you can view more detailed information about the runs inside selected RunGroup and total results.
 
 ![Testomat.io - Test Runs in a created RunGroup](./images/RunGroup_6.png)
 
@@ -105,7 +105,7 @@ The **'RunGroup summary section'** displays a counter with the number of include
 
 ![Testomat.io - RunGroup Report](./images/RunGroup_Report_2.gif)
 
-## How to Customize Runs List View 
+## How to Customize Runs List View
 
 When working with test runs inside RunGroup or Runs Dashboard Flow, you can adjust the table layout to fit your needs. Instead of using the default view, you can customize the runs table layout within **RunGroup** page or directly from the main **Runs Dashboard**.
 
@@ -174,7 +174,7 @@ You can open **'Combined Report'** for a RunGroup by clicking on **'Combined Rep
 
 ![Testomat.io - Combined Report](./images/Combined_report.png)
 
-The comparison of runs is based on the first (main) launch. The statuses counters on the left side are calculated based on the main run. 
+The comparison of runs is based on the first (main) launch. The statuses counters on the left side are calculated based on the main run.
 
 To change the main run, click the **'Compare To'** button. Note that the counters of loaded tests is above them. The final summary on the right side is calculated based on the loaded tests.
 
@@ -186,7 +186,7 @@ The **'Combined Report'** feature for RunGroups does **not** combine test result
 
 :::
 
-Inside the **'Combined Report'**, you can get a quick overview of the pass/fail rates for all tests within the Group. You can also see the total number of tests present in all compared runs, as well as the total number of flaky (unstable tests that passed or failed in different runs), revieved (previously failing that passed in next runs), and degraded (previously passed that failed in next runs) tests. 
+Inside the **'Combined Report'**, you can get a quick overview of the pass/fail rates for all tests within the Group. You can also see the total number of tests present in all compared runs, as well as the total number of flaky (unstable tests that passed or failed in different runs), reviewed (previously failing that passed in next runs), and degraded (previously passed that failed in next runs) tests.
 
 Additionally, you can use filters and search features to view the data most relevant to your needs.
 
@@ -214,14 +214,14 @@ You can easily create a new RunGroup, completely independent of any previous run
 
 **Follow these steps:**
 
-1. Open the RunGroup. 
+1. Open the RunGroup.
 2. Click the **'Extra menu'** button.
 3. Select **'Copy'** option form the dropdown menu.
 
 ![Testomat.io - Copy group 1](./images/Copy_group_1.png)
 
 4. Select configuration options.
-5. Click the **'Copy'** button. 
+5. Click the **'Copy'** button.
 
 ![Testomat.io - Copy group 2](./images/Copy_group_2.png)
 
@@ -245,10 +245,79 @@ For more details, refer to the [How to Pin a Run or RunGroup](https://docs.testo
 
 Testomat.io gives you an opportunity to archive a RunGroup, including all its contained Test Runs. This helps maintain better visibility on your main Run Dashboard.
 
-For more information on archiving, visit the [Archive Runs & RunGroups](https://docs.testomat.io/project/runs/archive-runs-and-groups) page. 
+For more information on archiving, visit the [Archive Runs & RunGroups](https://docs.testomat.io/project/runs/archive-runs-and-groups) page.
 
 ## How to Unarchive RunGroup
 
-Archived RunGroups can be unarchive and moved back to the main Run Dashboard. Restoring a RunGroup also restores all its archived runs.
+Archived RunGroups can be unarchived and moved back to the main Run Dashboard. Restoring a RunGroup also restores all its archived runs.
 
-Read more in the [How to Unarchive Runs & RunGroups](https://docs.testomat.io/project/runs/archive-runs-and-groups/#how-to-unarchive-runs-&-groups) section. 
+Read more in the [How to Unarchive Runs & RunGroups](https://docs.testomat.io/project/runs/archive-runs-and-groups/#how-to-unarchive-runs-&-groups) section.
+
+## Purge Run Groups
+
+Starting from **October 2025**, Testomat.io introduces the new **Purge** approach for **Run Groups**. This update extends the same **two-step purge-to-archive logic** that was introduced for individual [Runs](https://docs.testomat.io/project/runs/managing-runs/#purge-runs) in September 2025, ensuring data safety and consistency across all Run types.
+
+The **Delete** option for Run Groups is now replaced with a **Purge** option.
+
+![Purge button in RunGroup](./images/att1_6779.png)
+
+### Compress and Move to Archive (Purge)
+
+When a **Run Group** is purged (either manually or automatically):
+
+- The **group itself** is **deleted**
+- All **nested Runs** are moved to the **[Archive](https://docs.testomat.io/project/runs/archive-runs-and-groups/)** page
+- All **nested Runs** are marked with the **purged** badge for easy identification
+
+![Purged button confirmation](./images/att2_6779.png)
+
+During this step:
+
+- Stack traces are removed to reduce storage size
+- Essential data is preserved, including:
+  - Test results
+  - Artifacts (attachments, logs, screenshots)
+  - Custom statuses and metadata
+- Purged Runs remain available in the Archive page and can be restored at any time
+
+:::note
+
+The purge logic for **ongoing (pending) Runs** within a Run Group follows the **same rules** as described for individual Runs. For detailed information about the purge flow of ongoing Runs, see [**Purge Logic for Ongoing Runs**](https://docs.testomat.io/project/runs/managing-runs/#purge-logic-for-ongoing-runs).
+
+:::
+
+### Automatic Purge Flow
+
+The same **two-step purge-to-archive logic** applies to automatically purged **Run Groups** via **Project Settings → [Purge Old Runs](https://docs.testomat.io/management/project/settings/#purge-old-runs)**.
+
+When an automatic purge is triggered:
+
+- The **group itself** is **deleted**
+- All **nested Runs** are moved to the **[Archive](https://docs.testomat.io/project/runs/archive-runs-and-groups/)** page
+- All **nested Runs** are marked with the **purged** badge for easy identification
+
+### Limitations
+
+:::note
+
+Run Groups have a **limit of 20,000 Runs** for the purge process. If a group contains **more than 20,000 Runs**, only the **first 20,000** will be purged and moved to the Archive.
+
+All remaining Runs beyond this limit will be **permanently deleted** and **cannot be restored**.
+
+:::
+
+### Permanent Deletion from Archive
+
+:::note
+
+If you remove a Run (that was part of a purged Run Group) from the Archive page, it is permanently deleted. This step is **irreversible** — once **deleted**, the Run cannot be restored.
+
+:::
+
+![Permanent Deletion from Archive](./images/att3_6779.png)
+
+### Summary
+
+By extending the **Purge** functionality to Run Groups, Testomat.io ensures that all grouped executions follow the same safe, transparent, and recoverable process as individual Runs.
+
+Teams can efficiently manage large-scale test executions while maintaining complete data traceability and control.
