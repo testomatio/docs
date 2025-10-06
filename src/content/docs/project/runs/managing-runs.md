@@ -8,7 +8,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: content: managing test runs, purge runs, purge logic, purge old runs, delete runs, purge flow, run reports, merge strategy, rungroups, relaunch runs, copy run, test management, Testomat.io, run comparison, multi-selection, archiving, test reporting, filter test runs, share reports, pin a run, test case history, mixed runs, manual runs, TQL.
+      content: managing test runs, purge runs, purge logic, purge old runs, delete runs, purge flow, run reports, merge strategy, rungroups, relaunch runs, copy run, test management, Testomat.io, run comparison, multi-selection, archiving, test reporting, filter test runs, share reports, pin a run, test case history, mixed runs, manual runs, TQL.
 ---
 
 Testomat.io offers comprehensive features for managing test runs, catering to both manual and automated testing. Here's how to manage runs within the system:
