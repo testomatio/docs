@@ -28,7 +28,7 @@ Bulk edit mode can be opened from the Tests screen:
 
 ![How to enable bulk edit in Testomat.io interface](./images/enabling_bulk_edit.png)
 
-::: note
+:::note
 
 If your project contains **more than 1,000 tests**, the **Bulk Edit** button will be **disabled**.
 
