@@ -111,5 +111,6 @@ You can also create your own XLS file to import tests into Testomat.io. Follow t
 | Tags        | place here any tags you need, can be blank                                                                      |
 | Owner       | name of test owner, can be blank                                                                                |
 | Description | put here the description of your test, [Markdown format ](https://www.markdownguide.org/basic-syntax/)supported |
+| Labels      | place here labels and custom fields, can be blank                                                               |   
 
-You can download the custom Testomat.io example file [here](https://testomatio-artifacts.ams3.digitaloceanspaces.com/documentation/testomatio.xlsx).
+You can download the custom Testomat.io example file [here](https://testomatiofiles.ams3.cdn.digitaloceanspaces.com/Testomat.io_example.xlsx).
