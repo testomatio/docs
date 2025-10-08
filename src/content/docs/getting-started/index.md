@@ -3,15 +3,15 @@ title: Start From Scratch
 description: This guide helps users start from scratch with Testomat.io by creating projects, writing test cases, running manual and automated tests, and analyzing results with detailed reporting and analytics. It also includes importing automated tests and tracking automation coverage for optimization.
 type: article
 url: https://docs.testomat.io/getting-started/start-from-scratch/
-head:  
+head:
   - tag: meta
     attrs:
       name: keywords
       content: Testomat.io, getting started, manual tests, automated tests, test reporting, project creation, test analytics, automation coverage, test cases, test management system
 ---
 
-<!-- 
-> If you don't have any manual or automated tests yet - follow this guide. Otherwise, pick the section of the guide relevant to your project. You might want to start from [this section](https://docs.testomat.io/getting-started/import-tests-from-source-code/) if you consider **importing tests from source code** into Testomat.io. For those interested in importing tests from the **Cucumber** framework, go straight to [this section](https://docs.testomat.io/getting-started/import-tests-from-cucumber/#why-do-i-need-to-import-my-tests)! 
+<!--
+> If you don't have any manual or automated tests yet - follow this guide. Otherwise, pick the section of the guide relevant to your project. You might want to start from [this section](https://docs.testomat.io/getting-started/import-tests-from-source-code/) if you consider **importing tests from source code** into Testomat.io. For those interested in importing tests from the **Cucumber** framework, go straight to [this section](https://docs.testomat.io/getting-started/import-tests-from-cucumber/#why-do-i-need-to-import-my-tests)!
 -->
 
 Welcome! This section guides you through the initial steps of using Testomat.io to organize and manage your testing process effectively. If you don't have any manual or automated tests yet - follow this guide.
@@ -24,14 +24,14 @@ Register at [app.testomat.io](https://app.testomat.io) and activate your user ac
 
 The type of your new project will influence the look of your interface, as well as its intended audience. Choose **BDD Project** if you plan to follow BDD descriptions or use the Cucumber framework in future. If you haven't decided yet, you can start with default **Classical Project**. Depending on your choice, the interface will differ, as follows:
 
-* Within a **BDD Project**, you will have feature definitions written both in the source code (by engineers) and in Testomatio (by managers and QAs). So you will be able to track and plan Cucumber automation, as well as synchronize the actual feature files with relevant test cases. When a scenario has changed in the system, but has not been updated in the code yet, you will be notified that this certain scenario is out of date.
-* Within a **Classical Project**, test cases will be written in free form using markdown. Automated tests will be synced up with test cases, so you will be able to see the test description in one tab and the corresponding test code in another tab. When a description of a test case undergoes changes, you will be notified that a certain test might need to be updated.
+- Within a **BDD Project**, you will have feature definitions written both in the source code (by engineers) and in Testomatio (by managers and QAs). So you will be able to track and plan Cucumber automation, as well as synchronize the actual feature files with relevant test cases. When a scenario has changed in the system, but has not been updated in the code yet, you will be notified that this certain scenario is out of date.
+- Within a **Classical Project**, test cases will be written in free form using markdown. Automated tests will be synced up with test cases, so you will be able to see the test description in one tab and the corresponding test code in another tab. When a description of a test case undergoes changes, you will be notified that a certain test might need to be updated.
 
 Let's start creating a project:
 
-1. Fill the name of your project in the **Project Title** field.  
-2. The **Fill demo data** checkbox is optional. This option fills the project with ready-made test data so that new users can try Testomat.io quickly and easily. You can simply skip it. 
-3. Click the **Create** button to start a new project. 
+1. Fill the name of your project in the **Project Title** field.
+2. The **Fill demo data** checkbox is optional. This option fills the project with ready-made test data so that new users can try Testomat.io quickly and easily. You can simply skip it.
+3. Click the **Create** button to start a new project.
 
 ![Testomat.io - Select type of project](./images/New_rughOXfd_2024-07-09.png)
 
@@ -41,28 +41,39 @@ You have just created your first project. Now you can start creating suites and 
 
 ## Create Manual Test Cases
 
-Let's take a look at creating test cases step by step.
+Before creating test cases, you first need to create a suite — this is where your tests will be stored. Optionally, you can organize suites into folders, but test cases themselves always belong to a suite.
 
-1. Fill the name in the input field. 
-2. Click the **+ Suite** button to create a new suite. 
+There are two main ways to create a suite. Let’s take a look step by step.
+
+1. Fill the name in the input field.
+2. Click the **+ Suite** button to create a new suite.
 
 ![Testomat.io - Create test suite](./images/New_0g8uRrQa_2024-07-10.png)
 
-Or another case:
+Or another way:
 
-![Testomat.io - Create test suite another way](./images/New_zWbhofhO_2024-07-19.png)
+1. Click **'⋯'** (three dots) button.
+2. Select **Create more suites** from the menu.
 
-Great, let's move on! Select a certain suite to nest the creation of new test cases in that suite. 
+![create more suite button](./images/suite1.png)
+
+3. Enter the title of the new suite or folder.
+4. Click **'+ Suite'** to create a test suite, or optionally
+5. Click **'Folder'** to create a folder for grouping suites.
+
+![create new suite/folder](./images/suite%202.png)
+
+Great, let's move on! Now select a suite to start adding new test cases.
 
 1. Select a test suite.
-2. Fill the name in the input field. 
+2. Fill the name in the input field.
 3. Click the **Create** button to create multiple test cases.
 
 ![Testomat.io - Create test case](./images/New_j7XWLhgA_2024-07-10.png)
 
-When tests are newly created, they are marked as **manual** by default, which shows that they are ready for manual checks. Also, to create or edit multiple suits or test cases at once use [Bulk Edit](https://docs.testomat.io/usage/bulk-edit/).
+When tests are newly created, they are marked as **manual** by default, which shows that they are ready for manual checks. Also, to create or edit multiple suites or test cases at once use [Bulk Edit](https://docs.testomat.io/usage/bulk-edit/).
 
-As a result, you can add descriptions for each test case. However, the roles of these routine test cases are clearly seen from their titles, so we can probably try to run them to verify the user management part. 
+As a result, you can add descriptions for each test case. However, the roles of these routine test cases are clearly seen from their titles, so we can probably try to run them to verify the user management part.
 
 ## Run Manual Tests
 
@@ -73,7 +84,7 @@ Now let's take a look at how to run our tests and get a detailed report:
 
 ![Testomat.io - Run manual tests](./images/New_b2B5giUU_2024-07-10.png)
 
-Before you execute your tests, you might want to specify the run environment options (a list of options is customizable) and the title for this run. In [this section](https://docs.testomat.io/getting-started/running-tests-manually/#multi-environment-tests) you will learn how to set up the environment for test execution. 
+Before you execute your tests, you might want to specify the run environment options (a list of options is customizable) and the title for this run. In [this section](https://docs.testomat.io/getting-started/running-tests-manually/#multi-environment-tests) you will learn how to set up the environment for test execution.
 
 3. Select the checkbox next to **All Manual Tests**
 4. Click the **Launch** button to execute the tests.
@@ -100,11 +111,12 @@ In the **Import** section, you are asked to pick the framework, programming lang
 
 ![Testomat.io - Copy instructions](./images/New_eUYumU81_2024-07-25.png)
 
-> If you don't see the framework you work with in this list - please contact us, and we will do our best to add support for it soon! 
+> If you don't see the framework you work with in this list - please contact us, and we will do our best to add support for it soon!
 
 Once you have chosen the project parameters, you will be provided with a command that you need to copy and execute in a terminal. Before running this command, please check if your environment matches these requirements:
-* If you run tests in NodeJS (JavaScript, TypeScript), you should have NodeJS 10+ and npm to be installed to be able to run this command.
-* If you run tests in PHP - you will need PHP > 7.2 and Composer installed. 
+
+- If you run tests in NodeJS (JavaScript, TypeScript), you should have NodeJS 10+ and npm to be installed to be able to run this command.
+- If you run tests in PHP - you will need PHP > 7.2 and Composer installed.
 
 Open a terminal, navigate to the tests folder in your project and execute the command. Seeing a report on how many tests were found means that the import command was executed successfully:
 
@@ -116,7 +128,7 @@ When the tests are finally imported, reopen the project, and you will see that a
 
 ![Testomat.io - Imported automated tests](./images/New_hcbaJeTv_2024-07-26.png)
 
-All imported tests are marked as "Automated" by default. If you click on any of those tests, you will see its code and a link to its repository. Please, check that the link actually points to the corresponding file. Otherwise, you might want to change the repository URL in project settings. 
+All imported tests are marked as "Automated" by default. If you click on any of those tests, you will see its code and a link to its repository. Please, check that the link actually points to the corresponding file. Otherwise, you might want to change the repository URL in project settings.
 
 ![Testomat.io - Automated test source code](./images/New_cIVsD22d_2024-07-26.png)
 
@@ -156,7 +168,7 @@ Testomat.io Analytics provides an extensive overview of testing data by tracking
 
 ![Testomat.io - Analytics](./images/New_K2WAzUDa_2024-10-26.png)
 
-Within the Analytics features, **Automation Coverage** stands out as particularly noteworthy. 
+Within the Analytics features, **Automation Coverage** stands out as particularly noteworthy.
 
 Automation coverage in Testomat.io offers insights into the scope of automated testing within a project, tracking the proportion of tests that are automated versus those that remain manual. Through its analytics, Testomat.io provides a detailed view of the automated test ratio, enabling teams to identify areas that may benefit from further automation. This feature helps streamline automation strategies, making it easier to optimize test coverage in line with project goals.
 
