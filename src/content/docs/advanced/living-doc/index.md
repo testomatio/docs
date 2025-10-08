@@ -124,6 +124,15 @@ For example: display: block; border: none; height: 100vh; width: 100%; height:10
 6. Click Publish.
 
 
+## Search within Living Documentation
+
+You can search for specific tests within Living Documentation. The search functionality works the same way as it does in the Tests tab in Testomatio. You can search using two parameters:
+
+1. Search by tags – Type a tag into the search field. A list of tests that match the tag will be displayed under the search field.
+
+2. Search by keywords – Type a keyword into the search field. A list of tests that match the keyword will be displayed under the search field.
+
+![Search Within Living Documentation](./images/Living_Doc_Search.png)
 
 
 
