@@ -236,7 +236,6 @@ export default defineConfig({
 							],
 						},
 						{
-							label: 'Tags, Custom fields',
 							label: 'Tags & Labels',
 							collapsed: true,
 							items: [
