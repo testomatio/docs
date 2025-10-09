@@ -174,7 +174,7 @@ await driver.takeScreenshot().then((image) => {
 
 ### Steps to Enable:
 
-1. Set up an S3 Bucket ([See Documentation](https://testomat.io/documentation)).
+1. Set up an S3 Bucket ([See Documentation](https://docs.testomat.io/)).
 2. Enable third-party cookies in your browser.
 3. Run your tests.
 4. In `Test Run`, click the test, then select the trace log to open.
@@ -201,4 +201,4 @@ TESTOMATIO_SHARED_RUN_TIMEOUT=120 TESTOMATIO_SHARED_RUN=1 <actual run command>
 
 ---
 
-This guide outlines the process of integrating WebdriverIO with Testomat.io for effective test management and reporting. For more information, visit the [Testomat.io Documentation](https://testomat.io/documentation).
+This guide outlines the process of integrating WebdriverIO with Testomat.io for effective test management and reporting. For more information, visit the [Testomat.io Documentation](https://docs.testomat.io/).
