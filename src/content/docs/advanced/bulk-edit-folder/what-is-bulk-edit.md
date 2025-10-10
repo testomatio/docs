@@ -52,7 +52,7 @@ The Bulk Editor provides a powerful interface for managing your project in a str
 
 4. **‘Learn More’ Button** - Opens a mini-tutorial section with tips and examples for using the Bulk Editor effectively.
 
-5. **‘Read Docs’ Link** - Redirects you to the official [Testomatio documentation](<[https://testomatio.com/docs](https://docs.testomat.io/advanced/bulk-edit-folder/)>) for in-depth guidance.
+5. **‘Read Docs’ Link** - Redirects you to the official [Testomatio documentation](<[https://docs.testomat.io/](https://docs.testomat.io/advanced/bulk-edit-folder/)>) for in-depth guidance.
 
 6. **‘Show Tests’ Toggle** - Switch between viewing both test suites and test cases or just the test suites.
 
