@@ -1,24 +1,24 @@
 ---
-title: WebdriverIO  
-description: Learn how to integrate WebdriverIO with Testomat.io for efficient test management and reporting. This guide covers importing WebdriverIO tests, managing parameterized tests, reporting artifacts like screenshots and logs, enabling detailed reporting features, and configuring parallel execution reporting for CI workflows.  
-type: article  
-url: https://docs.testomat.io/tutorials/webdriverio  
-head:  
-  - tag: meta  
-    attrs:  
-      name: og:image  
-      content: https://docs.testomat.io/_astro/New_b1BS3EKN_2024-08-29.DGrFkMLR_ZOOgn1.webp  
+title: WebdriverIO
+description: Learn how to integrate WebdriverIO with Testomat.io for efficient test management and reporting. This guide covers importing WebdriverIO tests, managing parameterized tests, reporting artifacts like screenshots and logs, enabling detailed reporting features, and configuring parallel execution reporting for CI workflows.
+type: article
+url: https://docs.testomat.io/tutorials/webdriverio
+head:
+  - tag: meta
+    attrs:
+      name: og:image
+      content: https://docs.testomat.io/_astro/New_b1BS3EKN_2024-08-29.DGrFkMLR_ZOOgn1.webp
 
-  - tag: meta  
-    attrs:  
-      name: keywords  
-      content: WebdriverIO, Testomat.io, test reporting, automation, test management, artifacts, parallel execution, detailed reporting, parameterized tests, S3 integration, test import, browser automation  
-
+  - tag: meta
+    attrs:
+      name: keywords
+      content: WebdriverIO, Testomat.io, test reporting, automation, test management, artifacts, parallel execution, detailed reporting, parameterized tests, S3 integration, test import, browser automation
 ---
-<!-- 
+
+<!--
     ## Importing WebdriverIO Tests
         - import WebdriverIO tests
-        - TS tests (link to example project) 
+        - TS tests (link to example project)
         - TypeScript tests (link to example project)
         - BDD tests
         - parameterized tests importing
@@ -37,7 +37,6 @@ head:
         - custom commands
         - page objects
 -->
-
 
 # WebdriverIO Integration with Testomat.io
 
@@ -83,14 +82,14 @@ When importing parameterized tests, include variable parameters in test names us
 **Example Code**:
 
 ```typescript
-const people = ['Alice', 'Bob']
+const people = ['Alice', 'Bob'];
 describe('my tests', () => {
-    for (const name of people) {
-        it(`testing with ${name}`, async () => {
-            // ...
-        })
-    }
-})
+  for (const name of people) {
+    it(`testing with ${name}`, async () => {
+      // ...
+    });
+  }
+});
 ```
 
 Avoid string concatenation like `title + name`. Instead, use template literals to make test names dynamic and clear.
@@ -113,6 +112,7 @@ When importing tests, enable **Auto-assign Ids** (`--update-ids`) to track chang
   expect(user).toBe('fine');
 });
 ```
+
 IDs will be automatically assigned in your code and appear in Testomat.io.
 
 ![Testomat.io - Auto-assign Ids in Code](./images/wdio-ids.png)
@@ -126,14 +126,17 @@ IDs will be automatically assigned in your code and appear in Testomat.io.
 WebdriverIO allows you to leverage various types of reports, including screenshots, to improve error detection and debugging. Here's how you can enhance your testing workflow:
 
 ### Visual Reports with Timeline Reporter
+
 Tools like **Timeline Reporter** provide a visual representation of your test results. These reports can include screenshots, which help analyze failures and identify issues quickly.  
 [Learn more about Timeline Reporter](https://webdriver.io/docs/wdio-timeline-reporter/)
 
 ### Visual Testing with @wdio/visual-service
+
 WebdriverIO supports visual testing via the **@wdio/visual-service** plugin. This enables you to capture, save, and compare screenshots of elements, pages, or screens with baseline images. It is an excellent way to detect visual regressions in your application.  
 [Learn more about Visual Testing](https://webdriver.io/docs/visual-testing/)
 
 ### Capturing Screenshots
+
 WebdriverIO provides built-in methods such as `browser.saveScreenshot()` to capture the current state of a webpage or specific elements. These screenshots can be incorporated into your reporting tools for a comprehensive debugging experience.  
 [Learn more about Screenshot](https://webdriver.io/docs/wdio-light-reporter/#screenshots)
 
@@ -143,10 +146,9 @@ afterTest: async function (test, context, { error, result, duration, passed, ret
             await browser.takeScreenshot();
         }
     }
-``` 
+```
 
 By integrating these features into your WebdriverIO setup, you can enhance the efficiency of error detection and resolution, leading to more robust and reliable tests.
-
 
 ### Artifacts in WebdriverIO with Testomat.io Reporter and S3
 
@@ -199,6 +201,18 @@ To extend the shared run timeout (default: 20 minutes), use the `TESTOMATIO_SHAR
 TESTOMATIO_SHARED_RUN_TIMEOUT=120 TESTOMATIO_SHARED_RUN=1 <actual run command>
 ```
 
+We strongly recommend to use Testomat.io `cli` to run your WebdriverIO tests in parallel mode, it will handle each worker/process automatically.
+
+`npx @testomatio/reporter run 'npx wdio wdio.conf.js'`
+
+For more details, refer to the [Testomat.io cli docs][1] and the [WebdriverIO guide][2].
+
+[1]: https://github.com/testomatio/reporter/blob/2.x/docs/cli.md#3-run
+[2]: https://github.com/testomatio/reporter/blob/2.x/docs/frameworks.md#webdriverio
+
+```bash
+
 ---
 
 This guide outlines the process of integrating WebdriverIO with Testomat.io for effective test management and reporting. For more information, visit the [Testomat.io Documentation](https://docs.testomat.io/).
+```
