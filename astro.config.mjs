@@ -180,7 +180,14 @@ export default defineConfig({
 									label: 'Export tests',
 									collapsed: true,
 									items: [
-										{ label: 'Export Test Suites and Cases', link: '/project/import-export/export-tests' },
+										{ label: 'Export to Spreadsheet', link: '/project/import-export/export-tests/export-to-spreadsheet' },
+									],
+								},
+								{
+									label: 'Download Tests as Files',
+									collapsed: true,
+									items: [
+										{ label: 'Download Manual Tests as Files', link: '/project/import-export/download-tests-as-files/download-manual-tests-as-files' },
 									],
 								},
 							],

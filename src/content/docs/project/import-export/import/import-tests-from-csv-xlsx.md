@@ -44,7 +44,7 @@ Click any tool below to see step-by-step instructions:
 
 ## How to Import Tests from CSV/XLSX in Classic Projects
 
-You can import tests into your project via:
+Now you can import tests into your project via:
 
 - **Imports** page — ideal when existing data is present.
 - **Tests** page — best for new projects without data.

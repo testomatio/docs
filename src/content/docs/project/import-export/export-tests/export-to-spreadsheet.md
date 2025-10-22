@@ -1,5 +1,13 @@
 ---
-title: Export Test Suites and Cases
+title: Export to Spreadsheet
+description: Learn how to export test cases and suites from Testomat.io in spreadsheet (Excel) format. This guide covers exporting all tests, entire suites, or filtered results, with options to include extra columns like steps and preconditions. It also explains using multiselection and different export modes (Only found Tests, Found Suites and Found Tests) to ensure users can efficiently download and share specific test data outside the platform.
+type: article
+url: https://docs.testomat.io/project/import-export/export-tests/export-to-spreadsheet
+head:  
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, export test cases, export test suites, export data, export as spreadsheet, Excel format, download test data, test management, XLS, automated tests
 ---
 
 The export feature provides users with the ability to download test cases and suites in various formats, offering flexibility in how the data is exported. You can export test cases in Excel format. This functionality supports filtering by tags, labels, or specific suites, allowing users to export only the relevant test data. Depending on the export mode selected, users can choose to export individual tests, complete suites, or the entire set of tests with additional details.
