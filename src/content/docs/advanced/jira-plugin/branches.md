@@ -6,8 +6,6 @@ url: https://docs.testomat.io/advanced/jira-plugin/branches
 head:
   - tag: meta
     attrs:
-  - tag: meta
-    attrs:
       name: keywords
       content: Jira plugin, Testomat.io, branches, manage branches, test branches, Jira branches, work with branches, test management, BDD, feature files, Jira integration
 ---
