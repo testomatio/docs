@@ -14,137 +14,203 @@ head:
       content: Jira plugin, Testomat.io, test management, test coverage, BDD, feature files, automated tests, manual tests, Jira integration, traceability matrix, test reporting
 ---
 
-## How To Create a Suite
+This guide explains how to create, edit, link, and manage **Suites**, **Tests**, and **Plans** in Jira using the **Testomat.io** plugin.
 
-1. Go to Suites tab, click on the menu button and select New Suite
-2. Enter suites name 
-3. Click on Create button
-4. Select a parent suite in the drop-down menu
-5. Click on Save button
-6. See your suite created
+## How to Work with Suites
 
-![image](./images/125162674-eeedc700-e191-11eb-993f-644a30368069.png)
+Create and manage Suites in Jira — organize related tests and link them to issues using the **Testomat.io** plugin.
 
-![image](./images/125161964-15116800-e18e-11eb-9c1e-722400f0468b.png)
+### How to Create a Suite
 
-![image](./images/125162037-79ccc280-e18e-11eb-81ed-a09dbc4668b5.png)
+1. Navigate to the **Suites** tab
+2. Click the **menu button (⋯)** and select **New Suite**
 
-![image](./images/125162084-b993aa00-e18e-11eb-9f0e-d1ef1a65e905.png)
+![New Suite button](./images/att14_401.png)
 
-## How To Create a Test
+3. Enter the suite’s name and description below (optional)
+4. Click **Create** button
 
-1. Go to Tests tab, click on the menu button and select New Test
-2. Enter Test's name and description (optional)
-3. Click on Create button
-4. Select a suite in the drop-down menu
-5. Click on Save button
-6. See your test created
+![Create button](./images/att15_401.png)
 
-![image](./images/125162422-5f93e400-e190-11eb-9959-140eca400cb9.png)
+5. Select a parent suite from the dropdown or Root destination
+6. Click **Save** button
 
-![image](./images/125162475-b7324f80-e190-11eb-8973-fc0e9b93aee7.png)
+![Save new suite](./images/att16_401.png)
 
-![image](./images/125162497-daf59580-e190-11eb-9b34-b3c3f3b1df24.png)
+### How to Edit a Suite
 
-![image](./images/125162517-f660a080-e190-11eb-889a-d8eb2aff3749.png)
+1. Navigate to the **Suites** tab
+2. Click the **pen icon** near the suite you want to edit
 
-## How To Link a Suite to Jira Issue
+![Edit icon for suite](./images/att23_401.png)
 
-1. Go to Suites tab, click on the menu button and select Link Suite
-2. Select a suite in the drop-down menu
-3. Click on Save button
-4. See your suite linked
+3. Edit the suite (Suite title, description)
+4. Click **Update** button
 
-![image](./images/125162803-89e6a100-e192-11eb-9f2d-08744cc1cb07.png)
+![Update button](./images/att24_401.png)
 
-![image](./images/125162844-cca87900-e192-11eb-8292-5b050a2087a7.png)
+### How to Link and Unlink a Suite
 
-![image](./images/125163417-bb14a080-e195-11eb-826f-7dbc9f4c62e8.png)
+**To link a suite to a Jira issue:**
 
-## How To Link a Test to Jira Issue
+1. Navigate to the **Suites** tab
+2. Click the **menu button (⋯)** and select **Link Suite**
 
-1. Go to Tests tab, click on the menu button and select Link Test
-2. Select a suite in the drop-down menu or search a test
-3. Click on Save button
-4. See your test linked
+![Link Suite](./images/att20_401.png)
 
-![image](./images/125163781-71c55080-e197-11eb-8934-0efc74ccd4be.png)
+3. Select a parent suite from the dropdown
+4. Click **Save** button
 
-![image](./images/125164429-d504b200-e19a-11eb-814a-3545a34c4a7c.png)
+![Save linked suite](./images/att21_401.png)
 
-![image](./images/125164481-11d0a900-e19b-11eb-8511-253b69c1c61e.png)
+**To unlink a suite:**
 
-## How To Unlink a Suite
+1. Navigate to the **Suites** tab
+2. Сlick the **trash can icon** next to the linked suite
+3. Once the modal window opens, confirm by clicking **Unlink** button
 
-1. Go to Suites tab, click on the trash can icon near the suite you want to unlink
-2. Click on Unlink button
-3. See your suite was unlinked
+![Unlink suite](./images/att25_401.png)
 
-![image](./images/125164798-bacbd380-e19c-11eb-9c5e-3b7fb9997783.png)
+## How to Work with Tests
 
-![image](./images/125164824-dd5dec80-e19c-11eb-974d-b523a97c9fd6.png)
+Manage your tests directly in Jira — create, edit, and link them to issues or plans within the **Testomat.io** plugin.
 
-![image](./images/125164844-02eaf600-e19d-11eb-8f60-ba6c8666e4b8.png)
+### How to Create a Test
 
-## How To Unlink a Test
+1. Navigate to the **Tests** tab
+2. Click the **menu button (⋯)** and select **New Test**
 
-1. Go to Tests tab, click on the trash can icon near the test you want to unlink
-2. Click on Unlink button
-3. See your test was unlinked
+![New Test button](./images/att17_401.png)
 
-![image](./images/125165066-fd41e000-e19d-11eb-8630-210a1242fa18.png)
+3. Enter the test’s name and optional description
+4. Click **Create** button
 
-![image](./images/125165081-1185dd00-e19e-11eb-85e9-452a2110fe66.png)
+![Create button](./images/att18_401.png)
 
-![125165108-311d0580-e19e-11eb-8b52-43367f1741ba](./images/125165409-7261e500-e19f-11eb-9e93-9e9e3335745a.png)
+5. Select a suite from the dropdown
+6. Click **Save** button
 
-## How To Link And Launch a Test Plan
+![Save new test](./images/att19_401.png)
 
-1. Go to Plans tab
-2. Click Extra Button
-3. Click Link Plan
-4. Pick the plan and ckick Link
-5. Click Action button
+### How to Bulk Create Tests
 
-![Alt text](./images/link_plan1.png)
+Quickly create multiple tests at once directly from Jira.
 
-![Alt text](./images/link_plan2.png)
+1. Navigate to the Tests tab
+2. Click the **menu button (⋯)** and select **Bulk Create**
 
-![Alt text](./images/link_plan3.png)
+![Bulk Create](./images/att31_401.png)
 
-## How To Edit a Suite 
+3. Select the existing suite from the dropdown list
+4. In the Add new tests field, enter test titles — each line corresponds to the title of a new test
+5. Click the **Create** button to add all listed tests to the selected suite
 
-1. Go to Suites tab, click on the pen icon near the suite you want to edit
-2. Edit the suite
-3. Click on Update button
-4. See your suite was updated
+![create multiple tests](./images/att30_401.png)
 
-![image](./images/125235737-97636e80-e2eb-11eb-99d2-8a44c06841dd.png)
+### How to Edit a Test
 
-![image](./images/125239698-b36a0e80-e2f1-11eb-8e4b-cc085c99efff.png)
+1. Navigate to the **Tests** tab
+2. Click the **pen icon** near the test you want to edit
 
-![image](./images/125236131-21abd280-e2ec-11eb-9145-68e0f660f5e2.png)
+![pen icon](images/att26_401.png)
 
-## How To Edit a Test
+3. Edit the test (Test title, description)
+4. Click **Save** button
 
-1. Go to Tests tab, click on the trash pen icon near the test you want to edit
-2. Edit the test
-3. Click on Save button
+![Update test](./images/att27_401.png)
 
-![image](./images/125239228-0abbaf00-e2f1-11eb-8f97-0730e477ee65.png)
+### How to Link and Unlink a Test
 
-![image](./images/125239355-39398a00-e2f1-11eb-86b5-746c070ea9b1.png)
+**To link a test to a Jira issue:**
 
-## How To Edit Feature File for BDD
+1. Navigate to the **Tests** tab
+2. Click the **🔗 Test** button with the link icon
 
-1. Open Testomatio Plugin 
-2. Click in menu button and pick Edit Feature
-3. Select a suite you want to edit in Feature File 
-4. Edit Feature File
-5. Click on Update button
+![Test button](./images/att29_401.png)
 
-![image](./images/125240526-e8c32c00-e2f2-11eb-8eb5-69f5b77d7397.png)
+3. In the opened window, use filters to find the needed tests:
 
-![image](./images/125240629-04c6cd80-e2f3-11eb-8da0-6555ae538513.png)
+- Select a suite in the Search a suite dropdown
+- Select a plan in the Search a plan dropdown
+- Optionally, enter a tag in the Type @tag and press 'Enter' field
+- Combine filters using AND or OR to refine search results
 
-<img width="985" alt="Screenshot at Jul 12 09-27-55" src="https://user-images.githubusercontent.com/77803888/125240960-7e5ebb80-e2f3-11eb-9fc9-1ed95883f75c.png">
+4. From the list of found tests, click the **Link** button next to a test to connect it to the Jira issue
+
+- You can also click **Link All** to link all displayed tests
+
+![Link All tests](./images/att32_401.png)
+
+**To unlink a test:**
+
+You can unlink tests from a Jira issue in two ways:
+
+- via the **menu button (⋯)**
+- through the **🔗Test** button
+
+Option 1 — via the **menu button (⋯)**
+
+1. Navigate to the **Tests** tab
+2. Click the **menu button (⋯)** and select **Unlink Test**
+
+![Unlink Test button](./images/att33_401.png)
+
+3. Select tests to unlink:
+
+- By default, all tests are selected for unlinking
+- If you don’t want to unlink all tests — uncheck the box next to the specific tests
+- To unlink only selected ones, uncheck **All tests** first, then select individual tests you want to unlink
+
+4. Click the **Unlink** button to confirm
+
+![Unlink tests](./images/att34_401.png)
+
+Option 2 — through **🔗Test** button
+
+1. Navigate to the **Tests** tab
+2. Click the **🔗 Test** button with the link icon
+
+![Test button](./images/att29_401.png)
+
+3. In the opened window, find linked tests — Click **Unlink** next to the test you want to remove
+4. Or click **Unlink All** to detach all linked tests at once
+
+![Alt text](images/att35_401.png)
+
+## How to Work with Test Plans
+
+Link and execute Test Plans directly from Jira to track and manage testing progress.
+
+### How to Link a Test Plan
+
+1. Navigate to the **Plans** tab
+2. Click the **🔗 Plan** button or **menu button (⋯)** and select **Link Plan**
+3. Click **Link** button
+
+![Link a Plan](./images/att36_401.png)
+
+### How to Unlink from a Test Plan
+
+1. Navigate to the **Plans** tab
+2. Click the **🔗 Plan** button, or
+3. Click the **trash can icon** next to the linked plan
+4. Click the **Unlink** button to confirm
+
+![Unlink a plan](./images/att37_401.png)
+
+## How to Work with Feature Files (BDD)
+
+Edit and update BDD Feature Files from Jira and sync changes with your Testomat.io project.
+
+### How to Edit a Feature File
+
+1. Navigate to the **Test Coverage** tab
+2. Click the **menu button (⋯)** and select **Edit Feature**
+
+![Alt text](images/att38_401.png)
+
+3. Select the suite you want to edit in the Feature File
+4. Edit the **Feature File**
+5. Click the **Update** button
+
+![Update Feature File](./images/att39_401.png)

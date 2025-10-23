@@ -1,70 +1,97 @@
 ---
 title: Jira Plugin
-description: Learn how to integrate Testomat.io with Jira using the Jira plugin. This guide covers connecting Testomat.io projects to Jira, linking/unlinking tests, suites, and test plans to Jira issues, and running manual or automated tests directly from Jira. Manage BDD feature files, attach test reports, and utilize the traceability matrix for comprehensive test coverage in sprints.
+description: Learn how to integrate Testomat.io with Jira using the Jira plugin. This guide covers connecting projects, linking/unlinking tests, suites, and plans to Jira issues, running manual or automated tests, managing BDD feature files, attaching test reports, using AI prompts to improve test descriptions, and leveraging the traceability matrix for comprehensive coverage in sprints.
 type: article
 url: https://docs.testomat.io/advanced/jira-plugin
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/125158928-c7403400-e17c-11eb-864d-bc823ff7ba62.BaYja7YJ_1CM6F3.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
-      content: Jira plugin, Testomat.io, test management, test coverage, BDD, feature files, automated tests, manual tests, Jira integration, traceability matrix, test reporting
+      content: Jira plugin, Testomat.io, test management, test coverage, BDD, feature files, automated tests, manual tests, Jira integration, traceability matrix, test reporting, AI test descriptions, SSO login
 ---
 
-
-import DirectoryLinks from '/src/components/DirectoryLinks.astro';
+import DirectoryLinks from "/src/components/DirectoryLinks.astro";
 
 <DirectoryLinks directory="advanced/jira-plugin" />
 
-The Testomat.io Jira Plugin enhances your Jira experience, enabling a host of actions to be performed directly and seamlessly from Jira, streamlining your workflow and boosting efficiency.
+The Testomat.io Jira Plugin enhances your Jira experience by enabling you to manage tests directly inside Jira. With this plugin you can:
 
-Namely, you can:
+- Connect multiple Testomat.io and JIRA projects easily
+- Quickly link/unlink tests, suites, and plans to JIRA issues
+- View and edit tests directly in JIRA
+- Use autocomplete and smart suggestions for creating tests
+- Easily modify BDD/Gherkin feature files and scenarios
+- Create multiple tests at once from checklists from bulk create
+- Run manual and automated tests from JIRA tickets
+- Attach test reports to JIRA issues with a click
+- Use tracebility matrix and reports to check test coverage in sprints and project
+- Manage project branches
+- Use AI prompts to generate or improve test descriptions directly in Jira
 
-- Connect multiple Testomat.io and JIRA projects easily.
-- Quickly link/unlink tests, suites, and plans to JIRA issues.
-- View and edit tests directly in JIRA.
-- Use autocomplete and smart suggestions for creating tests.
-- Easily modify BDD/Gherkin feature files and scenarios.
-- Create multiple tests at once from checklists from bulk create 
-- Run manual and automated tests from JIRA tickets.
-- Attach test reports to JIRA issues with a click.
-- Use tracebility matrix and reports to check test coverage in sprints and project.
-- Manage project branches.
+:::note
 
-## Options Without Loggin in Testomatio
+Jira Plugin requires an active Jira integration in your Testomat.io project. If Jira is not connected yet, please follow [How to Connect Jira Project](https://docs.testomat.io/integrations/issues-management/jira/#connecting-to-jira-project).
 
-When you are not logged in Testomatio (1), you are able to view tests and suites linked to the issue and (2)
+![No linked connection with Jira](./images/att6_401.png)
 
-![image](./images/125158928-c7403400-e17c-11eb-864d-bc823ff7ba62.png)
+:::
 
-![image](./images/125158874-6d3f6e80-e17c-11eb-8b70-454470ef25b8.png)
+## How to Use Jira Plugin Without Logging in
 
-Also, you can look through the Test Coverage screen 
+When you open a Jira issue with linked Testomat.io items **without logging in**, the visibility depends on how Jira is connected:
 
-![image](./images/125159258-08394800-e17f-11eb-828e-4a2fbddbb00e.png)
+![Jira Connection Type](./images/att22_401.png)
 
-## How To Log In
+**Connected with an administrator's account**
 
-To use more Testomatio Jira Plugin options you need to log in to Testomatio.
-This can be done directly from the Jira issue
+You can still:
 
-![image](./images/125162637-bcdc6500-e191-11eb-8b9f-ff029b7b2419.png)
+- View **tests and suites** linked to the issue
 
-Or you can do this from Apps
+![list of tests and suites](./images/gif1_401.gif)
 
-![image](./images/125159739-ebeada80-e181-11eb-818e-e439c7150a10.png)
+- Browse the **Tests Coverage** screen
 
-Here you need to (1) enter **your Testomatio** email and password (2) click on Submit button
+![Test Coverage](./images/att7_401.png)
 
-![image](./images/125160064-97e0f580-e183-11eb-993c-203e00c6d5ef.png)
+**Connected with a regular account**
 
-Now you can view (1), edit (2), and unlink (3) tests and suites.
+- You **won’t be able to see tests or run results** without logging in
 
-<img width="659" alt="Screenshot at Jul 10 15-51-36" src="https://user-images.githubusercontent.com/77803888/125163637-bd2b2f00-e196-11eb-90a8-ec8c0e5168eb.png" />
+## How to Log in to Testomat.io from Jira
+
+-To access all Jira Plugin features, you need to log in to Testomat.io. You can log in directly from:
+
+- a Jira issue
+
+![Log In from Jira Plugin](./images/att9_401.png)
+
+- or you can do this from Apps
+
+![Log In from app](./images/att8_401.png)
+
+### Login Options
+
+You can authorize using any of the following methods:
+
+- **Email + Password** — enter your Testomat.io credentials and click **Submit**
+- **Authorize with GitHub** — sign in with your GitHub account
+- **Authorize with Google** — sign in with your Google account
+- **Authorize with SSO** — use your company’s Single Sign-On provider
+
+### What you can do after logging in
+
+Once logged in, you can:
+
+- view linked tests and suites
+- edit them directly in Jira
+- unlink items when needed
+- use AI prompts to enhance test descriptions:
+  - Suggest Description – generate a clear and concise description for a test based on its title and similar tests
+  - Improve Description – refine the existing description to make it clearer
+  - Suggest Better Description – provide an alternative improved description
+
+![Avaliable options](./images/att10_401.png)
 
 ## JIRA Plugin Permissions and Security
 
