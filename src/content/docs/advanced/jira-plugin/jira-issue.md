@@ -14,11 +14,19 @@ head:
       content: Jira plugin, Testomat.io, test management, test coverage, BDD, feature files, automated tests, manual tests, Jira integration, traceability matrix, test reporting
 ---
 
-Testomat.io makes it incredibly convenient to create issues for Jira directly from your Runs. With just a few clicks, you can instantly log detailed bug reports, complete with test context and steps to reproduce. 
+**Jira integration in Testomat.io** helps QA teams quickly turn test results into actionable bug reports. This feature eliminates the manual effort of copying failed test data into Jira and ensures full traceability between test execution and defect tracking.
 
-## Creating Issue For Failed Test
+With a few clicks, you can:
 
-To create a JIRA issue for a Failed Test,  open a Run with a failed test. Find a test in list, move the cursor over it and click on the **Link to Issue** icon:
+- **Create a Jira issue** directly from a failed test or run
+- **Link existing Jira issues** to tests or suites
+- **Attach contextual details** (test steps, results, environment, and run links) automatically
+
+This integration was designed to improve collaboration between **QA, development, and management teams**, speeding up feedback loops and ensuring visibility across all project stakeholders.
+
+## How to Create a Jira Issue for a Failed Test
+
+To create a JIRA issue for a Failed Test, open a Run with a failed test. Find a test in list, move the cursor over it and click on the **Link to Issue** icon:
 
 ![Testomatio.io - Creating JIRA Issue for Failed Test](./images/New_7T8nObH5_2024-10-19.png)
 
@@ -36,7 +44,7 @@ The generated ticket will contain the specified information, as well as informat
 
 ![Testomatio.io - Created ticket in Jira](./images/New_8ENxIFXB_2024-10-19.png)
 
-### Creating Issue For Failed Run
+## How to Create a Jira Issue for a Failed Run
 
 To create a JIRA issue for a Failed Manual or Automated Run, open the run and select the **Link to Issue** option from the dots menu:
 
@@ -46,36 +54,68 @@ Create a new issue for a run or append to an existing issue.
 
 ![Testomatio.io - Link Failed Run to existing issue or create a new one](./images/New_tYJ8Bm2P_2024-10-19.png)
 
-## Linking Test to JIRA Issue
+## How to Link a Test to a Jira Issue
 
-To link a test to an issue, open a test in a Testomatio project that previously was connected to JIRA project. Select "Attach Jira Issue" in the dots menu.
+You can easily connect any individual **test** in Testomat.io to an existing or new Jira issue. This allows quick traceability between your test cases and related Jira tickets.
 
-![CleanShot 2022-09-21 at 19 24 14@2x](./images/191559194-3e330a81-d98c-4f24-8978-e64632ae68ef.jpg)
+1. Navigate to the **Tests** page in your Testomat.io project
+2. Open the test you want to link
+3. Click the **extra menu (⋯)** button in the top-right corner
+4. Select **Link to Issue**
 
-When attaching a test to an issue you can either link to an existing issue or create a new one.
+![Link to Issue](./images/att41_401.png)
 
-![CleanShot 2022-09-21 at 19 26 51@2x](./images/191559583-504e867b-185a-4672-94d9-53ae6813a514.jpg)
+Once the **Link to Issue** modal window appears:
 
-This test will be displayed in Jira under the Issue view:
+5. To **link to an existing Jira issue**, paste or enter the issue key and click **Link Issue**
+6. To **create a new Jira issue**, click **Create new issue**
 
-![CleanShot 2022-09-21 at 19 34 33@2x](./images/191561367-9e4be6fc-2f06-414d-a590-5ae85ee2d26b.jpg)
+![create or link a Jira issue](./images/att42_401.png)
 
-Please note, that you can link a test to multiple issues. In this case their IDs will be displayed in test view in Testomatio:
+7. Select your **Jira profile** (see details: [Connecting Jira Integration](https://docs.testomat.io/integrations/issues-management/jira/)).
+8. Choose the **Issue Type** from the dropdown (e.g., Bug, Task, Sub-task)
+9. Add a **Title**
+10. Optionally, include a **Description** to provide test context
+11. Fill in any **Jira fields** available in your configuration.
 
-![CleanShot 2022-09-21 at 19 28 55@2x](./images/191560321-46482505-4509-454a-a633-a7be87816520.jpg)
+Testomat.io automatically displays all supported fields — such as **Parent**, **Components**, **Fix versions**, **Priority**, **Labels**, or other custom fields defined in your Jira project.  
+These may appear immediately or after clicking **Show Optional Fields**, depending on your project setup.
 
-## Linking Suite to JIRA Issue
+:::note
 
-A suite can be attached to a JIRA issue similarly to a test. When attaching a suite, **all tests inside that suite will be linked to a JIRA issue** (this doesn't include tests from sub-suites). 
+The available fields depend on your Jira project configuration. To see all supported field types in Testomat.io, refer to [Supported Jira Field Types](https://docs.testomat.io/integrations/issues-management/jira/#supported-jira-field-types).
 
-![CleanShot 2022-09-21 at 19 36 25@2x](./images/191562188-4192ca13-e0ca-429b-815b-b0ffd680ec57.jpg)
+:::
 
-If your tests from the linked Suite are not shown in the Jira issue, click on the menu-button and on "Testomatio"
+12. Once all required information is filled in, click **Create Jira Issue** to finish linking.
 
-![CleanShot 2022-09-21 at 19 40 19@2x](./images/191562634-894acdb6-9316-4427-9185-e0bd34e3aa83.jpg)
+![Save new Jira Issue](./images/att43_401.png)
 
-Now tests from added Suite are shown in the Jira issue:
+The linked issue appears under the test, indicated by the issue icon which redirected to the issue in Jira project.
 
-![CleanShot 2022-09-21 at 19 44 06@2x](./images/191563321-14208936-0c61-4886-882a-7b7db081e9fb.jpg)
+:::note
 
-If you unlink an issue from a suite, all tests of this suite will be unlinked as well.
+You can link a test to multiple issues. In this case their IDs will be displayed in test view in Testomatio.
+
+:::
+
+![Jira Link](./images/att44_401.png)
+
+## How to Link a Suite to a Jira Issue
+
+Linking a suite to a Jira issue works similarly to linking an individual test, with one key difference: **all tests within the suite (but not sub-suites) will automatically be linked to the Jira issue.**
+
+1. Navigate to the **Tests** page in your Testomat.io project
+2. Open the suite you want to link
+3. Click the **extra menu (⋯)** button in the top-right corner
+4. Select **Link to Issue**
+
+Follow the same steps above as linking a single test: link an existing issue or create a new one, select issue type, fill required fields, and click Create Jira Issue.
+
+![Link Jira Issue to Suite](./images/att45_401.png)
+
+:::note
+
+If you unlink a suite from a Jira issue, all its linked tests will be unlinked automatically.
+
+:::
