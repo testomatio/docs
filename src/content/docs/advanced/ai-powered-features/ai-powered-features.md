@@ -99,6 +99,10 @@ If your suite already has a description, you can click the 'Show Diff' button (5
 You can also use AI to enhance your test coverage by creating additional test cases based on test cases that you already have in your test suite, as well they can be created based on Suite description or Requirements.
 This feature makes it easier to create comprehensive test suites. 
 
+### Suggest Test Cases Based on Existing Test Cases
+
+If you have at least one previously created test case, you can use this AI-feature to generate more test cases.
+
 1. Open Test Suite that already contains Test Cases.
 2. Click **'Extra menu'** button.
 3. Select **'Suggest Tests'** option.
@@ -109,6 +113,23 @@ You can review the suggested tests, select those that align with their needs, an
 As well, you can generate more test cases, by clicking the **'Suggest More Tests'** button (1). 
 
 Testomat.io recommends adding only the necessary tests cases to your suite!
+
+### Suggest Test Cases Based on Suite Description
+
+You can also use this AI feature to suggest tests based solely on the Suite Description.
+
+1. Open Test Suite with a description.
+2. Click **'Extra menu'** button.
+3. Select **'Suggest Tests'** option.
+
+![Testomat.io - AI-powered](./images/AI_Suggest_tests_1.gif)
+
+### Suggest Test Cases Based on Requirements
+
+Testomat.io also allows you to create test cases based on added requirements. For detailed instructions, refer to the **'AI-requirements'** page:
+
+- [Generate Test Cases from Requirements Page](https://docs.testomat.io/advanced/ai-powered-features/ai-requirements/#generate-test-cases-from-requirements-page).
+- [Suggest Test Cases Based on Requirements from Suite Level](https://docs.testomat.io/advanced/ai-powered-features/ai-requirements/#suggest-test-cases-based-on-requirements-from-suite-level).
 
 If your test suite is linked to requirements (e.g., User story in Jira), AI will suggest checking your existing test cases for redundancy by clicking the **'Remove Redundant Tests'** button (2).
 
