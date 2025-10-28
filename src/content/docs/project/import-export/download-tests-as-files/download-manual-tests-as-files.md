@@ -116,18 +116,26 @@ After your project is downloaded to Markdown you can:
 
 ### Create New Suites/Tests
 
-To create a new test, you need to add:
+Each suite is represented as a single markdown file. All metadata is written as inside comments.
 
-1. The **Test Header** (required).
-  <!-- test -->
+To create a new test in a file, you need to add:
+
+1. The **Test Header** (required)
+
+```
+<!-- test -->
+```
 
 **Test Header** elements can include:
+
 - **Email of test creator** (if not added, defaults to 'Unknown user').
 - **Priority**: low, normal, high, important, ctitical (if not set up, defaults to 'normal').
 - **Tags** (optional) - can be added in the header or test title. You can create and add new Tags, or use existing.
-- **Labels and Custom Fields** (optional) - can only be added in the header. **Important!** You can only use Labels and Custom fields that already exist in your project.
+- **Labels and Custom Fields** (optional) - can only be added in the header. **Important!** You can only use Labels and Custom fields that already exist 
 
-2. Test title (Start with `#`).
+in your project.
+
+2. Test title (Starts with `#`).
 3. Test description with Requirements, Pre-conditions, Steps and Expected Results in Markdown format.
 
 :::note
@@ -140,10 +148,10 @@ Don't add the ID as it will be created automatically after tests are synced into
 
 ```
 <!-- test
-priority:
+priority: high
 creator: creator_email@gmail.com
-tags:
-labels:
+tags: @user, @update
+labels: Slow
 -->
 
 # Test Title
@@ -164,9 +172,7 @@ labels:
 
 ![Testomatio - Export as markdown](./images/Add_test_markdown_1.png)
 
-:::note
-
-The **Header** for Suites has a slightly different structure:
+The **Header** for Suites has a similar format:
 
 ```
 <!-- suite
@@ -174,7 +180,6 @@ emoji:
 labels:
 -->
 ```
-:::
 
 ### Update Existing Suites/Tests
 
