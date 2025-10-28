@@ -174,6 +174,7 @@ export default defineConfig({
 										{ label: 'Import Cucumber BDD Tests', link: '/project/import-export/import/import-bdd'},
 										{ label: 'Import PHP Tests', link: '/project/import-export/import/import-php'},
 										{ label: 'Automated Import', link: '/project/import-export/import/auto-import'},
+										{ label: 'Java Check Tests', link: '/project/import-export/import/java-check-tests'},
 									],
 								},
 								{
@@ -216,6 +217,7 @@ export default defineConfig({
 						{ label: 'Functions', link: '/test-reporting/functions'},
                         { label: 'Reporting API', link: '/test-reporting/api'},						
 						{ label: 'Logger', link: '/test-reporting/logger'},
+						{ label: 'Testomat.io Java Reporter', link: '/test-reporting/java-reporter'},
 						{
 							label: 'Pipes',
 							collapsed: true,
