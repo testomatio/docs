@@ -76,6 +76,7 @@ const redirects = {
     "/project/import-export/import-tests-from-cucumber": "/project/import-export/import/import-tests-from-cucumber",
     "/project/import-export/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
     "/project/import-export/import-bdd": "/project/import-export/import/import-bdd",
+    "/project/import-export/export-tests": "/project/import-export/export-tests/export-to-spreadsheet",
     // reporter
     "/project/runs/reporter/api": "/test-reporting/api",
     "/project/runs/reporter/debug-file-format": "/test-reporting/debug-file-format",
