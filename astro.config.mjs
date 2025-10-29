@@ -313,6 +313,13 @@ export default defineConfig({
 								{label: 'AI-Requirements', link: '/advanced/ai-powered-features/ai-requirements'},
 							],
 						},
+						{
+							label: 'api-access',
+							collapsed: true,
+							items: [
+								{ label: 'api-access', link: '/advanced/api-access'}
+							],
+						},
 					]
 				},
 				{
