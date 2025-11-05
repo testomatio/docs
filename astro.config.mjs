@@ -376,6 +376,14 @@ export default defineConfig({
 								{ label: 'Custom SAML', link: '/integrations/single-sign-on/saml' },
 							],
 						},
+						{
+							label: 'SCIM provisioning',
+							collapsed: true,
+							items: [
+								{ label: 'Overview', link: '/integrations/scim-provisioning' },
+								{ label: 'Configure SCIM with Okta', link: '/integrations/scim-provisioning/okta' },
+							],
+						},
 					]
 				},
 				{
