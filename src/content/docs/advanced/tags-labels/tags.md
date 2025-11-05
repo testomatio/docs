@@ -3,21 +3,25 @@ title: Tags
 description: Learn how to create and assign tags in Testomat.io to organize test cases and suites. This guide explains the process of adding tags directly in the title, using autocomplete for existing tags, and refreshing the tag list. It also covers how to filter test cases by one or more tags for efficient test management and searching.
 type: article
 url: https://docs.testomat.io/advanced/tags-labels/tags
-head: 
+head:
   - tag: meta
     attrs:
       name: keywords
       content: Testomat.io, tags, labels, custom fields, test management, filter by tags,categorization, testing workflow, custom data, test organization, filter tests, QA, test case management.
 ---
 
-## How to Create and Assign Tags 
+## How to Create and Assign Tags
 
-You can easily create tags directly to Test Cases or Suites via their titles
+Tags help organize and categorize Test Cases and Suites for easier filtering, reporting, and management. You can create tags directly in titles or assign them in bulk using the multiselect feature. Tags applied at the Suite or Folder level automatically propagate to nested items, ensuring consistent organization across your project.
+
+### Create Tags via Title Field
+
+You can easily create tags directly to Test Cases or Suites via their titles.
 
 1. Open Test Case/ Suite
-2. Click Edit button
+2. Click the **Edit** button
 3. Create tag starting with **@** symbol, directly within the Test Case or Suite title
-4. Click Save button
+4. Click the **Save** button
 
 ![Testomatio - Add tag](./images/Add_Tag.gif)
 
@@ -32,6 +36,57 @@ In case if you don't see a previously created tag in the autocomplete dropdown, 
 :::
 
 ![Testomatio - Recalculate Tags](./images/Recalculate_Tags.png)
+
+### Create Tags via Multiselect
+
+You can also create tags for multiple Suites or Tests at once using the **Multi-select** feature.
+
+1. Go to the **Tests** page
+2. Enable **Multi-select** mode by clicking the **Multi-select** button
+3. Select one or more Folder/Suites or Tests using the checkboxes
+4. Click the **@ Tags** button in the bottom action bar
+
+![Tags button](./images/att1_bulk_tag.png)
+
+5. In the **Select tags for suites** window, click **Create new tags**
+
+![Create new tags link](./images/att3_bulk_tag.png)
+
+6. Enter a new tag name starting with the **@ symbol** and click **Add** button
+
+![New tag is created](./images/att4_bulk_tag.png)
+
+This method allows you to **create** and immediately **apply a new tag** to multiple items in just a few clicks. It helps you save time, speed up routine actions, and maintain consistent tagging across a large number of test cases or suites — without having to open them individually.
+
+## How to Bulk Update Tags
+
+Using the same **Multi-select** feature, you can manage tags for multiple **Folders/Suites** or **Tests** at once — adding or removing tags in bulk.
+
+1. Go to the **Tests** page
+2. Enable **Multi-select** mode by clicking the **Multi-select** button
+3. Select one or more Folder/Suites or Tests using the checkboxes
+4. Click the **@ Tags** button in the bottom action bar
+
+![Tags button](./images/att1_bulk_tag.png)
+
+5. In the **Select tags for suites** window, choose the tag(s) you want to manage:
+
+- To assign a tag, search for it and/or select it from the list
+- To remove a tag, search for it and/or select it from the list
+
+6. Click **Add** to assign the selected tag(s)
+7. Click **Remove** to delete the selected tag(s)
+
+![Add or Remove tags](./images/att2_bulk_tag.png)
+
+This method allows you to efficiently manage tags across multiple items, ensuring consistent organization and saving time.
+
+:::note
+
+When tags are applied at the Suite or Folder level, all nested elements (child Suites or Tests) automatically inherit these tags. However, removing tags from individual nested items is not possible. You can only remove the tags at the same level where they were originally applied.
+Partial removal (e.g., deleting a few tags from a single test inside a tagged Suite) is not supported.
+
+:::
 
 ## How to Filter by Tags
 
@@ -133,16 +188,16 @@ Below are detailed examples showing when tags **are recognized** and when they a
 "title [text @tag1] asda"
 → tags: ["tag1"]
 ```
+
 With these rules, you can better understand how tags are parsed from titles and avoid common pitfalls such as emails, operators, or invalid symbols.
 
 ## Best Practices for Using Tags in Titles
 
 To ensure your tags are recognized consistently and remain easy to manage:
 
-* **Use simple words** → keep tags short, lowercase, and descriptive (e.g., `@smoke`, `@regression`).
-* **Avoid special characters** → symbols like `+`, `-`, `*`, `_`, or `=` can break parsing or truncate tags.
-* **Don’t use emails or URLs** → anything in the form `name@domain.com` is ignored.
-* **Separate tags with spaces or commas** → `@smoke, @ui` is correctly detected, while `@smoke@ui` may not be.
-* **Prefer placing tags at the end of titles** → improves readability and reduces the chance of misparsing inside brackets or punctuation.
-* **Keep consistency across your project** → agree on a common set of tags within your team to make filtering and reporting easier.
-
+- **Use simple words** → keep tags short, lowercase, and descriptive (e.g., `@smoke`, `@regression`).
+- **Avoid special characters** → symbols like `+`, `-`, `*`, `_`, or `=` can break parsing or truncate tags.
+- **Don’t use emails or URLs** → anything in the form `name@domain.com` is ignored.
+- **Separate tags with spaces or commas** → `@smoke, @ui` is correctly detected, while `@smoke@ui` may not be.
+- **Prefer placing tags at the end of titles** → improves readability and reduces the chance of misparsing inside brackets or punctuation.
+- **Keep consistency across your project** → agree on a common set of tags within your team to make filtering and reporting easier.
