@@ -28,6 +28,8 @@ Before configuring SCIM with Okta, ensure you have:
 
 ## Configure SCIM in Okta
 
+This section shows how to connect Okta to Testomat.io using SCIM 2.0 so that users can be created and updated from Okta.
+
 ### Step 1: Create a SCIM 2.0 Test Application
 
 1. Log in to Okta as an Administrator.
@@ -57,7 +59,7 @@ Click **Done**.
 
 ![Testomatio - Okta SCIM Integration](./images/okta/step_04_okta_scim_app_sign_in_options.png)
 
-### Step 2: Configure SCIM Settings
+### Step 2: Configure API Integration Settings
 
 1. In the application configuration page, click the **Provisioning** tab.
 
@@ -82,7 +84,7 @@ Click **Done**.
 
 6. Click **Save** to save the authentication settings.
 
-### Step 4: Configure Provisioning Options
+### Step 3: Configure Provisioning Options
 
 1. Still in the **Provisioning** tab, click on **Edit** and configure the provisioning options:
 
@@ -104,7 +106,7 @@ Click **Done**.
 
 2. Click **Save** to save the provisioning options.
 
-### Step 5: Configure Attribute Mappings
+### Step 4: Configure Attribute Mappings
 
 1. In the application configuration page, click the **Attribute Mappings** tab.
 
@@ -126,7 +128,7 @@ Click **Done**.
 
 3. Click **Save** to save the attribute mappings.
 
-### Step 6: Configure Group Mappings (Optional)
+### Step 5: Configure Group Mappings (Optional)
 
 If you want to provision groups (teams) from Okta to Testomat.io:
 
@@ -140,7 +142,7 @@ If you want to provision groups (teams) from Okta to Testomat.io:
 
 4. Click **Save** to save the group mappings.
 
-### Step 7: Assign Users and Groups
+### Step 6: Assign Users and Groups
 
 1. In the application configuration page, click the **Assignments** tab.
 
