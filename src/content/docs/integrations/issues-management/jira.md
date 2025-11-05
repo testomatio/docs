@@ -17,21 +17,25 @@ head:
 
 The Testomat.io Plugin for Jira is an integration tool that allows QA engineers, developers, and product teams to manage tests directly inside Jira. With this plugin you can link test cases, report execution results, and track testing progress without leaving your Jira workspace.
 
-The plugin was created to:
+**Benefits**:
 
 - Bridge the gap between test management and issue tracking
 - Simplify QA and development collaboration
 - Ensure full traceability between Jira issues and Testomat.io test cases
 
+## Requirements
+
+Before starting integration, ensure you have:
+
+- Jira Cloud or Jira Server access
+- Administrator rights in Jira workspace
+- Project Manager or Owner role in Testomat.io project
+
 ## How to Install Testomat.io Plugin in Jira
 
-Install [Testomat.io Plugin from Atlassian Marketplace](https://marketplace.atlassian.com/apps/1224120/testomatio?hosting=cloud&tab=overview)
+- **Cloud:** Install [Testomat.io Plugin from Atlassian Marketplace](https://marketplace.atlassian.com/apps/1224120/testomatio?hosting=cloud&tab=overview)
 
-:::note
-
-We also provide a Testomat.io Plugin for Jira Server. Contact [Testomat.io Team](https://docs.testomat.io/support/) to learn more about it.
-
-:::
+- **Jira Server**: Contact [Testomat.io Team](https://docs.testomat.io/support/)
 
 ## How to Connect to Jira Project
 
@@ -115,3 +119,5 @@ Some Jira fields are not currently supported in our integration:
 You can connect multiple Jira projects to a single Testomat.io project by following the same steps for each additional connection.
 
 ![multiple JIRA projects](./images/att4_401.png)
+
+## Troubleshooting & FAQ
