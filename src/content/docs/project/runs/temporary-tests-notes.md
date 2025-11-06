@@ -1,5 +1,5 @@
 ---
-title: Temporary Tests — Notes
+title: Temporary Tests - Notes
 description: Learn how to use Notes in Testomat.io to create, manage, and convert temporary test cases directly during manual test runs. This guide covers creating Notes at the global or suite level, converting them into permanent test cases, and their automatic inclusion in test plans.
 type: article
 url: https://docs.testomat.io/project/runs/temporary-tests-notes
