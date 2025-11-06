@@ -120,6 +120,7 @@ export default defineConfig({
 								{ label: 'Archive Runs & RunGroups', link: '/project/runs/archive-runs-and-groups' },
 								{ label: 'Run Reports', link: '/project/runs/reports' },
 								{ label: 'Custom Statuses', link: '/project/runs/custom-statuses' },
+								{ label: 'Temporary Tests — Notes', link: '/project/runs/temporary-tests-notes' },
 							],
 						},
 						{
