@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: TTestomat.io, AI Agents, AI-powered test management, flaky test detection, test description improvement, BDD conversion, automated test optimization, test lifecycle automation, Pulse integration, test cleanup, behavior-driven development, automated QA workflows, test labeling, requirement traceability, AI in software testing, test intelligence
+      content: Testomat.io, AI Agents, AI-powered test management, flaky test detection, test description improvement, BDD conversion, automated test optimization, test lifecycle automation, Pulse integration, test cleanup, behavior-driven development, automated QA workflows, test labeling, requirement traceability, AI in software testing, test intelligence
 ---
 
 ## AI-Agents
