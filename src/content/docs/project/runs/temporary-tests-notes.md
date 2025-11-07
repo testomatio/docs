@@ -72,7 +72,7 @@ For detailed run configuration, see [How to Configure a Manual Run.](https://doc
 - **Sub-status:** (optional)
 - **Result message:** (optional)
 
-10. Click the **Create # notes** to save all notes at once
+10. Click the **Save # notes** to save all notes at once
 
 ![Create bulk notes](./images/att5_1364.png)
 
@@ -128,9 +128,18 @@ If the **Add note to suite** button doesn't appear next to the suite, please ena
 - **Sub-status:** (optional)
 - **Result message:** (optional)
 
-10. Click the **Create # notes** to save all notes at once
+10. Click the **Save # notes** to save all notes at once
 
 ![Create bulk notes](./images/att5_1364.png)
+
+#### Quick Actions
+
+To make the process of creating and managing Notes even faster, you can use the following quick actions:
+
+- Press **Enter** to create a Note — when adding a single Note (not in Bulk mode), simply type the title and press Enter to create it instantly, without clicking the Save note button.
+- Double-click to edit a Note title — you can quickly rename an existing Note by double-clicking its title directly in the Notes window.
+
+These shortcuts speed up the workflow and make it easier to capture insights during manual test runs.
 
 ### How to Convert Notes to Tests
 
