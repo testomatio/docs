@@ -43,6 +43,7 @@ Some of your company members such as managers, BA, or other stakeholders may nee
 Read-Only users are free of charge and available in Professional and Enterprise plans.
 
 :::
+
 ### Make user read-only on project level
 
 1. Go to Project Settings and open the Users tab.
@@ -50,4 +51,3 @@ Read-Only users are free of charge and available in Professional and Enterprise 
 3. Select Make Read-Only from the dropdown options.
 
 ![Testomat.io - Read-Only Project Level](./images/Read_only_project_level.png)
-
