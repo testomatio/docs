@@ -8,86 +8,218 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/131321183-37ad9b3e-9e8f-43e6-9860-205168095580.DNfdbGhq_1ithLh.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io branches, test branching, test versioning, merge branches, automated tests, test suites, version control, collaborative testing, test management, QA
+      content: Testomat.io branches, test branching, test versioning, merge branches, revert merge, automated tests, test suites, version control, collaborative testing, test management, QA
 ---
 
-The typical day-to-day workflow includes changes that developers make to the code. So as code is changing, quality assurance needs to update the tests to keep code tests coverage update. You may need to add tests for a new feature, but you don't want to affect existing suites and tests. Or there are a lot of specialists in the team and you don't want to affect each other's work and you need to write tests separately. 
-For all these cases Testomat.io implemented tests branching and versioning, which helps software testing teams working on different parts of a project without impacting each other. Teams can more efficiently organize work on a shared tests base by branching and merging.
+The typical day-to-day workflow includes constant code changes made by developers. As the code evolves, quality assurance teams must update tests to maintain accurate test coverage. You may need to add tests for a new feature without affecting existing suites, or your team may include multiple specialists who need to work independently.
 
-## How To Create A Branch
+For all these cases, Testomat.io provides **test branching and versioning** — allowing teams to work on isolated changes without impacting each other or the Main branch.
 
-![image](./images/131292618-54b5a3bf-13ec-4aa2-8120-f40899d9f48c.png)
+These are the core actions available when working with branches:
 
-1. enter the name for your branch
-2. click on Create button
+- Create new branches (including directly from [Jira](https://docs.testomat.io/advanced/jira-plugin/branches/))
+- Switch between branches
+- Compare changes with Main (Diff)
+- Merge changes to Main (excluding diverged items)
+- Replace changes in Main (including diverged items)
+- Revert a merge (branch returns to Active)
+- Delete a branch permanently
 
-![image](./images/131292774-322b171a-421b-447d-90ba-1c805d4bd7e0.png)
+## Supported Merge Changes
 
-Here is your branch created:
+Here’s a quick overview of what changes are **supported** in Testomat.io branches and will be merged into Main:
 
-![image](./images/131293112-7fcf2b80-27c9-4d48-aeb3-5c468f3e68df.png)
+- **CRUD actions** in folders, suites, and tests
+- **Labels** (assign / unassign)
+- **Tags** (assign / unassign)
+- **Attachments** (add to the **test body** or delete)
+- **Jira issue linking** (link / unlink)
+- **CRUD actions** in **comments**
 
-Now you can switch to a created branch
+## How to Create a Branch
 
-![image](./images/131306785-a428e7ad-83cc-4542-b47e-0551c8d3ab19.png)
+1. Navigate to the **Branches** page
+2. Enter a branch title
+3. Click the **Create** button
 
-![image](./images/131306597-e3c82f06-d352-4faf-9e62-74cdc8c70104.png)
+![Create a new branch](./images/att1_348.png)
 
-## Work Within The Branch
+Your new branch will appear under the **Active** tab. You can create as many branches as needed and switch between them at any time.
 
-Now you work inside the branch
+![Created branch](./images/att2_348.png)
 
-![image](./images/131307137-afae47ce-17f5-4bc2-91a9-6dfd691e85d1.png)
+## How to Work within a Branch
 
-You can create suites and tests within the branch au usual. Suites and tests changed (1) and created (2) within the branch are marked with a badge, so you won't miss them.
+After creating a branch, switch to it to start working.
 
-![image](./images/131308407-7f044c31-4123-4982-9891-049a5db91c1a.png)
+### Switch to a Branch
 
-![image](./images/131310594-620fd0a8-5e43-426d-91cb-ba70448be39b.png)
+1. Click **'...'** menu next to the created branch
+2. Click the **Switch to this branch** button
 
-Also, you can view **Forks for tests changed in different branches** and switch to that branches. You need to open a test and switch to the Forks tab.
+![Switch to the branch](./images/att3_348.png)
 
-![Ability-to-View-Branch-Forks](./images/131476415-f50aac9a-760c-4ed6-9a67-2c169d855e6f.gif)
+Alternative way to switch to a branch:
 
-You can compare changes with Main 
+1. Open the created branch
+2. Click **Switch to Branch** button
 
-![screencast 2021-08-30 11-43-23](./images/131313266-66a5c413-8c4e-4e73-a7ad-4afe515082d4.gif)
+![Switch to Branch](./images/att4_348.png)
 
-You can switch to Main from the Branches page
+Inside the branch, you can manage folders, suites, and tests. All new or modified items are marked with a badge.
 
-![image](./images/131321183-37ad9b3e-9e8f-43e6-9860-205168095580.png)
+:::note
 
-Or from the chosen Branch
+**Drag & Drop** and the **Move** option are disabled in branches to prevent potential data loss and accidental structural conflicts.
 
-![image](./images/131321253-ad719a86-c5c9-43e4-97e0-8f2bb864a1e5.png)
+:::
 
-## Automated tests in Branches
+While working in a branch, the **current branch name** is displayed as a **badge in the bottom-right corner** of the any page. Clicking this badge takes you directly to the **Branches** page and highlights the current branch, allowing you to quickly **compare it with Main**.
 
-When testing different versions of your software you may need to add automated tests to a specific branch for some reason. Testomat.io allows working with automated tests within a branch, separately from Main. 
-You can import tests into a chosen branch or create a new branch during import using `TESTOMATIO_BRANCH` parameter. 
+![*badge in the bottom-right corner](./images/gif1_348.gif)
 
-[//]: # (Learn more [here.]&#40;https://docs.testomat.io/reference/import/#import-into-a-branch-2&#41;)
+### Automated Tests in Branches
 
-## Merge And Replace To Main
+When testing different versions of your software you may need to add automated tests to a specific branch for some reason. Testomat.io allows working with automated tests within a branch, separately from Main:
 
-After all work within the branch was done, you can merge or replace your changes to the main or replace
+- create a new branch during import using `TESTOMATIO_BRANCH` parameter, learn more [here](https://docs.testomat.io/project/import-export/import/import-js/#import-into-a-branch)
+- import tests into a chosen branch, learn more [here](https://docs.testomat.io/project/import-export/import/)
 
-![image](./images/131388624-1426d010-8f45-4cbd-8eca-2dec71af1432.png)
+![import automated tests](./images/att5_348.png)
 
-When the branch is merged it goes to the Merged tab.
+### Switch Back to Main
 
-![image](./images/131389066-d8ceb313-6fbd-4d00-aa72-d8d5f813f2f4.png)
+If you need to switch back to Main before merging, you can do it from the **Branches** page:
 
-You can use filters to find the exact branch quickly.
+![Branches page](./images/att11_348.png)
 
-![Filters-for-Branches](./images/131480685-2228f66f-aa9b-4461-8fa0-0ada5b95d312.gif)
+Or from a specific branch:
 
-## Difference between Merge And Replace
+1. Navigate to the **Branches** page
+2. Open the **Active** tab
+3. Click the branch you need
+4. Click the **Switch to Main** button
 
-**Merge** merges all changes except diverged tests and suites, which means Testomat.io will merge only changed within the current branch tests and suites, so the Main will be complemented.
+![Switch to Main](./images/att10_348.png)
 
-**Replace** merges all changes with diverged tests, replaces them in the Main, which means Testomat.io will fully replace the Main with the current branch. So previous changes within the Main can be off-track.
+## Compare Changes with Main
+
+You can compare changes with **Main**:
+
+1. Navigate to the **Branches** page
+2. Open the **Active** tab
+3. Click the branch you want to compare:
+
+- **Test Changes** tab – displays changes at the individual test
+- **Suite Changes** tab – displays changes at the suite level
+- **Structure** tab – displays all changes to the structure using a side-by-side diff view
+
+4. Open the test/suite you want to compare
+
+See the **diff** for a test or suite between Main and the current branch.
+
+![Diff between Main and branch](./images/att9_348.png)
+
+## Merge and Replace to Main
+
+After completing work in a branch, you can **merge** or **replace** your changes in Main.
+
+### Merge a Branch
+
+1. Navigate to the **Branches** page
+2. Open the branch you want to merge
+3. Click the **Merge** dropdown
+4. Select the **Merge** button
+
+![Merge branch](./images/att14_348.png)
+
+### Replace a Branch
+
+1. Navigate to the **Branches** page
+2. Open the branch you want to replace
+3. Click the **Merge** dropdown
+4. Select the **Replace** button
+
+![Replace branch](./images/att15_348.png)
+
+## Difference between Merge and Replace
+
+- **Merge**: applies all changes from the current branch **except diverged tests and suites**. Only modifications made in the branch are merged into Main.
+
+- **Replace**: applies all changes from the current branch, **including diverged tests and suites**. This fully replaces Main with the branch, so the Main can be off-track.
+
+## Revert Merge
+
+If a merge caused unintended changes or issues, you can **revert a merge** using one of the following methods:
+
+### From the Branches Page
+
+1. Navigate to the **Branches** page
+2. Open the **Merged** tab
+3. Find the branch you want to revert
+4. Click **Revert Merge** button
+
+![Revert Merge](./images/att7_348.png)
+
+### From the Pulse Page
+
+You can also revert a merge directly from the project activity log:
+
+1. Navigate to the **Pulse** page
+2. Find and open the merged branch entry labeled **Bulk edit applied**
+3. Click the **Rollback** button
+
+![Rollback button](./images/att8_348.png)
+
+After the revert/rollback:
+
+- the branch returns to the **Active** tab
+- all merged changes are undone
+- a new log entry appears **Bulk edit applied → Restored bulk operation** in Pulse
+
+This log confirms that the merge has been successfully reverted.
+
+## Working with Forks
+
+When the same test is modified in different branches, Testomat.io automatically creates **Forks**. You can switch between the original item and its forks at any time from this tab.
+
+1. Navigate to the **Tests** page
+2. Open the desired test
+3. Open the **Forks** tab
+4. Click the **Switch to it** button
+
+This makes it easy to track differences between branches and navigate to the version you need.
+
+![Forks](./images/att6_348.png)
+
+## How to Delete a Branch
+
+You can delete branches when they are no longer needed.
+
+### Delete a Single Branch
+
+1. Navigate to the **Branches** page
+2. Open the **Active** or **Merged** tab
+3. Click the **'...'** menu next to the branch you want to delete
+4. Select **Delete** button
+
+![Delete single button](./images/att12_348.png)
+
+### Delete All Merged Branches
+
+1. Navigate to the **Branches** page
+2. Open the **Active** or **Merged** tab
+3. Click the **'...'** menu in the **top-right corner** of the tab
+4. Select **Delete All Merged Branches**
+
+![Delete merged branches](./images/att13_348.png)
+
+:::note
+
+Deleting a branch is permanent and cannot be undone. Once deleted, the branch cannot be restored, and any previously merged changes cannot be reverted.
+
+:::
