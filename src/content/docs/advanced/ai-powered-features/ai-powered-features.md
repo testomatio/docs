@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, AI-powered features, test management, automate test documentation, Groq, summarize suite description, suggest test cases, generate test case description, generate code, generate bug description, analyze failed automated test cases, explain autotest failures, test coverage, test automation, debugging, defect logging, test coverage improvements, requirements-driven testing, traceability, alignment, AI Assistant, test design, software testing
+      content: Testomat.io, AI-powered features, test management, automate test documentation, Groq, summarize suite description, suggest test cases, generate test case description, generate code, generate bug description, analyze failed automated test cases, explain autotest failures, test coverage, test automation, debugging, defect logging, test coverage improvements, requirements-driven testing, traceability, alignment, AI Assistant, test design, software testing, Test Case Quality Review, Test Code Quality Review
 ---
 
 Testomat.io introduces **AI-powered generative features** to simplify and enhance your test management workflows. These tools leverage artificial intelligence to assist QA engineers by automating test documentation, generating actionable insights, and providing answers about their projects.
@@ -187,6 +187,60 @@ To check your Project framework settings go to Project Settings page:
 
 ![Testomat.io - AI-powered](./images/Project_settings.png)
 
+## Test Case & Code Quality Review
+
+The AI-powered **Quality Review** feature can be used for for both manual test descriptions and automated test code. It allows you to analyze your tests and provides intelligent feedback with actionable advice to improve clarity, structure, and adherence to best practices.
+
+The AI reviewer analyzes your Test Case for "adequacy" and clarity across key dimensions.
+
+**Key Quality Dimensions:**
+- **Title Clarity:** Is the title understandable even to someone who doesn't know the project context? A good title should tell you what's being tested at a glance, no decoder ring required.
+- **Preconditions:** Are they listed clearly, especially for complex or multi-step tests? Missing preconditions are one of the biggest reasons test cases fail in the hands of new team members.
+- **Steps Defined:** Are the steps structured and described well enough for another tester to repeat them easily? Think of it like a recipe, if someone can't follow it without calling you, it needs improvement.
+- **Expected Results:** Do we clearly know what success looks like at the end? Vague expected results like "system works correctly" won't cut it. Be specific.
+- **Reusability:** Could a new team member pick up this test and understand it without extra help? This is the ultimate litmus test for quality.
+
+When these aspects are well-covered, you can confidently say your test case is high quality, written in an accessible way, reusable across contexts, and easy to maintain in the future.
+
+This review is especially valuable for large projects with multiple testers, helping QA Leads and Managers monitor consistency and control the quality of testing documentation across the team.
+
+Based on its analysis of these **Key Quality Dimensions**, AI reviewer returns a **Test Case Score** and a list of improvement recommendations.
+
+**Key benefits of AI Review:**
+
+- **Consistency:** Unlike human reviewers, AI focuses on the same aspects every time.
+- **Scalability:** AI easily reviews large volumes of tests (e.g., 500 test cases) without burnout.
+- **Speed:** AI review is instant, unlike human review, which can be slow under tight deadlines.
+- **Availability:** AI is always available, even when senior reviewers are not.
+
+AI doesn't replace human judgment, but it provides a consistent baseline that every test case should meet before human eyes review it.
+
+### Test Case Quality Review
+
+This feature evaluates the quality of a manual test’s description, suggesting improvements for readability, consistency, and completeness.
+
+1. Go to 'Tests'.
+2. Select the Test Case with description you want to review.
+3. On 'Description' tab, click **'Extra menu'** button.
+4. Select **'Test Quality Review'** option.
+
+![Testomat.io - AI-powered](./images/Test_quality_review_1.gif)
+
+### Test Code Quality Review
+
+This feature reviews your automated test code to detect potential issues, enhance maintainability, and align with testing standards.
+
+1. Go to 'Tests'.
+2. Select Test Case with the code that you want to review.
+3. On 'Code' tab, click **'Extra menu'** button.
+4. Select **'Test Quality Review'** option.
+
+![Testomat.io - AI-powered](./images/Test_code_review_1.gif)
+
+Test cases are the backbone of systematic testing. Clear, consistent, and well-maintained tests ensure your entire QA process runs smoother.
+
+By combining human expertise with AI-powered review, you can create test documentation that actually effectively serves its purpose, helping teams test better, faster, and more reliably.
+
 ## Generate Bug Description Based on the Test Case
 
 When you executing tests and creating a new defect, Testomat.io will automatically suggest a concise, context-aware bug title and a description. These suggestions are based on the test case content and its execution results, helping teams report issues faster and more consistently.
@@ -318,7 +372,6 @@ Perfect for teams managing large-scale test executions across multiple environme
 ![Testomat.io - AI-powered Project Runs Status Report](./images/AI_RunGroup_Report_1.gif)
 
 This report is perfect for teams managing large-scale test executions across multiple environments or test types.
-
 
 ## Frequently Asked Questions (FAQ)
 
