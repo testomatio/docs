@@ -71,6 +71,21 @@ Create and manage Suites in Jira — organize related tests and link them to iss
 
 ![Unlink suite](./images/att25_401.png)
 
+### AI Actions for Suites
+
+Use AI to generate new test cases, or summarize the suite. Helps quickly expand test coverage, identify gaps, and create high-level insights about the suite without manual analysis.
+
+- **Suggest Tests** – Generate new test cases based on the patterns and structure of existing tests in this suite.
+- **Summarize** – Generate a concise summary of the test suite, highlighting key features, test coverage, and any notable findings.
+
+How to run AI Actions on a suite:
+
+1. Navigate to the **Suites** tab in the Jira Plugin
+2. Click the **AI Actions** button next to the specific suite
+3. Select and run the desired AI prompt
+
+![AI Actions for Suites](./images/att46_401.png)
+
 ## How to Work with Tests
 
 Manage your tests directly in Jira — create, edit, and link them to issues or plans within the **Testomat.io** plugin.
@@ -176,6 +191,29 @@ Option 2 — through **🔗Test** button
 4. Or click **Unlink All** to detach all linked tests at once
 
 ![Alt text](images/att35_401.png)
+
+### AI Actions for Tests
+
+Automatically generate or improve individual test descriptions. AI Actions save time on writing or refining test documentation, ensure clarity and consistency across the project, and improve overall quality.
+
+- **Suggest Description** – Generate a clear and concise description for a test based on its title and a list of descriptions from similar tests.
+- **Improve Description** – Enhances formatting and readability using Markdown without changing the content, ensuring consistency and easy scanning.
+- **Suggest Better Description** – Rewords and reorganizes the existing description to make it clearer, more informative, and concise while preserving the original intent.
+
+How to run AI Actions on a test:
+
+1. Navigate to the **Tests** tab in the Jira Plugin
+2. Click the **AI Actions** button next to the specific test
+3. Select and run the desired AI prompt
+
+![AI Actions for Tests](./images/att47_401.png)
+
+:::note
+
+- For Suggest Description, the **Run** button is only active if the Description field is **empty**.
+- For Improve Description and Suggest Better Description, the **Run** button is only active if the Description field is **not empty**.
+
+:::
 
 ## How to Work with Test Plans
 

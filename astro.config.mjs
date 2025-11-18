@@ -300,6 +300,7 @@ export default defineConfig({
 							items: [
 								{ label: 'Overview', link: '/advanced/jira-plugin' },
 								{ label: 'Tests in Jira', link: '/advanced/jira-plugin/work-in-jira' },
+								{ label: 'Runs & Reports', link: '/advanced/jira-plugin/runs-and-reports' },
 								{ label: 'Branches in Jira', link: '/advanced/jira-plugin/branches' },
 								{ label: 'Creating Jira Issue', link: '/advanced/jira-plugin/jira-issue' },
 							],

@@ -17,31 +17,62 @@ head:
 
 The Testomat.io Plugin for Jira is an integration tool that allows QA engineers, developers, and product teams to manage tests directly inside Jira. With this plugin you can link test cases, report execution results, and track testing progress without leaving your Jira workspace.
 
-The plugin was created to:
-
 - Bridge the gap between test management and issue tracking
 - Simplify QA and development collaboration
 - Ensure full traceability between Jira issues and Testomat.io test cases
 
+## Requirements
+
+Before starting integration, ensure you have:
+
+- Jira Cloud or Jira Server access
+- Administrator rights in Jira workspace
+- Project Manager or Owner role in Testomat.io project
+
 ## How to Install Testomat.io Plugin in Jira
 
-Install [Testomat.io Plugin from Atlassian Marketplace](https://marketplace.atlassian.com/apps/1224120/testomatio?hosting=cloud&tab=overview)
+- **Cloud:** Install [Testomat.io Plugin from Atlassian Marketplace](https://marketplace.atlassian.com/apps/1224120/testomatio?hosting=cloud&tab=overview)
+- **Jira Server**: Contact [Testomat.io Team](https://docs.testomat.io/support/)
 
-:::note
+## Jira Connection Types
 
-We also provide a Testomat.io Plugin for Jira Server. Contact [Testomat.io Team](https://docs.testomat.io/support/) to learn more about it.
+When connecting your Jira project to Testomat.io, you can use either an **Administrator’s account** or a **Regular account**. The connection type determines who in Jira can review linked tests, suites, and results.
 
-:::
+### Connect Jira with an Administrator’s Account
+
+This option grants **read-only visibility** to all Jira users, even if they don’t have a Testomat.io account.
+
+- Linked tests, suites, and run results are visible to all Jira users via the plugin
+- Test Coverage visibility is enabled to all Jira users via the plugin
+- Editing test cases or executing runs is available only to logged-in Testomat.io users with proper permissions
+- Requires Jira admin rights to install webhooks and write data to Jira as properties
+
+Use this setup if you want all Jira users to see testing data, but only authorized Testomat.io users can modify it.
+
+![Administrator’s Account](./images/att70_401.png)
+
+### Connect Jira with a Regular Account
+
+This option limits plugin visibility to only **authorized Testomat.io users**.
+
+- Linked tests and run results in the Jira plugin are visible only to users who are logged in to Testomat.io
+- Editing or executing tests also requires a Testomat.io login and proper permissions
+- Requires permissions to create and link issues
+
+Use this setup if you need to restrict access to test data.
+
+![Regular Account](./images/att71_401.png)
 
 ## How to Connect to Jira Project
 
 :::note
 
-Connecting to a Jira project requires **administrator rights** to enable two-way integration capabilities, such as editing test cases or executing tests directly in Jira. The user who configures Jira integration in project settings must have Jira admin rights, otherwise the Testomat.io project cannot be connected.
+Connecting a Jira project requires Jira **administrator rights** to enable two-way integration features, such as editing test cases or executing tests directly in Jira.
+The user who configures the integration in Project Settings → Jira Integration must have Jira admin rights; otherwise, the Testomat.io project cannot be connected.
 
 :::
 
-To link tests to Jira issues, connect a Testomat.io project to your Jira project. Follow these steps:
+You can connect your Testomat.io project to Jira to enable linking between tests and Jira issues. Follow the steps below to set up the integration.
 
 1. Navigate to **Settings** in the sidebar
 2. Click on **JIRA integration**
@@ -49,7 +80,10 @@ To link tests to Jira issues, connect a Testomat.io project to your Jira project
 
 ![Add Jira project in Testomat.io](./images/att1_401.png)
 
-Once **New Jira Project** window opens in the sidebar, fill in details:
+Once **New Jira project** window opens in the sidebar, fill in details:
+
+At this stage, select the appropriate [Jira connection type](https://docs.testomat.io/integrations/issues-management/jira/#jira-connection-types)
+based on the level of access you want to grant.
 
 4. **Email (Cloud)** or **Username (On Premise)** (required)
 5. **API Token (Cloud)** or **Password (On Premise)** (required)
@@ -58,17 +92,17 @@ Once **New Jira Project** window opens in the sidebar, fill in details:
 8. **Context Path** (optional, for Jira On Premise only)
 9. Click **Save** button
 
-![Save Jira Project](./images/att2_401.png)
+![Save Jira Integration](./images/att72_401.png)
 
 Once the project is connected you will see your integration listed on the **Jira integration** page.
 
-![linked JIRA project](./images/att3_401.png)
+10. Open the Jira integration again and click the **Test Connection** button to ensure that it is connected properly
 
-10. Open the integration again and click the **Test Connection** button to ensure that it is connected properly
-
-![Test connection button](./images/att5_401.png)
+![Test Connection](./images/att74_401.png)
 
 11. Click the **Install Webhook** button to enable automatic unlinking of items when a related Jira issue is deleted
+
+![Install Webhook](./images/att73_401.png)
 
 :::note
 
@@ -115,3 +149,12 @@ Some Jira fields are not currently supported in our integration:
 You can connect multiple Jira projects to a single Testomat.io project by following the same steps for each additional connection.
 
 ![multiple JIRA projects](./images/att4_401.png)
+
+## FAQ & Troubleshooting
+
+**Q: Why do I see the message: 'Oops! No project is linked.' in Jira?**
+
+A: This message appears when the Jira Plugin cannot access the linked project:
+
+- You don’t have access to the project in Testomat.io and cannot view it in Jira.
+- Or the integration was set up using a Regular Account, and you are not logged in to Testomat.io.
