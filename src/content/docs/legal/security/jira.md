@@ -84,9 +84,9 @@ GET /rest/api/2/search
 
 ### Required Permissions
 
-It's recommended to create a dedicated service account with appropriate permissions for the integration, rather than using individual user accounts. This service account should have:
+It's recommended use an individual user account with appropriate permissions for the integration.
 
-This service user should have the following JIRA permissions:
+This account should have the following JIRA permissions:
 
 1. **Project Level Permissions:**
    - Browse Project
