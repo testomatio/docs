@@ -112,6 +112,6 @@ You can also create your own XLS file to import tests into Testomat.io. Follow t
 | Owner       | name of test owner, can be blank                                                                                |
 | Description | put here the description of your test, [Markdown format ](https://www.markdownguide.org/basic-syntax/)supported |
 | Labels      | place here labels and custom fields, can be blank                                                               |   
-| Issues      | place here Jira key in format ABC-123 or other IMS keys, can be blank                                                               | 
+| Issues      | place here Jira key in format ABC-123 or other IMS keys, can pass multiple Jira keys separated by a comma, can be blank|                                                               | 
 
 You can download the custom Testomat.io example file [here](https://testomatiofiles.ams3.cdn.digitaloceanspaces.com/Testomat_example.xlsx).
