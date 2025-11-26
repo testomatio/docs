@@ -12,7 +12,7 @@ head:
 
 # API Access Guide
 
-Testomat.io provides a robust API that allows users to integrate, automate, and extend their test management workflows.  
+Testomat.io provides a robust API that allows users to integrate, automate, and extend their test management workflows. Testomat.io uses [JSON API](https://jsonapi.org) as standard for Request and Response data. 
 Access to the API is secured using **Access Tokens**, which ensure that only authorized systems and users can interact with your projects.
 
 ---
