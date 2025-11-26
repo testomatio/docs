@@ -35,11 +35,13 @@ There are two main types of access tokens in Testomat.io:
 
 ---
 
-## API Authentication with General Token
+## API Authentication with either General Token or Email + Password
 
-Before you can interact with the Testomat.io API, you need to authenticate using your **General API Token**.
+Before interacting with the Testomat.io API, you must authenticate and obtain a JWT token, which is required for all subsequent requests.
 
-### **Step 1: Log In Using Your API Token**
+You can authenticate in one of two ways:
+
+### Option 1 **Log In Using Your API Token**
 
 **Request Example:**
 
@@ -51,9 +53,22 @@ POST /api/login
 };
 ```
 
+### Option 2 **Log In Using Your Email + Password**
+
+**Request Example:**
+
+```bash
+POST /api/login
+
+{
+  "email": "test.testomat@gmail.com",
+  "password": "Test123!"
+};
+```
+
 ### **Step 2: Receive JWT Token**
 
-After sending your login request with the API token, you’ll receive a **JSON Web Token (JWT)** in the response.  
+After sending your login request, you’ll receive a **JSON Web Token (JWT)** in the response.  
 This token is used to authenticate all subsequent API calls.
 
 **Response Example:**
@@ -95,25 +110,39 @@ Each suite response includes:
 
 - Tests contained within that suite
 
-## Working with Test Runs
+## Working with Runs Results
 
-You can also use the API to list, create, or inspect test runs for a given project.
+You can use the API to list, create, and inspect runs within a project.
 
-### **List Test Runs**
+**Important:** In the testomat.io API, the path parameters `/run/...` and `/testrun/...` refer to **two different resources**:
+
+- **`/run/...`** endpoints return information about a **Run** — the execution session itself — including the list of tests that belong to it.
+- **`/testrun/...`** endpoints return **Test Run** records — the *results* of individual tests executed within a run.
+
+
+### **List Runs**
 
 Retrieve all test runs associated with a project.
 
 ```bash
-GET /api/{project_id}/testruns
+GET /api/{project_id}/runs
 ```
 
-### **Get Test Run Details**
+### **Get Run Details**
 
-Retrieve details of a specific test run by ID.
+Retrieve details of a specific run by ID.
 
 ```bash
-GET /api/{project_id}/testruns/{id}
+GET /api/{project_id}/run/{id}
 ```
+
+
+To get all test results from a specifc run:
+
+```bash
+GET /api/{project_id}/testruns?run_id={run_id}  
+```
+
 
 ## API Reference
 
