@@ -371,6 +371,28 @@ If you remove a Run from the Archive, it is permanently deleted. This step is ir
 
 ![Delete runs](./images/att3_444.png)
 
+### Runs Activity Tracked in Pulse
+
+All actions related to purging or permanently deleting Runs are recorded in [Pulse](https://docs.testomat.io/project/pulse/) under the **Deleted Run** activity type. This ensures full transparency and traceability of Run lifecycle events.
+
+Pulse displays different activity messages depending on how the Run was removed:
+
+1. **Automatic purge**  
+   When a Run is purged automatically by the system due to expiration, Pulse records an entry similar to:  
+   *“Manual tests at 20 Nov 2025 11:56 have been purged by system on expiration (moved to Archive).”*
+2. **User-initiated purge**  
+   When a Run is purged manually, Pulse records the event:  
+   *“Manual run has been purged by user (moved to Archive).”*
+
+
+3. **Permanent deletion from Archive**  
+   When a Run is permanently removed from the Archive, Pulse displays the event indicating that the manual run has been permanently deleted.
+
+   ![Runs Activity Tracked in Pulse](./images/Run_purging_in_pulse.png)
+
+These Pulse records provide a clear audit trail for all purge-related actions, mirroring the two-step deletion flow and ensuring accountability across both manual and automated processes.
+
+
 ### Summary
 
 By introducing the Purge option, Testomat.io ensures that Run data is handled with more safety and flexibility. You can keep your workspace clean and optimize storage, while still maintaining the ability to restore important Runs from the Archive when needed.
