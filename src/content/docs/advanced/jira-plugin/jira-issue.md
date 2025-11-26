@@ -40,6 +40,17 @@ You can even create an issue as a subtask by **specifying a Parent ticket**:
 
 ![Testomatio.io - Creating JIRA Issue as Subtask](./images/New_8rxMYOhd_2024-10-19.png)
 
+- Once created, the linked issue appears under the test run, indicated by the **issue icon**
+- Hovering over the icon shows the **issue title** and **current status**
+- Clicking the icon redirects to the issue in Jira
+- This icon remains visible both during test execution
+
+![Jira Issue in Ongoing run](./images/att4_462.png)
+
+- and after the run is completed, making it easy to track related issues at a glance
+
+![Completed Run](./images/att5_462.png)
+
 The generated ticket will contain the specified information, as well as information about the test run and a web link to the test run report:
 
 ![Testomatio.io - Created ticket in Jira](./images/New_8ENxIFXB_2024-10-19.png)
@@ -53,6 +64,12 @@ To create a JIRA issue for a Failed Manual or Automated Run, open the run and se
 Create a new issue for a run or append to an existing issue.
 
 ![Testomatio.io - Link Failed Run to existing issue or create a new one](./images/New_tYJ8Bm2P_2024-10-19.png)
+
+- Once created, the linked issue appears **under the completed run**, indicated by the **issue icon** in the run’s sidebar
+- Hovering over the icon displays the **issue title** and **current status**
+- Clicking the icon redirects directly to the issue in the Jira project
+
+![Linked Jira to Run](./images/att6_462.png)
 
 ## How to Link a Test to a Jira Issue
 
@@ -78,7 +95,8 @@ Once the **Link to Issue** modal window appears:
 10. Optionally, include a **Description** to provide test context
 11. Fill in any **Jira fields** available in your configuration.
 
-Testomat.io automatically displays all supported fields — such as **Parent**, **Components**, **Fix versions**, **Priority**, **Labels**, or other custom fields defined in your Jira project.  
+Testomat.io automatically displays all supported fields — such as **Parent**, **Components**, **Fix versions**, **Priority**, **Labels**, or other custom fields defined in your Jira project.
+
 These may appear immediately or after clicking **Show Optional Fields**, depending on your project setup.
 
 :::note
@@ -91,7 +109,9 @@ The available fields depend on your Jira project configuration. To see all suppo
 
 ![Save new Jira Issue](./images/att43_401.png)
 
-The linked issue appears under the test, indicated by the issue icon which redirected to the issue in Jira project.
+The linked issue appears under the test, indicated by the **issue icon**, which redirects to the issue in the Jira project. In addition, Testomat.io also displays the linked Jira issue’s **title** and **status**, making it easier to recognize the issue at a glance.
+
+![Linked Jira issue showing title and status](./images/att1_462.png)
 
 :::note
 
@@ -99,20 +119,30 @@ You can link a test to multiple issues. In this case their IDs will be displayed
 
 :::
 
-![Jira Link](./images/att44_401.png)
+![Multiple Jira issues](./images/att2_462.png)
 
 ## How to Link a Suite to a Jira Issue
 
-Linking a suite to a Jira issue works similarly to linking an individual test, with one key difference: **all tests within the suite (but not sub-suites) will automatically be linked to the Jira issue.**
+Linking a suite to a Jira issue works similarly to linking an individual test, with one key difference: **all tests within the suite will automatically be linked to the Jira issue.**
+
+:::note
+
+Linking is available only at the **suite level**. You cannot link a Jira issue to a folder, and the **Link to Issue** button does not appear on folder level.
+
+:::
 
 1. Navigate to the **Tests** page in your Testomat.io project
 2. Open the suite you want to link
 3. Click the **extra menu (⋯)** button in the top-right corner
 4. Select **Link to Issue**
 
+![Link Jira Issue to Suite](./images/att45_401.png)
+
 Follow the same steps above as linking a single test: link an existing issue or create a new one, select issue type, fill required fields, and click Create Jira Issue.
 
-![Link Jira Issue to Suite](./images/att45_401.png)
+When a suite is linked, both the suite and all its tests will display the linked Jira issue icon along with its title and status, providing immediate context.
+
+![Suite Jira Issue](./images/att8_462.png)
 
 :::note
 

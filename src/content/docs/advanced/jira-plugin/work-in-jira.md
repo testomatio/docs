@@ -136,7 +136,7 @@ Quickly create multiple tests at once directly from Jira.
 
 ### How to Link and Unlink a Test
 
-**To link a test to a Jira issue:**
+#### How to Link a Test
 
 1. Navigate to the **Tests** tab
 2. Click the **🔗 Test** button with the link icon
@@ -156,12 +156,13 @@ Quickly create multiple tests at once directly from Jira.
 
 ![Link All tests](./images/att32_401.png)
 
-**To unlink a test:**
+#### How to Unlink a Test
 
-You can unlink tests from a Jira issue in two ways:
+You can unlink tests from a Jira issue in several ways:
 
 - via the **menu button (⋯)**
 - through the **🔗Test** button
+- using **Bulk Unlink** (recommended for mass actions)
 
 Option 1 — via the **menu button (⋯)**
 
@@ -191,6 +192,18 @@ Option 2 — through **🔗Test** button
 4. Or click **Unlink All** to detach all linked tests at once
 
 ![Alt text](images/att35_401.png)
+
+Option 3: **Bulk Unlink** – via the **'multi-select'** button
+
+1. Navigate to the **Tests** tab
+2. Click the **'multi-select'** button at the bottom right corner
+3. Use the checkboxes to select individual tests:
+   - Click **Select All** to select all tests
+   - Click **Select None** to clear the selection
+4. Click the **Trash** icon to unlink the selected tests
+5. In the confirmation pop-up (**'Are you sure that you want to unlink # tests?'**), click **Unlink** to confirm
+
+![Confirmation pop-up](./images/att3_462.png)
 
 ### AI Actions for Tests
 
