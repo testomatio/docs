@@ -155,17 +155,16 @@ Certainly! Below is the extended version of each point with at least 5 items:
   - Data protection impact assessments are conducted for new projects or changes.
   - Policies and procedures are updated regularly to reflect changes in laws and regulations.
 
-## Infrastructure
 
-At Testomat.io, our infrastructure is a pivotal aspect of our commitment to delivering secure, reliable, and high-performing services. We have meticulously structured our infrastructure to align with industry-leading standards and best practices, ensuring optimal security and performance.
+## Infrastructure and Hosting
 
-### Hosting on DigitalOcean
+We have transitioned our hosting strategy to a robust, multi-provider architecture to ensure maximum performance and security. Our core infrastructure and data are hosted on Hetzner, a leading cloud provider recognized for its high-performance hardware and strict data protection standards.
 
-We have chosen to host all our services and data on DigitalOcean, a renowned cloud infrastructure provider known for its reliability and security. By leveraging DigitalOcean's advanced and secure infrastructure, we aim to provide our users with seamless and secure access to our services. DigitalOcean’s infrastructure is designed to be resilient and redundant, minimizing the risks of downtime and data loss. 
+To further enhance our service delivery, we utilize Netlify for optimized application deployment and Cloudflare for edge security and content delivery. This hybrid approach ensures redundancy and resilience across our entire stack.
 
-DigitalOcean is SOC 2 certified, which is a testament to their commitment to safeguarding customer data and managing it with the highest level of integrity and confidentiality. 
+Hetzner maintains ISO 27001 certification, demonstrating a rigorous commitment to information security management and data confidentiality.
 
-https://www.digitalocean.com/trust/certification-reports
+https://docs.hetzner.com/general/others/certificates/
 
 
 
@@ -176,6 +175,9 @@ Our approach to security and compliance is holistic, ensuring that every facet o
 ### Compliance with Standards
 We adhere to stringent compliance standards to ensure that our services meet and exceed the regulatory requirements and industry best practices. Our compliance framework is addressing various aspects of data protection, privacy, and operational integrity. We stay abreast of the latest developments in compliance standards and promptly adapt our practices to align with any new requirements.
 
+### SOC 2
+Testomat.io is currently in the process of obtaining formal SOC 2 certification. However, we do not wait for the certificate to practice security; we are already executing all necessary controls and procedures required for compliance. We operate as a SOC 2-compliant organization today to ensure we are ready for formal attestation.
+
 ### Backup Schedules
 Recognizing the diverse needs of our users, we offer backup schedules, allowing users to configure backups according to operational needs. This feature ensures enhanced data redundancy and recovery, enabling users to restore their data efficiently in the event of any unforeseen incidents or system failures.
 
@@ -184,11 +186,13 @@ For users seeking greater control over their data and infrastructure, we provide
 
 ## Security Methodology
 
-Keeping customer data, our apps, and our systems safe is what matters most to us at Testomat.io. We work hard to keep everything secure by using the best safety practices out there and by always looking for ways to make our safety rules and actions even better.
+At Testomat.io, the security of our customer data and systems is paramount. We maintain a proactive security stance driven by a dedicated internal security team responsible for systematic architecture review.
 
-Everyone on our team, whether they help our customers, build our software, or look after our systems, knows our safety rules well. We make sure of this by giving our team regular training and updates on how to keep everything secure.
+To ensure our defenses remain robust against evolving threats, we conduct regular penetration testing engagements. These assessments allow us to identify and remediate vulnerabilities before they can be exploited.
 
-In simple terms, we’re always learning and doing our best to make sure our users can trust us to keep their data safe and sound.
+Security is a shared responsibility across our entire organization. Whether in customer support or engineering, every team member receives regular security training and updates. 
+
+We are committed to continuous improvement, ensuring our users can trust us to keep their data secure and confidential.
 
 
 ## Network Monitoring
@@ -197,19 +201,22 @@ We have lots of tools to keep our network safe. We use firewalls and other tools
 
 ## Development Practices
 
-Our teams use top-notch practices to make sure our code and systems are really secure. We regularly check our code, keep close track of any changes, and teach our team about common security risks. We also have our own secure setup to keep our reliance on outside sources low and to keep important code all in one place.
+Our teams use top-notch practices to ensure our code and systems remain secure. We regularly peer-review code, perform manual penetration tests on all new features, and maintain strict version control over changes. Beyond the code itself, we continuously educate our team on common security risks. We also have our own secure setup to keep our reliance on outside sources low and to keep important code all in one place.
 
 ## Managing Vulnerabilities
-At Testomat.io, we are proactive in finding and managing any weak points that might be present in our systems. Our approach is ensuring that vulnerabilities are identified promptly and addressed effectively to maintain the security and integrity of our services.
+At Testomat.io, we are proactive in finding and managing any weak points that might be present in our systems. Our approach ensures that vulnerabilities are identified promptly and addressed effectively to maintain the security and integrity of our services.
 
 ### Identifying Vulnerabilities
-We employ automated tools and techniques to scan and assess our systems regularly. This allows us to identify any vulnerabilities before they can be exploited, ensuring the ongoing security of our platform. Our team stays informed about the latest security threats and uses this knowledge to fortify our defenses continually.
+We employ a hybrid approach that combines automated scanning tools with manual penetration testing to assess our systems regularly. This allows us to identify both common security flaws and complex logic vulnerabilities before they can be exploited. Our team stays informed about the latest security threats and uses this knowledge to fortify our defenses continually.
 
 ### Addressing Vulnerabilities
 Once a vulnerability is identified, we act to analyze and rectify it. We prioritize resolving any issues that pose a risk to our users and our platform, ensuring that any potential impact is mitigated promptly. We implement robust solutions to prevent the recurrence of similar vulnerabilities.
 
+### Remediation & Verification
+After a fix is implemented, we perform targeted remediation testing to validate the solution. This process ensures that the specific vulnerability has been effectively neutralized and that the changes have not introduced any new security regressions into the system.
+
 ### Disclosure Policy
-We believe in transparency and responsible disclosure. If a vulnerability is discovered, we communicate it appropriately, ensuring that our users are informed and aware of any risks and the measures taken to resolve them. We work collaboratively with the security community and welcome any reports of vulnerabilities, addressing them with the utmost seriousness and urgency.
+We believe in transparency and responsible disclosure. If a vulnerability is discovered, we communicate it appropriately, ensuring that our users are informed and aware of any risks and the measures taken to resolve them. We work collaboratively with the internal security team and welcome any reports of vulnerabilities from the external bug hunters, addressing them with the utmost seriousness and urgency.
 
 ### Continuous Improvement
 
