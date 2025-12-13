@@ -233,6 +233,10 @@ Testomat.io allows you not only view company usage data but also export it to a 
 
 ![Testomatio.io - Company statistics export](./images/Company_statistics_export_4.png)
 
+Selected data is downloaded in the xlsx file. 
+
+![Testomatio.io - Company statistics export](./images/Company_export_file.png)
+
 Every report allows you to refine data using specific criteria:
 
 1. **Date Range:** Default date range in all reports is set to **Last 30 days** but is fully customizable.
