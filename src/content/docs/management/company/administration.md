@@ -192,11 +192,61 @@ On the Sign On Settings page, you can enter a domain in the corresponding field 
 For more detailed instructions on how to set up auto-provisioning, check the official documentation:  
 [Single Sign-On in Testomat.io](https://docs.testomat.io/integrations/single-sign-on/)
 
+## Company Statistics Widgets
+
+**Company Statistics** is a feature that provides an overview of activity across all projects, offering visibility into data changes, user behavior, and AI utilization within your organization.
+
+:::note
+
+This feature is available only for users with **Owner** and **Manager** roles within the selected Company.
+
+:::
+
+**Company Statistics feature includes three insightful widgets:**
+
+- **Data Statistics:** Tracks model activity such as Tests, Plans, Suites, Runs, Imports, and Test Runs. Displays created, updated, and deleted counts per project for complete visibility of repository changes.
+- **User Activity:** Shows detailed insights into user behavior, including logins, actions performed on tests and other models, and manual test run activity across the organization.
+- **AI Usage:** Monitors AI prompt utilization, displaying success rates, the number of active users, and usage distribution by prompt type across all projects.
+
+### How to View and Export Company Statistics
+
+Testomat.io allows you not only view company usage data but also export it to a spreadsheet for reporting, sharing, or deeper analysis.
+
+**To export usage data:**
+
+1. Go to **'Companies'**.
+2. Open your Company.
+
+![Testomatio.io - Company statistics export](./images/Company_statistics_export_1.png)
+
+3. Click **'Extra menu button'**.
+4. Select **'Statistics'**.
+
+![Testomatio.io - Company statistics export](./images/Company_statistics_export_2.png)
+
+5. Click **'View report'** for select Report type.
+
+![Testomatio.io - Company statistics export](./images/Company_statistics_export_3.png)
+
+6. Filter data by date/project/user - *optional*.
+7. Click **'Export to Excel'**.
+
+![Testomatio.io - Company statistics export](./images/Company_statistics_export_4.png)
+
+Every report allows you to refine data using specific criteria:
+
+1. **Date Range:** Default date range in all reports is set to **Last 30 days** but is fully customizable.
+2. **Project:** View data for specific project.
+3. **User:** Track activity for specific team member.
+4. **AI Prompt:** Filter by specific AI prompt types (available only in **'AI Usage Statistics'**).
+
+![Testomatio.io - Company statistics](./images/Company_statistics_filtering.png)
+
 ## Global Search
 
-Testomat.io offers a Global Search functionality designed to help you quickly find tests or test suites, even as the number of projects, companies, and tests increases. This feature allows you to search across all companies and projects you have access to, making it easier to navigate and find what you're looking for.
+Testomat.io offers a **Global Search** functionality designed to help you quickly find tests or test suites, even as the number of projects, companies, and tests increases. This feature allows you to search across all companies and projects you have access to, making it easier to navigate and find what you're looking for.
 
-Global Search is available from the Dashboard, Companies and Analytics tabs. You can search for tests using either keywords or tags, and the results will be displayed in a drop-down list for easy selection.
+**Global Search** is available from the Dashboard, Companies and Analytics tabs. You can search for tests using either keywords or tags, and the results will be displayed in a drop-down list for easy selection.
 
 ### How to Search
 
