@@ -168,6 +168,7 @@ export default defineConfig({
 
 										{ label: 'Import Tests From Testmo', link: '/project/import-export/import/import-tests-from-testmo' },
 										{ label: 'Import Tests From QMetry', link: '/project/import-export/import/import-tests-from-qmetry' },
+										{ label: 'Import Tests From Allure TestOps', link: '/project/import-export/import/import-tests-from-allure-testops' },
 										{ label: 'Import Tests From TestCaseLabs', link: '/project/import-export/import/import-tests-from-testcaselabs' },
 										{ label: 'Import Tests From XRay', link: '/project/import-export/import/import-tests-from-xray' },
                     
