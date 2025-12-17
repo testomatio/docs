@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, CSV, Allure TestOps, test import, migration, manual tests, automated tests, test management, custom CSV
+      content: Testomat.io, CSV, Allure TestOps, test import, migration, manual tests, automated tests, test management, custom CSV, convert tests.
 ---
 
 If you have existing tests in Allure TestOps and wish to migrate to Testomat.io, you can import tests from Allure TestOps using a customizable migration script for more advanced, tailored imports.
