@@ -210,7 +210,7 @@ This feature is available only for users with **Owner** and **Manager** roles wi
 
 ### How to View and Export Company Statistics
 
-Testomat.io allows you not only view company usage data but also export it to a spreadsheet for reporting, sharing, or deeper analysis.
+Testomat.io allows you not only view company usage data but also **export it to a spreadsheet** for reporting, sharing, or deeper analysis.
 
 **To export usage data:**
 
