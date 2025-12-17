@@ -69,19 +69,38 @@ For more details go to the relevant section - [RunGroup Report in Basic View](ht
 
 ## How to Move a Run to a RunGroup
 
-You may need to move a Run to a specific RunGroup (e.g., to associate it with a particular release or build). Use the **'Move'** functionality for this purpose:
+You may need to move a Run to a specific RunGroup (e.g., to associate it with a particular release or build). There are two ways to do this in Testomat.io:
 
-1. Navigate to the **'Runs'** page.
-2. Select the Run you want to move.
-3. Click the **'Extra menu'** button.
-4. Select **'Move'** from the dropdown menu.
+Method 1: Move a Run to a RunGroup
+
+1. Navigate to the **'Runs'** page
+2. Select the Run you want to move
+3. Click the **'Extra menu'** button
+4. Select the **'Move'** from the dropdown menu
 
 ![Testomat.io - Move Run option in the dropdown menu](./images/Move_Run_1.png)
 
-5. In the pop-up window, choose the **destination RunGroup**.
-6. Click the **'Move'** button to confirm action.
+5. In the pop-up window, choose the **destination RunGroup**
+6. Click the **'Move'** button to confirm the action
 
 ![Testomat.io - Destination RunGroup selection dialog](./images/Move_Run_2.png)
+
+Method 2: Add Existing Runs to the RunGroup
+
+1. Navigate to the **'Runs'** page
+2. Click the **'Extra menu'** next to the RunGroup you want to move Runs into
+3. Select the **'Add Existing Run'** option
+
+![Add Existing Run](./images/att1.png)
+
+4. In the modal window, select the Run(s) you want to move
+5. Click the **Move Runs to Group** button to confirm
+
+![Move Runs to Group](./images/att2.png)
+
+Moved or added Runs will appear in the selected RunGroup.
+
+![List of added runs into a group](./images/att3.png)
 
 ## RunGroup Report Basic View
 
