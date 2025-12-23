@@ -224,6 +224,7 @@ Now you can see that this test is assigned to a certain user. The user icon has 
 
 - set when creating a new test
 - changed at any time while editing an existing test
+- updated in bulk for multiple tests at once
 - used to filter tests
 - visually identified via an icon displayed next to the test title
 
