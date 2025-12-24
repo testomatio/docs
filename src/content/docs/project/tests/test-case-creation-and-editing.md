@@ -166,7 +166,7 @@ After saving the changes in the edit mode, you will see a preview of the drawing
 
 ## How to Delete Attachment from Test Case
 
-Save time by quickly deleting unnecessary attachments, ensuring your test cases remain relevant and clutter-free. To delete attachment: 
+Save time by quickly deleting unnecessary attachments, ensuring your test cases remain relevant and clutter-free. To delete attachment:
 
 1. On 'Tests' page open Test Case.
 2. Click **'Attachments'** tab.
@@ -216,23 +216,97 @@ Now you can see that this test is assigned to a certain user. The user icon has 
 
 ![See assigned person](./images/2023-08-03_01.12.54@2x.png)
 
-## How to set a priority to a test
+## Test Priority
 
-First, you should open the test and click on the checkbox icon next to the test title, as shown in the picture.
+**Priority** helps teams quickly understand the importance of a test and focus on the most critical scenarios first. By assigning a priority, you can better organize test cases, improve visibility, and efficiently manage execution and reporting.
 
-![How to set priority](./images/2023-08-03_01.15.20@2x.png)
+**Priority can be:**
 
-You will see a list of priority types
+- set when creating a new test
+- changed at any time while editing an existing test
+- updated in bulk for multiple tests at once
+- used to filter tests
+- visually identified via an icon displayed next to the test title
 
-![See list of priorities](./images/2023-08-03_01.15.54@2x.png)
+**Priority visibility:**
 
-Click on the priority type you need and you will see the checkbox changed
+- priority icon is displayed next to each test title
+- priority icon is displayed in the test tree
 
-![Priority changed](./images/2023-08-03_01.17.58@2x.png)
+This allows teams to instantly focus on the most important tests.
 
-Also, you will see set priority in your suite
+### Available Priority Levels
 
-![Priorities in test tree](./images/2023-08-03_01.19.08@2x.png)
+Testomat.io supports the following priority levels:
+
+- **Low** – low-importance test
+- **Normal** – default priority
+- **High** – high importance test
+- **Important** – critical/blocker test
+
+Each priority level has a dedicated icon to make test importance easily recognizable across the interface.
+
+### How to Set Priority When Creating a Test
+
+When creating a new test, you can assign a priority directly from the test editor:
+
+1. Navigate to the **Tests** page
+2. Click the **+ Test** button
+3. Select a suite for test
+4. Click the **Select** button
+
+![Select destination](./images/att2_1457.png)
+
+5. Click the **Priority icon** to open the list of available priorities next to the **New Test** indicator
+6. Select the required priority
+7. Enter the test title
+8. Save the test — the selected priority will be applied.
+
+![Set priority](./images/att1_1457.png)
+
+:::note
+
+If no priority is selected, the test has **normal** priority by default. Consider setting a higher priority for tests that are critical or blockers.
+
+:::
+
+### How to Change Priority When Editing a Test
+
+You can update the priority of an existing test at any time:
+
+1. Navigate to the **Tests** page
+2. Open the test you want to edit
+3. Click the **Priority icon** next to the **Edit Test** indicator
+4. Click on the desired priority
+5. Save the test — the changed priority will be applied
+
+![Change Priority](./images/att3_1457.png)
+
+The icon will update immediately to reflect the selected priority.
+
+### How to Bulk Assign (Change) Priority
+
+You can change the priority for multiple tests at once to save time and quickly update large test sets.
+
+1. Navigate to the **Tests** page
+2. Enable **multi-select** button and select tests using the checkboxes
+3. Click the **Priority** button at the bottom of the screen
+4. In the popup, select the desired priority (e.g., important)
+5. Click **Apply** button
+
+![Bulk Assign Priority](./images/att5_1457.png)
+
+All selected tests will immediately update to the new priority, and the icons will reflect the change.
+
+### How to Filter Tests by Priority
+
+Testomat.io allows you to filter tests by Priority, making it easy to:
+
+- focus on High or Important tests during regression or smoke testing
+- quickly narrow down large test suites
+- combine Priority filtering with other filters such as tags, a state or an assignee
+
+![Filter by priority](./images/att4_1457.png)
 
 ## How to add parameters to a test
 
@@ -323,4 +397,3 @@ To delete a parameter:
 - Click **‘Save’**
 
 ![Second_Method_Edit_Header_Name](./images/att13_4962.png)
-
