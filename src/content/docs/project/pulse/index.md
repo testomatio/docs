@@ -45,21 +45,13 @@ Activity tracking applies to all main QA entities in your project. For each enti
 - **Run** — tracking activity for runs, with versioned changes, before/after diffs, including manual or automatic purge, run restore, and permanent removal.
 - **Plan** — tracking full **CRUD** activity for plans (manual, automated, mixed), with versioned changes, before/after diffs, including filter updates, included/excluded suites and tests, query changes, manual/automated state changes, and plan restore.
 
+**QA Leads** can use this overview to identify active contributors, while **PMs** can quickly assess whether recent changes align with sprint goals or release timelines.
+
 :::note
 
 Every recorded event provides a clear snapshot of the change and supports **rollback functionality**, so you can revert to a previous version or recover deleted items when needed.
 
 :::
-
-Pulse categorizes changes into three main types, accessible via separate tabs:
-
-- **Created** — new tests, suites, or plans added to the project.
-- **Changed** — updates to existing items.
-- **Deleted** — items removed from the project, including tests, suites, plans, or runs.
-
-**QA Leads** can use this overview to identify active contributors, while **PMs** can quickly assess whether recent changes align with sprint goals or release timelines.
-
-![Testomat.io - Pulse Activity Tabs](./images/Pulse_activity_tabs.gif)
 
 ## Filtering and Navigation
 
@@ -69,6 +61,8 @@ Pulse includes powerful filters to help you quickly find the information you nee
 - **Date Range** – filter changes within a specific time window.
 - **Changed By** – see actions performed by a particular user.
 
+![Testomat.io - Pulse Activity Tabs](./images/Pulse_filters.gif)
+
 Each filter can be applied individually or in combination, enabling precise tracking of team activity and project evolution.
 
 ![Filters](./images/att1_7104.png)
@@ -77,13 +71,13 @@ This makes it easy to monitor specific team members’ contributions or isolate 
 
 In addition to filters, Pulse provides activity tabs that allow you to switch between:
 
-- **Created** — newly added items
-- **Changed** — modified items
-- **Deleted** — removed items
+- **Created** — new tests, suites, or plans added to the project.
+- **Changed** — updates to existing items.
+- **Deleted** — items removed from the project, including tests, suites, plans, or runs.
 
 These tabs instantly filter the activity feed by action type, making navigation faster and more intuitive.
 
-![Testomat.io - Pulse Activity Tabs](./images/Pulse_filters.gif)
+![Testomat.io - Pulse Activity Tabs](./images/Pulse_activity_tabs.gif)
 
 ## Diff
 
