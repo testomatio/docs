@@ -1,7 +1,7 @@
 {
   "name": "@testomatio/docs",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.28.0",
   "description": "Testomatio Documentation",
   "main": "index.js",
   "authors": {
@@ -15,8 +15,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "docs": "node ./src/scripts/runok.js docs",
-    "publish": "npm run docs && npm run build"
+    "docs": "node ./src/scripts/runok.cjs docs",
+    "publish": "pnpm run docs && pnpm run build"
   },
   "license": "MIT",
   "devDependencies": {
@@ -27,14 +27,14 @@
     "slugify": "^1.6.6"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^6.3.9",
-    "@astrojs/starlight": "^0.37.0",
+    "@astrojs/markdown-remark": "^6.3.10",
+    "@astrojs/starlight": "^0.37.2",
     "@octokit/core": "^5.1.0",
-    "astro": "^5.16.4",
-    "astro-breadcrumbs": "^3.3.1",
-    "astro-og-canvas": "^0.7.2",
+    "astro": "^5.16.9",
+    "astro-breadcrumbs": "^3.3.3",
+    "astro-og-canvas": "^0.10.0",
     "astro-rehype-relative-markdown-links": "0.18.1",
-    "astro-vtbot": "^2.1.9",
+    "astro-vtbot": "^2.1.10",
     "bunosh": "^0.4.14",
     "canvaskit-wasm": "^0.40.0",
     "dotenv": "^17.2.3",
