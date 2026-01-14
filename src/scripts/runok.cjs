@@ -253,37 +253,33 @@ ${content3}`)
     },
 
     async docsImporterJava() {
-        const destinationFolder = '../content/docs/project/import-export/import';
+        const destinationFolder = 'src/content/docs/project/import-export/import';
         const imageFolder = path.join(destinationFolder, 'images');
 
-        // Ensure destination folders exist
         if (!fs.existsSync(destinationFolder)) {
-            fs.mkdirSync(destinationFolder, {recursive: true});
+            fs.mkdirSync(destinationFolder, { recursive: true });
         }
 
         if (!fs.existsSync(imageFolder)) {
-            fs.mkdirSync(imageFolder, {recursive: true});
+            fs.mkdirSync(imageFolder, { recursive: true });
         }
 
-        // Step 1: Download README.md from java-check-tests
         const readmeUrl = 'https://raw.githubusercontent.com/testomatio/java-check-tests/main/README.md';
         const response = await axios.get(readmeUrl);
         let content = response.data.toString();
 
-        // Step 2: Remove the first Markdown H1 title (e.g., "# Java Check Tests")
         content = content.replace(/^# .*\n+/, '');
 
-        // Step 3: Replace img/ with images/ in Markdown image paths
         content = content.replace(/!\[(.*?)\]\((img\/.*?)\)/g, (match, alt, imgPath) => {
             const imageName = path.basename(imgPath);
             return `![${alt}](images/${imageName})`;
         });
 
-        // Step 4: Add frontmatter and indentation
         const frontmatter = `---
 title: Java Check Tests
 description: Java command-line tool for Testomat.io import Java test source code, sync test IDs (for JUnit/TestNG), and clean test annotations.
 type: article
+url: https://docs.testomat.io/project/import-export/import/java-check-tests
 head:
   - tag: meta
     attrs:
@@ -292,22 +288,20 @@ head:
 ---\n\n`;
         const finalContent = frontmatter + content;
 
-        // Step 5: Save the processed README.md as java-check-tests.md
         const outputPath = path.join(destinationFolder, 'java-check-tests.md');
         fs.writeFileSync(outputPath, finalContent);
         console.log('✅ Saved java-check-tests.md');
 
-        // Step 6: Download the specific image: syncRunConsoleResult.png
         const imageName = 'syncRunConsoleResult.png';
         const imageUrl = `https://raw.githubusercontent.com/testomatio/java-check-tests/main/img/${imageName}`;
         const imagePath = path.join(imageFolder, imageName);
 
         try {
-            const imageResponse = await axios.get(imageUrl, {responseType: 'arraybuffer'});
+            const imageResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
             fs.writeFileSync(imagePath, imageResponse.data);
             console.log(`🖼️  Downloaded image: ${imageName}`);
         } catch (err) {
-            console.warn(`⚠️  Failed to download image: ${imageName}`, err.message);
+            console.warn(`⚠️  Failed to download image: ${imageName}, ${err.message}`);
         }
     },
 
@@ -317,10 +311,10 @@ head:
         const branch = '1.x';
         const readmeUrl = `https://raw.githubusercontent.com/${repo}/${branch}/README.md`;
         const apiUrl = `https://api.github.com/repos/${repo}/contents/img?ref=${branch}`;
-        const destinationFolder = '../content/docs/test-reporting';
+
+        const destinationFolder = 'src/content/docs/test-reporting';
         const imageFolder = path.join(destinationFolder, 'images');
 
-        // Ensure folders exist
         if (!fs.existsSync(destinationFolder)) {
             fs.mkdirSync(destinationFolder, { recursive: true });
         }
@@ -329,44 +323,35 @@ head:
         }
 
         try {
-            // Step 1: Download README.md
             const readmeResponse = await axios.get(readmeUrl);
             let content = readmeResponse.data.toString();
 
-            // Step 2: Remove the first Markdown H1 title (e.g., "# Java Reporter")
             content = content.replace(/^# .*\n+/, '');
 
-            // Step 3: Replace image paths in Markdown (img/ → images/)
             content = content.replace(/!\[(.*?)\]\((img\/.*?)\)/g, (match, alt, imgPath) => {
                 const imageName = path.basename(imgPath);
                 return `![${alt}](images/${imageName})`;
             });
 
-            // ✅ Step 3.1: Also replace relative ./img/ → ./images/
             content = content.replace(/\.\/img\//g, './images/');
 
-            // Step 4: Prepend YAML front matter
             const frontMatter = `---
 title: Testomat.io Java Reporter
 description: Official Java reporter for Testomat.io — integrates with JUnit, TestNG and Cucumber to auto-send test results, sync test IDs, support parametrized tests, artifacts (screenshots/logs), step-by-step reporting and collaborative team test-runs.
 type: article
+url: https://docs.testomat.io/test-reporting/java-reporter
 head:
   - tag: meta
     attrs:
       name: keywords
       content: Testomat.io, Java reporter, JUnit, TestNG, Cucumber, test results, test management, test automation, test IDs sync, parametrized tests, test artifacts, step-by-step reporting, CLI tool, continuous integration, test run grouping
----
-
-`;
-
+---`;
             content = frontMatter + content;
 
-            // Step 5: Save renamed README
             const readmePath = path.join(destinationFolder, 'java-reporter.md');
             fs.writeFileSync(readmePath, content);
             console.log(`✅ Saved: ${readmePath}`);
 
-            // Step 6: Get image list from GitHub API and download them
             const apiHeaders = typeof token !== 'undefined' ? { Authorization: `token ${token}` } : {};
             const imageListResponse = await axios.get(apiUrl, { headers: apiHeaders });
             const images = imageListResponse.data;
