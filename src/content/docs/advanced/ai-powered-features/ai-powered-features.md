@@ -105,7 +105,7 @@ If you have at least one previously created test case, you can use this AI-featu
 
 1. Open Test Suite that already contains Test Cases.
 2. Click **'Extra menu'** button.
-3. Select **'Suggest Tests'** option.
+3. Select **'Suggest Tests'** option from the dropdown list.
 
 ![Testomat.io - AI-powered](./images/AI_8.gif)
 
@@ -120,7 +120,7 @@ You can also use this AI feature to suggest tests based solely on the Suite Desc
 
 1. Open Test Suite with a description.
 2. Click **'Extra menu'** button.
-3. Select **'Suggest Tests'** option.
+3. Select **'Suggest Tests'** option from the dropdown list.
 
 ![Testomat.io - AI-powered](./images/AI_Suggest_tests_1.gif)
 
@@ -222,7 +222,7 @@ This feature evaluates the quality of a manual test’s description, suggesting 
 1. Go to 'Tests'.
 2. Select the Test Case with description you want to review.
 3. On 'Description' tab, click **'Extra menu'** button.
-4. Select **'Test Quality Review'** option.
+4. Select **'Test Quality Review'** option from the dropdown list..
 
 ![Testomat.io - AI-powered](./images/Test_quality_review_1.gif)
 
@@ -233,13 +233,35 @@ This feature reviews your automated test code to detect potential issues, enhanc
 1. Go to 'Tests'.
 2. Select Test Case with the code that you want to review.
 3. On 'Code' tab, click **'Extra menu'** button.
-4. Select **'Test Quality Review'** option.
+4. Select **'Test Quality Review'** option from the dropdown list..
 
 ![Testomat.io - AI-powered](./images/Test_code_review_1.gif)
 
 Test cases are the backbone of systematic testing. Clear, consistent, and well-maintained tests ensure your entire QA process runs smoother.
 
 By combining human expertise with AI-powered review, you can create test documentation that actually effectively serves its purpose, helping teams test better, faster, and more reliably.
+
+## Find Duplicates by Test Descriptions
+
+Instead of manually searching through all your test cases for duplicates, you can use the AI-powered 'Find Duplicates' feature. The AI analyzes your project, identifies duplicate test descriptions, and suggests their removal to keep your repository clean.
+
+To use this feature:
+
+1. Go to 'Tests'.
+2. Select a Test Case that you want to check for duplicates.
+3. On 'Description' tab, click **'Extra menu'** button.
+4. Select **'Find Duplicates'** option from the dropdown list..
+5. Click **'Remove'** button to delete the identified duplicate tests from your project.
+
+![Testomat.io - AI-powered Find Duplicate](./images/Find_Duplicate_1.gif)
+
+:::note
+
+If you accidentally remove a test or want to audit the changes, you can navigate to the **'Pulse'** page to verify the deletions or restore the tests.
+
+![Testomat.io - AI-powered Find Duplicate](./images/Find_Duplicate_2.png)
+
+:::
 
 ## Generate Bug Description Based on the Test Case
 
@@ -302,7 +324,7 @@ Testomat.io allows you to use AI-powered feature to analyze and summarize your f
 
 :::
 
-## Analyze Suite
+## Analyze Suite 
 
 **Analyze Suite** tool brings AI-powered analytics directly to individual suites, helping you assess both **functional coverage** and **suite stability** without navigating the entire project view.
 
