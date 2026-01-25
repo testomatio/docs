@@ -243,7 +243,7 @@ By combining human expertise with AI-powered review, you can create test documen
 
 ## Find Duplicates by Test Descriptions
 
-Instead of manually searching through all your test cases for duplicates, you can use the AI-powered 'Find Duplicates' feature. The AI analyzes your project, identifies duplicate test descriptions, and suggests their removal to keep your repository clean.
+Instead of manually searching through all your test cases for duplicates, you can use the AI-powered **'Find Duplicates'** feature. The AI analyzes your project, identifies duplicate test descriptions, and suggests their removal to keep your repository clean.
 
 To use this feature:
 
