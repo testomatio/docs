@@ -14,24 +14,24 @@ head:
 
 Testomat.io introduces another AI-powered feature - **AI-Requirements** that helps to streamline test coverage alignment with product requirements. 
 
-A dedicated **'Requirements'** page brings all your requirements into a single, convenient workspace, allowing you to view, organize, and update requirements in one place — without jumping across different parts of the project.
+A dedicated **'Requirements'** page brings all your requirements into a single, convenient workspace, where you can view, organize, and update all requirements in one place, eliminating the need to jump between different parts of a project.
 
-When you add a **Requirement source** (Jira issue, Confluence page, PDF file, etc.) in Testomat.io, the system will analyze it's description and automatically suggest a structured requirement summary. Also, by clicking on the requirement, you can check all suites linked to it, requirement source and added attachments.
+When you add a **Requirement source** (Jira issue, Confluence page, PDF file, etc.) in Testomat.io, the system analyzes the description and automatically generates a structured requirement summary. You can also view all suites linked to a requirement, the original source, and any added attachments directly from the 'Requirement details' page.
 
 ![Testomat.io - AI-powered](./images/Requirement_page_details_1.gif)
 
 **Based on the requirement analysis, you’ll be offered two intelligent options:**
 
-- Generate a new test suite with suggested test cases.
-- Analyze existing suites and suggest test coverage improvements.
+- **Generate New Suites:** Create a new test suite with AI-suggested test cases.
+- **Analyze Existing Coverage:** Review existing suites and receive suggestions for coverage improvements.
 
 This feature is available both at the **project level** and within individual **test suites**, enabling flexible, requirements-driven testing whether you’re planning at a high level or working in a focused domain.
 
 **Key benefits:**
 
-- Automates the transition from requirements to test cases.
-- Ensures traceability and alignment between business goals and test coverage.
-- Reduces manual effort and potential gaps in test planning.
+- **Automation:** Speeds up the transition from business requirements to actionable test cases.
+- **Traceability:** Ensures alignment between business goals and actual test coverage.
+- **Efficiency:** Reduces manual effort and identifies potential gaps in test planning.
 
 :::note
 
@@ -42,13 +42,13 @@ You can enbable AI at any time on Company Settings page by following the instruc
 
 # Requirements Page Overview
 
-**On 'Requirements' page you can:**
+**On 'Requirements' page, you can perform the following actions::**
 
-1. Link new requirement (check ['Add Requirements to a Project'](https://docs.testomat.io/advanced/ai-powered-features/ai-requirements/#add-requirements-to-a-project) section for more details).
-2. Filter requirements by sourse type, level and status.
-3. Search for the information inside the requirements.
-4. Change the **Requirements Display** view (check section below for more information).
-5. Use AI feature **'Chat with Requirements'**.
+1. Link new requirement (check sections below for more details).
+2. Filter requirements by sourse type, level, and status.
+3. Search for specific information within your requirements.
+4. Change the **Requirements Display View**: List view vs. Suite view (check section below for more information).
+5. **'Chat with Requirements'** using AI assistant ([Read more](https://docs.testomat.io/advanced/ai-powered-features/ai-requirements/#chat-with-requirements)).
 6. View **'Requirement details'** page.
 7. Edit Requirement.
 8. Delete Requirement.
@@ -57,15 +57,15 @@ You can enbable AI at any time on Company Settings page by following the instruc
 
 ### Requirements Display View
 
-**Select the requirements display view based on your needs:**
+**Select the requirements display view based on your current workflow:**
 
-- **'Display as List':** allows you to work with requirements on the **Requirements level**. All the requirements are displayed in one list. In this view you can view requirement details, link suites to the selected requirement, add attachments or requirement notes.
+- **'Display as List':** Work with requirements at the **Requirement level**. All requirements are displayed in a single list, allowing you to view details, link suites to the selected requirement, add attachments, or requirement notes.
 
-- **'Display by Suites':** allows you to work with the requirements on the **Suites level**. All the suites are displayed in one list with the requirements linked to each suite. In this view you can see what suites don't have any requirements linked, what requirements are added to the specific suite and check if nothing was missed, you can attach/detach the requirement to the selected suite and as well change the requirement details.
+- **'Display by Suites':** Work with the requirements at the **Suite level**. All suites are displayed in one list alongside their linked requirements. It helps identify suites that lack coverage and allows you to attach or detach requirements easily, and as well change the requirement details.
 
 ## Add Requirements to an Empty Project
 
-You can start a new project by first adding your requirements.
+You can add requirements to a new project to drive test generation from the start.
 
 Once a project is created (BDD or Classical), set up the integration for your **Requirement Source** (see detailed instructions for [JIRA](https://docs.testomat.io/integrations/issues-management/jira/#connecting-to-jira-project) and [Confluence](https://docs.testomat.io/integrations/issues-management/confluence)). Then, proceed with adding requirements:
 
@@ -74,13 +74,13 @@ Once a project is created (BDD or Classical), set up the integration for your **
 
 ![Testomat.io - Empty Project](./images/Req_empty_project_1.png)
 
-3. Select your requirement source (Jira in our case).
-4. Enter **'Jira Issue ID'**.
+3. Select your requirement source (e.g., Jira).
+4. Enter the source identifier (e.g., **'Jira Issue ID'**).
 5. Click **'Save'** button.
 
 ![Testomat.io - Empty Project](./images/Req_empty_project_2.png)
 
-After the requirement is linked to Testomat.io you can use AI Assistant to analyze requirements for edge cases and potential solutions. You can also create suites and test cases based on these requirements.
+After the requirement is linked to a project you can use AI Assistant to analyze requirements for edge cases and potential solutions. You can also create suites and test cases based on these requirements.
 
 :::note
 
@@ -90,13 +90,18 @@ You can add a new requirement to your ongoing project any time following the sam
 
 ## Link Requirement to an Existing Suite Case
 
-Testomat.io allows you to link a requirement that was already added to the Project to an existing suite case directly from its page. To do that, follow these steps:
+Testomat.io allows you to link a requirement to an existing suite case directly from its page.
+To link the requirement that is already added to the project, follow these steps:
 
 1. Open your Suite Case.
-2. Click **'Extra menu'** button.
-3. Select **'Requirements'** option from the dropdown list.
-4. Open **'All Requirements'** tab.
-5. Select the requirement that you want to link to the Suite from the list by clicking on **'Attach'** button.
+2. Select **'Requirements'** option from the **'Extra menu'** dropdown list.
+
+OR
+
+Click **'Attach Requirements'** button under the Suite title.
+
+3. Open **'All Requirements'** tab.
+4. Select the requirement that you want to link to the Suite from the list by clicking on **'Attach'** button.
 
 ![Testomat.io - Link Requirements](./images/Requirements_1.gif)
 
@@ -214,7 +219,7 @@ This ensures consistency and saves time by eliminating repeated manual assignmen
 
 :::note
 
-To set up the **Requirement as Global** it should not be linked to any Suites.
+To set up the **Requirement as Global** it should not be linked to any specific Suites.
 
 ![Testomat.io - Requirements as Global](./images/Global_req_2.png)
 
@@ -261,7 +266,7 @@ After notes are added and saved, they will be displayed on **'Summary'** tab und
 
 ## Refresh the Requirement
 
-If you added some changes to the original source of your requirement, you would want it to be updated in your Testomat.io Project as well. To resync the requirement you need:
+If you added some changes to the original source of your requirement, you would want it to be updated in your Testomat.io Project as well. To sync changes made in the original external source (e.g., an updated Jira ticket) you need:
 
 1. Go to **'Requirements'** page.
 2. Open requirement that was updated.
@@ -276,64 +281,90 @@ After the refreshment your requirement is automatically updated so you don't nee
 
 ## Analyze Requirements for Edge Cases
 
-1. On **'Requirements'** page open added **Requirement**.
-2. Click **'Analyze Requirement'** button.
+1. Open **'Requirements'** page.
+2. Click on the added **Requirement** to open it.
+3. Click **'Analyze Requirement'** button on **'Summary'** tab.
 
-![Testomat.io - Jira](./images/AI_Jira_2.png)
+![Testomat.io - Requirement](./images/AI_edge_case_1.png)
 
-3. Click **'Analyze For Edge Cases'** button inside the AI Assistant.
+4. Click **'Analyze For Edge Cases'** button inside the AI Assistant.
 
-![Testomat.io - Jira](./images/AI_Jira_3.png)
+![Testomat.io - Requirement](./images/AI_edge_case_2.png)
 
-4. Check suggestions from AI Assistant and add them as the edge cases solution.
-5. Click **'Save Clarification'** to the requirement if needed.
+5. Check suggestions from AI Assistant and add them as the edge cases solution.
+6. Click **'Copy'** button to copy the edge case and add manually it to your requirement if needed.
+7. Ask AI to generate more Edge cases by clicking on **'Think of more edge cases'** button.
+8. Improve the previous answer or ask about more details by sending relevant request via the **'Follow up'** input field.
 
-![Testomat.io - Jira](./images/AI_Jira_4.png)
-
-6. Ask AI to generate more Edge cases by clicking on **'Think of more edge cases'** button.
-7. Improve the previous answer or ask about more details by sending relevant request via the **'Follow up'** input field.
-
-![Testomat.io - Jira](./images/AI_Jira_5.png)
+![Testomat.io - Requirement](./images/AI_edge_case_3.png)
 
 ## Create a Suite Case from Requirements
 
-1. Open added Requirement.
-2. Click **'Analyze Requirement'** button.
+1. Open **'Requirements'** page.
+2. Click on the added **Requirement** to open it.
+3. Click **'Analyze Requirement'** button on **'Summary'** tab.
 
-![Testomat.io - Jira](./images/AI_Jira_2.png)
+![Testomat.io - Requirement](./images/AI_edge_case_1.png)
 
-3. Click **'Create a Test Suite'** button inside the AI Assistant.
+4. Click **'Suggest Suites'** button inside the AI Assistant.
 
-![Testomat.io - Jira](./images/AI_Jira_6.png)
+![Testomat.io - Requirement](./images/AI_edge_case_4.png)
 
-4. Add suggested test suite to your project.
+:::note
 
-![Testomat.io - Jira](./images/AI_Jira_7.png)
+Use **'Follow up'** feature to improve suggested suite case options.
 
-After adding the Suite Case to your project, you can begin creating your test cases or use AI to generate them for you.
+:::
+
+5. Click **'Add'** button to add suggested suite to your project.
+
+![Testomat.io - Requirement](./images/AI_edge_case_5.png)
+
+:::note
+
+Suite cases added from the Requirement page via AI Assistant are automatically linked to the requirement.
+
+:::
+
+After adding the Suite Case to your project, you can begin creating your test cases manually or use AI to generate them for you by clicking **'Suggest Tests to {Suite_name}'** button.
+
+![Testomat.io - Requirement](./images/AI_edge_case_6.png)
 
 ## Generate Test Cases from Requirements Page
 
-1. Open added Requirement.
-2. Click **'Analyze Requirement'** button.
+If there is a suite case linked to the requirement, you can generate test cases usin AI-feature.
 
-![Testomat.io - Jira](./images/AI_Jira_2.png)
+1. Open **'Requirements'** page.
+2. Click on the added **Requirement** to open it.
+3. Click **'Analyze Requirement'** button on **'Summary'** tab.
 
-3. Click **'Add tests to {Suite_name} Suite'** option.
+![Testomat.io - Requirement](./images/AI_edge_case_1.png)
 
-![Testomat.io - Jira](./images/AI_Jira_8.png)
+4. Click **'Add tests to {Suite_name} Suite'** option.
 
-4. Check suggested test cases and add the relevant ones by clicking **'Add'** button.
+![Testomat.io - Requirement](./images/AI_edge_case_7.png)
 
-![Testomat.io - Jira](./images/AI_Jira_9.png)
+5. Click **'Suggest More Tests'** button to generate more test cases if you need.
+6. Check suggested test cases and add the relevant ones by clicking **'Add'** button.
 
-5. Click **'Write Description'** button to add description to the selected test case.
+![Testomat.io - Requirement](./images/AI_edge_case_8.png)
 
-![Testomat.io - Jira](./images/AI_Jira_10.png)
+:::note
 
-6. Click **'Update Test Description'** button to add genearted test description to the test case.
+Double-click on suggested test case title for editing it before adding it to your suite.
 
-![Testomat.io - Jira](./images/AI_Jira_11.png)
+![Testomat.io - Requirement](./images/AI_edit_TC_1.png)
+
+:::
+
+7. Click **'Write Description'** button to add description to the selected test case.
+
+![Testomat.io - Requirement](./images/AI_edge_case_9.png)
+
+8. Click **'Update Test Description'** button to add generated test description to the selected test case.
+9. Click **'Edit'** button if you want manually update your test case description before saving it.
+
+![Testomat.io - Requirement](./images/AI_edge_case_10.png)
 
 :::note
 
@@ -358,3 +389,47 @@ Similar to the previous case, review the suggested test cases, add the relevant 
 All added test cases will be displayed in your Suite after AI-assistant window is closed.
 
 ![Testomat.io - Suggest Tests](./images/AI_Suggest_tests_3.png)
+
+## Chat with Requirements
+
+Use **'Chat with Requirements'** AI feature to ask specific questions about your project documentation. The AI assistant can search, filter, summarize, or analyze your requirements in real-time to provide immediate insights.
+
+![Testomat.io - Chat with Requirements](./images/Chat_with_Requirements.gif)
+
+## Additional AI-Features for Requirements
+
+### Clarify Requirement
+
+Use the **'Clarify Requirement'** feature to identify edge cases and explore potential logic resolutions within your requirements.
+
+1. Open **'Requirements'** page.
+2. Click on the added **Requirement** to open it.
+3. Click **'Extra-menu'** button on **'Summary'** tab.
+4. Select **'Clarify Requirement'** option from dropdown menu.
+
+![Testomat.io - Clarify Requirement](./images/Clarify_Requirement_1.gif)
+
+### Analyze Tests Coverage
+
+Use **'Analyze Tests Coverage'** to ensure your requirements are fully covered by your test cases and to identify redundancy.
+
+1. Open **'Requirements'** page.
+2. Click on the added **Requirement** to open it.
+3. Click **'Extra-menu'** button on **'Summary'** tab.
+4. Select **'Analyze Tests Coverage'** option from dropdown menu.
+
+![Testomat.io - Analyze Tests Coverage](./images/Analyze_Tests_Coverage.gif)
+
+5. Click **'Add Missing Tests to {suite_name}'** button to add test cases that will help to increase test coverage.
+6. Click **'Remove Redundant Tests'** button to remove tests that are not relevant for the requirement if there are any.
+
+### Find Tests For Requirement
+
+This feature helps you quickly locate existing test cases that already associated with a specific requirement, and as well test cases that could be potential associated with it.
+
+1. Open **'Requirements'** page.
+2. Click on the added **Requirement** to open it.
+3. Click **'Extra-menu'** button on **'Summary'** tab.
+4. Select **'Find Tests For Requirement'** option from dropdown menu.
+
+![Testomat.io - Find Tests For Requirement](./images/Find_Tests_For_Requirement_1.gif)
