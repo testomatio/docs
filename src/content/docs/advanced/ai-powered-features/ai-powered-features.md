@@ -162,7 +162,7 @@ This feature allows you to create test case description based just on its name o
 
 If you have a "draft" description that is messy or lacks detail, the AI rewrites it using testing best practices—adding structure, clear objectives, and necessary context.
 
-**To use this feature:**
+**How to use this feature:**
 
 1. Open Test Case with you want to refine.
 2. Click **'Extra menu'** button on 'Description' tab.
