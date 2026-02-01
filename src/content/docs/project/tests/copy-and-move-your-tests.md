@@ -16,7 +16,7 @@ You can copy a single test from a test suite, an entire test suite, or even a fo
 
 ### Copying Tests or Test Suites Within Your Project
 
-1. Go to the **Tests** section.
+1. Go to the **Tests** page.
 2. Select the item you want to copy (e.g., a test suite).
 3. Open the drop-down menu by clicking the **three dots** next to the **Edit** button.
 4. Click **Copy**.
@@ -27,7 +27,7 @@ You can copy a single test from a test suite, an entire test suite, or even a fo
 
 ### Copying Tests or Test Suites to Another Project
 
-1. Go to the **Tests** section.
+1. Go to the **Tests** page.
 2. Select the item you want to copy (e.g., a test suite).
 3. Open the drop-down menu by clicking the **three dots** next to the **Edit** button.
 4. Click **Copy**.
@@ -43,7 +43,7 @@ You may need to move your tests within a project, for example to another suite. 
 
 ### Move menu action
 
-1. Go to the Tests section.
+1. Go to the **Tests** page.
 2. Select the item you want to move (e.g. a test suite).
 3. Open the drop-down menu by clicking the three dots next to the Edit button.
 4. Click **Move**.
@@ -56,7 +56,7 @@ You may need to move your tests within a project, for example to another suite. 
 
 ### Drag and Drop option
 
-1. Go to the Tests section.
+1. Go to the **Tests** page.
 2. Expand the folder or suite where you want to move your test(s).
 3. Hover over the test, suite, or folder you want to move until the drag handle (⠿) appears.
 4. Click and hold the drag handle, then drag the item to your desired location.
