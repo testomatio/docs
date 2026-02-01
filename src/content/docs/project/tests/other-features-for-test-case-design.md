@@ -88,7 +88,7 @@ You can now download any suite as a **PDF file**. This feature is designed to he
 1. Go to the **Tests** page.
 2. Open the desired suite.
 3. Click **'Extra menu'** button.
-4. Select **'Export as PDF'** option from extra dropdown menu.
+4. Select **'Export as PDF'** option from the dropdown menu.
 
 ![Testomat.io - Export Suite as PDF](./images/Export_Suite_1.png)
 
