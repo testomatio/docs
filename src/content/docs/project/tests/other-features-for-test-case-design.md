@@ -90,6 +90,10 @@ You can now download any suite as a **PDF file**. This feature is designed to he
 3. Click **'Extra menu'** button.
 4. Select **'Export as PDF'** option from extra menu dropdown.
 
-![Testomat.io - Export Suite as PDF](./images/Export_Suite.png)
+![Testomat.io - Export Suite as PDF](./images/Export_Suite_1.png)
+
+The export captures the entire test suite, including all individual test cases, their IDs, types, steps, expected results and screenshots.
+
+![Testomat.io - Export Suite as PDF](./images/Export_Suite_2.png)
 
 This makes it convenient to share test content outside of Testomat.io, whether for reviews, documentation, or reporting purposes.
