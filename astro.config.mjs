@@ -208,6 +208,7 @@ export default defineConfig({
 					label: 'Test Reporting',
 					items: [
 						{ label: 'Overview', link: '/test-reporting'},
+						{ label: 'Testomat.io Reporter', link: '/test-reporting/reporter'},
 						{ label: 'NodeJS Test Frameworks', link: '/test-reporting/frameworks'},
 						{ label: 'PHP Test Frameworks', link: '/test-reporting/php'},
 						{ label: 'Python Test Frameworks', link: '/test-reporting/python'},
