@@ -6,37 +6,152 @@ url: https://docs.testomat.io/project/plans
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/New_BVGb17Wo_2024-09-10.Csen7x4B_Z3UAOR.webp
-
-  - tag: meta
-    attrs:
       name: keywords
-      content: test plans, manual tests, automated tests, CI/CD, test case management, mixed test plans, continuous integration, QA, Testomat.io, testing strategy, test reports
+      content: test plans, test plan creation, test plan execution, manual testing, automated testing, mixed test plans, CI/CD, CLI, continuous integration, test case management, QA, Testomat.io, testing strategy, test reports
 ---
 
-**Test Plan** is a detailed document that outlines the testing strategy, objectives, schedule, resources, and scope of a testing effort. It acts as a blueprint for how testing will be conducted, ensuring all stakeholders are aware of what will be tested, when, how, and by whom. A well-defined test plan is essential for ensuring product quality and aligning the testing process with project goals.
+**Test Plan** defines the scope, structure, and execution model of a run. It helps teams clearly understand which tests will be executed, how they are grouped, and how results will be reported.
 
-In Testomat.io, the **Plans** page is your central hub for managing all test plans. Here you can:
+In Testomat.io, Test Plans allow you to organize tests, control how they are executed (manually, automatically, or both), and keep test results consistent and transparent for all stakeholders.
 
-- **Search** – Quickly find your plans by name, tags, or other criteria.
-- **Filter by type** - Manual, Automated, Mixed, or Generated.
-- **Filter by label** – Narrow down plans by labels for better organization.
-- **Add Labels & Link to Issues** – You can add labels or link a plan to an issue individually for a single plan, or select multiple plans at once using Multiselect.
-- **Multiselect** – Select multiple plans to perform actions like adding labels, linking to issues, or deleting runs in bulk.
-- **Create & Delete Runs** – Easily create a new run from a plan or delete existing runs.
+The **Plans** page is the central place where you create, manage, and organize all test plans. From here, you can:
 
-This overview allows you to quickly navigate, filter, and manage your test plans before diving into their details.
+1. **Filter by label** – Narrow down plans by labels for better organization
+2. **Search** – Quickly find plans by name
+3. **+ New plan** – Create Manual, Automated, or Mixed plans
+4. **Multiselect** – Select multiple plans to apply bulk actions
+5. **Filter by type** – Narrow down plans by types (Manual, Automated, Mixed, or Generated)
+6. **Labels** – Assign or remove labels to one or multiple plans
+7. **Link to Issue** – Link plans to issues individually or in bulk
+8. **Delete** – Remove one or multiple plans using multiselect
+
+![Overview Plans page](./images/att3_6256.png)
+
+This overview helps you quickly navigate, filter, and manage test plans before working with plan details and runs.
 
 ## Types of Test Plans
 
-In Testomat.io, there are three main types of test plans, each suited for different testing strategies:
+Testomat.io supports three main types of test plans. Each type is designed for a specific testing goal and execution model. Choosing the right plan type depends on how your tests are executed and how results should be reported.
 
-- **Manual Plans** are intended for tests that are executed by testers. They provide full control over how tests are run, making them ideal for exploratory testing, usability checks, and scenarios requiring human assessment.
+- **Manual** – for executing tests manually and reporting results from the UI
+- **Automated** – for running automated tests via CI or CLI and reporting results automatically
+- **Mixed** – for combining manual and automated tests in a single plan and report
 
-- **Automated Plans** are designed for tests that run automatically, either via CI or CLI. They ensure consistent, reproducible execution and are well suited for regression or other repetitive testing.
+Below, we’ll walk through each plan type and explain how and when to use it.
 
-- **Mixed Plans** combine manual and automated tests in a single plan. They provide a flexible approach for teams that want to manage both manual and automated testing within the same testing scope.
+### Manual Plans
+
+**Manual Plans** are designed for tests that are executed manually by testers.
+
+They are typically used when:
+
+- Tests require human validation or judgment
+- Exploratory or usability testing is performed
+- Manual regression or acceptance testing is needed
+
+#### Add Automated Tests as Manual
+
+Manual Plans include an optional toggle: **Run Automated as Manual**.
+
+**When enabled:**
+
+- Automated tests can be added to a Manual Plan **using the same selection logic as manual tests** (test tree, folders/suites, or filters)
+- These tests are executed manually, and test run statuses (**Passed / Failed / Skipped**) are assigned manually during the run
+
+**When disabled:**
+
+- Automated tests are not selectable
+
+This toggle is the **only exception** to the strict plan-to-test-type mapping.
+
+![Run Automated as Manual toggle](./images/gif1_6256.gif)
+
+### Automated Plans
+
+**Automated Plans** are designed for running automated tests and sending their results to Testomat.io.
+
+They are typically used when you:
+
+- Want to run a fixed or predefined set of automated tests
+- Execute tests automatically via a **Continuous Integration (CI) service** or **from CLI**
+- Need tests to run regularly (e.g., nightly, on every commit, or before a release)
+- Want test results reported automatically, without manual intervention
+
+With Automated Plans:
+
+- Only **automated tests** can be added to the plan
+- Test execution is triggered via a CI pipeline or CLI command
+- Execution results are sent automatically to Testomat.io
+
+To use an Automated Plan:
+
+- Tests must have **IDs**
+- IDs can be generated using the `--update-ids` option during test import
+- Each plan has a **Plan ID**, which can be used to run this specific collection of tests
+
+For example,
+
+`TESTOMATIO={API_KEY} npx @testomatio/reporter run 'actual run command' --filter 'testomatio:plan={Plan_ID}'`
+
+- `{API_KEY}` – your Testomat.io Reporting API key
+- `{Plan_ID}` – ID of the plan you want to run
+- `'actual run command'` – your test framework command (e.g., `npx codeceptjs`)
+
+#### How to Launch an Automated Run from a Plan
+
+Once your Automated Plan is created, you can start an automated run from the **'Plans'** page.
+
+If you want to run tests automatically on a CI service:
+
+1. Go to the **'Plans'** page
+2. Open your Automated Plan
+3. Click the **'Launch'** button → you will be redirected to the **Runs** page
+4. A new run **'Run automated tests in CI'** will be triggered in the sidebar
+
+![Launch from Automated Plan from Plan](./images/gif2_6256.gif)
+
+:::note
+
+The **'Launch'** button on the Plans page will **not be active** if Continuous Integration is not configured. Make sure CI is set up first. Learn more on the [Continuous Integration page](https://docs.testomat.io/usage/continuous-integration/).
+
+:::
+
+### Mixed Plans
+
+**Mixed Plans** combine both manual and automated tests in a single plan.
+
+They are typically used when you:
+
+- Include automated tests that run via CI or via CLI
+- Have other tests that still require manual execution
+- Want a **single report** for the entire testing scope
+
+With Mixed Plans:
+
+- Both **manual and automated tests** can be added in the same plan
+- Automated tests can be executed via CI or triggered via CLI
+- Manual tests are executed manually
+- Results from both test types are combined into a single run report
+
+This makes Mixed Plans suitable for flexible or transitional testing strategies.
+
+#### How to Launch a Mixed Run from a Plan
+
+Once your Mixed Plan is created, you can start a run directly from the **'Plans'** page. When triggered:
+
+1. Go to the **'Plans'** page
+2. Open your Mixed Plan
+3. Click the **'Launch'** button → you will be redirected to the **Runs** page
+4. A new run **'New Mixed Run'** will be triggered in the sidebar
+5. You can choose whether to **enable or disable CI build** for this run
+
+:::note
+
+The **'Launch'** button on the Plans page will **not be active** if Continuous Integration is not configured. Make sure CI is set up first. Learn more on the [Continuous Integration page](https://docs.testomat.io/usage/continuous-integration/).
+
+:::
+
+![Launch from Mixed Plan from Plan](./images/gif3_6256.gif)
 
 ## How to Create a New Plan
 
@@ -72,23 +187,24 @@ Clicking 'All tests' adds all tests to the collection and clears any other filte
 
 ![save New plan](./images/att2_6256.png)
 
-### How to Work with Test Collections
+## How to Work with Test Collections
 
-| Feature / Action                | Description                                 | Notes / Logic                                                                                                                                               |
-| ------------------------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Enable/Disable collection**   | Toggle to show/hide tests in the collection | No restrictions                                                                                                                                             |
-| **Mode: All tests**             | Adds all tests to the collection            | All tests are included, removes any active filters                                                                                                          |
-| **Delete collection**           | Deletes the collection                      | All tests are included in the collection (logic same as Select All)                                                                                         |
-| **Filters within a collection** | Combine multiple filters                    | **OR** logic is applied between filters inside a single collection; **AND** logic applies between different collections                                     |
-| **Nested filters**              | Add filters within a collection             | Cannot add nested filters in a collection where tests are already selected; to use nested filters, apply different filters or create/use another collection |
+| Feature / Action              | Description                                 | Notes / Logic                                                                                                                                                                                                                   |
+| ----------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Enable/Disable collection** | Toggle to show/hide tests in the collection | No restrictions                                                                                                                                                                                                                 |
+| **Add filter**                | Adds filters within a collection            | **AND** logic is applied between filters inside a single collection. <br> Cannot add any filters in a collection where **Tests** are already selected <br> To use filters, apply different filters or create another collection |
+| **Delete filters**            | Removes filters from the collection         | If the **last remaining filter** is removed while the collection toggle is enabled, <br> **all tests are included in the collection**.<br> Removing one of multiple filters works as expected                                   |
+| **All tests**                 | Includes all tests in the collection        | All tests are included in the collection; removes any active filters                                                                                                                                                            |
+| **Add collection**            | Adds a new collection with its own filters  | Allows combining different sets of filters across collections; **OR** logic applies between collections                                                                                                                         |
+| **Delete collection**         | Deletes the collection                      | Removes the collection along with all its filters. The first (default) collection cannot be deleted                                                                                                                             |
 
 ### Filter-based selection
 
-Filters allow you to dynamically include or exclude tests based on metadata.
+Filters allow you to dynamically **include or exclude tests in a plan** based on metadata. Adding or removing tests via filters directly affects the plan, not just the collection.
 
 **Include Tests by Filters**
 
-- Adds tests to the collection that match any of the selected filters.
+- Adds tests to the collection **and the plan** that match any of the selected filters
 - Supported filters for Include:
   - Suites & folders
   - Tags
@@ -97,11 +213,12 @@ Filters allow you to dynamically include or exclude tests based on metadata.
   - Labels
   - Custom labels
   - Query
-- Logic: OR within a collection, AND between collections.
+- Logic: **AND** within a collection, **OR** between collections
+- All tests selected by the filters are displayed in the **Matched tests** tab
 
 **Exclude Tests by Filters**
 
-- Removes tests from the collection that match selected filters.
+- Removes tests from the collection **and the plan** that match selected filters
 - Supported filters for Exclude:
   - Suites & folders
   - Query
@@ -109,42 +226,8 @@ Filters allow you to dynamically include or exclude tests based on metadata.
 
 :::note
 
-Selecting **Tests** is a chosen mode, not a filter. It cannot be combined with **Include tests by filters** in the same collection.
+**Tests** is a chosen mode, not a filter. It cannot be combined with **supported filters** in the same collection.
 
 :::
 
-## Manual Plan
-
-Manual plans provide a flexible way to create and manage manual runs. When creating a manual plan, you can choose how tests are included based on your workflow:
-
-- Selecting specific tests using the Test Tree
-- Selecting all tests using filters
-- Selecting tests using filters
-- Multiple filter groups (OR logic)
-- Excluding tests by filters
-
-Each of these options is described in detail in the sections above.
-
-## Mixed Plan
-
-Mixed Plan is a combination of automated and manual tests. Automated tests are running in **Continuous Integration**, while you run manual tests in parallel. As a result, you get one report for both automated and manual runs.
-
-![Testomat.io - Create Mixed Plan](./images/New_UhbNVumq_2024-09-15.gif)
-
-## Automated Plan
-
-By choosing automated plan, you need to configure **Continuous Integration**. Also, tests need to have IDs. This can be done by adding the `--update-ids` option when importing tests.
-
-To learn how to set up Continuous Integration in Testomat.io, visit the [dedicated page](https://docs.testomat.io/usage/continuous-integration/).
-
-![Testomat.io - Create Automated Plan](./images/New_O9I32YCX_2024-09-15.gif)
-
-After running tests via CI, the report will be sent to Testomat.io. You can view it on the **Runs** page.
-
-![Testomat.io - GitHub Actions](./images/New_KoPkaO0N_2024-09-15.png)
-
-Automated run report:
-
-![Testomat.io - Automated Plan Report](./images/New_Q8Cq5xGN_2024-09-15.png)
-
-A **Plan ID** can also be used to run an Automated Plan. To learn how to do this, visit the [Filter Test](https://docs.testomat.io/reference/reporter/pipes/testomatio/#filter-tests) page (currently available for Playwright and CodeceptJS frameworks).
+![Collections & filters](./images/att5_6256.png)
