@@ -151,7 +151,7 @@ The **'Launch'** button on the Plans page will **not be active** if Continuous I
 
 :::
 
-![Launch from Mixed Plan from Plan]
+![Launch from Mixed Plan from Plan](./images/gif6_5256.gif)
 
 ## How to Create a New Plan
 
