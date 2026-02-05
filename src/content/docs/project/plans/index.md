@@ -64,7 +64,7 @@ Manual Plans include an optional toggle: **Run Automated as Manual**.
 
 This toggle is the **only exception** to the strict plan-to-test-type mapping.
 
-![Run Automated as Manual toggle](./images/gif1_6256.gif)
+![Run Automated as Manual toggle](./images/gif4_5256.gif)
 
 ### Automated Plans
 
@@ -108,7 +108,7 @@ If you want to run tests automatically on a CI service:
 3. Click the **'Launch'** button → you will be redirected to the **Runs** page
 4. A new run **'Run automated tests in CI'** will be triggered in the sidebar
 
-![Launch from Automated Plan from Plan](./images/gif2_6256.gif)
+![Launch from Automated Plan from Plan](./images/gif5_5256.gif)
 
 :::note
 
@@ -151,7 +151,7 @@ The **'Launch'** button on the Plans page will **not be active** if Continuous I
 
 :::
 
-![Launch from Mixed Plan from Plan](./images/gif3_6256.gif)
+![Launch from Mixed Plan from Plan]
 
 ## How to Create a New Plan
 
@@ -230,4 +230,4 @@ Filters allow you to dynamically **include or exclude tests in a plan** based on
 
 :::
 
-![Collections & filters](./images/att5_6256.png)
+![Collections & filters](./images/att8_5256.png)
