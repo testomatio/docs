@@ -6,143 +6,228 @@ url: https://docs.testomat.io/project/plans
 head:
   - tag: meta
     attrs:
-      name: og:image
-      content: https://docs.testomat.io/_astro/New_BVGb17Wo_2024-09-10.Csen7x4B_Z3UAOR.webp
-      
-  - tag: meta
-    attrs:
       name: keywords
-      content: test plans, manual tests, automated tests, CI/CD, test case management, mixed test plans, continuous integration, QA, Testomat.io, testing strategy, test reports
+      content: test plans, test plan creation, test plan execution, manual testing, automated testing, mixed test plans, CI/CD, CLI, continuous integration, test case management, QA, Testomat.io, testing strategy, test reports
 ---
 
-Test Plan is a detailed document that outlines the testing strategy, objectives, schedule, resources, and scope of a testing effort. It acts as a blueprint for how testing will be conducted, ensuring all stakeholders are aware of what will be tested, when, how, and by whom. A well-defined test plan is essential for ensuring product quality and aligning the testing process with project goals.
+**Test Plan** defines the scope, structure, and execution model of a run. It helps teams clearly understand which tests will be executed, how they are grouped, and how results will be reported.
 
-To create a test plan in Testomat.io, go to the **Plans** page and click the **+** button. The **Plans** page allows to search and filter previously created plans. You can also view and edit test cases that contain plans.
+In Testomat.io, Test Plans allow you to organize tests, control how they are executed (manually, automatically, or both), and keep test results consistent and transparent for all stakeholders.
 
-![Testomat.io - Test Plans page](./images/New_F3lDOnIP_2024-09-10.png)
+The **Plans** page is the central place where you create, manage, and organize all test plans. From here, you can:
 
-After that, you should select the type of plan you want to create:
+1. **Filter by label** – Narrow down plans by labels for better organization
+2. **Search** – Quickly find plans by name
+3. **+ New plan** – Create Manual, Automated, or Mixed plans
+4. **Multiselect** – Select multiple plans to apply bulk actions
+5. **Filter by type** – Narrow down plans by types (Manual, Automated, Mixed, or Generated)
+6. **Labels** – Assign or remove labels to one or multiple plans
+7. **Link to Issue** – Link plans to issues individually or in bulk
+8. **Delete** – Remove one or multiple plans using multiselect
 
-* **Manual** - Test plan for manual test runs
-* **Automated** - Test plan for automated test runs on CI
-* **Mixed** - Automated tests on CI combined with manual run
+![Overview Plans page](./images/att3_6256.png)
 
-![Testomat.io - New Plan](./images/New_BVGb17Wo_2024-09-10.png)
+This overview helps you quickly navigate, filter, and manage test plans before working with plan details and runs.
 
----
+## Types of Test Plans
 
-You can also add a description to your test plan to clarify its purpose, scope, objectives etc. This helps provide context, specify the type of tests, and ensure alignment within the team.
+Testomat.io supports three main types of test plans. Each type is designed for a specific testing goal and execution model. Choosing the right plan type depends on how your tests are executed and how results should be reported.
 
-### To Add a Description to Your Test Plan:
+- **Manual** – for executing tests manually and reporting results from the UI
+- **Automated** – for running automated tests via CI or CLI and reporting results automatically
+- **Mixed** – for combining manual and automated tests in a single plan and report
 
-1. Go to **Plans**.
-2. Select the plan you want to edit.
-3. Click **Edit**.
-4. Provide a description in the **Description** field.
-5. Click **Save**.
+Below, we’ll walk through each plan type and explain how and when to use it.
 
-![Testomat.io - Test Plan Description](./images/TestPlan_Description.png)
+### Manual Plans
 
-   The **'full view'** button will appear under the plan’s detailed view.
+**Manual Plans** are designed for tests that are executed manually by testers.
 
-![Testomat.io - Test Plan Description Full View](./images/TestPlan_Description_fullview.png)
+They are typically used when:
 
-6. Click **full view** to see the complete description in an additional layer.
+- Tests require human validation or judgment
+- Exploratory or usability testing is performed
+- Manual regression or acceptance testing is needed
 
- You can also view the Test Plan full description in the Runs section:
+#### Add Automated Tests as Manual
 
-1. Go to **Runs**.
-2. Select a **Run**.
-3. Click **full view** in the Run's detailed view to see the full description.
+Manual Plans include an optional toggle: **Run Automated as Manual**.
 
-![Testomat.io - Test Plan Description Full View - Runs](./images/TS_Description_Runs.png)
+**When enabled:**
 
+- Automated tests can be added to a Manual Plan **using the same selection logic as manual tests** (test tree, folders/suites, or filters)
+- These tests are executed manually, and test run statuses (**Passed / Failed / Skipped**) are assigned manually during the run
 
-## Manual
+**When disabled:**
 
-By choosing manual plan, you can easily customize your selection of test cases:
+- Automated tests are not selectable
 
-* Select test cases by Checking Tests & Suites
-* Select test cases by Tags
-* Select test cases by Labels
-* Select test cases by Query
+This toggle is the **only exception** to the strict plan-to-test-type mapping.
 
-![Testomat.io - Create Manual Plan](./images/New_JxL6qSdU_2024-09-10.gif)
+![Run Automated as Manual toggle](./images/gif4_5256.gif)
 
-Let's take a closer look at the work with filling the Plan with Test Cases:
+### Automated Plans
 
-1. To select specific test cases, open a suit by clicking on the arrow next to it and select tests you need. 
-2. If you need all tests belonging to a particular suit, just click on suite name. All the tests in that suit will be selected automatically.
+**Automated Plans** are designed for running automated tests and sending their results to Testomat.io.
 
-![Testomat.io - Select test cases by Checking Tests & Suites](./images/New_fPk7pQ3N_2024-09-21.png)
+They are typically used when you:
 
-3. Use the search to find test cases by keywords.
+- Want to run a fixed or predefined set of automated tests
+- Execute tests automatically via a **Continuous Integration (CI) service** or **from CLI**
+- Need tests to run regularly (e.g., nightly, on every commit, or before a release)
+- Want test results reported automatically, without manual intervention
 
-![Testomat.io - Search Tests](./images/New_ePSOfhbu_2024-09-21.png)
+With Automated Plans:
 
-4. Use the filter to select test cases by specific criteria. You can filter by:
+- Only **automated tests** can be added to the plan
+- Test execution is triggered via a CI pipeline or CLI command
+- Execution results are sent automatically to Testomat.io
 
-* by Tag
-* by Priority
-* by Assignee
-* by Field
+To use an Automated Plan:
 
-![Testomat.io - Filter Tests](./images/New_pQqT2hyj_2024-09-21.png)
+- Tests must have **IDs**
+- IDs can be generated using the `--update-ids` option during test import
+- Each plan has a **Plan ID**, which can be used to run this specific collection of tests
 
-5. Or you can select test cases using the query language.
+For example,
 
-> Note: It is not possible to use a filter and a query language at the same time!
+`TESTOMATIO={API_KEY} npx @testomatio/reporter run 'actual run command' --filter 'testomatio:plan={Plan_ID}'`
 
-![Testomat.io - Select test cases by Query](./images/New_A920SrRa_2024-09-21.png)
+- `{API_KEY}` – your Testomat.io Reporting API key
+- `{Plan_ID}` – ID of the plan you want to run
+- `'actual run command'` – your test framework command (e.g., `npx codeceptjs`)
 
-![Testomat.io - TQL](./images/New_KZgeLhRu_2024-09-21.png)
+#### How to Launch an Automated Run from a Plan
 
-For more details on using the Query Language, visit the [dedicated page](https://docs.testomat.io/usage/query-language/).
+Once your Automated Plan is created, you can start an automated run from the **'Plans'** page.
 
-6. Only the tests that meet the criteria will be displayed, when you click on the `.. tests matched` button
+If you want to run tests automatically on a CI service:
 
-![Testomat.io - Matched tests](./images/New_gVfndDmF_2024-09-21.png)
+1. Go to the **'Plans'** page
+2. Open your Automated Plan
+3. Click the **'Launch'** button → you will be redirected to the **Runs** page
+4. A new run **'Run automated tests in CI'** will be triggered in the sidebar
 
-7. Additionally, you can run your Automated tests as Manual using a toggle switch. This gives you the option to include automated tests into a manual plan. It means that you will manually assign Passed/Failed statuses to automated tests during a test run.
+![Launch from Automated Plan from Plan](./images/gif5_5256.gif)
 
-![Testomat.io - Run Automated tests as Manual using toggle](./images/New_ARLJc69t_2024-09-21.png)
+:::note
 
-**How to Include Multiple Test Plans in Your Run**
+The **'Launch'** button on the Plans page will **not be active** if Continuous Integration is not configured. Make sure CI is set up first. Learn more on the [Continuous Integration page](https://docs.testomat.io/usage/continuous-integration/).
 
-You can easily customize the selection of Test Plans during your Run using the Multiselect checkbox. Follow these simple steps to include more than one Test Plan in your run:
+:::
 
-1. Go to the Runs section.
-2. Create a New Run Group or select an existing one.
-3. Create a New Manual Run.
-4. Search for the Test Plans you want to include.
-5. Enable Multiselect by checking the box next to the Test Plans search field.
-6. Select all the Test Plans that match your criteria.
+### Mixed Plans
 
-This will allow you to add multiple Test Plans to your Run with ease.
+**Mixed Plans** combine both manual and automated tests in a single plan.
 
-![Testomat.io - How to include Multiple Test Plans in Your Run](./images/multiselect_TestPlans.png)
+They are typically used when you:
 
+- Include automated tests that run via CI or via CLI
+- Have other tests that still require manual execution
+- Want a **single report** for the entire testing scope
 
-## Automated
+With Mixed Plans:
 
-By choosing automated plan, you need to configure **Continuous Integration**. Also, tests need to have IDs. This can be done by adding the `--update-ids` option when importing tests.
+- Both **manual and automated tests** can be added in the same plan
+- Automated tests can be executed via CI or triggered via CLI
+- Manual tests are executed manually
+- Results from both test types are combined into a single run report
 
-To learn how to set up Continuous Integration in Testomat.io, visit the [dedicated page](https://docs.testomat.io/usage/continuous-integration/).
+This makes Mixed Plans suitable for flexible or transitional testing strategies.
 
-![Testomat.io - Create Automated Plan](./images/New_O9I32YCX_2024-09-15.gif)
+#### How to Launch a Mixed Run from a Plan
 
-After running tests via CI, the report will be sent to Testomat.io. You can view it on the **Runs** page.
+Once your Mixed Plan is created, you can start a run directly from the **'Plans'** page. When triggered:
 
-![Testomat.io - GitHub Actions](./images/New_KoPkaO0N_2024-09-15.png)
+1. Go to the **'Plans'** page
+2. Open your Mixed Plan
+3. Click the **'Launch'** button → you will be redirected to the **Runs** page
+4. A new run **'New Mixed Run'** will be triggered in the sidebar
+5. You can choose whether to **enable or disable CI build** for this run
 
-Automated run report:
+:::note
 
-![Testomat.io - Automated Plan Report](./images/New_Q8Cq5xGN_2024-09-15.png)
+The **'Launch'** button on the Plans page will **not be active** if Continuous Integration is not configured. Make sure CI is set up first. Learn more on the [Continuous Integration page](https://docs.testomat.io/usage/continuous-integration/).
 
-A **Plan ID** can also be used to run an Automated Plan. To learn how to do this, visit the [Filter Test](https://docs.testomat.io/reference/reporter/pipes/testomatio/#filter-tests) page (currently available for Playwright and CodeceptJS frameworks). 
+:::
 
-## Mixed
+![Launch from Mixed Plan from Plan](./images/gif6_5256.gif)
 
-Mixed Plan is a combination of automated and manual tests. Automated tests are running in **Continuous Integration**, while you run manual tests in parallel. As a result, you get one report for both automated and manual runs.
+## How to Create a New Plan
 
-![Testomat.io - Create Mixed Plan](./images/New_UhbNVumq_2024-09-15.gif)
+### Common Flow for All Plan Types (Including All Tests)
+
+Before selecting test cases for any plan, the creation process follows the same initial steps for all plan types:
+
+1. Go to the **'Plans'** page
+2. Click the **'+ New plan'** dropdown
+3. Choose one of the following options from the dropdown:
+
+- **Manual**
+- **Automated**
+- **Mixed**
+
+![Type plan](./images/att1_6256.png)
+
+4. Enter a **Title** (required)
+5. Add a **Description** (optional)
+
+The description helps clarify the plan’s purpose, scope, and objectives. It can also be viewed later in the plan details or when inspecting Runs.
+
+6. Enable the **'Run Automated as Manual'** toggle (optional)
+7. Click the **'+ All tests'** button, then confirm
+
+:::note
+
+Clicking 'All tests' adds all tests to the collection and clears any other filters.
+
+:::
+
+8. Click the **'Save'** button
+
+![save New plan](./images/att2_6256.png)
+
+## How to Work with Test Collections
+
+| Feature / Action              | Description                                 | Notes / Logic                                                                                                                                                                                                                   |
+| ----------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Enable/Disable collection** | Toggle to show/hide tests in the collection | No restrictions                                                                                                                                                                                                                 |
+| **Add filter**                | Adds filters within a collection            | **AND** logic is applied between filters inside a single collection. <br> Cannot add any filters in a collection where **Tests** are already selected <br> To use filters, apply different filters or create another collection |
+| **Delete filters**            | Removes filters from the collection         | If the **last remaining filter** is removed while the collection toggle is enabled, <br> **all tests are included in the collection**.<br> Removing one of multiple filters works as expected                                   |
+| **All tests**                 | Includes all tests in the collection        | All tests are included in the collection; removes any active filters                                                                                                                                                            |
+| **Add collection**            | Adds a new collection with its own filters  | Allows combining different sets of filters across collections; **OR** logic applies between collections                                                                                                                         |
+| **Delete collection**         | Deletes the collection                      | Removes the collection along with all its filters. The first (default) collection cannot be deleted                                                                                                                             |
+
+### Filter-based selection
+
+Filters allow you to dynamically **include or exclude tests in a plan** based on metadata. Adding or removing tests via filters directly affects the plan, not just the collection.
+
+**Include Tests by Filters**
+
+- Adds tests to the collection **and the plan** that match any of the selected filters
+- Supported filters for Include:
+  - Suites & folders
+  - Tags
+  - Priority
+  - Assignees
+  - Labels
+  - Custom labels
+  - Query
+- Logic: **AND** within a collection, **OR** between collections
+- All tests selected by the filters are displayed in the **Matched tests** tab
+
+**Exclude Tests by Filters**
+
+- Removes tests from the collection **and the plan** that match selected filters
+- Supported filters for Exclude:
+  - Suites & folders
+  - Query
+- Works in combination with included tests, respecting the same OR/AND logic.
+
+:::note
+
+**Tests** is a chosen mode, not a filter. It cannot be combined with **supported filters** in the same collection.
+
+:::
+
+![Collections & filters](./images/att8_5256.png)
