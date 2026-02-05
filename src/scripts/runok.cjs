@@ -71,6 +71,7 @@ module.exports = {
         execSync('rm -rf tmp/php-reporter');
         execSync('rm -rf tmp/pytest-reporter');
 
+        // Note: Ensure this path is correct for your environment (use relative path 'src/content/...' if __dirname causes issues)
         const destinationFolder = path.resolve(path.join(__dirname, '../content/docs/test-reporting'));
 
         console.log(destinationFolder);
@@ -116,7 +117,7 @@ module.exports = {
 
         const updatedFiles = globSync(`${destinationFolder}/**/*.md`);
         for (const file of updatedFiles) {
-            if (['index', 'php', 'python'].includes(path.basename(file, '.md'))) continue;
+            if (['index', 'php', 'python', 'reporter'].includes(path.basename(file, '.md'))) continue;
             let title = humanize(path.basename(file, '.md')).trim();
             title[0] = title[0].toUpperCase();
             const titleId = title.toUpperCase();
@@ -139,6 +140,38 @@ module.exports = {
             fs.writeFileSync(file, contents)
         }
 
+        // --- New Logic for Reporter.md ---
+        try {
+            const jsReporterUrl = 'https://raw.githubusercontent.com/testomatio/reporter/refs/heads/2.x/README.md';
+            const jsReporterResponse = await axios.get(jsReporterUrl);
+            let jsReporterContents = jsReporterResponse.data.toString();
+
+            // Clean up title
+            jsReporterContents = jsReporterContents.replace(/^#\s.+/gm, '');
+
+            // Remove any existing frontmatter
+            jsReporterContents = jsReporterContents.replace(/^---[\s\S]+?^---/m, '');
+
+            // Fix links: ./docs/ -> ./
+            // This converts [Text](./docs/pipes.md) -> [Text](./pipes.md)
+            jsReporterContents = jsReporterContents.replace(/\.\/docs\//g, './');
+
+            // Fix pipes link: convert [Any Text](./pipes.md) -> [Any Text](./pipes/index.mdx)
+            // This handles [pipes], [Pipes], or any other label pointing to that file
+            jsReporterContents = jsReporterContents.replace(/\]\(\.\/pipes\.md\)/g, '](./pipes/index.mdx)');
+
+            // Add Note
+            jsReporterContents = `\n\n:::note\n Taken from [JS Reporter Readme](https://github.com/testomatio/reporter)\n:::\n\n${jsReporterContents}\n`;
+
+            // Write File with Headers
+            const jsHeader = fileHeaders.reporter || '---\ntitle: Testomat.io Reporter\n---';
+            fs.writeFileSync(path.join(destinationFolder, 'reporter.md'), jsHeader + jsReporterContents);
+            console.log('✅ Saved reporter.md');
+        } catch (err) {
+            console.error('Failed to process reporter.md', err.message);
+        }
+        // ---------------------------------
+
         let phpContents = fs.readFileSync(phpReadme).toString().replace(/^#\s.+/gm, '');
         phpContents = phpContents.replace(/^---[\s\S]+?^---/m, '');
         phpContents = phpContents.replace(/^#\s.+/gm, '');
@@ -151,12 +184,6 @@ module.exports = {
         pytestContents = `\n\n:::note\n Taken from [Pytestomatio Reporter Readme](${pytestReporterUrl})\n:::\n\n${pytestContents}\n`
 
         fs.writeFileSync(path.join(destinationFolder, '/python.md'), fileHeaders.python + pytestContents)
-        // writeToFile(destinationFolder + '/python.md', cfg => {
-        //   cfg.line(fileHeaders.python || '---\nPython Reporter\n---');
-        //   cfg.line(pytestContents);
-        // });
-
-
     },
 
     async docsImporter() {
