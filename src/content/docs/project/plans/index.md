@@ -1,5 +1,5 @@
 ---
-title: Test Plans
+title: Test Plans Overview
 description: Explore how to create and manage test plans in Testomat.io. This guide covers manual, automated, and mixed test plans, detailing how to organize test cases, run tests on CI, and combine manual and automated test reports. Learn how to configure Continuous Integration and use filters for efficient test management.
 type: article
 url: https://docs.testomat.io/project/plans
@@ -155,6 +155,26 @@ The **'Launch'** button on the Plans page will **not be active** if Continuous I
 
 ## How to Create a New Plan
 
+This section explains how to create a Test Plan in Testomat.io and configure its basic settings. You can create a plan from different parts of the application, depending on your workflow.
+
+### Ways to Create a Test Plan
+
+There are two ways to create a Test Plan in Testomat.io:
+
+1. **From the Plans page**  
+   This is the standard way to create and manage plans. It is suitable for all plan types and is described in detail below.
+
+2. **From the Runs page**  
+   You can also create a plan directly while launching a run.  
+   In this case:
+   - The plan creation settings are **identical** to creating a plan from the Plans page
+   - The newly created plan is **automatically pre-selected** for the current run
+   - This is the **only supported way** to create a plan during **Manual or Mixed run**
+
+![Create Plan from Runs page](./images/gif1_7641.gif)
+
+Regardless of where you start — from the **Plans** page or directly from the **Runs** page — the plan creation and configuration flow remains the same.
+
 ### Common Flow for All Plan Types (Including All Tests)
 
 Before selecting test cases for any plan, the creation process follows the same initial steps for all plan types:
@@ -222,7 +242,8 @@ Filters allow you to dynamically **include or exclude tests in a plan** based on
 - Supported filters for Exclude:
   - Suites & folders
   - Query
-- Works in combination with included tests, respecting the same OR/AND logic.
+- Works in combination with **Include Tests by Filters**
+- Logic: **AND** within a collection
 
 :::note
 
