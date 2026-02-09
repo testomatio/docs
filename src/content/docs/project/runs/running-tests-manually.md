@@ -143,7 +143,7 @@ These options are mutually exclusive — you can select only one at a time — b
 
 Additional Configurations:
 
-- **Assign to** – define who will execute the tests (See: [How to Assign Users to the Run](https://docs.testomat.io/project/runs/running-tests-manually/#how-to-assign-users-to-the-test-run))
+- **Assign to** – define who will execute the tests (See: [How to Assign Users to the Run](https://docs.testomat.io/project/runs/running-tests-manually/#how-to-assign-users-to-the-run))
 - **Title** (optional) – give your run a descriptive name
 - **Rungroup** – group the run within a specific RunGroup for better organization (See: [How to Run Tests in RunGroups](https://docs.testomat.io/project/runs/running-tests-manually/#how-to-run-tests-in-rungroups))
 - **Set environment for execution** – choose one or multiple environments for the run (See: [How to Run Environments](https://docs.testomat.io/project/runs/environments/#how-to-run-with-multi-environments))
@@ -443,7 +443,7 @@ Automated tests can be run manually in two ways:
 
 ## How to Make Changes in a Launched Run
 
-During testing, you might encounter new scenarios that need to be added immediately. Testomat.io allows you to easily add tests to a test run that’s already started. This way, you can cover unexpected cases without stopping your ongoing testing process.
+During testing, you might encounter new scenarios that need to be added immediately. Testomat.io allows you to easily add tests to a run that’s already started. This way, you can cover unexpected cases without stopping your ongoing testing process.
 
 This ensures flexibility, smooth testing workflow, and that no important scenarios are missed.
 
