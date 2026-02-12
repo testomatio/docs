@@ -156,6 +156,25 @@ This feature allows you to create test case description based just on its name o
 
 ![Testomat.io - AI-powered](./images/AI_9.gif)
 
+## Suggest Better Test Case Description
+
+**'Suggest Better Description'** AI-feature is your shortcut to turning rough notes into professional test cases.
+
+If you have a "draft" description that is messy or lacks detail, the AI rewrites it using testing best practices—adding structure, clear objectives, and necessary context.
+
+**How to use this feature:**
+
+1. Open Test Case with you want to refine.
+2. Click **'Extra menu'** button on 'Description' tab.
+3. Select **'Suggest Better Description'** option from the dropdown menu.
+
+![Testomat.io - Suggest Better Test Case Description](./images/Suggest_Better_Description_1.png)
+
+4. Click **'Show Diff'** to see a side-by-side comparison of your original text and the AI’s suggestions.
+5. Click **'Update Test Description'** to apply the improvements.
+
+![Testomat.io - Suggest Better Test Case Description](./images/Suggest_Better_Description_2.png)
+
 ## Generate Test Case Description Based on Test Code
 
 Use AI to analyze your test code and produce detailed test descriptions. Bridges the gap between technical code and human-readable documentation, improving collaboration between technical and non-technical team members:
