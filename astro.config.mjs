@@ -318,6 +318,13 @@ export default defineConfig({
 								{label: 'AI-Agents', link: '/advanced/ai-powered-features/ai-agents'},
 							],
 						},
+						{
+							label: 'api-access',
+							collapsed: true,
+							items: [
+								{ label: 'api-access', link: '/advanced/api-access'}
+							],
+						},
 					]
 				},
 				{
