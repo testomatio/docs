@@ -308,7 +308,7 @@ Testomat.io allows you to filter tests by Priority, making it easy to:
 
 ![Filter by priority](./images/att4_1457.png)
 
-## How to add parameters to a test
+## How to Add Parameters to a Test
 
 Parameters are used to create data-driven tests. Each parameter will be treated as a separate test during a manual or automated run.
 
@@ -345,7 +345,7 @@ or under the test description.
 
 ![Added_parameters_desc](./images/att5_4962.png)
 
-### How to edit test parameters
+### How to Edit Test Parameters
 
 You are able to edit existing parameters or parameter headers in two methods:
 
@@ -397,3 +397,20 @@ To delete a parameter:
 - Click **‘Save’**
 
 ![Second_Method_Edit_Header_Name](./images/att13_4962.png)
+
+### Launch Test Case with Parameters
+
+When a test case with added parameters is launched — whether as a manual or automated run — it is automatically rendered with actual values. This data-driven approach ensures that your test logic remains clean while covering multiple scenarios.
+
+**How Parameters Work During Execution:**
+
+- **Iteration-Based Testing:** Each row in your parameters table is treated as a separate test iteration.
+- **Data Substitution:** During the run, the system substitutes the parameter placeholders with the specific data from that row.
+
+![Testomat.io - Rendering Test Parameters](./images/Rendering_test_param_1.gif)
+
+- **Comprehensive Reporting:** In the Run Report, each iteration is displayed as an individual test case, complete with its specific test results.
+
+![Testomat.io - Rendering Test Parameters](./images/Rendering_test_param_2.png)
+
+This functionality allows you to pinpoint exactly which set of data caused a failure without searching through a single, massive test log.
