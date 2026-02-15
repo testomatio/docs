@@ -76,6 +76,26 @@ As soon as all tests are completed you can check Run Report with details.
 
 ![Detailed test report](./images/2023-08-04_23.21.47@2x.png)
 
+### Adding Multi-Select Suite IDs to CI Settings
+
+With Testomat.io you have the ability to select and pass **multiple suite IDs to CI** when creating a new run. This option is available in the New Run view as a multi-select input, allowing you to define which test suites should be executed as part of a run.
+
+The multi-select is implemented as a dropdown, where you can choose the required suites by their IDs. The selected suite IDs are then passed to your CI system.
+
+**To use this feature, you need:**
+
+1. Adjust your CI workflow by adding `grep by suites`.
+
+![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_1.png)
+
+2. Update your Testomat CI configuration to accept and process the passed suite IDs.
+
+![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_2.png)
+
+When everything is configured, previously added suites will be available under **'Suites'** dropdown list in the New Run view.
+
+![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_3.png)
+
 ## Advanced Reporting
 
 Testomat.io reporter can be configured to add additional information for Run report. For instance, you can specify:
