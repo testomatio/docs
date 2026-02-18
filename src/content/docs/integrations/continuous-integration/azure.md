@@ -23,7 +23,7 @@ And follow the instructions below:
 
 ![Testomatio - Azure Pipeline](./images/Azure_D_2.png)
 
-3. Create a new **CI connection** inside your project in Testomat.io: go to **'Settings' -> 'Continuous Integration' ->** click **'Connect to CI'** select **'Azure Pipeline'**
+3. Create a new **CI connection** inside your project in Testomat.io: go to **'Settings' -> 'Continuous Integration' ->** click **'Connect to CI'** select **'Azure Pipelines'**
 
 ![Testomatio - Azure Pipeline](./images/Azure_D_3.png)
 
@@ -33,6 +33,7 @@ And follow the instructions below:
 - `Azure DevOps Organization`.
 - `Azure DevOps Project`.
 - `Azure DevOps Pipeline Id` - open a pipeline and copy a number value of `definitionId` param from URL (in our case `definitionId = 1`).
+- `Azure Server URL` - in case you use self-hosted Azure DevOps Server instead of Azure Cloud.
 
 ![Testomatio - Azure Pipeline](./images/Azure_D_4.png)
 
