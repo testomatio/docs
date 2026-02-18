@@ -12,7 +12,7 @@ head:
 
 # API Access Guide
 
-Testomat.io provides a robust API that allows users to integrate, automate, and extend their test management workflows. Testomat.io uses [JSON API](https://jsonapi.org) as standard for Request and Response data. 
+Testomat.io provides a robust API that allows users to integrate, automate, and extend their test management workflows. Testomat.io uses [JSON API](https://jsonapi.org) as standard for Request and Response data.
 Access to the API is secured using **Access Tokens**, which ensure that only authorized systems and users can interact with your projects.
 
 ---
@@ -31,7 +31,7 @@ There are two main types of access tokens in Testomat.io:
 
 ---
 
-![Testomat.io - Access Tokens](./images/Access_tokens.png)
+![Testomat.io - Access Tokens](./images/access_tokens.png)
 
 ---
 
@@ -68,7 +68,7 @@ POST /api/login
 
 ### **Step 2: Receive JWT Token**
 
-After sending your login request, you’ll receive a **JSON Web Token (JWT)** in the response.  
+After sending your login request, you’ll receive a **JSON Web Token (JWT)** in the response.
 This token is used to authenticate all subsequent API calls.
 
 **Response Example:**
@@ -140,7 +140,7 @@ GET /api/{project_id}/run/{id}
 To get all test results from a specifc run:
 
 ```bash
-GET /api/{project_id}/testruns?run_id={run_id}  
+GET /api/{project_id}/testruns?run_id={run_id}
 ```
 
 
@@ -152,7 +152,7 @@ For a complete list of available endpoints, request parameters, and schemas, see
 
 ## Importing and Reporting with Project Token
 
-**Project Tokens** are used when working with **Importing** and **Reporting APIs** in Testomat.io.  
+**Project Tokens** are used when working with **Importing** and **Reporting APIs** in Testomat.io.
 These tokens provide access specifically for operations such as importing tests or reporting test results to a given project.
 
 Please check the documentation below for for details:

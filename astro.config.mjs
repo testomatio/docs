@@ -244,7 +244,7 @@ export default defineConfig({
 							label: 'Artifacts',
 							collapsed: true,
 							items: [
-								{ label: 'Artifacts', link: '/advanced/test-artifacts/artifacts' }
+								{ label: 'Artifacts', link: '/advanced/test-artifacts' }
 							],
 						},
 						{
@@ -319,10 +319,10 @@ export default defineConfig({
 							],
 						},
 						{
-							label: 'api-access',
+							label: 'API Access',
 							collapsed: true,
 							items: [
-								{ label: 'api-access', link: '/advanced/api-access'}
+								{ label: 'API Access', link: '/advanced/api-access'}
 							],
 						},
 					]
