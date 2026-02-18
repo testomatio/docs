@@ -14,13 +14,24 @@ head:
 
 Testomat.io introduces another AI-powered feature — **AI-Agents** — designed to automate and enhance key aspects of your test management workflow using machine learning and intelligent logic.
 
+- **Deep Analyze** - Deeply analyzes the project and provides a comprehensive overview of the running status and coverage of tests.
+- **Improve Test Descriptions** - Go through all tests with descriptions and improve their markdown formatting. This action won't change the content, only improves the formatting. Applied changes can be safely reverted in Pulse.
+- **Write Descriptions from Code** - Updates all automated tests which have no description by analyzing their code and writing descriptions.
+- **Mark Flaky Tests** - Adds "Flaky" label to all flaky tests detected by analytics. Update analytics settings to customize flaky detection.
+- **Mark Failed Tests** - Adds "Failed" label to all tests that failed all the time. Analytics will detect tests that failed for last month.
+- **Transform Project to BDD** - Creates a new project with all the tests converted to BDD Gherkin format.
+
 ![AI Agents](./images/AI_agents.gif)
 
----
+:::note
+
+These powerful AI-features are available in the E**nterprise plan**.
+
+:::
 
 ### 1. 🔎 Deep Analyze
 
-**Deep Analyze** is an intelligent AI agent that performs a comprehensive audit of your testing project. It provides a clear overview of test execution, coverage, and identifies critical gaps that could block a release — ideal for QA leads, product managers, and teams preparing for production readiness.
+**'Deep Analyze'** is an intelligent AI-agent that performs a comprehensive audit of your testing project. It provides a clear overview of test execution, coverage, and identifies critical gaps that could block a release — ideal for QA leads, product managers, and teams preparing for production readiness.
 
 #### Key Capabilities
 
@@ -37,7 +48,7 @@ Testomat.io introduces another AI-powered feature — **AI-Agents** — designed
 
 ### 2. 🍿 Mark Flaky Tests
 
-**Mark Flaky Tests** uses execution analytics to automatically detect flaky tests—those that intermittently pass or fail without code changes—and labels them accordingly. This improves visibility and helps teams isolate unstable tests.
+**'Mark Flaky Tests'** uses execution analytics to automatically detect flaky tests—those that intermittently pass or fail without code changes—and labels them accordingly. This improves visibility and helps teams isolate unstable tests.
 
 #### Key Capabilities
 
@@ -53,7 +64,7 @@ Testomat.io introduces another AI-powered feature — **AI-Agents** — designed
 
 ### 3. 🚩 Mark Failed Tests
 
-**Mark Failed Tests** identifies tests that have failed 100% of the time over the past month and labels them as "Failed." This helps surface persistent issues that could block releases or degrade pipeline reliability.
+**'Mark Failed Tests'** identifies tests that have failed 100% of the time over the past month and labels them as "Failed." This helps surface persistent issues that could block releases or degrade pipeline reliability.
 
 #### Key Capabilities
 
@@ -68,7 +79,7 @@ Testomat.io introduces another AI-powered feature — **AI-Agents** — designed
 
 ### 4. 📝 Improve Test Descriptions
 
-**Improve Test Descriptions** automatically enhances the formatting and readability of test case descriptions using Markdown — without changing the original content. It ensures descriptions are structured, easy to scan, and consistent across the project.
+**'Improve Test Descriptions'** automatically enhances the formatting and readability of test case descriptions using Markdown — without changing the original content. It ensures descriptions are structured, easy to scan, and consistent across the project.
 
 #### Key Capabilities
 
@@ -85,7 +96,7 @@ Testomat.io introduces another AI-powered feature — **AI-Agents** — designed
 
 ### 5. 🧙‍♂️ Write Descriptions from Code
 
-**Write Descriptions from Code** generates human-readable test descriptions by analyzing the test logic directly from code. It helps teams understand test intent without diving into implementation — especially useful in large repositories or during onboarding.
+**'Write Descriptions from Code'** generates human-readable test descriptions by analyzing the test logic directly from code. It helps teams understand test intent without diving into implementation — especially useful in large repositories or during onboarding.
 
 #### Key Capabilities
 
@@ -102,7 +113,7 @@ Testomat.io introduces another AI-powered feature — **AI-Agents** — designed
 
 ### 6. 🎁 Transform Project to BDD
 
-**Transform Project to BDD** automatically converts your existing test project into BDD format using Gherkin syntax. It rewrites each test into the Given/When/Then structure, creating a new project that follows behavior-driven development practices.
+**'Transform Project to BDD'** automatically converts your existing test project into BDD format using Gherkin syntax. It rewrites each test into the Given/When/Then structure, creating a new project that follows behavior-driven development practices.
 
 #### Key Capabilities
 
@@ -119,7 +130,7 @@ Testomat.io introduces another AI-powered feature — **AI-Agents** — designed
 
 ### 7. 🐷 Auto Detach Automated Tests
 
-**Auto Detach Automated Tests** identifies automated tests that haven’t been executed in the last 45 days and marks them as "Detached." This helps keep your test suite clean, relevant, and easier to manage.
+**'Auto Detach Automated Tests'** identifies automated tests that haven’t been executed in the last 45 days and marks them as "Detached." This helps keep your test suite clean, relevant, and easier to manage.
 
 #### Key Capabilities
 
@@ -131,6 +142,3 @@ Testomat.io introduces another AI-powered feature — **AI-Agents** — designed
 - **Non-destructive** — detached status can be reverted via Pulse.
 
 ![Auto Detach Automated Tests](./images/Detached_automated_tests.png)
-
----
-
