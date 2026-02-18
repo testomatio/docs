@@ -208,6 +208,7 @@ export default defineConfig({
 					label: 'Test Reporting',
 					items: [
 						{ label: 'Overview', link: '/test-reporting'},
+						{ label: 'Testomat.io Reporter', link: '/test-reporting/reporter'},
 						{ label: 'NodeJS Test Frameworks', link: '/test-reporting/frameworks'},
 						{ label: 'PHP Test Frameworks', link: '/test-reporting/php'},
 						{ label: 'Python Test Frameworks', link: '/test-reporting/python'},
@@ -315,6 +316,13 @@ export default defineConfig({
 								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features/ai-powered-features' },
 								{label: 'AI-Requirements', link: '/advanced/ai-powered-features/ai-requirements'},
 								{label: 'AI-Agents', link: '/advanced/ai-powered-features/ai-agents'},
+							],
+						},
+						{
+							label: 'api-access',
+							collapsed: true,
+							items: [
+								{ label: 'api-access', link: '/advanced/api-access'}
 							],
 						},
 					]

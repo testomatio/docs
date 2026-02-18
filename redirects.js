@@ -102,6 +102,7 @@ const redirects = {
     "/project/runs/reporter/pipes/testomatio": "/test-reporting/pipes/testomatio",
     "/project/runs/import-export/import-tests-from-source-code.md": "/project/import-export/import/import-tests-from-source-code",
     "/project/runs/runs/reporter/pipes/testomatio.md": "/test-reporting/pipes/testomatio",
+    "/reference/reporter/artifacts/#privacy": "/test-reporting/artifacts/#private-access",
 }
 
 export default redirects

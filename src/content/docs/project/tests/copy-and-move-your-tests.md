@@ -37,9 +37,43 @@ You can copy a single test from a test suite, an entire test suite, or even a fo
 
 ![Testomat.io - 'Change project' button](./images/change_project_button.png)
 
+### Advanced Copy Options
+
+When copying tests, suites, or folders, you can include additional metadata. To do this, open the **Copy** modal and expand the **More options** section.
+
+- **Assign labels** — copies all labels associated with tests, suites, or folders, including **custom labels**
+- **Assign attachments** — copies all attached files to tests, suites, or folders
+- **Assign issues** — copies linked issues
+
+![More options](./images/att1_1033.png)
+
+:::note
+
+Linked issues are copied only if the destination project has an active integration with the **same Issue Management System and the same project/configuration**.
+
+Otherwise, linked issues will be **skipped** and **not copied**.
+
+:::
+
+You can select **one**, **multiple**, or **all** options at the same time, depending on your needs. If no options are selected, the system creates a copy **without labels, issues, or attachments** by default.
+
+These advanced options are available for **all copy modes**:
+
+- **Same project**
+- **Other project**
+- **Bulk selection project** (for suites and folders)
+
+:::note
+
+**Bulk selection project** is not available when copying individual tests. Tests must belong to a suite, while bulk copying places items into the **project root**, which is not supported for tests.
+
+:::
+
+This flexibility allows you to either fully duplicate test assets with all related context or create a clean copy without additional metadata.
+
 ## Move Your Tests
 
-You may need to move your tests within a project, for example to another suite. For this purpose, you can use **Move** or **Drag and Drop** functionality. 
+You may need to move your tests within a project, for example to another suite. For this purpose, you can use **Move** or **Drag and Drop** functionality.
 
 ### Move menu action
 
