@@ -84,7 +84,7 @@ The multi-select is implemented as a dropdown, where you can choose the required
 
 **To use this feature, you need:**
 
-1. Adjust your CI workflow by adding `grep by suites`.
+1. Adjust your CI workflow by adding `grep by suites` - (Learn more about [Environment Configuration](https://docs.testomat.io/integrations/continuous-integration/#environment-configuration)).
 
 ![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_1.png)
 
@@ -95,6 +95,14 @@ The multi-select is implemented as a dropdown, where you can choose the required
 When everything is configured, previously added suites will be available under **'Suites'** dropdown list in the New Run view.
 
 ![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_3.png)
+
+:::note
+
+When setting up automated tests, selecting a suite linked to a CI configuration restricts further selection to only those suites within that same CI configuration.
+
+![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_4.gif)
+
+:::
 
 ## Advanced Reporting
 
