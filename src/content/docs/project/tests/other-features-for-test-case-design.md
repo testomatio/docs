@@ -12,41 +12,33 @@ head:
 
 ## Multiselection for Tests
 
-The **Multiselection** feature on the **Tests** page allows users to perform bulk actions on multiple tests, entire test suites, or folders.
+The **'Multiselection'** feature on the **Tests** page allows users to perform bulk actions on multiple tests, entire test suites, or folders.
 
 ### To enable Multiselection:
 
-1. Click the **Multiselection** button located at the top left corner of the **Tests** page.
+1. Click the **'Multiselection'** button located at the top left corner of the **Tests** page.
 
-   ![Multiselection button](./images/Multiselect_button_tests.png)
+![Testomat.io - Multiselection button](./images/Multiselect_button_tests.png)
 
 2. Select the desired tests, test suites, or folders.
+3. Once selected, the **'Multiselection options'** toolbar will appear at the bottom of the page.
 
-3. Once selected, the **Multiselection options** toolbar will appear at the bottom of the page.
-
-   ![Multiselection options](./images/Multiselection_options.png)
+![Testomat.io - Multiselection options](./images/Multiselection_options.png)
 
 ---
 
 ### Available Multiselection Actions:
 
 1. **Run** – Launches a test run containing the selected items.
-
 2. **Labels** – Add or remove labels or custom fields for the selected tests.  
    [Learn more about labels →](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields)
-
-3. **Copy** – Copy selected tests within the current project or to another project.
+3. **Copy** – Copy selected tests within the current project or to another project.  
 4. **Move** – Move tests to another test suite or folder within the same project.
-
 5. **Tags** – Assign existing tags or create new ones for the selected tests.  
    [More on using tags →](https://docs.testomat.io/advanced/tags-labels/tags/)
-
 6. **+ Link** – Open a pop-up to link a related defect to the selected tests.
-
 7. **Priority** – Set priority levels for the selected tests.
-
-8. **More options (⋯)** – Contains additional action **Download** – Export selected tests to a spreadsheet.
-
+8. **More options (⋯)** – Contains additional action **'Download'** – Export selected tests to a spreadsheet.
 9. **Delete** – Permanently remove the selected tests.
 
 ## URL/ID Quick Copy
@@ -66,11 +58,11 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 
 Unlike other test management systems, **Testomat.io doesn't allow suite to include other suites and tests**. That's why you can either create a suite (a collection of tests) or folder (collection of suites).
 
-<Aside>
+:::note
 When creating a suite you have to explicitly set its type: a suite or a folder.
-</Aside>
+:::
 
-![New suite](./images/2023-08-03_00.53.02@2x.png)
+![Testomat.io - New suite](./images/2023-08-03_00.53.02@2x.png)
 
 This was designed so tests structure could match the filesystem. For instance, if you use BDD project, feature file can contain scenarios, but can't contain other feature files. The same for automated tests, a file can contain tests but can't contain other files.
 
@@ -78,15 +70,34 @@ It's assumed that in any moment a manual test can be automated, so it is importa
 
 An empty suite can be converted to folder or vice versa
 
-![Empty suite](./images/2023-08-03_00.54.46@2x.png)
+![Testomat.io - Empty suite](./images/2023-08-03_00.54.46@2x.png)
 
 Also you can set an emoji icon for the suite
 
-![Pick emoji](./images/2023-08-03_00.57.10@2x.png)
+![Testomat.io - Pick emoji](./images/2023-08-03_00.57.10@2x.png)
 
 If your test is deeply nested within suites and folders, you can use breadcrumbs with tooltips to navigate the project structure more effectively.
 
 ![Testomat.io - Breadcrumbs tooltip](./images/New_g6FZ3V7n_2024-08-10.png)
+
+## Export Suite as PDF
+
+You can now download any suite as a **PDF file**. This feature is designed to help teams share test results, documentation, or audit trails with stakeholders who may not have access to the platform itself.
+
+**Using this feature is simple:**
+
+1. Go to the **Tests** page.
+2. Open the desired suite.
+3. Click **'Extra menu'** button.
+4. Select **'Export as PDF'** option from the dropdown menu.
+
+![Testomat.io - Export Suite as PDF](./images/Export_Suite_1.png)
+
+The export captures the entire test suite, including all individual test cases, their IDs, types, steps, expected results and screenshots.
+
+![Testomat.io - Export Suite as PDF](./images/Export_Suite_2.png)
+
+This makes it convenient to share test content outside of Testomat.io, whether for reviews, documentation, or reporting purposes.
 
 ## Sharing Tests, Suites, and Folders
 
@@ -226,3 +237,4 @@ Use unlinking only when a test or suite must diverge from its source version.
 - Treat the source project as a **Single Source of Truth**
 - Use shared tests for stable, reusable flows (smoke, regression, core scenarios)
 - Unlink shared items only when necessary
+
