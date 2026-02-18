@@ -18,7 +18,6 @@ const redirects = {
     "/usage/test-artifacts": "/project/runs/reporter/artifacts",
     "/advanced/artifacts": "/project/runs/reporter/artifacts",
     "/advanced/artifacts/test-artifacts": "/project/runs/reporter/artifacts",
-    "/advanced/test-artifacts/": "/advanced/test-artifacts/artifacts",
     "/usage/query-language": "/advanced/tql",
     "/usage/keyboard-shortcuts": "/advanced/shortcuts",
     "/usage/living-documentation": "/advanced/living-doc",
