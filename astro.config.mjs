@@ -244,7 +244,7 @@ export default defineConfig({
 							label: 'Artifacts',
 							collapsed: true,
 							items: [
-								{ label: 'Artifacts', link: '/advanced/test-artifacts/artifacts' }
+								{ label: 'Artifacts', link: '/advanced/test-artifacts' }
 							],
 						},
 						{
@@ -316,6 +316,13 @@ export default defineConfig({
 								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features/ai-powered-features' },
 								{label: 'AI-Requirements', link: '/advanced/ai-powered-features/ai-requirements'},
 								{label: 'AI-Agents', link: '/advanced/ai-powered-features/ai-agents'},
+							],
+						},
+						{
+							label: 'API Access',
+							collapsed: true,
+							items: [
+								{ label: 'API Access', link: '/advanced/api-access'}
 							],
 						},
 					]

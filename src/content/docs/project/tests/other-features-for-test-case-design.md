@@ -7,46 +7,38 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: test design, test case management, test automation, Testomat.io, test organization, software testing, testing tools, test suites, folders, test structure, multiselection, labels, tags, mark as favorite, export suite to PDF
+      content: test design, test case management, test automation, Testomat.io, test organization, software testing, testing tools, test suites, test structure, folders, mark as favorite, export suite to PDF,  multiselection, labels, tags, share tests, share suites, share folders, unlink shared tests, single source of truth
 ---
+
 ## Multiselection for Tests
 
-The **Multiselection** feature on the **Tests** page allows users to perform bulk actions on multiple tests, entire test suites, or folders.
+The **'Multiselection'** feature on the **Tests** page allows users to perform bulk actions on multiple tests, entire test suites, or folders.
 
 ### To enable Multiselection:
 
-1. Click the **Multiselection** button located at the top left corner of the **Tests** page.
+1. Click the **'Multiselection'** button located at the top left corner of the **Tests** page.
 
-   ![Multiselection button](./images/Multiselect_button_tests.png)
+![Testomat.io - Multiselection button](./images/Multiselect_button_tests.png)
 
 2. Select the desired tests, test suites, or folders.
+3. Once selected, the **'Multiselection options'** toolbar will appear at the bottom of the page.
 
-3. Once selected, the **Multiselection options** toolbar will appear at the bottom of the page.
-
-   ![Multiselection options](./images/Multiselection_options.png)
+![Testomat.io - Multiselection options](./images/Multiselection_options.png)
 
 ---
 
 ### Available Multiselection Actions:
 
 1. **Run** – Launches a test run containing the selected items.
-
 2. **Labels** – Add or remove labels or custom fields for the selected tests.  
    [Learn more about labels →](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields)
-
 3. **Copy** – Copy selected tests within the current project or to another project.  
-   
 4. **Move** – Move tests to another test suite or folder within the same project.
-
 5. **Tags** – Assign existing tags or create new ones for the selected tests.  
    [More on using tags →](https://docs.testomat.io/advanced/tags-labels/tags/)
-
 6. **+ Link** – Open a pop-up to link a related defect to the selected tests.
-
 7. **Priority** – Set priority levels for the selected tests.
-
-8. **More options (⋯)** – Contains additional action **Download** – Export selected tests to a spreadsheet.
-
+8. **More options (⋯)** – Contains additional action **'Download'** – Export selected tests to a spreadsheet.
 9. **Delete** – Permanently remove the selected tests.
 
 ## URL/ID Quick Copy
@@ -62,15 +54,15 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 
 ![Testomat.io - URL/ID Copy](./images/New_1pgghaYx_2024-08-08.png)
 
-## Suites and folders
+## Suites and Folders
 
 Unlike other test management systems, **Testomat.io doesn't allow suite to include other suites and tests**. That's why you can either create a suite (a collection of tests) or folder (collection of suites).
 
-<Aside>
+:::note
 When creating a suite you have to explicitly set its type: a suite or a folder.
-</Aside>
+:::
 
-![New suite](./images/2023-08-03_00.53.02@2x.png)
+![Testomat.io - New suite](./images/2023-08-03_00.53.02@2x.png)
 
 This was designed so tests structure could match the filesystem. For instance, if you use BDD project, feature file can contain scenarios, but can't contain other feature files. The same for automated tests, a file can contain tests but can't contain other files.
 
@@ -78,11 +70,11 @@ It's assumed that in any moment a manual test can be automated, so it is importa
 
 An empty suite can be converted to folder or vice versa
 
-![Empty suite](./images/2023-08-03_00.54.46@2x.png)
+![Testomat.io - Empty suite](./images/2023-08-03_00.54.46@2x.png)
 
 Also you can set an emoji icon for the suite
 
-![Pick emoji](./images/2023-08-03_00.57.10@2x.png)
+![Testomat.io - Pick emoji](./images/2023-08-03_00.57.10@2x.png)
 
 If your test is deeply nested within suites and folders, you can use breadcrumbs with tooltips to navigate the project structure more effectively.
 
@@ -110,3 +102,161 @@ To remove all suites/folders from Favourites with one click: Use the **'Starred'
 
 ![Testomat.io - UnMark Folders & Suites as Favourites](./images/unstar_suite.png)
 :::
+
+## Export Suite as PDF
+
+You can now download any suite as a **PDF file**. This feature is designed to help teams share test results, documentation, or audit trails with stakeholders who may not have access to the platform itself.
+
+**Using this feature is simple:**
+
+1. Go to the **Tests** page.
+2. Open the desired suite.
+3. Click **'Extra menu'** button.
+4. Select **'Export as PDF'** option from the dropdown menu.
+
+![Testomat.io - Export Suite as PDF](./images/Export_Suite_1.png)
+
+The export captures the entire test suite, including all individual test cases, their IDs, types, steps, expected results and screenshots.
+
+![Testomat.io - Export Suite as PDF](./images/Export_Suite_2.png)
+
+This makes it convenient to share test content outside of Testomat.io, whether for reviews, documentation, or reporting purposes.
+
+## Sharing Tests, Suites, and Folders
+
+The **Share** feature is designed to keep test logic and structure consistent across multiple projects while allowing each project to operate independently.
+
+Shared tests, suites, and folders always have **one original source** that defines their content and controls all updates. While structure and test logic are synchronized from the source project, each receiving project maintains its own execution context for test runs, including logs, statuses, and results.
+
+Key points:
+
+- Shared items are linked to the source project and appear as read-only in target projects
+- Execution results, logs, and test runs are project-specific
+- Updates to the source test (e.g., description changes) are applied to all linked projects, even if runs in target projects are still in progress
+- Shared items can be unlinked to make them fully editable and independent in a target project
+
+You can share the following entities between projects:
+
+- Test
+- Suite
+- Folder
+
+:::note
+
+Folders act as containers for shared content. The folder itself is not marked as shared, but its nested items are.
+
+:::
+
+### How Sharing Works
+
+When a test, suite, or folder is shared, specific data from the source project is propagated to all target projects, while other information remains local.
+
+| Data                   | Shared Behavior                                                   |
+| ---------------------- | ----------------------------------------------------------------- |
+| Title & Description    | Shared; updates in the source are applied to all linked projects  |
+| Attachments            | Shared; cannot be changed or new ones added in target projects    |
+| Labels & custom labels | Shared; additional labels can be added locally in target projects |
+| Tags                   | Shared; updates in the source are applied to all linked projects  |
+| Priority               | Shared; cannot be changed in target projects                      |
+| Linked issues          | Shared (if integration is enabled)                                |
+| Assignee               | Shared (if the user exists in the target project)                 |
+| Test author            | Shared (if the user exists in the target project)                 |
+| Runs                   | Not Shared; each project tracks its own results                   |
+| History                | Not Shared; always project-specific                               |
+| Requirements           | Not Shared; always project-specific                               |
+| Comments               | Not Shared; always project-specific                               |
+
+:::note
+
+When a suite is shared, any new tests added to it in the source project automatically appear in all linked projects. Structural changes are synchronized from the source project.
+
+:::
+
+#### Permissions and Restrictions
+
+- Shared items are **read-only** in target projects
+- Editing is allowed **only in the source project**
+- Editing becomes available **only after unlinking** the shared item
+- AI actions are disabled for items
+- Execution is allowed in all projects
+- Execution results remain local to each project
+
+### How to Share a Single Item
+
+1. Navigate to the **Tests** page
+2. Open a test, suite, or folder in the source project
+3. Click the **More options** button
+4. Select **Share to other projects**
+
+![Select Share to other projects](images/att3_2384.png)
+
+5. Open the **Bulk selection project** tab to share with multiple projects, or stay on **Other project** to share with a single project
+6. Choose target project(s)
+7. Click the **Share** button
+
+![Share suite](./images/att4_2384.png)
+
+- Icons and tooltips indicating shared projects appear
+- The selected items will appear in the chosen projects as shared and read-only
+- Suites and folders shared in bulk are placed in the **Root** by default
+- Sharing tests allow only for a single project
+
+![Overview](./images/att6_2384.png)
+
+### How to Share in Bulk
+
+Bulk sharing is available when multi-select mode is enabled.
+
+1. Navigate to the **Tests** page
+2. Enable **Multi-select** mode
+3. Select multiple tests, suites, or folders
+4. Click **Share** button at the toolbar
+5. Choose a target project(s)
+6. Select the destination
+7. Click the **Share** button
+
+![Bulk Share](./images/att1_2384.png)
+
+All selected items will be shared at once and follow the same shared rules.
+
+### How Execution History Works for Shared Tests
+
+Shared tests remain linked to the source project, but execution context is always project-specific.
+
+- Running a shared test or suite in a target project creates a local run
+- Logs, statuses, and results are tracked only in that project
+
+This ensures teams can reuse test logic while keeping execution data isolated and meaningful for each project, while still reflecting updates to the source test where relevant.
+
+![Excute shared tests](./images/gif2_2384.gif)
+
+:::note
+
+If a test run is in progress, and the source test is updated (e.g., its description is changed), the update is applied across all linked projects.
+
+:::
+
+### Unlinking Shared Items
+
+Unlinking breaks the connection to the source project, making the item fully editable in the target project.
+
+1. Open the shared test, suite, or folder in the target project
+2. Click the **More options** button
+3. Select **Unlink share** button
+
+![Unlink share](./images/gif1_2384.gif)
+
+After unlinking:
+
+- it is no longer updated from the source project
+- the Single Source of Truth relationship is removed
+- the item behaves as a local project entity and can be modified freely
+- a log entry appears in the **History**, indicating that the item was unlinked from the shared source
+
+Use unlinking only when a test or suite must diverge from its source version.
+
+### Best Practices
+
+- Treat the source project as a **Single Source of Truth**
+- Use shared tests for stable, reusable flows (smoke, regression, core scenarios)
+- Unlink shared items only when necessary

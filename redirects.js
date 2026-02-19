@@ -18,7 +18,6 @@ const redirects = {
     "/usage/test-artifacts": "/project/runs/reporter/artifacts",
     "/advanced/artifacts": "/project/runs/reporter/artifacts",
     "/advanced/artifacts/test-artifacts": "/project/runs/reporter/artifacts",
-    "/advanced/test-artifacts/": "/advanced/test-artifacts/artifacts",
     "/usage/query-language": "/advanced/tql",
     "/usage/keyboard-shortcuts": "/advanced/shortcuts",
     "/usage/living-documentation": "/advanced/living-doc",
@@ -102,6 +101,7 @@ const redirects = {
     "/project/runs/reporter/pipes/testomatio": "/test-reporting/pipes/testomatio",
     "/project/runs/import-export/import-tests-from-source-code.md": "/project/import-export/import/import-tests-from-source-code",
     "/project/runs/runs/reporter/pipes/testomatio.md": "/test-reporting/pipes/testomatio",
+    "/reference/reporter/artifacts/#privacy": "/test-reporting/artifacts/#private-access",
 }
 
 export default redirects
