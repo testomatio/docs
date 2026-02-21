@@ -70,8 +70,10 @@ To cusmozite your Run Report view, follow next steps:
 
 3. Click the **'Settings'** icon to access **'Runs List Settings'**.
 4. Adjust Run view:
+
 - Select/deselect columns to show only the data you need.
 - Set each column width (px), to suit your preferences (or leave empty for automatic sizing).
+
 5. Click the **'Save'** button to apply your changes.
 
 ![Testomat.io - RunReport Customization](./images/Custom_view_10.png)
@@ -93,6 +95,7 @@ If you click the **'Report'** button from Basic Run Report view, you will see th
 ![Testomat.io - RunReport](./images/Run_Report_6.png)
 
 **In the extended report view, you can:**
+
 1. View a list of tests.
 2. Check their status (Passed, Failed, Skipped, Pending, Custom statuses).
 3. See overview of all executed tests grouped by suites, tags, labels, assignees, or priorities.
@@ -120,13 +123,13 @@ If you click the **'Report'** button from Basic Run Report view, you will see th
 
 Use ↓ and ↑ keys to navigate tests and quickly view details for each test.
 
-![Testomat.io - RunReport](./images/Run_Report_14.gif)
+![Report view](./images/gif2_7537.gif)
 
 :::
 
 Similar to the basic run report view, click on a test case to see its details or the history of run results.
 
-![Testomat.io - RunReport](./images/Run_Report_15.gif)
+![All tabs view](./images/gif1_7537.gif)
 
 ## RunGroup Report
 
@@ -143,7 +146,7 @@ From RunGroup Report Basic View you can open **Combined Report for RunGroups**, 
 
 Testomat.io allows you to export Run Reports as a spreadsheet (XLSX file) to obtain your test data.
 
-**Download Multiple Run Reports in One File**: 
+**Download Multiple Run Reports in One File**:
 
 1. Go to Runs.
 2. Enable **'Multi-select'**.
@@ -153,7 +156,8 @@ Testomat.io allows you to export Run Reports as a spreadsheet (XLSX file) to obt
 
 ![Testomat.io - export as Spreadsheet](./images/Export_1.png)
 
-**Download a Separate Run Report**: 
+**Download a Separate Run Report**:
+
 1. Go to Runs.
 2. Select a Run Report.
 3. Click the **'Report'** button.
@@ -167,7 +171,7 @@ Testomat.io allows you to export Run Reports as a spreadsheet (XLSX file) to obt
 
 ## How to Export Run Report in PDF Format
 
-Testomat.io also allows you to export your test run results as a PDF report. This feature enables easy sharing and archiving of test outcomes outside of Testomat.io. 
+Testomat.io also allows you to export your test run results as a PDF report. This feature enables easy sharing and archiving of test outcomes outside of Testomat.io.
 
 **You can generate a structured PDF report with test execution details in two ways:**
 
@@ -295,7 +299,7 @@ Users with access to **'Public Run Report'** can:
 
 ## Compare Test Runs
 
-Select test runs to see a visual display of their similarities and differences. Compare your run reports and analyze them by parameters such as Flaky, Reviewed, Degraded, and more. 
+Select test runs to see a visual display of their similarities and differences. Compare your run reports and analyze them by parameters such as Flaky, Reviewed, Degraded, and more.
 
 To compare Runs:
 
