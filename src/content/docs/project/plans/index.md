@@ -252,3 +252,66 @@ Filters allow you to dynamically **include or exclude tests in a plan** based on
 :::
 
 ![Collections & filters](./images/att8_5256.png)
+
+## Managing Plans
+
+Efficient management of test plans is key to keeping your testing organized and transparent. In Testomat.io, you can group and organize plans using **Labels**, making it easy to filter, find, and manage multiple plans at once.
+
+### Benefits of Using Labels for Plans
+
+By assigning labels to your plans, you can:
+
+- Organize plans by category, team, or purpose – e.g., 'Regression', 'Smoke', 'QA'
+- Filter plans quickly – instantly narrow down the list of plans by selecting specific labels
+- Maintain consistency across projects – ensure all plans follow a structured labeling system
+- Apply bulk actions easily – assign or remove labels from multiple plans at once using multi-selection
+
+Labels provide a flexible way to group and manage plans according to your workflow.
+
+### How to Assign Labels to Plans
+
+1. Go to the **Plans** page
+2. Open a plan or select multiple plans using multi-selection mode
+3. Click the **Labels**
+4. Select the labels you want to assign
+5. Click **Add** button
+
+![Assign Labels to Plans](./images/gif1_518.gif)
+
+:::note
+
+You can create new labels or manage existing ones in [Settings → Labels & Fields](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields/#how-to-add-labels--custom-fields). Make sure to set the Scope to Plans so labels are applied correctly.
+
+:::
+
+### Filtering Plans by Labels
+
+Testomat.io offers two convenient ways to filter your plans using **labels**:
+
+1. Using the **Filter Bar**:
+
+- Click the **filter** icon next to the search bar
+- Apply one or multiple labels
+- This method allows multi-label filtering, showing only plans that match all selected labels
+
+![Filter Bar](./images/att2_7821.png)
+
+2. Using the **Quick Filter Panel**
+
+- All labels currently in use are displayed
+- Select a single label from this list to quickly filter plans
+- This method is ideal for fast, one-label filtering
+
+![Quick Filter Panel](./images/att3_7821.png)
+
+:::note
+
+Use the **Filter Bar** for more advanced multi-label filtering, and the **Quick Filter Panel** for fast access to frequently used labels.
+
+:::
+
+### Example Use Cases
+
+- QA lead wants to see only Regression plans – assign a 'Regression' label to all relevant plans and filter by it
+- A team working on Frontend tests can quickly access all their plans by using the 'Frontend' label
+- During release planning, project managers can filter plans by priority or milestone labels to focus on relevant test coverage
