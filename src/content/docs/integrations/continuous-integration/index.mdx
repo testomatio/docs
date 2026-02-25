@@ -81,6 +81,7 @@ Sometimes extra configuration is required for CI job. For instance, extra config
 - browser.
 - target branch.
 - staging/production environments.
+- suites.
 
 Testomat.io allows to predefine configuration variables and adjust them for each run. Config variables can be set in **'Configuration'** tab on CI connection settings.
 
@@ -93,6 +94,7 @@ browsers=chrome,firefox,safari
 branch=main
 user=admin@admin.com
 password=123456
+suites=[3f4290f0,b89df296,78b10b62]
 ```
 
 `ref=master` config variable is set up by default for some CI services in Testomat.io but it can be changed at any time.
