@@ -41,6 +41,10 @@ Here you can find useful contacts and links
 
 ## Invite a Support User to Your Project
 
+If you are experiencing an issue that is difficult to reproduce based only on screenshots or descriptions (for example, incorrect filtering, permissions behavior, configuration issues, or unexpected test execution results), our team may need temporary access to your project to investigate it directly.
+
+In Testomat.io, a **support user** is a temporary user account that you can invite to your project to help our support or development team investigate an issue directly in your environment. When invited, the support user gains access only to that specific project so we can look at configurations, reproduce the problem, and resolve it more efficiently.
+
 Before adding a support user, please make sure you have contacted the Testomat.io team and asked for help.
 Inviting a Support User requires the Manager or Owner role.
 
