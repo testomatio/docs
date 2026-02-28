@@ -44,7 +44,7 @@ jobs:
         with:
           node-version: 16.x
       - run: npm i
-      - run: npx start-test-run -c 'npx codeceptjs run-workers 2 --grep "${{ github.event.inputs.grep }}"'
+      - run: npx @testomatio/reporter run 'npx codeceptjs run-workers 2 --grep "${{ github.event.inputs.grep }}"'
         env:
           TESTOMATIO: '${{ github.event.inputs.testomatio }}'
           TESTOMATIO_RUN: '${{ github.event.inputs.run }}'
@@ -109,7 +109,7 @@ jobs:
         env:
           RAILS_ENV: test
       - name: Testomatio Report
-        run: npx report-xml "test/reports/**.xml" --lang=Ruby
+        run: npx @testomatio/reporter xml "test/reports/**.xml" --lang=Ruby
         if: always()
         env:
           TESTOMATIO: ${{ secrets.TESTOMATIO }}
@@ -144,7 +144,7 @@ jobs:
         run: vendor/bin/phpunit --log-junit=report.xml
 
       - name: Testomatio Report
-        run: npx report-xml report.xml --lang=PHP
+        run: npx @testomatio/reporter xml report.xml --lang=PHP
         if: always()
         env:
           TESTOMATIO: ${{ secrets.TESTOMATIO }}
