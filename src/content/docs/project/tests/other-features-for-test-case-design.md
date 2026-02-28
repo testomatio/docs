@@ -32,7 +32,7 @@ The **'Multiselection'** feature on the **Tests** page allows users to perform b
 1. **Run** – Launches a test run containing the selected items.
 2. **Labels** – Add or remove labels or custom fields for the selected tests.  
    [Learn more about labels →](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields)
-3. **Copy** – Copy selected tests within the current project or to another project.  
+3. **Copy** – Copy selected tests within the current project or to another project.
 4. **Move** – Move tests to another test suite or folder within the same project.
 5. **Tags** – Assign existing tags or create new ones for the selected tests.  
    [More on using tags →](https://docs.testomat.io/advanced/tags-labels/tags/)
@@ -124,16 +124,21 @@ This makes it convenient to share test content outside of Testomat.io, whether f
 
 ## Sharing Tests, Suites, and Folders
 
-The **Share** feature is designed to keep test logic and structure consistent across multiple projects while allowing each project to operate independently.
+The **Share** feature is designed to keep test logic and structure consistent across multiple projects while keeping execution results independent.
 
-Shared tests, suites, and folders always have **one original source** that defines their content and controls all updates. While structure and test logic are synchronized from the source project, each receiving project maintains its own execution context for test runs, including logs, statuses, and results.
+**Key principles:**
 
-Key points:
+- Shared items have **a single source project** controlling content and updates
+- Shared items are **read-only** in target projects; editing is only possible in the source project or after unlinking
+- Target projects maintain local execution context: runs, logs, statuses, results
+- Items can be re-shared to additional projects without creating duplicates
+- Only projects of the same type can share items (e.g., BDD → BDD, Classic → Classic)
 
-- Shared items are linked to the source project and appear as read-only in target projects
-- Execution results, logs, and test runs are project-specific
-- Updates to the source test (e.g., description changes) are applied to all linked projects, even if runs in target projects are still in progress
-- Shared items can be unlinked to make them fully editable and independent in a target project
+:::note
+
+The **Share** feature is a **paid feature**, included in Professional, Enterprise, and Trial plans.
+
+:::
 
 You can share the following entities between projects:
 
@@ -147,37 +152,62 @@ Folders act as containers for shared content. The folder itself is not marked as
 
 :::
 
+### Project Sharing Settings
+
+Control which users can share tests and suites:
+
+- **On:** All users can share tests and suites with other projects.
+- **Off (default):** Only Owners and Managers can share.
+
+To change the default settings:
+
+1. Navigate to the **Settings** in the sidebar
+2. Select the **Project**
+3. Toggle **On** to allow access
+
+![Share settigns](./images/att1_7821.png)
+
+These settings apply to both initially shared and re-shared items.
+
+:::note
+
+Only **Owners and Managers** can enable or disable the sharing toggle.
+
+:::
+
 ### How Sharing Works
 
 When a test, suite, or folder is shared, specific data from the source project is propagated to all target projects, while other information remains local.
 
-| Data                   | Shared Behavior                                                   |
-| ---------------------- | ----------------------------------------------------------------- |
-| Title & Description    | Shared; updates in the source are applied to all linked projects  |
-| Attachments            | Shared; cannot be changed or new ones added in target projects    |
-| Labels & custom labels | Shared; additional labels can be added locally in target projects |
-| Tags                   | Shared; updates in the source are applied to all linked projects  |
-| Priority               | Shared; cannot be changed in target projects                      |
-| Linked issues          | Shared (if integration is enabled)                                |
-| Assignee               | Shared (if the user exists in the target project)                 |
-| Test author            | Shared (if the user exists in the target project)                 |
-| Runs                   | Not Shared; each project tracks its own results                   |
-| History                | Not Shared; always project-specific                               |
-| Requirements           | Not Shared; always project-specific                               |
-| Comments               | Not Shared; always project-specific                               |
+| Data                   | Shared Behavior                                                                         |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| Title & Description    | Shared; cannot be changed in target projects                                            |
+| Attachments            | Shared; cannot be changed or new ones added in target projects                          |
+| Labels & custom labels | Shared; additional labels can be added locally in target projects                       |
+| Tags                   | Shared; cannot be changed in target projects                                            |
+| Priority               | Shared; cannot be changed in target projects                                            |
+| Linked issues          | Shared (if integration is enabled)                                                      |
+| Assignee               | Shared (if the user exists in the target project); cannot be changed in target projects |
+| Test author            | Shared (if the user exists in the target project)                                       |
+| Runs                   | Not Shared; each project reports its own results                                        |
+| History                | Not Shared; always project-specific                                                     |
+| Requirements           | Not Shared; always project-specific                                                     |
+| Comments               | Not Shared; always project-specific                                                     |
 
-:::note
+### Synchronization behavior
 
-When a suite is shared, any new tests added to it in the source project automatically appear in all linked projects. Structural changes are synchronized from the source project.
+When an item is first shared, all data marked as **Shared** in the table above is propagated to target projects. After sharing is established, only a limited set of fields continues to synchronize when changes are made in the source project.
 
-:::
+- New tests added to a shared suite in the source project automatically appear in all linked projects
+- Updates to **Title**, **Description**, and **Tags** are synchronized from the source project after sharing
+- Other shared fields are **not** synchronized after the initial share
 
-#### Permissions and Restrictions
+### Permissions and Restrictions
 
 - Shared items are **read-only** in target projects
 - Editing is allowed **only in the source project**
 - Editing becomes available **only after unlinking** the shared item
-- AI actions are disabled for items
+- AI actions are disabled for for shared items
 - Execution is allowed in all projects
 - Execution results remain local to each project
 
@@ -219,6 +249,18 @@ Bulk sharing is available when multi-select mode is enabled.
 
 All selected items will be shared at once and follow the same shared rules.
 
+### How to Re-share Shared Items
+
+Tests and suites that were already shared to a project can be shared again to other projects.
+
+When an item is re-shared:
+
+- Original source remains the same (**Single Source of Truth**)
+- Editing is still allowed only in the original source project
+- For both initially shared and re-shared items, the same indicator shows the original source project
+
+Learn more about the [sharing process here](https://docs.testomat.io/project/tests/other-features-for-test-case-design/#how-to-share-a-single-item).
+
 ### How Execution History Works for Shared Tests
 
 Shared tests remain linked to the source project, but execution context is always project-specific.
@@ -257,6 +299,6 @@ Use unlinking only when a test or suite must diverge from its source version.
 
 ### Best Practices
 
-- Treat the source project as a **Single Source of Truth**
-- Use shared tests for stable, reusable flows (smoke, regression, core scenarios)
-- Unlink shared items only when necessary
+- Treat the source project as a **Single Source of Truth**.
+- Use shared tests for stable, reusable flows (smoke, regression, core scenarios).
+- Unlink shared items only when necessary.

@@ -76,6 +76,34 @@ As soon as all tests are completed you can check Run Report with details.
 
 ![Detailed test report](./images/2023-08-04_23.21.47@2x.png)
 
+### Adding Multi-Select Suite IDs to CI Settings
+
+With Testomat.io you have the ability to select and pass **multiple suite IDs to CI** when creating a new run. This option is available in the New Run view as a multi-select input, allowing you to define which test suites should be executed as part of a run.
+
+The multi-select is implemented as a dropdown, where you can choose the required suites by their IDs. The selected suite IDs are then passed to your CI system.
+
+**To use this feature, you need:**
+
+1. Adjust your CI workflow by adding `grep by suites` - (Learn more about [Environment Configuration](https://docs.testomat.io/integrations/continuous-integration/#environment-configuration)).
+
+![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_1.png)
+
+2. Update your Testomat CI configuration to accept and process the passed suite IDs.
+
+![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_2.png)
+
+When everything is configured, previously added suites will be available under **'Suites'** dropdown list in the New Run view.
+
+![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_3.png)
+
+:::note
+
+When setting up automated tests, selecting a suite linked to a CI configuration restricts further selection to only those suites within that same CI configuration.
+
+![Testomat.io - Multi-Select Suite IDs](./images/suite_id_ci_4.gif)
+
+:::
+
 ## Advanced Reporting
 
 Testomat.io reporter can be configured to add additional information for Run report. For instance, you can specify:
@@ -90,19 +118,19 @@ Testomat.io reporter can be configured to add additional information for Run rep
 
 When you enable reporing for tests running in parallel, you might end with multiple reports per each executed process. There are few options to deal with this case, which you can use depending on your setup.
 
-**Strategy 1: Use start-test-run** 
+**Strategy 1: Use @testomatio/reporter run**
 
-Run tests via `npx start-test-run` command:
+Run tests via `npx @testomatio/reporter run` command:
 
 ```
-npx start-test-run -c "<actual run command>"
+npx @testomatio/reporter run "<actual run command>"
 ```
 
-Under hood start-test-run creates a new empty run and passes its ID as environment variable into all spawned processes. So no matter how many parallel processes are started they will report to the single Run report.
+Under hood `@testomatio/reporter run` creates a new empty run and passes its ID as environment variable into all spawned processes. So no matter how many parallel processes are started they will report to the single Run report.
 
 ![Alt text](./images/image-10.png)
 
-However, this might not work in all cases. An alternative appriach would be:
+However, this might not work in all cases. An alternative approach would be:
 
 **Strategy 2: Use shared run**
 
@@ -138,10 +166,10 @@ In this case you create a run, receive its ID and manually close it after all ru
 
 ![Alt text](./images/image-9.png)
 
-Create a run via `start-test-run --launch`:
+Create a run via `@testomatio/reporter start`:
 
 ```
-export TESTOMATIO_RUN=$(TESTOMATIO=xxx npx start-test-run --launch | tail -1)
+export TESTOMATIO_RUN=$(TESTOMATIO=xxx npx @testomatio/reporter start | tail -1)
 ```
 
 then execute tests passing the `TESTOAMTIO_PROCEED` variable:
@@ -150,10 +178,10 @@ then execute tests passing the `TESTOAMTIO_PROCEED` variable:
 TESTOMATIO=xxx TESTOMATIO_RUN=$RUN_ID TESTOMATIO_PROCEED=1 <actual-run-command>
 ```
 
-Once tests are finished close the run with `start-test-run --finish`:
+Once tests are finished close the run with `@testomatio/reporter finish`:
 
 ```
-TESTOMATIO=xxx npx start-test-run --finish
+TESTOMATIO=xxx npx @testomatio/reporter finish
 ```
 
 If you have a complex pipeline, you can start Run on the stage #1, execute tests in parallel on stage #2, and close the run on stage #3. 
