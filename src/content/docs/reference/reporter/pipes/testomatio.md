@@ -61,7 +61,7 @@ TESTOMATIO={API_KEY} TESTOMATIO_PROCEED=1 TESTOMATIO_RUN={RUN_ID} <actual run co
 After all reports were attached and run can be execute the following command:
 
 ```
-TESTOMATIO={API_KEY} TESTOMATIO_RUN={RUN_ID} npx start-test-run --finish
+TESTOMATIO={API_KEY} TESTOMATIO_RUN={RUN_ID} npx @testomatio/reporter finish
 ```
 
 ### Setting Report Title
@@ -103,7 +103,7 @@ TESTOMATIO={API_KEY} TESTOMATIO_ENV="Windows, Chrome" <actual run command>
 If you want to create a run and obtain its `{RUN_ID}` from [testomat.io](https://testomat.io) you can use `--launch` option:
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run --launch
+TESTOMATIO={API_KEY} npx @testomatio/reporter start
 ```
 
 This command will return `{RUN_ID}` which you can pass to other jobs in a workflow.
@@ -115,7 +115,7 @@ This command will return `{RUN_ID}` which you can pass to other jobs in a workfl
 If you want to finish a run started by `--launch` use `--finish` option. `TESTOMATIO_RUN` environment variable is required:
 
 ```bash
-TESTOMATIO={API_KEY} TESTOMATIO_RUN={RUN_ID} npx start-test-run --finish
+TESTOMATIO={API_KEY} TESTOMATIO_RUN={RUN_ID} npx @testomatio/reporter finish
 ```
 
 ### Setting Build URL
@@ -186,7 +186,7 @@ Testomatio allows you to enhance your test execution with the option to filter a
 To use the `--filter` option with Testomatio, follow the format:
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c <actual run command> --filter 'testomatio:{filter-type}={filter-value}'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run <actual run command> --filter 'testomatio:{filter-type}={filter-value}'
 ```
 
 #### Available Filter Types
@@ -200,7 +200,7 @@ Filter tests by tag names. Use this filter to select tests associated with speci
 _Command execution example_
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testomatio:tag-name=smoke'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'actual run command' --filter 'testomatio:tag-name=smoke'
 ```
 
 **Plan ID Filter**
@@ -212,7 +212,7 @@ Filter tests by Testomatio plan IDs. Use this filter to organize and execute tes
 _Command execution example_
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testomatio:plan-id=b62f3170'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'actual run command' --filter 'testomatio:plan-id=b62f3170'
 ```
 
 **Label Filter**
@@ -231,13 +231,13 @@ Another Label Filter Example 3:
 _Command execution example_
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testomatio:label=new-label-test'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'actual run command' --filter 'testomatio:label=new-label-test'
 ```
 
 OR
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testomatio:label=NEW label TEST'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'actual run command' --filter 'testomatio:label=NEW label TEST'
 ```
 
 **Label Filter based on the Severity type**
@@ -259,13 +259,13 @@ Label Filter Example based on the Severity type:
 _Command execution example_
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testomatio:label=severity-f1b11:🔥 Major'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'actual run command' --filter 'testomatio:label=severity-f1b11:🔥 Major'
 ```
 
 OR
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testomatio:label=NEW label TEST:💤 Trivial'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'actual run command' --filter 'testomatio:label=NEW label TEST:💤 Trivial'
 ```
 
 **JIRA Ticket Filter**
@@ -277,7 +277,7 @@ Filter tests linked to JIRA tickets. Use this filter to coordinate testing effor
 _Command execution example_
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testomatio:jira-ticket=LMP-51'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'actual run command' --filter 'testomatio:jira-ticket=LMP-51'
 ```
 
 **📚 Example Usage**
@@ -285,13 +285,13 @@ TESTOMATIO={API_KEY} npx start-test-run -c 'actual run command' --filter 'testom
 For instance, if you want to run tests with a specific label named "new-label-test," you can use the following command:
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'npx codeceptjs run' --filter 'testomatio:label=new-label'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'npx codeceptjs run' --filter 'testomatio:label=new-label'
 ```
 
 OR using Playwright:
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'npx playwright test' --filter 'testomatio:label=new-label'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'npx playwright test' --filter 'testomatio:label=new-label'
 ```
 
 > Remember to replace {API_KEY} with your actual Testomatio API key and adjust the `<actual run command>` according to your testing setup

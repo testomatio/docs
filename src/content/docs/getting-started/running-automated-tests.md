@@ -77,15 +77,15 @@ Testomat.io reporter can be configured to add additional information for Run rep
 
 When you enable reporing for tests running in parallel, you might end with multiple reports per each executed process. There are few options to deal with this case, which you can use depending on your setup.
 
-**Strategy 1: Use start-test-run** 
+**Strategy 1: Use @testomatio/reporter run**
 
-Run tests via `npx start-test-run` command:
+Run tests via `npx @testomatio/reporter run` command:
 
 ```
-npx start-test-run -c "<actual run command>"
+npx @testomatio/reporter run "<actual run command>"
 ```
 
-Under hood start-test-run creates a new empty run and passes its ID as environment variable into all spawned processes. So no matter how many parallel processes are started they will report to the single Run report.
+Under hood `@testomatio/reporter run` creates a new empty run and passes its ID as environment variable into all spawned processes. So no matter how many parallel processes are started they will report to the single Run report.
 
 ![Alt text](./images/image-10.png)
 
@@ -125,10 +125,10 @@ In this case you create a run, receive its ID and manually close it after all ru
 
 ![Alt text](./images/image-9.png)
 
-Create a run via `start-test-run --launch`:
+Create a run via `@testomatio/reporter start`:
 
 ```
-export TESTOMATIO_RUN=$(TESTOMATIO=xxx npx start-test-run --launch | tail -1)
+export TESTOMATIO_RUN=$(TESTOMATIO=xxx npx @testomatio/reporter start | tail -1)
 ```
 
 then execute tests passing the `TESTOAMTIO_PROCEED` variable:
@@ -137,10 +137,10 @@ then execute tests passing the `TESTOAMTIO_PROCEED` variable:
 TESTOMATIO=xxx TESTOMATIO_RUN=$RUN_ID TESTOMATIO_PROCEED=1 <actual-run-command>
 ```
 
-Once tests are finished close the run with `start-test-run --finish`:
+Once tests are finished close the run with `@testomatio/reporter finish`:
 
 ```
-TESTOMATIO=xxx npx start-test-run --finish
+TESTOMATIO=xxx npx @testomatio/reporter finish
 ```
 
 If you have a complex pipeline, you can start Run on the stage #1, execute tests in parallel on stage #2, and close the run on stage #3. 

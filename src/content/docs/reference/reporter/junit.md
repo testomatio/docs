@@ -37,7 +37,7 @@ Run your test framework and generate a JUnit report.
 Then import XML report into Testomat.io
 
 ```
-npx report-xml "{pattern}" --lang={lang}
+npx @testomatio/reporter xml "{pattern}" --lang={lang}
 ```
 
 - `pattern` - is a glob pattern to match all XML files from report. For instance, `"test/report/**.xml"` or just `report.xml`
@@ -62,7 +62,7 @@ pytest --junit-xml report.xml
 Import report with this command
 
 ```
-TESTOMATIO={API_KEY} npx report-xml report.xml --lang=python
+TESTOMATIO={API_KEY} npx @testomatio/reporter xml report.xml --lang=python
 ```
 
 ## JUnit
@@ -76,7 +76,7 @@ mvn clean test
 Import report with this command:
 
 ```
-TESTOMATIO={API_KEY} npx report-xml "target/surefire-reports/*.xml" --java-tests
+TESTOMATIO={API_KEY} npx @testomatio/reporter xml "target/surefire-reports/*.xml" --java-tests
 ```
 
 > [!NOTE]
@@ -138,7 +138,7 @@ public void testAddition() {
 Generate NUnit XML report and run the following code:
 
 ```
-TESTOMATIO={API_KEY} npx report-xml "report.xml" --lang="c#"
+TESTOMATIO={API_KEY} npx @testomatio/reporter xml "report.xml" --lang="c#"
 ```
 
 If NUnit generates `<ResultFiles>` section in XML report, all items from it will be uploaded as artifacts. For instance, this is available for **Playwright DotNet** integration.
@@ -190,7 +190,7 @@ rails test
 Import reports from `test/reports` directory:
 
 ```
-TESTOMATIO={API_KEY} npx report-xml "test/reports/*.xml" --lang ruby
+TESTOMATIO={API_KEY} npx @testomatio/reporter xml "test/reports/*.xml" --lang ruby
 ```
 
 ### Assign Test ID
@@ -208,6 +208,6 @@ Use `tid://` prefix with a existing Test ID to match test with ID.
 Generate PHPUnit XML and import it
 
 ```
-TESTOMATIO={API_KEY} npx report-xml "report.xml" --lang php
+TESTOMATIO={API_KEY} npx @testomatio/reporter xml "report.xml" --lang php
 ```
 
