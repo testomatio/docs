@@ -130,7 +130,7 @@ Under hood start-test-run creates a new empty run and passes its ID as environme
 
 ![Alt text](./images/image-10.png)
 
-However, this might not work in all cases. An alternative appriach would be:
+However, this might not work in all cases. An alternative approach would be:
 
 **Strategy 2: Use shared run**
 
