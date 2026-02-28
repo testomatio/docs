@@ -55,17 +55,17 @@ TESTOMATIO={API_KEY} npx codeceptjs run
 
 #### CodeceptJS Parallel Run
 
-If tests run parallel, like workers in CodeceptJS use `start-test-run` command to get proper reports:
+If tests run parallel, like workers in CodeceptJS use `@testomatio/reporter run` command to get proper reports:
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'npx codeceptjs run-workers 2'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'npx codeceptjs run-workers 2'
 ```
 
-> Specify a command to run with `-c` option in `start-test-run`
+> Specify a command to run as argument to `@testomatio/reporter run`
 
 Use `--env-file <envfile>` option to load environment variables from .env file. Inside env file TESTOMATIO credentials like `TESTOMATIO` api key or [S3 config for artifacts](./artifacts.md).
 
-Command `start-test-run` is used to initiate a single run report before all workers are started. Each worker will report to the same Run, and after all workers and codeceptjs finishes, this will finish the run report.
+Command `@testomatio/reporter run` is used to initiate a single run report before all workers are started. Each worker will report to the same Run, and after all workers and codeceptjs finishes, this will finish the run report.
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/codeceptJS) | 🗄 [CodeceptJS API Example](https://github.com/testomatio/examples/tree/master/codeceptJSApi) | 🥒 [CodeceptJS Cucumber Example](https://github.com/testomatio/examples/tree/master/codeceptjs-cucumber)
 
@@ -257,7 +257,7 @@ For making screenshots on failed tests add the following hook to `wdio.conf.js`:
 Run the following command from you project folder:
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'npx wdio wdio.conf.js'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'npx wdio wdio.conf.js'
 ```
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/webdriverio-mocha)
@@ -342,7 +342,7 @@ exports.config = {
 Run the following command from you project folder:
 
 ```bash
-TESTOMATIO={API_KEY} npx start-test-run -c 'npx protractor conf.js'
+TESTOMATIO={API_KEY} npx @testomatio/reporter run 'npx protractor conf.js'
 ```
 
 > 📑 [Example Project](https://github.com/testomatio/examples/tree/master/protractor)
@@ -383,7 +383,7 @@ In this case JUnit XML will be saved into `target/surefire-reports/`
 So you can import reports to Testomat.io by running:
 
 ```
-TESTOMATIO={API_KEY} npx report-xml "target/surefire-reports/**.xml" --java-tests
+TESTOMATIO={API_KEY} npx @testomatio/reporter xml "target/surefire-reports/**.xml" --java-tests
 ```
 
 > **Note**
@@ -405,10 +405,10 @@ In this example, we added ID as a comment to `negativeNumbersCanBeSubtracted` te
   }
 ```
 
-To make this feature work, please ensure that source code of Java tests is accessible to `npx report-xml` command, use `--java-tests` option to specify the correct path. To check if source code of tests is available run reporter with DEBUG mode:
+To make this feature work, please ensure that source code of Java tests is accessible to `npx @testomatio/reporter xml` command, use `--java-tests` option to specify the correct path. To check if source code of tests is available run reporter with DEBUG mode:
 
 ```
-DEBUG=@testomatio/reporter:* TESTOMATIO={API_KEY} npx report-xml "target/surefire-reports/**.xml" --java-tests
+DEBUG=@testomatio/reporter:* TESTOMATIO={API_KEY} npx @testomatio/reporter xml "target/surefire-reports/**.xml" --java-tests
 ```
 
 Is a source code is not available, test IDs can be set from output. To set Test ID to a test, copy test ID and print it from a test:
@@ -476,10 +476,10 @@ Also we use `TESTOMATIO_TITLE_IDS=1` to write test IDs into scenario titles inst
 
 To generate JUnit reports, you can use the built-in Cucumber JUnit plugin. When you run your Cucumber tests the JUnit reports will be generated in the default directory (`build/reports/tests/test`) in XML format.
 
-To submit report to Testomat.io use `npx report-xml` command from `@testomatio/reporter` NodeJS package:
+To submit report to Testomat.io use `npx @testomatio/reporter xml` command from `@testomatio/reporter` NodeJS package:
 
 ```
-TESTOMATIO={API_KEY} npx report-xml "build/reports/tests/**/*.xml"
+TESTOMATIO={API_KEY} npx @testomatio/reporter xml "build/reports/tests/**/*.xml"
 ```
 
 If you want to have artifacts attached, use `System.out.println` to print an absulute path to file that should be uploaded as a screenshot.
