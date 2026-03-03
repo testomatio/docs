@@ -161,7 +161,7 @@ However, this might not work in all cases.
 
 > If you use sharding (running tests on multiple machines) you should use strategy 1 or 3.
 
-####**Strategy 3: Manually create and close run**
+#### **Strategy 3: Manually create and close run**
 
 In this case you create a run, receive its ID and manually close it after all runs are finished.
 
