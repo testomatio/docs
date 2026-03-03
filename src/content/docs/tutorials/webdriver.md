@@ -1,6 +1,6 @@
 ---
 title: WebdriverIO
-description: Learn how to integrate WebdriverIO with Testomat.io for efficient test management and reporting. This guide covers importing WebdriverIO tests, managing parameterized tests, reporting artifacts like screenshots and logs, enabling detailed reporting features, and configuring parallel execution reporting for CI workflows.
+description: Learn how to integrate WebdriverIO with Testomat.io for efficient test management and reporting. This guide covers importing WebdriverIO tests, managing parametrized tests, reporting artifacts like screenshots and logs, enabling detailed reporting features, and configuring parallel execution reporting for CI workflows.
 type: article
 url: https://docs.testomat.io/tutorials/webdriverio
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: WebdriverIO, Testomat.io, test reporting, automation, test management, artifacts, parallel execution, detailed reporting, parameterized tests, S3 integration, test import, browser automation
+      content: WebdriverIO, Testomat.io, test reporting, automation, test management, artifacts, parallel execution, detailed reporting, parametrized tests, S3 integration, test import, browser automation
 ---
 
 <!--
@@ -21,7 +21,7 @@ head:
         - TS tests (link to example project)
         - TypeScript tests (link to example project)
         - BDD tests
-        - parameterized tests importing
+        - parametrized tests importing
         - add IDs to tests
 
     ## Reporting WebdriverIO Tests
@@ -75,9 +75,9 @@ For more details, refer to the [Import Tests from Source Code documentation](htt
 
 ---
 
-## Importing Parameterized Tests
+## Importing Parametrized Tests
 
-When importing parameterized tests, include variable parameters in test names using template literals for better clarity in Testomat.io.
+When importing parametrized tests, include variable parameters in test names using template literals for better clarity in Testomat.io.
 
 **Example Code**:
 

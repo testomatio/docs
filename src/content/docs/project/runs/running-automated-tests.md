@@ -8,23 +8,23 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/image-7.BWXewamn_Z27T85y.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
       content: automated tests, test reporting, test management, parallel testing, CI/CD, stack trace, Playwright, Testomat.io, test import, run reports, test automation frameworks
 ---
 
-Testomat.io can receive and store test run reports from various test frameworks. 
-You can use Testomat.io as a test management system or as a rich reporting tool. 
+Testomat.io can receive and store test run reports from various test frameworks.
+You can use Testomat.io as a test management system or as a rich reporting tool.
 
 Depending on how you plan to use it we can look from different perspectives:
 
-* In case of **Test Management System**, the key entity is a Test. So before reporting tests it is **required to import your tests** first. Test has its history and a lifecycle, so each test report will be attached to a corresponding test in a project. If a reported test doesn't exist, you will see message "Tests Not Matched". By default, new tests are not created from Run report, to avoid duplicates, or cases when you accidentally reported wrong tests.
+- In case of **Test Management System**, the key entity is a Test. So before reporting tests it is **required to import your tests** first. Test has its history and a lifecycle, so each test report will be attached to a corresponding test in a project. If a reported test doesn't exist, you will see message "Tests Not Matched". By default, new tests are not created from Run report, to avoid duplicates, or cases when you accidentally reported wrong tests.
 
-* In case of **Reporting Tool**, you are more focused on getting reports rather than managing tests. In this case you may not need test history, so **importing tests is not required**. You can run tests with `TESTOMATIO_CREATE=1` option enabled, and all tests will be created from a test result.
+- In case of **Reporting Tool**, you are more focused on getting reports rather than managing tests. In this case you may not need test history, so **importing tests is not required**. You can run tests with `TESTOMATIO_CREATE=1` option enabled, and all tests will be created from a test result.
 
-If your project contains only automated tests, you may prefer using Testomat.io as reporting tool only. However, to unleash the full power of Testomat.io we recommend using it as a test management system, that means keep tests synchronized with the codebase. 
+If your project contains only automated tests, you may prefer using Testomat.io as reporting tool only. However, to unleash the full power of Testomat.io we recommend using it as a test management system, that means keep tests synchronized with the codebase.
 
 ![Alt text](./images/image-7.png)
 
@@ -60,9 +60,8 @@ Please note that you need to start generated commands in your terminal from your
 
 ![Execute test cases](./images/2023-08-04_23.11.43@2x.png)
 
-
-> Also, you can add advanced options to your command to enable extra options. For example, you can give a title to your report by passing it as environment variable to `TESTOMATIO_TITLE` or can add environments to run by providing `TESTOMATIO_ENV`. 
-Learn more about [advanced reporting options here](https://docs.testomat.io/reference/reporter/#advanced-usage).
+> Also, you can add advanced options to your command to enable extra options. For example, you can give a title to your report by passing it as environment variable to `TESTOMATIO_TITLE` or can add environments to run by providing `TESTOMATIO_ENV`.
+> Learn more about [advanced reporting options here](https://docs.testomat.io/reference/reporter/#advanced-usage).
 
 If you have successfully launched your automated tests, a new Test Run will appear on Runs page.
 
@@ -108,9 +107,9 @@ When setting up automated tests, selecting a suite linked to a CI configuration 
 
 Testomat.io reporter can be configured to add additional information for Run report. For instance, you can specify:
 
-* run title
-* rungroup
-* environemnt
+- run title
+- rungroup
+- environemnt
 
 [Learn more of all possible options](../runs/reporter/pipes/testomatio.md).
 
@@ -118,7 +117,35 @@ Testomat.io reporter can be configured to add additional information for Run rep
 
 When you enable reporing for tests running in parallel, you might end with multiple reports per each executed process. There are few options to deal with this case, which you can use depending on your setup.
 
-**Strategy 1: Use @testomatio/reporter run**
+#### **Strategy 1: Use shared run**
+
+In this case multiple independent launches will report data to the report matched by the same Run title.
+
+<img src="./images/image-12.png"  width="66%"/>
+
+Pick the unique name for this run and use `TESTOMATIO_SHARED_RUN=1` environement variable to enable shared report:
+
+```
+TESTOMATIO_SHARED_RUN=1 TESTOMATIO_TITLE="UniqTitleForThisBuild" <actual run command>
+```
+
+For instance, if you run tests on CI as a title you can use pipeline/workflow ID:
+
+```
+TESTOMATIO_TITLE="Pipeline $CI_PIPELINE_ID" TESTOMATIO_SHARED_RUN=1 <actual run command>
+```
+
+If you prefer you can use Git commit as unique identifier:
+
+```
+TESTOMATIO_TITLE="Commit $GIT_COMMIT" TESTOMATIO_SHARED_RUN=1 <actual run command>
+```
+
+Please refer to documentation of your CI system and pick the variable which and be unique to all runs of this build. This approach **fits perfectly for sharded tests when you run tests on different jobs, different containers, different machines**.
+
+We recommend to also append some more info into the `TESTOMATIO_TITLE`
+
+#### **Strategy 2: Use @testomatio/reporter run**
 
 Run tests via `npx @testomatio/reporter run` command:
 
@@ -128,43 +155,17 @@ npx @testomatio/reporter run "<actual run command>"
 
 Under hood `@testomatio/reporter run` creates a new empty run and passes its ID as environment variable into all spawned processes. So no matter how many parallel processes are started they will report to the single Run report.
 
-![Alt text](./images/image-10.png)
+<img src="./images/image-10.png"  width="66%"/>
 
-However, this might not work in all cases. An alternative approach would be:
+However, this might not work in all cases.
 
-**Strategy 2: Use shared run**
+> If you use sharding (running tests on multiple machines) you should use strategy 1 or 3.
 
-In this case multiple independent launches will report data to the report matched by the same Run title.
-
-![Alt text](./images/image-12.png)
-
-Pick the unique name for this run and use `SHARED_RUN` environement variable to enable shared report:
-
-```
-TESTOMATIO_SHARED_RUN=1 TESTOMATIO_TITLE="UniqTitleForThisBuild" <actual run command>
-```
-
-For instance, if you run tests on CI as a title you can use ID of this Build:
-
-```
-TESTOMATIO_TITLE="Build $BUILD_ID" TESTOMATIO_SHARED_RUN=1 <actual run command> 
-```
-
-If you prefer you can use Git commit as unique identifier:
-
-```
-TESTOMATIO_TITLE=$(git rev-parse HEAD) TESTOMATIO_SHARED_RUN=1 <actual run command> 
-```
-
-Please refer to documentation of your CI system and pick the variable which and be unique to all runs of this build. This approach **fits perfectly for sharded tests when you run tests on different jobs, different containers, different machines**.
-
-We recommend to also append some more info into the `TESTOMATIO_TITLE`
-
-**Strategy 3: Manually create and close run**
+####**Strategy 3: Manually create and close run**
 
 In this case you create a run, receive its ID and manually close it after all runs are finished.
 
-![Alt text](./images/image-9.png)
+<img src="./images/image-9.png"  width="66%"/>
 
 Create a run via `@testomatio/reporter start`:
 
@@ -184,13 +185,13 @@ Once tests are finished close the run with `@testomatio/reporter finish`:
 TESTOMATIO=xxx npx @testomatio/reporter finish
 ```
 
-If you have a complex pipeline, you can start Run on the stage #1, execute tests in parallel on stage #2, and close the run on stage #3. 
+If you have a complex pipeline, you can start Run on the stage #1, execute tests in parallel on stage #2, and close the run on stage #3.
 
 ### Terminated Runs
 
-Sometimes, during test automation, unexpected issues may arise, or a test can be stopped for various reasons. 
+Sometimes, during test automation, unexpected issues may arise, or a test can be stopped for various reasons.
 
-![terminated run](./images/terminated-test-run.png)
+<img src="./images/terminated-test-run.png"  width="75%"/>
 
 For example, during the execution of the problematic test case, the some gateway becomes unresponsive due to a server issue. This issue was unforeseen and not within the control of the testing team. Testomat.io detects the problem and initiates a termination of the problematic test case. The custom timeout you defined (min 30 minutes) comes into play. If the test case does not complete within this time frame, it is terminated automatically.
 
@@ -198,7 +199,7 @@ So you can terminate test runs without causing disruptions and you can set custo
 
 ![setup terminated timeout](./images/setup-terminated.png)
 
-### Stack Traces 
+### Stack Traces
 
 Testomat.io provides detailed information about the active stack frames during the execution of a program.
 
@@ -216,11 +217,11 @@ Testomat.io has a separate category for working with tests called **Mixed**. It 
 
 To start the Mixed Run, you need to do a few things:
 
-* Tests need to have **IDs**. This can be done by adding the `--update-ids` option when importing tests.
+- Tests need to have **IDs**. This can be done by adding the `--update-ids` option when importing tests.
 
-* You need to configure **Continuous Integration**. To learn how to set up CI in Testomat.io, visit the [dedicated page](https://docs.testomat.io/usage/continuous-integration/).
+- You need to configure **Continuous Integration**. To learn how to set up CI in Testomat.io, visit the [dedicated page](https://docs.testomat.io/usage/continuous-integration/).
 
-* Create a **Mixed Plan** that contains both automated and manual tests. You can learn how to create a Mixed Plan by visiting the page [dedicated page](https://docs.testomat.io/getting-started/test-plans/).
+- Create a **Mixed Plan** that contains both automated and manual tests. You can learn how to create a Mixed Plan by visiting the page [dedicated page](https://docs.testomat.io/getting-started/test-plans/).
 
 To get started, open the **Runs** page and select **Mixed Run** in the menu.
 

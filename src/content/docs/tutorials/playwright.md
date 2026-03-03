@@ -1,6 +1,6 @@
 ---
 title: Playwright
-description: Learn how to integrate Playwright with Testomat.io for efficient test management and reporting. The guide covers importing Playwright tests, managing parameterized tests, reporting artifacts like screenshots and logs, enabling the Trace Viewer, and configuring parallel execution reporting for CI workflows.
+description: Learn how to integrate Playwright with Testomat.io for efficient test management and reporting. The guide covers importing Playwright tests, managing parametrized tests, reporting artifacts like screenshots and logs, enabling the Trace Viewer, and configuring parallel execution reporting for CI workflows.
 type: article
 url: https://docs.testomat.io/tutorials/playwright
 head:
@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Playwright, Testomat.io, test reporting, automation, test management, artifacts, parallel execution, trace viewer, parameterized tests, S3 integration, CI workflows, test import, browser automation
+      content: Playwright, Testomat.io, test reporting, automation, test management, artifacts, parallel execution, trace viewer, parametrized tests, S3 integration, CI workflows, test import, browser automation
 ---
 <!--
     ## Importing Playwright Tests
@@ -70,9 +70,9 @@ For more details, refer to the [Import Tests from Source Code documentation](htt
 
 ---
 
-### Importing Parameterized Tests
+### Importing Parametrized Tests
 
-When importing parameterized tests, you can include variable parameters in test names using template literals, ensuring they display dynamically in Testomat.io.
+When importing parametrized tests, you can include variable parameters in test names using template literals, ensuring they display dynamically in Testomat.io.
 
 Example:
 ```javascript
