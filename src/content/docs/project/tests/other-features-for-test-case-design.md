@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: test design, test case management, test automation, Testomat.io, test organization, software testing, testing tools, test suites, test structure, multiselection, labels, tags, share tests, share suites, share folders, unlink shared tests, single source of truth
+      content: test design, test case management, test automation, Testomat.io, test organization, software testing, testing tools, test suites, test structure, folders, mark as favorite, export suite to PDF,  multiselection, labels, tags, share tests, share suites, share folders, unlink shared tests, single source of truth
 ---
 
 ## Multiselection for Tests
@@ -79,6 +79,29 @@ Also you can set an emoji icon for the suite
 If your test is deeply nested within suites and folders, you can use breadcrumbs with tooltips to navigate the project structure more effectively.
 
 ![Testomat.io - Breadcrumbs tooltip](./images/New_g6FZ3V7n_2024-08-10.png)
+
+### Mark Folders & Suites as Favourites
+
+Working with large projects often means navigating through a long test tree or running the same search queries over and over again. To make your workflow smoother, we’ve introduced the **'Starred'** feature for test suites and folders.
+
+**Now you can:**
+
+- ⭐ **Star any suite/folder** you plan to work on — whether it’s for the current sprint, a specific release, or ongoing maintenance.
+- 📂 **Create your own quick-access list** of suites to eliminate repetitive navigation through the entire test tree.
+- 🔍 **Mark favourites directly from search results** — if you’re looking for a test or suite/folders by keyword or using filters you can instantly star it without leaving the search view.
+- ⏱ **Quickly return to starred suites/folders** even after filters or selections are reset — simply use the **'Starred'** filter to jump back.
+- 🛠 **Work more efficiently** by keeping frequently accessed suites/folders at your fingertips, especially in large or multi-team projects.
+
+Whether you’re focusing on smoke tests, regression packs, or a specific customer scenario, the **'Starred'** feature ensures you spend less time navigating and more time testing.
+
+![Testomat.io - Mark Folders & Suites as Favourites](./images/star_suite.gif)
+
+:::note
+
+To remove all suites/folders from Favourites with one click: Use the **'Starred'** filter -> click '**Crossed star'** button -> confirm action.
+
+![Testomat.io - UnMark Folders & Suites as Favourites](./images/unstar_suite.png)
+:::
 
 ## Export Suite as PDF
 
@@ -276,6 +299,6 @@ Use unlinking only when a test or suite must diverge from its source version.
 
 ### Best Practices
 
-- Treat the source project as a **Single Source of Truth**
-- Use shared tests for stable, reusable flows (smoke, regression, core scenarios)
-- Unlink shared items only when necessary
+- Treat the source project as a **Single Source of Truth**.
+- Use shared tests for stable, reusable flows (smoke, regression, core scenarios).
+- Unlink shared items only when necessary.
