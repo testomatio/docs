@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: og:image
-      content: https://docs.testomat.io/obsidian_vault_tests.png
+      content: https://docs.testomat.io/obsidian_logo.svg
   - tag: meta
     attrs:
       name: og:title
