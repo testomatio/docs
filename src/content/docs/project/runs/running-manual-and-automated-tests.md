@@ -4,7 +4,7 @@ description: Learn how to execute manual and automated tests together using Mixe
 type: article
 url: https://docs.testomat.io/project/runs/running-manual-and-automated-tests
 head:
-    - tag: meta
+  - tag: meta
     attrs:
       name: keywords
       content: manual testing, automated tests, mixed run, mixed plan, mixed tests, test plans, manual test execution, automated test execution, multi-environment testing, QA testing, CI, pipelines, CLI
