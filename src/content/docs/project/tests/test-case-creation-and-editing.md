@@ -408,7 +408,7 @@ You are able to edit existing parameters or parameter headers in two methods:
 1. Click the **'Extra button'** icon.
 2. Select **'Add Parameter'** from the extra menu dropdown.
 
-![Second_Method_Edit_Parameter_Name](./images/edit_dynamic_param_6.png)
+![Second_Method_delete](./images/edit_dynamic_param_5.png)
 
 3. Click the **'Trash'** icon.
 4. Click **'OK'** to confirm action on **'Are you sure you want to delete this param?'** pop-up.
@@ -426,7 +426,15 @@ Once you have defined your **Parameter Headers** (as shown in the steps above), 
 
 3. **Insert the Placeholder:** In the Test Description or Steps field, use the syntax `${ParameterName}` or `{{ParameterName}}`.
 
-**Example:** `Enter an invalid Mobile Number ${Mobile No}` or `Open home page {{URL}}`.
+**Example:** 
+```
+Enter an invalid Mobile Number ${Mobile No}
+
+OR
+
+Open home page {{URL}}.
+
+```
 
 4. **Save the Test:** Click the **'Save'** button on the test case.
 
