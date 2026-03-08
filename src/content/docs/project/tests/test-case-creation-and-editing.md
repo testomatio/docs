@@ -250,16 +250,16 @@ Each priority level has a dedicated icon to make test importance easily recogniz
 
 When creating a new test, you can assign a priority directly from the test editor:
 
-1. Navigate to the **Tests** page
-2. Click the **+ Test** button
-3. Select a suite for test
-4. Click the **Select** button
+1. Navigate to the **Tests** page.
+2. Click the **+ Test** button.
+3. Select a suite for test.
+4. Click the **Select** button.
 
 ![Select destination](./images/att2_1457.png)
 
-5. Click the **Priority icon** to open the list of available priorities next to the **New Test** indicator
-6. Select the required priority
-7. Enter the test title
+5. Click the **Priority icon** to open the list of available priorities next to the **New Test** indicator.
+6. Select the required priority.
+7. Enter the test title.
 8. Save the test — the selected priority will be applied.
 
 ![Set priority](./images/att1_1457.png)
@@ -274,11 +274,11 @@ If no priority is selected, the test has **normal** priority by default. Conside
 
 You can update the priority of an existing test at any time:
 
-1. Navigate to the **Tests** page
-2. Open the test you want to edit
-3. Click the **Priority icon** next to the **Edit Test** indicator
-4. Click on the desired priority
-5. Save the test — the changed priority will be applied
+1. Navigate to the **Tests** page.
+2. Open the test you want to edit.
+3. Click the **Priority icon** next to the **Edit Test** indicator.
+4. Click on the desired priority.
+5. Save the test — the changed priority will be applied.
 
 ![Change Priority](./images/att3_1457.png)
 
@@ -288,11 +288,11 @@ The icon will update immediately to reflect the selected priority.
 
 You can change the priority for multiple tests at once to save time and quickly update large test sets.
 
-1. Navigate to the **Tests** page
-2. Enable **multi-select** button and select tests using the checkboxes
-3. Click the **Priority** button at the bottom of the screen
-4. In the popup, select the desired priority (e.g., important)
-5. Click **Apply** button
+1. Navigate to the **Tests** page.
+2. Enable **multi-select** button and select tests using the checkboxes.
+3. Click the **Priority** button at the bottom of the screen.
+4. In the popup, select the desired priority (e.g., important).
+5. Click **Apply** button.
 
 ![Bulk Assign Priority](./images/att5_1457.png)
 
@@ -302,48 +302,54 @@ All selected tests will immediately update to the new priority, and the icons wi
 
 Testomat.io allows you to filter tests by Priority, making it easy to:
 
-- focus on High or Important tests during regression or smoke testing
-- quickly narrow down large test suites
-- combine Priority filtering with other filters such as tags, a state or an assignee
+- focus on High or Important tests during regression or smoke testing.
+- quickly narrow down large test suites.
+- combine Priority filtering with other filters such as tags, a state or an assignee.
 
 ![Filter by priority](./images/att4_1457.png)
 
-## How to Add Parameters to a Test
+## How to Add Dynamic Parameters to a Test
+
+Lets start with definition of **'Dynamic Parameters'**.
+
+While standard parameters define your data set, **Dynamic Parameters** are the placeholders you use within your test steps or description. They act as variables that are automatically swapped with real values from your parameter table during execution.
+
+This ensures that a single test script can dynamically change its behavior or input data for every iteration without you having to write multiple versions of the same test.
 
 Parameters are used to create data-driven tests. Each parameter will be treated as a separate test during a manual or automated run.
 
 **To add parameters to your test**:
 
-1. Navigate to **‘Tests’** in the sidebar
-2. Select specific test
-3. Click the **’Extra button’** icon
-4. Select **’Add Parameter’** from the menu
+1. Navigate to **‘Tests’** in the sidebar.
+2. Select specific test.
+3. Click the **'Extra button'** icon.
+4. Select **'Add Parameter'** from the menu.
 
-![Add_Parameter](./images/att1_4962.png)
+![Add_Parameter](./images/dynamic_param_1.png)
 
 After a modal with instructions will appear,
 
-1. Add parameter headers:
+5. Add parameter headers:
 
-- Enter a name for the header
-- A new **'Parameter header'** will appear automatically for each additional header
+- Enter a name for the header.
+- A new **'Parameter header'** will appear automatically for each additional header (or click **'Add column'** button).
 
-2. Click **’Save’** button after adding all necessary headers
+6. Click **'Save'** button after adding all necessary headers.
 
-![Parameter_header](./images/att2_4962.png)
+![Parameter_header](./images/dynamic_param_2.png)
 
-3. Add parameter names
-4. Click **’Save’** button
+7. Add parameter names.
+8. Click **'Save'** button.
 
-![Parameter_names](./images/att3_4962.png)
+![Parameter_names](./images/dynamic_param_3.png)
 
 Now, your parameters are added, and you can see them at the bottom of the modal,
 
-![Added_parameters](./images/att4_4962.png)
+![Added_parameters](./images/dynamic_param_4.png)
 
 or under the test description.
 
-![Added_parameters_desc](./images/att5_4962.png)
+![Added_parameters_desc](./images/dynamic_param_5.png)
 
 ### How to Edit Test Parameters
 
@@ -351,54 +357,94 @@ You are able to edit existing parameters or parameter headers in two methods:
 
 **Method 1: Editing directly under the test description**
 
-1. Click the **‘Edit’** icon next to the parameter
+1. Click the **'Edit'** icon next to the parameter.
 
-![Edit_icon](./images/att6_4962.png)
+![Edit_icon](./images/edit_dynamic_param_1.png)
 
-2. Update the parameter name
-3. Click the **‘Save’** button
+2. Update the parameter name.
+3. Click the **'Save'** button.
 
-![Edit_parameter_name](./images/att7_4962.png)
+![Edit_parameter_name](./images/edit_dynamic_param_2.png)
 
-4. Click the **‘Edit Header’** button
+4. Click the **'Edit Header'** button.
 
-![Edit_Header](./images/att8_4962.png)
+![Edit_Header](./images/edit_dynamic_param_3.png)
 
-5. Update the header name
-6. Click the **‘Save’** button
+5. Update the header name.
+6. Click the **'Save'** button.
 
-![Update_Header_Name](./images/att9_4962.png)
+![Update_Header_Name](./images/edit_dynamic_param_4.png)
 
-To delete a parameter:
+**To delete a parameter:**
 
-1. Click the **‘Trash’** icon
-2. A pop-up will appear: **’Are you sure you want to delete this param?’**
-3. Click **‘OK’** to confirm
+1. Click the **'Trash'** icon.
+2. Click **'OK'** to confirm action on **'Are you sure you want to delete this param?'** pop-up.
 
-![Delete_parameter](./images/att10_4962.png)
+![Delete_parameter](./images/delete_dynamic_param_1.png)
 
 **Method 2: Editing via the parameter menu**
 
-1. Click the **‘Extra button’** icon
-2. Select **‘Add Parameter’** from the menu
+1. Click the **'Extra button'** icon.
+2. Select **'Add Parameter'** from the extra menu dropdown.
 
-![Second_Method_delete](./images/att11_4962.png)
+![Second_Method_delete](./images/edit_dynamic_param_5.png)
 
 3. Follow the same steps as in Method 1:
 
-- Click the **‘Edit’** icon next to the parameter
-- Update the parameter name
-- Click **‘Save’**
+- Click the **'Edit'** icon next to the parameter.
+- Update the parameter name.
+- Click **'Save'**.
 
-![Second_Method_Edit_Parameter_Name](./images/att12_4962.png)
+![Second_Method_Edit_Parameter_Name](./images/edit_dynamic_param_6.png)
 
-- Click **‘Edit Header’** button
-- Update the header name
-- Click **‘Save’**
+- Click **'Edit Header'** button.
+- Update the header name.
+- Click **'Save'**.
 
-![Second_Method_Edit_Header_Name](./images/att13_4962.png)
+![Second_Method_Edit_Header_Name](./images/edit_dynamic_param_7.png)
 
-### Launch Test Case with Parameters
+**To delete a parameter via the parameter menu:**
+
+1. Click the **'Extra button'** icon.
+2. Select **'Add Parameter'** from the extra menu dropdown.
+
+![Second_Method_Edit_Parameter_Name](./images/edit_dynamic_param_6.png)
+
+3. Click the **'Trash'** icon.
+4. Click **'OK'** to confirm action on **'Are you sure you want to delete this param?'** pop-up.
+
+![Second_Method_delete](./images/delete_dynamic_param_2.png)
+
+### How to Use Dynamic Parameters in Test Steps
+
+Once you have defined your **Parameter Headers** (as shown in the steps above), you can reference them directly in your test logic.
+
+1. **Identify your Header:** Note the exact name of the **'Parameter header'** you created (e.g., `Username` or `Environment`).
+2. Click **'Edit'** button for test.
+
+![Testomat.io - Dynamic Parameters in Test Steps](./images/dynamic_par_in_steps_1.png)
+
+3. **Insert the Placeholder:** In the Test Description or Steps field, use the syntax `${ParameterName}` or `{{ParameterName}}`.
+
+**Example:** `Enter an invalid Mobile Number ${Mobile No}` or `Open home page {{URL}}`.
+
+4. **Save the Test:** Click the **'Save'** button on the test case.
+
+![Testomat.io - Dynamic Parameters in Test Steps](./images/dynamic_par_in_steps_2.png)
+
+When you launch the test, Testomat.io will scan for the `${}` and `{{}}` syntax and inject the corresponding value from your parameters table for that specific run iteration.
+
+:::note
+
+1. Parameter names are case-sensitive. Ensure the text inside the brackets matches your header name exactly to avoid **"Undefined"** errors during runtime!
+
+2. For **Titles** use **ONLY** `${ParameterName}` syntax, for **Steps and description** you can use both: `${ParameterName}` or `{{ParameterName}}` .
+
+![Testomat.io - Dynamic Parameters in Test Steps](./images/dynamic_par_note_1.png)
+
+:::
+
+### Launch Test Case with Dynamic Parameters
 
 When a test case with added parameters is launched — whether as a manual or automated run — it is automatically rendered with actual values. This data-driven approach ensures that your test logic remains clean while covering multiple scenarios.
 
