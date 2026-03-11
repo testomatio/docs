@@ -183,9 +183,10 @@ export default defineConfig({
 									label: 'Export tests',
 									collapsed: true,
 									items: [
-										{ label: 'Export to Spreadsheet', link: '/project/import-export/export-tests/export-to-spreadsheet' },
+										{ label: 'Export to Spreadsheet', link: '/project/import-export/export-tests/export-to-spreadsheet' },                    
 										{ label: 'Download as Markdown Files', link: '/project/import-export/download-tests-as-files/download-manual-tests-as-files' },
 										{ label: 'Export to Obsidian', link: '/project/import-export/export-tests/export-to-obsidian' },
+                    { label: 'Classical Tests Markdown Format', link: '/project/import-export/export-tests/classical-tests-markdown-format' },                    
 									],
 								},
 							],
