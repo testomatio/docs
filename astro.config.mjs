@@ -184,6 +184,7 @@ export default defineConfig({
 									collapsed: true,
 									items: [
 										{ label: 'Export to Spreadsheet', link: '/project/import-export/export-tests/export-to-spreadsheet' },
+										{ label: 'Classical Tests Markdown Format', link: '/project/import-export/export-tests/classical-tests-markdown-format' },
 									],
 								},
 								{
