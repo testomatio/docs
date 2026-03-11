@@ -29,9 +29,9 @@ The Accountant user in a system is a role assigned to a user responsible for man
 
 :::note
 
-To give an Accountant User **Read-Only** access to projects, simply select **Make Manager** or **Make QA**.  
+To change Accountant User role to **Read-Only**, simply select **Make Manager** or **Make QA**.  
 This is free and allows them to view projects under the selected role without editing rights.
-
+Please note, that Accountant User can only work with payments and is not considered to view projects data.
 :::
 
 ### How to Add an Accountant User to a Company
