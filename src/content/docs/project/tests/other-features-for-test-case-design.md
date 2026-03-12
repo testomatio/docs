@@ -103,6 +103,62 @@ To remove all suites/folders from Favourites with one click: Use the **'Starred'
 ![Testomat.io - UnMark Folders & Suites as Favourites](./images/unstar_suite.png)
 :::
 
+### Convert Suite to Folder
+
+When working on test design, it is common to start writing tests inside a single suite and later realize that the suite should become a higher-level section containing multiple suites.
+
+Previously, restructuring required creating new folders and manually moving tests. To simplify this workflow, Testomat.io allows converting an existing suite into a folder — even if the suite already contains tests.
+
+When converting:
+
+- a **new folder with the same name** is created
+- the **original suite is placed inside this folder**
+- all existing tests remain unchanged
+
+This allows you to reorganize test structure without recreating suites or losing test history.
+
+#### How to Convert a Suite to a Folder
+
+1. Navigate to the **Tests** page
+2. Open the suite you want to restructure
+3. Click the **Extra menu (⋯)**
+4. Select **Convert to folder**
+5. Confirm the action in the popup
+
+![Convert to folder](./images/att1_9.png)
+
+Before conversion:
+
+```
+Notifications (Suite)
+|-- Test 1
+|-- Test 2
+```
+
+After conversion:
+
+```
+Notifications (Folder)
+└── Notifications (Suite)
+    ├── Test 1
+    └── Test 2
+```
+
+You can now create additional suites inside the folder and reorganize tests as needed.
+
+#### Why This Is Useful
+
+Test structures rarely stay perfect from the start. As your project grows, suites can become too large or cover multiple sub-features.
+
+Converting a suite to a folder allows QA engineers to:
+
+- **Reorganize tests on the fly** without stopping test creation
+- **Split large suites into smaller, logical sub-suites** inside the new folder
+- **Preserve all tests and history** — no need to recreate suites or move tests manually
+- **Optionally rename** the folder or the inner suite to reflect its new role, keeping the hierarchy clear
+
+This makes the test tree easier to navigate and maintain, ensuring a **scalable and readable structure** as the project grows.
+
 ## Export Suite as PDF
 
 You can now download any suite as a **PDF file**. This feature is designed to help teams share test results, documentation, or audit trails with stakeholders who may not have access to the platform itself.
