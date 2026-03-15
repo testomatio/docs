@@ -460,9 +460,9 @@ Once the **Edit manual run** view is opened, here’s what you can do:
 - **Environment** - Add or remove testing environments
 - **Description** - Add or update the run description
 - **details** link - Check configuration details of the run
-- **Tests in Run** – Shows all tests currently included in the run. Remove unnecessary tests by clicking the **trash** icon
-- **Additional tests** – Similar to the [Select tests](https://docs.testomat.io/project/runs/running-tests-manually/#how-to-configure-a-manual-run) tab in a new manual run. You can browse the test tree, use search or filters, or expand suites to select manual tests to add to this run
-- **From plans** – Select tests from existing test plans. You can include one or multiple plans in the current run
+- **Current tests** – Shows all tests currently included in the run. Remove unnecessary tests by clicking the **trash** icon
+- **+ Tests** – Similar to the [Select tests](https://docs.testomat.io/project/runs/running-tests-manually/#how-to-configure-a-manual-run) tab in a new manual run. You can browse the test tree, use search or filters, or expand suites to select manual tests to add to this run
+- **+ Plans** – Select tests from existing test plans. You can include one or multiple plans in the current run
 
 :::note
 
@@ -470,7 +470,7 @@ You can add tests from plans and additional tests at the same time. For example:
 
 :::
 
-![Edit existing run](./images/gif3_7641.gif)
+![Edit existing run](./images/gif1-7865.gif)
 
 ## How to Adjust Test Case Description Block
 
