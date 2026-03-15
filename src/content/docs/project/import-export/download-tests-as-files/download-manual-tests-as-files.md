@@ -221,7 +221,7 @@ To create a test case with **Dynamic Parameters** in a markdown file, you need t
 ```
 <!-- example -->
 ```
-2. Assign headers for parameters and dynamic parameters for testing in the table scructure.
+2. Assign headers for parameters and dynamic parameters for testing in the table structure.
 ```
 | Header 1 | Header 2 |
 | --- | --- |
@@ -342,7 +342,9 @@ If you maintain only automated test cases or both, manual and automated, within 
 :::note
 
 **Single State Rule:** A test can have only one state: **manual** or **automated**. It cannot hold both statuses simultaneously in Testomat.io.
+
 **Applicability:** This feature works for both **BDD** and **Classical** project types.
+
 **Scope:** The setting is applicable to both **individual tests** and **entire suites**.
 
 
