@@ -70,6 +70,12 @@ Open a terminal, navigate to the tests folder in your project and execute the co
 
 If you don't see a similar message, this might be because our default settings do not work for you. Please check the command's API change command parameters so it could find tests. The most common issues with import are different file naming format and/or incorrect directory for import.
 
+:::note
+
+All nested suites will be flattened on import for better visibility. So if you have nested `describe` blocks inside the same file they will be imported as separate suites from the file
+
+:::
+
 When the tests are finally imported, reopen the project, and you will see that all tests with their folders and files are shown on Testomat.io.
 
 ![Testomat.io - Imported automated tests](./images/New_hcbaJeTv_2024-07-26.png)
@@ -109,4 +115,3 @@ Ok, I've just imported my tests successfully, now what?
 * All new tests will be marked as "manual" unless you import them from code. You can check the number of manual tests that are left, and see the whole range of what is yet to be implemented.
 * **Receive run reports** - similarly to Importing tests, you can receive detailed reports on each test execution. Open **Runs** page and follow instructions from there.
 * **Add import command to CI** - re-import the tests on each commit to have your project up to date with the source code.
-
