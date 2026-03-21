@@ -56,25 +56,25 @@ To start, you need to open a **Test Case** (**Suite** or **Run**):
 
 ## Pin Sidebar
 
-**Pin Sidebar** keeps both the test tree and test details visible at the same time — giving you access to filters, search, and actions while reviewing tests, so you can navigate without losing context and stay focused during QA activities.
+**Pin Sidebar** keeps both the test tree and test or suite details visible at the same time — giving you access to filters, search, and actions while reviewing tests and suites, so you can navigate without losing context and stay focused during QA activities.
 
 You can enable it in two ways:
 
-- Click the **Pin icon** in the top-right corner of the test detail panel
+- Click the **Pin icon** in the top-right corner of the test or suite detail panel
 - Open the **Display** menu at the top of the Tests page and toggle **Pin sidebar**
 
-| State                  | Behavior                                                                                                                                     |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Unpinned** (default) | The sidebar opens on the Tests page. Some toolbar actions may not be accessible.                                                             |
-| **Pinned**             | The sidebar is fixed alongside the test tree. The full Tests page toolbar — filters, search, Display menu, and actions — remains accessible. |
+| State                  | Behavior                                                                                                                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Unpinned** (default) | The sidebar opens over the Tests page. Some toolbar actions may not be accessible.                                                               |
+| **Pinned**             | The sidebar is fixed alongside the test tree. The full **Tests** page toolbar — filters, search, Display menu, and actions — remains accessible. |
 
 ![Pin feature](./images/gif1_7327.gif)
 
 Use **Pin Sidebar** when navigating multiple tests in sequence, or during QA audits. It keeps the test tree, filters, search, and actions accessible while reviewing test details, providing:
 
-- Faster navigation between tests
+- Faster navigation between tests and suites
 - Continuous focus during QA activities
-  Less UI friction throughout your workflow
+- Less UI friction throughout your workflow
 
 ## Suites and Folders
 
