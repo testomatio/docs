@@ -105,6 +105,32 @@ This workflow makes test case management seamless, collaborative, and fully trac
 
 If you are working on a Mixed project (have both manual and automation tests), with **Export to Markdown** feature you can export your manual tests to the same directory as your automation tests. This will allow you to manage all tests in one place.
 
+## Folder Naming and Normalization Rules
+
+When organizing your projects, ensure that folder names adhere to the following naming conventions to maintain compatibility during import and export processes.
+
+**In folder names, you can use:**
+**Allowed Characters**
+- Any Unicode letters (Multiple languages supported).
+- Digits (0-9).
+- Spaces.
+- Underscore `_`.
+- Hyphen `-`.
+- Dot `.`.
+
+**Prohibited Characters:** All other special characters or symbols not listed above are strictly forbidden.
+
+**Automatic Normalization**
+To ensure consistent file paths, Testomat.io applies the following normalization rules:
+- **Consolidation:** Multiple consecutive spaces, underscores, hyphens, or dots are transformed into a single entity. (Example: `...` becomes `.`).
+- **Trimming:** Any spaces, underscores, or dots at the beginning or end of a folder name are automatically removed.
+
+:::note
+
+Visit [Classical Tests Markdown Format](https://docs.testomat.io/project/import-export/export-tests/classical-tests-markdown-format/) page to read about the correct structure for your suites and tests in the markdown format.
+
+:::
+
 ## What You Can Do with Tests Exported as Files
 
 After your project is downloaded to Markdown you can:
@@ -113,6 +139,7 @@ After your project is downloaded to Markdown you can:
 - Update existing tests, including using **Bulk Edit** to modify multiple tests (add/change tags, labels, custom fields, assignee or priority).
 - Delete tests that are no longer relevant.
 - Change Project structure.
+- Work with Dynamic parameters.
 
 ### Create New Suites/Tests
 
