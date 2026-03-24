@@ -105,14 +105,41 @@ This workflow makes test case management seamless, collaborative, and fully trac
 
 If you are working on a Mixed project (have both manual and automation tests), with **Export to Markdown** feature you can export your manual tests to the same directory as your automation tests. This will allow you to manage all tests in one place.
 
+## Folder Naming and Normalization Rules
+
+When organizing your projects, ensure that folder names adhere to the following naming conventions to maintain compatibility during import and export processes.
+
+**In folder names, you can use:**
+**Allowed Characters**
+- Any Unicode letters (Multiple languages supported).
+- Digits (0-9).
+- Spaces.
+- Underscore `_`.
+- Hyphen `-`.
+- Dot `.`.
+
+**Prohibited Characters:** All other special characters or symbols not listed above are strictly forbidden.
+
+**Automatic Normalization**
+To ensure consistent file paths, Testomat.io applies the following normalization rules:
+- **Consolidation:** Multiple consecutive spaces, underscores, hyphens, or dots are transformed into a single entity. (Example: `...` becomes `.`).
+- **Trimming:** Any spaces, underscores, or dots at the beginning or end of a folder name are automatically removed.
+
+:::note
+
+Visit [Classical Tests Markdown Format](https://docs.testomat.io/project/import-export/export-tests/classical-tests-markdown-format/) page to read about the correct structure for your suites and tests in the markdown format.
+
+:::
+
 ## What You Can Do with Tests Exported as Files
 
 After your project is downloaded to Markdown you can:
 
 - Create new tests and suits.
-- Update existing tests, including using **Bulk Edit** to modify multiple tests (add/change tags, labels, custom fields, or priority).
-- Delete tests that are not longer relevant.
-- Change project structure.
+- Update existing tests, including using **Bulk Edit** to modify multiple tests (add/change tags, labels, custom fields, assignee or priority).
+- Delete tests that are no longer relevant.
+- Change Project structure.
+- Work with Dynamic parameters.
 
 ### Create New Suites/Tests
 
@@ -151,7 +178,7 @@ Don't add the ID as it will be created automatically after tests are synced into
 priority: high
 creator: creator_email@gmail.com
 tags: @user, @update
-labels: Slow
+labels: smoke
 -->
 
 # Test Title
@@ -180,7 +207,6 @@ emoji:
 labels:
 -->
 ```
-
 ### Update Existing Suites/Tests
 
 Update the description for an existing suite/test in the markdown format.
@@ -188,15 +214,62 @@ If you need to change/add a specific Step, Pre-condition, Priority, Tags, Labels
 
 ![Testomatio - Export as markdown](./images/Bulk_edit_test_markdown_1.gif)
 
+:::note
+
+Avoid renaming folders or suites within the directory structure, as this may disrupt the Project structure upon import. To change a suite name, edit it within the Markdown file header or directly in Testomat.io.
+
+:::
+
+![Testomatio - Export as markdown](./images/Rename_test_markdown_1.png)
+
+| **Suite Name Before**             | **Suite Name After**             |
+| --------------------------- | ------------------------------------- |
+| ![Testomatio - Export as markdown](./images/Suite_name_before.png) | ![Testomatio - Export as markdown](./images/Suite_name_after.png) |
+
 ### Delete Irrelevant Tests
 
 Simply delete the irrelevant suites/tests from the file and save the changes before the import process.
 
 ### Change Project Structure
 
-You can update your Project structure by moving suites or tests within the file. After the import, your Project will be displayed with the new structure.
+Project structure **cannot** be modified by moving folders or suites within the directory structure. Only **individual test cases** can be moved between suites in the Markdown file. After the import, changes will be displayed on Testomat.io side.
 
-![Testomatio - Export as markdown](./images/Change_structure_test_markdown_1.gif)
+:::note
+
+If you modify the project structure directly within Testomat.io after an initial Markdown export, clear your local directory and perform a fresh pull to ensure files remain synchronized.
+
+:::
+
+### How to Work with Dynamic Parameters
+
+To create a test case with **Dynamic Parameters** in a markdown file, you need to add them in the markdown format.
+
+1. Add an **'Example'** section at the end of your test case using the markdown format:
+```
+<!-- example -->
+```
+2. Assign headers for parameters and dynamic parameters for testing in the table structure.
+```
+| Header 1 | Header 2 |
+| --- | --- |
+| Param name 1 | Param name 2 |
+| Param name 3 | Param name 4 |
+```
+**Example of structure for Test Case with Dynamic Parameters:**
+
+![Testomatio - Export as markdown](./images/Export_dynamic_param_1.png)
+
+:::note
+
+**Character Limit:** If a parameter name exceeds 250 characters, it will be truncated on UI (only the first 247 characters will be displayed).
+
+**Parameter Order:** The order of parameters cannot be manually changed within the markdown file. On the UI, they are always displayed by the latest IDs assigned during the import from markdown to Testomat.io.
+
+**Synchronization:** While the order in the markdown file and on the UI might not match initially after an import, the order will be synchronized once you export them back from Testomat.io to a markdown file (the exported file will match the UI order).
+
+:::
+
+For more information about **Dynamic Parameters** follow the [link](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#how-to-add-dynamic-parameters-to-a-test).
 
 ## How to Import Manual Tests from Markdown
 
@@ -261,5 +334,45 @@ OR
 By clicking on **'Mark as Sync'** button you can sync the test with the latest changes.
 
 ![Testomatio - Import from markdown](./images/Out_of_Sync_4.png)
+
+:::
+
+### Importing Automated Tests as Manual
+
+If you maintain only automated test cases or both, manual and automated, within the same source files (e.g., in a single .feature file), but you want to import your automated tests as manual, you can use the **'Additional Settings'** during import to ensure these tests are correctly mapped and synchronized within Testomat.io.
+
+**To use this feature:**
+
+1. Go to the **Import Project from Source Code** menu: select your **Project Framework**, **Project Language** and **OS**.
+2. Click on **'Additional Settings'**.
+
+![Testomatio - Import from markdown](./images/Auto_to_manual_1.png)
+
+3. In the field **'Import automated tests as manual when a test is marked with a tag'**, enter the dedicated tag you use in your code for tests that should be imported as manual tests (e.g., `@manual`, `@smoke`, etc.).
+4. Copy the displayed import command from Testomat.io, for example:
+`TESTOMATIO=tstmt_... npx check-tests@latest codeceptjs "**/*.js"`
+
+5. Click the **'Finish'** button.
+
+![Testomatio - Import from markdown](./images/Auto_to_manual_2.png)
+
+6. Run coppied import command in the terminal.
+
+![Testomatio - Import from markdown](./images/Auto_to_manual_3.png)
+
+7. Verify the state of imported tests.
+
+| **Tests State Before = Automated**             | **Tests State After = Manual**             |
+| --------------------------- | ------------------------------------- |
+| ![Testomatio - Import from markdown](./images/Auto_to_manual_before.png) | ![Testomatio - Import from markdown](./images/Auto_to_manual_after.png) |
+
+:::note
+
+**Single State Rule:** A test can have only one state: **manual** or **automated**. It cannot hold both statuses simultaneously in Testomat.io.
+
+**Applicability:** This feature works for both **BDD** and **Classical** project types.
+
+**Scope:** The setting is applicable to both **individual tests** and **entire suites**.
+
 
 :::
