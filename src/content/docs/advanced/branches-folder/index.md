@@ -152,6 +152,58 @@ After completing work in a branch, you can **merge** or **replace** your changes
 
 - **Replace**: applies all changes from the current branch, **including diverged tests and suites**. This fully replaces Main with the branch, so the Main can be off-track.
 
+## Merging Tests with Parameters (Examples)
+
+When merging a branch into Main, Testomat.io also carries over **test parameters** — the example data tables attached to parametrized test cases. See [Classical Tests Markdown Format — Examples](https://docs.testomat.io/project/import-export/export-tests/classical-tests-markdown-format/#examples) for details on how parameters are structured.
+
+### Choosing the Right Merge Option for Parameters
+
+| Situation                                             | Recommended action |
+| ----------------------------------------------------- | ------------------ |
+| Test with Parameters Created in a Branch              | **Merge**          |
+| Test Created in Main, Parameters Modified in a Branch | **Replace**        |
+
+:::note
+
+**Replace** applies to the entire branch, not just the parametrized tests. Any other diverged tests or suites in the branch will also overwrite their **Main** counterparts. Review the diff carefully before using **Replace** to make sure you're not accidentally overriding unrelated changes.
+
+:::
+
+### Scenario 1: Test with Parameters Created in a Branch
+
+If a test case — including its parameters — was **first created inside a branch**, merging that branch into Main works as expected out of the box.
+
+- Use the standard **Merge** option
+- The test case and its full example table are brought into Main automatically
+- No special handling is required
+
+**Example workflow:**
+
+1. Create a new branch `feature/login-params` and switch to it
+2. In the branch, create a new test **"Login with multiple roles"** and add an examples table with rows for `admin`, `editor`, and `viewer`
+3. Open the branch compare view and click **Merge → Merge**
+4. The test and all its examples appear in Main
+
+![ Test with Parameters Created in a Branch](./images/gif1_1485.gif)
+
+### Scenario 2: Test Created in Main, Parameters Modified in a Branch
+
+If a test case already exists in Main and you need to update its parameters in a branch (add, remove, or change example rows), use **Replace instead of Merge**. Replace is designed exactly for this: it applies all branch changes — including updated parameters — directly into Main, giving you full control over how parameterized tests evolve across branches.
+
+**Example workflow:**
+
+1. A test **"Checkout with payment methods"** exists in **Main** with two example rows: `credit_card` and `paypal`
+2. Create a new branch `update/checkout-params` and switch to it
+3. Add a third row: `apple_pay` to that test's examples table
+4. Open the branch compare view:
+
+- the view may appear empty if **only** parameters were changed
+- or show other edits if the test body was also modified
+
+5. Click **Merge → Replace** to apply the updated parameters to **Main**
+
+![Test Created in Main, Parameters Modified in a Branch](./images/gif2_1485.gif)
+
 ## Revert Merge
 
 If a merge caused unintended changes or issues, you can **revert a merge** using one of the following methods:
