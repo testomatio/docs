@@ -7,7 +7,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: test design, test cases, test management, test automation, testing techniques, Testomat.io, BDD, Gherkin, Cucumber, test scenarios, project workflow, software testing
+      content: test design, test cases, test management, test automation, testing techniques, Testomat.io, BDD, Gherkin, Cucumber, test scenarios, project workflow, software testing, duplicate, meta data, link attachments, link issues, link labels
 ---
 
 ## How to Copy your Tests, Test Suites, and Folders
@@ -70,6 +70,55 @@ These advanced options are available for **all copy modes**:
 :::
 
 This flexibility allows you to either fully duplicate test assets with all related context or create a clean copy without additional metadata.
+
+## Duplicate Tests
+
+The **Duplicate** feature allows you to quickly create a copy of an existing test inside Testomat.io. It helps QA engineers reuse test structure, steps, and configuration without creating tests from scratch.
+
+When a test is duplicated:
+
+- A new independent test is created in the same suite
+- Test content, steps, and parameters are copied
+- The new test name automatically includes a **Copy** badge
+
+During duplication, you can also choose whether to copy additional metadata using **Advanced Duplicate Options**. This allows you to either create a clean test or a full clone of the original test depending on your workflow.
+
+You can optionally duplicate:
+
+- Labels
+- Linked issues
+- Attachments
+
+These options help preserve test organization, traceability, and supporting materials when creating similar tests.
+
+### How to Duplicate Test
+
+1. Navigate to the **Tests** section
+2. Open a test you want to duplicate
+3. Click the (`⋯`) actions menu
+4. Click the **Duplicate**
+
+![Duplicate](./images/att1_7987.png)
+
+When the **Choose duplicate settings** modal opens:
+
+5. Select advanced duplication options if needed:
+
+- Assign labels
+- Assign issues
+- Assign attachments
+
+6. Click **Duplicate** button to confirm
+
+![Duplicate tests](./images/att2_7987.png)
+
+A new test is created immediately with the selected metadata.
+
+:::note
+
+Your selected duplication settings are **remembered automatically**. The next time you open the **Choose duplicate settings** modal, previously selected metadata will already be preselected, so you don’t need to configure them every time.
+
+:::
 
 ## Move Your Tests
 
