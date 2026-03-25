@@ -1,6 +1,6 @@
 ---
 title: Bulk Edit on Suite and Test Levels
-description: Learn how to use the Bulk Edit feature in Testomat.io to manage test suites more efficiently. This guide explains file and folder patterns, how to bulk edit individual suites using YAML, and how to quickly create multiple tests with minimal input.  
+description: Learn how to use the Bulk Edit feature in Testomat.io to manage test suites more efficiently. This guide explains file and folder patterns, how to bulk edit individual suites using YAML, and how to quickly create multiple tests with minimal input.
 type: article
 url: https://docs.testomat.io/advanced/bulk-edit-folder-suites-and-tests
 head:
@@ -8,42 +8,96 @@ head:
     attrs:
       name: og:image
       content: https://docs.testomat.io/_astro/169832839-f67f3cad-73b7-43ff-ba00-b4ecd4296c2f.D7I3Huc-_Z21Q63i.webp
-      
+
   - tag: meta
     attrs:
       name: keywords
       content: bulk edit, test management, Testomat.io, YAML, test suite, reorder tests, create tests, delete tests, bulk test creation, file patterns, test restructuring, automation
 ---
+
 ## File and Folder Patterns
 
-In order to reflect the BDD paradigm in the best way and to support the consistency of the project structure, Testomat.io provides a Folder and File pattern. 
+In order to reflect the BDD paradigm in the best way and to support the consistency of the project structure, Testomat.io provides a Folder and File pattern.
 A suite with tests is considered to be a **file** (like a file with tests in your filesystem).
 A suite that contains other suites is a **folder** (like in a filesystem).
 So the main rule here is **suite can contain only tests or suites but not both**.
 
 ## How to Use Bulk Edit on Suite Level
 
-Your project may contain a huge amount of tests and suites. It's more efficient to edit tests at the suite level. See how it works: 
+Bulk Edit allows you to update an entire suite as a single Markdown document.
 
-1. Select the test suite you want to edit from the project view.
+Instead of opening tests one by one, you modify all tests directly inside the suite file. This speeds up large-scale updates and keeps test documentation consistent, especially for large regression suites or when multiple tests require the same change.
 
-2. Click the three-dot menu (⋮) next to the suite name.
+### Why Use Bulk Edit
 
-3. Choose **Bulk Edit** from the dropdown menu.
+In real QA workflows, updates rarely affect only one test. Bulk Edit is ideal for:
 
-4. Modify the suite content in the YAML editor as needed.
+- Updating or adding examples across multiple **parametrized tests**
+- Aligning labels, priorities, or tags across a feature area
+- Updating wording after UI changes
+- Refactoring test descriptions
+- Quickly drafting multiple new tests with the same description
+- Applying global text updates with **Change All Occurrences**
 
-5. Click **Preview** to review the proposed changes.
+By working at the suite level, all changes are applied automatically when the suite is saved, avoiding manual synchronization of individual tests. The editor works with the [Classical Tests Markdown Format](https://docs.testomat.io/project/import-export/export-tests/classical-tests-markdown-format/), where suites and tests are structured as blocks in a single Markdown document.
 
-6. In the confirmation pop-up, click **Apply Changes** to save your updates.
+::: note
 
-![Bulk edit on suite level](./images/bulk_edit_suite_level.png)
+Deletions made in Bulk Edit are **not applied when saving** to prevent accidental removals. If you need to delete items, use the regular **multi-select** workflow instead.
 
-![Make changes in the suite](./images/make_changes_in_the_suite.png)
+:::
 
-![Apply changes suite level](./images/apply_changes_suite_level.png)
+### Step-by-Step Guide
 
-[![CleanShot 2022-05-27 at 20 21 06@2x](./images/170759894-469aac18-08b7-407f-938e-eda4037dc4b8.jpg)](https://youtu.be/Cp7XJynF7u4)
+1. Navigate to the **Tests** page
+2. Open the suite you want to edit
+3. Click the **'...'** extra menu
+4. Select the **'Bulk edit'**
+
+![Bulk Edit](./images/att1_541.png)
+
+5. The Markdown editor opens, displaying the full suite file
+
+From here, you can modify or create:
+
+- Suite metadata (emoji, overall tags, labels, assignees, etc.)
+- Test metadata (including tags, labels, priorities, assignees, etc.)
+- Test descriptions (steps, expected results, etc.)
+- Examples (parametrized tests)
+- Add a new test - either by clicking **Add Test** (which automatically inserts `<!-- test -->` and a new `##` block) or by writing it manually in the suite file
+
+![All changes in Bulk Edit](./images/att2_541.png)
+
+All changes follow the [Classical Tests Markdown Format](https://docs.testomat.io/project/import-export/export-tests/classical-tests-markdown-format/), so you can learn more about the structure and formatting rules.
+
+### Practical Example: Parametrized Tests
+
+**Scenario:** You need to update examples across multiple parametrized tests.
+
+**Without Bulk Edit:** Each test must be opened and updated individually.
+
+**With Bulk Edit:**
+
+1. Open the suite in Bulk Edit
+2. Select the parameters (examples) you want to update — they will be highlighted in the editor for easy identification
+3. Use **Change All Occurrences** to apply updates globally
+4. Update the parameters (examples)
+5. Click **Save**
+
+All tests instantly reflect the new or updated examples.
+
+![Markdown editor](./images/gif1_541.gif)
+
+Bulk Edit makes managing parametrized tests extremely efficient — whether adding new examples, correcting existing ones, or updating shared datasets.
+
+### Best Practices
+
+- Treat the suite file as a single source of truth for related tests
+- Make grouped, logical updates instead of many small edits
+- Review global replacements before saving
+- Keep formatting consistent to ensure correct parsing
+
+Bulk Edit works best for structured updates affecting multiple tests, rather than small individual corrections.
 
 ## Bulk Tests Creation
 
