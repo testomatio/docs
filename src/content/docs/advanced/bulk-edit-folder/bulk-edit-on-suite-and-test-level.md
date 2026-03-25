@@ -41,7 +41,7 @@ In real QA workflows, updates rarely affect only one test. Bulk Edit is ideal fo
 
 By working at the suite level, all changes are applied automatically when the suite is saved, avoiding manual synchronization of individual tests. The editor works with the [Classical Tests Markdown Format](https://docs.testomat.io/project/import-export/export-tests/classical-tests-markdown-format/), where suites and tests are structured as blocks in a single Markdown document.
 
-::: note
+:::note
 
 Deletions made in Bulk Edit are **not applied when saving** to prevent accidental removals. If you need to delete items, use the regular **multi-select** workflow instead.
 
