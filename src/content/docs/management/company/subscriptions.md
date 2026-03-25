@@ -68,7 +68,6 @@ Here is an overview of what is included in the Testomat.io Free plan:
 - Reports & Metrics
 - Tests/Suites templates
 - CI/CD Pipeline Integration (Jenkins, Bamboo, GitLab, GitHub)
-- Notifications (email)
 
 :::note
 
