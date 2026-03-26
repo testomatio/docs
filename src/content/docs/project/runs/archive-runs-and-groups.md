@@ -49,9 +49,9 @@ Archived Runs or Groups are removed from the main Runs board and got the **archi
 
 :::note
 
-**Incomplete** Runs or RunGroups with such runs cannot be archived.
+When a Run or RunGroup containing unfinished (Pending) tests is archived, the run status changes to **Terminated**. All **Pending** tests become **Skipped**, while tests in other statuses remain **unchanged**.
 
-![Testomat.io - Incomplete Runs](./images/Archive_Run_7.png)
+![Pending status](./images/att5_3703.png)
 
 :::
 
@@ -108,17 +108,31 @@ Testomat.io also allows you to view the Run Report of an archived test run by si
 
 ## Groups Archive
 
-Archived RunGroups are located in a separate section called **'Groups Archive'**. You can also filter archived RunGroups. To view all filtering options, click the **'Filter'** icon.
+Archived RunGroups are located in a separate section called **'Groups Archive'**. You can search, filter, and sort archived RunGroups to quickly find what you need.
 
-![Testomat.io - Groups Archive](./images/Archive_Run_14.png)
+**Search** — use the search field in the toolbar to find archived RunGroups by name. Results update instantly as you type, showing the number of groups found. Click **x** to clear the search.
 
-Furthermore, you can sort groups in various way by clicking the **'Sorting'** button.
+![Search](./images/att1_3703.png)
 
-![Testomat.io - Sort in Groups Archive](./images/Archive_Run_15.png)
+**Filter** — click the **'Filter'** icon to filter archived RunGroups by:
 
-As well, by clicking on archived RunGroup, you can see the RunGroup Report.
+- **Group type** — Build, Release, or Sprint
+- **Finish Range** — a specific date range when the group was finished
 
-![Testomat.io - RunGroup Report](./images/Archive_Run_16.png)
+![Filters](./images/att2_3703.png)
+
+**Sort** — click the **'Sorting'** button in the top-right corner to sort groups by:
+
+- **ASC by Name** — alphabetically A→Z
+- **DESC by Name** — alphabetically Z→A
+- **ASC by Date** — oldest finished first
+- **DESC by Date** — newest finished first
+
+![Sorting](./images/att3_3703.png)
+
+By clicking on an archived RunGroup, you can see the RunGroup Report.
+
+![RunGroup Archive Report](./images/att4_3703.png)
 
 ## How to Unarchive Runs & RunGroups
 
