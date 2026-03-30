@@ -18,10 +18,10 @@ Tags help organize and categorize Test Cases and Suites for easier filtering, re
 
 You can easily create tags directly to Test Cases or Suites via their titles.
 
-1. Open Test Case/ Suite
-2. Click the **Edit** button
-3. Create tag starting with **@** symbol, directly within the Test Case or Suite title
-4. Click the **Save** button
+1. Open Test Case/Suite.
+2. Click the **Edit** button.
+3. Create tag starting with **@** symbol, directly within the Test Case or Suite title.
+4. Click the **Save** button.
 
 ![Testomatio - Add tag](./images/Add_Tag.gif)
 
@@ -41,10 +41,10 @@ In case if you don't see a previously created tag in the autocomplete dropdown, 
 
 You can also create tags for multiple Suites or Tests at once using the **Multi-select** feature.
 
-1. Go to the **Tests** page
-2. Enable **Multi-select** mode by clicking the **Multi-select** button
-3. Select one or more Folder/Suites or Tests using the checkboxes
-4. Click the **@ Tags** button in the bottom action bar
+1. Go to the **Tests** page.
+2. Enable **Multi-select** mode by clicking the **Multi-select** button.
+3. Select one or more Folder/Suites or Tests using the checkboxes.
+4. Click the **@ Tags** button in the bottom action bar.
 
 ![Tags button](./images/att1_bulk_tag.png)
 
@@ -52,41 +52,81 @@ You can also create tags for multiple Suites or Tests at once using the **Multi-
 
 ![Create new tags link](./images/att3_bulk_tag.png)
 
-6. Enter a new tag name starting with the **@ symbol** and click **Add** button
+6. Enter a new tag name starting with the **@** symbol and click **Add** button
 
 ![New tag is created](./images/att4_bulk_tag.png)
 
 This method allows you to **create** and immediately **apply a new tag** to multiple items in just a few clicks. It helps you save time, speed up routine actions, and maintain consistent tagging across a large number of test cases or suites — without having to open them individually.
 
-## How to Bulk Update Tags
+## How to Bulk Update/Remove Tags
 
 Using the same **Multi-select** feature, you can manage tags for multiple **Folders/Suites** or **Tests** at once — adding or removing tags in bulk.
 
-1. Go to the **Tests** page
-2. Enable **Multi-select** mode by clicking the **Multi-select** button
-3. Select one or more Folder/Suites or Tests using the checkboxes
-4. Click the **@ Tags** button in the bottom action bar
+1. Go to the **Tests** page.
+2. Enable **Multi-select** mode by clicking the **Multi-select** button.
+3. Select one or more Folder/Suites or Tests using the checkboxes.
+4. Click the **@ Tags** button in the bottom action bar.
 
 ![Tags button](./images/att1_bulk_tag.png)
 
 5. In the **Select tags for suites** window, choose the tag(s) you want to manage:
 
-- To assign a tag, search for it and/or select it from the list
-- To remove a tag, search for it and/or select it from the list
+- To assign a tag, search for it and/or select it from the list.
+- To remove a tag, search for it and/or select it from the list.
 
-6. Click **Add** to assign the selected tag(s)
-7. Click **Remove** to delete the selected tag(s)
+6. Click **Add** to assign the selected tag(s).
+7. Click **Remove** to delete the selected tag(s).
 
 ![Add or Remove tags](./images/att2_bulk_tag.png)
 
 This method allows you to efficiently manage tags across multiple items, ensuring consistent organization and saving time.
 
+## Managing Inherited Tags
+
+Tags applied directly at the **Suite** or **Folder** level follow a **'top-down'** rule:, all nested elements (child Suites or Tests) automatically inherit these tags. Because these tags belong to the parent, they cannot be deleted from individual child tests. You can only remove the tags at the same level where they were originally applied.
+
 :::note
-
-When tags are applied at the Suite or Folder level, all nested elements (child Suites or Tests) automatically inherit these tags. However, removing tags from individual nested items is not possible. You can only remove the tags at the same level where they were originally applied.
 Partial removal (e.g., deleting a few tags from a single test inside a tagged Suite) is not supported.
-
 :::
+
+**To 'remove' an inherited tag from a single test, you must follow these steps:**
+
+1. **Remove the tag from the Parent:** 
+- Navigate to the Suite/Folder details page.
+- Click **'Edit'** button (or double-click on suite title).
+- Remove the tag on Suite level. 
+
+![Testomat.io - Remove tags](./images/Remove_suite_tag_1.gif)
+
+This will remove it from all nested items.
+
+2. **Re-apply to specific tests:** If the other tests in that suite still need the tag, you must re-apply it to them **individually** or via **Multi-select**. For multi-select:
+- Enable **Multi-select** mode by clicking the **Multi-select** button.
+- Select one or more Tests using the checkboxes.
+- Click the **@ Tags** button in the bottom action bar.
+- Select tag from the list or create a new one.
+- Click **'Add'** button.
+
+![Testomat.io - Remove tags](./images/Remove_suite_tag_2.gif)
+
+### Bypassing Inheritance: Bulk Tagging at the Test Level
+
+If you want to tag every test in a suite but maintain the flexibility to remove them individually later, apply the tag to the Tests directly rather than the Suite itself:
+
+1. Enable **Multi-select** mode by clicking the **Multi-select** button.
+2. Click **'Select All Tests'** option.
+
+![Testomat.io - Add tags](./images/Add_suite_tag_1.png)
+
+3. Click the **@ Tags** button in the bottom action bar.
+4. Select tag from the list or create a new one.
+5. Click **'Add'** button.
+
+![Testomat.io - Add tags](./images/Add_suite_tag_2.png)
+
+This method ensures the tag exists on the test level, giving you total control to add or remove it from any specific case at any time.
+
+![Testomat.io - Add tags](./images/Add_suite_tag_3.gif)
 
 ## How to Filter by Tags
 
