@@ -161,4 +161,4 @@ A: This message appears when the Jira Plugin cannot access the linked project:
 
 **Q: Why do I get a "Forbidden" message when linking a Jira project?**
 
-A: Your Jira instance may require adding Testomat.io’s IP addresses to the IP allowlist. Please contact your admin for assistance. The Testomat.io IPs are: 142.132.185.19 and 5.75.250.20.
+A: Your Jira instance may require adding Testomat.io’s IP addresses to the IP allowlist. Please contact your admin for assistance. The Testomat.io IPs are: 142.132.185.19, 5.75.250.20 and 88.99.148.154.
