@@ -48,7 +48,7 @@ This is not a trial — there is no expiration date for using Testomat.io as a f
 
 Here is an overview of what is included in the Testomat.io Free plan:
 
-- Read-Only users: **Unlimited**
+- Read-Only users: **Not supported**
 - Test case management
 - Automated tests frameworks support (Codecept.js, Codeception, Wdio, Cucumber, Jest, Cypress, Protractor, Test Cafe)
 - Automated tests reporter (Codecept.js, Cucumber, Wdio, Playwright, Cypress)
