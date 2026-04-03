@@ -90,6 +90,7 @@ Use the feature table below to explore specific capabilities in each area like t
 | Assignments and priorities                                |  ✔️  |      ✔️      |     ✔️     |
 | Test-case parameterization                                |  ✔️  |      ✔️      |     ✔️     |
 | Move, copy, duplicate tests                               |  ✔️  |      ✔️      |     ✔️     |
+| Share tests between projects | ✖️ | ✔️ | ✔️ |
 | Configurable workflows                                    |  ✔️  |      ✔️      |     ✔️     |
 | Advanced filtering, searching, test grouping              |  ✔️  |      ✔️      |     ✔️     |
 | Relaunch manual test run                                  |  ✔️  |      ✔️      |     ✔️     |
