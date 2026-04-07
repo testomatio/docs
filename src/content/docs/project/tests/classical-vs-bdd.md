@@ -139,4 +139,4 @@ The `Given` keyword in **BDD** is a mandatory contract. It forces the author to 
 In a **Classical** project, the editor is passive — it’s essentially a digital notepad. You can write whatever you want, and the system won't complain.
 In **BDD**, the Gherkin Parser acts as a compiler. If you misspell a keyword or fail to follow the `Scenario:` structure, the test is syntactically invalid. This strictness ensures that your test suite is always machine-readable and ready for automation, preventing "junk" documentation from piling up.
 
-While the ***Classical*** project offers the 'freedom to write', the **BDD** project offers the 'structure to scale'. The strictness of BDD is an upfront investment that pays off in lower maintenance and more reliable automation.
+While the **Classical** project offers the 'freedom to write', the **BDD** project offers the 'structure to scale'. The strictness of BDD is an upfront investment that pays off in lower maintenance and more reliable automation.
