@@ -52,16 +52,17 @@ BDD projects are built for collaboration and strict structure. They use **Gherki
 A common question is: **'Can I just add a few Gherkin tests to my Classical project?'** The short answer is **NO**. Testomat.io enforces a strict separation to protect your data integrity and workflow efficiency. Here is why:
 
 1. **Syntax Strictness vs. Flexibility**
+
 Gherkin is a much stricter format than Markdown. In a BDD project, the editor validates your syntax in real-time. If you try to move a flexible Markdown test into a Gherkin suite, the **syntax will break**. BDD requires specific keywords to function; without them, the 'Feature file' becomes unreadable to both the system and the automation parser.
 
 2. **Different Storage Architecture**
+
 In a Classical project, metadata (tags, descriptions) is stored at the **individual test level**. In BDD, the 'truth' lives in the **Feature File**. A suite in BDD is not just a folder; it is a physical `.feature file`. Mixing these would create a 'logical mess' where the system wouldn't know whether to treat a file as a collection of independent tests or a single synchronized document.
 
 3. **Automation Mapping**
+
 BDD automation relies on a 1:1 mapping between a Gherkin step and a function in your code.
-
 **In BDD Projects:** Every step must have a corresponding function (Step Definition) in your code.
-
 **In Classical Projects:** You have the freedom to write descriptive steps that don't necessarily map to code, providing more flexibility for manual testers.
 
 Attempting to support both in one project would lead to inconsistency. You would end up having some tests that require strict code-mapping and others that don't, leading to broken automation reports and confusing 'out-of-sync' notifications.
@@ -124,18 +125,22 @@ And a "Welcome" message should be displayed
 Switching to BDD isn't just a formatting change; it’s a shift toward a more disciplined testing architecture. Here is why the Gherkin format is considered 'stricter' than Classical Markdown:
 
 1. **Atomicity:**
+
 In a **Classical** project, a single step like `Login with valid credentials` is a black box — it’s easy to write but hard to automate efficiently.
 **BDD** forces **Atomicity**. By breaking actions into individual lines (`Given I am on the login page`, `When I enter my email`), you create Reusable Building Blocks. If you have 50 tests that require a login, you only write the code for that 'step' once. In BDD, if a step isn't atomic, it isn't truly reusable.
 
 2. **Resilience to UI Fluctuation (Abstraction):**
+
 **Classical** tests often get bogged down in 'Implementation Noise' — mentioning a `red cancel button` or `the top-right dropdown`. If the UI changes, your documentation is instantly broken, 'outdated'.
 **BDD** encourages **Abstract Logic**. You focus on the intent (e.g.,` When I cancel the transaction`) rather than the mechanics (`Click the red button`). This makes your test suite significantly more resilient to minor frontend updates.
 
 3. **State Management (Explicit Preconditions):**
+
 One of the biggest causes of flaky tests is a missing starting point. **Classical** tests often assume the user is already 'there'.
 The `Given` keyword in **BDD** is a mandatory contract. It forces the author to define the exact state of the system before the action happens. This 'State Management' eliminates the "it works on my machine" excuse by ensuring every runner starts from the same functional baseline.
 
 4. **Syntax Enforcement (The Parser Factor):**
+
 In a **Classical** project, the editor is passive — it’s essentially a digital notepad. You can write whatever you want, and the system won't complain.
 In **BDD**, the Gherkin Parser acts as a compiler. If you misspell a keyword or fail to follow the `Scenario:` structure, the test is syntactically invalid. This strictness ensures that your test suite is always machine-readable and ready for automation, preventing "junk" documentation from piling up.
 
