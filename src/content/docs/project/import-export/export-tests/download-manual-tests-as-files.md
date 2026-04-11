@@ -2,7 +2,7 @@
 title: Download Manual Tests as Files
 description: Learn how to manage manual tests using Git version control by exporting them from Testomat.io as Markdown files. This guide details how to export tests, track changes locally, write and update tests using a code editor, and then seamlessly import changes back into Testomat.io using the CLI. This workflow aligns manual testing with modern DevOps practices, offering full history, branching, and collaborative editing benefits.
 type: article
-url: https://docs.testomat.io/project/import-export/download-tests-as-files/download-manual-tests-as-files
+url: https://docs.testomat.io/project/import-export/export-tests/download-manual-tests-as-files
 head:  
   - tag: meta
     attrs:

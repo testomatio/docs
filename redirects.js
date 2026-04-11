@@ -76,6 +76,8 @@ const redirects = {
     "/project/import-export/import-tests-from-csvxls": "/project/import-export/import/import-tests-from-csvxls",
     "/project/import-export/import-bdd": "/project/import-export/import/import-bdd",
     "/project/import-export/export-tests": "/project/import-export/export-tests/export-to-spreadsheet",
+    "/project/import-export/download-tests-as-files": "/project/import-export/export-tests/download-manual-tests-as-files",
+    "/project/import-export/download-tests-as-files/download-manual-tests-as-files": "/project/import-export/export-tests/download-manual-tests-as-files",
     // reporter
     "/project/runs/reporter/api": "/test-reporting/api",
     "/project/runs/reporter/debug-file-format": "/test-reporting/debug-file-format",
