@@ -294,7 +294,7 @@ However, if there are multiple suites with word User in their title, **only the 
 
 ## Dates
 
-When you deal with date variables like `created_at`, `run_at`, and others you can set absolute date in `YYYY-MM-DD` format or use functions like `days_ago`, `weeks_ago`, `months_ago` to specify a date from now.
+When you deal with date variables like `created_at`, `last_run_at`, and others you can set absolute date in `YYYY-MM-DD` format or use functions like `days_ago`, `weeks_ago`, `months_ago` to specify a date from now.
 
 Examples:
 
