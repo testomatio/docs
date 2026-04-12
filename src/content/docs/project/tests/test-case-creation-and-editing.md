@@ -192,7 +192,28 @@ OR
 
 5. Confirm action and Save changes.
 
-## How to add a label/tag to a test
+:::note
+
+All deleted Attachments are stored for 30 days before being permanently deleted.
+
+:::
+
+## How to Restore Deleted Attachment
+
+Before the attachment is permanently deleted from the store, you can restore it. To do that:
+
+1. Open test case (or suite case) with deleted attachments you want to restore.
+2. Open **'Attachments'** tab.
+3. Click **'Restore'** button.
+
+![Testomat.io - Restore Deleted Attachment](./images/Restore_attachment_1.png)
+
+4. Click on a single attachment to restore it.
+5. Click **'Restore All'** button to restore all attachments with one click.
+
+![Testomat.io - Restore Deleted Attachment](./images/Restore_attachment_2.png)
+
+## How to Add a Label/Tag to a Test
 
 This option is the easiest one! You simply need to add the label's name (preceeded by @ char) in the name field of the test. The drop-down list of tags already used in projects appears, when you type the @ symbol.
 
@@ -202,7 +223,7 @@ And now you can see your label/tag in the test list next to the test's title.
 
 ![See the test with tag](./images/2023-08-03_01.01.17@2x.png)
 
-## How to assign a test to a user
+## How to Assign a Test to a User
 
 If you want to assign a certain test to a certain user, you should click on this user icon in the upper right corner of the window, as shown in the picture.
 

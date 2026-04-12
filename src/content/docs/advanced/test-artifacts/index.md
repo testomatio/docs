@@ -42,6 +42,8 @@ Go to [How to Delete Attachment from Test Case](https://docs.testomat.io/project
 
 You can delete attachments from Suite, Folder and Readme section in the same way you would from a Test Case.
 
+All deleted Attachments are stored for 30 days before being permanently deleted.
+
 :::
 
 ## Add Test Arfifacts During Manual Testing
