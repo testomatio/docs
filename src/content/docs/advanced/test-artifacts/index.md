@@ -42,6 +42,16 @@ Go to [How to Delete Attachment from Test Case](https://docs.testomat.io/project
 
 You can delete attachments from Suite, Folder and Readme section in the same way you would from a Test Case.
 
+:::
+
+## Restore Attachments
+
+Before the attachment is permanently deleted from the store, you can restore it. 
+
+Go to [How to Restore Deleted Attachment](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#how-to-restore-deleted-attachment) section to read more about this feature.
+
+:::note
+
 All deleted Attachments are stored for 30 days before being permanently deleted.
 
 :::
