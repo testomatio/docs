@@ -23,9 +23,9 @@ Tags, Labels & Custom Fields can help users to streamline their testing process,
 While both **Tags** and **Labels** help organize and categorize your tests, they serve slightly different purposes and excel in different situations. Understanding these differences can help you make the most of them.
 
 **Tags** are typically used to assign a specific keyword or category to test cases, making it easier to group, filter, or search for related tests. They are often used for ad-hoc categorization and usually have no strict hierarchy. 
-For example, Tags can represent various attributes, such as the type of test (for ex., @Regression, @Smoke, @E2E), associated features, or testing phases.
+For example, Tags can represent various attributes, such as the type of test (for ex., `@Regression`, `@Smoke`, `@E2E`), associated features, or testing phases.
 
-In automation testing, a **Tag** is a segment of extra metadata that you can include on an individual test case or a group of tests. These tags are directly embedded in the test code, and allows you to specify additional information for your tests, which you can use to enhance your test runs. The testing tool will execute only tests containing that piece of information, as almost all modern testing tools and frameworks have integrated support for running a subset of tests, using tags. For example, execute all tests tagged as @Regression but skip @Smoke tests.
+In automation testing, a **Tag** is a segment of extra metadata that you can include on an individual test case or a group of tests. These tags are directly embedded in the test code, and allows you to specify additional information for your tests, which you can use to enhance your test runs. The testing tool will execute only tests containing that piece of information, as almost all modern testing tools and frameworks have integrated support for running a subset of tests, using tags. For example, execute all tests tagged as `@Regression` but skip `@Smoke` tests.
 
 ![Testomatio - Tag in BDD](./images/Tags_in_BDD.png)
 
@@ -55,5 +55,40 @@ By understanding their strengths, you can leverage both Tags and Labels effectiv
 Learn how to create and assign **Tags** in Testomat.io to organize your test cases and suites on the [Tags](https://docs.testomat.io/advanced/tags-labels/tags) page.
 
 Learn how to use **Labels** and **Custom Fields** in Testomat.io to organize and categorize tests, suites, runs, plans, and steps on the [Labels and Custom Fields](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields) page.
+
+:::
+
+## Tags vs. Labels: Inheritance and Management
+
+To effectively organize your testing workspace, it is crucial to understand how **Tags** and **Labels** behave. Both follow a top-down inheritance model, meaning their configuration at the Suite level directly impacts the individual tests within that suite.
+
+### Inheritance Logic
+
+Both **Tags** (`@tag`) and **Labels** (`Key:Value pairs`) utilize the same inheritance behavior in Testomat.io:
+
+- **'Top-Down' Propagation:** Any Tag or Label applied to a Suite is automatically inherited by every test inside that suite.
+
+- **Management Constraint:** If you attempt to remove a tag or label from an individual test and it persists after saving, it is likely assigned to the **Parent Suite**. As long as the suite holds a specific tag/label, the test will inherit it. To remove it from the test, you must remove it from the suite level.
+
+:::note
+
+**Best Practice:** Only assign Tags and Labels at the Suite level if they are universal to every test in that folder. For more granular control, apply them directly to tests using the multi-select tool to avoid inheritance conflicts.
+
+:::
+
+### How to Properly Remove Inherited Attributes
+
+If a **Tag** or **Label** is assigned at the Suite level but should not apply to one specific test, follow this workflow:
+
+1. **Remove from Suite:** Navigate to the Suite settings and delete the Tag or Label. This will remove it from all tests in that folder.
+
+2. **Re-apply via Bulk Management:** Enable Multi-select mode in your project.
+
+- Select all tests that should have the attribute (excluding the one you want to keep clean).
+- Use the **'bulk action menu'** to add the Tag or Label back to the selected group.
+
+:::note
+
+Visit [Managing Inherited Tags](https://docs.testomat.io/advanced/tags-labels/tags/#managing-inherited-tags) section for more information.
 
 :::
