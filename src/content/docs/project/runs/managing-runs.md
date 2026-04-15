@@ -181,7 +181,7 @@ In this case, your Test Run will open in Manual Run window, allowing you to manu
 ### Advanced Relaunch
 
 The **'Advanced Relaunch'** option offers more flexibility when relaunching tests.
-It allows you to select specific tests to relaunch, instead of repeating the full test run. This enables more targeted, efficient workflows — whether you’re rerunning failed tests or just need to retest a subset of scenarios.
+It allows you to select specific tests to relaunch, instead of repeating the full run. This enables more targeted, efficient workflows — whether you’re rerunning failed tests or just need to retest a subset of scenarios.
 
 **'Advanced Relaunch'** option is available for all types of test runs.
 
@@ -201,29 +201,56 @@ In the opened sidebar window, configure your relaunch (optional):
 
 ![Testomat.io - relaunched Run](./images/Advanced_Relaunch_2.png)
 
+#### Create New Run
+
+The **'Create new run'** checkbox controls whether the relaunch creates a separate copy or updates the original run.
+
+|                                   | **Create new run ON**                                                                                            | **Create new run OFF**                                                                                        |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Run ID**                        | A new run is created with a new ID. The original run remains unchanged.                                          | The original run is reused — same run ID.                                                                     |
+| **Selected tests**                | Only selected tests are included in the new run and reset to Pending status (unless **Keep values** is enabled). | All tests are included with their current statuses kept. Only selected tests are reset to **Pending** status. |
+| **Unselected tests / Select all** | All tests are reset to Pending status in the new run (unless **Keep values** is enabled).                        | All tests retain their existing results.                                                                      |
+
 :::note
 
-Only selected test cases will be relaunched for manual re-check or automatically re-run on CI.
+When re-running tests, selecting **Select all** or leaving no tests selected produces the same result: all tests in the run are included automatically.
 
 :::
 
-If you have many test cases and need to select all of them or only failed ones, you don't have to do it manually. You can use the **'Select'** feature.
+#### Keep Values
 
-**There are two options of how you can select all tests, depending on your needs:**
+The **'Keep values'** option is only available when **'Create new run'** is enabled. It controls whether test results are carried over into the new run.
 
-1. Use **'Checkbox Select'** option by simply clicking on checkbox. This is useful if you want to select a group of tests (like all filtered failed tests) and then manually unselect or add more. With this option, you can easialy edit your selection.
+|                      | **Keep values ON**                                              | **Keep values OFF**                  |
+| -------------------- | --------------------------------------------------------------- | ------------------------------------ |
+| **Selected tests**   | Results are preserved in the new run (Passed, Failed, Pending). | Results are reset to Pending status. |
+| **Unselected tests** | Results are preserved in the new run.                           | Results are reset to Pending status. |
 
-![Testomat.io - relaunched Run](./images/Advanced_Relaunch_3.gif)
+#### Select All Tests
 
-2. Use the **'Select All'** option from the **'Select'** dropdown. This is a quick way to select all currently displayed test cases. With this option, you cannot manually add or remove tests from the selection. If you change the filtering, the selection will automatically update to include only the currently displayed tests. Use the **'None'** option to unselect all tests.
+There are two ways to select all tests for relaunch — the top-level **Checkbox** and the **Select All** option from the dropdown.
 
-![Testomat.io - relaunched Run](./images/Advanced_Relaunch_4.gif)
+|                                       | **Checkbox** (top-level)                                                                                     | **Select All** (dropdown)                                                                 |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | --- |
+| **No filter applied**                 | Selects all tests in the run — passed, failed, and skipped.                                                  | Selects all tests in the run — passed, failed, and skipped.                               |
+| **Filter applied (e.g. failed only)** | Selects only tests matching the active filter. Tests outside the filter are not included.                    | Selects only tests matching the active filter. Tests outside the filter are not included. |
+| **Switch to another filter**          | The previous checkbox selection is cleared only when tests are selected in the new filter.                   | Selection updates automatically to the new filter. Previous selection is cleared.         |
+| **Add individual tests manually**     | Individual tests from other statuses can be added manually. All selected tests are included in the relaunch. | Individual tests cannot be added or removed manually.                                     |
+| **Clear selection**                   | Uncheck the checkbox.                                                                                        | Use **'None'** from the dropdown.                                                         |     |
+
+![Select tests](./images/gif1_691.gif)
+
+:::note
+
+When using the Checkbox, only the tests that are loaded on the page are selected — scroll through the full list first to ensure all tests are included.
+
+:::
 
 **Key benefits of Advanced Relaunch:**
 
-- Customize relaunches to better fit your team's workflow.
-- Simplify recovery after CI failures or flaky test results.
-- Avoid redundant test executions and manual reconfiguration.
+- Customize relaunches to better fit your team's workflow
+- Simplify recovery after CI failures or flaky test results
+- Avoid redundant test executions and manual reconfiguration
 
 ## How to Launch a Run Copy
 
@@ -379,11 +406,10 @@ Pulse displays different activity messages depending on how the Run was removed:
 
 1. **Automatic purge**  
    When a Run is purged automatically by the system due to expiration, Pulse records an entry similar to:  
-   *“Manual tests at 20 Nov 2025 11:56 have been purged by system on expiration (moved to Archive).”*
+   _“Manual tests at 20 Nov 2025 11:56 have been purged by system on expiration (moved to Archive).”_
 2. **User-initiated purge**  
    When a Run is purged manually, Pulse records the event:  
-   *“Manual run has been purged by user (moved to Archive).”*
-
+   _“Manual run has been purged by user (moved to Archive).”_
 
 3. **Permanent deletion from Archive**  
    When a Run is permanently removed from the Archive, Pulse displays the event indicating that the manual run has been permanently deleted.
@@ -391,7 +417,6 @@ Pulse displays different activity messages depending on how the Run was removed:
    ![Runs Activity Tracked in Pulse](./images/Run_purging_in_pulse.png)
 
 These Pulse records provide a clear audit trail for all purge-related actions, mirroring the two-step deletion flow and ensuring accountability across both manual and automated processes.
-
 
 ### Summary
 
