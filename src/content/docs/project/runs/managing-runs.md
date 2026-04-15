@@ -230,13 +230,13 @@ The **'Keep values'** option is only available when **'Create new run'** is enab
 
 There are two ways to select all tests for relaunch — the top-level **Checkbox** and the **Select All** option from the dropdown.
 
-|                                       | **Checkbox** (top-level)                                                                                     | **Select All** (dropdown)                                                                 |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | --- |
+| **Scenario**                          | **Checkbox** (top-level)                                                                                     | **Select All** (dropdown)                                                                 |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | **No filter applied**                 | Selects all tests in the run — passed, failed, and skipped.                                                  | Selects all tests in the run — passed, failed, and skipped.                               |
 | **Filter applied (e.g. failed only)** | Selects only tests matching the active filter. Tests outside the filter are not included.                    | Selects only tests matching the active filter. Tests outside the filter are not included. |
 | **Switch to another filter**          | The previous checkbox selection is cleared only when tests are selected in the new filter.                   | Selection updates automatically to the new filter. Previous selection is cleared.         |
 | **Add individual tests manually**     | Individual tests from other statuses can be added manually. All selected tests are included in the relaunch. | Individual tests cannot be added or removed manually.                                     |
-| **Clear selection**                   | Uncheck the checkbox.                                                                                        | Use **'None'** from the dropdown.                                                         |     |
+| **Clear selection**                   | Uncheck the checkbox.                                                                                        | Use **'None'** from the dropdown.                                                         |
 
 ![Select tests](./images/gif1_691.gif)
 
