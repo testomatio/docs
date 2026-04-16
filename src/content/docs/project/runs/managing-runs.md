@@ -31,17 +31,23 @@ You can create test cases directly within a test Run, avoiding additional naviga
 
 1. Go to the **'Runs'** page.
 2. Start the desired test run.
-3. Scroll to the bottom of the test suite.
-4. Click the **'Create test'** button.
+3. Click the **'Add test to suite'** button.
 
-![Testomat.io - Create test case](./images/Create_Test_button.png)
+![Testomat.io - Create test case](./images/Create_Test_button_1.png)
 
-5. Enter the test case details in the provided field.
-6. Click the checkmark **✔️** icon to add the new test case, or the **X** icon to discard it.
+4. Enter the test case title in the **'Test Title'** field on **'Create manual test in suite'** window.
+5. Click **'Add description'** button if you want to add more details to a test case.
+6. Click **'Save test'** button to add the new test case.
+
+OR
+
+7. Click the **'Cancel'** button to discard it.
+
+![Testomat.io - Create test case](./images/Create_Test_button_2.png)
 
 :::note
 
-The **'Create Test'** button can be hidden via the **'Hide Test Creation'** option in the **'Extra menu'** dropdown menu.
+The **'Add test to suite'** button can be hidden via the **'Hide Creation Buttons'** option in the **'Extra menu'** dropdown menu.
 
 ![Testomat.io - Create test case](./images/Hide_test_creatio.png)
 
@@ -52,6 +58,18 @@ The **'Create Test'** button can be hidden via the **'Hide Test Creation'** opti
 - **Identifying gaps in test coverage during execution:** While performing manual testing, a tester discovers an untested scenario. They can instantly add it to the run and repository without switching context.
 - **Capturing exploratory test cases:** Testers conducting exploratory testing can log and formalize new test cases as they go, ensuring useful insights are not lost.
 - **Collaborative test planning in real time:** During team sessions or test reviews, testers can collectively identify and add new tests based on discussion or observed issues.
+
+## Tags and Labels on Manual Run Page
+
+On Manual Run page you can enable/disable the view of tags and labels for your test. To do that, follow next steps:
+
+1. Go to the **'Runs'** page.
+2. Start the desired test run.
+3. Click the **'Extra menu'** button.
+4. Select desired option for labels 'Show/hide Labels'.
+5.  Select desired option for tags 'Show/hide Tags'.
+
+![Testomat.io - Show/hide tags & labels](./images/show_hide_labels.png)
 
 ## Test Case History
 
