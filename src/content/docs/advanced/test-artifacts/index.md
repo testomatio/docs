@@ -44,6 +44,18 @@ You can delete attachments from Suite, Folder and Readme section in the same way
 
 :::
 
+## Restore Attachments
+
+Before the attachment is permanently deleted from the store, you can restore it. 
+
+Go to [How to Restore Deleted Attachment](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#how-to-restore-deleted-attachment) section to read more about this feature.
+
+:::note
+
+All deleted Attachments are stored for 30 days before being permanently deleted.
+
+:::
+
 ## Add Test Arfifacts During Manual Testing
 
 Attaching a short video or screenshots is highly useful for manual testing, especially for failing tests. These artifacts provide comprehensive information, making it easier for the QA tester to understand what went wrong.
