@@ -15,17 +15,17 @@ head:
       content: Testomat.io, query language, TQL, test filtering, test management, test queries, variables, priority filter, tag filter, automation, QA tools, testing efficiency
 ---
 
-TQL or **Testomat.io Query Language** is a flexible way to filter tests data inside Testomat.io. Query Language provides basic selection operators like **and**, **or** and **not** and braces to prioritize selection.
+TQL or **Testomat.io Query Language** is a flexible way to filter tests data inside Testomat.io. Query Language provides basic selection operators like **and**, **or** and **not** and **braces** to prioritize selection.
 
 ## Writing Queries
 
 To access Query Language Editor click on the button right to search field on Tests screen:
 
-![TQL Access](./images/image-9.png)
+![TQL Access](./images/tql_in_1.png)
 
 This will open an extended TQL editor which allows to write queries in a dedicated interface with some hints provided:
 
-![Alt text](./images/image-10.png)
+![TQL Access](./images/tql_in_2.png)
 
 :::note
 
@@ -91,13 +91,67 @@ tag == 'A' <- will work
 
 ### Multiple values
 
-It may be necessary to find multiple values associated with a single variable. Fortunately, TQL provides a straightforward solution. The following syntax can be used to achieve this:
+It may be necessary to find multiple values associated with a single variable. Fortunately, TQL provides a straightforward solution.
 
-```
-jira in ['LMP-100', 'LMP-104', 'LMP-144', 'LMP-214', 'LMP-219']
-```
+The `in` operator in Testomat.io Query Language (TQL) is a powerful tool designed to simplify complex filtering. Instead of chaining multiple `or` conditions, you can use `in` to check if a field's value matches any item in a specified list. This makes your queries significantly more readable and maintainable.
 
-![Testomat.io - TQL Multiple values](./images/New_mYtOus61_2024-10-14.png)
+**The Syntax**
+The basic structure requires the variable name followed by the `in` operator and a comma-separated list of values wrapped in square brackets `[]` and single quotes `'`.
+
+- **Brackets:** Use square brackets `[]` to define the list of values.
+- **Quotes:** Always wrap string values in single quotes `'value'`.
+- **Equality:** When filtering for a single value alongside an `in` operator (complex examples added below), always use `==` for equality.
+- **Variable Names:** Ensure you use the correct system names (e.g., `created_by` instead of `created`, `state` for automation status).
+- **Case Sensitivity:** TQL typically respects the case of your tags and labels, so ensure they match your project settings.
+
+![Testomat.io - TQL Multiple values](./images/tql_in_3.png)
+
+#### Examples
+
+```ruby
+# list tests with smoke, regression, or sanity tags
+tag in ['smoke', 'regression', 'sanity']
+
+# filter tests by specific high priority levels
+priority in ['critical', 'important']
+
+# find tests that resulted in failed, skipped, or passed status
+status in ['failed', 'skipped', 'passed']
+
+# filter tests belonging to specific functional suites
+suite in ['Payments', 'Checkout', 'Cart']
+
+# list tests linked to a specific set of Jira issues
+jira in ['JST-1', 'JST-2', 'JST-3']
+
+# filter tests by multiple custom labels or severity levels
+label in ['Severity:🔥Critical', 'Automatable', 'Post-Deploy']
+```
+**Advanced Combinations**
+
+The `in` operator becomes even more effective when combined with other TQL operators like `and` or `not`.
+
+```ruby
+# Negative Filtering: list all sanity tests that are NOT assigned to specific team members
+tag == 'sanity' and not assigned_to in ['John Doe', 'Jane Smith']
+
+# Complex Scoping: select automated tests in specific modules with critical priority
+state == 'automated' and suite in ['API', 'Database'] and priority == 'critical'
+
+# combined: find recent updates made by specific owners
+created_by in ['Les Kurbas', 'Olena Pchilka'] and updated_at >= 1.week_ago
+```
+:::note
+
+Using `in` is much more efficient than using multiple `or` statements. For instance:
+
+**Inefficient:** `tag = 'v1' or tag = 'v2' or tag = 'v3'`
+
+**TQL Standard:** `tag in ('v1', 'v2', 'v3')`
+
+By using the `in` operator, you reduce the risk of syntax errors (like missing a variable name in a long `or` chain) and make the query much easier for other team members to understand at a glance.
+
+:::
 
 ## Tests Variables
 
@@ -162,7 +216,6 @@ last_run_at == today()
 
 # tests executed in July 2025 with failed status
 executed_at >= '2025-07-01' and executed_at <= '2025-07-31' and status == 'failed'
-
 ```
 
 ## Runs Variables
