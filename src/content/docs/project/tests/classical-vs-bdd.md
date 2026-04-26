@@ -69,19 +69,41 @@ Attempting to support both in one project would lead to inconsistency. You would
 
 ## Moving Between Project Types
 
-Because of the strictness of Gherkin, there is **no straightforward 'one-click' conversion** from Classical to BDD.
+Because of the strictness of Gherkin, there has traditionally been no "one-click" way to turn a flexible Markdown test into a rigid BDD scenario. However, with the integration of **AI-feature** within Testomat.io, you now have three distinct paths depending on your timeline and automation goals:
 
-- **Classical → BDD:** Requires rewriting tests entirely to fit the Gherkin format and ensuring each step is reusable.
+**Option 1: AI-Powered Migration (Usign the 'Transform Project to BDD' AI-Agent)**
 
-- **BDD → Classical:** Currently not supported as a direct migration due to the risk of losing the structured Feature file history.
+If you want to move your entire workspace to a BDD framework without the manual overhead, you can use the **'Transform Project to BDD'** feature. This AI-powered agent automatically analyzes your existing Classical tests and generates a new, structured BDD environment.
 
-If you have manual tests in a Classical project but want to automate them using a BDD-like style, we recommend looking at **CodeceptJS**.
+- **How it works:** The AI rewrites your test steps into a valid `Given/When/Then` Gherkin syntax and generates a **completely new BDD project** containing the converted suite.
 
-Instead of rewriting everything into Gherkin (which requires a full project restart), **CodeceptJS** allows you to write 'Human-Readable' code (e.g., `I.click('Login')`) that fits perfectly into **Classical projects** while remaining easy for non-technical stakeholders to follow. This gives you the descriptiveness of BDD without the strict overhead and formatting limitations of Gherkin.
+- **Why use it:** It eliminates manual rewriting, standardizes test styles across the team, and makes your tests "automation-ready" in seconds.
+
+- **Key Benefit:** It bridges the gap between descriptive manual steps and strict BDD requirements automatically.
 
 :::note
 
-If you are committed to a full BDD workflow, you must create a new BDD project and recreate your scenarios to ensure the Gherkin structure is preserved from day one.
+Read more about Testomat.io **'Transform Project to BDD'** and other AI-agents on a separate [AI-Agents](https://docs.testomat.io/advanced/ai-powered-features/ai-agents/) page.
+
+:::
+
+**Option 2: Manual Refactoring**
+
+For teams that want granular control or have highly complex logic that requires human nuance, manual refactoring remains the standard.
+
+- **Classical → BDD:** You must create a new BDD project and manually rewrite tests to ensure each step follows Gherkin rules and is built for reusability.
+
+- **BDD → Classical:** Currently, this direction is not supported as a direct migration due to the risk of losing the structured Feature file history and metadata.
+
+**Option 3: The Hybrid Alternative (CodeceptJS)**
+
+If you aren't ready to commit to the strict overhead of Gherkin but want BDD-style readability, we recommend **CodeceptJS**. Instead of a full project migration, you stay in your Classical project and write code that looks like BDD. This allows you to write 'Human-Readable' code (e.g., `I.click('Login')`) that fits perfectly into Classical projects while remaining easy for non-technical stakeholders to follow.
+
+This gives you the descriptiveness of BDD without the strict overhead and formatting limitations of Gherkin.
+
+:::note
+
+Regardless of the method chosen, remember that BDD is a **'Behavioral Contract'**. Whether you use the AI or rewrite manually, ensure your team is prepared to map these new steps to corresponding functions in your automation code.
 
 :::
 
