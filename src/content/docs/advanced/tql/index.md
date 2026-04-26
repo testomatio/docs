@@ -125,7 +125,7 @@ suite in ['Payments', 'Checkout', 'Cart']
 jira in ['JST-1', 'JST-2', 'JST-3']
 
 # filter tests by multiple custom labels or severity levels
-label in ['Severity:🔥Critical', 'Automatable', 'Post-Deploy']
+label in ['Severity:⚠️ Critical', 'Automatable', 'Post-Deploy']
 ```
 **Advanced Combinations**
 
