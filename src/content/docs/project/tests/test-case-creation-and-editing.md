@@ -262,8 +262,9 @@ Testomat.io supports the following priority levels:
 
 - **Low** – low-importance test
 - **Normal** – default priority
-- **High** – high importance test
-- **Important** – critical/blocker test
+- **High** – high-importance test
+- **Important** – important test
+- **Critical** - critical/blocker test
 
 Each priority level has a dedicated icon to make test importance easily recognizable across the interface.
 
