@@ -121,7 +121,7 @@ When you enable reporing for tests running in parallel, you might end with multi
 
 In this case multiple independent launches will report data to the report matched by the same Run title.
 
-<img src="./images/image-12.png"  width="66%"/>
+![Shared run strategy](./images/image-12.png)
 
 Pick the unique name for this run and use `TESTOMATIO_SHARED_RUN=1` environement variable to enable shared report:
 
@@ -155,7 +155,7 @@ npx @testomatio/reporter run "<actual run command>"
 
 Under hood `@testomatio/reporter run` creates a new empty run and passes its ID as environment variable into all spawned processes. So no matter how many parallel processes are started they will report to the single Run report.
 
-<img src="./images/image-10.png"  width="66%"/>
+![Reporter run strategy](./images/image-10.png)
 
 However, this might not work in all cases.
 
@@ -165,7 +165,7 @@ However, this might not work in all cases.
 
 In this case you create a run, receive its ID and manually close it after all runs are finished.
 
-<img src="./images/image-9.png"  width="66%"/>
+![Manual run strategy](./images/image-9.png)
 
 Create a run via `@testomatio/reporter start`:
 
@@ -191,7 +191,7 @@ If you have a complex pipeline, you can start Run on the stage #1, execute tests
 
 Sometimes, during test automation, unexpected issues may arise, or a test can be stopped for various reasons.
 
-<img src="./images/terminated-test-run.png"  width="75%"/>
+![Terminated test run](./images/terminated-test-run.png)
 
 For example, during the execution of the problematic test case, the some gateway becomes unresponsive due to a server issue. This issue was unforeseen and not within the control of the testing team. Testomat.io detects the problem and initiates a termination of the problematic test case. The custom timeout you defined (min 30 minutes) comes into play. If the test case does not complete within this time frame, it is terminated automatically.
 
