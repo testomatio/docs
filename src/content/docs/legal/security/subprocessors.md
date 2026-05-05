@@ -33,44 +33,44 @@ Testomat.io uses the following subprocessor for hosting customer data and provid
 
 Also we use the following subprocessors to perform other service functions for different kinds of help, like customer support and payment processing:
 
-- **Cloudflare:** Traffic management. 
-  - Location: USA. 
+- **Cloudflare:** Traffic management
+  - Location: USA
   - Security: https://www.cloudflare.com/trust-hub/
-- **Crisp:** Customer support. 
-  - Location: France. 
+- **Crisp:** Customer support
+  - Location: France
   - Security: https://help.crisp.chat/en/category/legal-security-1t29poq/
-- **GitHub:** Issue management. 
-  - Location: USA. 
+- **GitHub:** Issue management
+  - Location: USA
   - Security: https://github.com/security
-- **Pipedrive:** Customer support. 
-  - Location: Estonia. 
+- **Pipedrive:** Customer support
+  - Location: Estonia
   - Security: https://www.pipedrive.com/en/trust-center
-- **Slack:** Customer support. 
-  - Location: USA. 
+- **Slack:** Customer support
+  - Location: USA
   - Security: https://slack.com/trust/security
-- **Calendly:** Planning online meetings. 
-  - Location: USA. 
+- **Calendly:** Planning online meetings
+  - Location: USA
   - Security: https://calendly.com/security
-- **Stripe:** Payments services. 
-  - Location: USA. 
+- **Stripe:** Payments services
+  - Location: USA
   - Security: https://stripe.com/en-pl/legal/privacy-center
-- **SendPulse:** Email and marketing activities. 
-  - Location: EU. 
+- **SendPulse:** Email and marketing activities
+  - Location: EU
   - Security: https://sendpulse.com/legal/security
-- **SendGrid:** Email delivery. 
-  - Location: USA. 
+- **SendGrid:** Email delivery
+  - Location: USA
   - Security: https://sendgrid.com/en-us/policies/security. 
-- **AppSignal:** Logs and monitoring. 
-  - Location: Germany. 
+- **AppSignal:** Logs and monitoring
+  - Location: Germany
   - Security: https://www.appsignal.com/security
-- **Groq:** AI LLM. 
-  - Location: USA. 
+- **Groq:** AI LLM
+  - Location: USA
   - Security: https://trust.groq.com/
-- **OpenRouter:** AI (LLM routing).
-  - Location: USA.
+- **OpenRouter:** AI (LLM routing
+  - Location: US
   - Security: https://trust.openrouter.a
-- **Cohere:** AI embeddings. 
-  - Location: USA. 
+- **Cohere:** AI embeddings
+  - Location: USA
   - Security: https://trustcenter.cohere.com
 
 Before Testomat.io decides to use another company or service, we check if the company is safe, secure, and can keep information private.
