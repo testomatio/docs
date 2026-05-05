@@ -68,7 +68,7 @@ Also we use the following subprocessors to perform other service functions for d
   - Security: https://trust.groq.com/
 - **OpenRouter:** AI (LLM routing
   - Location: US
-  - Security: https://trust.openrouter.a
+  - Security: https://trust.openrouter.ai
 - **Cohere:** AI embeddings
   - Location: USA
   - Security: https://trustcenter.cohere.com
