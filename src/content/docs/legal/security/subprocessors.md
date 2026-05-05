@@ -1,13 +1,13 @@
 ---
 title: Subprocessors
-description: Testomat.io uses subprocessors like DigitalOcean for cloud infrastructure, along with other service providers for customer support, payment processing, and email management. Each subprocessor is vetted for security and privacy before being integrated. Key subprocessors include Crisp, GitHub, Stripe, and Sendgrid, which help in various operational areas such as support, issue management, and payments.
+description: Testomat.io uses subprocessors including DigitalOcean, Hetzner, and Google Cloud for core infrastructure and data storage, Cloudflare for traffic management, and a range of providers for customer support, payment processing, email delivery, monitoring, and AI services. Each subprocessor is vetted for security and privacy before integration. Key subprocessors include Crisp, Pipedrive, Slack, GitHub, Calendly, Stripe, SendGrid, SendPulse, AppSignal, Groq, OpenRouter, and Cohere.
 type: article
 url: https://docs.testomat.io/legal/security/subprocessors
 head:
   - tag: meta
     attrs:
       name: keywords
-      content: Subprocessors, Testomat.io, DigitalOcean, cloud infrastructure, customer support, GitHub, Stripe, payment processing, security, privacy, email management
+      content: Subprocessors, Testomat.io, DigitalOcean, Hetzner, Google Cloud, Cloudflare, cloud infrastructure, data storage, traffic management, customer support, Crisp, Pipedrive, Slack, GitHub, issue management, Calendly, scheduling, Stripe, payment processing, SendGrid, SendPulse, email delivery, AppSignal, monitoring, Groq, OpenRouter, Cohere, AI services, security, privacy, GDPR, DPA
 ---
 
 Testomat.io may use various subprocessors to deliver high-quality services and maintain its operational efficiency. 
