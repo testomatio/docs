@@ -17,12 +17,18 @@ Some of your company members such as managers, BA, or other stakeholders may nee
 
 ### Invite Read-Only User to a Company
 
-1. Click on 'Invite' button from Company page.
-2. Enter valid user's email.
-3. Select 'Read Only Mode' option.
-4. Click 'Invite' button.
+1. Navigate to the 'Invite users' from Company page
+2. Enter valid user's email (use comma to enter multiple emails)
+3. Select 'Read-only' option
+4. Click 'Invite' button
 
-![Testomat.io - Read-Only](./images/Read_only_n.png)
+![Testomat.io - Read-Only](./images/att1.png)
+
+:::note
+
+By default, Read-only users are invited with a **QA role**.
+
+:::
 
 ### Make a Company Member Read-Only
 
@@ -33,8 +39,8 @@ Some of your company members such as managers, BA, or other stakeholders may nee
 
 ### Make the Read-Only Users a Member
 
-1. Click on 'Actions' button for selected Read-Only user from Company page.
-2. Click on 'Grant Write Access' option from the dropdown menu.
+1. Click on 'Actions' button for selected Read-Only user from Company page
+2. Click on 'Grant Write Access' option from the dropdown menu
 
 ![Testomat.io - Read-Only](./images/Read_only_3n.png)
 
