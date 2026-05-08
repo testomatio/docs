@@ -202,8 +202,9 @@ This feature is available only for users with **Owner** and **Manager** roles wi
 
 :::
 
-**Company Statistics feature includes three insightful widgets:**
+**Company Statistics feature includes insightful widgets:**
 
+- **Usage Statistics** Provides monthly usage overview: test cases, reported tests, API requests, and AI usage across all projects.
 - **Data Statistics:** Tracks model activity such as Tests, Plans, Suites, Runs, Imports, and Test Runs. Displays created, updated, and deleted counts per project for complete visibility of repository changes.
 - **User Activity:** Shows detailed insights into user behavior, including logins, actions performed on tests and other models, and manual test run activity across the organization.
 - **AI Usage:** Monitors AI prompt utilization, displaying success rates, the number of active users, and usage distribution by prompt type across all projects.
