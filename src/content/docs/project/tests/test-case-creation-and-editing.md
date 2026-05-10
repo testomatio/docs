@@ -164,11 +164,46 @@ After saving the changes in the edit mode, you will see a preview of the drawing
 
 ![Testomatio.io - Draw Preview](./images/New_1hpi4Xy4_2024-10-07.png)
 
+## How to Preview Attachments
+
+Testomat.io provides a built-in previewer that allows you to check files directly in your browser, without the need of downloading them just to check their contents.
+
+1. On **'Tests'** page open Test Case (Suite/Folder).
+2. Go to **'Attachments'** tab.
+3. Click on any attachment to open the preview window.
+4. Adjust your view: Click the **'Fit to width/height'** or **'Full screen'** buttons to optimize the display.
+
+![Testomatio.io - Attachments Preview](./images/Preview_attach_1.gif)
+
+4. Use keyboard combinations to navigate between attached files.
+
+![Testomatio.io - Attachments Preview](./images/Preview_attach_2.png)
+
+**Supported Preview Formats:**
+
+In addition to standard image files, you can preview the following types:
+
+- **Code & Data:** `.json`, `.xml`, `.html`, `.sql`, `.js`, `.py`, `.java`, `.svg`
+
+- **Logs & Text:** `.txt`, `.log`, `.properties`, `.csv`
+
+- **Scripts:** `.bat`, `.sh`
+
+- **Documents:** `.pdf`
+
+![Testomatio.io - Attachments Preview](./images/Preview_attach_3.gif)
+
+:::note
+
+If a file type is not supported for preview, the system will prompt you to download it to view it locally.
+
+:::
+
 ## How to Delete Attachment from Test Case
 
 Save time by quickly deleting unnecessary attachments, ensuring your test cases remain relevant and clutter-free. To delete attachment:
 
-1. On 'Tests' page open Test Case.
+1. On **'Tests'** page open Test Case.
 2. Click **'Attachments'** tab.
 3. Click **'Delete'** icon on the attachment you want to delete.
 
@@ -180,7 +215,7 @@ Save time by quickly deleting unnecessary attachments, ensuring your test cases 
 
 OR
 
-1. On 'Tests' page open Test Case.
+1. On **'Tests'** page open Test Case.
 2. Click **'Edit'** button.
 
 ![Testomat.io - Delete attachment](./images/Delete_attachment_2.png)
@@ -271,14 +306,14 @@ Each priority level has a dedicated icon to make test importance easily recogniz
 
 When creating a new test, you can assign a priority directly from the test editor:
 
-1. Navigate to the **Tests** page.
-2. Click the **+ Test** button.
+1. Navigate to the **'Tests'** page.
+2. Click the **'+ Test'** button.
 3. Select a suite for test.
-4. Click the **Select** button.
+4. Click the **'Select'** button.
 
 ![Select destination](./images/att2_1457.png)
 
-5. Click the **Priority icon** to open the list of available priorities next to the **New Test** indicator.
+5. Click the **'Priority icon'** to open the list of available priorities next to the **'New Test'** indicator.
 6. Select the required priority.
 7. Enter the test title.
 8. Save the test — the selected priority will be applied.
@@ -295,9 +330,9 @@ If no priority is selected, the test has **normal** priority by default. Conside
 
 You can update the priority of an existing test at any time:
 
-1. Navigate to the **Tests** page.
+1. Navigate to the **'Tests'** page.
 2. Open the test you want to edit.
-3. Click the **Priority icon** next to the **Edit Test** indicator.
+3. Click the **'Priority icon'** next to the **'Edit Test'** indicator.
 4. Click on the desired priority.
 5. Save the test — the changed priority will be applied.
 
@@ -309,11 +344,11 @@ The icon will update immediately to reflect the selected priority.
 
 You can change the priority for multiple tests at once to save time and quickly update large test sets.
 
-1. Navigate to the **Tests** page.
-2. Enable **multi-select** button and select tests using the checkboxes.
-3. Click the **Priority** button at the bottom of the screen.
+1. Navigate to the **'Tests'** page.
+2. Enable **'multi-select'** button and select tests using the checkboxes.
+3. Click the **'Priority'** button at the bottom of the screen.
 4. In the popup, select the desired priority (e.g., important).
-5. Click **Apply** button.
+5. Click **'Apply'** button.
 
 ![Bulk Assign Priority](./images/att5_1457.png)
 
