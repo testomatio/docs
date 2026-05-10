@@ -156,6 +156,17 @@ This feature allows you to create test case description based just on its name o
 
 ![Testomat.io - AI-powered](./images/AI_9.gif)
 
+## Suggest Description for BDD Project
+
+This AI-powered feature functions in BDD projects exactly as it does in Classical projects. It analyzes your previous Gherkin scenarios to create a new one automatically.
+
+1. Open a Test Case within your BDD project.
+2. On **'Scenario description'** tab click **'Suggest Description'** button.
+
+![Testomat.io - AI-powered](./images/AI_BDD_1.gif)
+
+The AI will populate the description with a human-readable overview of your Given/When/Then steps, saving you the manual effort and keeping your documentation consistent. And allowing you to edit the suggested description directly from the AI modal.
+
 ## Suggest Better Test Case Description
 
 **'Suggest Better Description'** AI-feature is your shortcut to turning rough notes into professional test cases.
