@@ -357,6 +357,12 @@ This setting is optional and can be enabled if you need it. Overall, you can fre
 
 Once the RunGroup is enabled, you can start your runs within folders. Make sure the **RunGroup Structure** is also enabled.
 
+:::note
+
+This setting applies to all new run types — manual, automated, and mixed. 
+
+:::
+
 **Launching Runs in a Folder**
 
 1. Navigate to the **Runs** tab
@@ -372,6 +378,12 @@ Once the RunGroup is enabled, you can start your runs within folders. Make sure 
 **Important:** If no RunGroup is selected, the field will be highlighted in red, and a warning message will appear, prompting you to choose a group before proceeding.
 
 ![Group field is required](images/att3_214.png)
+
+:::note
+
+ If you relaunch an existing run as a copy and the original run belongs to a RunGroup, the copy is placed in the same group. No manual selection is needed.      
+
+:::
 
 By following these steps, you can organize test runs within RunGroups, ensuring a structured and manageable testing workflow. See the result below:
 
