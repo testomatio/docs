@@ -290,6 +290,61 @@ This summary allows you to quickly see the key results of each run directly in J
 
 Learn how to set it up in [Report Notifications in Jira.](https://docs.testomat.io/integrations/report-notifications/jira/)
 
+## Tests Coverage
+
+The Tests Coverage screen provides a traceability matrix showing all Jira issues with their linked
+  tests. For each issue you can see:
+
+  - Title — Jira issue key and name
+  - Tests — number of linked tests
+  - Status — current test run status (e.g., Failed, Passed)
+  - Automation status — percentage of automated tests among linked ones
+
+This gives the team a quick overview of which requirements are covered, how many tests back each issue, and how far automation has progressed per story.
+
+To open the Tests Coverage screen:
+
+1. Open the specific space
+2. Click the 'More' option
+3. Select the 'Tests Coverage' tab
+
+![Tests Coverage tab](./images/att1_575.png)
+
+The automation percentage reflects how many of the linked tests are automated — from 0% (all manual) to 100% (fully automated). Issues with no linked tests signal coverage gaps that need attention.
+
+![Tests Coverage screen](./images/att2_575.png)
+
+## Sprint Coverage
+
+The Sprint Coverage tab gives a high-level summary of test execution health across a sprint. Use it to understand how well a sprint is covered with tests and how the execution is progressing — without leaving Jira.
+
+For each sprint it shows:
+
+- Issues with tests / Issues without tests — how many sprint issues have linked tests and how many are left uncovered
+- Manual tests / Automated tests — breakdown of test types across the sprint
+- Passed / Failed / Skipped / Pending / Not executed — full execution status breakdown
+
+This makes it easy to spot coverage gaps, track automation progress, and assess sprint readiness at a glance.
+
+To check test coverage for a sprint:
+
+1. Open the specific space
+2. Click the 'More' option
+3. Select the 'Sprints Coverage' tab
+
+![Sprint Coverage](./images/att3_575.png)
+
+4. Enter the sprint ID(s)
+5. Click the 'Submit' button
+
+![Search sprint ID(s)](./images/att4_575.png)
+
+:::note
+
+To find your sprint ID, visit the [Jira Software sprint ID guide](https://support.atlassian.com/jira/kb/jira-software-how-to-identify-the-id-of-a-sprint/).
+
+:::
+
 ## Data Sync in Jira
 
 Testomat.io and Jira are continuously synchronized to ensure test data stays up to date across both systems. This **two-way sync** keeps all team members — QA, development, management, and stakeholders — aligned.
@@ -319,3 +374,4 @@ To manually refresh data:
 ![Sync button](./images/att55_401.png)
 
 Testomat.io will re-fetch the latest information and update linked test results, statuses, and settings inside Jira. This keeps your Jira and Testomat.io data fully consistent — whether you rely on automatic background sync or perform a quick manual refresh when needed.
+
