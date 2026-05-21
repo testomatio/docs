@@ -125,9 +125,9 @@ The AI Features section allows company members to utilize AI-powered capabilitie
 
 Testomat.io offers two AI configuration options:
 
-**Built-in AI Provider**
+#### Built-in AI Provider
 
-Testomat.io uses Groq as the main AI provider. Groq uses only open-source models like Llama or Mixtra. Your data is not used for AI model training. However, enable AI features only if you are sure that your data is not sensitive.
+Testomat.io uses Groq as the main AI provider. Groq uses only open-source models like Llama or Mixtral. Your data is not used for AI model training. However, enable AI features only if you are sure that your data is not sensitive.
 
 How to enable built-in AI?
 
@@ -139,7 +139,7 @@ How to enable built-in AI?
 
 ![AI Features](images/att12_263.png)
 
-**Custom AI Provider**
+#### Custom AI Provider
 
 If your company prefers using an AI provider that you trust, Testomat.io allows integration with third-party AI services such as OpenAI, Anthropic, and others. This option ensures flexibility, allowing you to choose an AI provider that aligns with your security and compliance requirements.
 
@@ -153,6 +153,35 @@ How to enable a custom AI provider?
 6. Click the **'Save Settings'** button
 
 ![Saved Custom AI Provider](images/att9_263.png)
+
+**Custom AI Provider Isolation**
+
+When customers connect their own AI provider credentials, the application uses only the customer’s configured provider and API keys for all AI operations.
+
+Once a custom AI provider is connected:
+
+* All AI requests are executed exclusively through the customer’s provider configuration.
+* The application does not automatically or silently fall back to any default/shared provider.
+* If the configured provider is unavailable or returns an error, the request fails explicitly and the user is notified.
+
+**Prompts and Chat Features**
+
+Interactive AI features such as prompts, chats, and assistant conversations use the customer’s configured provider only.
+
+If a request cannot be completed due to provider configuration issues, authentication failures, quota limits, or provider-side errors, users receive a message instructing them to verify their provider setup. No fallback to the platform’s internal provider is performed.
+
+**Agents and Background AI Jobs**
+
+AI agents and background processing jobs also run entirely on the customer’s configured provider and API keys.
+
+**Requirements Processing and Analysis**
+
+Requirements analysis, summaries, document processing, and related AI-generated insights use the customer’s configured provider exclusively.
+
+No data is rerouted through a shared/default AI provider when customer-managed credentials are enabled.
+
+> **Note:** When a Custom AI Provider is configured, zero data is sent to Groq. All prompts, chats, agents, summaries, and AI processing **run exclusively through the customer’s configured provide**r, with no fallback to Testomat.io default providers.
+
 
 ## Owner Access To Manage Team Projects
 
