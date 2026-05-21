@@ -25,7 +25,7 @@ Testomat.io introduces another AI-powered feature — **AI-Agents** — designed
 
 :::note
 
-These powerful AI-features are available in the E**nterprise plan**.
+These powerful AI-features are available in the **Enterprise plan**.
 
 :::
 
