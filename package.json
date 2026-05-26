@@ -42,7 +42,7 @@
     "meilisearch-docsearch": "^0.8.0",
     "schema-dts": "^1.1.5",
     "sharp": "^0.34.5",
-    "starlight-image-zoom": "^0.13.2",
+    "starlight-image-zoom": "^0.14.2",
     "starlight-links-validator": "^0.19.2"
   },
   "type": "module"
