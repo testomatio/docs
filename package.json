@@ -33,7 +33,7 @@
     "astro": "^5.17.2",
     "astro-breadcrumbs": "^3.3.3",
     "astro-og-canvas": "^0.10.1",
-    "astro-rehype-relative-markdown-links": "0.18.1",
+    "astro-rehype-relative-markdown-links": "0.19.0",
     "astro-vtbot": "^2.1.11",
     "bunosh": "^0.4.14",
     "canvaskit-wasm": "^0.40.0",
