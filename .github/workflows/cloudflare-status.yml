@@ -1,0 +1,103 @@
+name: Cloudflare Pages Status
+
+on:
+  pull_request:
+    branches:
+      - docs
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  cloudflare-status:
+    name: Check Cloudflare Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for Cloudflare deployment and check status
+        id: deployment
+        run: |
+          # Poll Cloudflare API for deployment status
+          # Maximum wait time: 15 minutes (90 retries * 10 seconds)
+          max_retries=90
+          retry_count=0
+          status="pending"
+
+          echo "Waiting for Cloudflare deployment to complete..."
+
+          while [ $retry_count -lt $max_retries ]; do
+            response=$(curl -s \
+              -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+              "https://api.cloudflare.com/client/v4/accounts/60b76f40370d8320885e92e3daa114b1/pages/projects/docs/deployments?per_page=3")
+
+            # Get the most recent deployment
+            deployment_status=$(echo "$response" | jq -r '.result[0].latest_stage // "unknown"')
+            deployment_url=$(echo "$response" | jq -r '.result[0].url // ""')
+            deployment_created=$(echo "$response" | jq -r '.result[0].created_on // ""')
+
+            echo "Check #$((retry_count + 1)): status=$deployment_status"
+
+            # Check if deployment is complete
+            if [ "$deployment_status" = "success" ]; then
+              status="success"
+              echo "status=$status" >> $GITHUB_OUTPUT
+              echo "url=$deployment_url" >> $GITHUB_OUTPUT
+              echo "Deployment succeeded!"
+              break
+            elif [ "$deployment_status" = "failure" ] || [ "$deployment_status" = "failed" ]; then
+              status="failure"
+              echo "status=$status" >> $GITHUB_OUTPUT
+              echo "url=$deployment_url" >> $GITHUB_OUTPUT
+              echo "Deployment failed!"
+              break
+            fi
+
+            retry_count=$((retry_count + 1))
+            sleep 10
+          done
+
+          # If we exhausted retries, mark as unknown
+          if [ "$status" = "pending" ]; then
+            echo "status=timeout" >> $GITHUB_OUTPUT
+            echo "Timed out waiting for deployment"
+          fi
+
+      - name: Post failure comment
+        if: steps.deployment.outputs.status == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = '${{ steps.deployment.outputs.url }}';
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## ⚠️ Cloudflare Build Failed
+
+            The Cloudflare Pages deployment failed for this PR.
+
+            **View full logs:** [Cloudflare Dashboard](${url})
+
+            Please check the Cloudflare dashboard for detailed error messages. Common issues:
+            - Missing images or assets
+            - Broken links in markdown files
+            - Build configuration errors`
+            });
+
+      - name: Post timeout comment
+        if: steps.deployment.outputs.status == 'timeout'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## ⏱️ Cloudflare Build Status Unknown
+
+            Could not determine Cloudflare deployment status within 15 minutes.
+
+            Please check the [Cloudflare Dashboard](https://dash.cloudflare.com/60b76f40370d8320885e92e3daa114b1/pages/view/docs) manually.`
+            });

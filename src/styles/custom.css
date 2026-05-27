@@ -90,3 +90,45 @@ html[data-theme=dark] .docsearch-btn-placeholder {
         right: -260px;
     }
 }
+
+/* Figures injected into docs pages by rehype-inject-figure.mjs.
+   starlight-image-zoom-zoomable is a custom element that defaults to
+   display:inline, which makes max-width on its SVG/img child ineffective —
+   force display:block + max-width:100% on the wrapper so the diagram never
+   overflows the docs content area. */
+.sl-markdown-content .injected-figure {
+    margin: 1.75em 0;
+    text-align: center;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: hidden;
+}
+.sl-markdown-content .injected-figure starlight-image-zoom-zoomable {
+    display: block !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    /* Diagrams shrink small on phones — signal they can be tapped to zoom. */
+    cursor: zoom-in;
+}
+.sl-markdown-content .injected-figure img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+}
+/* Inlined SVG diagrams: same responsive sizing as the <img> variant.
+   `> svg` so the zoom-control button's icon <svg> is left alone. */
+.sl-markdown-content .injected-figure starlight-image-zoom-zoomable > svg {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+}
+.sl-markdown-content .injected-figure figcaption {
+    margin-top: 0.6em;
+    font-size: 0.875em;
+    color: var(--sl-color-text-secondary, #6b7280);
+    font-style: italic;
+}

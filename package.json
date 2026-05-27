@@ -39,11 +39,13 @@
     "canvaskit-wasm": "^0.40.0",
     "dotenv": "^17.3.1",
     "gray-matter": "^4.0.3",
+    "hast-util-from-html": "^2.0.3",
     "meilisearch-docsearch": "^0.8.0",
     "schema-dts": "^1.1.5",
     "sharp": "^0.34.5",
     "starlight-image-zoom": "^0.13.2",
-    "starlight-links-validator": "^0.19.2"
+    "starlight-links-validator": "^0.19.2",
+    "unist-util-visit": "^5.0.0"
   },
   "type": "module"
 }
