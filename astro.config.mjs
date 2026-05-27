@@ -25,17 +25,7 @@ const options = {
 //   width/height — optional, recommended to avoid layout shift
 //   caption      — optional <figcaption> text
 //   className    — optional, defaults to "injected-figure"
-const figureInjections = [
-    {
-        slug: 'project/runs/running-tests-manually',
-        afterHeading: 'How to Launch from the Tests Page',
-        before: true,
-        src: '/running-tests-options.svg',
-        alt: 'Five ways to run tests in Testomat.io: quick-launch from the Tests page, fully configured runs from the Runs page, checklist mode, step-by-step execution, and running automated tests manually.',
-        width: 1004,
-        height: 488,
-    },
-];
+const figureInjections = [];
 
 export default defineConfig({
 	site: 'https://docs.testomat.io',
