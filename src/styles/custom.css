@@ -1,10 +1,30 @@
+.site-title img {
+    max-height: 28px;
+    width: auto;
+}
+
 .docsearch-modal-footer-logo {
     display: none!important;
 }
 
+/* Light theme — primary darker for contrast on white */
+:root[data-theme='light'] {
+    --sl-color-accent-low: #e0e7ff;    /* indigo-100 — subtle bg highlights */
+    --sl-color-accent: #6366f1;         /* indigo-500 — links, badges */
+    --sl-color-accent-high: #4338ca;   /* indigo-700 — hover states */
+    --sl-color-text-accent: #6366f1;   /* indigo-500 — button bg */
+    --sl-color-bg-accent: #6366f1;     /* indigo-500 */
+}
+
+/* Dark theme — primary lighter for contrast on dark */
 :root {
-    --sl-color-text-accent: rgb(92, 137, 252) !important;
-    --docsearch-primary-color: rgb(92, 137, 252) !important;
+    --sl-color-accent-low: #312e81;    /* indigo-900 — subtle bg highlights */
+    --sl-color-accent: #818cf8;         /* indigo-400 — links, badges */
+    --sl-color-accent-high: #c7d2fe;   /* indigo-200 — high contrast text */
+    --sl-color-text-accent: #818cf8;   /* indigo-400 — button bg */
+    --sl-color-bg-accent: #818cf8;     /* indigo-400 */
+
+    --docsearch-primary-color: #6366f1;
     --docsearch-text-color: rgb(28, 30, 33);
     --docsearch-spacing: 12px;
     --docsearch-icon-stroke-width: 1.4;
