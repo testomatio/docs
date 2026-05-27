@@ -3,11 +3,29 @@ import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
 import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
 import starlightLinksValidator from 'starlight-links-validator';
+import rehypeInjectFigure from './src/lib/rehype-inject-figure.mjs';
 import redirects from "./redirects.js";
 
 const options = {
     collectionBase: false,
 };
+
+// Diagrams injected into docs pages after (or before) a specific heading. Lets
+// us enrich a page with a figure without editing its markdown. Add a row per
+// figure — no plugin edits needed.
+//   slug         — page slug relative to src/content/docs (no extension)
+//   afterHeading — heading text to find (case-insensitive, trimmed)
+//   before       — if true, insert immediately *before* the matched heading
+//                  (useful when the figure introduces the section)
+//   replace      — optional HTML tagName to swap with the figure within that
+//                  section (e.g. 'table'). If omitted, the figure is inserted
+//                  immediately after the heading.
+//   src          — image path under /public
+//   alt          — required for a11y
+//   width/height — optional, recommended to avoid layout shift
+//   caption      — optional <figcaption> text
+//   className    — optional, defaults to "injected-figure"
+const figureInjections = [];
 
 export default defineConfig({
 	site: 'https://docs.testomat.io',
@@ -469,6 +487,25 @@ export default defineConfig({
 	markdown: {
 		rehypePlugins: [
 			[rehypeAstroRelativeMarkdownLinks, options],
+			[rehypeInjectFigure, { injections: figureInjections }],
+		],
+	},
+	vite: {
+		plugins: [
+			{
+				// rehypeInjectFigure reads diagram SVGs from /public at render
+				// time; Vite doesn't know about that dependency, so editing a
+				// diagram wouldn't refresh the page in `astro dev`. Force a full
+				// reload when any /public/*.svg changes.
+				name: 'reload-on-public-svg-change',
+				handleHotUpdate({ file, server }) {
+					const f = file.replace(/\\/g, '/');
+					if (f.includes('/public/') && f.endsWith('.svg')) {
+						server.ws.send({ type: 'full-reload' });
+						return [];
+					}
+				},
+			},
 		],
 	},
 	redirects: redirects,
