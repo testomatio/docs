@@ -241,7 +241,7 @@ The **'Keep values'** option is only available when **'Create new run'** is enab
 
 |                      | **Keep values ON**                                              | **Keep values OFF**                  |
 | -------------------- | --------------------------------------------------------------- | ------------------------------------ |
-| **Selected tests**   | Results are preserved in the new run (Passed, Failed, Pending). | Results are reset to Pending status. |
+| **Selected tests**   | Results are preserved in the new run (Passed, Failed, Skipped). | Results are reset to Pending status. |
 | **Unselected tests** | Results are preserved in the new run.                           | Results are reset to Pending status. |
 
 #### Select All Tests
