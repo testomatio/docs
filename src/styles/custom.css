@@ -14,6 +14,19 @@
     --brand-900: #312e81;
 }
 
+/* Base article font size — slightly reduced from 1rem default */
+.sl-markdown-content { font-size: 0.875rem; }
+
+.hero .tagline { font-size: 16px; }
+
+/* Article headings — scaled down ×0.85 from Starlight defaults */
+.sl-markdown-content h1, .content-panel h1 { font-size: 2rem !important; }
+.sl-markdown-content h2 { font-size: 1.75rem !important; }
+.sl-markdown-content h3 { font-size: 1.275rem !important; }
+.sl-markdown-content h4 { font-size: 1.0625rem !important; }
+.sl-markdown-content h5 { font-size: 0.95rem !important; }
+.sl-markdown-content h6 { font-size: 0.85rem !important; }
+
 /* Article content images */
 .sl-markdown-content img {
     border-radius: 12px;
@@ -358,7 +371,7 @@ html[data-theme=dark] .docsearch-btn-placeholder {
     }
 
     .hero .tagline  {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
