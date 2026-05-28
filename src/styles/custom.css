@@ -91,6 +91,17 @@
     border-radius: 6px !important;
 }
 
+/* Sidebar accordion group label hover */
+:root[data-theme='light'] nav.sidebar details > summary:hover {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border-radius: 6px !important;
+}
+
+:root:not([data-theme='light']) nav.sidebar details > summary:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 6px !important;
+}
+
 .docsearch-modal-footer-logo {
     display: none!important;
 }
