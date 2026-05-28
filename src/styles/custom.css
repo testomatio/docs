@@ -27,11 +27,31 @@
 .sl-markdown-content h5 { font-size: 0.95rem !important; }
 .sl-markdown-content h6 { font-size: 0.85rem !important; }
 
+/* Hide code block decorative header */
+.expressive-code .header {
+    display: none !important;
+}
+
 /* Code blocks */
 .sl-markdown-content pre {
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: auto;
 }
+
+.expressive-code {
+    --ec-brdWd: 0px;
+}
+
+:root[data-theme='light'] .expressive-code .frame {
+    outline: 1px solid var(--sl-color-gray-6);
+    border-radius: 8px;
+}
+
+:root:not([data-theme='light']) .expressive-code .frame {
+    outline: 1px solid var(--sl-color-gray-5);
+    border-radius: 8px;
+}
+
 
 .sl-markdown-content pre::-webkit-scrollbar {
     height: 6px;
@@ -52,10 +72,19 @@
 }
 
 /* Code block copy button */
+.expressive-code .copy {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    bottom: unset !important;
+}
+
 .expressive-code .copy button {
-    border-radius: 8px !important;
+    border-radius: 6px !important;
     opacity: 0 !important;
     transition: opacity 0.15s ease !important;
+    width: 28px !important;
+    height: 28px !important;
 }
 
 .expressive-code:hover .copy,
@@ -69,12 +98,25 @@
     background: transparent !important;
 }
 
+:root[data-theme='light'] .expressive-code:hover .copy button {
+    box-shadow: inset 0 0 0 1px var(--sl-color-gray-5) !important;
+}
+
 :root[data-theme='light'] .expressive-code:hover .copy button:hover div {
     background: var(--sl-color-gray-5) !important;
 }
 
+:root:not([data-theme='light']) .expressive-code:hover .copy button {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+}
+
 :root:not([data-theme='light']) .expressive-code:hover .copy button:hover div {
     background: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Inline code */
+.sl-markdown-content :not(pre) > code {
+    border-radius: 6px;
 }
 
 /* Article content images */
