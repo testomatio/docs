@@ -121,7 +121,7 @@
 
 /* Article content images */
 .sl-markdown-content img {
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid var(--sl-color-gray-6);
 }
 
