@@ -24,6 +24,11 @@
     border: none;
 }
 
+.site-title {
+    align-items: center;
+    gap: 1.2rem;
+}
+
 .site-title img {
     max-height: 28px;
     width: auto;
@@ -32,7 +37,9 @@
 .site-title span {
     font-weight: 700;
     font-size: var(--sl-text-xl); /* 20px */
-    margin-inline-start: -6px;     /* ближе к лого */
+    margin-inline-start: -10px;     /* ближе к лого */
+    position: relative;
+    top: 1px;
 }
 
 /* Button overrides */
