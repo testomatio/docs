@@ -4,6 +4,16 @@
     --sl-font: 'Inter', sans-serif;
 }
 
+/* Article content images */
+.sl-markdown-content img {
+    border-radius: 12px;
+    border: 1px solid var(--sl-color-gray-6);
+}
+
+:root[data-theme='dark'] .sl-markdown-content img {
+    border: none;
+}
+
 .site-title img {
     max-height: 28px;
     width: auto;
