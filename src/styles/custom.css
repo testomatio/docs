@@ -18,6 +18,46 @@
     --neutral-900: #171717;
     --neutral-950: #0a0a0a;
 
+    /* Blue palette */
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --blue-950: #172554;
+
+    /* Purple palette */
+    --purple-50:  #faf5ff;
+    --purple-100: #f3e8ff;
+    --purple-300: #d8b4fe;
+    --purple-400: #c084fc;
+    --purple-500: #a855f7;
+    --purple-700: #7e22ce;
+    --purple-900: #581c87;
+    --purple-950: #3b0764;
+
+    /* Amber palette */
+    --amber-50:  #fffbeb;
+    --amber-100: #fef3c7;
+    --amber-300: #fcd34d;
+    --amber-400: #fbbf24;
+    --amber-500: #f59e0b;
+    --amber-700: #b45309;
+    --amber-900: #78350f;
+    --amber-950: #451a03;
+
+    /* Red palette */
+    --red-50:  #fef2f2;
+    --red-100: #fee2e2;
+    --red-300: #fca5a5;
+    --red-400: #f87171;
+    --red-500: #ef4444;
+    --red-700: #b91c1c;
+    --red-900: #7f1d1d;
+    --red-950: #450a0a;
+
     /* Brand palette — indigo */
     --brand-100: #e0e7ff;
     --brand-200: #c7d2fe;
@@ -148,6 +188,82 @@
     background-color: var(--neutral-700) !important;
 }
 
+/* Asides */
+.starlight-aside {
+    padding-block: 0.625rem !important;
+}
+
+.starlight-aside__title {
+    font-size: 0.95rem !important;
+}
+
+
+.starlight-aside__icon {
+    font-size: 1em !important;
+    width: 0.875em !important;
+    height: 0.875em !important;
+}
+
+/* Asides — light theme */
+:root[data-theme='light'] .starlight-aside {
+    border-radius: 8px;
+    border-inline-start: none;
+}
+:root[data-theme='light'] .starlight-aside--note {
+    background-color: var(--brand-100) !important;
+    --sl-color-asides-border: var(--brand-500) !important;
+    --sl-color-asides-text-accent: var(--brand-700) !important;
+    outline: 1px solid var(--brand-200);
+}
+:root[data-theme='light'] .starlight-aside--tip {
+    background-color: var(--purple-50) !important;
+    --sl-color-asides-border: var(--purple-500) !important;
+    --sl-color-asides-text-accent: var(--purple-700) !important;
+    outline: 1px solid var(--purple-100);
+}
+:root[data-theme='light'] .starlight-aside--caution {
+    background-color: var(--amber-50) !important;
+    --sl-color-asides-border: var(--amber-500) !important;
+    --sl-color-asides-text-accent: var(--amber-700) !important;
+    outline: 1px solid var(--amber-100);
+}
+:root[data-theme='light'] .starlight-aside--danger {
+    background-color: var(--red-50) !important;
+    --sl-color-asides-border: var(--red-500) !important;
+    --sl-color-asides-text-accent: var(--red-700) !important;
+    outline: 1px solid var(--red-100);
+}
+
+/* Asides — dark theme */
+:root:not([data-theme='light']) .starlight-aside {
+    border-radius: 8px;
+    border-inline-start: none;
+}
+:root:not([data-theme='light']) .starlight-aside--note {
+    background-color: color-mix(in srgb, var(--brand-900) 70%, transparent) !important;
+    --sl-color-asides-border: var(--brand-400) !important;
+    --sl-color-asides-text-accent: var(--brand-300) !important;
+    outline: 1px solid color-mix(in srgb, var(--brand-700) 80%, transparent);
+}
+:root:not([data-theme='light']) .starlight-aside--tip {
+    background-color: color-mix(in srgb, var(--purple-950) 70%, transparent) !important;
+    --sl-color-asides-border: var(--purple-400) !important;
+    --sl-color-asides-text-accent: var(--purple-300) !important;
+    outline: 1px solid color-mix(in srgb, var(--purple-900) 80%, transparent);
+}
+:root:not([data-theme='light']) .starlight-aside--caution {
+    background-color: color-mix(in srgb, var(--amber-950) 70%, transparent) !important;
+    --sl-color-asides-border: var(--amber-400) !important;
+    --sl-color-asides-text-accent: var(--amber-300) !important;
+    outline: 1px solid color-mix(in srgb, var(--amber-900) 80%, transparent);
+}
+:root:not([data-theme='light']) .starlight-aside--danger {
+    background-color: color-mix(in srgb, var(--red-950) 70%, transparent) !important;
+    --sl-color-asides-border: var(--red-400) !important;
+    --sl-color-asides-text-accent: var(--red-300) !important;
+    outline: 1px solid color-mix(in srgb, var(--red-900) 80%, transparent);
+}
+
 /* Article content images */
 .sl-markdown-content img {
     border-radius: 8px;
@@ -235,6 +351,22 @@ nav.sidebar details > summary {
 
 .docsearch-modal-footer-logo {
     display: none!important;
+}
+
+/* Remove divider and top padding under page title */
+.content-panel + .content-panel {
+    border-top: none !important;
+    padding-top: 0 !important;
+}
+
+/* Reduce bottom padding in the h1 title block */
+.content-panel:first-of-type {
+    padding-bottom: 0.75rem !important;
+}
+
+/* Remove right sidebar (TOC) left border */
+.right-sidebar {
+    border-inline-start: none !important;
 }
 
 /* Global focus outline — indigo */
