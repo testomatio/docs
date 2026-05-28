@@ -2,6 +2,16 @@
 
 :root {
     --sl-font: 'Inter', sans-serif;
+
+    /* Brand palette — indigo */
+    --brand-100: #e0e7ff;
+    --brand-200: #c7d2fe;
+    --brand-300: #a5b4fc;
+    --brand-400: #818cf8;
+    --brand-500: #6366f1;
+    --brand-600: #4f46e5;
+    --brand-700: #4338ca;
+    --brand-900: #312e81;
 }
 
 /* Article content images */
@@ -33,21 +43,21 @@
 }
 
 :root[data-theme='light'] .sl-link-button.primary {
-    border-color: #4f46e5 !important; /* indigo-600 */
+    border-color: var(--brand-600) !important;
 }
 
 :root[data-theme='light'] .sl-link-button.primary:hover {
-    background-color: #4f46e5 !important; /* indigo-600 */
-    border-color: #4338ca !important;     /* indigo-700 */
+    background-color: var(--brand-600) !important;
+    border-color: var(--brand-700) !important;
 }
 
 :root .sl-link-button.primary {
-    border-color: #a5b4fc !important; /* indigo-300 */
+    border-color: var(--brand-300) !important;
 }
 
 :root .sl-link-button.primary:hover {
-    background-color: #6366f1 !important; /* indigo-500 */
-    border-color: #818cf8 !important;     /* indigo-400 */
+    background-color: var(--brand-500) !important;
+    border-color: var(--brand-400) !important;
 }
 
 /* Sidebar nav item hover — skip active */
@@ -67,12 +77,12 @@
 
 /* Global focus outline — indigo */
 :focus-visible {
-    outline-color: #6366f1 !important;
+    outline-color: var(--brand-500) !important;
 }
 
 /* Light theme — primary darker for contrast on white */
 :root[data-theme='light'] {
-    --docsearch-primary-color: #6366f1;
+    --docsearch-primary-color: var(--brand-500);
     --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
     --docsearch-searchbox-focus-background: #fff;
     --docsearch-text-color: #1c1e21;
@@ -80,11 +90,11 @@
     --docsearch-searchbox-background: transparent;
     --docsearch-key-gradient: linear-gradient(-225deg, #d5dbe4 0%, #f8f8f8 100%);
     --docsearch-key-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff, 0 1px 2px 1px rgba(30, 35, 90, 0.4);
-    --sl-color-accent-low: #e0e7ff;    /* indigo-100 — subtle bg highlights */
-    --sl-color-accent: #6366f1;         /* indigo-500 — links, badges */
-    --sl-color-accent-high: #4338ca;   /* indigo-700 — hover states */
-    --sl-color-text-accent: #6366f1;   /* indigo-500 — button bg */
-    --sl-color-bg-accent: #6366f1;     /* indigo-500 */
+    --sl-color-accent-low: var(--brand-100);
+    --sl-color-accent: var(--brand-500);
+    --sl-color-accent-high: var(--brand-700);
+    --sl-color-text-accent: var(--brand-500);
+    --sl-color-bg-accent: var(--brand-500);
 }
 
 /* Search button */
@@ -191,13 +201,13 @@ kbd[class*="docsearch"] {
 
 /* Dark theme — primary lighter for contrast on dark */
 :root {
-    --sl-color-accent-low: #312e81;    /* indigo-900 — subtle bg highlights */
-    --sl-color-accent: #818cf8;         /* indigo-400 — links, badges */
-    --sl-color-accent-high: #c7d2fe;   /* indigo-200 — high contrast text */
-    --sl-color-text-accent: #818cf8;   /* indigo-400 — button bg */
-    --sl-color-bg-accent: #818cf8;     /* indigo-400 */
+    --sl-color-accent-low: var(--brand-900);
+    --sl-color-accent: var(--brand-400);
+    --sl-color-accent-high: var(--brand-200);
+    --sl-color-text-accent: var(--brand-400);
+    --sl-color-bg-accent: var(--brand-400);
 
-    --docsearch-primary-color: #6366f1;
+    --docsearch-primary-color: var(--brand-500);
     --docsearch-text-color: rgb(28, 30, 33);
     --docsearch-spacing: 12px;
     --docsearch-icon-stroke-width: 1.4;
@@ -230,7 +240,7 @@ kbd[class*="docsearch"] {
 
 html[data-theme=dark] .docsearch-modal-btn-icon,
 html[data-theme=dark] .docsearch-btn-placeholder {
-    color: #edeef3;
+    color: var(--sl-color-gray-1);
 }
 
 /* Override docsearch primary color globally via container — wins over :root from library */
