@@ -172,26 +172,31 @@
     border-color: var(--brand-400) !important;
 }
 
-/* Sidebar nav item hover — skip active */
+/* Sidebar nav item — active and hover */
+nav.sidebar a[aria-current='page'] {
+    border-radius: 8px !important;
+}
+
+nav.sidebar a,
+nav.sidebar details > summary {
+    border-radius: 8px !important;
+}
+
 :root[data-theme='light'] nav.sidebar a:not([aria-current='page']):hover {
     background-color: rgba(0, 0, 0, 0.06) !important;
-    border-radius: 6px !important;
 }
 
 :root:not([data-theme='light']) nav.sidebar a:not([aria-current='page']):hover {
     background-color: rgba(255, 255, 255, 0.08) !important;
-    border-radius: 6px !important;
 }
 
 /* Sidebar accordion group label hover */
 :root[data-theme='light'] nav.sidebar details > summary:hover {
     background-color: rgba(0, 0, 0, 0.06) !important;
-    border-radius: 6px !important;
 }
 
 :root:not([data-theme='light']) nav.sidebar details > summary:hover {
     background-color: rgba(255, 255, 255, 0.08) !important;
-    border-radius: 6px !important;
 }
 
 .docsearch-modal-footer-logo {
