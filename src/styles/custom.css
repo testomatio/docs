@@ -367,8 +367,7 @@ nav.sidebar ul.top-level > li > details > summary .group-label {
     align-items: center !important;
 }
 
-nav.sidebar ul.top-level > li > details > summary .group-label::before,
-nav.sidebar ul.top-level > li > a::before {
+nav.sidebar ul.top-level > li > details > summary .group-label::before {
     content: '';
     display: block;
     width: 16px;
@@ -384,48 +383,39 @@ nav.sidebar ul.top-level > li > a::before {
     -webkit-mask-position: center;
 }
 
-nav.sidebar ul.top-level > li:nth-child(1) > details > summary .group-label::before,
-nav.sidebar ul.top-level > li:nth-child(1) > a::before {
+nav.sidebar ul.top-level > li:nth-child(1) > details > summary .group-label::before {
     mask-image: url('/icons/rocket.svg');
     -webkit-mask-image: url('/icons/rocket.svg');
 }
-nav.sidebar ul.top-level > li:nth-child(2) > details > summary .group-label::before,
-nav.sidebar ul.top-level > li:nth-child(2) > a::before {
+nav.sidebar ul.top-level > li:nth-child(2) > details > summary .group-label::before {
     mask-image: url('/icons/book.svg');
     -webkit-mask-image: url('/icons/book.svg');
 }
-nav.sidebar ul.top-level > li:nth-child(3) > details > summary .group-label::before,
-nav.sidebar ul.top-level > li:nth-child(3) > a::before {
+nav.sidebar ul.top-level > li:nth-child(3) > details > summary .group-label::before {
     mask-image: url('/icons/folder.svg');
     -webkit-mask-image: url('/icons/folder.svg');
 }
-nav.sidebar ul.top-level > li:nth-child(4) > details > summary .group-label::before,
-nav.sidebar ul.top-level > li:nth-child(4) > a::before {
+nav.sidebar ul.top-level > li:nth-child(4) > details > summary .group-label::before {
     mask-image: url('/icons/chart.svg');
     -webkit-mask-image: url('/icons/chart.svg');
 }
-nav.sidebar ul.top-level > li:nth-child(5) > details > summary .group-label::before,
-nav.sidebar ul.top-level > li:nth-child(5) > a::before {
+nav.sidebar ul.top-level > li:nth-child(5) > details > summary .group-label::before {
     mask-image: url('/icons/settings.svg');
     -webkit-mask-image: url('/icons/settings.svg');
 }
-nav.sidebar ul.top-level > li:nth-child(6) > details > summary .group-label::before,
-nav.sidebar ul.top-level > li:nth-child(6) > a::before {
+nav.sidebar ul.top-level > li:nth-child(6) > details > summary .group-label::before {
     mask-image: url('/icons/puzzle.svg');
     -webkit-mask-image: url('/icons/puzzle.svg');
 }
-nav.sidebar ul.top-level > li:nth-child(7) > details > summary .group-label::before,
-nav.sidebar ul.top-level > li:nth-child(7) > a::before {
+nav.sidebar ul.top-level > li:nth-child(7) > details > summary .group-label::before {
     mask-image: url('/icons/users.svg');
     -webkit-mask-image: url('/icons/users.svg');
 }
-nav.sidebar ul.top-level > li:nth-child(8) > details > summary .group-label::before,
-nav.sidebar ul.top-level > li:nth-child(8) > a::before {
+nav.sidebar ul.top-level > li:nth-child(8) > details > summary .group-label::before {
     mask-image: url('/icons/file.svg');
     -webkit-mask-image: url('/icons/file.svg');
 }
-nav.sidebar ul.top-level > li:nth-child(9) > details > summary .group-label::before,
-nav.sidebar ul.top-level > li:nth-child(9) > a::before {
+nav.sidebar ul.top-level > li:nth-child(9) > details > summary .group-label::before {
     mask-image: url('/icons/support.svg');
     -webkit-mask-image: url('/icons/support.svg');
 }
