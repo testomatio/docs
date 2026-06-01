@@ -318,6 +318,11 @@
     border-color: var(--brand-400) !important;
 }
 
+/* Align nesting border line under top-level group icon center */
+nav.sidebar ul.top-level > li > details > ul > li {
+    margin-inline-start: 16px !important;
+}
+
 /* Sidebar nav item — active */
 nav.sidebar a[aria-current='page'] {
     border-radius: 8px !important;
@@ -330,6 +335,8 @@ nav.sidebar a[aria-current='page'] {
 nav.sidebar a,
 nav.sidebar details > summary {
     border-radius: 8px !important;
+    padding-block: 6px !important;
+    margin-block: 0 !important;
 }
 
 :root[data-theme='light'] nav.sidebar a:not([aria-current='page']):hover {
@@ -340,6 +347,11 @@ nav.sidebar details > summary {
     background-color: rgba(255, 255, 255, 0.08) !important;
 }
 
+/* Nested accordion labels (level 2+) — same font-size as regular nav links */
+nav.sidebar details details > summary .large {
+    font-size: 14px !important;
+}
+
 /* Sidebar accordion group label hover */
 :root[data-theme='light'] nav.sidebar details > summary:hover {
     background-color: rgba(0, 0, 0, 0.06) !important;
@@ -347,6 +359,75 @@ nav.sidebar details > summary {
 
 :root:not([data-theme='light']) nav.sidebar details > summary:hover {
     background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Top-level sidebar group icons via ::before with SVG mask */
+nav.sidebar ul.top-level > li > details > summary .group-label {
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+nav.sidebar ul.top-level > li > details > summary .group-label::before,
+nav.sidebar ul.top-level > li > a::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    margin-inline-end: 8px;
+    background-color: currentColor;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+nav.sidebar ul.top-level > li:nth-child(1) > details > summary .group-label::before,
+nav.sidebar ul.top-level > li:nth-child(1) > a::before {
+    mask-image: url('/icons/rocket.svg');
+    -webkit-mask-image: url('/icons/rocket.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(2) > details > summary .group-label::before,
+nav.sidebar ul.top-level > li:nth-child(2) > a::before {
+    mask-image: url('/icons/book.svg');
+    -webkit-mask-image: url('/icons/book.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(3) > details > summary .group-label::before,
+nav.sidebar ul.top-level > li:nth-child(3) > a::before {
+    mask-image: url('/icons/folder.svg');
+    -webkit-mask-image: url('/icons/folder.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(4) > details > summary .group-label::before,
+nav.sidebar ul.top-level > li:nth-child(4) > a::before {
+    mask-image: url('/icons/chart.svg');
+    -webkit-mask-image: url('/icons/chart.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(5) > details > summary .group-label::before,
+nav.sidebar ul.top-level > li:nth-child(5) > a::before {
+    mask-image: url('/icons/settings.svg');
+    -webkit-mask-image: url('/icons/settings.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(6) > details > summary .group-label::before,
+nav.sidebar ul.top-level > li:nth-child(6) > a::before {
+    mask-image: url('/icons/puzzle.svg');
+    -webkit-mask-image: url('/icons/puzzle.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(7) > details > summary .group-label::before,
+nav.sidebar ul.top-level > li:nth-child(7) > a::before {
+    mask-image: url('/icons/users.svg');
+    -webkit-mask-image: url('/icons/users.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(8) > details > summary .group-label::before,
+nav.sidebar ul.top-level > li:nth-child(8) > a::before {
+    mask-image: url('/icons/file.svg');
+    -webkit-mask-image: url('/icons/file.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(9) > details > summary .group-label::before,
+nav.sidebar ul.top-level > li:nth-child(9) > a::before {
+    mask-image: url('/icons/support.svg');
+    -webkit-mask-image: url('/icons/support.svg');
 }
 
 .docsearch-modal-footer-logo {
