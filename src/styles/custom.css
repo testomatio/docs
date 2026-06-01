@@ -682,3 +682,7 @@ html[data-theme=dark] .docsearch-btn-placeholder {
         right: -260px;
     }
 }
+
+.social-icons::after {
+    display: none !important;
+}
