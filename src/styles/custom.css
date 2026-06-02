@@ -470,6 +470,7 @@ starlight-toc ul ul a {
     --sl-color-gray-5: var(--neutral-600);
     --sl-color-gray-6: var(--neutral-700);
     --sl-color-gray-7: var(--neutral-800);
+    --sl-color-black: var(--neutral-900);
     --sl-color-bg: var(--neutral-900);
     --sl-color-bg-nav: var(--neutral-850);
     --sl-color-bg-sidebar: var(--neutral-850);
