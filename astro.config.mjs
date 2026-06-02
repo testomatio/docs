@@ -74,7 +74,6 @@ export default defineConfig({
 				Search: './src/components/Search.astro',
 				PageTitle: './src/components/PageTitle.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',
-				TableOfContents: './src/components/TableOfContents.astro',
 			},
 
 			sidebar: [

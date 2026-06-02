@@ -429,6 +429,21 @@ nav.sidebar ul.top-level > li:nth-child(9) > details > summary .group-label::bef
     border-inline-start: none !important;
 }
 
+/* TOC active item — slightly bolder */
+starlight-toc a[aria-current='true'] {
+    font-weight: 500 !important;
+}
+
+/* TOC padding — level 1 aligned with heading */
+starlight-toc a {
+    padding-inline-start: 0 !important;
+}
+
+/* TOC padding — level 2 */
+starlight-toc ul ul a {
+    padding-inline-start: 1rem !important;
+}
+
 /* Global focus outline — indigo */
 :focus-visible {
     outline-color: var(--brand-500) !important;
