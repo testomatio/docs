@@ -355,9 +355,35 @@ head:
 
             content = content.replace(/^# .*\n+/, '');
 
+            const apiHeaders = typeof token !== 'undefined' ? { Authorization: `token ${token}` } : {};
+            const imageListResponse = await axios.get(apiUrl, { headers: apiHeaders });
+            const images = imageListResponse.data;
+
+            const downloadedImages = new Set();
+
+            for (const file of images) {
+                if (file.type === 'file') {
+                    const imageName = file.name;
+                    const imageUrl = file.download_url;
+                    const imagePath = path.join(imageFolder, imageName);
+
+                    try {
+                        const imageData = await axios.get(imageUrl, { responseType: 'arraybuffer' });
+                        fs.writeFileSync(imagePath, imageData.data);
+                        downloadedImages.add(imageName);
+                        console.log(`🖼️  Downloaded: ${imageName}`);
+                    } catch (imgErr) {
+                        console.warn(`⚠️  Failed to download image: ${imageName}, ${imgErr.message}`);
+                    }
+                }
+            }
+
             content = content.replace(/!\[(.*?)\]\((img\/.*?)\)/g, (match, alt, imgPath) => {
                 const imageName = path.basename(imgPath);
-                return `![${alt}](images/${imageName})`;
+                if (downloadedImages.has(imageName)) {
+                    return `![${alt}](images/${imageName})`;
+                }
+                return `![${alt}](https://raw.githubusercontent.com/${repo}/${branch}/${imgPath})`;
             });
 
             content = content.replace(/\.\/img\//g, './images/');
@@ -378,22 +404,6 @@ head:
             const readmePath = path.join(destinationFolder, 'java-reporter.md');
             fs.writeFileSync(readmePath, content);
             console.log(`✅ Saved: ${readmePath}`);
-
-            const apiHeaders = typeof token !== 'undefined' ? { Authorization: `token ${token}` } : {};
-            const imageListResponse = await axios.get(apiUrl, { headers: apiHeaders });
-            const images = imageListResponse.data;
-
-            for (const file of images) {
-                if (file.type === 'file') {
-                    const imageName = file.name;
-                    const imageUrl = file.download_url;
-                    const imagePath = path.join(imageFolder, imageName);
-
-                    const imageData = await axios.get(imageUrl, { responseType: 'arraybuffer' });
-                    fs.writeFileSync(imagePath, imageData.data);
-                    console.log(`🖼️  Downloaded: ${imageName}`);
-                }
-            }
         } catch (err) {
             console.error(`❌ Failed to fetch or download: ${err.message}`);
         }
