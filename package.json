@@ -22,7 +22,7 @@
   "devDependencies": {
     "axios": "^1.13.5",
     "dasherize": "^2.0.0",
-    "glob": "^10.4.2",
+    "glob": "^13.0.6",
     "runok": "^0.9.3",
     "slugify": "^1.6.6"
   },
