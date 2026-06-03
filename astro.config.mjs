@@ -24,11 +24,12 @@ export default defineConfig({
 					errorOnInvalidHashes: false,
 				}),
 			],
-			title: 'Testomatio',
+			title: 'Docs',
 			pagefind: false,
 
 			logo: {
-				src: './src/assets/logo.svg',
+				light: './src/assets/logo-light.svg',
+				dark: './src/assets/logo-dark.svg',
 			},
 			customCss: [
 				'./src/styles/custom.css',
@@ -72,7 +73,7 @@ export default defineConfig({
 				SocialIcons: './src/components/Links.astro',
 				Search: './src/components/Search.astro',
 				PageTitle: './src/components/PageTitle.astro',
-
+				ThemeSelect: './src/components/ThemeSelect.astro',
 			},
 
 			sidebar: [

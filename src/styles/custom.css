@@ -1,10 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --sl-font: 'Inter', sans-serif;
+
+    /* Neutral palette — Tailwind neutral */
+    --neutral-0:   #ffffff;
+    --neutral-50:  #fafafa;
+    --neutral-100: #f5f5f5;
+    --neutral-200: #e5e5e5;
+    --neutral-300: #d4d4d4;
+    --neutral-400: #a3a3a3;
+    --neutral-500: #737373;
+    --neutral-600: #525252;
+    --neutral-700: #404040;
+    --neutral-800: #262626;
+    --neutral-850: #1e1e1e;
+    --neutral-900: #171717;
+    --neutral-950: #0a0a0a;
+
+    /* Blue palette */
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --blue-950: #172554;
+
+    /* Purple palette */
+    --purple-50:  #faf5ff;
+    --purple-100: #f3e8ff;
+    --purple-300: #d8b4fe;
+    --purple-400: #c084fc;
+    --purple-500: #a855f7;
+    --purple-700: #7e22ce;
+    --purple-900: #581c87;
+    --purple-950: #3b0764;
+
+    /* Amber palette */
+    --amber-50:  #fffbeb;
+    --amber-100: #fef3c7;
+    --amber-300: #fcd34d;
+    --amber-400: #fbbf24;
+    --amber-500: #f59e0b;
+    --amber-700: #b45309;
+    --amber-900: #78350f;
+    --amber-950: #451a03;
+
+    /* Red palette */
+    --red-50:  #fef2f2;
+    --red-100: #fee2e2;
+    --red-300: #fca5a5;
+    --red-400: #f87171;
+    --red-500: #ef4444;
+    --red-700: #b91c1c;
+    --red-900: #7f1d1d;
+    --red-950: #450a0a;
+
+    /* Brand palette — indigo */
+    --brand-100: #e0e7ff;
+    --brand-200: #c7d2fe;
+    --brand-300: #a5b4fc;
+    --brand-400: #818cf8;
+    --brand-500: #6366f1;
+    --brand-600: #4f46e5;
+    --brand-700: #4338ca;
+    --brand-900: #312e81;
+}
+
+.hero .tagline { font-size: 16px; }
+
+/* Code block background in dark theme */
+:root:not([data-theme='light']) .expressive-code .frame pre {
+    box-shadow: inset 0 0 0 1000px var(--neutral-800) !important;
+}
+
+/* Hide code block decorative header */
+.expressive-code .header {
+    display: none !important;
+}
+
+/* Code blocks */
+.sl-markdown-content pre {
+    border-radius: 8px;
+    overflow: auto;
+}
+
+
+.expressive-code {
+    --ec-brdWd: 0px;
+}
+
+:root[data-theme='light'] .expressive-code .frame {
+    outline: 1px solid var(--sl-color-gray-6);
+    border-radius: 8px;
+}
+
+:root:not([data-theme='light']) .expressive-code .frame {
+    outline: 1px solid var(--neutral-700);
+    border-radius: 8px;
+}
+
+
+.sl-markdown-content pre::-webkit-scrollbar {
+    height: 6px;
+}
+
+.sl-markdown-content pre::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0 0 12px 12px;
+}
+
+.sl-markdown-content pre::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.3) !important;
+    border-radius: 12px;
+}
+
+.sl-markdown-content pre::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.55) !important;
+}
+
+/* Code block copy button */
+.expressive-code .copy {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    bottom: unset !important;
+}
+
+.expressive-code .copy button {
+    border-radius: 6px !important;
+    opacity: 0 !important;
+    transition: opacity 0.15s ease !important;
+    width: 28px !important;
+    height: 28px !important;
+}
+
+.expressive-code:hover .copy,
+.expressive-code:hover .copy button,
+.expressive-code:hover .copy button:hover,
+.expressive-code:hover .copy button:focus {
+    opacity: 1 !important;
+}
+
+.expressive-code .copy button div {
+    background: transparent !important;
+}
+
+:root[data-theme='light'] .expressive-code:hover .copy button {
+    box-shadow: inset 0 0 0 1px var(--sl-color-gray-5) !important;
+}
+
+:root[data-theme='light'] .expressive-code:hover .copy button:hover div {
+    background: var(--sl-color-gray-5) !important;
+}
+
+:root:not([data-theme='light']) .expressive-code:hover .copy button {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+}
+
+:root:not([data-theme='light']) .expressive-code:hover .copy button:hover div {
+    background: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Inline code */
+.sl-markdown-content :not(pre) > code {
+    border-radius: 6px;
+}
+
+:root[data-theme='light'] .sl-markdown-content :not(pre) > code {
+    background-color: var(--neutral-100) !important;
+}
+
+:root:not([data-theme='light']) .sl-markdown-content :not(pre) > code {
+    background-color: var(--neutral-700) !important;
+}
+
+/* Asides */
+.starlight-aside {
+    padding-block: 0.625rem !important;
+}
+
+.starlight-aside__title {
+    font-size: 0.95rem !important;
+}
+
+
+.starlight-aside__icon {
+    font-size: 1em !important;
+    width: 0.875em !important;
+    height: 0.875em !important;
+}
+
+/* Asides — light theme */
+:root[data-theme='light'] .starlight-aside {
+    border-radius: 8px;
+    border-inline-start: none;
+}
+:root[data-theme='light'] .starlight-aside--note {
+    background-color: var(--brand-100) !important;
+    --sl-color-asides-border: var(--brand-500) !important;
+    --sl-color-asides-text-accent: var(--brand-700) !important;
+    outline: 1px solid var(--brand-200);
+}
+:root[data-theme='light'] .starlight-aside--tip {
+    background-color: var(--purple-50) !important;
+    --sl-color-asides-border: var(--purple-500) !important;
+    --sl-color-asides-text-accent: var(--purple-700) !important;
+    outline: 1px solid var(--purple-100);
+}
+:root[data-theme='light'] .starlight-aside--caution {
+    background-color: var(--amber-50) !important;
+    --sl-color-asides-border: var(--amber-500) !important;
+    --sl-color-asides-text-accent: var(--amber-700) !important;
+    outline: 1px solid var(--amber-100);
+}
+:root[data-theme='light'] .starlight-aside--danger {
+    background-color: var(--red-50) !important;
+    --sl-color-asides-border: var(--red-500) !important;
+    --sl-color-asides-text-accent: var(--red-700) !important;
+    outline: 1px solid var(--red-100);
+}
+
+/* Asides — dark theme */
+:root:not([data-theme='light']) .starlight-aside {
+    border-radius: 8px;
+    border-inline-start: none;
+}
+:root:not([data-theme='light']) .starlight-aside--note {
+    background-color: color-mix(in srgb, var(--brand-900) 70%, transparent) !important;
+    --sl-color-asides-border: var(--brand-400) !important;
+    --sl-color-asides-text-accent: var(--brand-300) !important;
+    outline: 1px solid color-mix(in srgb, var(--brand-700) 80%, transparent);
+}
+:root:not([data-theme='light']) .starlight-aside--tip {
+    background-color: color-mix(in srgb, var(--purple-950) 70%, transparent) !important;
+    --sl-color-asides-border: var(--purple-400) !important;
+    --sl-color-asides-text-accent: var(--purple-300) !important;
+    outline: 1px solid color-mix(in srgb, var(--purple-900) 80%, transparent);
+}
+:root:not([data-theme='light']) .starlight-aside--caution {
+    background-color: color-mix(in srgb, var(--amber-950) 70%, transparent) !important;
+    --sl-color-asides-border: var(--amber-400) !important;
+    --sl-color-asides-text-accent: var(--amber-300) !important;
+    outline: 1px solid color-mix(in srgb, var(--amber-900) 80%, transparent);
+}
+:root:not([data-theme='light']) .starlight-aside--danger {
+    background-color: color-mix(in srgb, var(--red-950) 70%, transparent) !important;
+    --sl-color-asides-border: var(--red-400) !important;
+    --sl-color-asides-text-accent: var(--red-300) !important;
+    outline: 1px solid color-mix(in srgb, var(--red-900) 80%, transparent);
+}
+
+/* Article content images */
+.sl-markdown-content img {
+    border-radius: 8px;
+    border: 1px solid var(--sl-color-gray-6);
+}
+
+:root[data-theme='dark'] .sl-markdown-content img {
+    border: none;
+}
+
+.site-title {
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.site-title img {
+    max-height: 28px;
+    width: auto;
+}
+
+.site-title span {
+    font-weight: 700;
+    font-size: var(--sl-text-xl); /* 20px */
+    margin-inline-start: -10px;     /* ближе к лого */
+    position: relative;
+    top: 1px;
+}
+
+/* Button overrides */
+.sl-link-button.primary {
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+:root[data-theme='light'] .sl-link-button.primary {
+    border-color: var(--brand-600) !important;
+}
+
+:root[data-theme='light'] .sl-link-button.primary:hover {
+    background-color: var(--brand-600) !important;
+    border-color: var(--brand-700) !important;
+}
+
+:root .sl-link-button.primary {
+    border-color: var(--brand-300) !important;
+    color: var(--neutral-0) !important;
+}
+
+:root .sl-link-button.primary:hover {
+    background-color: var(--brand-500) !important;
+    border-color: var(--brand-400) !important;
+}
+
+/* Align nesting border line under top-level group icon center */
+nav.sidebar ul.top-level > li > details > ul > li {
+    margin-inline-start: 16px !important;
+}
+
+/* Sidebar nav item — active */
+nav.sidebar a[aria-current='page'] {
+    border-radius: 8px !important;
+}
+
+:root:not([data-theme='light']) nav.sidebar a[aria-current='page'] {
+    color: var(--neutral-0) !important;
+}
+
+nav.sidebar a,
+nav.sidebar details > summary {
+    border-radius: 8px !important;
+    padding-block: 6px !important;
+    margin-block: 0 !important;
+}
+
+:root[data-theme='light'] nav.sidebar a:not([aria-current='page']):hover {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+:root:not([data-theme='light']) nav.sidebar a:not([aria-current='page']):hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Nested accordion labels (level 2+) — same font-size as regular nav links */
+nav.sidebar details details > summary .large {
+    font-size: 14px !important;
+}
+
+/* Sidebar accordion group label hover */
+:root[data-theme='light'] nav.sidebar details > summary:hover {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+:root:not([data-theme='light']) nav.sidebar details > summary:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Top-level sidebar group icons via ::before with SVG mask */
+nav.sidebar ul.top-level > li > details > summary .group-label {
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+nav.sidebar ul.top-level > li > details > summary .group-label::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    margin-inline-end: 8px;
+    background-color: currentColor;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+nav.sidebar ul.top-level > li:nth-child(1) > details > summary .group-label::before {
+    mask-image: url('/icons/rocket.svg');
+    -webkit-mask-image: url('/icons/rocket.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(2) > details > summary .group-label::before {
+    mask-image: url('/icons/book.svg');
+    -webkit-mask-image: url('/icons/book.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(3) > details > summary .group-label::before {
+    mask-image: url('/icons/folder.svg');
+    -webkit-mask-image: url('/icons/folder.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(4) > details > summary .group-label::before {
+    mask-image: url('/icons/chart.svg');
+    -webkit-mask-image: url('/icons/chart.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(5) > details > summary .group-label::before {
+    mask-image: url('/icons/settings.svg');
+    -webkit-mask-image: url('/icons/settings.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(6) > details > summary .group-label::before {
+    mask-image: url('/icons/puzzle.svg');
+    -webkit-mask-image: url('/icons/puzzle.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(7) > details > summary .group-label::before {
+    mask-image: url('/icons/users.svg');
+    -webkit-mask-image: url('/icons/users.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(8) > details > summary .group-label::before {
+    mask-image: url('/icons/file.svg');
+    -webkit-mask-image: url('/icons/file.svg');
+}
+nav.sidebar ul.top-level > li:nth-child(9) > details > summary .group-label::before {
+    mask-image: url('/icons/support.svg');
+    -webkit-mask-image: url('/icons/support.svg');
+}
+
 .docsearch-modal-footer-logo {
     display: none!important;
 }
 
+/* Remove divider and top padding under page title */
+.content-panel + .content-panel {
+    border-top: none !important;
+    padding-top: 0 !important;
+}
+
+/* Reduce bottom padding in the h1 title block */
+.content-panel:first-of-type {
+    padding-bottom: 0.75rem !important;
+}
+
+/* Remove right sidebar (TOC) left border */
+.right-sidebar {
+    border-inline-start: none !important;
+}
+
+/* TOC active item — slightly bolder */
+starlight-toc a[aria-current='true'] {
+    font-weight: 500 !important;
+}
+
+/* TOC padding — level 1 aligned with heading */
+starlight-toc a {
+    padding-inline-start: 0 !important;
+}
+
+/* TOC padding — level 2 */
+starlight-toc ul ul a {
+    padding-inline-start: 1rem !important;
+}
+
+/* Global focus outline — indigo */
+:focus-visible {
+    outline-color: var(--brand-500) !important;
+}
+
+/* Light theme grays — gray-1 darkest → gray-7 lightest */
+:root[data-theme='light'] {
+    --sl-color-bg-nav: var(--neutral-0);
+    --sl-color-gray-1: var(--neutral-900);
+    --sl-color-gray-2: var(--neutral-700);
+    --sl-color-gray-3: var(--neutral-500);
+    --sl-color-gray-4: var(--neutral-400);
+    --sl-color-gray-5: var(--neutral-300);
+    --sl-color-gray-6: var(--neutral-200);
+    --sl-color-gray-7: var(--neutral-100);
+}
+
+/* Dark theme grays — gray-1 lightest → gray-7 darkest */
+:root:not([data-theme='light']) {
+    --sl-color-gray-1: var(--neutral-100);
+    --sl-color-gray-2: var(--neutral-300);
+    --sl-color-gray-3: var(--neutral-400);
+    --sl-color-gray-4: var(--neutral-500);
+    --sl-color-gray-5: var(--neutral-600);
+    --sl-color-gray-6: var(--neutral-700);
+    --sl-color-gray-7: var(--neutral-800);
+    --sl-color-black: var(--neutral-900);
+    --sl-color-bg: var(--neutral-900);
+    --sl-color-bg-nav: var(--neutral-850);
+    --sl-color-bg-sidebar: var(--neutral-850);
+}
+
+/* Light theme — primary darker for contrast on white */
+:root[data-theme='light'] {
+    --docsearch-primary-color: var(--brand-500);
+    --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
+    --docsearch-searchbox-focus-background: #fff;
+    --docsearch-text-color: #1c1e21;
+    --docsearch-muted-color: #969faf;
+    --docsearch-searchbox-background: transparent;
+    --docsearch-key-gradient: linear-gradient(-225deg, #d5dbe4 0%, #f8f8f8 100%);
+    --docsearch-key-shadow: inset 0 -2px 0 0 #cdcde6, inset 0 0 1px 1px #fff, 0 1px 2px 1px rgba(30, 35, 90, 0.4);
+    --sl-color-accent-low: var(--brand-100);
+    --sl-color-accent: var(--brand-500);
+    --sl-color-accent-high: var(--brand-700);
+    --sl-color-text-accent: var(--brand-500);
+    --sl-color-bg-accent: var(--brand-500);
+}
+
+/* Search button */
+.docsearch-btn {
+    height: 36px !important;
+    padding: 0 10px 0 10px !important;
+    border-radius: 8px !important;
+    gap: 6px !important;
+    min-width: 180px !important;
+    max-width: 180px !important;
+    transition: box-shadow 0.15s ease, background-color 0.15s ease !important;
+}
+
+/* Default border */
+:root[data-theme='light'] .docsearch-btn {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.22) !important;
+}
+
+:root:not([data-theme='light']) .docsearch-btn {
+    background: transparent !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+    color: var(--sl-color-white) !important;
+}
+
+/* Hover — light theme */
+:root[data-theme='light'] #docsearch .docsearch-btn:hover,
+:root[data-theme='light'] .docsearch-btn:hover {
+    box-shadow: inset 0 0 0 1.5px var(--sl-color-gray-4) !important;
+    background: transparent !important;
+    color: var(--docsearch-muted-color) !important;
+}
+
+/* Hover — dark theme */
+:root:not([data-theme='light']) #docsearch .docsearch-btn:hover,
+:root:not([data-theme='light']) .docsearch-btn:hover {
+    box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.5) !important;
+    background: transparent !important;
+    color: var(--sl-color-white) !important;
+}
+
+/* Focus */
+.docsearch-btn:focus,
+.docsearch-btn:focus-visible {
+    outline: none !important;
+    box-shadow: inset 0 0 0 2px var(--sl-color-accent), 0 0 0 3px var(--sl-color-accent) !important;
+    background: var(--docsearch-searchbox-focus-background) !important;
+    color: var(--docsearch-text-color) !important;
+}
+
+
+/* Search icon — override hardcoded SVG attributes */
+.docsearch-btn-icon-container svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* Placeholder text — no truncation, no ellipsis */
+.docsearch-btn-placeholder {
+    overflow: visible !important;
+    text-overflow: unset !important;
+    white-space: nowrap !important;
+    font-size: var(--sl-text-sm) !important;
+    padding: 0 !important;
+}
+
+/* kbd key badges */
+.docsearch-btn-keys {
+    gap: 0px !important;
+    margin-left: auto !important;
+    padding-left: 8px !important;
+}
+
+.docsearch-btn-keys > * {
+    margin-right: 4px !important;
+}
+
+.docsearch-btn-key,
+.DocSearch-Commands-Key,
+kbd[class*="docsearch"] {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: 1px solid currentColor !important;
+    border-radius: 6px !important;
+    min-width: 20px !important;
+    height: 20px !important;
+    padding: 0 4px !important;
+    font-size: 11px !important;
+    font-family: var(--__sl-font) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+}
+
+.docsearch-btn-key {
+    color: var(--sl-color-gray-4) !important;
+    border-color: var(--sl-color-gray-5) !important;
+}
+
+:root:not([data-theme='light']) .docsearch-btn-key {
+    color: var(--sl-color-gray-3) !important;
+}
+
+/* Dark theme — primary lighter for contrast on dark */
 :root {
-    --sl-color-text-accent: rgb(92, 137, 252) !important;
-    --docsearch-primary-color: rgb(92, 137, 252) !important;
+    --sl-color-accent-low: var(--brand-900);
+    --sl-color-accent: var(--brand-400);
+    --sl-color-accent-high: var(--brand-200);
+    --sl-color-text-accent: var(--brand-400);
+    --sl-color-bg-accent: var(--brand-400);
+
+    --docsearch-primary-color: var(--brand-500);
     --docsearch-text-color: rgb(28, 30, 33);
     --docsearch-spacing: 12px;
     --docsearch-icon-stroke-width: 1.4;
@@ -16,8 +615,8 @@
     --docsearch-modal-background: rgb(245, 246, 247);
     --docsearch-modal-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.5), 0 3px 8px 0 rgba(85, 90, 100, 1);
     --docsearch-searchbox-height: 56px;
-    --docsearch-searchbox-background: rgb(235, 237, 240);
-    --docsearch-searchbox-focus-background: #fff;
+    --docsearch-searchbox-background: transparent;
+    --docsearch-searchbox-focus-background: transparent;
     --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
     --docsearch-hit-height: 56px;
     --docsearch-hit-color: rgb(68, 73, 80);
@@ -37,16 +636,136 @@
 
 html[data-theme=dark] .docsearch-modal-btn-icon,
 html[data-theme=dark] .docsearch-btn-placeholder {
-    color: #edeef3;
+    color: var(--sl-color-gray-1);
+}
+
+/* Override docsearch primary color globally via container — wins over :root from library */
+#docsearch,
+.docsearch-modal-container {
+    --docsearch-primary-color: var(--sl-color-accent);
+    --docsearch-highlight-color: var(--sl-color-accent);
+}
+
+/* Search modal — light theme palette */
+:root[data-theme='light'] {
+    --docsearch-modal-background:           var(--neutral-0);
+    --docsearch-modal-container-background: rgba(0, 0, 0, 0.4);
+    --docsearch-modal-shadow:               0 8px 32px rgba(0, 0, 0, 0.12);
+    --docsearch-text-color:                 var(--neutral-900);
+    --docsearch-muted-color:                var(--neutral-500);
+    --docsearch-icon-color:                 var(--neutral-500);
+    --docsearch-hit-color:                  var(--neutral-800);
+    --docsearch-hit-background:             var(--neutral-0);
+    --docsearch-hit-shadow:                 0 1px 3px 0 var(--neutral-200);
+    --docsearch-footer-background:          var(--neutral-50);
+    --docsearch-footer-shadow:              0 -1px 0 0 var(--neutral-200);
+    --docsearch-key-gradient:               linear-gradient(-225deg, var(--neutral-200) 0%, var(--neutral-100) 100%);
+    --docsearch-key-shadow:
+        inset 0 -2px 0 0 var(--neutral-300),
+        inset 0 0 1px 1px var(--neutral-0),
+        0 1px 2px 1px rgba(0, 0, 0, 0.12);
+}
+
+/* Search modal — dark theme palette */
+:root:not([data-theme='light']) {
+    --docsearch-modal-background:           var(--neutral-850);
+    --docsearch-modal-container-background: rgba(0, 0, 0, 0.6);
+    --docsearch-modal-shadow:               0 8px 32px rgba(0, 0, 0, 0.5);
+    --docsearch-text-color:                 var(--neutral-100);
+    --docsearch-muted-color:                var(--neutral-400);
+    --docsearch-icon-color:                 var(--neutral-400);
+    --docsearch-hit-color:                  var(--neutral-200);
+    --docsearch-hit-background:             var(--neutral-800);
+    --docsearch-hit-shadow:                 0 1px 3px 0 var(--neutral-950);
+    --docsearch-footer-background:          var(--neutral-900);
+    --docsearch-footer-shadow:              0 -1px 0 0 var(--neutral-700);
+    --docsearch-key-gradient:               linear-gradient(-225deg, var(--neutral-700) 0%, var(--neutral-600) 100%);
+    --docsearch-key-shadow:
+        inset 0 -2px 0 0 var(--neutral-800),
+        inset 0 0 1px 1px var(--neutral-600),
+        0 1px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Search modal — icon */
+.docsearch-modal-search-input-icon {
+    color: var(--sl-color-gray-3) !important;
+}
+
+/* Search modal — input (light) */
+:root[data-theme='light'] .docsearch-modal-search-input-form {
+    background: var(--neutral-50) !important;
+    box-shadow: inset 0 0 0 1.5px var(--neutral-300) !important;
+}
+
+/* Search modal — input (dark) */
+:root:not([data-theme='light']) .docsearch-modal-search-input-form {
+    background: var(--neutral-800) !important;
+    box-shadow: inset 0 0 0 1.5px var(--neutral-600) !important;
+}
+
+:root[data-theme='light'] .docsearch-modal-search-input-form:focus-within {
+    background: var(--neutral-0) !important;
+    box-shadow: inset 0 0 0 2px var(--brand-500) !important;
+}
+
+:root:not([data-theme='light']) .docsearch-modal-search-input-form:focus-within {
+    background: var(--neutral-800) !important;
+    box-shadow: inset 0 0 0 2px var(--brand-400) !important;
 }
 
 @media screen and (max-width: 767px) {
+    .docsearch-btn {
+        min-width: unset !important;
+        width: 32px !important;
+        height: 32px !important;
+        padding: 0 !important;
+        justify-content: center !important;
+    }
+
+    .docsearch-btn-placeholder,
+    .docsearch-btn-keys {
+        display: none !important;
+    }
+
     .social-icons {
         flex-wrap: wrap;
     }
 
     .hero img {
         width: 90%;
+    }
+}
+
+/* Menu button — shared styles for mobile and tablet */
+@media screen and (max-width: 799px) {
+    starlight-menu-button button {
+        background-color: transparent !important;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.22) !important;
+        border-radius: 8px !important;
+        width: 32px !important;
+        height: 32px !important;
+        min-width: unset !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        top: calc((var(--sl-nav-height) - 32px) / 2) !important;
+        color: var(--sl-color-gray-2) !important;
+    }
+}
+
+/* Menu button dark theme — shared across mobile and tablet */
+:root:not([data-theme='light']) starlight-menu-button button {
+    background-color: transparent !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2) !important;
+    color: var(--sl-color-white) !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 799px) {
+    starlight-menu-button button {
+        width: 36px !important;
+        height: 36px !important;
+        top: calc((var(--sl-nav-height) - 36px) / 2) !important;
     }
 }
 
@@ -60,6 +779,7 @@ html[data-theme=dark] .docsearch-btn-placeholder {
         overflow-x: hidden;
     }
 }
+
 
 @media screen and (min-width: 1024px) {
     .hero {
@@ -79,7 +799,7 @@ html[data-theme=dark] .docsearch-btn-placeholder {
     }
 
     .hero .tagline  {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -89,4 +809,8 @@ html[data-theme=dark] .docsearch-btn-placeholder {
         top: 40px;
         right: -260px;
     }
+}
+
+.social-icons::after {
+    display: none !important;
 }
