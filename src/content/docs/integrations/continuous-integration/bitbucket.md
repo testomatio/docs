@@ -69,6 +69,12 @@ You can set and pass more input variables if you set them in [Environment Config
 
 :::
 
+:::note
+
+Note: if pipeline var exists in configuration use custom selector with specified pipeline, instead of default selector
+
+:::
+
 6. Click on **'Save'** button to save the connection.
 
 ![Testomatio - Bitbucket](./images/Bitbucket_6.png)
@@ -96,3 +102,5 @@ OR
 This will start a new job in BitBucket, please check that the job was successfully triggered and completed. After the job has finished, a run report will be available on Runs page of Testomat.io.
 
 ![Testomatio - Bitbucket](./images/Bitbucket_8.png)
+
+
