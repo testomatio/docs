@@ -1,22 +1,22 @@
 ---
 title: Manual testing – Classic
-description: Learn how to create and execute manual tests in Testomat.io using the Classic mode. This tutorial covers project setup, test case creation, manual test runs, test plans, and bug reporting.
+description: Learn how to create and execute manual tests in Testomat.io using the Classic approach. This tutorial covers project setup, test case creation, manual test runs, test plans, and bug reporting.
 type: article
 url: https://docs.testomat.io/tutorials/manual-testing-classic
 head:
   - tag: meta
     attrs:
       name: keywords
-      content: manual testing, classic mode, test case, test run, test plan, bug report, Testomat.io
+      content: manual testing, classic approach, test case, test run, test plan, bug report, Testomat.io
 ---
 
-Testomat.io supports two modes for manual test design: **Classic** and **BDD**.
+Testomat.io supports two approaches for manual test design: **Classic** and **BDD**.
 
-**Classic** mode stores test descriptions in Markdown format. It suits teams that write freeform test cases — steps, expected results, preconditions — without a strict Gherkin structure. Use Classic when your tests are written in plain language and you want full flexibility in how you describe them.
+The **Classic** approach stores test descriptions in Markdown format. It suits teams that write freeform test cases — steps, expected results, preconditions — without a strict Gherkin structure. Use the Classic approach when your tests are written in plain language and you want full flexibility in how you describe them.
 
-**BDD** mode uses Gherkin syntax (`Given / When / Then`) and is the right choice when your team follows behaviour-driven development or shares scenarios between manual and automated tests.
+The **BDD** approach uses Gherkin syntax (`Given / When / Then`) and is the right choice when your team follows behaviour-driven development or shares scenarios between manual and automated tests.
 
-This tutorial covers the **Classic workflow**: from creating a project to finishing a run and reporting bugs.
+This tutorial covers the **Classic approach**: from creating a project to finishing a run and reporting bugs.
 
 ![Testomat.io - Manual testing Classic workflow](./images/manual-testing-classic-workflow.png)
 
@@ -35,7 +35,7 @@ Before creating a project, make sure you have a company set up. See [How to Crea
 
 ![Create a project butto ](./att1_6310.png)
 
-2. Select **Classical** mode.
+2. Select **Classical**.
 3. Enter a name in the **Project Title** field.
 
 (Optional) Enable **Fill demo data** to pre-populate the project with sample test cases.
@@ -45,6 +45,15 @@ Before creating a project, make sure you have a company set up. See [How to Crea
 ![Create project flow](./att2_6310.png)
 
 Testomat.io creates the project and opens the Tests page with a README panel on the right. Close the panel to start working.
+
+:::note
+
+Before adding tests, check a few settings in **Project → Settings**:
+
+- **Purge Old Runs** — runs are automatically and permanently deleted after 90 days by default (max 365 days). Update this value before you start executing tests; see [Project Settings](https://docs.testomat.io/management/project/settings/#purge-old-runs)
+- **Timezone** — by default, all actions display in UTC+00:00. Set your project timezone so timestamps align with your team's location; see [Project Timezone](https://docs.testomat.io/management/project/settings/#project-timezone). For Created/Executed timestamps in runs, set your personal timezone in **User Account**
+
+:::
 
 
 ## How to Set Up Folders and Suites
