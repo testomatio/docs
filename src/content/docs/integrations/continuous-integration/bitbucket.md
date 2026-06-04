@@ -71,7 +71,7 @@ You can set and pass more input variables if you set them in [Environment Config
 
 :::note
 
-If pipeline var exists in configuration use custom selector with specified pipeline, instead of default selector
+If a pipeline is specified in the configuration, the Bitbucket integration will trigger a custom pipeline instead of the default one.
 
 :::
 
