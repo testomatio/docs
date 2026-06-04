@@ -71,7 +71,7 @@ You can set and pass more input variables if you set them in [Environment Config
 
 :::note
 
-Note: if pipeline var exists in configuration use custom selector with specified pipeline, instead of default selector
+If pipeline var exists in configuration use custom selector with specified pipeline, instead of default selector
 
 :::
 
