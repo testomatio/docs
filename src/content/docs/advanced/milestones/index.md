@@ -25,9 +25,7 @@ This enables end-to-end test management aligned with project phases, providing c
 
 ## How to Create a Milestone
 
-**Milestone** lives at the company level but can be scoped down to specific projects. It's a tracking mechanism (like a Sprint, Release, or Version) that can be linked to various items in the system (Tests, Suites, Plans, Runs, Rungroups, Requirements). Milestones help organize and track work across related items with state management, automatic propagation, and project scoping.
-
-Milestones live on **company-level** and can be assigned to specific or all projects within one company.
+**Milestone** lives at the **company-level** but can be scoped down to specific projects. It's a tracking mechanism (like a Sprint, Release, or Version) that can be linked to various items in the system (Tests, Suites, Plans, Runs, Rungroups, Requirements). Milestones help organize and track work across related items with state management, automatic propagation, and project scoping.
 
 **To create Milestone:**
 
@@ -58,7 +56,7 @@ Milestones are automatically grouped by type name in a case-insensitive manner. 
 
 ## How to Edit & Delete Milestone
 
-TYou can modify or remove milestones at any point using two different ways: from main **'Milestones'** page and from the **'Milestone details'** page.
+You can modify or remove milestones at any point using two different ways: from main **'Milestones'** page and from the **'Milestone details'** page.
 
 **Edit a milestone from the main 'Milestones' page:**
 
