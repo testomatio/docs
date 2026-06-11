@@ -30,7 +30,7 @@
     "@astrojs/markdown-remark": "^6.3.10",
     "@astrojs/starlight": "^0.37.6",
     "@octokit/core": "^5.1.0",
-    "astro": "^5.17.2",
+    "astro": "^6.4.6",
     "astro-breadcrumbs": "^3.3.3",
     "astro-og-canvas": "^0.10.1",
     "astro-rehype-relative-markdown-links": "0.18.1",
