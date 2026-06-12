@@ -191,7 +191,10 @@ In previous section we used `tag` in the query. `tag` is an allowed query variab
 | suite         | Match tests inside a folder or suite          | `suite % 'Checkout'`                                                                                                     |
 |               |                                               | `suite == '{SUITE_ID}'`                                                                                                  |
 | test          | Match tests by title or ID                    | `test % 'User login'`                                                                                                    |
-|               |                                               | `test == '{TEST_ID}'`                                                                                                    |
+|               |                                               | `test == '{TEST_ID}'`|
+| milestone          | Match tests by milestone title                    | `milestone == 'Milestone-name'` |
+| | | `milestone != 'Milestone-name'` |
+| | | `milestone in ['Milestone-A', 'Milestone-B']` |
 
 #### Examples
 
@@ -275,6 +278,9 @@ Before diving into the details of variables, it's important to understand that v
 | updated_at        | Match runs by last update                                            | `updated_at >= 5.days_ago`                                    |
 | launched_at       | Match runs by launch time                                            | `launched_at > 2.days_ago AND launched_at < 1000.seconds_ago` |
 | finished_at       | Match runs by finish time                                            | `finished_at < 7.days_ago`                                    |
+| milestone          | Match runs by milestone title                    | `milestone == 'Milestone-name'` |
+| | | `milestone != 'Milestone-name'` |
+| | | `milestone in ['Milestone-A', 'Milestone-B']` |
 
 #### Examples
 

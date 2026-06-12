@@ -313,15 +313,22 @@ export default defineConfig({
 							items: [
 								{ label: 'Overview', link: '/advanced/ai-powered-features' },
 								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features/ai-powered-features' },
-								{label: 'AI-Requirements', link: '/advanced/ai-powered-features/ai-requirements'},
-								{label: 'AI-Agents', link: '/advanced/ai-powered-features/ai-agents'},
+								{ label: 'AI-Requirements', link: '/advanced/ai-powered-features/ai-requirements' },
+								{ label: 'AI-Agents', link: '/advanced/ai-powered-features/ai-agents' },
 							],
 						},
 						{
 							label: 'API Access',
 							collapsed: true,
 							items: [
-								{ label: 'API Access', link: '/advanced/api-access'}
+								{ label: 'API Access', link: '/advanced/api-access' }
+							],
+						},
+						{
+							label: 'Milestones',
+							collapsed: true,
+							items: [
+								{ label: 'Milestones', link: '/advanced/milestones' }
 							],
 						},
 					]
