@@ -17,7 +17,7 @@ jobs:
          node-version: 22.x
      - uses: pnpm/action-setup@v6
        with:
-         version: 10.30.0
+         version: 10.34.3
      - run: pnpm install
      - run: cd src/scripts && pnpm install
      - run: cd src/scripts && node runok.cjs docs
