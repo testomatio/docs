@@ -1,4 +1,5 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
+import cloudflare from '@astrojs/cloudflare';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
 import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
@@ -10,6 +11,9 @@ const options = {
 };
 
 export default defineConfig({
+	adapter: cloudflare({
+		prerenderEnvironment: 'node'
+	}),
 	site: 'https://docs.testomat.io',
 	image: {
 		service: passthroughImageService()
