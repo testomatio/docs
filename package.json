@@ -22,7 +22,6 @@
   "devDependencies": {
     "axios": "^1.13.5",
     "dasherize": "^2.0.0",
-    "esbuild": "^0.28.1",
     "glob": "^10.4.2",
     "runok": "^0.9.3",
     "slugify": "^1.6.9"
