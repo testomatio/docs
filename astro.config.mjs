@@ -4,12 +4,14 @@ import starlightImageZoom from 'starlight-image-zoom';
 import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
 import starlightLinksValidator from 'starlight-links-validator';
 import redirects from "./redirects.js";
+import cloudflare from '@astrojs/cloudflare';
 
 const options = {
     collectionBase: false,
 };
 
 export default defineConfig({
+	adapter: cloudflare(),
 	site: 'https://docs.testomat.io',
 	image: {
 		service: passthroughImageService()
