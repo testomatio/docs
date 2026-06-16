@@ -10,12 +10,12 @@ jobs:
    name: Test
    runs-on: ubuntu-latest
    steps:
-     - uses: actions/checkout@v5
+     - uses: actions/checkout@v6
      - name: Setup node
        uses: actions/setup-node@v6
        with:
          node-version: 22.x
-     - uses: pnpm/action-setup@v4
+     - uses: pnpm/action-setup@v6
        with:
          version: 11.7.0
      - run: pnpm install
