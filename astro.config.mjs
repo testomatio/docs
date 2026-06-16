@@ -11,6 +11,7 @@ const options = {
 };
 
 export default defineConfig({
+	output: 'hybrid',
 	adapter: cloudflare({
 		prerenderEnvironment: 'node'
 	}),
