@@ -16,8 +16,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "docs": "node ./src/scripts/runok.cjs docs",
-    "publish": "pnpm run docs && pnpm run build",
-    "postinstall": "pnpm rebuild sharp"
+    "publish": "pnpm run docs && pnpm run build"
   },
   "license": "MIT",
   "devDependencies": {
