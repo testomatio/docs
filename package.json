@@ -16,7 +16,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "docs": "node ./src/scripts/runok.cjs docs",
-    "publish": "pnpm run docs && pnpm run build"
+    "publish": "pnpm --ignore-scripts run docs && pnpm --ignore-scripts run build"
   },
   "license": "MIT",
   "devDependencies": {
