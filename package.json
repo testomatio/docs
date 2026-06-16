@@ -45,12 +45,5 @@
     "starlight-image-zoom": "^0.14.2",
     "starlight-links-validator": "^0.24.1"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp",
-      "@img/sharp-linux-x64"
-    ]
-  },
   "type": "module"
 }
