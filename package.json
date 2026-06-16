@@ -40,8 +40,8 @@
     "dotenv": "^17.4.2",
     "gray-matter": "^4.0.3",
     "meilisearch-docsearch": "^0.8.0",
-    "schema-dts": "^1.1.5",
-    "sharp": "^0.34.5",
+    "schema-dts": "^2.0.0",
+    "sharp": "^0.35.1",
     "starlight-image-zoom": "^0.14.2",
     "starlight-links-validator": "^0.24.1"
   },
