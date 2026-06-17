@@ -87,6 +87,7 @@ export default defineConfig({
 						items: [
 							{ label: 'Overview', link: '/tutorials'},
 							{ label: 'Manual testing – Classic', link: '/tutorials/manual-testing-classic'},
+							{ label: 'Manual testing – BDD', link: '/tutorials/manual-testing-bdd'},
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
 						],
