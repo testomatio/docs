@@ -182,6 +182,21 @@ No data is rerouted through a shared/default AI provider when customer-managed c
 
 > **Note:** When a Custom AI Provider is configured, zero data is sent to Groq. All prompts, chats, agents, summaries, and AI processing **run exclusively through the customer’s configured provide**r, with no fallback to Testomat.io default providers.
 
+#### AI Fallback Provider
+
+Automatically retry failed AI requests through OpenRouter when the primary
+provider is unavailable. Enable this only if you consent to sending your data
+to OpenRouter.
+
+:::caution
+Take this seriously. Routing requests through OpenRouter does not grant data
+isolation — your data is sent to a third-party provider. Use at your own risk.
+:::
+
+
+- [OpenRouter Terms of Service](https://openrouter.ai/terms)
+- [OpenRouter Privacy Policy](https://openrouter.ai/privacy)
+
 
 ## Owner Access To Manage Team Projects
 
