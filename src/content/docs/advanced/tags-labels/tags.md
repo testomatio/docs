@@ -83,13 +83,7 @@ This method allows you to efficiently manage tags across multiple items, ensurin
 
 ## Managing Inherited Tags
 
-When you add a tag to a **Folder** or **Suite**, that tag automatically appears on every child Suite and Test inside it.
-
-*Example:* Add `@regression` to Folder **Payments** -> all Tests in **Payments** will show `@regression`. \
-
-You cannot remove an inherited tag from a single child item. To remove the tag from child items, remove it from the same level where it was applied (Folder or parent Suite).
-
-*Example:* If `@regression` was added to Folder **Payments**, remove `@regression` from **Payments** to remove it from all child items. \
+Tags applied directly at the **Suite** or **Folder** level follow a **'top-down'** rule:, all nested elements (child Suites or Tests) automatically inherit these tags. Because these tags belong to the parent, they cannot be deleted from individual child tests. You can only remove the tags at the same level where they were originally applied.
 
 :::note
 Partial removal (e.g., deleting a few tags from a single test inside a tagged Suite) is not supported.
