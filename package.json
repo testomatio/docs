@@ -42,7 +42,7 @@
     "meilisearch-docsearch": "^0.8.0",
     "pnpm": "10.34.3",
     "schema-dts": "^2.0.0",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.2",
     "starlight-image-zoom": "^0.13.2",
     "starlight-links-validator": "^0.19.2"
   },
