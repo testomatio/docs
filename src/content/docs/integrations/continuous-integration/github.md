@@ -79,11 +79,23 @@ You can set and pass more input variables if you set them in [Environment Config
 
 :::
 
+:::note
+
+The `ref` parameter specifies which branch to run the workflow on. The provided workflow must be registered in the repository's GitHub Actions and must exist in the branch referenced by ref. A GitHub Action is considered registered if it exists in the project's default branch or has been triggered at least once.
+
+:::
+
 7. Click on **'Save'** button to save the connection.
 
 ![Testomatio - GitHub](./images/Github_6.png)
 
 8a. When the connection is saved, open **'Runs'** page and select `Run Automated Tests in CI` option in extra menu.
+
+:::note
+
+When using the "Test connection" button, workflow lookup is performed against the repository's default branch. The ref parameter from the config is ignored. This is a GitHub Actions API limitation.
+
+:::
 
 ![Testomatio - CI Run](./images/CI_Run_2.png)
 
