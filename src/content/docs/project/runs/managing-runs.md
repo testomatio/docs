@@ -235,6 +235,20 @@ When re-running tests, selecting **Select all** or leaving no tests selected pro
 
 :::
 
+#### Scheduled Runs
+
+Create a run test in advance without launching it immediately. After creating and configuring the run:
+
+1. Click **Save** to store the Run in a **Scheduled** state.
+2. At execution time, open the run and click **Start**.
+
+Scheduled Runs are useful for:
+
+* Release regression testing
+* Planned testing activities
+* Recurring QA cycles
+* Coordinating testing across multiple team members
+
 #### Keep Values
 
 The **'Keep values'** option is only available when **'Create new run'** is enabled. It controls whether test results are carried over into the new run.
