@@ -20,6 +20,8 @@ When you add a **Requirement source** (Jira issue, Confluence page, PDF file, et
 
 ![Testomat.io - AI-powered](./images/Requirement_page_details_1.gif)
 
+AI can analyze requirement descriptions and suggest relevant test data examples that support broader test coverage and more effective validation of business requirements.
+
 **Based on the requirement analysis, you’ll be offered two intelligent options:**
 
 - **Generate New Suites:** Create a new test suite with AI-suggested test cases.
