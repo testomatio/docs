@@ -95,6 +95,17 @@ Use **Pin Sidebar** when navigating multiple tests in sequence, or during QA aud
 - Continuous focus during QA activities
 - Less UI friction throughout your workflow
 
+### Preview Tests in Branches
+
+You can review tests created inside a branch without switching to that branch. Branch preview allows you to:
+
+* See newly created tests
+* Review changes before switching branches
+* Compare work between branches
+* Reduce unnecessary branch switching
+
+This helps teams review changes faster and improves collaboration during feature development.
+
 ## Suites and Folders
 
 Unlike other test management systems, **Testomat.io doesn't allow suite to include other suites and tests**. That's why you can either create a suite (a collection of tests) or folder (collection of suites).
