@@ -35,6 +35,12 @@ There are two main types of access tokens in Testomat.io:
 
 ---
 
+## Public API v2
+
+Public API v2 provides a user-friendly and agent-friendly interface with a consistent request and response structure across all endpoints. It is designed to simplify integrations and make API behavior more predictable.
+
+---
+
 ## API Authentication with either General Token or Email + Password
 
 Before interacting with the Testomat.io API, you must authenticate and obtain a JWT token, which is required for all subsequent requests.
