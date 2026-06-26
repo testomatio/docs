@@ -606,3 +606,4 @@ Now you can see the whole test case history
 ## Search in Manual Runs
 Search functionality is available in manual runs, allowing users to quickly find specific tests and suites within a run.
 This makes it easier to navigate large manual runs by filtering items based on names or keywords, without scrolling through the full list.
+
