@@ -602,3 +602,7 @@ To check the test case history, follow these steps:
 Now you can see the whole test case history
 
 ![Testomat.io - Test Case History](./images/test_case_history_2.png)
+
+## Search in Manual Runs
+Search functionality is available in manual runs, allowing users to quickly find specific tests and suites within a run.
+This makes it easier to navigate large manual runs by filtering items based on names or keywords, without scrolling through the full list.
