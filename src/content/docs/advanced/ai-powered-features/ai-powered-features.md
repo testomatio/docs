@@ -16,6 +16,9 @@ Testomat.io uses **Groq** (not Grok designed by xAI by Elon Musk) as the main AI
 
 **Groq** uses opensource models like Llama or Mixtral and doesn't train its own models. However, we urge you to ensure compliance with data privacy regulations when sharing sensitive information. Enable AI features only if you are sure that your data is not sensitive. 
 
+
+Testomat.io supports **Amazon Bedrock** as a custom AI provider, allowing teams to use Testomat.io AI features with their own configured models. This gives teams more flexibility and control over AI-driven workflows while staying compatible with Testomat.io AI capabilities.
+
 :::note
 
 By default, AI-powered generative features are disabled for your confidence. 
