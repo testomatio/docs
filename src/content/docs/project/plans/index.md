@@ -310,6 +310,23 @@ Use the **Filter Bar** for more advanced multi-label filtering, and the **Quick 
 
 :::
 
+### Tree View for Plans
+
+Plans can be displayed in a hierarchical tree structure that mirrors the test organization. To switch to tree view, open a plan and click the tree view icon in the top right corner of the test list.
+
+You can:
+
+* Expand folders
+* Collapse sections
+* Navigate large test sets faster
+* Focus on specific areas of a project
+
+:::note
+
+This is particularly useful for large projects containing hundreds or thousands of tests.
+
+:::
+
 ### Example Use Cases
 
 - QA lead wants to see only Regression plans – assign a 'Regression' label to all relevant plans and filter by it
