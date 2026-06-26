@@ -147,6 +147,23 @@ You always need explicitly select which test cases to add or remove.
 
 This feature accelerates test creation, enhances coverage by identifying overlooked scenarios, and streamlines workflows by reducing manual effort while maintaining test quality.
 
+### AI Test Data Suggestions
+
+Instead of manually creating input values, AI can generate realistic test data based on a test case description.
+
+Suggested data can help:
+
+* Increase test coverage
+* Discover edge cases
+* Reduce preparation time
+* Improve manual and automated testing scenarios
+
+:::note
+
+AI-generated data can be used as-is or modified before execution.
+
+:::
+
 ## Suggest Test Case Description
 
 This feature allows you to create test case description based just on its name or improve description that you previously added to your test case.
