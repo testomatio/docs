@@ -60,6 +60,9 @@ For instance, here is the rule for all manual runs with **"Release"** word in ti
 
 ![Testomat.io - Basic Rules](./images/Basic_Rules_1.png)
 
+## Quick Toggle for Report Notifications
+You can enable or disable report notifications directly from the notification profile using a quick toggle. Switch notifications on or off without changing the full configuration. This is useful when notifications need to be temporarily paused during debugging or active development.
+
 ## Advanced Rules
 
 The advanced rules engine allows writing conditions in a special expression language similar to Ruby or JavaScript.
