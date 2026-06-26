@@ -85,6 +85,20 @@ Markdown is a lightweight and versatile markup language that revolutionizes the 
 
 **Consistency and Templates:** Markdown's consistent structure allows for the creation of reusable test case templates. This ensures that test cases adhere to a standardized format, streamlining comprehension and navigation across a myriad of test scenarios.
 
+### Rich Editor for Classical Test Projects
+
+The editor follows a block-based layout, making it easier to structure and maintain detailed test cases.
+
+It supports adding expected results for each step and attaching images directly within steps, improving clarity and documentation quality. The editor is fully compatible with the markdown format, enabling more effective use of AI features when creating and updating tests. \
+
+:::note
+
+The Classical editor page is already part of the tree.
+
+:::
+
+The new editor improves test readability and structure, simplifies creation of detailed step-by-step scenarios, and enhances AI-assisted workflows through markdown compatibility.
+
 ### Examples of Markdown Written Test Cases
 
 In the realm of Markdown-based test case creation, the handling of test unveils an array of versatile techniques. Below, we delve into several illustrative examples that showcase various methods for incorporating steps and expected results into your test cases.
