@@ -43,6 +43,15 @@ To restore all settings to default:
 
 Let's have more close look at each widget!
 
+## AI Analytics Chat
+ Chat with Analytics is an AI-powered feature that helps to get specific insights from project analytics data. It works across analytics widgets and metrics, and you can quickly access relevant information without manually exploring dashboards. is specified. Example: ask which tests are most unstable, which areas have the highest failure rate, or how execution trends changed over time.
+
+:::note
+
+By default, metrics are calculated over a 30-day window unless a different range is specified. 
+
+:::
+
 ## Analytics range
 
 Analytics data loads for the last 4 weeks by default. But you have the option to change the date range to suit your specific needs.
