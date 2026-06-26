@@ -41,6 +41,24 @@ Public API v2 provides a user-friendly and agent-friendly interface with a consi
 
 ---
 
+## Testomat.io MCP Server v2.0
+
+The MCP Server supports the Model Context Protocol (MCP), enabling AI assistants to interact directly with the Testomat.io Public API v2.
+
+Key capabilities include:
+
+- Full CRUD support for core entities
+- Read-only tags access
+- Issues management
+- Smart search
+- Issue linking
+- API compatibility layer
+- Run management
+- TQL-based search standardization
+- Safe TQL usage guidance
+
+---
+
 ## API Authentication with either General Token or Email + Password
 
 Before interacting with the Testomat.io API, you must authenticate and obtain a JWT token, which is required for all subsequent requests.
