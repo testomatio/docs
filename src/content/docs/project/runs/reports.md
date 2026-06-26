@@ -88,6 +88,23 @@ Customized Test Cases view within a Run Report automatically applies to all Run 
 
 :::
 
+### Tree View for Runs
+
+Runs can be displayed in a hierarchical tree structure that mirrors the test organization. To switch to tree view, open a run and click the tree view icon in the top right corner of the test list.
+
+You can:
+
+* Expand folders
+* Collapse sections
+* Navigate large test sets faster
+* Focus on specific areas of a project
+
+:::note
+
+This is particularly useful for large projects containing hundreds or thousands of tests.
+
+:::
+
 ## Run Report Extended View
 
 If you click the **'Report'** button from Basic Run Report view, you will see the extended view of the Run Report.
