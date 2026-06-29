@@ -154,12 +154,16 @@ This feature accelerates test creation, enhances coverage by identifying overloo
 
 Instead of manually creating input values, AI can generate realistic test data based on a test case description.
 
+![Testomat.io - AI-powered](./images/613-suggest-params-1-2.png)
+
 Suggested data can help:
 
 * Increase test coverage
 * Discover edge cases
 * Reduce preparation time
 * Improve manual and automated testing scenarios
+
+![Testomat.io - AI-powered](./images/613-suggest-params-2-2.png)
 
 :::note
 
