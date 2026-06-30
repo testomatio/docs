@@ -16,10 +16,13 @@ In software development, a **milestone** represents a significant checkpoint or 
 
 **With Milestones in Testomat.io, you can:**
 
-- Create milestones to define testing scope for a specific phase.
-- Assign tests and test runs to a milestone.
-- Execute tests within the context of a milestone.
-- Generate reports based on milestone results.
+- Create milestones for releases, sprints, or project phases
+- Assign tests and test runs
+- Link Requirements
+- Link Test Plans
+- Track Requirement status
+- Track Test Plan progress
+- Generate Milestone reports
 
 This enables end-to-end test management aligned with project phases, providing clear visibility into progress and outcomes for each milestone.
 
@@ -185,6 +188,18 @@ For more complex queries or when building custom dashboards, you can use the TQL
 4. Click **'Apply'** button.
 
 ![Testomat.io - Filter by Milestone](./images/filter_milestone_2.png)
+
+## Requirements and Plans in Milestones
+
+Milestones can track the status of linked Requirements and Test Plans in addition to test execution. Benefits include:
+
+* Track Requirement status within a Milestone
+* Monitor linked Test Plans
+* View testing progress from a single screen
+* Improve release readiness tracking
+* Give product owners a consolidated view of testing progress
+
+This provides a clear overview of what has been completed, what is still in progress, and what remains before a release or sprint is finished.
 
 ## Milestone Analytics & Progress Reports
 
