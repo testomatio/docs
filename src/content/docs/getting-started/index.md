@@ -73,7 +73,7 @@ To create a suite:
 
 Another way to create suite:
 
-1. Click ![action menu button](./images/three-dots-icon.png).
+1. Click action menu button (...).
 2. Select **Create more suites** from the menu.
 
 ![create more suite button](./images/suite1.png)
@@ -172,8 +172,7 @@ Read full article: [Import Automated Tests](https://docs.testomat.io/getting-sta
 To add automated tests to your project, you must import them from the source code, a CSV file, or an existing TestRail suite. To import automated tests, follow these steps:
 
 1. Open your project.
-2. Navigate to the actions menu 
-(![action menu button](./images/three-dots-icon.png)).
+2. Navigate to the actions (...).
 3. Click **Import automated tests**.
 
 Alternatively:
@@ -181,24 +180,12 @@ Alternatively:
 1. Go to the Imports menu.
 2. Navigate to the **Import** dropdown menu.
 3. Select an import option:
-   <td>**Import from Source Code**
 
-   </td>
-   <td>Imports tests directly from your local project or repository.
-
-   </td>
-   <td>**Import from CSV**
-
-   </td>
-   <td>Imports tests from a CSV file and converts it to one of the available formats.
-
-   </td>
-   <td>**Import from TestRail**
-
-   </td>
-   <td>Imports tests from an existing TestRail suite.
-
-   </td>
+   | Import option | Description |
+   |---|---|
+   | **Import from Source Code** | Imports tests directly from your local project or repository. |
+   | **Import from CSV** | Imports tests from a CSV file and converts it to one of the available formats. |
+   | **Import from TestRail** | Imports tests from an existing TestRail suite. |
 
 In the **Import** section, pick the framework, programming language and operating system you are using for testing.
 
