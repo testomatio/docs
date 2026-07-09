@@ -484,6 +484,31 @@ You can add tests from plans and additional tests at the same time. For example:
 
 ![Edit existing run](./images/gif1-7865.gif)
 
+## How to Remove and Re-add a Test in a Run
+
+Removing a test does not delete it. You can remove a test from a running test run and bring it back later. Testomat.io marks the test as excluded and keeps it in the run configuration.
+
+### How to Return a Test to the Run
+
+If you remove a test and then add the same test again, the run holds two statuses at once, excluded and included. The excluded status has higher priority, so the test stays out of the run's test list, even though Testomat.io confirms it was added.
+
+If you only removed the test:
+
+1. Open the run and go to configuration **details**.
+2. Find the removed test and cancel the deletion.
+3. The test returns to the run.
+
+![Test configuration details](./images/574-test-config.png)
+
+If you removed the test and then added it again, it now shows both a removed and an added status:
+
+1. Open configuration **details** and find the test.
+2. Click the `x` next to the removed status to clear the exclusion.
+
+The added status then takes effect, and the test appears in the run.
+
+![Removing a deleted test from test configuration](./images/574-remove-from-test-config.png)
+
 ## How to Adjust Test Case Description Block
 
 In case you want to adjust the size of the test description block to see more details without scrolling or to minimize it, you can easily resize it by following these steps:
