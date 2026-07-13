@@ -90,6 +90,7 @@ export default defineConfig({
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
 							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
+							{ label: 'Manual Testing Classic', link: '/tutorials/manual-testing-classic'},
 						],
        				},
         			{
