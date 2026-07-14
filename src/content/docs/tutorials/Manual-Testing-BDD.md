@@ -17,7 +17,7 @@ head:
 
 Welcome!
 
-This tutorial walks you through manual testing in a BDD project. BDD means you write tests as plain-language scenarios with Given, When, and Then, so both technical and non-technical people can read them.
+This tutorial walks you through manual testing in a BDD project. BDD means you write tests as plain-language scenarios with Given, When, and Then.
 
 What you will do:
 
