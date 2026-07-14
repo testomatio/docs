@@ -87,6 +87,7 @@ export default defineConfig({
 					label: 'Tutorials',
 						items: [
 							{ label: 'Overview', link: '/tutorials'},
+							{ label: 'Using AI in Testing', link: '/tutorials/using-ai-in-testing'},
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
 							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
