@@ -1,6 +1,6 @@
 ---
 title: Using AI in Testing
-description: Learn how to use AI in your testing workflow with Testomat.io. This guide walks you through chatting with your tests, suggesting test cases and descriptions, generating code from test cases, reviewing test quality, finding duplicates, and explaining automated test failures based on logs.
+description: Learn how to use AI across a full testing cycle in Testomat.io. This guide walks you through enabling AI, connecting a custom AI provider, adding a requirement, generating tests and descriptions from it, analyzing a run, and chatting with your analytics.
 type: article
 url: https://docs.testomat.io/tutorials/using-ai-in-testing
 head:
@@ -12,21 +12,23 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: AI in testing, Testomat.io, AI-powered features, AI Agents, chat with tests, suggest test cases, generate test case description, generate code, test case quality review, find duplicates, explain autotest failures, analyze logs, test coverage, test design, test management, software testing, QA
+      content: AI in testing, Testomat.io, AI-powered features, AI Agents, AI requirements, generate tests from requirements, suggest test case description, custom AI provider, clusterize errors, analyze failed tests, chat with analytics, test coverage, test design, test management, software testing, QA
 ---
 
 Welcome! 
 
-This tutorial turns on Testomat.io's AI features and shows you the practical ones you will use most: generating test data on a test, chatting with your tests to explore them, and summarizing a suite. AI here is a helper that saves you typing and digging, not a replacement for your judgment.
+This tutorial turns on Testomat.io's AI features and walks them through a full testing cycle: you start from a requirement, generate tests from it, describe them, then analyze the run and question your analytics. AI here is a helper that saves you typing and digging, not a replacement for your judgment.
 
 ![Testomat.io AI capabilities chart](./images/working-with-ai/ai-capabilities.png)
 
 What you will do:
 
 1. Enable AI for your company.
-2. Generate test data on a test.
-3. Chat with your tests.
-4. Summarize a suite from its tests.
+2. Add a requirement to your project.
+3. Generate tests from the requirement.
+4. Generate a test description.
+5. Analyze a run with AI.
+6. Chat with Analytics.
 
 ## Before you start
 
@@ -50,64 +52,112 @@ To integrate and begin working with AI features in your Testomat.io account, fol
 
 Once enabled, the AI actions appear across your project. See [AI settings](https://docs.testomat.io/management/company/administration/#ai) for the details.
 
-### Use your own Amazon Bedrock models
+### Use your own AI provider
 
-If your team wants more control over which model runs, Testomat.io supports Amazon Bedrock as a custom AI provider. You point Testomat.io at your own configured Bedrock models and still use all the same AI features. This gives you more flexibility over AI-driven workflows while staying compatible with Testomat.io's AI capabilities.
+If your company prefers an AI provider it already trusts, Testomat.io can connect to a third-party service such as OpenAI, Anthropic, and others. You keep all the same AI features while choosing the provider that fits your security and compliance rules.
 
-1. In the AI settings, toggle the **Custom AI Provider** switch.
-2. Select **Bedrock** as the provider.
-3. Add your Bedrock configuration.
-4. Click **Save Settings**.
+1. In the AI settings, turn on the **Custom AI Provider** option.
+2. Select a provider from the dropdown.
+3. Enter the **API Key**.
+4. Enter the **Model** name.
+5. Enter **Max Tokens**, if your provider requires it.
+6. Click **Save Settings**.
 
-![The AI provider settings with Amazon Bedrock selected](./images/working-with-ai/2-custom-provider.png)
-
-## Generate test data on a test
-
-Instead of creating input values by hand, let AI generate realistic test data based on the test's description. This widens your coverage, surfaces edge cases you might miss, cuts preparation time, and improves both manual and automated scenarios. 
-
-1. Open a test that has a description.
-2. Access the AI actions menu (next to the **Improve Description** button).
-3. Select **Suggest Test Data Examples**.
-4. Review the suggested values, and keep the ones you want.
-
-![The AI data suggestion list showing suggested values on a test](./images/working-with-ai/3-ai-test-data.png)
+![The AI provider settings with a custom provider selected](./images/working-with-ai/2-custom-provider.png)
 
 :::note
 
-AI-generated data can be used as-is or modified before you run. For how parameters work, see [Parameters](https://docs.testomat.io/advanced/living-doc/#tests-parameters).
+Once a custom provider is connected, every AI request runs through it. Testomat.io does not fall back to a shared provider — if your provider is unavailable, the request fails and you are notified. See [Custom AI Provider](https://docs.testomat.io/management/company/administration/#custom-ai-provider) for the full reference.
 
 :::
 
-## Chat with your tests
+## Add a requirement
 
-Chat with Tests is an assistant that reads your test repository and answers questions about it, so you can understand a large set of tests without clicking through every one.
+Requirements are what your tests exist to cover, so the cycle starts here. Link one to your project and AI can generate tests from it.
 
-1. Go to the **Tests** page.
-2. Click the **Chat with Tests** button in the header.
-3. Type your prompt and click **Send**.
+First, set up the integration for your requirement source. See [Jira](https://docs.testomat.io/integrations/issues-management/jira/#connecting-to-jira-project) or [Confluence](https://docs.testomat.io/integrations/issues-management/confluence) for the steps. Then add the requirement:
 
-![The Chat with Tests panel with a prompt selected and a response](./images/working-with-ai/4-chat-with-tests.png)
+1. Open the **Requirements** page.
+2. Click **+ New Requirements** or **+ Add Requirement**.
+3. Select your requirement source, for example Jira.
+4. Enter the source identifier, such as the **Jira Issue ID**.
+5. Click **Save**.
 
-You can also run this on a single folder. Select the folder first, then click **Chat with Tests** to focus the answer on just that folder.
-
-## Summarize a suite
-
-AI can write a suite description for you by reading the test cases inside it, which saves you documenting suites by hand.
-
-1. Go to the **Tests** page.
-2. Select a suite that has test cases.
-3. Click **Summarize**.
-
-![Summarize button and the AI-generated suite description](./images/working-with-ai/5-ai-suite-summary.png)
-
-Review the suggested summary, then copy it, regenerate it, or refine it with the follow-up field until it reads right.
+![The Requirements page with a new requirement being added from Jira](./images/working-with-ai/3-add-requirement.png)
 
 :::note
 
-The **Summarize** button appears only when the suite already contains tests.
+You can add a requirement to an ongoing project at any time using the same steps. See [AI-Requirements](https://docs.testomat.io/advanced/ai-powered-features/ai-requirements/) for other sources, including files and plain text.
+
+:::
+
+## Generate tests from the requirement
+
+With the requirement linked, AI reads it and proposes the test cases that cover it, so you start from a draft instead of a blank suite.
+
+1. Open the **Requirements** page and click your requirement.
+2. On the **Summary** tab, click **Analyze Requirement**.
+3. Click **Add tests to {Suite_name} Suite**.
+4. Review the suggested cases and click **Add** on the ones you want.
+
+![The suggested test cases generated from a requirement](./images/working-with-ai/4-generate-tests-from-requirement.png)
+
+Click **Suggest More Tests** if you need extra cases, and double-click any suggested title to edit it before adding.
+
+:::note
+
+Nothing is added automatically. You always choose which cases to keep.
+
+:::
+
+## Generate a test description
+
+A test name tells you what to check, but not how. AI writes the description from the name, or improves the one you already have.
+
+1. Open a test case.
+2. Click **Suggest Description**.
+3. Review the result, edit it if needed, then save.
+
+![The AI-generated description on a test case](./images/working-with-ai/5-suggest-description.png)
+
+:::note
+
+This works the same way in BDD projects. On the **Scenario description** tab, click **Suggest Description** and AI turns your Given/When/Then steps into a readable overview.
+
+:::
+
+## Analyze a run with AI
+
+Once your tests have run, AI groups the failures so you read a handful of causes instead of a wall of errors.
+
+1. Go to the **Runs** page.
+2. Open a finished automated run.
+3. Click **Clusterize Errors**.
+
+:::note
+
+**Clusterize Errors** appears only on finished automated runs with 5 or more failures.
+
+:::
+
+## Chat with Analytics
+
+Analytics answers questions you already know to ask. Chat with Analytics lets you ask in plain language instead of hunting through dashboards.
+
+1. Go to the **Analytics** page.
+2. Open **Chat with Analytics**.
+3. Ask your question and send it.
+
+Ask things like which tests are most unstable, which areas fail most often, or how execution trends changed over time.
+
+:::note
+
+Metrics are calculated over a 30-day window unless you specify a different range.
 
 :::
 
 ## Next steps
 
 * Want to expand your AI capabilities? Try setting up [AI Agents](https://docs.testomat.io/advanced/ai-powered-features/ai-agents/).
+* See every generative feature across suites, tests, and code in [AI-Powered Features](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features/).
+* Drive your test design from product requirements with [AI-Requirements](https://docs.testomat.io/advanced/ai-powered-features/ai-requirements/).
