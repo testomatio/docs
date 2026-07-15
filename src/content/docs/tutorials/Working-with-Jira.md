@@ -34,11 +34,11 @@ Make sure you have:
 
 * Jira profile access, with administrator rights in the Jira workspace.
 * A Manager or Owner role in your Testomat.io project.
-* The Testomat.io plugin is installed in Jira. 
+* The [Testomat.io Jira Plugin](https://docs.testomat.io/advanced/jira-plugin/) is installed in Jira.
 
 :::note
 
-Connecting requires Jira admin rights. The person who sets up the integration in Project Settings must have them, or the project cannot be connected. See [Integrations](https://docs.testomat.io/integrations/issues-management/) for the full reference.
+Connecting requires Jira admin rights. The person who sets up the integration in Project Settings must have them, or the project cannot be connected. See [Integrations](https://docs.testomat.io/integrations/issues-management/jira) for the full reference.
 
 :::
 
@@ -72,6 +72,12 @@ Linking ties a test to the story or bug it covers, so coverage shows on both sid
 
 The link now appears on both the test and the Jira issue. You can also link a test to the Jira issue by hovering over the test and clicking the link icon.
 
+:::note
+
+You can also link tests from inside Jira. The [Jira Plugin](https://docs.testomat.io/advanced/jira-plugin/) lets you link and unlink tests, suites, and plans to an issue without leaving Jira.
+
+:::
+
 ## Report a defect from a run
 
 When a test fails during a run, you can create a Jira bug without leaving Testomat.io.
@@ -104,6 +110,8 @@ With the plugin in place, your Jira issues show the linked tests and their lates
 
 ![Testomat.io panel inside a Jira issue showing linked tests and status](./images/working-with-jira/5-jira-issue-w-testomatio-panel.png)
 
+With the [Jira Plugin](https://docs.testomat.io/advanced/jira-plugin/) in place, your Jira issues show the linked tests and their latest results, so a product owner can open an issue and see whether it passed or failed.
+
 If something looks out of date, use [Synchronize with Jira](https://docs.testomat.io/integrations/issues-management/jira/#how-to-connect-to-jira-project) from the integration to refresh the link.
 
 The link between the test and the Jira issue can be viewed in the run next to the reported defect.
@@ -114,3 +122,4 @@ The link between the test and the Jira issue can be viewed in the run next to th
 
 * Want cleaner bug reports? Set up a [Defect](https://docs.testomat.io/management/project/templates/#applying-templates-to-defects) template in Templates.
 * Setting up other tools? See [Integrations](https://docs.testomat.io/integrations/issues-management/).
+* Working mostly inside Jira? See the [Jira Plugin](https://docs.testomat.io/advanced/jira-plugin/) for running tests and managing suites without leaving Jira.
