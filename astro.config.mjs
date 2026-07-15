@@ -101,6 +101,7 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/tests' },
+								{ label: 'Classical vs BDD', link: '/project/tests/classical-vs-bdd' },
 								{ label: 'Classical Test Case Editor', link: '/project/tests/classical-test-case-editor' },
 								{ label: 'BDD Test Case Editor', link: '/project/tests/bdd-test-case-editor' },
 								{ label: 'Copy and Move your Tests', link: '/project/tests/copy-and-move-your-tests' },
