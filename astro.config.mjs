@@ -87,7 +87,11 @@ export default defineConfig({
 					label: 'Tutorials',
 						items: [
 							{ label: 'Overview', link: '/tutorials'},
-							{ label: 'Using AI in Testing', link: '/tutorials/using-ai-in-testing'},
+
+
+							{ label: 'Manual Testing Classic', link: '/tutorials/manual-testing-classic'},
+        	    { label: 'Using AI in Testing', link: '/tutorials/using-ai-in-testing'},
+							{ label: 'Set Up Read-Only Access', link: '/tutorials/set-up-read-only-access'},
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
 							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
@@ -102,6 +106,7 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								{ label: 'Overview', link: '/project/tests' },
+								{ label: 'Classical vs BDD', link: '/project/tests/classical-vs-bdd' },
 								{ label: 'Classical Test Case Editor', link: '/project/tests/classical-test-case-editor' },
 								{ label: 'BDD Test Case Editor', link: '/project/tests/bdd-test-case-editor' },
 								{ label: 'Copy and Move your Tests', link: '/project/tests/copy-and-move-your-tests' },
