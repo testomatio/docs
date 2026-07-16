@@ -91,6 +91,7 @@ export default defineConfig({
         	    { label: 'Using AI in Testing', link: '/tutorials/using-ai-in-testing'},
         	   	{ label: 'Working With Jira', link: '/tutorials/working-with-jira'},
 							{ label: 'Set Up Read-Only Access', link: '/tutorials/set-up-read-only-access'},
+							{ label: 'Interacting via API', link: '/tutorials/interacting-via-api'},        
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
 							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
