@@ -88,6 +88,7 @@ export default defineConfig({
 						items: [
 							{ label: 'Overview', link: '/tutorials'},
 							{ label: 'Manual Testing Classic', link: '/tutorials/manual-testing-classic'},
+							{ label: 'Set Up Read-Only Access', link: '/tutorials/set-up-read-only-access'},
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
 							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
