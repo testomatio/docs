@@ -82,3 +82,4 @@ To share living documentation, open it from the project and send its link the sa
 
 * Review what each role can do in [Users and Access](https://docs.testomat.io/management/company/users-and-permissions/#_top).
 * Want stakeholders to follow coverage live? Share your [Living Documentation](https://docs.testomat.io/advanced/living-doc/#_top).
+* Want to present particular results? Send a [run report](https://docs.testomat.io/project/runs/reports/#how-to-share-run-report).
