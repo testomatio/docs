@@ -87,7 +87,10 @@ export default defineConfig({
 					label: 'Tutorials',
 						items: [
 							{ label: 'Overview', link: '/tutorials'},
+
+
 							{ label: 'Manual Testing Classic', link: '/tutorials/manual-testing-classic'},
+        	    { label: 'Using AI in Testing', link: '/tutorials/using-ai-in-testing'},
 							{ label: 'Set Up Read-Only Access', link: '/tutorials/set-up-read-only-access'},
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
