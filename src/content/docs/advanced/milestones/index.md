@@ -191,13 +191,27 @@ For more complex queries or when building custom dashboards, you can use the TQL
 
 ## Requirements and Plans in Milestones
 
-Milestones can track the status of linked Requirements and Test Plans in addition to test execution. Benefits include:
+Beyond tests and test runs, a Milestone can track the status of the **Requirements** and **Test Plans** linked to it. This gives product owners and QA leads a single screen showing what is done, what is in progress, and what remains before a release or sprint closes.
 
-* Track Requirement status within a Milestone
-* Monitor linked Test Plans
-* View testing progress from a single screen
-* Improve release readiness tracking
-* Give product owners a consolidated view of testing progress
+### Requirements in a Milestone
+
+Linking Requirements to a Milestone shows how much of the planned scope is actually covered and verified, so you can judge readiness by feature rather than by raw test count.
+
+* Track each Requirement's status within the Milestone
+* See which requirements are covered by tests and which still have gaps
+* Assess release readiness by scope, not just pass/fail numbers
+
+**Use case:** A product owner preparing the *2.0* release opens the Milestone and sees that eight of ten Requirements are fully covered and passing, while two still have failing tests — so they know exactly which features are blocking the release.
+
+### Test Plans in a Milestone
+
+Linking Test Plans groups the runs that matter for this Milestone, so progress reflects the plan you intend to ship against instead of every run in the project.
+
+* Monitor the linked Test Plans in one place
+* Follow execution progress for the plan tied to this release or sprint
+* Keep milestone progress focused on the relevant runs
+
+**Use case:** A QA lead ties the *Regression* and *Smoke* plans to a sprint Milestone. As testers work through the runs, the Milestone shows live progress toward completing those plans, without noise from unrelated runs.
 
 This provides a clear overview of what has been completed, what is still in progress, and what remains before a release or sprint is finished.
 
