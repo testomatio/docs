@@ -87,6 +87,11 @@ export default defineConfig({
 					label: 'Tutorials',
 						items: [
 							{ label: 'Overview', link: '/tutorials'},
+							{ label: 'Manual Testing Classic', link: '/tutorials/manual-testing-classic'},
+							{ label: 'Using AI in Testing', link: '/tutorials/using-ai-in-testing'},
+        	   				{ label: 'Working With Jira', link: '/tutorials/working-with-jira'},
+							{ label: 'Set Up Read-Only Access', link: '/tutorials/set-up-read-only-access'},
+							{ label: 'Interacting via API', link: '/tutorials/interacting-via-api'},
 							{ label: 'Migration from TestRail', link: '/tutorials/migration-from-testrail'},
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
