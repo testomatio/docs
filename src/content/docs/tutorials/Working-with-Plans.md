@@ -63,6 +63,7 @@ For [Automated](https://docs.testomat.io/getting-started/#run-automated-tests) o
 
 ## Next steps
 
+* See [Plans page](https://docs.testomat.io/project/plans) for more information.
 * Run your plan whenever you need it in [Run Manual Tests](https://docs.testomat.io/getting-started/#run-manual-tests) and [Run Automated Tests](https://docs.testomat.io/getting-started/#run-automated-tests).
 * Prepare a plan run to start later with [Scheduled Runs](https://docs.testomat.io/project/runs/managing-runs/#scheduled-runs).
 * Keep plans tidy with labels, see [Tags & Labels](https://docs.testomat.io/project/runs/managing-runs/#tags-and-labels-on-manual-run-page).
