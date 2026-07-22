@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^6.3.10",
-    "@astrojs/starlight": "0.37.7",
+    "@astrojs/starlight": "0.41.4",
     "@octokit/core": "^5.1.0",
     "astro": "5.18.2",
     "astro-breadcrumbs": "^3.3.3",
