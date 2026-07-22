@@ -73,7 +73,7 @@ Now open a terminal, navigate to your tests folder, and run the command you copi
 
 When the import finishes, you will see a report in your terminal of how many tests were found. That message means it worked - your tests are now on the **Tests** page.
 
-::: note
+:::note
 
 For the full set of options, see the Testomat.io documentation on [importing tests](https://docs.testomat.io/project/import-export/import/import-tests-from-source-code/#_top) from source code.
 
@@ -104,7 +104,7 @@ The test imports with its placeholder in the name, and your reports show the act
 
 ![Parameterised Tests in Code](./images/playwright/2-parametrized-tests.png)
 
-::: note
+:::note
 
 Avoid string concatenation like `title` + `name`. The importer reads your source code without running it, so it can only resolve template literals.
 
@@ -138,7 +138,7 @@ test('user should be fine @T12345678', () => {
 
 Your tests now carry the same IDs in your code and in your project.
 
-::: note
+:::note
 
 Without test IDs, your CI runs may not launch correctly.
 
@@ -156,7 +156,7 @@ The Testomat.io reporter uploads these artifacts to your own S3 bucket and links
 2. Connect your S3 bucket to Testomat.io.
 3. Run your tests, then open a test in the run report to view or download its artifacts.
 
-::: note
+:::note
 
 S3 is only required for artifacts. Your test results - tests, statuses, and steps - sync to Testomat.io without it.
 
