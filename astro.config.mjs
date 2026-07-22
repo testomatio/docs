@@ -97,6 +97,7 @@ export default defineConfig({
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
 							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
+							{ label: 'Working With Plans', link: '/tutorials/working-with-plans'},
 						],
        				},
         			{
