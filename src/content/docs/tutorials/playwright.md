@@ -33,125 +33,153 @@ head:
         - parallel run (link to parallel page)
 -->
 
+Welcome!
 
-# Playwright Integration with Testomat.io
+This tutorial walks you through connecting your Playwright tests to Testomat.io. You already have tests that run - now you will bring them into one place where you can plan them, report on them, and dig into failures.
 
-Playwright is an open-source framework developed by Microsoft for end-to-end testing of web applications. It allows developers and testers to automate browser interactions across platforms, including Chromium, Firefox, and WebKit. With support for JavaScript, TypeScript, Python, C#, and Java, Playwright enables cross-browser testing with a single codebase. The framework is known for its reliability and advanced features like auto-waiting, network interception, and seamless testing of modern web apps, making it an excellent tool for ensuring consistent user experiences across different environments.
+By the time you finish, you will have:
 
-In this guide, you’ll learn how to use [Testomat.io](https://app.testomat.io) with Playwright to streamline test management and reporting.
+* Your Playwright tests imported into Testomat.io.
+*  Test IDs synced between your code and your project.
+* Run reports with screenshots, videos, and traces attached.
+* Parallel jobs reporting into a single run.
 
----
+# Before you start
 
-## Importing Playwright Tests
+Make sure you have:
 
-You can import your Playwright tests into Testomat.io on the **Imports** page.
+* Node.js 10 or later, with npm installed.
+* A Playwright project with at least one test.
+* A Testomat.io project you can sign in to.
 
-![Testomat.io - Import Project from Source Code](./images/New_gTxse3EF_2024-08-29.png)
+No Playwright project handy? Use the [Testomat.io Playwright example project](https://github.com/testomatio/examples/tree/master/playwright) and follow along with that.
 
-### Steps to Import Your Tests
+# Import your tests
 
-1. **Select Framework**: In the **Project Framework** field, choose Playwright.
-2. **Choose Language**: Select your project’s language from the **Project Language** field: `JavaScript`, `TypeScript`, or `Gherkin` (for BDD tests).
-3. **Select OS**: Choose your device’s OS (Mac, Linux, or Windows) under **Import tests**.
+Importing brings your existing tests into Testomat.io so you can plan, run, and report on them. Everything starts on the **Imports** page.
 
-Additional options to customize your import:
-- **Auto-assign Ids**: Automatically assigns unique IDs to each test.
-- **Purge Old Ids**: Removes previously set IDs from tests.
-- **Disable Detached Tests**: Disables tests marked as detached.
-- **Prefer Source Code Structure**: Maintains your project’s source code structure in the test hierarchy.
+![Playwright reporting flow](./images/playwright/pw-a-reporting-flow.png)
 
-![Testomat.io - Set up Playwright project import](./images/New_b1BS3EKN_2024-08-29.png)
+On the **Imports** page:
 
-After setting up, copy the generated command and run it in your project’s terminal. Your tests will then appear on the **Tests** page in [Testomat.io](https://app.testomat.io).
+1. Select **Playwright** in the **Project Framework** field.
+2. Select your language in the **Project Language** field.
+3. Select your operating system under **Import tests**.
+4. Copy the command that Testomat.io generates for you.
 
-> **Example Project**: Try importing using the [Testomat.io Playwright example project](https://github.com/testomatio/examples/tree/master/playwright).
+![Set up Playwright project import](./images/playwright/1-playwright-setup.png)
 
-For more details, refer to the [Import Tests from Source Code documentation](https://docs.testomat.io/getting-started/import-tests-from-source-code/).
+Now open a terminal, navigate to your tests folder, and run the command you copied.
 
----
+When the import finishes, you will see a report in your terminal of how many tests were found. That message means it worked - your tests are now on the **Tests** page.
 
-### Importing Parametrized Tests
+::: note
 
-When importing parametrized tests, you can include variable parameters in test names using template literals, ensuring they display dynamically in Testomat.io.
+For the full set of options, see the Testomat.io documentation on [importing tests](https://docs.testomat.io/project/import-export/import/import-tests-from-source-code/#_top) from source code.
 
-Example:
-```javascript
+:::
+
+## Choose your import options
+
+You can change how tests are imported:
+
+| Option | Description |
+|---|---|
+| **Auto-assign Ids** | Assigns a unique ID to each test. |
+| **Purge Old Ids** | Removes previously set IDs from tests. |
+| **Disable Detached Tests** | Disables tests marked as detached. |
+| **Prefer Source Code Structure** | Keeps your source code structure in the test hierarchy. |
+
+## Import parametrized tests
+
+Parametrized tests run the same scenario with different data. To keep those values visible in Testomat.io, write your test names with template literals:
+
+```js
 test(`Create user ${userName} @T12345678`, () => {
-  expect(user).toBe('fine');
+    expect(user).toBe('fine');
 });
 ```
 
-Avoid string concatenation like `title + name`. Instead, use template literals for a clear and informative test name with variable values.
+The test imports with its placeholder in the name, and your reports show the actual parameter values.
 
-> This test will be imported with its placeholder in the name, and results will display parameter values in Testomat.io reports.
+![Parameterised Tests in Code](./images/playwright/2-parametrized-tests.png)
 
-![Testomat.io - Parameterised Tests in Code](./images/New_y02Q6Exe_2024-08-29.png)
+::: note
 
-![Testomat.io - Imported Parameterised Tests](./images/New_cQu8Khiq_2024-08-29.png)
+Avoid string concatenation like `title` + `name`. The importer reads your source code without running it, so it can only resolve template literals.
 
-### Auto-assigning Test IDs
+:::
 
-When importing tests, enable **Auto-assign Ids** (`--update-ids`) to track changes without duplicating tests when scaling your project. Without this, CI processes may not launch correctly.
+# Sync test IDs
 
-```diff
-- test('user should be fine', () => {
-+ test('user should be fine @T12345678', () => {
-  expect(user).toBe('fine');
+A test ID links a test in your code to its test case in Testomat.io. With IDs in place, Testomat.io tracks changes to a test instead of creating a duplicate every time your project grows.
+
+Enable **Auto-assign Ids** during import, and Testomat.io writes an ID into each test for you.
+
+Your test before the import:
+
+```js
+test('user should be fine', () => {
+    expect(user).toBe('fine');
 });
 ```
 
-IDs will be automatically assigned in your code and appear in Testomat.io.
+![Auto-assign Ids in Editor](./images/playwright/3-test-ids-code.png)
 
-![Testomat.io - Auto-assign Ids in Code](./images/New_WTxw4TbZ_2024-08-29.png)
+And after:
 
-![Testomat.io - Auto-assign Ids in Tests](./images/New_JhM1Hqz3_2024-08-29.png)
+```js
+test('user should be fine @T12345678', () => {
+    expect(user).toBe('fine');
+});
+```
 
----
+![Auto-assign Ids in Testomat.io](./images/playwright/4-test-ids-ui.png)
 
-## Reporting Playwright Tests
+Your tests now carry the same IDs in your code and in your project.
 
-Reports provide insights into test results and the performance of your automation workflows. Testomat.io allows for comprehensive Playwright test reports, including Trace Viewer.
+::: note
 
-### Artifacts in Playwright with Testomat.io Reporter and S3
+Without test IDs, your CI runs may not launch correctly.
 
-Artifacts like screenshots, videos, and logs are essential for debugging. With the Testomat.io reporter, these artifacts can be automatically uploaded to an S3 bucket and linked to test cases in the Testomat.io dashboard. [Read more about Artifacts](https://docs.testomat.io/usage/test-artifacts/)
+:::
 
-![Testomat.io - Artifacts](./images/artefacts_settings.jpg)
+# Attach artifacts to the reports
 
-- **Configure Artifacts**: Enable options in Playwright (e.g., recordVideo, screenshot, logs).
-- **Setup S3 and Testomat.io Reporter**: Link your S3 bucket with Testomat.io for smooth integration.
-- **View and Debug**: Access artifacts in Testomat.io for easy downloading and analysis.
+Reports tell you what passed, what failed, and why. Screenshots, videos, and logs make that last part much faster to answer.
 
-#### Viewing Playwright Attachments
+The Testomat.io reporter uploads these artifacts to your own S3 bucket and links them to the matching test cases.
 
-View attachments by clicking on the test in Test Run and selecting the attachment (screenshots, videos) you want to view.
+![Testomat.io Artifacts](./images/playwright/5-artifacts.png)
 
-**Screenshot example**:
-![Testomat.io - Open Playwright Screenshot](./images/view_image.gif)
+1. Enable the artifact options you need in Playwright - for example, recordVideo, screenshot, and logs.
+2. Connect your S3 bucket to Testomat.io.
+3. Run your tests, then open a test in the run report to view or download its artifacts.
 
-**Video example**:
-![Testomat.io - Open Playwright Video](./images/view_video.gif)
+::: note
 
----
+S3 is only required for artifacts. Your test results - tests, statuses, and steps - sync to Testomat.io without it.
 
-### Enabling Playwright Trace Viewer
+:::
 
-Trace logs in Playwright capture a detailed sequence of browser events. Here’s how to enable Playwright trace viewing for Test Runs:
+To view a test attachment, open a test in a Test Run, then select the attachment you want to inspect.
 
-1. Set up an S3 Bucket ([See Documentation](https://docs.testomat.io/usage/test-artifacts#set-up-s3-bucket)).
-2. Enable third-party cookies in your browser.
+# Turn on Trace Viewer
+
+A Playwright trace records the full sequence of browser events for a test, so you can replay exactly what happened.
+
+1. [Set Up S3 Bucket](https://docs.testomat.io/test-reporting/artifacts/#set-up-s3-bucket).
+2. Enable third-party cookies in your browser. Trace Viewer loads from an external domain, so it needs them.
 3. Run your tests.
-4. In Test Run, click the test, then select `trace.zip` to open.
+4. Open the test in your Test Run and select `trace.zip`.
 
-![Testomat.io - Open Playwright Trace Viewer](./images/Open-Playwright-Trace.gif)
+The trace opens in Playwright Trace Viewer, where you can step through the run.
 
-### Playwright Trace Viewer: Troubleshooting
+## If a trace uploads but will not open
 
-If traces were uploaded but you don't see them and you get error message, please grant CORS access to the bucket.
+You are seeing a CORS error. Grant CORS access to your bucket. With the AWS CLI, run:
 
-If you use the AWS CLI, you can set up CORS for your bucket with the following command:
-
-```
+```shell
 aws s3api put-bucket-cors \
     --bucket YOUR_BUCKET_NAME \
     --cors-configuration '{
@@ -163,6 +191,7 @@ aws s3api put-bucket-cors \
             "ExposeHeaders": ["Access-Control-Allow-Origin"],
             "MaxAgeSeconds": 3000
         },
+
         {
             "AllowedHeaders": ["*"],
             "AllowedMethods": ["GET"],
@@ -174,34 +203,39 @@ aws s3api put-bucket-cors \
 }'
 ```
 
-If you use S3 other than AWS consider setting CORS settings otherwise. Ensure, that websites:
+If you use an S3 provider other than AWS, configure CORS so that `https://trace.playwright.dev` and `https://app.testomat.io` can perform `GET` requests on your bucket.
 
-* `https://trace.playwright.dev`
-* `https://app.testomat.io`
+# Report parallel runs as one run
 
-Have access to your S3 bucket and can perform `GET` requests.
+When you split tests across parallel jobs, each job reports separately by default. To collect them into a single run, give every job the same title and set `TESTOMATIO_SHARED_RUN`:
 
-
----
-
-## Parallel Execution Reporting
-
-To report parallel test executions to the same Testomat.io run, assign a shared title to all parallel runs and set the `TESTOMATIO_SHARED_RUN` environment variable.
-
-```bash
+```shell
 TESTOMATIO_TITLE="report for commit ${GIT_COMMIT}" TESTOMATIO_SHARED_RUN=1 <actual run command>
 ```
 
-> **Tip**: Use a commit hash as the title for unique run identification across parallel jobs.
+All parallel jobs now report into one run in Testomat.io.
 
-### Extending Shared Run Timeout
 
-The default shared run timeout is 20 minutes. To extend it, use the `TESTOMATIO_SHARED_RUN_TIMEOUT` variable. For example, set it to 2 hours (120 minutes) as follows:
+![Parallel jobs report chart](./images/playwright/pw-c-shared-run-flow.png)
 
-```bash
+
+:::note
+
+Use a commit hash in the title so each set of parallel jobs maps to one identifiable run.
+
+:::
+
+## Extend the shared run timeout
+
+A shared run closes after 20 minutes by default. If your suite runs longer than that, extend it with `TESTOMATIO_SHARED_RUN_TIMEOUT`, set in minutes:
+
+```shell
 TESTOMATIO={API_KEY} TESTOMATIO_TITLE="report for commit ${GIT_COMMIT}" TESTOMATIO_SHARED_RUN=1 TESTOMATIO_SHARED_RUN_TIMEOUT=120 <actual run command>
 ```
 
----
+## Next Steps
 
-This README provides an overview of setting up Playwright with Testomat.io for efficient test management and reporting. For additional guidance, visit the [Testomat.io documentation](https://docs.testomat.io).
+* Want to see Playwright tests in action? Find and install [our example](https://docs.testomat.io/project/import-export/import/import-js/#playwright) for more details.
+* Run your Playwright tests automatically on every commit - see [Continuous Integration](https://docs.testomat.io/integrations/continuous-integration/).
+* Spot unstable and slow tests across your runs in [Analytics](https://docs.testomat.io/project/analytics/).
+* Get failures explained from your logs and traces with [AI-Powered Features](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features/).
