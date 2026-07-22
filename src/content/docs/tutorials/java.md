@@ -282,7 +282,7 @@ You can attach execution logs, HTML reports, screenshots, videos, generated file
 4. Run your tests.
 5. Open a test result to view or download its artifacts.
 
-::: note
+:::note
 
 S3 is only required for artifacts. Your test results - tests, statuses, and steps - sync to Testomat.io without it. Read more about [Artifacts](https://docs.testomat.io/usage/artifacts/).
 
