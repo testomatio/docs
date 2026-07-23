@@ -131,6 +131,11 @@ public Object[][] users() {
         {"Mike"}
     };
 }
+
+@Test
+public void userShouldBeFine() {
+    Assert.assertEquals(user.getStatus(), "fine");
+}
 ```
 
 Testomat.io displays parameterized executions together with their parameter values.
