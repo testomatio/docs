@@ -179,7 +179,7 @@ S3 is required only for artifacts. Your test results - tests, statuses, and step
 
 When you split tests across parallel workers, each worker reports its own run by default. To collect them into a single run, give every worker the same title and set `TESTOMATIO_SHARED_RUN`:
 
-```shell
+```bash
 TESTOMATIO_TITLE="Parallel Test Run ${GIT_COMMIT}" TESTOMATIO_SHARED_RUN=1 <actual run command>
 ```
 
@@ -187,8 +187,8 @@ To extend the shared run timeout (default: 20 minutes), use the `TESTOMATIO_SHAR
 
 **Example**:
 
-```shell
-TESTOMATIO_SHARED_RUN_TIMEOUT=120 TESTOMATIO_SHARED_RUN=1 &lt;actual run command>
+```bash
+TESTOMATIO_SHARED_RUN_TIMEOUT=120 TESTOMATIO_SHARED_RUN=1 <actual run command>
 ```
 
 The simplest way to run WebdriverIO in parallel is through the Testomat.io CLI, which handles every worker for you:
