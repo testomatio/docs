@@ -1,5 +1,5 @@
 ---
-title: MCP - AI assistant connection
+title: MCP - Connect AI assistant
 description: Learn how to connect an AI assistant to Testomat.io through the MCP Server. This guide walks you through getting your project token and project ID, adding the config to Claude Desktop, Cursor, or OpenCode, checking the connection, and what your assistant can do with your tests, suites, and runs.
 type: article
 url: https://docs.testomat.io/tutorials/mcp-connection

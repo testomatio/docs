@@ -98,7 +98,7 @@ export default defineConfig({
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
 							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
-							{ label: 'MCP - AI assistant connection', link: '/tutorials/mcp-connection'},
+							{ label: 'MCP - Connect AI assistant', link: '/tutorials/mcp-connection'},
 						],
        				},
         			{
