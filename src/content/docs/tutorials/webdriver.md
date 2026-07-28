@@ -38,48 +38,53 @@ head:
         - page objects
 -->
 
-# WebdriverIO Integration with Testomat.io
+Welcome!
 
-WebdriverIO is an all in one framework for your web app development. It enables you to run small and lightweight component tests as well as running e2e test scenarios in the browser or on a mobile device. This guarantees that you to do the testing in an environment used by your users.
+This guide connects your WebdriverIO tests to Testomat.io. By the end of this guide you will have:
 
-This guide demonstrates how to integrate WebdriverIO with [Testomat.io](https://app.testomat.io) for efficient test management and detailed reporting.
+* your WebdriverIO tests imported into Testomat.io
+* test IDs synced between your code and your project
+* run reports with screenshots and artifacts attached
+* parallel runs reporting into a single run
 
----
+![WebDriver.io setup flow chart](./images/webdriverio/wdio-flow.png)
 
-## Importing WebdriverIO Tests
+# Import your tests
 
-You can easily import your WebdriverIO tests into Testomat.io on the **Imports** page.
+Importing brings the tests you already have into Testomat.io, so you can plan, run, and report on them. Everything starts on the Imports page.
 
-![Testomat.io - Import Project from Source Code](./images/wdio-import.png)
+1. In the **Project Framework** field, select **webdriverio**.
+2. In the **Project Language** field, select **JavaScript** or **TypeScript**.
+3. Under Import tests, select your operating system.
+4. Copy the command that appears.
 
-### Steps to Import Your Tests
+![Set up WebdriverIO project import](./images/webdriverio/1-setup-webdriverio.png)
 
-1. **Select Framework**: In the `Project Framework` field, choose `WebDriver`.
-2. **Choose Language**: Select your project’s language from the `Project Language` field: `JavaScript`, `TypeScript`.
-3. **Select OS**: Choose your device’s OS (`Mac`, `Linux`, or `Windows`) under `Import tests`.
+After you’re done with the setup: 
 
-#### Additional options to customize your import:
+1. Open a terminal.
+2. Navigate to your project folder and run the copied command.
+3. When the terminal prints how many tests it found, the import worked.
+4. Your tests are now on the **Tests** page.
 
-- **Auto-assign IDs**: Automatically assigns unique IDs to each test.
-- **Purge Old IDs**: Removes previously set IDs from tests.
-- **Disable Detached Tests**: Disables tests marked as detached.
-- **Prefer Source Code Structure**: Maintains your project’s source code structure in the test hierarchy.
+Don’t have your own WebDriverIO project yet? Check out our [demo project.](https://github.com/testomatio/examples/tree/master/wdio/v8)
 
-![Testomat.io - Set up WebdriverIO project import](./images/wdio-import2.png)
+For more details, see [Import Tests from Source Code](https://docs.testomat.io/project/import-export/import/import-tests-from-source-code/).
 
-After setting up, copy the generated command and run it in your project’s terminal. Your tests will then appear on the Tests page in Testomat.io.
+## Import options
 
-**Example**: Try importing using the [Testomat.io WebdriverIO example project](https://github.com/testomatio/examples/tree/master/wdio/v8).
+You can change how tests are imported:
 
-For more details, refer to the [Import Tests from Source Code documentation](https://docs.testomat.io/getting-started/import-tests-from-source-code/).
+| Option | Description |
+|---|---|
+| **Auto-assign Ids** | Assigns a unique ID to each test. |
+| **Purge Old Ids** | Removes previously set IDs from tests. |
+| **Disable Detached Tests** | Disables tests marked as detached. |
+| **Prefer Source Code Structure** | Keeps your source code structure in the test hierarchy. |
 
----
+# Keep parameter values readable
 
-## Importing Parametrized Tests
-
-When importing parametrized tests, include variable parameters in test names using template literals for better clarity in Testomat.io.
-
-**Example Code**:
+Parametrized tests run the same scenario with different data. To keep those values visible in Testomat.io, write test names with template literals:
 
 ```typescript
 const people = ['Alice', 'Bob'];
@@ -92,53 +97,49 @@ describe('my tests', () => {
 });
 ```
 
-Avoid string concatenation like `title + name`. Instead, use template literals to make test names dynamic and clear.
+The test is imported with the placeholder in its name, and your reports show the real parameter values.
 
-> This test will be imported with its placeholder in the name, and results will display parameter values in Testomat.io reports.
+![Webdriverio parametrized tests in editor](./images/webdriverio/2-wdio-parametrize.png)
 
-![Testomat.io - Parameterised Tests in Code](./images/wdio-parametrize.png)
+:::note
 
-![Testomat.io - Imported Parameterised Tests](./images/wdio-parametrize2.png)
+Avoid string concatenation like `title` + `name`. The importer reads your source code without running it, so it can only resolve template literals.
 
----
+:::
 
-## Auto-assigning Test IDs
+# Assign test IDs
 
-When importing tests, enable **Auto-assign Ids** (`--update-ids`) to track changes without duplicating tests when scaling your project. Without this, CI processes may not launch correctly.
+A test ID links a test in your code to its test case in Testomat.io. Turn on **Auto-assign Ids** (`--update-ids`) during import, and Testomat.io writes an ID into each test.
+
+From then on it tracks changes to that test instead of creating duplicates as your project grows.
 
 ```diff
 + it('user should be fine @T12345678', () => {
 - it('user should be fine', () => {
   expect(user).toBe('fine');
 });
+
 ```
 
-IDs will be automatically assigned in your code and appear in Testomat.io.
+Your tests now carry the same IDs in your code and in your project.
 
-![Testomat.io - Auto-assign Ids in Code](./images/wdio-ids.png)
+![Webdriverio tests with IDs in editor](./images/webdriverio/3-wdio-ids.png)
 
-![Testomat.io - Auto-assign Ids in Tests](./images/wdio-ids2.png)
+:::note
 
----
+Without test IDs, your CI runs may not launch correctly.
 
-## Reporting WebdriverIO Tests
+:::
 
-WebdriverIO allows you to leverage various types of reports, including screenshots, to improve error detection and debugging. Here's how you can enhance your testing workflow:
+# Add screenshots to your reports
 
-### Visual Reports with Timeline Reporter
+Reports show what passed, what failed, and why. WebdriverIO can add screenshots and visual comparisons before the results reach Testomat.io. Pick whichever fits your setup:
 
-Tools like **Timeline Reporter** provide a visual representation of your test results. These reports can include screenshots, which help analyze failures and identify issues quickly.  
-[Learn more about Timeline Reporter](https://webdriver.io/docs/wdio-timeline-reporter/)
+* [Timeline Reporter](https://webdriver.io/docs/wdio-timeline-reporter/) gives a visual view of your results, with screenshots that make failures easy to spot.
+* [@wdio/visual-service](https://webdriver.io/docs/visual-testing/) compares screenshots against baseline images to catch visual regressions.
+* [Built-in methods](https://webdriver.io/docs/wdio-light-reporter/#screenshots) such as browser.saveScreenshot() capture the whole page or a single element.
 
-### Visual Testing with @wdio/visual-service
-
-WebdriverIO supports visual testing via the **@wdio/visual-service** plugin. This enables you to capture, save, and compare screenshots of elements, pages, or screens with baseline images. It is an excellent way to detect visual regressions in your application.  
-[Learn more about Visual Testing](https://webdriver.io/docs/visual-testing/)
-
-### Capturing Screenshots
-
-WebdriverIO provides built-in methods such as `browser.saveScreenshot()` to capture the current state of a webpage or specific elements. These screenshots can be incorporated into your reporting tools for a comprehensive debugging experience.  
-[Learn more about Screenshot](https://webdriver.io/docs/wdio-light-reporter/#screenshots)
+To capture a screenshot every time a test fails, add this to your config:
 
 ```typescript
 afterTest: async function (test, context, { error, result, duration, passed, retries }) {
@@ -148,25 +149,19 @@ afterTest: async function (test, context, { error, result, duration, passed, ret
     }
 ```
 
-By integrating these features into your WebdriverIO setup, you can enhance the efficiency of error detection and resolution, leading to more robust and reliable tests.
+# Attach artifacts
 
-### Artifacts in WebdriverIO with Testomat.io Reporter and S3
+Screenshots, videos, and logs make a failure much easier to diagnose. The Testomat.io reporter uploads these files to your own S3 bucket and links them to the matching test cases.
 
-Artifacts like screenshots, videos, and logs are essential for debugging. With the Testomat.io reporter, these artifacts can be automatically uploaded to an S3 bucket and linked to test cases in the Testomat.io dashboard. [Read more about Artifacts](https://docs.testomat.io/usage/test-artifacts/)
+![WebDriver.io S3 bucket setup chart](./images/webdriverio/wdio-s3.png)
 
-![Testomat.io - Artifacts](./images/artefacts_settings.jpg)
+1. In WebdriverIO, enable the artifacts you want - for example screenshots and logs.
+2. Connect your [S3 Bucket](https://docs.testomat.io/test-reporting/artifacts/#set-up-s3-bucket) to Testomat.io.
+3. Open a test inside a run report to view or download its artifacts.
 
-- **Configure Artifacts**: Enable options in Playwright (e.g., recordVideo, screenshot, logs).
-- **Setup S3 and Testomat.io Reporter**: Link your S3 bucket with Testomat.io for smooth integration.
-- **View and Debug**: Access artifacts in Testomat.io for easy downloading and analysis.
+![Testomatio artifacts setup](./images/webdriverio/4-artifacts.png)
 
-#### Steps to Configure Artifacts:
-
-1. Enable options in WebdriverIO (e.g., `takeScreenshot`, `captureLogs`).
-2. Link your S3 bucket with Testomat.io.
-3. Access artifacts in Testomat.io for easy debugging.
-
-**Code Example for Screenshots**:
+To attach a screenshot, save it to a file first:
 
 ```typescript
 await driver.takeScreenshot().then((image) => {
@@ -174,20 +169,15 @@ await driver.takeScreenshot().then((image) => {
 });
 ```
 
-### Steps to Enable:
+:::note
 
-1. Set up an S3 Bucket ([See Documentation](https://docs.testomat.io/)).
-2. Enable third-party cookies in your browser.
-3. Run your tests.
-4. In `Test Run`, click the test, then select the trace log to open.
+S3 is required only for artifacts. Your test results - tests, statuses, and steps - sync to Testomat.io without it. Read more about [Artifacts](https://docs.testomat.io/test-reporting/artifacts/#_top).
 
----
+:::
 
-## Parallel Execution Reporting
+# Report parallel runs as one run
 
-Report parallel test executions to the same Testomat.io run by assigning a shared title and setting the `TESTOMATIO_SHARED_RUN` environment variable.
-
-**Example**:
+When you split tests across parallel workers, each worker reports its own run by default. To collect them into a single run, give every worker the same title and set `TESTOMATIO_SHARED_RUN`:
 
 ```bash
 TESTOMATIO_TITLE="Parallel Test Run ${GIT_COMMIT}" TESTOMATIO_SHARED_RUN=1 <actual run command>
@@ -201,18 +191,15 @@ To extend the shared run timeout (default: 20 minutes), use the `TESTOMATIO_SHAR
 TESTOMATIO_SHARED_RUN_TIMEOUT=120 TESTOMATIO_SHARED_RUN=1 <actual run command>
 ```
 
-We strongly recommend to use Testomat.io `cli` to run your WebdriverIO tests in parallel mode, it will handle each worker/process automatically.
+The simplest way to run WebdriverIO in parallel is through the Testomat.io CLI, which handles every worker for you:
 
-`npx @testomatio/reporter run 'npx wdio wdio.conf.js'`
-
-For more details, refer to the [Testomat.io cli docs][1] and the [WebdriverIO guide][2].
-
-[1]: https://github.com/testomatio/reporter/blob/2.x/docs/cli.md#3-run
-[2]: https://github.com/testomatio/reporter/blob/2.x/docs/frameworks.md#webdriverio
-
-```bash
-
----
-
-This guide outlines the process of integrating WebdriverIO with Testomat.io for effective test management and reporting. For more information, visit the [Testomat.io Documentation](https://docs.testomat.io/).
+```shell
+npx @testomatio/reporter run 'npx wdio [wdio.conf.js](wdio.conf.js)'
 ```
+
+# Next steps
+
+* For more details, refer to the[ WebdriverIO guide](https://github.com/testomatio/reporter/blob/2.x/docs/frameworks.md#webdriverio).
+* Run your WebdriverIO tests on every commit — see [Continuous Integration](https://docs.testomat.io/integrations/continuous-integration/).
+* Spot unstable and slow tests across your runs in [Analytics](https://docs.testomat.io/project/analytics/).
+* Get failures explained from your logs with [AI-Powered Features](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features/).
