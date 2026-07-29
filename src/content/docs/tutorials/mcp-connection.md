@@ -1,5 +1,5 @@
 ---
-title: MCP - Connect AI assistant
+title: MCP - Connect AI Assistant
 description: Learn how to connect an AI assistant to Testomat.io through the MCP Server. This guide walks you through getting your project token and project ID, adding the config to Claude Desktop, Cursor, or OpenCode, checking the connection, and what your assistant can do with your tests, suites, and runs.
 type: article
 url: https://docs.testomat.io/tutorials/mcp-connection
@@ -23,7 +23,7 @@ In this tutorial, you will learn how you can connect Claude, Cursor, or OpenCode
 
 **Before you start:**
 
-* Node.js installed on your computer
+* Node.js 18+ installed on your computer
 * A project in Testomat.io
 * Claude Desktop, Cursor, or OpenCode installed
 
@@ -43,7 +43,11 @@ Use a project token, not a general one. A general token opens every project you 
 
 Follow the section for the assistant you use, and skip the other two.
 
-Your token gives the assistant full access to the project, and anyone who can prompt the assistant can reach that data. Store the config file the way you store passwords, and keep it out of shared repositories.
+Your token gives the assistant full access to the project, and anyone who can prompt the assistant can reach that data. 
+
+Treat your token like a password. If you use the project-level `.cursor/mcp.json`, add this file to `.gitignore` before saving the token. 
+
+Alternatively, use the global `~/.cursor/mcp.json` so the token is stored outside the project repository. Never commit or share a config file containing your token.
 
 ### If you use Cursor
 
@@ -128,9 +132,9 @@ Ask your assistant: **list my test suites**. If it answers with the real suite n
 Once connected, your assistant works with your project through [Public API v2](https://docs.testomat.io/advanced/api-access/#public-api-v2). It can:
 
 * Create, read, update, and delete tests, suites, plans, and runs.
-* Read your tags and milestones.
+* Read your tags and milestones in tests, suites, or runs.
 * Manage issues and link them to tests, suites, or runs.
-* Upload attachments and requirements.
+* Upload attachments and requirements in tests, suites, or runs.
 * Search tests and runs with [TQL](https://docs.testomat.io/advanced/tql/)
 * Launch, finish, and rerun a run.
 
@@ -138,7 +142,7 @@ Once connected, your assistant works with your project through [Public API v2](h
 
 * **The assistant answers from general knowledge instead of your project data** - the config did not load. Check that the file path and the file name are correct, then restart the assistant.
 * **You get an access or "denied" error** - the token or project ID is wrong, or the token was revoked. Copy both again from the **API Key** page.
-* **You get an HTTPS or certificate error on a company network** - add `"NODE_OPTIONS": "--use-system-ca"` to the `env` block of your config, save the file, and restart the assistant.
+* **You get an HTTPS or certificate error on a company network** - if your Node.js version supports it, add `"NODE_OPTIONS": "--use-system-ca"` to the `env` block. Otherwise, export your company root certificate as a PEM file and add `"NODE_EXTRA_CA_CERTS": "/path/to/company-root-certificate.pem"` instead. Save the config and restart the assistant.
 * **Still not connected** - write to support@testomat.io and include the name of your assistant and the error text.
 
 ## Next Steps
