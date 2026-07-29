@@ -340,6 +340,15 @@ export default defineConfig({
 								{ label: 'Milestones', link: '/advanced/milestones' }
 							],
 						},
+						{
+							label: 'Global Analytics',
+							collapsed: true,
+							items: [
+								{ label: 'Overview', link: '/advanced/global-analytics' },
+								{ label: 'Analytics Board', link: '/advanced/global-analytics/analytics-board' },
+								{ label: 'Analytics Dashboards (Widgets)', link: '/advanced/global-analytics/analytics-dashboards' }
+							],
+						},
 					]
 				},
 				{
