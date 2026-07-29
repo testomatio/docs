@@ -132,7 +132,7 @@ Ask your assistant: **list my test suites**. If it answers with the real suite n
 Once connected, your assistant works with your project through [Public API v2](https://docs.testomat.io/advanced/api-access/#public-api-v2). It can:
 
 * Create, read, update, and delete tests, suites, plans, and runs.
-* Read your tags and milestones in tests, suites, or runs.
+* Read your tags and milestones.
 * Manage issues and link them to tests, suites, or runs.
 * Upload attachments and requirements in tests, suites, or runs.
 * Search tests and runs with [TQL](https://docs.testomat.io/advanced/tql/)
