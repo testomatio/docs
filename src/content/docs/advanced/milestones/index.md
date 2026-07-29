@@ -189,11 +189,7 @@ For more complex queries or when building custom dashboards, you can use the TQL
 
 ![Testomat.io - Filter by Milestone](./images/filter_milestone_2.png)
 
-## Requirements and Plans in Milestones
-
-Beyond tests and test runs, a Milestone can track the status of the **Requirements** and **Test Plans** linked to it. This gives product owners and QA leads a single screen showing what is done, what is in progress, and what remains before a release or sprint closes.
-
-### Requirements in a Milestone
+## Requirements in a Milestone
 
 Linking Requirements to a Milestone shows how much of the planned scope is actually covered and verified, so you can judge readiness by feature rather than by raw test count.
 
@@ -203,7 +199,7 @@ Linking Requirements to a Milestone shows how much of the planned scope is actua
 
 **Use case:** A product owner preparing the *2.0* release opens the Milestone and sees that eight of ten Requirements are fully covered and passing, while two still have failing tests — so they know exactly which features are blocking the release.
 
-### Test Plans in a Milestone
+## Test Plans in a Milestone
 
 Linking Test Plans groups the runs that matter for this Milestone, so progress reflects the plan you intend to ship against instead of every run in the project.
 
