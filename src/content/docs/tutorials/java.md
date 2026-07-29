@@ -1,5 +1,5 @@
 ---
-title: Java
+title: Java Frameworks Integration
 description: Learn how to integrate Java test frameworks with Testomat.io for efficient test management and reporting. This guide covers importing JUnit, TestNG tests, managing parametrized tests, reporting test results, uploading artifacts to S3, and configuring parallel execution reporting for CI workflows.
 type: article
 url: https://docs.testomat.io/tutorials/java
@@ -38,59 +38,67 @@ head:
         - run title configuration
 -->
 
-# Java Integration with Testomat.io
+Welcome!
 
-Testomat.io supports Java test automation projects built with popular testing frameworks such as JUnit 5, TestNG. This integration allows teams to import automated tests, synchronize test IDs, track execution results, and consolidate reports from local and CI environments.
+This tutorial walks you through connecting a Java test automation project to Testomat.io. You already have tests that run with **JUnit 5** or **TestNG** - now you will bring them into one place where you can plan them, report on them, and dig into failures.
 
-In this guide, you'll learn how to use Testomat.io with Java-based test automation projects.
+You will have:
 
----
+* Your Java tests imported into Testomat.io.
+* Test IDs synced between your code and your project.
+* Run reports with steps, logs, and screenshots attached.
+* Parallel jobs reporting into a single run.
 
-## Supported Frameworks
+## Before you start
 
-Currently, the following Java testing frameworks are supported:
+Make sure you have:
 
-- JUnit 5
-- TestNG
+* A JDK installed, with Maven or Gradle set up for your project.
+* A Java project with at least one JUnit 5 or TestNG test.
+* A Testomat.io project you can sign in to, and its API key.
 
----
+**No Java project handy?** Import the[ Testomat.io Java example project](https://github.com/testomatio/examples) and follow along with that.
 
-## Importing Java Tests
+## Import your tests
 
-You can import your Java tests into Testomat.io on the **Imports** page.
+Importing brings your existing tests into Testomat.io so you can plan, run, and report on them. Everything starts on the **Imports** page.
 
-![Testomat.io - Import Java Project from Source Code](./images/java-import.png)
+![Java setup chart](./images/java-integration/java-six-steps.png)
 
-### Steps to Import Your Tests
 
-1. **Select Framework**: In the **Project Framework** field, choose `TestNg, JUnit`.
-2. **Choose Language**: Select `Java` as your project language.
-3. **Select OS**: Choose your operating system (`Mac`, `Linux`, or `Windows`) under **Import tests**.
+On the **Imports** page:
 
-![Testomat.io - Import Java tests](./images/java-import-2.png)
+1. Select **TestNG** or **JUnit** in the **Project Framework** field.
+2. Select **Java** in the **Project Language** field.
+3. Select your operating system under **Import tests** - Mac, Linux, or Windows.
+4. Copy the command that Testomat.io generates for you.
 
-### Additional Import Options
+![Imports setup for Java](./images/java-integration/1-java-setup.png)
 
-- **Auto assign IDs**: Automatically assigns unique IDs to each test.
-- **Purge Old IDs**: Removes previously assigned IDs.
-- **Disable Detached Tests**: Disables tests marked as detached.
-- **Prefer Source Code Structure**: Maintains your project's source code structure in the test hierarchy.
+Now open a terminal, navigate to your project, and run the command you copied.
 
-After setting up, copy the generated command and run it in your project's terminal.
+When the import finishes, you will see a report of how many tests were found. That message means it worked - your tests are now on the **Tests** page.
 
-Your tests will then appear on the **Tests** page in Testomat.io.
+:::note
 
-![Testomat.io - View imported Java tests](./images/java-imported-tests.png)
+For the full set of options, see the Testomat.io[ Import Tests from Source Code](https://docs.testomat.io/project/import-export/import/import-tests-from-source-code/) documentation.
 
-> **Example Project**: Try importing using the Testomat.io Java example project.
+:::
 
-For more details, refer to the [Import Tests from Source Code documentation](https://docs.testomat.io/getting-started/import-tests-from-source-code/).
+### Choose your import options
 
----
+You can change how tests are imported:
 
-## JUnit Example
+| Option | Description |
+|---|---|
+| **Auto-assign Ids** | Assigns a unique ID to each test. |
+| **Purge Old Ids** | Removes previously set IDs from tests. |
+| **Disable Detached Tests** | Disables tests marked as detached. |
+| **Prefer Source Code Structure** | Keeps your source code structure in the test hierarchy. |
 
-Example JUnit 5 test:
+### What gets imported from JUnit 5
+
+Both plain and parameterized JUnit tests come across:
 
 ```java
 @ParameterizedTest(name = "Create user {0}")
@@ -105,13 +113,9 @@ void userShouldBeFine() {
 }
 ```
 
-Imported tests appear in Testomat.io and can be linked to automated executions.
+### What gets imported from TestNG
 
----
-
-## TestNG Example
-
-Example TestNG test:
+TestNG tests are imported and managed the same way:
 
 ```java
 @Test(dataProvider = "users")
@@ -127,23 +131,24 @@ public Object[][] users() {
         {"Mike"}
     };
 }
-    
+
 @Test
 public void userShouldBeFine() {
     Assert.assertEquals(user.getStatus(), "fine");
 }
 ```
 
-TestNG tests are imported and managed the same way as JUnit tests.
 Testomat.io displays parameterized executions together with their parameter values.
 
----
+## Sync test IDs
 
-## Auto assigning Test IDs
+A test ID links a test in your code to its test case in Testomat.io. With IDs in place, Testomat.io tracks changes to a test instead of creating a duplicate every time your project grows.
 
-When importing tests, enable **Auto assign IDs** (`--update-ids`) to track changes without creating duplicate tests as your project grows.
+![Java test Ids](./images/java-integration/java-test-ids-sync.png)
 
-Before:
+Enable **Auto assign Ids** (`--update-ids`) during import, and Testomat.io writes an ID into each test for you.
+
+Your test before the import:
 
 ```java
 @Test
@@ -152,7 +157,7 @@ void userShouldBeFine() {
 }
 ```
 
-After:
+And after:
 
 ```java
 @Test
@@ -162,27 +167,73 @@ void userShouldBeFine() {
 }
 ```
 
-Test IDs help Testomat.io identify tests even when test names, packages, or source files change.
+Your tests now carry the same IDs in your code and in your project.
 
----
+Test IDs let Testomat.io identify a test even when its name, package, or source file changes.
 
-## Reporting Test Steps
+## Set up the reporter
 
-Testomat.io can display execution steps inside test results, making it easier to understand what happened during a test run and quickly identify the exact step where a failure occurred.
+Before results can reach Testomat.io, your project needs the reporter. The quickest way is the **Reporter Setup Skill**, which detects your testing framework and build tool, installs the dependencies, and generates the configuration for you.
+
+1. Go Testomat.io [skills repository](https://github.com/testomatio/skills/blob/master/skills/qa-e2e-tests-reporting/SKILL.md).
+2. Follow the instructions to install the reporter.
+3. Use the generated instructions for your project.
+
+The skill supports JUnit and TestNG with both Maven and Gradle.
+
+The Reporter Setup Skill is the recommended way to configure reporting for a new project.
+
+## Report your results
+
+Reports tell you what passed, what failed, and why. Pass your project API key in the `TESTOMATIO` environment variable when you run your tests.
+
+With Gradle:
+
+```shell
+TESTOMATIO=<API_KEY> ./gradlew test
+```
+
+With Maven:
+
+```shell
+TESTOMATIO=<API_KEY> mvn test
+```
+
+Your results now appear in Testomat.io, associated with their matching test cases.
+
+### Run only some of your tests
+
+You don't have to run the whole suite. With Gradle:
+
+```shell
+./gradlew test --tests UserTests
+./gradlew test --tests UserTests.userShouldBeFine
+```
+With Maven:
+
+```shell
+mvn -Dtest=UserTests test
+mvn -Dtest=UserTests#userShouldBeFine test
+```
+
+## Report test steps
+
+Steps show what happened inside a test, so you can see exactly where it failed.
+
+Wrap a step inline:
 
 ```java
 @Test
 void userShouldBeFine() {
-    Testomatio.step("Check user status", 
+    Testomatio.step("Check user status",
         () -> assertEquals("fine", user.getStatus()));
 }
 ```
 
-Annotated steps:
+Or annotate a method:
 
 ```java
 import io.testomat.core.annotation.Step;
-
 
 @Step("Check user status")
 private void checkUserStatus() {
@@ -195,9 +246,9 @@ void userShouldBeFine() {
 }
 ```
 
-### Using Allure Steps
+### If you already use Allure
 
-If your project already uses Allure, Testomat.io can automatically import and display Allure steps.
+Testomat.io imports and displays your existing Allure steps - you don't need to rewrite them.
 
 ```java
 @Test
@@ -208,95 +259,43 @@ void userShouldBeFine() {
 }
 ```
 
-Annotated steps are also supported:
+Annotated steps work too:
 
 ```java
 import io.qameta.allure.Step;
-
 
 @Step("Check user status")
 private void checkUserStatus() {
     assertEquals("fine", user.getStatus());
 }
 
-@Test
-void userShouldBeFine() {
-    checkUserStatus();
-}
 ```
 
-When Allure integration is enabled step information is synchronized with Testomat.io and displayed as part of the test execution report.
+With Allure integration enabled, step information is synchronized with Testomat.io and shown in the execution report.
 
----
+## Attach artifacts
 
-## Reporting Test Results
+Logs, screenshots, videos, and reports make a failure much faster to diagnose. The Testomat.io reporter uploads these artifacts to your own S3 bucket and links them to the matching test results.
 
-Reports provide visibility into test execution results and the performance of your automation workflows.
+![S3 bitbucket setup](./images/java-integration/2-artifacts.png)
 
-After importing tests, execution results can be reported back to Testomat.io.
-
-Provide your project API key using the `TESTOMATIO` environment variable.
-
-### Gradle
-
-```bash
-TESTOMATIO=<API_KEY> ./gradlew test
-```
-
-### Maven
-
-```bash
-TESTOMATIO=<API_KEY> mvn test
-```
-
-Execution results will automatically be associated with the corresponding tests in Testomat.io.
-
----
-
-## Artifacts with Testomat.io Reporter and S3
-
-Artifacts such as logs, screenshots, reports, videos, and other generated files are essential for debugging test failures.
-
-With the Testomat.io reporter, artifacts can be automatically uploaded to an S3 bucket and linked to test results in the Testomat.io dashboard.
-
-[Read more about Artifacts](https://docs.testomat.io/usage/test-artifacts/)
-
-![Testomat.io - Artifacts](./images/artefacts_settings.jpg)
-
-### Supported Artifacts
-
-Artifacts may include:
-
-- Execution logs
-- HTML reports
-- Screenshots
-- Videos
-- Generated files
-- Custom attachments
-
-### Setting Up Artifacts
+You can attach execution logs, HTML reports, screenshots, videos, generated files, and custom attachments.
 
 1. Configure artifact generation in your test framework or build tool.
-2. Set up an S3 bucket.
-3. Configure S3 integration in Testomat.io.
+2. [Set Up S3 Bucket](https://docs.testomat.io/test-reporting/artifacts/#set-up-s3-bucket).
+3. Configure the S3 integration in Testomat.io.
 4. Run your tests.
-5. Open a test result in Testomat.io to access uploaded artifacts.
+5. Open a test result to view or download its artifacts.
 
-### Viewing Attachments
+:::note
 
-View attachments by clicking on a test in a Test Run and selecting the artifact you want to inspect.
+S3 is only required for artifacts. Your test results - tests, statuses, and steps - sync to Testomat.io without it. Read more about [Artifacts](https://docs.testomat.io/usage/artifacts/).
 
-Artifacts can be downloaded or viewed directly from the Testomat.io interface.
+:::
 
----
+### Attach a file to a test
 
-## Reporting Test Attachments
-
-Testomat.io can display attachments inside test results, making it easier to investigate failures and review logs, screenshots, API responses, and other execution artifacts.
-
-### Using Testomat.io Attachments
-
-Java projects can attach files directly to Testomat.io reports.
+Attach a file directly to the test result:
 
 ```java
 @Test
@@ -305,11 +304,11 @@ void userShouldBeFine() {
 }
 ```
 
-Attached files are displayed in the test result and can be downloaded or viewed directly from the Testomat.io interface.
+The file appears in the test result, ready to view or download.
 
-### Using Step Attachments
+### Attach a file to a step
 
-Attachments can also be linked to a specific test step.
+Attach a file to one specific step instead, so it sits in context:
 
 ```java
 @Test
@@ -321,16 +320,15 @@ void userShouldBeFine() {
 }
 ```
 
-Step attachments are displayed within the corresponding step, making it easier to understand the context of failures and review screenshots, logs, and other files related to a specific action.
+The attachment is displayed within that step, making it clear which action produced it.
 
-### Using Allure Attachments
+### Attach files with Allure
 
-If your project already uses Allure, Testomat.io can automatically import and display Allure attachments.
+Existing Allure attachments are imported automatically:
 
 ```java
-Allure.addAttachment("Log File", 
-    Files.newInputStream(Path.of("logs/test.log"));
-);
+Allure.addAttachment("Log File",
+    Files.newInputStream([Path.of](Path.of)("logs/test.log")));
 ```
 
 Annotated attachments are supported as well:
@@ -338,83 +336,29 @@ Annotated attachments are supported as well:
 ```java
 import io.qameta.allure.Attachment;
 
-@Attachment(
-    value = "Screenshot",
-    type = "image/png"
-)
+@Attachment(value = "Screenshot", type = "image/png")
 private byte[] screenshot() {
-    return Files.readAllBytes(
-        Path.of("screenshot.png")
-    );
-}
-
-@Test
-void userShouldBeFine() {
-    screenshot();
+    return Files.readAllBytes(Path.of("screenshot.png"));
 }
 ```
 
-When Allure integration is enabled, attachment information is synchronized with Testomat.io and displayed as part of the test execution report.
+## Report parallel runs as one run
 
----
-
-## Parallel Execution Reporting
-
-To report parallel test executions to the same Testomat.io run, assign a shared title to all parallel runs and set the `TESTOMATIO_SHARED_RUN` environment variable.
+When you split tests across parallel jobs, each job reports separately by default. To collect them into a single run, give every job the same title and set `TESTOMATIO_SHARED_RUN`:
 
 ```bash
 TESTOMATIO_TITLE="{TITLE}" TESTOMATIO_SHARED_RUN=1 <actual run command>
 ```
 
----
+All parallel jobs now report into one run in Testomat.io.
 
-## Running Tests with Gradle
+Use a build or commit identifier as the title, so each set of parallel jobs maps to one identifiable run.
 
-Run all tests:
+## Run your tests in CI
 
-```bash
-./gradlew test
-```
+Store your API key as a secret, then pass it to your test command.
 
-Run a specific test class:
-
-```bash
-./gradlew test --tests UserTests
-```
-
-Run a specific test method:
-
-```bash
-./gradlew test --tests UserTests.userShouldBeFine
-```
-
----
-
-## Running Tests with Maven
-
-Run all tests:
-
-```bash
-mvn test
-```
-
-Run a specific test class:
-
-```bash
-mvn -Dtest=UserTests test
-```
-
-Run a specific test method:
-
-```bash
-mvn -Dtest=UserTests#userShouldBeFine test
-```
-
----
-
-## CI Integration
-
-### GitHub Actions
+GitHub Actions:
 
 ```yaml
 - name: Run Tests
@@ -423,7 +367,7 @@ mvn -Dtest=UserTests#userShouldBeFine test
     TESTOMATIO: ${{ secrets.TESTOMATIO }}
 ```
 
-### Jenkins
+Jenkins:
 
 ```groovy
 withEnv(["TESTOMATIO=${TESTOMATIO}"]) {
@@ -431,7 +375,7 @@ withEnv(["TESTOMATIO=${TESTOMATIO}"]) {
 }
 ```
 
-### GitLab CI
+GitLab CI:
 
 ```yaml
 test:
@@ -440,39 +384,16 @@ test:
   variables:
     TESTOMATIO: $TESTOMATIO
 ```
+Your pipeline now automatically reports every run to Testomat.io.
 
----
+## Next Steps
 
-### Setting Up the Reporter
+* For more frameworks setup, see [Testomat.io Java Reporter](Testomat.io).
+* Spot unstable and slow tests across your runs in[ Analytics](https://docs.testomat.io/project/analytics/).
+* Group the tests that run together with[ Test Plans](https://docs.testomat.io/project/plans/).
+* Get failures explained from your logs with[ AI-Powered Features](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features/).
 
-The easiest way to configure reporting for your Java project is to use the **Reporter Setup Skill**.
+## Related repositories
 
-The Reporter Setup Skill automatically detects your testing framework and build tool, installs the required dependencies, and generates the configuration needed to report test results to Testomat.io.
-
-To use it:
-
-1. Open your Testomat.io project.
-2. Navigate to **Skills**.
-3. Select **Reporter Setup**.
-4. Follow the generated instructions for your project.
-
-The skill supports Java projects using JUnit, TestNG as well as both Maven and Gradle build systems.
-
-> The Reporter Setup Skill is the recommended way to configure Testomat.io reporting for new projects.
-
----
-
-## Related Repositories
-
-### java-reporter
-
-Official Java reporter for Testomat.io.
-Use it to report test execution results, steps, and artifacts from JUnit and TestNG projects.
-
-[java-reporter](https://github.com/testomatio/java-reporter)
-
-### java-check-tests
-
-Utility for importing Java tests, synchronizing test IDs, and maintaining test metadata in Testomat.io.
-
-[java-check-tests](https://github.com/testomatio/java-check-tests)
+* [java-reporter](https://github.com/testomatio/java-reporter) - reports execution results, steps, and artifacts from JUnit and TestNG projects. 
+* [java-check-tests](https://github.com/testomatio/java-check-tests) - imports Java tests, synchronizes test IDs, and maintains test metadata. 
