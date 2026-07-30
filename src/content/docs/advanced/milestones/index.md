@@ -16,10 +16,13 @@ In software development, a **milestone** represents a significant checkpoint or 
 
 **With Milestones in Testomat.io, you can:**
 
-- Create milestones to define testing scope for a specific phase.
-- Assign tests and test runs to a milestone.
-- Execute tests within the context of a milestone.
-- Generate reports based on milestone results.
+- Create milestones for releases, sprints, or project phases
+- Assign tests and test runs
+- Link Requirements
+- Link Test Plans
+- Track Requirement status
+- Track Test Plan progress
+- Generate Milestone reports
 
 This enables end-to-end test management aligned with project phases, providing clear visibility into progress and outcomes for each milestone.
 
@@ -185,6 +188,28 @@ For more complex queries or when building custom dashboards, you can use the TQL
 4. Click **'Apply'** button.
 
 ![Testomat.io - Filter by Milestone](./images/filter_milestone_2.png)
+
+## Requirements in a Milestone
+
+Linking Requirements to a Milestone shows how much of the planned scope is actually covered and verified, so you can judge readiness by feature rather than by raw test count.
+
+* Track each Requirement's status within the Milestone
+* See which requirements are covered by tests and which still have gaps
+* Assess release readiness by scope, not just pass/fail numbers
+
+**Use case:** A product owner preparing the *2.0* release opens the Milestone and sees that eight of ten Requirements are fully covered and passing, while two still have failing tests — so they know exactly which features are blocking the release.
+
+## Test Plans in a Milestone
+
+Linking Test Plans groups the runs that matter for this Milestone, so progress reflects the plan you intend to ship against instead of every run in the project.
+
+* Monitor the linked Test Plans in one place
+* Follow execution progress for the plan tied to this release or sprint
+* Keep milestone progress focused on the relevant runs
+
+**Use case:** A QA lead ties the *Regression* and *Smoke* plans to a sprint Milestone. As testers work through the runs, the Milestone shows live progress toward completing those plans, without noise from unrelated runs.
+
+This provides a clear overview of what has been completed, what is still in progress, and what remains before a release or sprint is finished.
 
 ## Milestone Analytics & Progress Reports
 
