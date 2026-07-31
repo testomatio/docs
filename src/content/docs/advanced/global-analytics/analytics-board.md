@@ -39,7 +39,7 @@ The dashboard is structured into four main areas: **the filter bar, the stat car
 
 ![Testomat.io - GA](./images/GA_Filter_1.png)
 
-### Available Top-Bar Filters
+### Top-Bar Filters
 
 1. **Company** - Switch between different companies you belong to using the top-level company selector.
 2. **Date range** - Select a custom date range or a quick preset (defaults to the **last 30 days**). Date ranges filter run-based metrics according to when test executions occurred.
@@ -49,7 +49,7 @@ The dashboard is structured into four main areas: **the filter bar, the stat car
 
 ![Testomat.io - GA](./images/GA_Filter_2.gif)
 
-### Available Side Drawer Filters
+### Side Drawer Filters
 
 Click the side drawer icon to access additional filter options:
 1. **Environments** - Restrict results to specific execution environments (e.g., Staging, Production).
