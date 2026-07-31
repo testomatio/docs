@@ -110,7 +110,7 @@ OR
 
 Dashboards use a **12-column grid** and it allows you to shape the layout directly on the page.
 
-### Customize the layout
+**Customize the layout**
 
 1. Click **Edit** on the dashboard page.
 2. **Move:** Click and drag a widget by its header.
@@ -171,9 +171,11 @@ Available filter values (tags, labels, environments, suites) are dynamically pop
 
 ![Testomat.io - GA Widget](./images/GA_Widget_filter_3.gif)
 
-## Performance & Caching
+:::note
 
 To ensure rapid loading times across large datasets, widget results are cached automatically. The cache updates periodically on a set schedule to reflect new test runs. Reopening a dashboard or adjusting filters automatically triggers a fresh data load.
+
+:::
 
 ## Next Steps
 
