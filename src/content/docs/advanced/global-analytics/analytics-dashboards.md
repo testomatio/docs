@@ -82,7 +82,7 @@ Each data source supports a subset of different visualizations. The form shows o
 
 ![Testomat.io - GA Widget](./images/GA_Widget_2.gif)
 
-### Setting Default Widget View
+### Default Widget View
 
 You can set or change the Default View for a widget in two ways:
 
@@ -106,11 +106,11 @@ OR
 | **Summaries** | Project stats, run stats | A full picture of one project or run |
 | **Milestones** | Milestone completion, milestone run stats, milestone tests, plans, and requirements | Progress against a [milestone](https://docs.testomat.io/advanced/milestones/) |
 
-## Arranging and Resizing Widgets Layouts
+## Edit Widgets Layouts
 
 Dashboards use a **12-column grid** and it allows you to shape the layout directly on the page.
 
-### To customize the layout
+### Customize the layout
 
 1. Click **Edit** on the dashboard page.
 2. **Move:** Click and drag a widget by its header.
@@ -135,7 +135,7 @@ Filters can be applied at the **Dashboard level** (affecting all widgets) or at 
 
 :::
 
-### Available Filter Criteria
+### Filter Criteria
 
 - **Date range** - restrict run-based metrics to a period.
 - **Projects** - limit analytics to one or more projects in the company.
@@ -147,14 +147,14 @@ Filters can be applied at the **Dashboard level** (affecting all widgets) or at 
 
 Available filter values (tags, labels, environments, suites) are dynamically populated from all accessible projects across your company.
 
-### Applying Dashboard-Level Filters
+### Dashboard-Level Filters
 
 1. Click **Filter** icon in the top-right corner on the Dashboard page.
 2. Configure your filter criteria. The selected filters will instantly apply to all widgets on the board.
 
 ![Testomat.io - GA Widget](./images/GA_Widget_filter_1.gif)
 
-### Applying Single Widget Filters
+### Single Widget Filters
 
 1. Click **Edit** and then **New widget**.
 2. Select your data source and configure specific filters within the creation panel.
