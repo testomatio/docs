@@ -57,6 +57,21 @@ Milestones are automatically grouped by type name in a case-insensitive manner. 
 
 :::
 
+## Milestone types
+
+Milestones are grouped by type. Testomat.io ships with built-in types - **Milestone**, **Release**, and **Sprint** - and you can add your own.
+
+To create a type, enter a name in the **Type** field on a milestone form.
+
+![The milestone type management modal](./images/milestone-types.png)
+
+To manage types, click the gear icon next to the **Type** field. The modal lists the built-in types and any custom types in use across the company.
+
+Deleting a type depends on whether it is in use:
+
+*  An unused type is removed entirely.
+*  An in-use type asks you to pick a new type for the affected milestones, tests, and plans to move to.
+
 ## How to Edit & Delete Milestone
 
 You can modify or remove milestones at any point using two different ways: from main **'Milestones'** page and from the **'Milestone details'** page.
@@ -210,6 +225,22 @@ Linking Test Plans groups the runs that matter for this Milestone, so progress r
 **Use case:** A QA lead ties the *Regression* and *Smoke* plans to a sprint Milestone. As testers work through the runs, the Milestone shows live progress toward completing those plans, without noise from unrelated runs.
 
 This provides a clear overview of what has been completed, what is still in progress, and what remains before a release or sprint is finished.
+
+ ## Users in a milestone
+
+A milestone has a **Users** tab that shows who is working on it and how far each person has got. Users are grouped by project. Each row shows the tests that person created in the milestone, the tests assigned to them, the tests they have executed, and a progress bar of completed against assigned.
+
+The numbers cover every test the milestone reaches - tests attached to it directly, tests in its plans, tests linked to its requirements, and tests with results in its runs. Execution is credited from manual results, so the completed column reflects hands-on testing rather than automated runs.
+
+![The Users tab on a milestone, grouped by project](./images/milestones-users.png)
+
+## Defects in a milestone
+
+A milestone has a **Defects** tab alongside **Runs**, **Tests**, **Requirements**, **Plans**, and **Users**. It gathers the open bugs that stand between the milestone and its release.
+
+Because a milestone spans projects, so does the tab. Defects are grouped into a collapsible section per project, each with its own count, and the tab header shows the total across all projects.
+
+Each defect shows its status, severity, and the date it was opened, and the tracker it came from is marked on the title. Click a defect to open it on your project's **Defects** board, or open a project straight from its section.
 
 ## Milestone Analytics & Progress Reports
 
