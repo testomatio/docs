@@ -172,30 +172,14 @@ Read full article: [Import Automated Tests](https://docs.testomat.io/getting-sta
 To add automated tests to your project, you must import them from the source code, a CSV file, or an existing TestRail suite. To import automated tests, follow these steps:
 
 1. Open your project.
-2. Navigate to the actions (...).
-3. Click **Import automated tests**.
-
-Alternatively:
-
-1. Go to the Imports menu.
-2. Navigate to the **Import** dropdown menu.
-3. Select an import option:
-
-   | Import option | Description |
-   |---|---|
-   | **Import from Source Code** | Imports tests directly from your local project or repository. |
-   | **Import from CSV** | Imports tests from a CSV file and converts it to one of the available formats. |
-   | **Import from TestRail** | Imports tests from an existing TestRail suite. |
-
-In the **Import** section, pick the framework, programming language and operating system you are using for testing.
-
-![Testomat.io - Copy instructions](./images/copy-import-instructions.png)
+2. Navigate to the actions (`...`).
+3. Click **Import automated tests**, **Import from markdown**, or **Import from other TMS**.
 
 :::note
 
 Please check your environment:
 
-- For NodeJS (JavaScript, TypeScript): you need NodeJS 10+ and npm installed to be able to run this command.
+- For NodeJS (JavaScript, TypeScript): you need NodeJS 18+ and npm installed to be able to run this command.
 - For PHP: you need PHP > 7.2 and Composer installed.
 
 :::
