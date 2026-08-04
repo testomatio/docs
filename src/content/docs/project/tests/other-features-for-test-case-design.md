@@ -10,36 +10,21 @@ head:
       content: test design, test case management, test automation, Testomat.io, test organization, software testing, testing tools, test suites, test structure, folders, mark as favorite, export suite to PDF,  multiselection, labels, tags, share tests, share suites, share folders, unlink shared tests, single source of truth
 ---
 
-## Multiselection for Tests
+Once you select one or more tests, a bulk actions panel appears above the test list. From there you can run, organize, or clean up all the selected tests at once, without opening each of them.
 
-The **'Multiselection'** feature on the **Tests** page allows users to perform bulk actions on multiple tests, entire test suites, or folders.
+| Action | What it does |
+|--------|--------------|
+| **Run** | Launches a test run containing the selected items. |
+| **Labels** | Add or remove labels or custom fields for the selected tests. |
+| **Copy** | Copy selected tests within the current project or to another project. |
+| **Move** | Move tests to another test suite or folder within the same project. |
+| **Tags** | Assign existing tags or create new ones for the selected tests. |
+| **+ Link** | Open a pop-up to link a related defect to the selected tests. |
+| **Priority** | Set priority levels for the selected tests. |
+| **More options (`⋯`)** | Contains the additional **Download** action - export selected tests to a spreadsheet. |
+| **Delete** | Permanently remove the selected tests. |
 
-### To enable Multiselection:
-
-1. Click the **'Multiselection'** button located at the top left corner of the **Tests** page.
-
-![Testomat.io - Multiselection button](./images/Multiselect_button_tests.png)
-
-2. Select the desired tests, test suites, or folders.
-3. Once selected, the **'Multiselection options'** toolbar will appear at the bottom of the page.
-
-![Testomat.io - Multiselection options](./images/Multiselection_options.png)
-
----
-
-### Available Multiselection Actions:
-
-1. **Run** – Launches a test run containing the selected items.
-2. **Labels** – Add or remove labels or custom fields for the selected tests.  
-   [Learn more about labels →](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields)
-3. **Copy** – Copy selected tests within the current project or to another project.
-4. **Move** – Move tests to another test suite or folder within the same project.
-5. **Tags** – Assign existing tags or create new ones for the selected tests.  
-   [More on using tags →](https://docs.testomat.io/advanced/tags-labels/tags/)
-6. **+ Link** – Open a pop-up to link a related defect to the selected tests.
-7. **Priority** – Set priority levels for the selected tests.
-8. **More options (⋯)** – Contains additional action **'Download'** – Export selected tests to a spreadsheet.
-9. **Delete** – Permanently remove the selected tests.
+Learn more about [labels](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields) and on [using tags](https://docs.testomat.io/advanced/tags-labels/tags/).
 
 ## URL/ID Quick Copy
 
