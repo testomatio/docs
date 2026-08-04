@@ -211,6 +211,13 @@ export default defineConfig({
 								{ label: 'Overview', link: '/project/analytics' },
 							],
 						},
+						{
+							label: 'Notifications',
+							collapsed: true,
+							items: [
+								{ label: 'Notifications', link: '/project/notifications' },
+							],
+						},
 					],
 				},
 				{
