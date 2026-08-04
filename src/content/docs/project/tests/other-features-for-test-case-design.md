@@ -132,6 +132,26 @@ If your test is deeply nested within suites and folders, you can use breadcrumbs
 
 ![Testomat.io - Breadcrumbs tooltip](./images/New_g6FZ3V7n_2024-08-10.png)
 
+## Undetach Tests
+
+A bad import can mark a whole suite of automated tests as **Detached** - they were imported before, but the latest import did not find them. You can bring them back in bulk instead of one at a time.
+
+On the **Tests** page, filter by state **Detached**. A banner appears with an **Undetach tests** action that clears the state from every detached test at once.
+
+:::note
+
+The action is project-wide: it clears every detached test in the project, not only the ones matching your current filter. That is what makes it useful after a misconfigured import, when detached tests are scattered across suites.
+
+:::
+
+For something narrower, a suite's menu offers **Undetach** when it contains detached tests, and any single detached test can be undetached from its own menu.
+
+:::note
+
+A detached test that no longer carries any code comes back as a manual test rather than an automated one.
+
+:::
+
 ### Mark Folders & Suites as Favourites
 
 Working with large projects often means navigating through a long test tree or running the same search queries over and over again. To make your workflow smoother, we’ve introduced the **'Starred'** feature for test suites and folders.
