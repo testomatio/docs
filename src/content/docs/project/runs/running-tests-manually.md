@@ -155,6 +155,12 @@ Additional Configurations:
 
 ![Run configuration](./images/att1_7641.png)
 
+:::note
+
+Select tests is now the default option on the **New Run** screen, so the tests tree opens in front of you right away. The other options - **All tests**, **Test plan**, and **Without tests** - are still one click away. \
+
+:::
+
 ### How to Set up Additional Manual Run options
 
 When manual run is launched, the following set up options are available:
@@ -325,6 +331,18 @@ Your Test Cases and Suites are now successfully assigned to different users.
 
 ![Testomat.io - Assign TC](./images/Assign_TC_1.png)
 
+### Filter Unassigned Results
+
+During a manual run you can filter down to the results nobody has picked up. A grey **Unassigned** avatar sits next to the assignee avatars on the execution screen and the report page. Click it to show only the results with no one assigned, and click again to clear the filter.
+
+It works with the run’s other filters, so you can narrow to unassigned results of a given priority, or unassigned results that are still pending.
+
+:::note
+
+Automated results are never assigned to anyone, so in a mixed run they appear under **Unassigned** too. Add the manual filter to see only the manual tests waiting for an owner.
+
+:::
+
 ### How to Select a Test Environment
 
 To select a testing environment you need:
@@ -483,6 +501,33 @@ You can add tests from plans and additional tests at the same time. For example:
 :::
 
 ![Edit existing run](./images/gif1-7865.gif)
+
+## Pause a manual run
+
+You can pause a manual run and pick it up later without losing progress or time.
+
+1. Open the run.
+2. Open the `⋯` menu.
+3. Select **Pause**.
+
+The run moves to a paused state, and the elapsed time is banked so the duration stays accurate. Every result you already marked keeps its status, and a pause icon and badge show on the run in run lists.
+
+To continue, click **Start** - you return to the execution screen, and the timing resumes from where it stopped.
+
+![A paused manual run with its pause badge](./images/manual-test-paused.png)
+
+## Edit a Result in a Finished Run
+
+You can change the status of a single result in a run that has already finished, without re-running the whole suite. This helps when a late fix lands after the run closed and the report still shows red.
+
+1. Open the finished run.
+2. Open the result you want to change.
+3. Select the new status.
+4. Add a message if you need to explain the change.
+
+![Changing a result's status inside a finished run](./images/change-result.png)
+
+The run updates right away. The change is recorded, not applied quietly - each edit keeps its new status, your message, and who made it, so the run shows both where it landed and how it got there. The change broadcasts live to everyone watching the project, and any linked Jira issue re-syncs in the background.
 
 ## How to Remove and Re-add a Test in a Run
 

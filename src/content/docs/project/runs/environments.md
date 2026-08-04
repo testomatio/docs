@@ -48,6 +48,14 @@ This section explains how to execute tests using different Multi-Environment con
 
 Each Multi-Environment group creates a separate test run. All created runs are collected in a dedicated group for easier management and overview.
 
+### Environment Groups on The New Run Screen
+
+The **New Run** setup screen shows at a glance which environments each group already contains, and adding or removing one takes a single action. Building a matrix of several groups no longer means checking your work twice before launching.
+
+Environments are defined once in project settings in the `{category}:{value}` format. For example `Browser:Chrome`, `OS:Windows`, `Stage:Dev` - and combined into groups when you launch. You can also pass environment configurations at runtime from your CI/CD pipeline, so the same setup drives automated runs triggered by a branch or deployment stage.
+
+![Environment groups on the New Run setup screen](./images/multi-env-ui.png)
+
 ### Run Multi-Environment Tests in One Run
 
 This mode runs a single test run where each test is executed across all configured environments within one group. For example, if you select **Browser: Chrome, OS: Windows, and Stage: Dev**, the tests will run with this combined environment configuration. Test results are shown grouped by these environment settings inside this single test run.
