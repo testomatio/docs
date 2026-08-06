@@ -238,6 +238,8 @@ The numbers cover every test the milestone reaches - tests attached to it direct
 
 A milestone has a **Defects** tab alongside **Runs**, **Tests**, **Requirements**, **Plans**, and **Users**. It gathers the open bugs that stand between the milestone and its release.
 
+![Defects tab in the project milestones](./images/milestones-defects.png)
+
 Because a milestone spans projects, so does the tab. Defects are grouped into a collapsible section per project, each with its own count, and the tab header shows the total across all projects.
 
 Each defect shows its status, severity, and the date it was opened, and the tracker it came from is marked on the title. Click a defect to open it on your project's **Defects** board, or open a project straight from its section.
