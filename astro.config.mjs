@@ -4,13 +4,19 @@ import starlightImageZoom from 'starlight-image-zoom';
 import rehypeAstroRelativeMarkdownLinks from "astro-rehype-relative-markdown-links";
 import starlightLinksValidator from 'starlight-links-validator';
 import redirects from "./redirects.js";
+import llmsTxt from './src/scripts/llms-txt.mjs';
+
+const site = 'https://docs.testomat.io';
 
 const options = {
     collectionBase: false,
 };
 
+// Shared by Starlight navigation and the llms.txt build generator.
+let docsSidebar;
+
 export default defineConfig({
-	site: 'https://docs.testomat.io',
+	site,
 	image: {
 		service: passthroughImageService()
 	},
@@ -76,7 +82,7 @@ export default defineConfig({
 				ThemeSelect: './src/components/ThemeSelect.astro',
 			},
 
-			sidebar: [
+			sidebar: (docsSidebar = [
 				{
 					label: 'Getting Started',
 					items: [
@@ -491,8 +497,9 @@ export default defineConfig({
 						{ label: 'Contact Us', link: '/support'},
 					],
 				},
-			],
+			]),
 		}),
+		llmsTxt({ sidebar: docsSidebar, site }),
 	],
 	markdown: {
 		rehypePlugins: [
