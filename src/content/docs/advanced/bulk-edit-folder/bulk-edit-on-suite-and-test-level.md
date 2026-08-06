@@ -120,3 +120,11 @@ Sometimes, you may want to quickly add multiple test cases by name and save them
 ![CleanShot 2022-05-24 at 11 44 10@2x](./images/see_your_tests_created2.png)
 
 [![CleanShot 2022-05-27 at 20 19 26@2x](./images/170759254-e6d4379b-733e-4521-98f3-abccca6eaffa.jpg)](https://youtu.be/jnJwZsRQjTQ)
+
+## Rich editor for bulk editing
+
+Bulk editing opens with two tabs: a Markdown editor and a Rich Editor. The Rich Editor gives you a formatted, block-based view where you work with visible headings, lists, and tables instead of Markdown syntax.
+
+The **Add Test** button appends tests in both modes.
+
+When you save a large suite, the save is chunked, and the progress shows in the header.
