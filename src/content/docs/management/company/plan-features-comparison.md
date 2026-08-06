@@ -207,7 +207,7 @@ Use the feature table below to explore specific capabilities in each area like t
 | Role-based and team-based Access Control |  ✖️  |      ✔️      |     ✔️     |
 | Project Activity Log                     |  ✖️  |      ✔️      |     ✔️     |
 | Company audit log                        |  ✖️  |      ✔️      |     ✔️     |
-| Branches like Git for team collaboration |  ✖️  |      ✔️      |     ✔️     |
+| Branches like Git for team collaboration |  ✖️  |      ✖️      |     ✔️     |
 | Project archive                          |  ✖️  |      ✔️      |     ✔️     |
 | Sharing living docs                      |  ✖️  |      ✔️      |     ✔️     |
 | Sharing public reports                   |  ✖️  |      ✔️      |     ✔️     |
