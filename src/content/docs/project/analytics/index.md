@@ -246,6 +246,22 @@ Visit the [Issues Management Systems](https://docs.testomat.io/integration/issue
 
 ![Testomat.io - Issues Board](./images/New_dMX5JYvp_2024-10-23.gif)
 
+## Defects Board
+
+The Defects report answers a different question from the Defects board: not which bugs are open, but which of your tests are blocked, and by what. Each row is a test case, with its defects nested underneath. Expand a test to see every defect holding it back, each with its severity, status, and a link to the tracker.
+
+Choose how defects reach a test with the data-source selector:
+
+| Data source | What it shows |
+|-------------|---------------|
+| **All Defects** | Both routes merged; a defect is counted once even when it is linked twice. |
+| **By Tests** | Only defects attached to the test case itself. |
+| **By Test Runs** | Only defects raised on that test's runs. |
+
+This separates bugs someone filed against a test from bugs the test actually caught.
+
+![The Defects report in Analytics, with defects nested under each test](./images/defects-analytics.png)
+
 ## Flaky Tests
 
 There may be some unstable automated tests on your project that sometimes fail and sometimes pass.
