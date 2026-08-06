@@ -216,6 +216,7 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								{ label: 'Notifications', link: '/project/notifications' },
+								{ label: 'Comments', link: '/project/notifications/comments' },
 							],
 						},
 					],
