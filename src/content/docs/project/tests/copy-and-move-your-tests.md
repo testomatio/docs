@@ -147,6 +147,14 @@ You may need to move your tests within a project, for example to another suite. 
 
 ![Alt Move tests button ](./images/drag_and_drop.gif)
 
+**Move several items at once**
+
+Select multiple rows, then drag any one of them - the whole selection travels together and keeps its relative order.
+
+**Copy instead of move**
+
+Hold `Alt` (`Option` on Mac) while you drop to create copies rather than move the items. This works for a single item and for a multi-item selection.
+
 ## How to restore deleted tests?
 
 The **Trash Bin** feature is designed to enhance data recovery and user experience by allowing users to easily restore accidentally deleted suites or test cases. Revisions are stored for up to 90 days, ensuring that valuable testing data is not permanently lost and can be quickly recovered without the need for complex restoration processes.
