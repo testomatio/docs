@@ -157,7 +157,7 @@ Additional Configurations:
 
 :::note
 
-Select tests is now the default option on the **New Run** screen, so the tests tree opens in front of you right away. The other options - **All tests**, **Test plan**, and **Without tests** - are still one click away. \
+Select tests is now the default option on the **New Run** screen, so the tests tree opens in front of you right away. The other options - **All tests**, **Test plan**, and **Without tests** - are still one click away.
 
 :::
 

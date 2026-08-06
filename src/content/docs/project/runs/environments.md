@@ -48,7 +48,7 @@ This section explains how to execute tests using different Multi-Environment con
 
 Each Multi-Environment group creates a separate test run. All created runs are collected in a dedicated group for easier management and overview.
 
-### Environment Groups on The New Run Screen
+### Multi-Environment Run Matrix
 
 The **New Run** setup screen shows at a glance which environments each group already contains, and adding or removing one takes a single action. Building a matrix of several groups no longer means checking your work twice before launching.
 
