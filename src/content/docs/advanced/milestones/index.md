@@ -204,6 +204,26 @@ For more complex queries or when building custom dashboards, you can use the TQL
 
 ![Testomat.io - Filter by Milestone](./images/filter_milestone_2.png)
 
+## Milestone Overview
+
+The Milestones contain: the start date, release date, status, type, run count, and the share of completion tests. 
+
+The **Coverage** list breaks the milestone down by run, with each run's status, tests, run state, success rate, defects, assignee, duration, and finish date.
+
+![Milestone widgets overview](./images/milestone-widgets.png)
+
+The tabs **Runs**, **Tests**, **Requirements**, **Plans**, **Users**, and **Defects** provide more details about the milestone. 
+
+## Runs in a Milestone
+
+The **Runs** tab lists the runs tied to the milestone. Each row shows the run's status, its test count, run state, success rate, defects, who it is assigned to, its duration, and when it finished, so you can follow execution against the milestone in one place.
+
+![The milestone overview with its header stats and coverage list](./images/milestone-overview.png)
+
+## Tests in a Milestone
+
+The **Tests** tab lists every test in the milestone's scope — tests attached to it directly, tests in its plans, and tests linked to its requirements. Each row shows the test's status and priority, so you can see what the milestone covers and where it stands.
+
 ## Requirements in a Milestone
 
 Linking Requirements to a Milestone shows how much of the planned scope is actually covered and verified, so you can judge readiness by feature rather than by raw test count.
@@ -222,11 +242,13 @@ Linking Test Plans groups the runs that matter for this Milestone, so progress r
 * Follow execution progress for the plan tied to this release or sprint
 * Keep milestone progress focused on the relevant runs
 
+![Milestone test plan flow](./images/milestone-plan-flow.png)
+
 **Use case:** A QA lead ties the *Regression* and *Smoke* plans to a sprint Milestone. As testers work through the runs, the Milestone shows live progress toward completing those plans, without noise from unrelated runs.
 
 This provides a clear overview of what has been completed, what is still in progress, and what remains before a release or sprint is finished.
 
- ## Users in a milestone
+ ## Users in a Milestone
 
 A milestone has a **Users** tab that shows who is working on it and how far each person has got. Users are grouped by project. Each row shows the tests that person created in the milestone, the tests assigned to them, the tests they have executed, and a progress bar of completed against assigned.
 
@@ -234,7 +256,7 @@ The numbers cover every test the milestone reaches - tests attached to it direct
 
 ![The Users tab on a milestone, grouped by project](./images/milestones-users.png)
 
-## Defects in a milestone
+## Defects in a Milestone
 
 A milestone has a **Defects** tab alongside **Runs**, **Tests**, **Requirements**, **Plans**, and **Users**. It gathers the open bugs that stand between the milestone and its release.
 
