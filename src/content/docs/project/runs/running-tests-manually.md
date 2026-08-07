@@ -271,7 +271,9 @@ After selecting users, you can choose an assignment strategy, add a description,
 
 - **Prefer test assignee:** The system respects assignments made at the test and suite levels. Tests within this run will be automatically assigned to users responsible for them.
 
-- **Randomly distribute tests between team members:** Tests within this run will be equally split between assigned team members. Manager won't be assigned to any test.
+- **Randomly distribute tests between team members:** Each test in the run is assigned to a random team member, so the workload can come out uneven. The manager is not assigned to any test.
+
+- **Evenly distribute tests between team members** The tests in the run are split equally between the assigned team members, so everyone gets a balanced share. The manager is not assigned to any test.
 
 To select Test Assignment Strategies:
 
