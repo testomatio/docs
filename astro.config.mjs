@@ -224,6 +224,15 @@ export default defineConfig({
 								{ label: 'Overview', link: '/project/analytics' },
 							],
 						},
+						{
+							label: 'Comments & Notifications',
+							collapsed: true,
+							items: [
+								{ label: 'Overview', link: '/project/comments-notifications' },
+								{ label: 'Comments', link: '/project/comments-notifications/comments' },
+								{ label: 'Mentions and Notifications', link: '/project/comments-notifications/mentions-and-notifications' },
+							],
+						},
 					],
 				},
 				{
