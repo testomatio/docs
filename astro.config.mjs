@@ -211,6 +211,13 @@ export default defineConfig({
 							],
 						},
 						{
+							label: 'Defects',
+							collapsed: true,
+							items: [
+								{ label: 'Defects', link: '/project/defects' },
+							],
+						},
+						{
 							label: 'Analytics',
 							collapsed: true,
 							items: [
