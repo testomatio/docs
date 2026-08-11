@@ -212,11 +212,12 @@ export default defineConfig({
 							],
 						},
 						{
-							label: 'Notifications',
+							label: 'Comments & Notifications',
 							collapsed: true,
 							items: [
-								{ label: 'Notifications', link: '/project/notifications' },
-								{ label: 'Comments', link: '/project/notifications/comments' },
+								{ label: 'Overview', link: '/project/comments-notifications' },
+								{ label: 'Comments', link: '/project/comments-notifications/comments' },
+								{ label: 'Mentions and Notifications', link: '/project/comments-notifications/mentions-and-notifications' },
 							],
 						},
 					],
