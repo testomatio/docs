@@ -10,11 +10,11 @@ head:
       content: mentions, mention a teammate, at mention, notifications, notification bell, email notifications, comments, tests, suites, collaboration, Testomat.io
 ---
 
-## Mention a teammate
-
 A mention invites the teammate to a comment. The teammates are notified right away.
 
 Mentions work inside a comment on a test or a suite.
+
+## Mention a teammate
 
 1. Open the **Comments** tab on the test or the suite.
 2. Type `@` in the comment field.
