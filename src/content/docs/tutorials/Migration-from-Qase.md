@@ -17,7 +17,7 @@ head:
 
 Welcome!
 
-In this tutorial you will learn how to move your test cases from Qase to Testomat.io. You will export your cases from Qase as a CSV file, import that file, keep your folder structure intact, and check that everything landed correctly. Qase and Testomat.io store the same things, so a migration is mostly moving the file across.
+In this tutorial you will export your cases from Qase as a CSV file, import that file, and check that everything works correctly. Qase and Testomat.io store same things, so a migration is simple.
 
 ![Export from Qase, import into Testomat.io, then check the result](./images/migration-from-qase/migration-flow.png)
 
