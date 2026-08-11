@@ -29,9 +29,9 @@ First, get your test cases out of Qase as a file.
 2. Export your test cases as a **CSV** file.
 3. Save the file on your computer.
 
-Open the file and check the first row. It should hold column names like Title and Folder - that is how Testomat.io knows what each column means.
-
 ![The export option in a Qase project, with CSV selected](./images/migration-from-qase/1-export-from-qase.png)
+
+Open the file and check the first row. It should hold column names like Title and Folder - that is how Testomat.io knows what each column means.
 
 :::note
 
