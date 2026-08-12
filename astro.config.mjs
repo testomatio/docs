@@ -102,6 +102,7 @@ export default defineConfig({
 							{ label: 'Interacting via API', link: '/tutorials/interacting-via-api'},
 							{ label: 'Set Up Read-Only Access', link: '/tutorials/set-up-read-only-access'},
 							{ label: 'Migration from TestRail', link: '/tutorials/migration-from-testrail'},
+							{ label: 'Migration from Qase', link: '/tutorials/migration-from-qase'},
 							{ label: 'Playwright', link: '/tutorials/playwright'},
 							{ label: 'Java Integration', link: '/tutorials/java'},
 							{ label: 'WebdriverIO', link: '/tutorials/webdriver'},
