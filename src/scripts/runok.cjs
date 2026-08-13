@@ -122,7 +122,7 @@ module.exports = {
             title[0] = title[0].toUpperCase();
             const titleId = title.toUpperCase();
 
-            if (titleId === 'FRAMEWORKS') title = "NodeJS Test Frameworks";
+            if (titleId === 'FRAMEWORKS') title = "JavaScript Frameworks";
             if (titleId === 'TESTOMATIO') title = "Advanced Options"
             if (titleId === 'JUNIT') title = "JUnit Reporter"
             let contents;

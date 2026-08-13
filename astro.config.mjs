@@ -231,10 +231,11 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', link: '/test-reporting'},
 						{ label: 'Testomat.io Reporter', link: '/test-reporting/reporter'},
-						{ label: 'NodeJS Test Frameworks', link: '/test-reporting/frameworks'},
+						{ label: 'JavaScript Frameworks', link: '/test-reporting/frameworks'},
 						{ label: 'Java Frameworks', link: '/test-reporting/java-reporter'},						
 						{ label: 'PHP Test Frameworks', link: '/test-reporting/php'},
 						{ label: 'Python Test Frameworks', link: '/test-reporting/python'},
+						{ label: 'Robot Framework', link: '/test-reporting/robot-framework'},
 						{ label: 'Other Test Frameworks', link: '/test-reporting/junit'},
 						{ label: 'Test Artifacts', link: '/test-reporting/artifacts'},						
 						{ label: 'Configuration', link: '/test-reporting/configuration'},
