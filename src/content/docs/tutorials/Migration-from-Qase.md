@@ -103,7 +103,9 @@ Next, click the label you just created. To Edit:
 
 ![Label setup form showing Scope, Visibility, and the Custom Field section with List selected](./images/migration-from-qase/6-label-as-qase-field.png)
 
-Open any test and click **Set labels**. All values are in a dropdown.
+Open any test and click **Set labels**. In the new modal window, click **Add custom field** in the **Custom fields** section. All values appear in a dropdown.
+
+![Adding a custom field to a test](./images/migration-from-qase/7-add-custom-fields.png)
 
 :::note
 
