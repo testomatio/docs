@@ -42,39 +42,24 @@ Click any tool below to see step-by-step instructions:
 - [XRay](https://docs.testomat.io/project/import-export/import/import-tests-from-xray/)
 - [Zephyr](https://docs.testomat.io/project/import-export/import/import-tests-from-zephyr/)
 
-## How to Import Tests from CSV/XLSX in Classic Projects
+## Import from CSV/XLSX in Classic Projects
 
-Now you can import tests into your project via:
+To start iporting your tests to Testomat.io:
 
-- **Imports** page — ideal when existing data is present.
-- **Tests** page — best for new projects without data.
+1. Open your project and go to the **Tests** tab.
+2. Click the `...` menu and choose **Import from other TMS**.
 
-In a **new project**, simply click **Import from Spreadsheet** on the **Tests** page and continue from **Step 3** below.
+![The ... menu on the Tests tab, with Import from other TMS](./images/att1_436.png)
 
-![Import from scratch](./images/att3_436.png)
+In the **Imports** window, complete the process:
 
-### Steps to Import
+1. Click **Import**, then choose **Import from CSV**. A sidebar opens on the right.
+2. Pick the tool your file came from, for example **Qase**. This is how Testomat.io knows the way your file is built.
+3. Click **Choose file**, select your CSV or XLSX, and click **Create**.
 
-1. Click **Imports** button in the sidebar
-2. Click **Import from CSV** button
+![The Import tests from CSV/XLSX sidebar with the source dropdown and Choose file](./images/att2_436.png)
 
-![Import from CSV/XLSX button](./images/att1_436.png)
-
-When the sidebar opens,
-
-3.  Select the format from which your CSV/XLSX was exported (e.g. Qase)
-4.  Click **Choose file** and select your CSV/XLSX file
-5.  Click **Create** button to start the import
-
-![Upload CSV/XLSX](./images/att2_436.png)
-
-Your file will be processed, and the test cases will appear in your project.
-
-:::note
-
-Currently, the CSV/XLSX import is an experimental feature. Some data might not be imported correctly, depending on the TMS format. Please review your imported test cases after migration.
-
-:::
+Testomat.io reads the file, and your tests appear on the **Tests** page.
 
 ## How to Import Tests from CSV/XLSX in BDD Projects
 
