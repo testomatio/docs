@@ -22,6 +22,7 @@ module.exports = {
         await this.docsReporter();
         await this.docsImporterJava();
         await this.importJavaReporterDocs();
+        await this.importRobotFrameworkReporterDocs();
     },
 
     async docsImages() {
@@ -406,6 +407,49 @@ head:
             console.log(`✅ Saved: ${readmePath}`);
         } catch (err) {
             console.error(`❌ Failed to fetch or download: ${err.message}`);
+        }
+    },
+
+    async importRobotFrameworkReporterDocs() {
+        const repo = 'testomatio/robot-framework-reporter';
+        const branch = 'master';
+        const readmeUrl = `https://raw.githubusercontent.com/${repo}/${branch}/README.md`;
+
+        const destinationFolder = path.resolve(path.join(__dirname, '../content/docs/test-reporting'));
+
+        if (!fs.existsSync(destinationFolder)) {
+            fs.mkdirSync(destinationFolder, { recursive: true });
+        }
+
+        try {
+            const readmeResponse = await axios.get(readmeUrl);
+            let content = readmeResponse.data.toString();
+
+            // drop the support-ukraine badge at the top
+            content = content.replace(/^\[!\[Support Ukraine Badge\].*\n+/m, '');
+            // remove the main title and any existing frontmatter
+            content = content.replace(/^# .*\n+/, '');
+            content = content.replace(/^---[\s\S]+?^---/m, '');
+
+            // preserve frontmatter from an already existing page (if any)
+            const readmePath = path.join(destinationFolder, 'robot-framework.md');
+            let frontMatter;
+            if (fs.existsSync(readmePath)) {
+                const existing = fs.readFileSync(readmePath, 'utf8');
+                const match = existing.match(/^---[\s\S]+?^---/m);
+                if (match) frontMatter = match[0];
+            }
+            if (!frontMatter) {
+                frontMatter = `---\ntitle: Robot Framework\ndescription: Import Robot Framework tests into Testomat.io and report test execution results in real time with the Testomatio listeners.\ntype: article\nurl: https://docs.testomat.io/test-reporting/robot-framework\nhead:\n  - tag: meta\n    attrs:\n      name: keywords\n      content: Testomat.io, Robot Framework, test reporting, test import, Python, automation testing\n---`;
+            }
+
+            content = `\n\n:::note\n Taken from [Robot Framework Reporter Readme](https://github.com/${repo})\n:::\n\n${content}`;
+            content = frontMatter + content;
+
+            fs.writeFileSync(readmePath, content);
+            console.log(`✅ Saved: ${readmePath}`);
+        } catch (err) {
+            console.error(`❌ Failed to fetch robot-framework-reporter README: ${err.message}`);
         }
     }
 }
