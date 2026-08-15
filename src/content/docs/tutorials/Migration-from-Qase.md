@@ -78,6 +78,41 @@ Your Qase tests are imported as classic test cases in Testomat.io.
 
 Something missing or in the wrong place? Fix it in your CSV file and import again. That is much faster than editing tests one by one.
 
+## Import Qase fields
+
+Test in Qase have their **Properties**. To migrate tests from Qase without losing any data, you must create custom fields in Testomat.io. A custom field can be created in the **Labes & Fields** tab. Each label = property in Qase test. 
+
+![Properties in the Qase test](./images/migration-from-qase/4-qase-properties.png)
+
+A label in Testomat.io works as a keyword for test properties in Qase. To keep a value like `Status`, turn the label into a custom field. You create the label first, then set it up.
+
+1. Go to Testomat.io.
+2. Open your project and go to **Settings**.
+3. Select **Labels & Fields**.
+4. Enter a title, such as `Status`, and click **Create**.
+
+![Creating a label in Testomat.io](./images/migration-from-qase/5-create-testomatio-label.png)
+
+Next, click the label you just created. To Edit:
+
+1. Under **Scope**, pick **tests** and **suites**. Scope is the list of pages where the label can be used.
+2. Under **Visibility**, pick **Show in filter** and **Show in list** to use it on the **Tests** page.
+3. In the **Custom Field** dropdown choose **List**.
+4. Add the Qase values, one per line (Actual, Draft, Deprecated and so on).
+5. Click **Save**.
+
+![Label setup form showing Scope, Visibility, and the Custom Field section with List selected](./images/migration-from-qase/6-label-as-qase-field.png)
+
+Open any test and click **Set labels**. In the new modal window, click **Add custom field** in the **Custom fields** section. All values appear in a dropdown.
+
+![Adding a custom field to a test](./images/migration-from-qase/7-add-custom-fields.png)
+
+:::note
+
+Match the type to Qase fields: a Qase selectbox or multiselect becomes a **List**, a text field becomes a **String**, and a number field becomes a **Number**.
+
+:::
+
 ## Next steps
 
 * Moving from another tool? See [Import Tests From TestRail](https://docs.testomat.io/project/import-export/import/import-tests-from-testrail/), [Import Tests From QTest](https://docs.testomat.io/project/import-export/import/import-tests-from-qtest/), and [Import Tests From Testmo](https://docs.testomat.io/project/import-export/import/import-tests-from-testmo/).
