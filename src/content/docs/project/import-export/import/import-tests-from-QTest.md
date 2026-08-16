@@ -38,7 +38,7 @@ In the **Imports** window:
 
 Testomat.io reads the file, and your tests appear on the **Tests** page.
 
-## Turn your tests into BDD scenarios
+## For BDD scenarios
 
 QTest is one of only two sources that can be converted on the way in. If your project is a BDD project, an **Import as BDD** checkbox appears in the sidebar. Tick it, and every row becomes a scenario:
 
