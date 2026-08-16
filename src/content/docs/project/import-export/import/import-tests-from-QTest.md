@@ -50,9 +50,11 @@ QTest is one of only two sources that can be converted on the way in. If your pr
 
 Your tests are saved as feature files. Leave the checkbox clear and they arrive as classic test cases instead. Full details are in [Import from CSV/XLSX](https://docs.testomat.io/project/import-export/import/import-tests-from-csv-xlsx).
 
-## Example file
+:::note
 
 Not sure your export looks right? Download the [sample file](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/qtest.xls) and compare the first row with yours.
+
+:::
 
 ## If this doesn't work
 
