@@ -57,8 +57,9 @@ If you plan to use the built-in UI tool, first enable the **TestRail API** in Te
 
 Start the import from your Testomat.io project.
 
-1. Open your project and click the Imports tab.
-2. Click **Import From TestRail**.
+1. Open your project **Tests** tab.
+2. Click the (`…`) menu and choose **Import from other TMS**.
+3. Click **Import** and select **Import From TestRail**.
 
 ![The Imports tab with the Import From TestRail button](./images/migration-from-testrail/2-import-from-testrail.png)
 

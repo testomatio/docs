@@ -10,32 +10,59 @@ head:
       content: Testomat.io, CSV, QTest, test import, QTest migration, manual tests, automated tests, test management, custom XLS
 ---
 
-> If you have existing tests in QTest and want to migrate to Testomat.io, you can easily import them using the CSV Import feature.
+Export your tests in QTest to a file and import that file into Testomat.io. Your project will keep the same structure, as it was. Each test will keep its steps and expected results.
 
-## How to Import Tests from QTest to Testomat.io
+## Export QTest file
 
-1. If you're creating a brand new project, the **Import from Spreadsheet** button will be available under the Test tab.
+1. Open your QTest project.
+2. Export your test cases as a **CSV** file.
+3. Save it on your computer.## Import your Qase file
 
-![image Import from Spreadsheet button](./images/import_from_spreadsheet_button.png)
+Start importing your tests to Testomat.io:
 
-2. If you're working in an existing project, open it in Testomat.io.
-3. Click on the **Imports** tab.
-4. Click the Import from CSV button.
+1. Open your project and go to the **Tests** tab.
+2. Click the (`…`) menu.
+3. Choose **Import from other TMS**. 
 
-![image Import from CSV button](./images/import_from_csv_button.png)
+![Tests tab with the extra menu](./images/att1_436.png)
 
-5. From the dropdown menu, choose **QTest**.
-6. Select the XLS file containing your exported QTest tests.
-7. Click the **Create** button to complete the import.
+In the **Imports** window:
 
-![image Import from QTest XLS](./images/qTest_xls.png)
+1. Click **Import**.
+2. Choose **Import from CSV**. A sidebar opens on the right.
+3. Choose **QTest** from the dropdown. 
+4. Click **Choose file**, select your exported CSV.
+5. Click **Create**.
 
-## Example Files For Import 
+![image Import from Spreadsheet button](./images/att2_436_qtest.png)
 
-Below is a sample of the supported format:
+Testomat.io reads the file, and your tests appear on the **Tests** page.
 
-[QTest](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/qtest.xls)
+## Turn your tests into BDD scenarios
 
-![image Import from QTest XLS](./images/qtest_sample.png)
+QTest is one of only two sources that can be converted on the way in. If your project is a BDD project, an **Import as BDD** checkbox appears in the sidebar. Tick it, and every row becomes a scenario:
 
+- Precondition becomes **Given**
+- Step becomes **When**
+- Expected Result becomes **Then**
 
+![Export from QTest, upload the file, then choose whether to import as BDD](./images/qtest-import-flow.png)
+
+Your tests are saved as feature files. Leave the checkbox clear and they arrive as classic test cases instead. Full details are in [Import from CSV/XLSX](https://docs.testomat.io/project/import-export/import/import-tests-from-csv-xlsx).
+
+## Example file
+
+Not sure your export looks right? Download the [sample file](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/qtest.xls) and compare the first row with yours.
+
+## If this doesn't work
+
+* **The import fails.** Check that the first row of your file holds column names.
+* **Your folders are flat.** Make sure you picked **QTest** in the dropdown, not another format.
+* **The BDD checkbox is missing.** It only appears in BDD projects. Check your project type first.
+* **Something is still off.** Contact [support](https://docs.testomat.io/support) with your file attached.
+
+## Next steps
+
+* [Import from CSV/XLSX](https://docs.testomat.io/project/import-export/import/import-tests-from-csv-xlsx) - the column reference and every other supported format.
+* [BDD Test Case Editor](https://docs.testomat.io/project/tests/bdd-test-case-editor) - work with the scenarios once they are imported.
+* [Labels and Custom Fields](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields) - organize your imported tests by priority, type, or any QTest field.
