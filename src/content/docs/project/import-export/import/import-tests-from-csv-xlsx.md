@@ -16,22 +16,14 @@ Testomat.io allows you to import tests from **CSV** or **XLSX** files. This is u
 
 Testomat.io supports importing test cases from many popular TMS tools. There are two ways to import:
 
-- **Direct Import** — via built-in integration
-- **CSV/XLSX Import** — supported for selected TMS formats
+- **Direct Import** via built-in integration
+- **CSV/XLSX Import** supported for selected TMS formats
 
 ### Supported For CSV/XLSX Import
 
-- Testomatio
-- TestRail
-- Testmo
-- Zephyr
-- QTest
-- Qase
-
-### Direct Import Guides
-
 Click any tool below to see step-by-step instructions:
 
+- [Allure TestOps](https://docs.testomat.io/project/import-export/import/import-tests-from-allure-testops/)
 - [Qase](https://docs.testomat.io/project/import-export/import/import-tests-from-qase/)
 - [QTest](https://docs.testomat.io/project/import-export/import/import-tests-from-qtest/)
 - [QMetry](https://docs.testomat.io/project/import-export/import/import-tests-from-qmetry/)
@@ -42,63 +34,58 @@ Click any tool below to see step-by-step instructions:
 - [XRay](https://docs.testomat.io/project/import-export/import/import-tests-from-xray/)
 - [Zephyr](https://docs.testomat.io/project/import-export/import/import-tests-from-zephyr/)
 
-## How to Import Tests from CSV/XLSX in Classic Projects
+## Import from CSV/XLSX in Classical Projects
 
-Now you can import tests into your project via:
+Import your tests to Testomat.io:
 
-- **Imports** page — ideal when existing data is present.
-- **Tests** page — best for new projects without data.
+1. Open your project.
+2. Go to the **Tests** tab.
+3. Click the (`...`) menu.
+4. Choose **Import from other TMS**.
 
-In a **new project**, simply click **Import from Spreadsheet** on the **Tests** page and continue from **Step 3** below.
+![The ... menu on the Tests tab, with Import from other TMS](./images/att1_436.png)
 
-![Import from scratch](./images/att3_436.png)
+In the **Imports** window:
 
-### Steps to Import
+1. Click **Import**.
+2. Choose **Import from CSV**. A sidebar opens on the right.
+3. Pick the tool your file came from, for example **Qase**.
+4. Click **Choose file**, select your CSV or XLSX.
+5. Click **Create**.
 
-1. Click **Imports** button in the sidebar
-2. Click **Import from CSV** button
+![The Import tests from CSV/XLSX sidebar with the source dropdown and Choose file](./images/att2_436.png)
 
-![Import from CSV/XLSX button](./images/att1_436.png)
+Testomat.io reads the file, and your tests appear on the **Tests** page.
 
-When the sidebar opens,
+## Import from CSV/XLSX in BDD Projects
 
-3.  Select the format from which your CSV/XLSX was exported (e.g. Qase)
-4.  Click **Choose file** and select your CSV/XLSX file
-5.  Click **Create** button to start the import
+The process is the same as for the Classical Project. 
+1. Open your project.
+2. Go to the **Tests** tab.
+3. Click the (`...`) menu.
+4. Choose **Import from other TMS**.
 
-![Upload CSV/XLSX](./images/att2_436.png)
+![BDD project import process](./images/bdd-import-flow.png)
 
-Your file will be processed, and the test cases will appear in your project.
+In the **Imports** window:
 
-:::note
+1. Click **Import**.
+2. Choose **Import from CSV**.
+3. Pick the tool your file came from, for example **Qase**.
+4. Click **Choose file**, select your CSV or XLSX.
+5. Click **Create**.
 
-Currently, the CSV/XLSX import is an experimental feature. Some data might not be imported correctly, depending on the TMS format. Please review your imported test cases after migration.
+When checked, all rows from the CSV/XLSX file are converted into **BDD scenarios**.
 
-:::
+Mapping:
+- Precondition = **Given**
+- Step = **When**
+- Expected Result = **Then**
+All imported tests are saved as **feature files** in your project.
 
-## How to Import Tests from CSV/XLSX in BDD Projects
+## Сreate Custom XLS for Testomat.io
 
-If your project type is **BDD**, the import steps are **exactly the same** as described above for [Classic projects](https://docs.testomat.io/project/import-export/import/import-tests-from-csv-xlsx/#how-to-import-tests-from-csvxlsx-in-classic-projects).
-
-The only difference is the appearance of a new checkbox:
-
-- **Import as BDD** – available **only** for imports from **TestRail** and **QTest**.
-- When checked, all rows from the CSV/XLSX file are converted into **BDD scenarios**.
-  - Mapping:
-    - Precondition → **Given**
-    - Step → **When**
-    - Expected Result → **Then**
-  - All imported tests are saved as **feature files** in your project.
-
-:::note
-
-Currently, the feature works for TestRail and QTest. If you need support for other systems, please [submit a request](https://testomat.nolt.io/).
-
-:::
-
-## How to Сreate Custom XLS for Testomat.io
-
-You can also create your own XLS file to import tests into Testomat.io. Follow these rules when preparing a custom XLS file:
+You can also create your own XLS file to import tests into Testomat.io:
 
 | Column name | Content                                                                                                         |
 | ----------- | --------------------------------------------------------------------------------------------------------------- |
@@ -115,3 +102,9 @@ You can also create your own XLS file to import tests into Testomat.io. Follow t
 | Issues      | place here Jira key in format ABC-123 or other IMS keys, can pass multiple Jira keys separated by a comma, can be blank|                                                               | 
 
 You can download the custom Testomat.io example file [here](https://testomatiofiles.ams3.cdn.digitaloceanspaces.com/Testomat_example.xlsx).
+
+## Next steps
+
+* [Running Tests Manually](https://docs.testomat.io/project/runs/running-tests-manually) - run the tests you just imported and record the results.
+* [Labels and Custom Fields](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields) - organize imported tests by severity, type, or any field your team uses.
+* [Import Tests From Source Code](https://docs.testomat.io/project/import-export/import/import-tests-from-source-code) - have automated tests too? Connect them to the same project.
