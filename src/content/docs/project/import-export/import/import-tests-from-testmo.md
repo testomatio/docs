@@ -42,7 +42,7 @@ Click [migration script instructions](https://github.com/testomatio/migrate-tes
 
 ## Turn your tests into BDD scenarios
 
-You can also import your BDD projects into Testomat.io. Follow the import steps in your BDD project and every row of CSV file becomes a scenario:
+You can also import your BDD projects into Testomat.io. Follow the import steps in your BDD project. Every row of CSV file becomes a scenario:
 
 - Precondition becomes **Given**
 - Step becomes **When**
