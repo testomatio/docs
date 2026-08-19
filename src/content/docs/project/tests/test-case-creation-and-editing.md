@@ -369,7 +369,7 @@ Testomat.io allows you to filter tests by Priority, making it easy to:
 
 In Testomat.io, **Priority** serves as a core attribute for structuring reporting and risk analysis across both project and company levels.
 
-**Accessing Project-Level Priority Analytics**
+#### Accessing Project-Level Priority Analytics
 
 You can isolate metrics by priority within an individual project workspace:
 
@@ -380,7 +380,7 @@ You can isolate metrics by priority within an individual project workspace:
 
 ![Testomat.io - Priority Analytics](./images/Priority_analytics_2.gif)
 
-**Accessing Company-Level Priority Analytics**
+#### Accessing Company-Level Priority Analytics
 
 For cross-project oversight, priority data is aggregated globally:
 
@@ -393,7 +393,7 @@ To learn more about company-wide aggregated views, check out the [Analytics Boar
 
 :::
 
-**Custom Priority Widgets & Dashboards**
+#### Custom Priority Widgets & Dashboards
 
 Beyond default views, you can build **custom Analytics Dashboards** using dedicated priority metrics.
 
