@@ -291,54 +291,6 @@ Now you can see that this test is assigned to a certain user. The user icon has 
 
 This allows teams to instantly focus on the most important tests.
 
-### Priority-Based Analytics
-
-In Testomat.io, **Priority** serves as a core attribute for structuring reporting and risk analysis across both project and company levels.
-
-**Accessing Project-Level Priority Analytics**
-
-You can isolate metrics by priority within an individual project workspace:
-
-1. Navigate to the **'Analytics'** page inside your project.
-2. Click the **'Filters'** icon in the action bar.
-3. Choose your preferred **Priority** levels (e.g., High, Critical) along with any other filter criteria.
-4. Click **'Apply'** to update the visual charts and metrics.
-
-![Testomat.io - Priority Analytics](./images/Priority_analytics_2.gif)
-
-**Accessing Company-Level Priority Analytics**
-
-For cross-project oversight, priority data is aggregated globally:
-
-1. Select **'Analytics'** from the main global workspace navigation.
-2. Review aggregated priority distributions across all projects in the **Global Analytics** overview.
-
-:::note
-
-To learn more about company-wide aggregated views, check out the [Analytics Board](https://docs.testomat.io/advanced/global-analytics/analytics-board/) page.
-
-:::
-
-**Custom Priority Widgets & Dashboards**
-
-Beyond default views, you can build **custom Analytics Dashboards** using dedicated priority metrics.
-
-| Widget | What it shows |
-|-------|--------------|
-| **Failed Runs By Priority** | Highlights where test failures concentrate based on severity levels over time. |
-| **Latest Failed Runs By Priority**| Isolates priority distribution specifically for the most recent failed runs. |
-| **Latest Run Results By Priority And Status** | Provides a stacked breakdown (Passed, Failed, Skipped) for the latest execution per priority. |
-| **Priority By Date** | Tracks failure and execution trends across different priorities over selected timeframes. |
-| **Run Results By Priority And Status** | Offers an aggregated overview of historical test outcomes categorized by priority. |
-
-![Testomat.io - Priority Analytics](./images/Priority_analytics_1.png)
-
-:::note
-
-More info about how to create a **Custom Widgets & Dashboards** on [Analytics Dashboards (Widgets)](https://docs.testomat.io/advanced/global-analytics/analytics-dashboards/) page.
-
-:::
-
 ### Available Priority Levels
 
 Testomat.io supports the following priority levels:
@@ -412,6 +364,54 @@ Testomat.io allows you to filter tests by Priority, making it easy to:
 - combine Priority filtering with other filters such as tags, a state or an assignee.
 
 ![Filter by priority](./images/att4_1457.png)
+
+### Priority-Based Analytics
+
+In Testomat.io, **Priority** serves as a core attribute for structuring reporting and risk analysis across both project and company levels.
+
+**Accessing Project-Level Priority Analytics**
+
+You can isolate metrics by priority within an individual project workspace:
+
+1. Navigate to the **'Analytics'** page inside your project.
+2. Click the **'Filters'** icon in the action bar.
+3. Choose your preferred **Priority** levels (e.g., High, Critical) along with any other filter criteria.
+4. Click **'Apply'** to update the visual charts and metrics.
+
+![Testomat.io - Priority Analytics](./images/Priority_analytics_2.gif)
+
+**Accessing Company-Level Priority Analytics**
+
+For cross-project oversight, priority data is aggregated globally:
+
+1. Select **'Analytics'** from the main global workspace navigation.
+2. Review aggregated priority distributions across all projects in the **Global Analytics** overview.
+
+:::note
+
+To learn more about company-wide aggregated views, check out the [Analytics Board](https://docs.testomat.io/advanced/global-analytics/analytics-board/) page.
+
+:::
+
+**Custom Priority Widgets & Dashboards**
+
+Beyond default views, you can build **custom Analytics Dashboards** using dedicated priority metrics.
+
+| Widget | What it shows |
+|-------|--------------|
+| **Failed Runs By Priority** | Highlights where test failures concentrate based on severity levels over time. |
+| **Latest Failed Runs By Priority**| Isolates priority distribution specifically for the most recent failed runs. |
+| **Latest Run Results By Priority And Status** | Provides a stacked breakdown (Passed, Failed, Skipped) for the latest execution per priority. |
+| **Priority By Date** | Tracks failure and execution trends across different priorities over selected timeframes. |
+| **Run Results By Priority And Status** | Offers an aggregated overview of historical test outcomes categorized by priority. |
+
+![Testomat.io - Priority Analytics](./images/Priority_analytics_1.png)
+
+:::note
+
+More info about how to create a **Custom Widgets & Dashboards** on [Analytics Dashboards (Widgets)](https://docs.testomat.io/advanced/global-analytics/analytics-dashboards/) page.
+
+:::
 
 ## Add Dynamic Parameters to a Test
 
