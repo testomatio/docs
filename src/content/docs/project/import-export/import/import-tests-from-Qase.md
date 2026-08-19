@@ -10,30 +10,58 @@ head:
       content: Testomat.io, CSV, Qase, test import, Qase migration, manual tests, automated tests, test management, custom XLS
 ---
 
-> If you have existing tests in Qase and want to migrate to Testomat.io, you can easily import them using the CSV Import feature.
+Export your tests in Qase as a CSV file and import that file into Testomat.io. Your folders come across as the same tree, and each test keeps its steps and expected results.
 
-## How to Import Tests from Qase to Testomat.io
+## Export Qase tests
 
-1. If you're creating a brand new project, the **Import from Spreadsheet** button will be available under the Test tab.
+Export your tests from Qase:
 
-![image Import from Spreadsheet button](./images/import_from_spreadsheet_button.png)
+1. Open your Qase project.
+2. Export your test cases as a **CSV** file.
+3. Save it on your computer.
 
-2. If you're working in an existing project, open it in Testomat.io.
-3. Click on the **Imports** tab.
-4. Click the Import from CSV button.
+![Exporting tests from the Qase project](./images/export-from-qase.png)
 
-![image Import from CSV button](./images/import_from_csv_button.png)
+## Import your Qase file
 
-5. From the dropdown menu, choose **Qase**.
-6. Select the CSV file containing your exported Qase tests.
-7. Click the **Create** button to complete the import.
+Start importing your tests to Testomat.io:
 
-![image Import from Qase CSV](./images/Qase_csv.png)
+1. Open your project and go to the **Tests** tab.
+2. Click the (`…`) menu.
+3. Choose **Import from other TMS**. 
 
-## Example Files For Import 
+![Tests tab with the extra menu](./images/att1_436.png)
 
-Below is a sample of the supported format:
+In the **Imports** window:
 
-[Qase](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/Qase.csv)
+1. Click **Import**.
+2. Choose **Import from CSV**. A sidebar opens on the right.
+3. Choose **Qase** from the dropdown. 
+4. Click **Choose file**, select your exported CSV.
+5. Click **Create**.
 
-![image Import from Qase CSV](./images/qase_csv_sample.png)
+![image Import from Spreadsheet button](./images/att2_436.png)
+
+Testomat.io reads the file, and your tests appear on the **Tests** page.
+
+:::note
+
+Your Qase tests arrive as classic test cases. For the full walkthrough, including how to keep Qase properties as custom fields, see [Migration from Qase](https://docs.testomat.io/tutorials/migration-from-qase).
+
+:::
+
+## Example file
+
+Not sure your export looks right? Download the [sample](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/Qase.csv) and compare the first row with yours.
+
+## If this doesn't work
+
+* **The import fails.** Check that the first row of your file holds column names.
+* **Your folders are flat.** Make sure you picked **Qase** in the dropdown, not another format.
+* **Something is still off.** Contact [support](https://docs.testomat.io/support) with your file attached.
+
+## Next steps
+
+* [Migration from Qase](https://docs.testomat.io/tutorials/migration-from-qase) - the full tutorial, including how to carry Qase properties over as custom fields.
+* [Import from CSV/XLSX](https://docs.testomat.io/project/import-export/import/import-tests-from-csv-xlsx) - the column reference and every other supported format.
+* [Labels and Custom Fields](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields) - organize your imported tests by status, severity, or any Qase property.
