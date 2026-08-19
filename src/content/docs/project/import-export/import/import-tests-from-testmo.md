@@ -1,3 +1,14 @@
+---
+title: Import Tests From Testmo
+description: Import your Testmo test cases into Testomat.io two ways - upload the exported CSV directly, or run a migration script first when you need to reshape the file. This guide covers both.
+type: article
+url: https://docs.testomat.io/project/import-export/import-tests-from-testmo
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io, Testmo, test import, Testmo migration, CSV import, migration script, import from other TMS, manual tests, automated tests, test management
+---
 
 Export your tests in Testmo as a CSV file and bring them into Testomat.io. There are two ways to do it.
 
