@@ -95,7 +95,7 @@ Test Case after editing:
 
 ![Edit steps](./images/Edit_steps_6.png)
 
-## How To Save Your Tests
+## Save Your Tests
 
 Testomat.io Editor offers options designed to streamline your test and suite management workflow. Lets have look:
 
@@ -135,7 +135,7 @@ Once you have completed the steps, you will see the attachment in the test case 
 
 ![Testomatio.io - Insert attachment in a test description](./images/New_8DanPb4g_2024-10-08.png)
 
-## How to Resize Attached Images in a Test Case
+## Resize Attached Images in a Test Case
 
 All images attached to a test case are displayed on the preview page at their default size.
 
@@ -164,7 +164,7 @@ After saving the changes in the edit mode, you will see a preview of the drawing
 
 ![Testomatio.io - Draw Preview](./images/New_1hpi4Xy4_2024-10-07.png)
 
-## How to Preview Attachments
+## Preview Attachments
 
 Testomat.io provides a built-in previewer that allows you to check files directly in your browser, without the need of downloading them just to check their contents.
 
@@ -199,7 +199,7 @@ If a file type is not supported for preview, the system will prompt you to downl
 
 :::
 
-## How to Delete Attachment from Test Case
+## Delete Attachment from Test Case
 
 Save time by quickly deleting unnecessary attachments, ensuring your test cases remain relevant and clutter-free. To delete attachment:
 
@@ -233,7 +233,7 @@ All deleted Attachments are stored for 30 days before being permanently deleted.
 
 :::
 
-## How to Restore Deleted Attachment
+## Restore Deleted Attachment
 
 Before the attachment is permanently deleted from the store, you can restore it. To do that:
 
@@ -248,7 +248,7 @@ Before the attachment is permanently deleted from the store, you can restore it.
 
 ![Testomat.io - Restore Deleted Attachment](./images/Restore_attachment_2.png)
 
-## How to Add a Label/Tag to a Test
+## Add a Label/Tag to a Test
 
 This option is the easiest one! You simply need to add the label's name (preceeded by @ char) in the name field of the test. The drop-down list of tags already used in projects appears, when you type the @ symbol.
 
@@ -258,7 +258,7 @@ And now you can see your label/tag in the test list next to the test's title.
 
 ![See the test with tag](./images/2023-08-03_01.01.17@2x.png)
 
-## How to Assign a Test to a User
+## Assign a Test to a User
 
 If you want to assign a certain test to a certain user, you should click on this user icon in the upper right corner of the window, as shown in the picture.
 
@@ -303,7 +303,7 @@ Testomat.io supports the following priority levels:
 
 Each priority level has a dedicated icon to make test importance easily recognizable across the interface.
 
-### How to Set Priority When Creating a Test
+### Set Priority When Creating a Test
 
 When creating a new test, you can assign a priority directly from the test editor:
 
@@ -327,7 +327,7 @@ If no priority is selected, the test has **normal** priority by default. Conside
 
 :::
 
-### How to Change Priority When Editing a Test
+### Change Priority When Editing a Test
 
 You can update the priority of an existing test at any time:
 
@@ -341,7 +341,7 @@ You can update the priority of an existing test at any time:
 
 The icon will update immediately to reflect the selected priority.
 
-### How to Bulk Assign (Change) Priority
+### Bulk Assign (Change) Priority
 
 You can change the priority for multiple tests at once to save time and quickly update large test sets.
 
@@ -355,7 +355,7 @@ You can change the priority for multiple tests at once to save time and quickly 
 
 All selected tests will immediately update to the new priority, and the icons will reflect the change.
 
-### How to Filter Tests by Priority
+### Filter Tests by Priority
 
 Testomat.io allows you to filter tests by Priority, making it easy to:
 
@@ -365,7 +365,55 @@ Testomat.io allows you to filter tests by Priority, making it easy to:
 
 ![Filter by priority](./images/att4_1457.png)
 
-## How to Add Dynamic Parameters to a Test
+### Priority-Based Analytics
+
+In Testomat.io, **Priority** serves as a core attribute for structuring reporting and risk analysis across both project and company levels.
+
+#### Accessing Project-Level Priority Analytics
+
+You can isolate metrics by priority within an individual project workspace:
+
+1. Navigate to the **'Analytics'** page inside your project.
+2. Click the **'Filters'** icon in the action bar.
+3. Choose your preferred **Priority** levels (e.g., High, Critical) along with any other filter criteria.
+4. Click **'Apply'** to update the visual charts and metrics.
+
+![Testomat.io - Priority Analytics](./images/Priority_analytics_2.gif)
+
+#### Accessing Company-Level Priority Analytics
+
+For cross-project oversight, priority data is aggregated globally:
+
+1. Select **'Analytics'** from the main global workspace navigation.
+2. Review aggregated priority distributions across all projects in the **Global Analytics** overview.
+
+:::note
+
+To learn more about company-wide aggregated views, check out the [Analytics Board](https://docs.testomat.io/advanced/global-analytics/analytics-board/) page.
+
+:::
+
+#### Custom Priority Widgets & Dashboards
+
+Beyond default views, you can build **custom Analytics Dashboards** using dedicated priority metrics.
+
+| Widget | What it shows |
+|-------|--------------|
+| **Failed Runs By Priority** | Highlights where test failures concentrate based on severity levels over time. |
+| **Latest Failed Runs By Priority**| Isolates priority distribution specifically for the most recent failed runs. |
+| **Latest Run Results By Priority And Status** | Provides a stacked breakdown (Passed, Failed, Skipped) for the latest execution per priority. |
+| **Priority By Date** | Tracks failure and execution trends across different priorities over selected timeframes. |
+| **Run Results By Priority And Status** | Offers an aggregated overview of historical test outcomes categorized by priority. |
+
+![Testomat.io - Priority Analytics](./images/Priority_analytics_1.png)
+
+:::note
+
+More info about how to create a **Custom Widgets & Dashboards** on [Analytics Dashboards (Widgets)](https://docs.testomat.io/advanced/global-analytics/analytics-dashboards/) page.
+
+:::
+
+## Add Dynamic Parameters to a Test
 
 Lets start with definition of **'Dynamic Parameters'**.
 
@@ -408,7 +456,7 @@ or under the test description.
 
 ![Added_parameters_desc](./images/dynamic_param_5.png)
 
-### How to Edit Test Parameters
+### Edit Test Parameters
 
 You are able to edit existing parameters or parameter headers in two methods:
 
@@ -472,7 +520,7 @@ You are able to edit existing parameters or parameter headers in two methods:
 
 ![Second_Method_delete](./images/delete_dynamic_param_2.png)
 
-### How to Use Dynamic Parameters in Test Steps
+### Use Dynamic Parameters in Test Steps
 
 Once you have defined your **Parameter Headers** (as shown in the steps above), you can reference them directly in your test logic.
 
