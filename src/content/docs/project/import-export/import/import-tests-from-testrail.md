@@ -15,68 +15,85 @@ head:
       content: Testomat.io, CSV, TestRail, test import, TestRail migration, manual tests, automated tests, test management, custom XLS
 ---
 
-> If you have existing tests in TestRail and wish to migrate to Testomat.io, this guide will walk you through the process of importing your tests into Testomat.io.
+There are three ways to bring your tests from TestRail into Testomat.io. Pick one by the size of your project and whether you need attachments. [Migration from TestRail](https://docs.testomat.io/tutorials/migration-from-testrail) walks through the whole move step by step.
 
-Currently, Testomat.io supports three methods for exporting tests from TestRail
+| Method | Best for | Attachments |
+| --- | --- | --- |
+| **CSV file** | Simple import | No |
+| **Built-in UI tool** | Up to 1000 tests | No |
+| **Migration script** | Projects over 1000 tests | Yes |
 
-- Import via CSV
-- Built-in UI tool (via API)
-- API migration script
+## Start the import process
 
-## How to Import Tests from CSV
+The importing beggins on the **Imports** window. Thus, you need to go there first.
 
-> Use CSV Import for quick imports without attachments. It’s ideal for straightforward migrations, especially when you don’t need to include test attachments or extra metadata.
+1. Open your project and go to the **Tests** tab.
+2. Click the (`…`) menu and choose **Import from other TMS**.
+3. Click **Import**, then choose **Import From TestRail**.
 
-1. Navigate to your project in Testomat.io.
-2. Click on the **Imports** tab.
-3. Select the **Import From TestRail** button.
+![Tests tab with the extra menu](./images/att1_436.png)
 
-![image Import from TestRail button](./images/import_from_testrail_button.png)
+From here, you have three options. Please, choose the best for your project: 
+- Import Tests from CSV.
+- Import via TestRail API.
+- Import with the migration script.
 
-4. Click on the **Import tests from CSV file** link. 
+## Import from CSV
 
-![image Import from CSV file](./images/import_tests_from_CSV_link.png)
+Next, on the **Imports** window:
 
-5. From the dropdown menu, choose **TestRail**.
-6. Select the CSV file containing your exported TestRail tests.
-7. Click the **Create** button to complete the import.
+1. Click **Import**.
+2. Choose **Import from CSV**. A sidebar opens on the right.
+3. Choose **TestRail** from the dropdown. 
+4. Click **Choose file**, select your exported CSV.
+5. Click **Create**.
 
-![image Import from Testrail CSV](./images/import_testrail_csv.png)
+![image Import from Spreadsheet button](./images/att2_436_testrail.png)
 
-## Example Files For Import 
+Testomat.io reads the file, and your tests appear on the **Tests** page.
 
-Below is a sample of the supported format:
+Not sure your export looks right? Download the [sample TestRail CSV](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/TestRail.csv) and compare the first row with yours.
 
-[TestRail](https://testomatio-artifacts.ams3.cdn.digitaloceanspaces.com/documentation/TestRail.csv)
+## Import via TestRail API
 
+This method pulls your tests straight from TestRail through its API, so there is no file to export.
 
-## Import TestRail Project via Build-in UI Tool (via API)
+:::note
 
->If you have a small or medium-sized TestRail project (up to 1000 tests) that you'd like to import into Testomat.io, you can easily use our intuitive built-in UI tool, which imports tests via the API.
+Before you start, turn on the API in TestRail:
 
-1. Navigate to your project in Testomat.io.
-2. Click on the **Imports** tab.
-3. Select the **Import From TestRail** button.
-4. Enter your valid TestRail credentials in the provided fields.
-5. Click the **Import Tests** button to begin the import process.
+1. Go to **Administration**
+2. Click **Site Settings**.
+3. Toggle **API**. 
 
-![image Import from Testrail via API](./images/import_testrail_project_via_API.png)
+:::
 
-> Make sure that you have enabled API in the administration area in TestRail under Administration > Site Settings > API.
+Next, in the **Imports** tab in Testomat.io:
 
-## Import TestRail Project via API Migration Script
+1. Enter your TestRail API credentials.
+2. Click **Import Tests**.
 
->Use the API Migration Script when migrating large TestRail projects (more than 1000 tests) that include attachments or require more customization than the built-in UI tool can handle. This method is ideal for transferring extensive datasets, ensuring that all test cases, including attachments, are accurately imported into Testomat.io.
+![Import from Testrail via API](./images/import-from-testrail.png)
 
-1. Navigate to your project in Testomat.io.
-2. Click on the **Imports** tab.
-3. Select the **Import From TestRail** button.
-4. Click on the **Import Locally** link to access the [migration script instructions](https://github.com/testomatio/migrate-testrail).
+Your tests are pulled across and appear on the **Tests** page.
 
+## Import with the migration script
+
+This option suits for projects over 1000 tests, or when you need to attach files to your tests from TestRail.
+
+1. Click **Import Locally**.
+2. Follow the [migration script instructions](https://github.com/testomatio/migrate-testrail).
 
 ![image Import from Testrail via API](./images/testrail_migration_script_link.png)
 
+## If this doesn't work
 
+* **The UI tool cannot connect.** Check that the API is enabled in TestRail.
+* **The CSV import fails.** Check that the first row of your file holds column names.
+* **Attachments are missing.** CSV and the UI tool do not carry attachments. Use the migration script instead.
 
+## Next steps
 
-
+* [Migration from TestRail](https://docs.testomat.io/tutorials/migration-from-testrail) - the full tutorial, including how to check the result afterwards.
+* [Import from CSV/XLSX](https://docs.testomat.io/project/import-export/import/import-tests-from-csv-xlsx) - the column reference and every other supported format.
+* [Labels and Custom Fields](https://docs.testomat.io/advanced/tags-labels/labels-and-custom-fields) - organize your imported tests by priority, type, or any TestRail field.
