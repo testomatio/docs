@@ -150,6 +150,7 @@ Use the feature table below to explore specific capabilities in each area like t
 | Run features and scenarios from TMS or issue tracker      |  ✖️  |      ✔️      |     ✔️     |
 | Backlog and sprint run coverage report                    |  ✖️  |      ✔️      |     ✔️     |
 | User stories traceability matrix                          |  ✖️  |      ✔️      |     ✔️     |
+| Milestones                                                |  ✖️  |      ✖️      |     ✔️     |
 
 ## Reporting
 
