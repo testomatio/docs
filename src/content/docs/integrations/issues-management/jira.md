@@ -110,45 +110,45 @@ Webhook installation requires **Jira administrator permissions**. If you don’t
 
 :::
 
-## Supported Jira Field Types
-
-Testomat.io integrates with Jira and supports the following field types when creating or editing issues:
-
-### Basic Field Types
-
-- **Text fields** — for entering single-line or multi-line text
-- **Number fields** — for entering numeric values
-- **Date fields** — for selecting dates and times
-- **Dropdown menus** — for selecting a single option from a list
-- **Priority fields** — for setting issue priority levels
-
-### Advanced Field Types
-
-- **Checkboxes** — for selecting multiple options from a set of checkboxes
-- **Multi-select fields** — for choosing multiple values from dropdown lists
-- **Custom fields (single, multiple, cascading)** — for selecting single, multiple, or nested values from Jira custom select lists
-- **Issue links** — for connecting to other Jira issues
-
-### Special Handling
-
-- **Text arrays** — multiple text values can be entered, separated by commas
-- **Default values** — the system respects default values set in Jira
-
-### Not Supported
-
-Some Jira fields are not currently supported in our integration:
-
-- Attachments
-- Assignee and Reporter fields
-- Description (handled separately in our interface)
-- Issue type (selected elsewhere in our interface)
-- Project field (selected elsewhere in our interface)
-- Labels (not currently supported)
-- Fields named **Flagged** or **Sprint**
-
 You can connect multiple Jira projects to a single Testomat.io project by following the same steps for each additional connection.
 
 ![multiple JIRA projects](./images/att4_401.png)
+
+## Supported Jira Field Types
+
+The **Create New Issue** form is built from the field schema that Jira returns for the selected project and issue type. Required fields appear immediately, the rest are hidden behind the **Show Optional Fields** link. Because of that, the exact set of fields you see depends on how your Jira project is configured.
+
+### Supported Field Types
+
+- **Text** — single-line and multi-line text fields
+- **Number** — integer and decimal fields
+- **Date and date-time** — filled in with a date picker
+- **Single select** — dropdown lists, including **Priority**; the default value configured in Jira is pre-selected
+- **Multi select** — dropdown lists that accept several values, such as **Components**, **Affects versions**, and **Fix versions**; the list is searchable
+- **Checkboxes** — a group of checkboxes with multiple options
+- **Cascading select** — parent and child options are combined into a single list in the `Parent -> Child` format
+- **Labels** — a text field; type the values and use a comma as a separator to pass multiple values
+- **Issue link** — a text field that accepts an issue key
+
+### Fields Not Shown in the Form
+
+These fields never appear in the form, because Testomat.io either fills them in itself or does not support them:
+
+- **Summary** and **Description** — set through the **Title** and **Description** fields of the form
+- **Issue type** and **Project** — selected at the top of the form
+- **Attachment**
+- **Assignee** and **Reporter**
+- **Sprint** and **Flagged**
+
+### Fields Shown as Read-Only
+
+If Jira returns no list of allowed values for a field that requires one, the field is displayed but cannot be filled in. It shows the `<field is not available, value can't be set>` placeholder together with the *This type of field can not be set via this interface* hint. Set such a value in Jira after the issue is created.
+
+:::note
+
+Fields of the **user**, **security level**, and **time tracking** types — for example **Owner**, **Security Level**, and **Original Estimate** — have no dedicated control yet. Set these values in Jira after the issue is created.
+
+:::
 
 ## FAQ & Troubleshooting
 
