@@ -16,7 +16,7 @@ Bringing tests in QMetry into Testomat.io takes three steps: export them from QM
 
 :::note
 
-QMetry files should be converted before export into the Testomat.io.
+QMetry files must be converted into the Testomat.io format before export.
 
 :::
 

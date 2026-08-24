@@ -16,7 +16,7 @@ Bringing tests from TestCaseLabs into Testomat.io takes three steps: export them
 
 :::note
 
-TestCaseLabs files cannot be uploaded as they are. The script converts your export into the Testomat.io format first, which is why you pick **Testomatio** in the dropdown later, not TestCaseLabs.
+TestCaseLabs files must be converted into the Testomat.io format before export.
 
 :::
 

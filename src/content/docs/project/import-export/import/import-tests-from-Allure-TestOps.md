@@ -17,7 +17,7 @@ Bringing tests from Allure TestOps into Testomat.io: export them from TestOps, r
 
 :::note
 
-The script converts your export into the Testomat.io format first, which is why you pick **Testomatio** in the dropdown later, not Allure.
+Allure TestOps files must be converted into the Testomat.io format before export.
 
 :::
 
