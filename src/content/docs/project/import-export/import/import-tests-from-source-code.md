@@ -17,8 +17,6 @@ head:
 
 Import end-to-end, API, or unit tests into Testomat.io. Import keeps a large test base manageable. Once imported, you can search across every test, map tests to specifications or Jira tickets, plan new test cases, and get reports.
 
-## Benefits of importing tests
-
 Importing automated tests into Testomat.io makes your work visible to the whole team. It also keeps a large test base manageable. Once imported, you can search across every test, map tests to specifications or Jira tickets, plan new test cases, and get reports.
 
 ## Before import
@@ -39,17 +37,18 @@ Make sure the repository path matches the URL. For example, for `https://github.
 
 ## Import tests
 
-First, you need to import sources code.
+Now import the source code into your project. 
 
 ![Testomat.io - Import test cases](./images/import-source-code/2-import-automated-tests.png)
 
-1. Click **Import from Source Code**.
-2. In the **Import** section, select:
+1. Go to the **Tests** tab.
+2. In the (`...`) menu, click **Import automated tests**.
+3. In the **Import Project from Source Code** menu, select:
   - your framework.
   - your language.
   - your operating system.
 
-3. Copy the command provided.
+4. Copy the command provided.
 
 ![Testomat.io - Copy instructions](./images/import-source-code/3-source-code-import-menu.png)
 
