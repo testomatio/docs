@@ -65,8 +65,6 @@ A report of how many tests were found means the import worked. If you do not see
 
 Every imported test is marked **Automated**. Open a test to see its code and a link to its repository. If the link is wrong, update the repository URL in project settings.
 
-![Testomat.io - Automated test source code](./images/import-source-code/5-imported-test.png)
-
 ## Nested describe blocks
 
 Testomat.io keeps one file as one suite. When a file has nested `describe` blocks, they are flattened on import. Each nested block becomes its own suite at the same level, named after its parent. 
@@ -79,7 +77,7 @@ For example, this test file:
 
 ```js
 describe('ActionResult', () => {
-  it('aaaa', () => {
+  it('holds result actions', () => {
     // ...
   });
 
@@ -95,18 +93,18 @@ Imported in Testomat.io like this:
 
 ```
 ActionResult (action-result.test.ts)
-  - aaaa
+  - holds result actions
 ActionResult > isMatchedBy (action-result.test.ts)
   - should match exact URL
 ```
 
 The inner `isMatchedBy` block is not nested under `ActionResult` - it becomes a separate suite named `ActionResult > isMatchedBy`. This format stays the same by design, so there is nothing to fix if you see it.
 
+![Testomat.io - Imported test in the Tests section in Testomat.io](./images/import-source-code/5-1-imported-test.png)
+
 ## Import automated tests as manual
 
 You need to add the tag to the tests in your own code to import them. In code, the tag starts with **@**, for example `@manual`.
-
-![Testomat.io - Add tag to source code](./images/import-source-code/6-marked-manual.png)
 
 Then you can use the same tag in the import settings. To import an automated test as manual:
 
