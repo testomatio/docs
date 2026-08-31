@@ -15,14 +15,26 @@ head:
       content: Linear integration, Testomat.io, issue tracking, Personal Access Token, defect creation, test management, team configuration, testing workflows
 ---
 
-![CleanShot 2023-02-24 at 10 05 03@2x](./images/221125478-2a9f340a-927e-4893-9f36-a4469f6fdb09.jpg)
+If you already have a workspace configured in Linear, you're ready to integrate it with Testomat.io. To get started, you'll need your Team name and Personal Access Token. We'll walk you through each step to locate this information and connect it with Testomat.io.
+
+To connect your Linear space with Testomat.io you need to open Settings (1) -> Issues management (2) and click on 'Connect to IMS' (3) button.
+
+![Connect to Linear in Settings](./images/att2Linear.png)
+
+When ‘Connect to Issue Management System’ sidebar is opened, follow the instructions below:
 
 1. Give a name to your profile
-2. Enter your Personal Access Token from Linear ([learn more](https://linear.app/testomat-workspace/settings/api))
+2. Enter your Personal Access Token from Linear ([learn more](https://linear.app/settings/account/security))
 3. Enter your Team name ([more details on Linear Teams](https://linear.app/docs/teams))
 4. Click on Save button
 
-![CleanShot 2023-02-24 at 10 06 01@2x](./images/221125834-31a351a7-48ee-472c-a8b2-1f2bfaaef39d.jpg)
+![Linear](./images/att1Linear.png)
+
+:::note
+
+Use the full Team name as shown in Linear (e.g. "Test Team"), not the short identifier/key (e.g. "TES") used in issue IDs.
+
+:::
 
 Once your Issues Management System is configured you can link a test or create a defect. As a result, Testomat.io will create a ticket in your Linear Team with dedicated links and data, so you can easily look through the testing data you need. Here is an example:
 
