@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1264 360" width="1264" height="360">
+  <defs>
+    <filter id="cardShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+
+    <symbol id="fb-clock" viewBox="0 0 24 24" fill="none">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+    </symbol>
+    <symbol id="fb-ban" viewBox="0 0 24 24" fill="none">
+      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 6 12 12m3-6a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+    </symbol>
+    <symbol id="fb-shield-check" viewBox="0 0 24 24" fill="none">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.5 11.5 11 13l4-3.5M12 20a16.405 16.405 0 0 1-5.092-5.804A16.694 16.694 0 0 1 5 6.666L12 4l7 2.667a16.695 16.695 0 0 1-1.908 7.529A16.406 16.406 0 0 1 12 20Z"/>
+    </symbol>
+    <symbol id="fb-chart-mixed-dollar" viewBox="0 0 24 24" fill="none">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.6 16.733c.234.269.548.456.895.534a1.4 1.4 0 0 0 1.75-.762c.172-.615-.446-1.287-1.242-1.481-.796-.194-1.41-.861-1.241-1.481a1.4 1.4 0 0 1 1.75-.762c.343.077.654.26.888.524m-1.358 4.017v.617m0-5.939v.725M4 15v4m3-6v6M6 8.5 10.5 5 14 7.5 18 4m0 0h-3.5M18 4v3m2 8a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"/>
+    </symbol>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+    .kicker { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase; fill: #6B7280; }
+    .title  { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; fill: #111827; }
+    .body   { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 13px; fill: #4B5563; }
+  </style>
+
+  <!-- Cards -->
+  <rect x="24"  y="40" width="280" height="260" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="336" y="40" width="280" height="260" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="648" y="40" width="280" height="260" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="960" y="40" width="280" height="260" rx="10" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1" filter="url(#cardShadow)"/>
+
+  <!-- Icons (brand-blue stroke, the one accent) -->
+  <use href="#fb-clock"              x="48"   y="64" width="28" height="28" color="#5C89FC"/>
+  <use href="#fb-ban"                x="360"  y="64" width="28" height="28" color="#5C89FC"/>
+  <use href="#fb-shield-check"       x="672"  y="64" width="28" height="28" color="#5C89FC"/>
+  <use href="#fb-chart-mixed-dollar" x="984"  y="64" width="28" height="28" color="#5C89FC"/>
+
+  <!-- Kickers -->
+  <text x="48"  y="116" class="kicker">Trial</text>
+  <text x="360" y="116" class="kicker">Free plan</text>
+  <text x="672" y="116" class="kicker">Paid · Capped</text>
+  <text x="984" y="116" class="kicker">Paid · Metered</text>
+
+  <!-- Titles -->
+  <text x="48"  y="148" class="title">Unlimited</text>
+  <text x="360" y="148" class="title">Hard cap</text>
+  <text x="672" y="148" class="title">Quota wall</text>
+  <text x="984" y="148" class="title">Metered</text>
+
+  <!-- Card 1 body -->
+  <circle cx="54"  cy="183" r="1.6" fill="#9CA3AF"/>
+  <text x="66"  y="187" class="body">No quota during the trial</text>
+  <circle cx="54"  cy="213" r="1.6" fill="#9CA3AF"/>
+  <text x="66"  y="217" class="body">All metered features open</text>
+  <circle cx="54"  cy="243" r="1.6" fill="#9CA3AF"/>
+  <text x="66"  y="247" class="body">Reverts when the trial ends</text>
+
+  <!-- Card 2 body -->
+  <circle cx="366" cy="183" r="1.6" fill="#9CA3AF"/>
+  <text x="378" y="187" class="body">Fixed monthly quotas</text>
+  <circle cx="366" cy="213" r="1.6" fill="#9CA3AF"/>
+  <text x="378" y="217" class="body">Blocks at 100%, no charges</text>
+  <circle cx="366" cy="243" r="1.6" fill="#9CA3AF"/>
+  <text x="378" y="247" class="body">Resets next calendar month</text>
+
+  <!-- Card 3 body -->
+  <circle cx="678" cy="183" r="1.6" fill="#9CA3AF"/>
+  <text x="690" y="187" class="body">Pooled per-seat quota</text>
+  <circle cx="678" cy="213" r="1.6" fill="#9CA3AF"/>
+  <text x="690" y="217" class="body">Returns HTTP 402 at 100%</text>
+  <circle cx="678" cy="243" r="1.6" fill="#9CA3AF"/>
+  <text x="690" y="247" class="body">Enable overage to continue</text>
+
+  <!-- Card 4 body -->
+  <circle cx="990" cy="183" r="1.6" fill="#9CA3AF"/>
+  <text x="1002" y="187" class="body">Pooled per-seat quota included</text>
+  <circle cx="990" cy="213" r="1.6" fill="#9CA3AF"/>
+  <text x="1002" y="217" class="body">Extra usage billed per meter</text>
+  <circle cx="990" cy="243" r="1.6" fill="#9CA3AF"/>
+  <text x="1002" y="247" class="body">Optional monthly spending cap</text>
+</svg>

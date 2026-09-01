@@ -469,6 +469,7 @@ export default defineConfig({
 							{ label: 'Audit Log', link: '/management/company/audit-log' },
 							{ label: 'Trials', link: '/management/company/trials' },
 							{ label: 'Subscriptions', link: '/management/company/subscriptions' },
+							{ label: 'Usage-Based Billing', link: '/management/company/usage-based-billing' },
 							{ label: 'Plan Features Comparison', link: '/management/company/plan-features-comparison' },
 						],
 					},
