@@ -198,26 +198,41 @@ In this case, your Test Run will open in Manual Run window, allowing you to manu
 
 ### Advanced Relaunch
 
-The **'Advanced Relaunch'** option offers more flexibility when relaunching tests.
+The **Advanced Relaunch** option offers more flexibility when relaunching tests.
 It allows you to select specific tests to relaunch, instead of repeating the full run. This enables more targeted, efficient workflows — whether you’re rerunning failed tests or just need to retest a subset of scenarios.
 
-**'Advanced Relaunch'** option is available for all types of test runs.
+**Advanced Relaunch** option is available for all types of test runs.
 
-1. On the **'Runs'** page, select the run that you need to re-check.
-2. Click the **'Extra menu'** button.
-3. Select **'Advanced Relaunch'** option from the dropdown menu.
+1. On the **Runs** page, select the run that you need to re-check.
+2. Click the **Extra menu** button.
+3. Select **Advanced Relaunch** option from the dropdown menu.
 
 ![Testomat.io - relaunched Run](./images/Advanced_Relaunch_1.png)
 
 In the opened sidebar window, configure your relaunch (optional):
 
 1. Enter a custom run title.
-2. Enable **'Create new run'** option (if needed).
-3. Enable **'Keep values'** option (available only if **'Create new run'** is enabled; this shows previous statuses for test cases).
+2. Enable **Create new run** option (if needed).
+3. Enable **Keep values** option (available only if **Create new run** is enabled; this shows previous statuses for test cases).
 4. Select the tests that you want to include in your relaunched run one by one (use filtering, sorting, or search options).
-5. Click the **'Relaunch'** button.
+5. Click the **Relaunch** button.
 
 ![Testomat.io - relaunched Run](./images/Advanced_Relaunch_2.png)
+
+### Run Type
+
+Testomat.io defines the available run types from the tests you select. A relaunch always opens in a view that matches its content.
+
+| **Selected tests** | **Available run types** |
+| ------------------ | ----------------------- |
+| Automated only     | Manual or Automated     |
+| Mixed              | Manual or Mixed         |
+
+You can go straight from CI results to checking tests by hand, without picking the tests again.
+
+![The Advanced Relaunch window with the run type defined by the selected tests](./images/18-advanced-relaunch-auto-options.png)
+
+Every relaunch opens the view that fits the run you chose, automated, manual, or mixed, and the messages match it. If you relaunch in place, the run keeps its previous settings. When it finishes, test statuses are recalculated, so **Passed** and **Failed** history stays correct across the project.
 
 #### Create New Run
 
@@ -248,6 +263,8 @@ Scheduled Runs are useful for:
 * Planned testing activities
 * Recurring QA cycles
 * Coordinating testing across multiple team members
+
+A scheduled run keeps its full context on screen before it starts — the summary, test list, progress, statistics, defects, and attachments. A status badge and a distinct schedule icon show the state, so you can tell a scheduled run from a paused one at a glance.
 
 #### Keep Values
 
@@ -341,6 +358,14 @@ Click the **'Extra menu'** button on multi-select menu panel to see additonal op
 Testomat.io provides filtering capabilities for Runs and RunGroups. On the Runs page, you can find **Basic filters** and **Additional filters**.
 
 ![Testomat.io - Run Filters](./images/Runs_Filtering_1.png)
+
+### Find Runs Assigned to You
+
+In the **Assigned to run** filter, your own account is listed first and marked as **Me**, so you don't scroll the team list to find yourself.
+
+![The Assigned to run filter with the current user listed first and marked as Me](./images/runs-assignee-filter-me.jpg)
+
+The filter is remembered. Move to another page and come back to **Runs**, and the runs assigned to you are still filtered.
 
 ## Filter Runs by TQL
 

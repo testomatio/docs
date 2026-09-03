@@ -49,7 +49,7 @@ const redirects = {
     "/security/overview/": "/legal/security",
     "/security/subprocessors": "/legal/security/subprocessors",
     "/usage/continious-integration": "/integrations/continuous-integration",
-    // "/usage/bdd-syntax": "",	bdd-syntax locate in not-in-use folder
+    "/usage/bdd-syntax": "/project/tests/bdd-test-case-editor",
     "/reference/reporter/pipes/testomatio.html": "/project/runs/reporter/pipes/testomatio",
     "/usage/templates.html": "/management/project/templates",
     "/reference/reporter/frameworks.html": "/project/runs/reporter/frameworks",
@@ -104,6 +104,7 @@ const redirects = {
     "/project/runs/import-export/import-tests-from-source-code.md": "/project/import-export/import/import-tests-from-source-code",
     "/project/runs/runs/reporter/pipes/testomatio.md": "/test-reporting/pipes/testomatio",
     "/reference/reporter/artifacts/#privacy": "/test-reporting/artifacts/#private-access",
+    "/project/tests/suite-pdf-export": "/project/import-export/export-tests/export-suite-as-pdf",
 }
 
 export default redirects

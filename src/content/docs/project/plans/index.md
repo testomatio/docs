@@ -327,8 +327,21 @@ This is particularly useful for large projects containing hundreds or thousands 
 
 :::
 
+### Search Within a Plan
+
+You can find tests and suites inside an open Test Plan without scanning its full contents.
+
+1. Open the plan.
+2. Type in the search field above the test list.
+
+Search matches the **test title**, **suite title**, **test ID**, and **suite ID**. Results are limited to the tests already included in the current plan.
+
+![Searching for a test inside an open test plan](./images/19-search-within-plan.png)
+
+Switch between **Tree** and **List** views and the results stay. Tree view keeps the parent folders around each match.
+
 ### Example Use Cases
 
-- QA lead wants to see only Regression plans – assign a 'Regression' label to all relevant plans and filter by it
-- A team working on Frontend tests can quickly access all their plans by using the 'Frontend' label
-- During release planning, project managers can filter plans by priority or milestone labels to focus on relevant test coverage
+- To see only Regression plans – assign a 'Regression' label to all relevant plans and filter by it.
+- Quickly access all plans by using the 'Frontend' label.
+- During release planning, filter plans by priority or milestone labels to focus on relevant test coverage.
