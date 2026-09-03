@@ -206,6 +206,7 @@ export default defineConfig({
 										{ label: 'Export to Spreadsheet', link: '/project/import-export/export-tests/export-to-spreadsheet' },
 										{ label: 'Download as Markdown Files', link: '/project/import-export/export-tests/download-manual-tests-as-files' },
 										{ label: 'Export to Obsidian', link: '/project/import-export/export-tests/export-to-obsidian' },
+										{ label: 'Suite PDF export', link: '/project/import-export/export-tests/export-suite-as-pdf' },
                     { label: 'Classical Tests Markdown Format', link: '/project/import-export/export-tests/classical-tests-markdown-format' },
 									],
 								},
@@ -328,6 +329,13 @@ export default defineConfig({
 								{ label: 'Living Documentation', link: '/advanced/living-doc' }
 							],
 						},
+						{
+							label: 'Mermaid Diagrams',
+							collapsed: true,
+							items: [
+								{ label: 'Mermaid Diagrams for Test Design', link: '/advanced/mermaid-diagrams' }
+							],
+						},
 
 						{
 							label: 'Jira Plugin',
@@ -349,13 +357,15 @@ export default defineConfig({
 								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features/ai-powered-features' },
 								{ label: 'AI-Requirements', link: '/advanced/ai-powered-features/ai-requirements' },
 								{ label: 'AI-Agents', link: '/advanced/ai-powered-features/ai-agents' },
+								{ label: 'Voice Mode', link: '/advanced/ai-powered-features/voice-mode' },
 							],
 						},
 						{
 							label: 'API Access',
 							collapsed: true,
 							items: [
-								{ label: 'API Access', link: '/advanced/api-access' }
+								{ label: 'API Access', link: '/advanced/api-access' },
+								{ label: 'Public API v2', link: '/advanced/api-access/public-api-v2' }
 							],
 						},
 						{
