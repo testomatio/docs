@@ -328,6 +328,13 @@ export default defineConfig({
 								{ label: 'Living Documentation', link: '/advanced/living-doc' }
 							],
 						},
+						{
+							label: 'Mermaid Diagrams',
+							collapsed: true,
+							items: [
+								{ label: 'Mermaid Diagrams for Test Design', link: '/advanced/mermaid-diagrams' }
+							],
+						},
 
 						{
 							label: 'Jira Plugin',
@@ -349,6 +356,7 @@ export default defineConfig({
 								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features/ai-powered-features' },
 								{ label: 'AI-Requirements', link: '/advanced/ai-powered-features/ai-requirements' },
 								{ label: 'AI-Agents', link: '/advanced/ai-powered-features/ai-agents' },
+								{ label: 'Voice Mode', link: '/advanced/ai-powered-features/voice-mode' },
 							],
 						},
 						{
