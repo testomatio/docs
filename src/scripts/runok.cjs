@@ -23,6 +23,7 @@ module.exports = {
         await this.docsImporterJava();
         await this.importJavaReporterDocs();
         await this.importRobotFrameworkReporterDocs();
+        await this.importBrowserExtensionDocs();
     },
 
     async docsImages() {
@@ -451,6 +452,57 @@ head:
         } catch (err) {
             console.error(`❌ Failed to fetch robot-framework-reporter README: ${err.message}`);
         }
+    },
+
+    async importBrowserExtensionDocs() {
+        const repoUrl = 'https://github.com/testomatio/browser-extension.git';
+        const sourceUrl = 'https://github.com/testomatio/browser-extension/tree/main/docs/guide';
+        const projectFolder = path.resolve(__dirname, '../..');
+        const checkoutFolder = path.join(projectFolder, 'tmp/browser-extension');
+        const sourceFolder = path.join(checkoutFolder, 'docs/guide');
+        const destinationFolder = path.join(projectFolder, 'src/content/docs/integrations/browser-extension');
+
+        fs.rmSync(checkoutFolder, { recursive: true, force: true });
+        execSync(`git clone --depth=1 ${repoUrl} "${checkoutFolder}"`, { stdio: 'inherit' });
+
+        if (!fs.existsSync(sourceFolder)) {
+            throw new Error(`Browser extension documentation was not found at ${sourceFolder}`);
+        }
+
+        // Keep metadata maintained in this repository when upstream content is refreshed.
+        const fileHeaders = {};
+        if (fs.existsSync(destinationFolder)) {
+            const existingFiles = globSync(`${destinationFolder.replace(/\\/g, '/')}/*.md`);
+            for (const file of existingFiles) {
+                const content = fs.readFileSync(file, 'utf8');
+                const match = content.match(/^---[\s\S]+?^---/m);
+                if (match) fileHeaders[path.basename(file)] = match[0];
+            }
+        }
+
+        fs.rmSync(destinationFolder, { recursive: true, force: true });
+        fs.mkdirSync(destinationFolder, { recursive: true });
+        fs.cpSync(path.join(sourceFolder, 'img'), path.join(destinationFolder, 'img'), { recursive: true });
+
+        const markdownFiles = globSync(`${sourceFolder.replace(/\\/g, '/')}/*.md`);
+        for (const file of markdownFiles) {
+            let content = fs.readFileSync(file, 'utf8');
+            const titleMatch = content.match(/^#\s+(.+)$/m);
+            const title = titleMatch ? titleMatch[1].trim() : humanize(path.basename(file, '.md'));
+
+            content = content.replace(/^#\s+.*\r?\n+/, '');
+
+            const sourceFileUrl = `${sourceUrl}/${path.basename(file)}`;
+            const frontMatter = fileHeaders[path.basename(file)] || `---\ntitle: ${JSON.stringify(title)}\ntype: article\n---`;
+            const sourceNote = `\n\n:::note\nTaken from [Browser Extension documentation](${sourceFileUrl}).\n:::\n\n`;
+
+            fs.writeFileSync(
+                path.join(destinationFolder, path.basename(file)),
+                frontMatter + sourceNote + content,
+            );
+        }
+
+        console.log(`Imported ${markdownFiles.length} browser extension documentation pages`);
     }
 }
 

@@ -381,6 +381,21 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', link: '/integrations' },
 						{
+							label: 'Browser Extension',
+							collapsed: true,
+							items: [
+								{ label: 'Install and Update', link: '/integrations/browser-extension/install' },
+								{ label: 'Connect', link: '/integrations/browser-extension/connect' },
+								{ label: 'Run a Manual Run', link: '/integrations/browser-extension/run-tests' },
+								{ label: 'Attach a Screenshot', link: '/integrations/browser-extension/screenshots' },
+								{ label: 'Attach a Screen Recording', link: '/integrations/browser-extension/screen-recording' },
+								{ label: 'Console & Network Log', link: '/integrations/browser-extension/console-network-log' },
+								{ label: 'Create Tests', link: '/integrations/browser-extension/create-tests' },
+								{ label: 'Step Recorder', link: '/integrations/browser-extension/step-recorder' },
+								{ label: 'Settings and Shortcuts', link: '/integrations/browser-extension/settings' },
+							],
+						},
+						{
 							label: 'Issues Management',
 							collapsed: true,
 							items: [
