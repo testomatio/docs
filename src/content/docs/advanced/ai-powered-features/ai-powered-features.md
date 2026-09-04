@@ -1,4 +1,3 @@
-Advanced-AI-Powered Features
 ---
 title: AI-Powered Features
 description: Learn how to use AI-powered generative features to simplify and enhance your test management workflows in Testomat.io. This guide covers how to work with AI-powered generative features on Suites, Tests, Test Code levels, explain autotest failures Based on Logs, check Jira requirement for Suites linked to Jira issues.
