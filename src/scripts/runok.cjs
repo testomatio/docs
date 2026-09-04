@@ -460,7 +460,7 @@ head:
         const projectFolder = path.resolve(__dirname, '../..');
         const checkoutFolder = path.join(projectFolder, 'tmp/browser-extension');
         const sourceFolder = path.join(checkoutFolder, 'docs/guide');
-        const destinationFolder = path.join(projectFolder, 'src/content/docs/integrations/browser-extension');
+        const destinationFolder = path.join(projectFolder, 'src/content/docs/advanced/browser-extension');
 
         fs.rmSync(checkoutFolder, { recursive: true, force: true });
         execSync(`git clone --depth=1 ${repoUrl} "${checkoutFolder}"`, { stdio: 'inherit' });
