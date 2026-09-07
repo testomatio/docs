@@ -274,6 +274,21 @@ export default defineConfig({
 					items: [
 						{ label: 'Overview', link: '/advanced' },
 						{
+							label: 'Browser Extension',
+							collapsed: true,
+							items: [
+								{ label: 'Install and Update', link: '/advanced/browser-extension/install' },
+								{ label: 'Connect', link: '/advanced/browser-extension/connect' },
+								{ label: 'Run a Manual Run', link: '/advanced/browser-extension/run-tests' },
+								{ label: 'Attach a Screenshot', link: '/advanced/browser-extension/screenshots' },
+								{ label: 'Attach a Screen Recording', link: '/advanced/browser-extension/screen-recording' },
+								{ label: 'Console & Network Log', link: '/advanced/browser-extension/console-network-log' },
+								{ label: 'Create Tests', link: '/advanced/browser-extension/create-tests' },
+								{ label: 'Step Recorder', link: '/advanced/browser-extension/step-recorder' },
+								{ label: 'Settings and Shortcuts', link: '/advanced/browser-extension/settings' },
+							],
+						},
+						{
 							label: 'Artifacts',
 							collapsed: true,
 							items: [
