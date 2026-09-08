@@ -12,10 +12,7 @@ head:
 
 Testomat.io introduces **AI-powered generative features** to simplify and enhance your test management workflows. These tools leverage artificial intelligence to assist QA engineers by automating test documentation, generating actionable insights, and providing answers about their projects.
 
-Testomat.io uses **Groq** (not Grok designed by xAI by Elon Musk) as the main AI provider, it was founded in 2016 by a group of former Google engineers.
-
-**Groq** uses opensource models like Llama or Mixtral and doesn't train its own models. However, we urge you to ensure compliance with data privacy regulations when sharing sensitive information. Enable AI features only if you are sure that your data is not sensitive. 
-
+[Groq](https://groq.com/) uses opensource models like Llama or Mixtral and doesn't train its own models. However, we urge you to ensure compliance with data privacy regulations when sharing sensitive information. Enable AI features only if you are sure that your data is not sensitive. 
 
 Testomat.io supports **Amazon Bedrock** as a custom AI provider, allowing teams to use Testomat.io AI features with their own configured models. This gives teams more flexibility and control over AI-driven workflows while staying compatible with Testomat.io AI capabilities.
 
@@ -26,9 +23,11 @@ You can enbable AI at any time on Company Settings page by following the instruc
 
 :::
 
+You can also dictate text instead of typing it - see [Voice Mode](./voice-mode.md).
+
 ## AI-Powered Chat with Tests
 
-**'Chat with Tests'** feature — an AI-powered assistant that allows you to ask questions about existing tests in your project. The AI analyzes your test repository and responds with insights, summaries, or clarifications based on the actual test content.
+**'Chat with Tests'** feature - an AI-powered assistant that allows you to ask questions about existing tests in your project. The AI analyzes your test repository and responds with insights, summaries, or clarifications based on the actual test content.
 
 This interactive capability makes it easier to explore, understand, and manage large sets of tests without manually browsing through them.
 
@@ -54,8 +53,6 @@ OR
 Create you own AI-promt.
 
 4. Click **'Ask'** button.
-
-![Testomat.io - AI-powered](./images/AI_Chat_2.gif)
 
 ### Use 'Chat with Tests' at the Folder Level
 
@@ -195,7 +192,7 @@ The AI will populate the description with a human-readable overview of your Give
 
 **'Suggest Better Description'** AI-feature is your shortcut to turning rough notes into professional test cases.
 
-If you have a "draft" description that is messy or lacks detail, the AI rewrites it using testing best practices—adding structure, clear objectives, and necessary context.
+If you have a "draft" description that is messy or lacks detail, the AI rewrites it using testing best practices-adding structure, clear objectives, and necessary context.
 
 **How to use this feature:**
 
@@ -401,11 +398,34 @@ By providing actionable insights at the suite level, teams can quickly identify 
 
 ![Testomat.io - AI-powered](./images/AI_Analyze_Suite_2.gif)
 
+## Generate Project Structure
+
+**Generate Project Structure** helps to plan a growing test project. Testomat.io analyses your existing folders, suites, and test distribution, asks about your priorities, and returns a visual mind map of the recommended structure.
+
+**To access feature:**
+
+1. Go to 'Tests'.
+2. Click (`...`) button next to **Chat with tests**.
+3. Select **Generate Structure**.
+4. Answer the questions about your priorities.
+
+![Testomat.io - AI-generated project structure mind map](./images/16-generate-structure.png)
+
+Use the proposed structure to simplify deep hierarchies, consolidate duplicate suites, or organize tests around product features. You can export the mind map as **SVG** or **PNG**, or send a follow-up request to refine it.
+
+:::note
+
+The mind map is a planning tool, not an automatic migration. Your team reviews and refines the recommendation before making any changes to the project.
+
+:::
+
+You can draw diagrams like this yourself in any description - see [Mermaid Diagrams for Test Design](https://docs.testomat.io/advanced/mermaid-diagrams).
+
 ## Project Runs Status Report
 
-**AI-Powered Project Runs Status Report** feature automatically generates a **high-level status report** based on the latest project's test runs information — powered by AI.
+**AI-Powered Project Runs Status Report** feature automatically generates a **high-level status report** based on the latest project's test runs information - powered by AI.
 
-The **Runs Status Report** gives you a quick overview of test stability, critical issues, and performance trends across recent runs. It helps QA teams and stakeholders understand what’s working well and where attention is needed — without digging through individual test logs.
+The **Runs Status Report** gives you a quick overview of test stability, critical issues, and performance trends across recent runs. It helps QA teams and stakeholders understand what’s working well and where attention is needed - without digging through individual test logs.
 
 **What’s included:**
 
@@ -417,7 +437,7 @@ The **Runs Status Report** gives you a quick overview of test stability, critica
 - **Systematic Failures** – Pinpointed test cases that failed consistently and may block critical flows.
 - **Note** - Hightlights the test runs that were analyzed in the Runs Status Report by AI.
 
-**To access this feature:**
+**To access feature:**
 
 1. Go to 'Runs' page.
 2. Click **'Run Status Report'** button. 
@@ -428,7 +448,7 @@ This report is available automatically based on recent test run history, giving 
 
 ## RunGroup Statistic Report
 
-The **'RunGroup Statistic Report'** — a new way to analyze the health and progress of test runs grouped together.
+The **'RunGroup Statistic Report'** - a new way to analyze the health and progress of test runs grouped together.
 
 **This report includes:**
 
@@ -452,7 +472,7 @@ This report is perfect for teams managing large-scale test executions across mul
 
 Results generated by AI-features are automatically saved to the **'Insights'** section, this ensures you can confidently close the AI-assistant window, knowing your analysis is safely stored for later review.
 
-**How to Access the 'Insights' Section:**
+**Access the 'Insights' Section:**
 
 1. Go to 'Tests' page.
 2. Click **'Extra menu'** button in the header.
@@ -528,4 +548,4 @@ A: Testomat.io's AI features are designed with data privacy and user control in 
 
 **Q: What is the approximate AI usage in terms of tokens or API calls?**
 
-A: AI consumption depends on the size of your project — including test cases, suites, run messages, stack traces, and requirements. In short, the more tests and requirements you have, the larger the prompts will be.
+A: AI consumption depends on the size of your project - including test cases, suites, run messages, stack traces, and requirements. In short, the more tests and requirements you have, the larger the prompts will be.

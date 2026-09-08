@@ -504,12 +504,24 @@ You can add tests from plans and additional tests at the same time. For example:
 
 ![Edit existing run](./images/gif1-7865.gif)
 
+### Adding Tests to an Existing Run
+
+You can add the new tests to the run. When you add the new tests the old tests are marked with the **checkmark**. Also you can see how many tests are new and how many were added to the run - it is shown in the cointer.
+
+- A **checkmark** next to a test means the test is in the run.
+- A **counter** next to a suite, like `10 of 12 in run`, tells you how many tests from that suite is included.
+- The suite tree can focus on suites that already contain tests from the run.
+
+![Adding tests to a run](./images/17-edit-manual-run.png)
+
+You can also assign individual tests directly from the editor. The test list and the responsibilities are updated in one place.
+
 ## Pause a manual run
 
 You can pause a manual run and pick it up later without losing progress or time.
 
 1. Open the run.
-2. Open the `⋯` menu.
+2. Open the (`⋯`) menu.
 3. Select **Pause**.
 
 The run moves to a paused state, and the elapsed time is banked so the duration stays accurate. Every result you already marked keeps its status, and a pause icon and badge show on the run in run lists.
@@ -517,6 +529,8 @@ The run moves to a paused state, and the elapsed time is banked so the duration 
 To continue, click **Start** - you return to the execution screen, and the timing resumes from where it stopped.
 
 ![A paused manual run with its pause badge](./images/manual-test-paused.png)
+
+A paused run keeps its full context on screen: the summary, test list, progress, statistics, defects, and attachments stay where they were. A status badge and a distinct pause icon make the state easy to recognize in run lists, so you can act on the run without leaving the screen.
 
 ## Edit a Result in a Finished Run
 
