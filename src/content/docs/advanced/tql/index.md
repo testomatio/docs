@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, query language, TQL, test filtering, test management, test queries, variables, priority filter, tag filter, automation, QA tools, testing efficiency
+      content: Testomat.io, query language, TQL, test filtering, test management, test queries, variables, priority filter, tag filter, automation, QA tools, testing efficiency, Saved Queries, queries list, 
 ---
 
 TQL or **Testomat.io Query Language** is a flexible way to filter tests data inside Testomat.io. Query Language provides basic selection operators like **and**, **or** and **not** and **braces** to prioritize selection.
@@ -89,7 +89,7 @@ tag = 'A' <- won't work !!!!
 tag == 'A' <- will work
 ```
 
-### Multiple values
+### Multiple Values
 
 It may be necessary to find multiple values associated with a single variable. Fortunately, TQL provides a straightforward solution.
 
@@ -186,6 +186,7 @@ In previous section we used `tag` in the query. `tag` is an allowed query variab
 |               |                                               | `last_run_at == today()`                                                                                                 |
 | executed_at   | Match tests by execution date                 | `executed_at < 1.week_ago`                                                                                               |
 |               |                                               | `executed_at == today()`                                                                                                 |
+| executed_by   | Match tests by executor's name                | `executed_by == 'Antonio Primus'` |
 | created_by    | Match tests by author's name                  | `created_by == 'Antonio Primus'`                                                                                         |
 | assigned_to   | Match tests by assignee's name                | `assigned_to == 'Antonio Primus'`                                                                                        |
 | suite         | Match tests inside a folder or suite          | `suite % 'Checkout'`                                                                                                     |
@@ -220,6 +221,11 @@ last_run_at == today()
 # tests executed in July 2025 with failed status
 executed_at >= '2025-07-01' and executed_at <= '2025-07-31' and status == 'failed'
 ```
+:::note
+
+When you combine conditions: `executed_by` ANDed with `executed_at` applies both to the same result. `executed_by == 'ann@example.com' AND executed_at > '2026-01-01'` returns tests Ann executed within that window — not tests Ann has ever executed that someone happened to run recently. `OR` and `NOT` keep each condition independent.
+
+:::
 
 ## Runs Variables
 
@@ -392,3 +398,44 @@ created_by IN ['John Snow', 'John Doe']
 ```
 
 Filtering always happens by user name, not by email or user ID. Also, user should exist inside the project.
+
+## Saved Queries
+
+To enhance your search query management capabilities use our **Saved Queries** feature. It allows you to create and save custom queries using **Testomatio Query Language (TQL)** for quick and easy access whenever you need them. Define criteria and filters to retrieve precisely the data you need.
+
+**To save a query:**
+
+1. Open the **Tests** or **Runs** page.
+2. Click the **Query Language Editor** icon.
+3. Write your query.
+4. Click **Save** button.
+
+![Testomat.io - Saved Testomatio Queries](./images/save_query_1.gif)
+
+No need to recreate complex queries each time you need them, save your query criteria and retrieve precise workspace data in a single click. All saved expressions are stored in one place for quick reuse - **Queries** page.
+
+## Manage Saved Queries
+
+The **Queries** page lists all stored TQL expressions across your project workspace. From this list, you can quickly filter, apply, edit, or delete saved queries to keep your testing metrics and custom filters organized
+
+**To access Queries page:**
+
+1. Open the **Tests** page.
+2. Click the three-dot extra menu button in the top-right corner.
+3. Select **Queries** option from the dropdown menu list.
+
+![Testomat.io - Queries List](./images/save_query_4.png)
+
+**From **Queries** page you can:**
+
+- **Apply query:** Hover over the query and click the **Search** icon.
+- **Delete query:** Hover over the query and click the **Delete** icon.
+- **Filter queries:** Click **Only My Queries** or **All Queries** filter option.
+
+![Testomat.io - Queries List](./images/save_query_2.gif)
+
+- **Edit a saved query:** Click the query -> Make your changes -> Save the query under a new name.
+
+![Testomat.io - Queries List](./images/save_query_3.gif)
+
+Keep your query list organized and clutter-free, ensuring easy navigation and access to relevant queries. Delete queries that you no longer need or quickly filter queries based on ownership (My Queries vs. All Queries).
