@@ -10,7 +10,7 @@ head:
      content: convert to BDD, Transform Project to BDD, AI agent, refactoring tests, Gherkin, CodeceptJS, migrate Classical to BDD, Testomat.io
 ---
 
-Gherkin has stricter rules than Markdown, you need to rewrite the test as a BDD scenario instead of changing the project setting.
+To use a Markdown test as a BDD test, rewrite it as a Gherkin scenario. Changing the project setting alone does not convert the test.
 
 ![Three paths from a Classical project: the AI agent and a manual rewrite both build a new BDD project, CodeceptJS keeps you in the same one](./images/converting-to-bdd/three-paths-to-bdd.png)
 
