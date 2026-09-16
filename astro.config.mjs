@@ -120,6 +120,7 @@ export default defineConfig({
 								{ label: 'Classical vs BDD', link: '/project/tests/classical-vs-bdd' },
 								{ label: 'Classical Test Case Editor', link: '/project/tests/classical-test-case-editor' },
 								{ label: 'BDD Test Case Editor', link: '/project/tests/bdd-test-case-editor' },
+								{ label: 'Converting to BDD', link: '/project/tests/converting-to-bdd' },
 								{ label: 'Copy and Move your Tests', link: '/project/tests/copy-and-move-your-tests' },
 								{ label: 'Test Case Creation and Editing', link: '/project/tests/test-case-creation-and-editing' },
 								{ label: 'Other Features for Test case Design', link: '/project/tests/other-features-for-test-case-design' },
