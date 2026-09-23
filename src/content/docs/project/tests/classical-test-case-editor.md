@@ -1,8 +1,8 @@
 ---
-title: Classical Test Case Editor
+title: Classical Project
 description: Learn how to create effective test designs with Testomat.io. This guide covers building test scenarios, using various test design techniques, and integrating them into your project workflow for improved test case management and automated test runs.
 type: article
-url: https://docs.testomat.io/project/classical_editor
+url: https://docs.testomat.io/project/tests/classical-test-case-editor
 head:
   - tag: meta
     attrs:
@@ -10,142 +10,108 @@ head:
       content: test design, test cases, test management, test automation, testing techniques, Testomat.io, BDD, Gherkin, Cucumber, test scenarios, project workflow, software testing
 ---
 
-## Test Case Editor
+A Classical project stores each test as a Markdown document. It is the default choice for manual testing. 
 
-Test Case Editor is a dynamic interface, designed to accommodate the diverse requirements of test case formulation. Through this platform, testers wield the power to architect meticulously structured test scenarios, encompassing a range of variables, actions, expected results, and potential outcomes.
+Choose a Classical project if you:
 
-Regarding test case creation, Testomat.io offers two distinct editor types: the **Classical** Editor and the **BDD** (Behavior-Driven Development) Editor. Each caters to different testing methodologies and user preferences, enabling testers to choose the approach that best aligns with their needs.
-
-Let's have a look at **Classical** Editor.
-
-## Classical Editor Review
-
-Introducing the Classical Editor, a tool that places the art of test editing firmly in your hands. Crafting tests becomes a seamless endeavor as you immerse yourself in the Classical Editor's capabilities.
-
-![Classical Editor](./images/edit_test_classical_editor.png)
-
-# Test Editor Overview
-
-1. **Test Title Field** – Enter the title of your test and add relevant tags.  
-2. **Formatting Toolbar** – Use formatting options to enhance your text.  
-3. **Editing Area** – Add test requirements, preconditions, steps, and expected results.  
-4. **Preview Button** – View a live preview of how the test will appear.  
-5. **Edit Steps** – Open the steps editor to modify test steps and expected outcomes.  
-6. **Attachments Button** – Open the attachments dialog to upload supporting files.  
-7. **Draw Button** – Launch the drawing editor to add visual elements.  
-8. **Editor Mode Switch** – Toggle between block-based and Markdown editor modes.  
-9. **Autocomplete Steps** – Enable or disable automatic step suggestions.  
-10. **Autocomplete Snippets** – Enable or disable snippet suggestions.  
-11. **Autocomplete Tags** – Enable or disable tag suggestions.  
-12. **Full Screen Button** – Switch to a distraction-free, full-screen editing mode.  
-13. **Set Labels Button** – Open a window to assign existing labels or create custom fields.  
-14. **Use Template Button** – Apply a predefined test template.  
-15. **Change State** – Change the test state (e.g., from manual to automated).  
-16. **Save Button** – Save your progress.  
-17. **Go Back Button** – Return to the previous screen.  
-18. **Close Button** – Exit the test editor.
-
-
-However, the Classical Editor's influence transcends singular tests. With Pre-Requirements, you can now wield the power to define the contextual prerequisites that set the stage for entire test **suites**. Seamlessly integrate high-level descriptions of dependencies, system states, or configurations required to execute a suite effectively.
-
-![Edit a suite](./images/edit_suite.png)
-
-# Suite Editor Overview
-
-1. **Suite Title Field** – Enter the suite title and any relevant tags.  
-2. **Formatting Toolbar** – Use text formatting tools as needed.  
-3. **Editing Area** – Provide a description for the suite.  
-4. **Preview Button** – See a live preview of the suite’s appearance.  
-5. **Attachments Button** – Open the dialog to upload attachments.  
-6. **Extra Menu Button** – Access additional suite editor options.  
-7. **Autocomplete Steps** – Enable or disable step autocompletion.  
-8. **Autocomplete Snippets** – Enable or disable snippet suggestions.  
-9. **Autocomplete Tags** – Enable or disable tag suggestions.  
-10. **Full Screen Button** – Enter distraction-free editing mode.  
-11. **Set Labels** – Assign existing labels or create new custom fields.  
-12. **Use Template Button** – Apply a predefined suite template.  
-13. **Save Button** – Save your changes.  
-14. **Go Back Button** – Return to the previous view.  
-15. **Close Button** – Exit the suite editor.
-
-
-### Why Do We Use Markdown in Classical Editor?
-
-Markdown is a lightweight and versatile markup language that revolutionizes the way content is formatted and presented. It combines the simplicity of plain text with the ability to produce well-structured documents, making it a favored choice for various applications, including software documentation and test case creation. Here are its benefits:
-
-**Simplified Syntax:** Markdown's straightforward syntax empowers testers to articulate intricate test scenarios with clarity. Utilize headings to structure test steps, employ bullet points for concise lists, and employ emphasis (bold, italic) to highlight crucial details.
-
-**Swift Formatting:** Testers can bid adieu to convoluted formatting menus and endless mouse clicks. Markdown's minimalist syntax allows testers to swiftly format text, enabling them to focus more on the content itself and less on the mechanics of formatting. This efficiency translates to accelerated test case creation.
-
-**Collaboration Amplified:** Collaborative testing endeavors thrive on clear communication. Markdown's plain text format is version control-friendly, facilitating seamless collaboration using tools like Git. Team members can easily track changes, suggest modifications, and merge contributions, ensuring that test cases evolve cohesively.
-
-**Readable and Accessible Content:** Markdown's clean and uncluttered appearance translates into test cases that are effortlessly readable, even by non-technical stakeholders. This enhances cross-functional communication by bridging the gap between testers, developers, and business analysts.
-
-**Media Integration:** Beyond text, Markdown accommodates image and file embedding. Testers can attach screenshots, diagrams, or supplementary documentation directly within test cases. This integration injects valuable context, aiding in comprehension and enabling more accurate bug reproduction.
-
-**Consistency and Templates:** Markdown's consistent structure allows for the creation of reusable test case templates. This ensures that test cases adhere to a standardized format, streamlining comprehension and navigation across a myriad of test scenarios.
-
-### Rich Editor for Classical Test Projects
-
-The editor follows a block-based layout, making it easier to structure and maintain detailed test cases.
-
-It supports adding expected results for each step and attaching images directly within steps, improving clarity and documentation quality. The editor is fully compatible with the markdown format, enabling more effective use of AI features when creating and updating tests. \
+- are moving from spreadsheets or another test management system;
+- work mostly with manual tests;
+- use an automation framework that does not use Cucumber;
+- want to write tests in your own words.
 
 :::note
 
-The Classical editor page is already part of the tree.
+Choose the project type when you create the project. You cannot change it later. Classical projects do not support Gherkin scenarios. See [Classical vs BDD](https://docs.testomat.io/project/tests/classical-vs-bdd).
 
 :::
 
-The new editor improves test readability and structure, simplifies creation of detailed step-by-step scenarios, and enhances AI-assisted workflows through markdown compatibility.
+## Folders, Suites, and Tests
 
-### Examples of Markdown Written Test Cases
+A Classical project uses three types of items: folders, suites and tests. 
 
-In the realm of Markdown-based test case creation, the handling of test unveils an array of versatile techniques. Below, we delve into several illustrative examples that showcase various methods for incorporating steps and expected results into your test cases.
+A folder can contain other folders and suites. A suite contains tests. Tests are the final level of the project structure.
 
-In this pattern, the steps are listed one after the other, along with their respective expected results. This is a simple and straightforward way to document the steps for a test case. You can see expected results as plain text just after step. Need to mention that expected results in this way will no go to steps database and you won't have autocompletion for it.
+Use folders to organize your suites. Use suites to group related tests.
 
+![Folder holds suites, a suite holds tests](./images/classical-projects/project-structure.png)
+
+You can also change an empty suite into a folder, or change a folder back into a suite.
+
+This structure keeps your tests organized. You can also connect a manual test to automation later without moving it to another part of the project.
+
+## Suite Descriptions
+
+A suite can have its own description. Use it for information that applies to all tests in the suite, such as:
+
+- system settings,
+- dependencies,
+- test data,
+- setup steps.
+
+Add this information once at the suite level instead of repeating it in every test. See [Suites and Folders](https://docs.testomat.io/project/tests/other-features-for-test-case-design/#suites-and-folders) for more information.
+
+## Test Descriptions
+
+Classical test descriptions use Markdown. With Markdown, you can add:
+
+- headings,
+- lists,
+- bold text,
+- images,
+- attachments.
+
+If you use the same structure for several tests, save it as a template and apply it with **Use template** in the editor. Templates are managed in project settings. See [Templates](https://docs.testomat.io/management/project/templates).
+
+:::note
+
+AI-generated tests use the same Markdown format as manually created tests.
+
+:::
+
+![Test case editor with test description formatted as Markdown](./images/classical-projects/1-test-overview.png)
+
+## Tags
+
+Tags group tests across suites. Add a tag right in the test title with the `@` symbol:
+
+```text
+Checkout works with a saved card @smoke @payments
 ```
-## Steps
 
-* Step 1
-    Expected result: Step 1
-* Step 2
-    Expected result: Step 2
-* Step 3
-    Expected result: Step 2
-```
+Testomat.io picks the tags out of the title and shows them next to the test. See [Tags](https://docs.testomat.io/advanced/tags-labels/tags).
 
-Some example:
+## Test Priority
 
-```
-## Steps
+Priority shows which tests matter most. The priority icon appears next to the test title and in the test tree, and you can filter tests by it.
 
-* Go to the payment page
-    Expected result: Payment page loads
-* Enter credit card details and submit
-    Expected result: Payment is processed and confirmation page loads
-```
+| Level | Meaning |
+| --- | --- |
+| **Low** | Low-importance test |
+| **Normal** | Default priority |
+| **High** | High-importance test |
 
----
+Set priority when you create a test, change it while editing, or update many tests at once. See [Test Priority](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#test-priority).
 
-### Expected Results as Steps One After Another
+## Steps and Expected Results
 
-This pattern is similar to the previous one, but instead of listing the expected results right after each step as plain text, they are listed after all the steps have been documented. This approach will give you ability to use autocompletion and expected results will be stored in steps database.
+The Steps Database is a shared list of reusable steps for the whole project. It helps you:
 
-```
-## Steps
-* Step 1
-* Expected result: Step 1
-* Step 2
-* Expected result: Step 2
-* Step 3
-* Expected result: Step 2
-```
+- find existing steps with autocomplete while writing a test,
+- rename a step in one place and update it in every test that uses it.
 
-Some example:
+Testomat.io saves a step to the Steps Database only when it is written as a list item under a `## Steps` heading.
 
-```
+![A step written once goes into the Steps Database and is reused by every test](./images/classical-projects/steps-database.png)
+
+:::note
+
+If you want to reuse a step in other tests, create it as a list item from the start.
+
+:::
+
+For example:
+
+```markdown
 ## Steps
 * Go to the payment page
 * Verify that Payment page loads
@@ -153,83 +119,37 @@ Some example:
 * Verify that Payment is processed and confirmation page loads
 ```
 
----
+| How you write it | What Testomat.io does |
+| --- | --- |
+| Plain text | Shows it in the test, but does not save it to the Steps Database |
+| List item | Saves it and makes it available in autocomplete and the Steps editor |
+| Nested list, table, or subheading | Saves it and makes it available in autocomplete and the Steps editor |
 
-### Steps with Expected Results as Nested List
+### Expected Results as Nested List
 
-This format is useful for breaking down each step into multiple sub-steps, each with its own expected result. This can be helpful when a step is complex and has several different parts or when there are multiple expected behaviors that need to be documented for each step. By nesting the expected results under each step, it's easy to see which expected results are related to which sub-steps, making it easier to track and verify expected behaviors.
+This format is useful for breaking down each step into multiple sub-steps, each with its own expected result.
 
-```
-## Steps
-* Step 1
-    1. Expected result: Step 1.1
-    2. Expected result: Step 1.2
-* Step 2
-    1. Expected result: Step 2.1
-    2. Expected result: Step 2.2
-* Step 3
-    1. Expected result: Step 3.1
-    2. Expected result: Step 3.2
-```
-
-Some example:
-
-```
-## Steps
-
-* Go to the payment page
-    1. Verify that Payment page loads
-* Enter credit card details and submit
-    1. Verify that Credit card number is accepted
-    2. Verify that Expiration date is accepted
-    3. Verify that CVV code is accepted
-* Submit payment and confirmation page loads
-    1. Verify that Payment is processed
-```
-
-:::note
-
-In case you use numbered list for your steps and unordered list for expected result or sub-steps, to see the correct formatting, **add 4 spaces or 1 tab** before unordered list. Check the relevant case below.
-
-:::
-
-```
+```markdown
 ## Steps
 
 1. Step 1
-    - Expected result: Step 1.1
-    - Expected result: Step 1.2
+   - Expected result: Step 1.1
+   - Expected result: Step 1.2
 2. Step 2
-    - Expected result: Step 2.1
-    - Expected result: Step 2.2
+   - Expected result: Step 2.1
+   - Expected result: Step 2.2
 3. Step 3
-    - Expected result: Step 3.1
-    - Expected result: Step 3.1
+   - Expected result: Step 3.1
+   - Expected result: Step 3.2
 ```
 
-Some example:
+ Write expected results as list items if you want to save and reuse them.
 
-```
-## Steps
+![Steps with their expected results in test case rich editor](./images/classical-projects/2-steps-with-expected-results.png)
 
-1.  Go to the payment page
-    - Verify that Payment page loads
-    - Verify that payment page matches the design
-2. Enter credit card details and submit
-    - Verify that Credit card number is accepted
-    - Verify that Expiration date is accepted
-    - Verify that CVV code is accepted
-3. Submit payment and confirmation page loads
-    - Verify that Payment is processed
-```
+### Separated Expected Results
 
-![Edit Test Case](./images/Edit_test_case_numbered_list.gif)
-
----
-
-### Steps with Separated Expected Results
-
-Instead of listing the verification actions after each step, they are listed under a separate section for expected results. This can be a good way to provide a summary of the expected behavior and can be helpful in identifying any gaps in the test coverage.
+The verification actions can be listed under a separate section for expected results. This can be used to provide a summary of the expected behavior and can be helpful in identifying any gaps in the test coverage.
 
 ```
 ## Steps
@@ -243,112 +163,113 @@ Instead of listing the verification actions after each step, they are listed und
 * Verify that ...
 ```
 
-Some example:
+When a test contains a `## Steps` heading, the preview shows steps in rich editor. Use it to edit steps and expected results without opening the full test editor. See [Steps](https://docs.testomat.io/project/steps-snippets/steps) for more information.
 
-```
-## Steps
+## Dynamic Parameters
 
-1. Go to the payment page
-2. Enter credit card details and submit
+Dynamic parameters turn one test into a data-driven test. Write a placeholder in the steps, fill in a table of values, and Testomat.io runs the test once per row. Each row counts as a separate test in the run.
 
-## Expected Results:
+Use `${ParameterName}` or `{{ParameterName}}` in the description or the steps:
 
-1. Payment page loads
-2. Payment is processed and confirmation page loads
-
+```text
+Open home page {{URL}}
+Enter an invalid mobile number ${Mobile No}
 ```
 
----
+See [Add Dynamic Parameters to a Test](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#add-dynamic-parameters-to-a-test).
 
-### Steps with Table of Expected Results
+## Automation Mapping
+In a Classical project, Testomat.io connects automated tests to your test cases using the test title and file path.
+Your manual test steps do not need to match functions in your automation code. You can describe the steps in plain language. This approach works with automation frameworks:
 
-In this pattern, the steps are presented in a table format, with the expected results listed in a separate column. This can be a good way to provide a clear and concise summary of the test case and can be helpful in identifying any variations in the expected behavior.
+- Playwright,
+- Cypress,
+- JUnit,
+- pytest,
+- RSpec.
 
-```
-## Steps
+## Test Editor
 
-| Step          | Expected results |
-|---------------|------------------|
-| Success login | Check form       |
-| Failed login  | Check form       |
-```
+The Classical editor opens when you create a test or edit an existing one.
 
-Some example:
+![Test case editor overview](./images/classical-projects/3-testomatio-test-case-editor.png)
 
-```
-## Steps
+It contains the test title, description, and tools for editing the test.
 
-| Step                           | Expected results                                           |
-|--------------------------------|------------------------------------------------------------|
-| Go to the payment page         | Payment page loads                                         |
-| Enter credit card details      | Credit card number is accepted, Expiration date is accepted, CVV code is accepted |
-| Submit payment                 | Payment is processed and confirmation page loads           |
-```
+| # | Control | What it does |
+| --- | --- | --- |
+| 1 | Test title field | Enter the test title and add tags. |
+| 2 | Set priority | Set how important the test is, from Low to High. |
+| 3 | Assign to | Assign the test to a user. The user must already be a member of the project. |
+| 4 | Formatting toolbar | Format the test description. |
+| 5 | Editing area | Add requirements, preconditions, steps, and expected results. |
+| 6 | Preview | See how the finished test looks. |
+| 7 | Edit steps | Edit steps and expected results in a Rich editor. |
+| 8 | Attachments | Add files to the test. |
+| 9 | Draw | Add a diagram or drawing. |
+| 10 | Editor mode switch | Switch between block and Markdown modes. |
+| 11 | Autocomplete steps | Turn step suggestions on or off. |
+| 12 | Autocomplete snippets | Turn snippet suggestions on or off. |
+| 13 | Autocomplete tags | Turn tag suggestions on or off. |
+| 14 | Full screen | Open the editor in full-screen mode. |
+| 15 | Set labels | Add labels or custom fields. |
+| 16 | Use template | Apply a saved test template. |
+| 17 | Change state | Change the test state, such as manual or automated. |
+| 18 | Save | Save your changes. |
+| 19 | Dictate | Speak the text instead of typing it. Needs AI features turned on. |
+| 20 | Go back | Return to the previous screen. |
+| 21 | Close | Close the editor. |
 
-## ![Testomat.io - Table inside test case description](./images/New_10TBA7jV_2024-08-03.png)
+## Suite Editor
 
-### Steps with Expected Results as Subheadings
+The suite editor works in much the same way, but it has fewer controls because suites do not have steps or a state.
 
-In this format, the expected results are included as subheadings under each step. This can be useful when you want to provide a more detailed description of the expected behavior for each step. So each section will provide more complex details and many verification point per each step
+| # | Control | What it does |
+| --- | --- | --- |
+| 1 | Suite title field | Enter the suite title and add tags. |
+| 2 | Formatting toolbar | Format the suite description. |
+| 3 | Assign to | Assign the suite to a user. The user must already be a member of the project. |
+| 4 | Editing area | Write the suite description. |
+| 5 | Preview | See how the suite looks. |
+| 6 | Attachments | Add files to the suite. |
+| 7 | Extra menu | Open additional suite options. |
+| 8 | Autocomplete steps | Turn step suggestions on or off. |
+| 9 | Autocomplete snippets | Turn snippet suggestions on or off. |
+| 10 | Autocomplete tags | Turn tag suggestions on or off. |
+| 11 | Full screen | Open the editor in full-screen mode. |
+| 12 | Set labels | Add labels or custom fields. |
+| 13 | Use template | Apply a saved suite template. |
+| 14 | Save | Save your changes. |
+| 15 | Dictate | Speak the text instead of typing it. Needs AI features turned on. |
+| 16 | Go back | Return to the previous screen. |
+| 17 | Close | Close the editor. |
 
-```
-## Steps
+## Block and Markdown Modes
 
-### Step 1
+You can edit the same test description in two modes.
 
-* Expected result 1.1
-* Expected result 1.2
-* Expected result 1.3
+The block editor splits the content into separate blocks. Each step can have its own expected result and image. This makes longer tests easier to read.
+The Markdown editor shows the same content as Markdown view.
 
-### Step 2
+Both modes edit the same description, so you can switch between them any time.
 
-* Expected result 2.1
-* Expected result 2.2
-* Expected result 2.3
+## Link Tests and Suites
 
-### Step 3
+You can link a test, suite, or folder from a description by adding its ID.
 
-* Expected result 2.1
-* Expected result 2.2
-* Expected result 2.3
-```
+After you save the description, the ID becomes a clickable link. Click it to open a preview of the linked item in a side panel.
 
-Some example:
+![Test case editor overview](./images/classical-projects/4-linked-test-in-test-description.png)
 
-```
-## Steps
+If the ID stays as plain text, check that you added the item ID rather than its full URL.
 
-### Go to the payment page
+:::note
 
-* Verify that Payment page loads
+In a Classical project, use the ID without `#`.
 
-### Enter credit card details
+:::
 
-* Enter credit card number
-    1. Verify that Credit card number is accepted
-* Enter expiration date
-    1. Verify that Expiration date is accepted
-* Enter CVV code
-    1. Verify that CVV code is accepted
+## Next Steps
 
-### Submit payment
-
-* Verify that Payment is processed
-* Verify that Confirmation page loads
-
-```
-
-Use Markdown shortcuts to edit test case description quickly and easily. Visit the [Keyboard Shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) page to learn more.
-
-## Cross-Linking Tests, Suites and Folders
-
-Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window. 
-
-This feature is available for Classical and BDD projects but have a difference in formating.
-
-### For Classical Project
-
-All you need to do is copy test cases/suites IDs and paste them into a test/suite description:
-
-![Testomat.io - Use ID In Tests](./images/New_0ldrsL29_2024-10-05.gif)
-
+- [BDD Test Case Editor](https://docs.testomat.io/project/tests/bdd-test-case-editor)
+- [Classical vs BDD](https://docs.testomat.io/project/tests/classical-vs-bdd)

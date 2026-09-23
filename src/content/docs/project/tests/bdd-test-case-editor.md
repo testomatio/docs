@@ -1,5 +1,5 @@
 ---
-title: BDD Test Case Editor
+title: BDD Project
 description: Learn how to write and manage BDD test scenarios using Testomat.io. This guide explores creating Gherkin-based tests, editing feature files, and using BDD workflows to improve collaboration, traceability, and test automation.
 type: article
 url: https://docs.testomat.io/project/bdd_editor
@@ -10,89 +10,227 @@ head:
       content: test design, test cases, test management, test automation, testing techniques, Testomat.io, BDD, Gherkin, Cucumber, test scenarios, project workflow, software testing
 ---
 
-## Test Case Editor
+A BDD project stores tests as Gherkin scenarios. Each suite is a `.feature` file, and each test is a scenario inside that file. A BDD project is a good fit when you:
 
-Test Case Editor is a dynamic interface, designed to accommodate the diverse requirements of test case formulation. Through this platform, testers wield the power to architect meticulously structured test scenarios, encompassing a range of variables, actions, expected results, and potential outcomes.
+- write scenarios together with business, development, and QA teams,
+- use a Cucumber-based automation framework,
+- want your test scenarios to be closely connected to automation,
+- want to describe the starting state and expected result for each scenario.
 
-Regarding test case creation, Testomat.io offers two distinct editor types: the **Classical** Editor and the **BDD** (Behavior-Driven Development) Editor. Each caters to different testing methodologies and user preferences, enabling testers to choose the approach that best aligns with their needs.
+![A folder holds feature files, a feature file holds scenarios](./images/bdd-projects/bdd-project-structure.png)
 
-Let's have a look at **BDD** Editor.
+:::note
 
-## BDD Editor Review
+A project is either Classical or BDD, and the type cannot be changed after creation. To move from Classical to BDD, you create a new BDD project and transfer the tests - manually, or with the Transform Project to BDD AI agent. There is no supported way to move from BDD to Classical. See [Classical vs BDD](https://docs.testomat.io/project/tests/classical-vs-bdd) and [AI-Agents](https://docs.testomat.io/advanced/ai-powered-features/ai-agents).
 
-As you embark on the journey of crafting and refining BDD scenarios, this innovative platform empowers you to shape narratives into meticulously executable tests. At its core, the BDD Editor encapsulates the essence of collaboration, precision, and agility, delivering a comprehensive solution for modern testing workflows. Here, you'll create user stories, scenarios, and document expected behaviors with an eloquence that bridges the gap between technical and non-technical stakeholders.
+:::
 
-**Feature File Editor**
+## Feature Files, Scenarios, and Folders
 
-In the context of BDD, the Feature File serves as the canvas upon which your software's behavior is painted.
+In a BDD project, each suite is a `.feature` file. The scenarios inside the file are the tests.
 
-Let's see what we have here!
+![Test overview in the BDD editor of Testomat.io UI](./images/bdd-projects/1-test-overview.png)
 
-![Edit Feature File](./images/BDD_edit_suite.png)
+A feature file cannot contain another feature file, so a suite cannot contain other suites. Use folders to group feature files. Tests are organised like files in your code, so a manual test can become automated without moving it. See [Suites and Folders](https://docs.testomat.io/project/tests/other-features-for-test-case-design/#suites-and-folders) to learn more.
 
-1. **Editing Area** – Displays the Feature File with Given/When/Then steps.  
-2. **Attachments** – Upload supporting files via the attachments dialog.  
-3. **Extra Menu** – Access additional options.  
-4. **Autocomplete Steps** – Toggle step suggestions.  
-5. **Autocomplete Snippets** – Toggle snippet suggestions.  
-6. **Autocomplete Tags** – Toggle tag suggestions.  
-7. **Fullscreen** – Enter a distraction-free workspace.  
-8. **Format** – Structure Scenarios into Gherkin format.  
-9. **Set Labels** – Assign existing labels or create custom fields.  
-10. **Save** – Save your work.  
-11. **Go Back** – Return to the previous screen.  
-12. **Close** – Exit the editor.
+## Gherkin Syntax
 
-**Scenarios Editor**
+BDD scenarios use Gherkin keywords such as `Given`, `When`, `Then`, and `And`. The BDD editor checks the Gherkin syntax as you type. If you misspell a keyword or miss a required line, the scenario cannot be saved as a valid test.
 
-Beyond Feature Files lies the individual tests. Here, the BDD Editor grants you the ability to sculpt scenarios with precision, breaking down user behaviors into granular steps and verifiable outcomes. Each test becomes a symphony of detail, harmonizing the user's journey with the software's responses. By editing separate tests within the BDD Editor, you orchestrate complex interactions, validations, and expectations.
+| Keyword | Description |
+| --- | --- |
+| **Given** | The starting state |
+| **When** | An action |
+| **Then** | The expected result |
+| **And** | Another step added to the previous one |
 
-![Edit scenario](./images/BDD_edit_test.png)
+For example:
 
-1. **Editing Area** – Displays Scenarios with Given/When/Then steps.  
-2. **Attachments** – Upload supporting files via the attachments dialog.  
-3. **Extra Menu** – Access additional options.  
-4. **Autocomplete Steps** – Toggle step suggestions.  
-5. **Autocomplete Snippets** – Toggle snippet suggestions.  
-6. **Autocomplete Tags** – Toggle tag suggestions.  
-7. **Fullscreen** – Enter a distraction-free workspace.  
-8. **Set Labels** – Assign existing labels or create custom fields.  
-9. **Change State** – Update the test state (e.g., manual to automated).  
-10. **Save** – Save your work.  
-11. **Go Back** – Return to the previous screen.  
-12. **Close** – Exit the editor.
+```gherkin
+Feature: User Authentication
 
+Scenario: Successful login with valid credentials
 
-**Saving changes in the feature file as a draft**
+Given the user is on the Testomat.io login page
+When the user enters valid credentials
+And the user clicks the 'Sign In' button
+Then the user should be redirected to the Project Dashboard
+And a "Welcome" message should be displayed
+```
+You can keep an unfinished scenario as a draft. See [Drafts for unfinished scenarios](#drafts-for-unfinished-scenarios).
 
-There is an option to save unfinished changes in the feature file as a draft. This is useful when the scenario isn't finalized yet and may contain syntax errors.
+![Syntax error message example in the Gherkin test](./images/bdd-projects/2-gherkin-syntax-error.png)
 
-Drafts can be applied at both the suite and test levels - in other words, Feature and Scenario description.
-When editing a test, if the editor prevents you from saving changes (e.g., due to syntax errors), the relevant error message will appear at the bottom of the screen. If you plan to fix the scenario later but don’t want to lose your changes, you can use the **Save to Draft and View Test** option:
- 
-![Save To Draft and View Test option](./images/Save_To_Draft_and_View_Test.png)
+## Reuse Shared Steps
 
-The next time you open the test in edit mode, you will see two additional buttons:
+The same steps, such as `Given I am on the login page`, can be reused:
 
-1. **Apply Draft to Description** – Applies the last saved draft to the scenario text section.
+1. Start typing the step.
+2. Pick it from the autocomplete list. 
 
-2. **Delete Draft** – Deletes the existing draft.
+Reused steps have one big advantage: when a step changes, you edit it in one place and every scenario that uses it is updated.
 
-![ Apply Draft to description and Delete Draft buttons](./images/apply_draft_or_delete_buttons.png)
+See [Steps Database](https://docs.testomat.io/project/steps-snippets/steps/#how-to-reuse-steps-from-steps-database) for the full picture.
 
-> **Note:** Only one draft can be saved at a time.
+## Automation Mapping
+
+In a BDD project, each Gherkin step is connected to a step definition in your automation code. For reusable tests, describe what the user wants to do rather than the exact UI action.
+
+For example:
 
 
-## Cross-Linking Tests, Suites and Folders
+```gherkin
+When I cancel the transaction
+```
 
-Another useful feature that allows you to cross-link test cases, suites, and folders by embedding their unique IDs directly into the description of another test or suite. This functionality provides you with clickable links to other related items within your project, and clicking on it displays a dynamic preview of the linked test, suite or folder in an additional window. 
+is easier to reuse than:
 
-This feature is available for Classical and BDD projects but have a difference in formating.
+```gherkin
+When I click the red Cancel button
+```
 
-### For BDD Project
+This also means your scenarios are less affected when the user interface changes.
 
-In the projects that use BDD format, you need to follow certain rules to maintain your test structure.
-If you want to add clickable references to a test or suite in a BDD project, use **#** followed by their IDs. Clicking the link will open the test or suite in detail view, making navigation and traceability more seamless.
+To connect your scenarios to real code, import your feature files. See [Import Cucumber BDD Tests](https://docs.testomat.io/project/import-export/import/import-bdd).
 
-![Testomat.io - Use ID In Tests](./images/link_bdd.gif)
+:::note
 
+As Gherkin alternative, you can use a Classical project and write CodeceptJS code that reads like BDD, such as `I.click('Login')`. See [Classical vs BDD](https://docs.testomat.io/project/tests/classical-vs-bdd#moving-between-project-types).
+
+:::
+
+## Suite Page
+
+Click a suite in the tree to open its page. This is where you see the feature file, its scenarios, and everything attached to it.
+
+| Tab | What it shows |
+| --- | --- |
+| **Feature description** | The `Feature` text of the file. |
+| **Tests** | Every scenario in the file. |
+| **Attachments** | Files added to the suite. |
+| **Runs** | Runs that included these scenarios. |
+| **History** | Changes made to the suite. |
+
+From this page you can also:
+
+| Control | What it does |
+| --- | --- |
+| **Edit** | Opens the feature file editor. |
+| **Set milestone** | Links the suite to a [milestone](https://docs.testomat.io/advanced/milestones), such as a sprint or a release. |
+| **Set labels** | Adds labels or custom fields. |
+| **Set requirements** | Links the suite to a requirement document, so you can see what the scenarios are meant to cover. See [AI-Requirements](https://docs.testomat.io/advanced/ai-powered-features/ai-requirements). |
+| **Suggest Tests** | Lets AI propose new scenarios based on the suite description. See [AI-Powered Features](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features). |
+| **Add new test** | Adds a scenario without opening the editor. Type a title and click **Create**. Turn on **Bulk** to add several at once, one title per line. |
+
+## Feature File Editor
+
+A feature file is the suite in a BDD project. To open it:
+
+1. On the **Tests** page, click a suite in the tree.
+2. Click **Edit** in the top-right corner.
+
+The editor opens with the `Feature` description and every scenario in the file.
+
+| # | Control | What it does |
+|---|---|---|
+| 1 | **Go back** | Return to the previous screen. |
+| 2 | **Close** | Close the editor. |
+| 3 | **Set milestone** | Link the feature file to a [milestone](https://docs.testomat.io/advanced/milestones), such as a sprint or a release. |
+| 4 | **Set labels** | Add labels or custom fields. |
+| 5 | **Gherkin** | Switch to the Gherkin view of the feature file. |
+| 6 | **Autocomplete** | Turn step, snippet, and tag suggestions and the spell checker on or off. |
+| 7 | **Fullscreen** | Open the editor in full-screen mode. |
+| 8 | **Attachments** | Add files to the feature file. |
+| 9 | **Editing area** | Edit the feature file and its Given/When/Then steps. |
+| 10 | **Format** | Format the scenarios using the Gherkin structure. Shortcut: `Cmd` + `B`. |
+| 11 | **Save** | Save your changes. Open the arrow next to it for more save options. |
+| 12 | **Cancel** | Leave the editor without saving. |
+
+The **Autocomplete** menu holds four switches.
+
+| Switch | What it does |
+| --- | --- |
+| **Autocomplete Steps** | Suggests steps from the [Steps Database](https://docs.testomat.io/project/steps-snippets/steps) as you type. Pick one from the list to insert it. |
+| **Autocomplete Snippets** | Suggests [snippets](https://docs.testomat.io/project/steps-snippets/snippets) - saved blocks of text or steps that you reuse across tests. |
+| **Autocomplete Tags** | Suggests existing [tags](https://docs.testomat.io/advanced/tags-labels/tags) after you type `@`, so you reuse a tag instead of creating a duplicate. |
+| **Spell check** | Marks misspelled words in the editor as you type. |
+
+The feature file editor and scenario editor work with the same file. Changes made to a scenario are saved back to its feature file.
+
+## Scenario Editor
+
+The scenario editor lets you edit the test without showing the rest of the feature file. You can open one scenario: 
+
+1. Click a test in the tree.
+2. Click **Edit**. 
+
+![The BDD scenario editor in edit mode, with the controls numbered](./images/bdd-projects/3-testomatio-feature-file-editor.png)
+
+| # | Control | What it does |
+|---|---|---|
+| 1 | **Go back** | Return to the previous screen. |
+| 2 | **State** | Change the test state, such as manual or automated. |
+| 3 | **Help** | Open the help panel. |
+| 4 | **Link to Issue** | Link the scenario to an issue in your bug tracker. |
+| 5 | **Close** | Close the editor. |
+| 6 | **Set milestone** | Link the scenario to a [milestone](https://docs.testomat.io/advanced/milestones), such as a sprint or a release. |
+| 7 | **Set labels** | Add labels or custom fields. |
+| 8 | **Gherkin** | Switch to the Gherkin view of the scenario. |
+| 9 | **Priority** | Set how important the scenario is. |
+| 10 | **Autocomplete** | Turn step, snippet, and tag suggestions and the spell checker on or off. |
+| 11 | **Fullscreen** | Open the editor in full-screen mode. |
+| 12 | **Attachments** | Add files to the scenario. |
+| 13 | **Editing area** | Edit the scenario and its Given/When/Then steps. |
+| 14 | **Save** | Save your changes. Open the arrow next to it for more save options. |
+| 15 | **Cancel** | Leave the editor without saving. |
+
+## Drafts for Unfinished Scenarios
+
+Open the arrow next to **Save** to see every save option:
+
+| Option | What it does |
+| --- | --- |
+| **Save & View Test** | Saves and opens the test. |
+| **Save & Go To Suite** | Saves and opens the feature file the scenario belongs to. |
+| **Save To Draft & View Test** | Saves your changes as a draft and opens the test. |
+| **Save & Close All** | Saves and closes the editor. |
+
+Use **Save To Draft & View Test** to keep unfinished changes. The draft is saved, while the test keeps its last valid version.
+
+When you open the test in edit mode again, you can use:
+
+- **Apply Draft to Description** to replace the current scenario text with the saved draft.
+- **Delete Draft** to remove the saved draft.
+
+![The Save to Draft and View Test option in the save menu](./images/bdd-projects/4-feature-file-save-options.png)
+
+:::note
+
+Only one draft can be saved at a time. Saving a new draft replaces the previous one.
+
+:::
+
+## Link Tests and Suites
+
+You can link a test or suite from another description by adding `#` before its ID. The `#` is a must in a BDD project.
+
+For example:
+
+```text
+#12345
+```
+
+To link by ID:
+
+1. Save the description. The ID becomes a clickable link. 
+2. Click it to open the linked item in detail view.
+
+![A hash and a test ID into a scenario description, and the linked test opening in detail view](./images/bdd-projects/5-linked-test-in-bdd-test-description.png)
+
+
+
+## Next Steps
+
+- [Classical Test Case Editor](https://docs.testomat.io/project/tests/classical-test-case-editor)
+- [Classical vs BDD](https://docs.testomat.io/project/tests/classical-vs-bdd)
+- [AI-Agents](https://docs.testomat.io/advanced/ai-powered-features/ai-agents)
