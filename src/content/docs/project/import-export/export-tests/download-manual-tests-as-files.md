@@ -269,7 +269,7 @@ To create a test case with **Dynamic Parameters** in a markdown file, you need t
 
 :::
 
-For more information about **Dynamic Parameters** follow the [link](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#how-to-add-dynamic-parameters-to-a-test).
+For more information about **Dynamic Parameters** follow the [link](https://docs.testomat.io/project/tests).
 
 ## How to Import Manual Tests from Markdown
 

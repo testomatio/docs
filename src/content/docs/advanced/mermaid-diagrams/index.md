@@ -49,4 +49,4 @@ Testomat.io can build a mindmap for you. **Generate Project Structure** reads yo
 
 - [AI-Powered Features](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features)
 - [Living Documentation](https://docs.testomat.io/advanced/living-doc)
-- [Test Case Creation and Editing](https://docs.testomat.io/project/tests/test-case-creation-and-editing)
+- [Create a Test](https://docs.testomat.io/project/tests/create-a-test)

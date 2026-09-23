@@ -49,6 +49,7 @@ const redirects = {
     "/security/overview/": "/legal/security",
     "/security/subprocessors": "/legal/security/subprocessors",
     "/usage/continious-integration": "/integrations/continuous-integration",
+    "/project/tests/test-case-creation-and-editing": "/project/tests",
     // "/usage/bdd-syntax": "",	bdd-syntax locate in not-in-use folder
     "/reference/reporter/pipes/testomatio.html": "/project/runs/reporter/pipes/testomatio",
     "/usage/templates.html": "/management/project/templates",
