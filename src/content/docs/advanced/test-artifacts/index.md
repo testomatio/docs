@@ -22,7 +22,7 @@ You can add attachments during test case creation or editing by directly **dragg
 
 ![Testomat.io - Add attachment](./images/Add_attachment_1.gif)
 
-For more details on adding and managing attachments, refer to the [Add Attachments to Test](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#add-attachments-to-test).
+For more details on adding and managing attachments, refer to the [Add Attachments to Test](https://docs.testomat.io/project/tests).
 
 You can also manage attachments across Testomat.io by adding them to **suites**, **folders**, and the **readme section**. This streamline workflows by keeping all relevant files and documentation in one place. Whether you’re sharing important notes, reference materials, or test data, you can now attach them directly to the relevant test structures for easy access.
 
@@ -36,7 +36,7 @@ You can also manage attachments across Testomat.io by adding them to **suites**,
 
 If you no longer need your attachments, you can delete them.
 
-Go to [How to Delete Attachment from Test Case](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#how-to-delete-attachment-from-test-case) section to read more about this feature.
+Go to [How to Delete Attachment from Test Case](https://docs.testomat.io/project/tests) section to read more about this feature.
 
 :::note
 
@@ -48,7 +48,7 @@ You can delete attachments from Suite, Folder and Readme section in the same way
 
 Before the attachment is permanently deleted from the store, you can restore it. 
 
-Go to [How to Restore Deleted Attachment](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#how-to-restore-deleted-attachment) section to read more about this feature.
+Go to [How to Restore Deleted Attachment](https://docs.testomat.io/project/tests) section to read more about this feature.
 
 :::note
 

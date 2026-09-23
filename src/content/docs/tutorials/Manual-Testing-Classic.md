@@ -161,4 +161,4 @@ To share the outcome with your team or stakeholders, use the share option on the
 ## Next steps
 
 * Ready to add automation? See [Import Tests From Source Code](https://docs.testomat.io/project/import-export/import/import-tests-from-source-code/#_top).
-* See [Test Case Creation and Editing](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#_top).
+* See [Create a Test](https://docs.testomat.io/project/tests/create-a-test).

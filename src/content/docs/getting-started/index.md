@@ -94,7 +94,7 @@ You can create any number of folders and suites within a folder.
 
 ## Create Manual Test Cases
 
-Read full article: [Test Case Creation and Editing](https://docs.testomat.io/project/tests/test-case-creation-and-editing/).
+Read full article: [Create a Test](https://docs.testomat.io/project/tests/create-a-test).
 
 After you’ve created test suites, you can start adding tests. 
 1. Select a test suite.
