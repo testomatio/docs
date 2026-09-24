@@ -241,8 +241,8 @@ The **'Create new run'** checkbox controls whether the relaunch creates a separa
 |                                   | **Create new run ON**                                                                                            | **Create new run OFF**                                                                                        |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | **Run ID**                        | A new run is created with a new ID. The original run remains unchanged.                                          | The original run is reused — same run ID.                                                                     |
-| **Selected tests**                | Only selected tests are included in the new run and reset to Pending status (unless **Keep values** is enabled). | All tests are included with their current statuses kept. Only selected tests are reset to **Pending** status. |
-| **Unselected tests / Select all** | All tests are reset to Pending status in the new run (unless **Keep values** is enabled).                        | All tests retain their existing results.                                                                      |
+| **Selected test** / **Select all**  | Only selected tests are included in the new run and reset to Pending status (unless **Keep values** is enabled). | Only selected tests are reset to **Pending** status. The unselected tests are included with their current statuses kept. |
+| **Unselected tests**  | All tests are reset to Pending status in the new run (unless **Keep values** is enabled).                        | All tests retain their existing results.                                                                      |
 
 :::note
 
