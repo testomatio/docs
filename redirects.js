@@ -105,6 +105,10 @@ const redirects = {
     "/project/runs/import-export/import-tests-from-source-code.md": "/project/import-export/import/import-tests-from-source-code",
     "/project/runs/runs/reporter/pipes/testomatio.md": "/test-reporting/pipes/testomatio",
     "/reference/reporter/artifacts/#privacy": "/test-reporting/artifacts/#private-access",
+    "/project/tests/copy-and-move-your-tests": "/project/tests/copying-tests-and-suites",
+    "/project/tests/other-features-for-test-case-design": "/project/tests/sharing-tests-and-suites",
+    "/project/test_design_features": "/project/tests/sharing-tests-and-suites",
+    "/project/copy_move_tests": "/project/tests/copying-tests-and-suites",
 }
 
 export default redirects

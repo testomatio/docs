@@ -91,7 +91,7 @@ Assigning a test in a run does not change its test assignment.
  
 ## Next Steps
  
-- [Create a Test](./create-a-test.md)
-- [Test Attachments](./test-attachments.md)
+- [Create a Test](https://docs.testomat.io/project/tests/create-a-test)
+- [Test Attachments](https://docs.testomat.io/project/tests/test-attachments)
 - [Tags](https://docs.testomat.io/advanced/tags-labels/tags/)
  

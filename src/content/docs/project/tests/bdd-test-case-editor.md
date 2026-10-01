@@ -31,7 +31,7 @@ In a BDD project, each suite is a `.feature` file. The scenarios inside the file
 
 ![Test overview in the BDD editor of Testomat.io UI](./images/bdd-projects/1-test-overview.png)
 
-A feature file cannot contain another feature file, so a suite cannot contain other suites. Use folders to group feature files. Tests are organised like files in your code, so a manual test can become automated without moving it. See [Suites and Folders](https://docs.testomat.io/project/tests/other-features-for-test-case-design/#suites-and-folders) to learn more.
+A feature file cannot contain another feature file, so a suite cannot contain other suites. Use folders to group feature files. Tests are organised like files in your code, so a manual test can become automated without moving it. See [Suites and Folders](https://docs.testomat.io/project/tests/suites-and-folders) to learn more.
 
 ## Gherkin Syntax
 

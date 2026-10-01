@@ -122,7 +122,7 @@ For more information, see [Analytics Dashboards (Widgets)](https://docs.testomat
  
 ## Next Steps
  
-- [Tags, Labels, and Assignees](./tags-labels-and-assignees.md)
-- [Create a Test](./create-a-test.md)
+- [Tags, Labels, and Assignees](https://docs.testomat.io/project/tests/tags-labels-and-assignees)
+- [Create a Test](https://docs.testomat.io/project/tests/create-a-test)
 - [Bulk Edit](https://docs.testomat.io/advanced/bulk-edit-folder)
  
