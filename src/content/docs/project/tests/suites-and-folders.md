@@ -98,5 +98,5 @@ You can now add other suites to the folder.
 ## Next Steps
 
 - [Create a Test](https://docs.testomat.io/project/tests/create-a-test)
-- [Copy and Move your Tests](https://docs.testomat.io/project/tests/copy-and-move-your-tests)
-- [Other Features for Test case Design](https://docs.testomat.io/project/tests/other-features-for-test-case-design)
+- [Copying Tests and Suites](https://docs.testomat.io/project/tests/copying-tests-and-suites)
+- [Sharing Tests and Suites](https://docs.testomat.io/project/tests/sharing-tests-and-suites)

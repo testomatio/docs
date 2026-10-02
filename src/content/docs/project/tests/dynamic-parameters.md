@@ -120,7 +120,7 @@ Using `${}` everywhere keeps the syntax consistent.
  
 ## Next Steps
  
-- [Test Steps and Expected Results](./test-steps-and-expected-results.md)
-- [Edit Test Steps](./edit-test-steps.md)
-- [Tags, Labels, and Assignees](./tags-labels-and-assignees.md)
+- [Test Steps and Expected Results](https://docs.testomat.io/project/tests/test-steps-and-expected-results)
+- [Edit Test Steps](https://docs.testomat.io/project/tests/edit-test-steps)
+- [Tags, Labels, and Assignees](https://docs.testomat.io/project/tests/tags-labels-and-assignees)
  

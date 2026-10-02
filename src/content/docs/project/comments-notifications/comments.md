@@ -52,7 +52,7 @@ Deleting a comment removes it from the thread for everyone. This cannot be undon
 
 ## Comments in shared projects
 
-Comments are always project-specific. When a suite or test [is shared](https://docs.testomat.io/project/tests/other-features-for-test-case-design/#sharing-tests-suites-and-folders) with another project, its comments are not transferred with the shared tests.
+Comments are always project-specific. When a suite or test [is shared](https://docs.testomat.io/project/tests/sharing-tests-and-suites/#share-a-test-suite-or-folder) with another project, its comments are not transferred with the shared tests.
 
 :::note
 
@@ -64,4 +64,4 @@ The same applies in the other direction: a comment left in a target project is n
 
 - [Mentions and notifications](./mentions-and-notifications.md)
 - [Running tests manually](https://docs.testomat.io/project/runs/running-tests-manually)
-- [Other Features for Test case Design](https://docs.testomat.io/project/tests/other-features-for-test-case-design)
+- [Sharing Tests and Suites](https://docs.testomat.io/project/tests/sharing-tests-and-suites)

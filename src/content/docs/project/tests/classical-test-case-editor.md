@@ -48,7 +48,7 @@ A suite can have its own description. Use it for information that applies to all
 - test data,
 - setup steps.
 
-Add this information once at the suite level instead of repeating it in every test. See [Suites and Folders](https://docs.testomat.io/project/tests/other-features-for-test-case-design/#suites-and-folders) for more information.
+Add this information once at the suite level instead of repeating it in every test. See [Suites and Folders](https://docs.testomat.io/project/tests/suites-and-folders) for more information.
 
 ## Test Descriptions
 
@@ -90,7 +90,7 @@ Priority shows which tests matter most. The priority icon appears next to the te
 | **Normal** | Default priority |
 | **High** | High-importance test |
 
-Set priority when you create a test, change it while editing, or update many tests at once. See [Test Priority](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#test-priority).
+Set priority when you create a test, change it while editing, or update many tests at once. See [Test Priority](https://docs.testomat.io/project/tests/test-priority).
 
 ## Steps and Expected Results
 
@@ -176,7 +176,7 @@ Open home page {{URL}}
 Enter an invalid mobile number ${Mobile No}
 ```
 
-See [Add Dynamic Parameters to a Test](https://docs.testomat.io/project/tests/test-case-creation-and-editing/#add-dynamic-parameters-to-a-test).
+See [Dynamic Parameters](https://docs.testomat.io/project/tests/dynamic-parameters).
 
 ## Automation Mapping
 In a Classical project, Testomat.io connects automated tests to your test cases using the test title and file path.

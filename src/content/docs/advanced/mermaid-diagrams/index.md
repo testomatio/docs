@@ -1,5 +1,5 @@
 ---
-title: Mermaid Diagrams for Test Design
+title: Mermaid Diagrams
 description: Add Mermaid diagrams to test and suite descriptions in Testomat.io to model workflows, decision branches, state transitions, and dependencies before testing begins.
 type: article
 url: https://docs.testomat.io/advanced/mermaid-diagrams
@@ -10,11 +10,11 @@ head:
       content: Mermaid diagrams, test design, flowchart, state diagram, E2E journey, coverage map, defect reproduction, suite description, markdown editor, Testomat.io
 ---
 
-Write the diagram as a code block, and Testomat.io shows it as a picture. Add a Mermaid diagram to any test or suite description. Diagrams are most useful for big features with many states. Use a diagram to show a workflow, the branches of a scenario, or how parts of your product connect. 
+Write the diagram as a code block, and Testomat.io shows it as a picture. Add a Mermaid diagram to any test description. Diagrams are most useful for big features with many states. Use a diagram to show a workflow, the branches of a scenario, or how parts of your product connect. 
 
 ## Add a Diagram to a Description
 
-1. Open the test or suite you want to document.
+1. Open the test you want to document.
 2. Click **Edit**.
 3. Switch to the **Markdown** tab.
 4. Add a fenced code block that starts with ` ```mermaid `.
@@ -38,12 +38,6 @@ Each diagram has **SVG** and **PNG** buttons. Click one to download the picture 
 - which suites cover which features,
 - test data and its variants,
 - the steps that reproduce a bug.
-
-:::note
- 
-Testomat.io can build a mindmap for you. **Generate Project Structure** reads your folders and suites and suggests a new structure as a diagram. Learn more: [AI-Powered Features](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features).
-
-:::
 
 ## Next Steps
 

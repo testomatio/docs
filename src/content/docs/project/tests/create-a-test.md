@@ -58,7 +58,7 @@ Open test to add the details.
 
 Each written title in a line becomes a separate test in the suite. It is similar to the **Quick Test Creation** but a bit in other way. This is useful when you want to create the tests first and add description later.
 
-You can also use [keyboard shortcuts](https://docs.testomat.io/usage/keyboard-shortcuts/) to create and edit tests and suites.
+You can also use [keyboard shortcuts](https://docs.testomat.io/advanced/shortcuts/) to create and edit tests and suites.
 
 ## Save a Test
 

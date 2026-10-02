@@ -106,7 +106,7 @@ Deleted attachments stay available for **30 days**, so you can restore one if yo
 3. Click the **Delete** icon.
 4. Confirm the deletion.
 
-### From edit mode
+### From Edit Mode
  
 1. Open the test and click **Edit**.
 2. Open the **Attachments** tab.
