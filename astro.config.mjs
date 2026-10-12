@@ -99,6 +99,7 @@ export default defineConfig({
         	    			{ label: 'Working With Jira', link: '/tutorials/working-with-jira'},
 							{ label: 'Using AI in Testing', link: '/tutorials/using-ai-in-testing'},
 							{ label: 'MCP - Connect AI Assistant', link: '/tutorials/mcp-connection'},
+							{ label: 'Connect Claude to Testomat.io', link: '/tutorials/connect-claude-to-testomat'},
 							{ label: 'Interacting via API', link: '/tutorials/interacting-via-api'},
 							{ label: 'Set Up Read-Only Access', link: '/tutorials/set-up-read-only-access'},
 							{ label: 'Migration from TestRail', link: '/tutorials/migration-from-testrail'},
