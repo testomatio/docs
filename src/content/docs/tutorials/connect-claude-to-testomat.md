@@ -1,5 +1,5 @@
 ---
-title: Connect Claude to Testomat.io
+title: MCP - Connect Claude
 description: Connect Claude to your Testomat.io project through the hosted MCP server. Copy the connector URL, add it as a custom connector in Claude, sign in with your Testomat.io account, and ask about your tests in plain language.
 type: article
 url: https://docs.testomat.io/tutorials/connect-claude-to-testomat
@@ -10,11 +10,13 @@ head:
       content: MCP, Model Context Protocol, Claude, custom connector, OAuth, remote MCP server, Testomat.io MCP Server, AI assistant, test management, connect Claude
 ---
 
-Connect Claude to your Testomat.io project and ask about your tests in plain language — in Claude. Claude reads your tests, runs, and failures, and can create and update test cases for you.
+Connect Claude to your Testomat.io project and ask about your tests in plain language. Claude reads your tests, runs, and failures, and can create and update test cases for you.
 
 ![You log in on the Testomat.io page, approve the access, and Claude gets a key you can revoke](./images/connect-claude-to-testomat/how-the-sign-in-works.png)
 
 You sign in with your Testomat.io account, so Claude gets the same access you have. No tokens to create, no config files to edit.
+
+This is the quickest way, and it works for Claude in the browser, on the desktop, and on your phone. If you use Cursor or OpenCode, connect them with [a config file](https://docs.testomat.io/tutorials/mcp-connection) instead.
 
 :::note
 
@@ -88,6 +90,6 @@ Claude can read and change the same things you can, so anything it writes appear
 
 ## Next Steps
 
-- [MCP - Connect AI Assistant](https://docs.testomat.io/tutorials/mcp-connection)
+- [MCP - Connect with a Config File](https://docs.testomat.io/tutorials/mcp-connection)
 - [Test Query Language (TQL)](https://docs.testomat.io/advanced/tql)
 - [API Access](https://docs.testomat.io/advanced/api-access)
