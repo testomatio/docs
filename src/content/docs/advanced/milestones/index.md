@@ -30,6 +30,12 @@ This enables end-to-end test management aligned with project phases, providing c
 
 **Milestone** lives at the **company-level** but can be scoped down to specific projects. It's a tracking mechanism (like a Sprint, Release, or Version) that can be linked to various items in the system (Tests, Suites, Plans, Runs, Rungroups, Requirements). Milestones help organize and track work across related items with state management, automatic propagation, and project scoping.
 
+:::note
+
+Only users with the **Owner** or **Manager** role at the company level can create, edit, activate, and delete milestones. All other users have **read-only** access to milestones.
+
+:::
+
 **To create Milestone:**
 
 1. Navigate to **'Milestones'** tab from the main workspace dashboard.
