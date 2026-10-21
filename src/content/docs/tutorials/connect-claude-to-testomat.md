@@ -90,6 +90,7 @@ Claude can read and change the same things you can, so anything it writes appear
 
 ## Next Steps
 
+- [MCP - Connect ChatGPT](https://docs.testomat.io/tutorials/connect-chatgpt-to-testomat)
 - [MCP - Connect with a Config File](https://docs.testomat.io/tutorials/mcp-connection)
 - [Test Query Language (TQL)](https://docs.testomat.io/advanced/tql)
 - [API Access](https://docs.testomat.io/advanced/api-access)

@@ -12,7 +12,7 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, defect management, QA tools, test tracking, issue linking, automation, test defects, failed test
+      content: Testomat.io, issues management, Jira integration, GitHub issues, Azure DevOps, Linear, Plane, defect management, QA tools, test tracking, issue linking, automation, test defects, failed test
 ---
 
 import DirectoryLinks from /src/components/DirectoryLinks.astro;
