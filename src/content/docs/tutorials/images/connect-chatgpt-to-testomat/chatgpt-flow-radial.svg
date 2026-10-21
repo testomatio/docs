@@ -1,0 +1,55 @@
+<!-- H = 104 + 592 + 60 + 12 = 768 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 768" width="1100" height="768">
+<defs>
+<style>
+@font-face { font-family:'THICCCBOI'; font-weight:400; src: local('THICCCBOI-Regular'), local('THICCCBOI'), url('https://cdn.jsdelivr.net/gh/wonderunit/font-thicccboi@master/fonts/Webfont/THICCCBOI-Regular.woff2') format('woff2'); }
+@font-face { font-family:'THICCCBOI'; font-weight:500; src: local('THICCCBOI-Medium'), url('https://cdn.jsdelivr.net/gh/wonderunit/font-thicccboi@master/fonts/Webfont/THICCCBOI-Medium.woff2') format('woff2'); }
+@font-face { font-family:'THICCCBOI'; font-weight:600; src: local('THICCCBOI-SemiBold'), url('https://cdn.jsdelivr.net/gh/wonderunit/font-thicccboi@master/fonts/Webfont/THICCCBOI-SemiBold.woff2') format('woff2'); }
+text { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+.st { font-family:'THICCCBOI',sans-serif; font-size:20px; font-weight:600; letter-spacing:-0.01em; }
+.sb { font-family:'THICCCBOI',sans-serif; font-size:16px; font-weight:500; }
+.sk { font-family:'THICCCBOI',sans-serif; font-size:14px; font-weight:500; letter-spacing:0.05em; }
+.sn { font-family:'THICCCBOI',sans-serif; font-size:13px; font-weight:600; }
+.ol { font-family:'THICCCBOI',sans-serif; font-size:18px; font-weight:600; }
+</style>
+<filter id="cs" x="-8%" y="-15%" width="116%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/></filter>
+</defs>
+<rect width="1100" height="768" fill="#FAFAFA"/>
+<text text-anchor="middle" x="550" y="68" style="font-family:'THICCCBOI',sans-serif;font-size:32px;font-weight:600;letter-spacing:-0.02em"><tspan fill="#6366F1">ChatGPT</tspan><tspan fill="#171717"> setup in 6 steps</tspan></text>
+<g transform="translate(60, 104)"><g transform="translate(20, 0)">
+<circle cx="470" cy="300" r="95" fill="none" stroke="#E5E5E5" stroke-width="1"/>
+<circle cx="470" cy="300" r="145" fill="none" stroke="#E5E5E5" stroke-width="1"/>
+<circle cx="470" cy="300" r="210" fill="none" stroke="#D4D4D4" stroke-width="1.5"/>
+<rect x="420" y="250" width="100" height="100" rx="24" style="fill:#EEF2FF;stroke:#A5B4FC;stroke-width:1" filter="url(#cs)"/>
+<svg x="442" y="272" width="56" height="56" viewBox="0 0 116 116" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M40.5147 15.2354H10.6475V39.2883H45.4926V111.447H70.382V44.0989V15.2354H40.5147Z" fill="#252525"/><path d="M85.3151 15.2354H75.3594V63.3412H85.3151V15.2354Z" fill="#5C89FC"/><path d="M100.25 15.2354H90.2939V44.0989H100.25V15.2354Z" fill="#252525"/></svg>
+<!-- top: 1. Copy the Link -->
+<rect x="444" y="64" width="52" height="52" rx="12" style="fill:#6366F1;stroke:#4F46E5;stroke-width:1" filter="url(#cs)"/>
+<svg x="456" y="76" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+<text class="ol" x="470" y="18" text-anchor="middle" fill="#171717">1. Copy the Link</text>
+<text class="sb" x="470" y="42" text-anchor="middle" fill="#737373">from MCP Server</text>
+<!-- ur: 2. Open Plugins -->
+<rect x="626" y="169" width="52" height="52" rx="12" style="fill:#6366F1;stroke:#4F46E5;stroke-width:1" filter="url(#cs)"/>
+<svg x="638" y="181" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+<text class="ol" x="698" y="191" text-anchor="start" fill="#171717">2. Open Plugins</text>
+<text class="sb" x="698" y="213" text-anchor="start" fill="#737373">in ChatGPT, click Add</text>
+<!-- lr: 3. Fill In the Form -->
+<rect x="626" y="379" width="52" height="52" rx="12" style="fill:#6366F1;stroke:#4F46E5;stroke-width:1" filter="url(#cs)"/>
+<svg x="638" y="391" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+<text class="ol" x="698" y="401" text-anchor="start" fill="#171717">3. Fill In the Form</text>
+<text class="sb" x="698" y="423" text-anchor="start" fill="#737373">name, link, and OAuth</text>
+<!-- bot: 4. Create the Plugin -->
+<rect x="444" y="484" width="52" height="52" rx="12" style="fill:#6366F1;stroke:#4F46E5;stroke-width:1" filter="url(#cs)"/>
+<svg x="456" y="496" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+<text class="ol" x="470" y="569" text-anchor="middle" fill="#171717">4. Create the Plugin</text>
+<text class="sb" x="470" y="591" text-anchor="middle" fill="#737373">tick the box, then create</text>
+<!-- ll: 5. Sign In -->
+<rect x="262" y="379" width="52" height="52" rx="12" style="fill:#6366F1;stroke:#4F46E5;stroke-width:1" filter="url(#cs)"/>
+<svg x="274" y="391" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+<text class="ol" x="242" y="401" text-anchor="end" fill="#171717">5. Sign In</text>
+<text class="sb" x="242" y="423" text-anchor="end" fill="#737373">to your Testomat.io</text>
+<!-- ul: 6. Start Chatting -->
+<rect x="262" y="169" width="52" height="52" rx="12" style="fill:#6366F1;stroke:#4F46E5;stroke-width:1" filter="url(#cs)"/>
+<svg x="274" y="181" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+<text class="ol" x="242" y="191" text-anchor="end" fill="#171717">6. Start Chatting</text>
+<text class="sb" x="242" y="213" text-anchor="end" fill="#737373">Try in chat, then ask</text>
+</g></g></svg>
