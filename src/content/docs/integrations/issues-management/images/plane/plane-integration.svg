@@ -1,0 +1,53 @@
+<!-- H = 104 + 172 + 60 + 12 = 348 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 348" width="1100" height="348">
+  <defs>
+    <style>
+      @font-face { font-family:'THICCCBOI'; font-weight:400; src: local('THICCCBOI-Regular'), local('THICCCBOI'), url('https://cdn.jsdelivr.net/gh/wonderunit/font-thicccboi@master/fonts/Webfont/THICCCBOI-Regular.woff2') format('woff2'); }
+      @font-face { font-family:'THICCCBOI'; font-weight:500; src: local('THICCCBOI-Medium'), url('https://cdn.jsdelivr.net/gh/wonderunit/font-thicccboi@master/fonts/Webfont/THICCCBOI-Medium.woff2') format('woff2'); }
+      @font-face { font-family:'THICCCBOI'; font-weight:600; src: local('THICCCBOI-SemiBold'), url('https://cdn.jsdelivr.net/gh/wonderunit/font-thicccboi@master/fonts/Webfont/THICCCBOI-SemiBold.woff2') format('woff2'); }
+      text { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: geometricPrecision; }
+      .st { font-family:'THICCCBOI',sans-serif; font-size:20px; font-weight:600; letter-spacing:-0.01em; }
+      .sb { font-family:'THICCCBOI',sans-serif; font-size:16px; font-weight:500; }
+      .card { fill:#FFFFFF; stroke:#E5E5E5; stroke-width:1; }
+    </style>
+    <marker id="aa" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#6366F1"/></marker>
+    <marker id="an" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0,0 8,3 0,6" fill="#737373"/></marker>
+    <filter id="cs" x="-8%" y="-15%" width="116%" height="130%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/></filter>
+  </defs>
+  <rect width="1100" height="348" fill="#FAFAFA"/>
+  <text text-anchor="middle" x="550" y="68" style="font-family:'THICCCBOI',sans-serif;font-size:32px;font-weight:600;letter-spacing:-0.02em"><tspan fill="#6366F1">Plane</tspan><tspan fill="#171717"> integration flow</tspan></text>
+  <g transform="translate(60, 104)"><g transform="translate(5, 0)">
+    <!-- arrows — card width 220, gap 30; centered at y=90 -->
+    <line x1="224" y1="90" x2="246" y2="90" style="stroke:#6366F1;stroke-width:1.5;fill:none" marker-end="url(#aa)"/>
+    <line x1="474" y1="90" x2="496" y2="90" style="stroke:#737373;stroke-width:1.5;fill:none" marker-end="url(#an)"/>
+    <line x1="724" y1="90" x2="746" y2="90" style="stroke:#737373;stroke-width:1.5;fill:none" marker-end="url(#an)"/>
+
+    <!-- card 1 — c-primary — Collect Values -->
+    <rect x="0" y="8" width="220" height="164" rx="12" style="fill:#6366F1;stroke:#4F46E5;stroke-width:1" filter="url(#cs)"/>
+    <svg x="20" y="28" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+    <text class="st" x="20" y="82" fill="#FFFFFF">Collect Values</text>
+    <text class="sb" x="20" y="110" fill="#C7D2FE">Token, slug, and</text>
+    <text class="sb" x="20" y="134" fill="#C7D2FE">project details.</text>
+
+    <!-- card 2 — Connect Plane -->
+    <rect class="card" x="250" y="8" width="220" height="164" rx="12" filter="url(#cs)"/>
+    <svg x="270" y="28" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    <text class="st" x="270" y="82" fill="#171717">Connect Plane</text>
+    <text class="sb" x="270" y="110" fill="#737373">Add a profile and</text>
+    <text class="sb" x="270" y="134" fill="#737373">test the connection.</text>
+
+    <!-- card 3 — Link Issues -->
+    <rect class="card" x="500" y="8" width="220" height="164" rx="12" filter="url(#cs)"/>
+    <svg x="520" y="28" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
+    <text class="st" x="520" y="82" fill="#171717">Link Issues</text>
+    <text class="sb" x="520" y="110" fill="#737373">Create or link Plane</text>
+    <text class="sb" x="520" y="134" fill="#737373">work items.</text>
+
+    <!-- card 4 — Stay Synced -->
+    <rect class="card" x="750" y="8" width="220" height="164" rx="12" filter="url(#cs)"/>
+    <svg x="770" y="28" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+    <text class="st" x="770" y="82" fill="#171717">Stay Synced</text>
+    <text class="sb" x="770" y="110" fill="#737373">Defects and</text>
+    <text class="sb" x="770" y="134" fill="#737373">requirements update.</text>
+  </g></g>
+</svg>

@@ -117,4 +117,4 @@ Match the type to Qase fields: a Qase selectbox or multiselect becomes a **List*
 
 * Moving from another tool? See [Import Tests From TestRail](https://docs.testomat.io/project/import-export/import/import-tests-from-testrail/), [Import Tests From QTest](https://docs.testomat.io/project/import-export/import/import-tests-from-qtest/), and [Import Tests From Testmo](https://docs.testomat.io/project/import-export/import/import-tests-from-testmo/).
 * Connect automated tests in [Import Tests From Source Code](https://docs.testomat.io/project/import-export/import/import-tests-from-source-code/).
-* Connect an AI assistant to your project with [MCP - Connect AI Assistant](https://docs.testomat.io/tutorials/mcp-connection).
+* Connect an AI assistant to your project with [MCP - Connect with a Config File](https://docs.testomat.io/tutorials/mcp-connection).
