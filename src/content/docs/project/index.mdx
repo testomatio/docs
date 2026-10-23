@@ -3,5 +3,16 @@ title: Overview
 ---
 
 import DirectoryLinks from '/src/components/DirectoryLinks.astro';
+import projectOverview from "./images/project-overview.mp4"
+
+<video width="960" autoplay muted playsinline controls>
+  <source src={projectOverview} type="video/mp4" />
+</video>
+
+[Tests](https://docs.testomat.io/project/tests) is where your test cases are - suites, folders, steps, and the editor you write them in. [Runs](https://docs.testomat.io/project/runs) is where those tests are executed, by hand or from CI, and where the results are. [Plans](https://docs.testomat.io/project/plans) let you fix the scope once and launch it as a run again and again. [Import and Export](https://docs.testomat.io/project/import-export) brings tests in from your code or another tool, and takes them back out.
+
+Once results appear, [Analytics](https://docs.testomat.io/project/analytics) shows what keeps failing and which tests are flaky, [Defects](https://docs.testomat.io/project/defects) lists the tracker issues raised against those failures, and [Pulse](https://docs.testomat.io/project/pulse) records every change to a test, suite, plan, or run, so you can see who did what and undo it.
+
+[Steps and Snippets](https://docs.testomat.io/project/steps-snippets) keep repeated steps in one place, and [Comments and Notifications](https://docs.testomat.io/project/comments-notifications) keep the discussion on the test itself.
 
 <DirectoryLinks directory="project" />
