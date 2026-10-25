@@ -63,6 +63,8 @@ Milestones are automatically grouped by type name in a case-insensitive manner. 
 
 :::
 
+You can also create and update milestones through Public API v2. A milestone created this way belongs to that project only. See the [API Reference](https://app.testomat.io/docs/public-api#tag/milestones).
+
 ## Milestone types
 
 Milestones are grouped by type. Testomat.io ships with built-in types - **Milestone**, **Release**, and **Sprint** - and you can add your own.

@@ -214,10 +214,11 @@ In the opened sidebar window, configure your relaunch (optional):
 1. Enter a custom run title.
 2. Enable **'Create new run'** option (if needed).
 3. Enable **'Keep values'** option (available only if **'Create new run'** is enabled; this shows previous statuses for test cases).
-4. Select the tests that you want to include in your relaunched run one by one (use filtering, sorting, or search options).
-5. Click the **'Relaunch'** button.
+4. Keep **'Keep assignees'** on to carry over who each test is assigned to (manual and mixed runs; available only if **'Create new run'** is enabled).
+5. Select the tests that you want to include in your relaunched run one by one (use filtering, sorting, or search options).
+6. Click the **'Relaunch'** button.
 
-![Testomat.io - relaunched Run](./images/Advanced_Relaunch_2.png)
+![The Advanced Relaunch window with Create new run, Keep values, and Keep assignees selected](./images/advanced-relaunch-keep-assignees.png)
 
 ### Run Type
 
@@ -274,6 +275,15 @@ The **'Keep values'** option is only available when **'Create new run'** is enab
 | -------------------- | --------------------------------------------------------------- | ------------------------------------ |
 | **Selected tests**   | Results are preserved in the new run (Passed, Failed, Skipped). | Results are reset to Pending status. |
 | **Unselected tests** | Results are preserved in the new run.                           | Results are reset to Pending status. |
+
+#### Keep Assignees
+
+The **Keep assignees** option is on by default. It works when **Create new run** is enabled and the run is manual or mixed. Automated runs have no assignees, and a relaunch in place always keeps them. You become the assignee of the new run.
+
+|                     | **Keep assignees ON**                                            | **Keep assignees OFF**                     |
+| ------------------- | ---------------------------------------------------------------- | ------------------------------------------ |
+| **Selected tests**  | Each test keeps the user it was assigned to.                     | Tests start with no assignee.              |
+| **Run assistants**  | Users who keep their tests in the new run join it as assistants. | No one is added from the original run.     |
 
 #### Select All Tests
 

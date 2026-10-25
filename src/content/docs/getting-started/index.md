@@ -57,6 +57,10 @@ Use [Classical Project](https://docs.testomat.io/project/tests/classical-test-ca
 
 You have just created your first project! 
 
+Your new project appears on the **Dashboard** with your other projects. Each project card shows its avatar, test count, and project type, so you can find the one you need at a glance.
+
+![The Dashboard with project cards, each showing the project avatar, test count, and project type](./images/dashboard-projects.png)
+
 Now you can start creating suites and test cases for your projects.
 
 ## Create a Suite

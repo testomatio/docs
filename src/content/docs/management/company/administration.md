@@ -36,7 +36,7 @@ Once your Company is created, you can proceed with [Enabling a Subscription](htt
 
 ## Company Settings
 
-The **'Company Settings'** section allows owners to manage company-specific configurations, including updating the company name, adjusting sharing options, and utilize AI features. These settings ensure the proper access control and facilitate the sharing of specific data within the company. Below is an overview of the main functionalities:
+The **'Company Settings'** section allows owners to manage company-specific configurations, including updating the company name, adjusting sharing options, and utilize AI features. These settings ensure the proper access control and facilitate the sharing of specific data within the company. Owners on the Enterprise plan can also [clone project settings](https://docs.testomat.io/management/company/clone-project-settings) from one project to others. Below is an overview of the main functionalities:
 
 ### Update Company Name
 
@@ -327,11 +327,11 @@ Next to each project in the list, you'll find a three-dot (⋮) menu. You can pe
 
 - **Edit**: Change the project’s name.
 - **Change Owner**: Assign a new owner from the list.
-- **Clone**: Duplicate the project along with all test data (excluding user access).
+- **Clone Project**: Duplicate the project along with all test data (excluding user access).
 - **Archive/Unarchive**: Archive a project to prevent edits while retaining read-only access. Unarchive when needed.
 - **Delete**: Permanently delete a project. **Note:** This action is irreversible.
 
-![Testomatio.io - Projects-Management-Menu](./images/manage_project.png)
+![The Project board with a project avatar and the project menu open](./images/manage-project-menu.png)
 
 ## Project Archive
 

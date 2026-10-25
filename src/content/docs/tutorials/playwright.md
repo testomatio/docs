@@ -225,6 +225,15 @@ Use a commit hash in the title so each set of parallel jobs maps to one identifi
 
 :::
 
+If you know how many shards you run, set `TESTOMATIO_SHARDS`. The run closes on its own when the last shard finishes:
+
+```shell
+TESTOMATIO_SHARDS=2 playwright test --shard=1/2
+TESTOMATIO_SHARDS=2 playwright test --shard=2/2
+```
+
+Both jobs report into one run, and nobody has to finish it manually.
+
 ## Extend the shared run timeout
 
 A shared run closes after 20 minutes by default. If your suite runs longer than that, extend it with `TESTOMATIO_SHARED_RUN_TIMEOUT`, set in minutes:

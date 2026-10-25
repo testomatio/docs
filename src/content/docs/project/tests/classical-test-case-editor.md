@@ -192,57 +192,84 @@ Your manual test steps do not need to match functions in your automation code. Y
 
 The Classical editor opens when you create a test or edit an existing one.
 
-![Test case editor overview](./images/classical-projects/3-testomatio-test-case-editor.png)
+![The Edit Test window with the title, editor tabs, formatting toolbar, and Save button](./images/classical-projects/3-testomatio-test-case-editor.png)
 
 It contains the test title, description, and tools for editing the test.
 
-| # | Control | What it does |
-| --- | --- | --- |
-| 1 | Test title field | Enter the test title and add tags. |
-| 2 | Set priority | Set how important the test is, from Low to High. |
-| 3 | Assign to | Assign the test to a user. The user must already be a member of the project. |
-| 4 | Formatting toolbar | Format the test description. |
-| 5 | Editing area | Add requirements, preconditions, steps, and expected results. |
-| 6 | Preview | See how the finished test looks. |
-| 7 | Edit steps | Edit steps and expected results in a Rich editor. |
-| 8 | Attachments | Add files to the test. |
-| 9 | Draw | Add a diagram or drawing. |
-| 10 | Editor mode switch | Switch between block and Markdown modes. |
-| 11 | Autocomplete steps | Turn step suggestions on or off. |
-| 12 | Autocomplete snippets | Turn snippet suggestions on or off. |
-| 13 | Autocomplete tags | Turn tag suggestions on or off. |
-| 14 | Full screen | Open the editor in full-screen mode. |
-| 15 | Set labels | Add labels or custom fields. |
-| 16 | Use template | Apply a saved test template. |
-| 17 | Change state | Change the test state, such as manual or automated. |
-| 18 | Save | Save your changes. |
-| 19 | Dictate | Speak the text instead of typing it. Needs AI features turned on. |
-| 20 | Go back | Return to the previous screen. |
-| 21 | Close | Close the editor. |
+| Control | What it does |
+| --- | --- |
+| Test title field | Enter the test title and add tags. |
+| Set priority | Set how important the test is, from Low to High. |
+| Assign to | Assign the test to a user. The user must already be a member of the project. |
+| Formatting toolbar | Format the test description. |
+| Editing area | Add requirements, preconditions, steps, and expected results. |
+| Preview | See how the finished test looks. |
+| Edit steps | Edit steps and expected results in a Rich editor. |
+| Attachments | Add files to the test. |
+| Draw | Add a diagram or drawing. |
+| Markdown | Write the test in Markdown. |
+| Editor options | Turn autocomplete and spell check on or off. See [Editor Options](#editor-options). |
+| Full screen | Open the editor in full-screen mode. |
+| Set labels | Add labels or custom fields. |
+| Use template | Apply a saved test template. |
+| Change state | Change the test state, such as manual or automated. |
+| Save | Save your changes. |
+| Dictate | Speak the text instead of typing it. Needs AI features turned on. |
+| Go back | Return to the previous screen. |
+| Close | Close the editor. |
+| Link to Issue | Link the test to an issue in Jira or another tracker. |
+| Set milestone | Add the test to a milestone. |
 
 ## Suite Editor
 
 The suite editor works in much the same way, but it has fewer controls because suites do not have steps or a state.
 
-| # | Control | What it does |
-| --- | --- | --- |
-| 1 | Suite title field | Enter the suite title and add tags. |
-| 2 | Formatting toolbar | Format the suite description. |
-| 3 | Assign to | Assign the suite to a user. The user must already be a member of the project. |
-| 4 | Editing area | Write the suite description. |
-| 5 | Preview | See how the suite looks. |
-| 6 | Attachments | Add files to the suite. |
-| 7 | Extra menu | Open additional suite options. |
-| 8 | Autocomplete steps | Turn step suggestions on or off. |
-| 9 | Autocomplete snippets | Turn snippet suggestions on or off. |
-| 10 | Autocomplete tags | Turn tag suggestions on or off. |
-| 11 | Full screen | Open the editor in full-screen mode. |
-| 12 | Set labels | Add labels or custom fields. |
-| 13 | Use template | Apply a saved suite template. |
-| 14 | Save | Save your changes. |
-| 15 | Dictate | Speak the text instead of typing it. Needs AI features turned on. |
-| 16 | Go back | Return to the previous screen. |
-| 17 | Close | Close the editor. |
+| Control | What it does |
+| --- | --- |
+| Suite title field | Enter the suite title and add tags. |
+| Formatting toolbar | Format the suite description. |
+| Assign to | Assign the suite to a user. The user must already be a member of the project. |
+| Editing area | Write the suite description. |
+| Preview | See how the suite looks. |
+| Attachments | Add files to the suite. |
+| Extra menu | Open additional suite options. |
+| Editor options | Turn autocomplete and spell check on or off. See [Editor Options](#editor-options). |
+| Full screen | Open the editor in full-screen mode. |
+| Set labels | Add labels or custom fields. |
+| Use template | Apply a saved suite template. |
+| Save | Save your changes. |
+| Dictate | Speak the text instead of typing it. Needs AI features turned on. |
+| Go back | Return to the previous screen. |
+| Close | Close the editor. |
+
+## Editor Options
+
+The gear icon next to the template picker opens the editor options. They are the same in the test and suite editors, and each one is a switch you can turn on or off at any time.
+
+![The editor options menu with Autocomplete Steps, Autocomplete Snippets, and Spell check turned on](./images/classical-projects/5-editor-options.png)
+
+| Option | What it does |
+| --- | --- |
+| **Autocomplete Steps** | Suggests steps from your project as you type. |
+| **Autocomplete Snippets** | Suggests snippets as you type. |
+| **Spell check** | Underlines possible spelling mistakes on the **Markdown** tab. On by default. |
+
+### Fix a Spelling Mistake
+
+Spell check works on the **Markdown** tab of the test and suite editors. It reads your text a moment after you stop typing, and again when you leave the editor. Markdown syntax is skipped, so headings, formatting, and code-like text are never underlined.
+
+1. Click the underlined word.
+2. In the **Quick Fix** list, pick a suggested correction.
+
+![The Quick Fix list on an underlined word in the test editor](./images/classical-projects/6-spell-check-quick-fix.png)
+
+Is the word a product name or a term your team uses? Click **Add "…" to dictionary** instead. It won't be underlined again.
+
+The suite editor works the same way:
+
+![The Quick Fix list on an underlined word in the suite editor](./images/classical-projects/7-suite-spell-check.png)
+
+Prefer to write without it? Turn off **Spell check** in the editor options.
 
 ## Block and Markdown Modes
 

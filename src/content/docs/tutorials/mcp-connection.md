@@ -39,6 +39,14 @@ Your assistant needs two values from your project.
 
 Use a project token, not a general one. A general token opens every project you have access to. See [API Access](https://docs.testomat.io/advanced/api-access/).
 
+:::tip
+
+Skip the copying. On the **Tests** page, click the **⋯** button in the top-right corner, select **MCP Server**, and open the **Agents** tab. It shows the CLI command and the JSON config with your project ID and token already filled in, ready for Claude Code, Cursor, or Zed.
+
+:::
+
+![The Agents tab of the Connect Testomat.io MCP Server window with the CLI command and the JSON config](./images/mcp-connection/mcp-agents-tab.png)
+
 ## Add the Config to Your Assistant
 
 Follow the section for the assistant you use, and skip the other two.

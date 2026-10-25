@@ -102,6 +102,11 @@ You can also create your own XLS file to import tests into Testomat.io:
 | Issues      | place here Jira key in format ABC-123 or other IMS keys, can pass multiple Jira keys separated by a comma, can be blank|                                                               | 
 
 You can download the custom Testomat.io example file [here](https://testomatiofiles.ams3.cdn.digitaloceanspaces.com/Testomat_example.xlsx).
+:::note
+
+You can also run this import from a script through Public API v2. The API accepts files from qTest, TestRail, Testmo, Qase, Zephyr, and Testomat.io, and it doesn't work inside a branch. See the [API Reference](https://app.testomat.io/docs/public-api#tag/suites).
+
+:::
 
 ## Next steps
 

@@ -387,6 +387,7 @@ export default defineConfig({
 								{ label: 'AI-Powered Features', link: '/advanced/ai-powered-features/ai-powered-features' },
 								{ label: 'AI-Requirements', link: '/advanced/ai-powered-features/ai-requirements' },
 								{ label: 'AI-Agents', link: '/advanced/ai-powered-features/ai-agents' },
+								{ label: 'AI Skills', link: '/advanced/ai-powered-features/ai-skills' },
 								{ label: 'Voice Mode', link: '/advanced/ai-powered-features/voice-mode' },
 							],
 						},
@@ -463,6 +464,7 @@ export default defineConfig({
 								{ label: 'Telegram', link: '/integrations/report-notifications/telegram' },
 								{ label: 'Jira', link: '/integrations/report-notifications/jira' },
 								{label: 'Azure DevOps', link: '/integrations/report-notifications/azure-devops'},
+								{ label: 'Webhook', link: '/integrations/report-notifications/webhook' },
 							],
 						},
 						{
@@ -506,6 +508,7 @@ export default defineConfig({
 								],
 							},
 							{ label: 'Administration', link: '/management/company/administration' },
+							{ label: 'Clone Project Settings', link: '/management/company/clone-project-settings' },
 							{ label: 'Audit Log', link: '/management/company/audit-log' },
 							{ label: 'Trials', link: '/management/company/trials' },
 							{ label: 'Subscriptions', link: '/management/company/subscriptions' },

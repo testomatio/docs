@@ -26,6 +26,8 @@ Choose **New suite** when you want to add tests. Choose **New folder** when you 
 
 The new item appears in the test tree. Open a suite to add tests.
 
+You can also create a suite while you write a new test, without leaving the editor. See [Choose or Create a Suite](https://docs.testomat.io/project/tests/create-a-test#choose-or-create-a-suite).
+
 ![The new suite dialog with the name field and the suite or folder type selector](./images/suites-folders/1-create-new-suite.png)
 
 ## Add an Emoji to a Suite

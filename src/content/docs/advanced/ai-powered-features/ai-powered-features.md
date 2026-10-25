@@ -104,7 +104,7 @@ This feature makes it easier to create comprehensive test suites.
 If you have at least one previously created test case, you can use this AI-feature to generate more test cases.
 
 1. Open Test Suite that already contains Test Cases.
-2. Click **'Extra menu'** button.
+2. Click **⋯** button.
 3. Select **'Suggest Tests'** option from the dropdown list.
 
 ![Testomat.io - AI-powered](./images/AI_8.gif)
@@ -119,7 +119,7 @@ Testomat.io recommends adding only the necessary tests cases to your suite!
 You can also use this AI feature to suggest tests based solely on the Suite Description.
 
 1. Open Test Suite with a description.
-2. Click **'Extra menu'** button.
+2. Click **⋯** button.
 3. Select **'Suggest Tests'** option from the dropdown list.
 
 ![Testomat.io - AI-powered](./images/AI_Suggest_tests_1.gif)
@@ -197,7 +197,7 @@ If you have a "draft" description that is messy or lacks detail, the AI rewrites
 **How to use this feature:**
 
 1. Open Test Case with you want to refine.
-2. Click **'Extra menu'** button on 'Description' tab.
+2. Click **⋯** button on 'Description' tab.
 3. Select **'Suggest Better Description'** option from the dropdown menu.
 
 ![Testomat.io - Suggest Better Test Case Description](./images/Suggest_Better_Description_1.png)
@@ -206,6 +206,26 @@ If you have a "draft" description that is messy or lacks detail, the AI rewrites
 5. Click **'Update Test Description'** to apply the improvements.
 
 ![Testomat.io - Suggest Better Test Case Description](./images/Suggest_Better_Description_2.png)
+
+## Generate a Description from a Screenshot
+
+Turn the screenshots attached to a test into steps, expected results, and test data. This works in Classical projects, and the test needs at least one image attachment.
+
+![The menu next to Improve Description with Generate from Screenshot selected](./images/generate-from-screenshot.png)
+
+1. Open the test and attach the screenshots.
+2. On the **Description** tab, click the **⋯** button next to **Improve Description** (or **Suggest Description**, if the test has no description yet).
+3. Select **Generate from Screenshot**.
+4. Review the result on the **Suggested Action** tab. To compare it with what the test has now, open **Current test**.
+5. Click **Update Test Description**.
+
+![The Generate description from screenshot window with the analyzed screenshots and the suggested description](./images/generate-from-screenshot-result.png)
+
+The new steps are added below your existing description, so nothing you wrote is lost. Want a different result? Type what to change in the **Follow up** field and click **Follow Up**. 
+
+The same option works for suites: click **Update Suite Description** at the end.
+
+AI reads up to three new images at a time, each up to 10 MB. Screenshots that are already in the description are skipped.
 
 ## Generate Test Case Description Based on Test Code
 
@@ -226,17 +246,6 @@ Test Summary is created:
 **'Write Description from Code'** button shows only when the test has code.
 
 :::
-
-## Generate Code Based on Test Case Description
-
-Provide a test description, and the AI generates the corresponding test automation code. Please note that generated code may be not completely comprehensive.
-
-Code will be created based on the project framework settings and other tests in this suite.
-Use it as boilerplate code only.
-
-To check your Project framework settings go to Project Settings page:
-
-![Testomat.io - AI-powered](./images/Project_settings.png)
 
 ## Test Case & Code Quality Review
 
@@ -272,7 +281,7 @@ This feature evaluates the quality of a manual test’s description, suggesting 
 
 1. Go to 'Tests'.
 2. Select the Test Case with description you want to review.
-3. On 'Description' tab, click **'Extra menu'** button.
+3. On 'Description' tab, click **⋯** button.
 4. Select **'Test Quality Review'** option from the dropdown list..
 
 ![Testomat.io - AI-powered](./images/Test_quality_review_1.gif)
@@ -283,7 +292,7 @@ This feature reviews your automated test code to detect potential issues, enhanc
 
 1. Go to 'Tests'.
 2. Select Test Case with the code that you want to review.
-3. On 'Code' tab, click **'Extra menu'** button.
+3. On 'Code' tab, click **⋯** button.
 4. Select **'Test Quality Review'** option from the dropdown list..
 
 ![Testomat.io - AI-powered](./images/Test_code_review_1.gif)
@@ -300,7 +309,7 @@ To use this feature:
 
 1. Go to 'Tests'.
 2. Select a Test Case that you want to check for duplicates.
-3. On 'Description' tab, click **'Extra menu'** button.
+3. On 'Description' tab, click **⋯** button.
 4. Select **'Find Duplicates'** option from the dropdown list..
 5. Click **'Remove'** button to delete the identified duplicate tests from your project.
 
@@ -389,7 +398,7 @@ Testomat.io allows you to use AI-powered feature to analyze and summarize your f
 
 1. Go to 'Tests'.
 2. Select the Suite that you want to analyze.
-3. Click **'Extra menu'** button on 'Summarize' button.
+3. Click **⋯** button on 'Summarize' button.
 4. Select **'Analyze Suite'** option from the dropdown menu.
 
 ![Testomat.io - AI-powered](./images/AI_Analyze_Suite_1.png)
@@ -475,7 +484,7 @@ Results generated by AI-features are automatically saved to the **'Insights'** s
 **Access the 'Insights' Section:**
 
 1. Go to 'Tests' page.
-2. Click **'Extra menu'** button in the header.
+2. Click **⋯** button in the header.
 3. Select **'Insights'** option from the dropdown menu.
 
 ![Testomat.io - Insights](./images/Insights_2.png)
@@ -514,7 +523,7 @@ With just a few clicks, you can generate a professional, shareable PDF version o
 **How to export AI-report:**
 
 1. Go to 'Tests' page.
-2. Click **'Extra menu'** button in the header.
+2. Click **⋯** button in the header.
 3. Select **'Insights'** option from the dropdown menu.
 
 ![Testomat.io - Insights](./images/Insights_2.png)
@@ -523,7 +532,7 @@ With just a few clicks, you can generate a professional, shareable PDF version o
 
 ![Testomat.io - Insights](./images/Insights_5.png)
 
-5. Click **'Extra menu'** button within the report view.
+5. Click **⋯** button within the report view.
 6. Select **'Export as PDF'** from the dropdown menu.
 
 ![Testomat.io - Insights](./images/Insights_6.png)

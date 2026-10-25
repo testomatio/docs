@@ -234,7 +234,16 @@ If you need to configure different custom statuses, click here: <a href="https:/
 
 ![Configuration view](./images/att4_301.png)
 
-6. Additionally, there are also two ways to view the specific file:
+6. Sort the attached files with the two sort icons next to the view options:
+
+- **Sort by ID** — in the order they were uploaded. This is the default.
+- **Sort by date** — from oldest to newest, by the date of each file.
+
+![The sort icons next to the attachment view options in a manual run](./images/attachments-sort.png)
+
+Your choice is remembered in this browser, so screenshots from a long session stay in order every time you open a run.
+
+7. Additionally, there are also two ways to view the specific file:
 
 - **Open and fit to width**;
 
@@ -244,12 +253,12 @@ If you need to configure different custom statuses, click here: <a href="https:/
 
 ![Full screen](./images/att7_301.png)
 
-7. To delete an attached file, click on the **trash** icon
-8. After warning message **'Are you sure?'** appears, click **OK** button to confirm deletion
+8. To delete an attached file, click on the **trash** icon
+9. After warning message **'Are you sure?'** appears, click **OK** button to confirm deletion
 
 ![Delete attachments](./images/att5_301.png)
 
-9. Once all test cases are completed, click the **Finish Run** button to end the process
+10. Once all test cases are completed, click the **Finish Run** button to end the process
 
 ![Finish Run button](./images/att6_301.png)
 

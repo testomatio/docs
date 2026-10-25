@@ -39,10 +39,37 @@ These powerful AI-features are available in the **Enterprise plan**.
 - **Summarizes functional areas** by mapping tests to key modules or features.
 - **Identifies missing, never-executed, or placeholder tests**.
 - **Highlights critical gaps** in business logic, security, and performance testing.
-- **Assesses release readiness** based on test data from the last 14 days.
+- **Assesses release readiness** based on the test history for the period you choose (14 days by default).
 - **Provides actionable recommendations** to close gaps and improve completeness.
 
 ![Deep Analyze](./images/Deep_analyze.gif)
+
+#### Launch Deep Analyze
+
+1. Open the **Tests** page.
+2. Click the **⋯** button in the top-right corner, the last one next to **Chat with Tests**.
+3. Select **AI Agents**.
+
+![The Tests page menu with AI Agents selected](./images/ai-agents-menu.png)
+
+4. In the **Agents** window, select **Deep Analyze** in the list on the left. Its parameters open on the right.
+5. Set the parameters, or keep the defaults.
+6. Click **Launch Agent**.
+
+![The Agents window with Deep Analyze selected and its parameters](./images/deep-analyze-parameters.png)
+
+| Parameter | What it does |
+| --- | --- |
+| **Period (days)** | How many days of test history to analyze. 14 by default, up to 365. |
+| **Scope to suite** | Analyzes only one folder or suite and everything inside it. |
+| **Filter by label** | Focuses on tests with this label or custom field. |
+| **Filter by milestone** | Focuses on tests assigned to this milestone. |
+| **Min tests in suite** | Skips suites with fewer tests than this number. 5 by default. |
+| **Additional instructions** | Tells the agent what to focus on, for example "Focus on payment flows and ignore onboarding tests". |
+
+If the agent already ran in the last day, Testomat.io offers to open that result first. Click **Launch Anyway** to start a new run.
+
+On a large project, the analysis can take a while. You can close the window and find the result later in **Insights**.
 
 ---
 

@@ -119,7 +119,6 @@ Use the feature table below to explore specific capabilities in each area like t
 | Suggest Test Cases                                          |  ✖️  |      ✔️      |     ✔️     |
 | Suggest Test Case Description                               |  ✖️  |      ✔️      |     ✔️     |
 | Generate Test Case Description from Code                    |  ✖️  |      ✔️      |     ✔️     |
-| Generate Code Based on Test Casse Description               |  ✖️  |      ✔️      |     ✔️     |
 | Generate Bug Description Based on Test Case                 |  ✖️  |      ✔️      |     ✔️     |
 | Analyze Failed Automated Test Cases                         |  ✖️  |      ✔️      |     ✔️     |
 | Explain Autotest Failures Based on Logs                     |  ✖️  |      ✔️      |     ✔️     |

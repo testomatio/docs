@@ -16,7 +16,7 @@ Testomat.io introduces another AI-powered feature - **AI-Requirements** that hel
 
 A dedicated **'Requirements'** page brings all your requirements into a single, convenient workspace, where you can view, organize, and update all requirements in one place, eliminating the need to jump between different parts of a project.
 
-When you add a **Requirement source** (Jira issue, Confluence page, PDF file, etc.) in Testomat.io, the system analyzes the description and automatically generates a structured requirement summary. You can also view all suites linked to a requirement, the original source, and any added attachments directly from the 'Requirement details' page.
+When you add a **Requirement source** (Jira issue, Confluence page, Linear issue, PDF file, etc.) in Testomat.io, the system analyzes the description and automatically generates a structured requirement summary. You can also view all suites linked to a requirement, the original source, and any added attachments directly from the 'Requirement details' page.
 
 ![Testomat.io - AI-powered](./images/Requirement_page_details_1.gif)
 
@@ -69,7 +69,7 @@ You can enbable AI at any time on Company Settings page by following the instruc
 
 You can add requirements to a new project to drive test generation from the start.
 
-Once a project is created (BDD or Classical), set up the integration for your **Requirement Source** (see detailed instructions for [JIRA](https://docs.testomat.io/integrations/issues-management/jira/#connecting-to-jira-project) and [Confluence](https://docs.testomat.io/integrations/issues-management/confluence)). Then, proceed with adding requirements:
+Once a project is created (BDD or Classical), set up the integration for your **Requirement Source** (see detailed instructions for [JIRA](https://docs.testomat.io/integrations/issues-management/jira/#connecting-to-jira-project), [Confluence](https://docs.testomat.io/integrations/issues-management/confluence), and [Linear](https://docs.testomat.io/integrations/issues-management/linear)). Then, proceed with adding requirements:
 
 1. Open **'Requirements'** page.
 2. Click **'+New Requirements'** or **'+Add Requirement'** button.
@@ -161,6 +161,19 @@ Access **'Requirements'** page via **'Extra menu'** button on **'Tests'** page.
 5. Click **'Save'** button.
 
 ![Testomat.io - Confluence](./images/Confluence_Req_1.gif)
+
+## Linear as a Requirement Source
+
+Use a Linear issue as a requirement and build tests from it. First connect Linear to your project, see [Linear](https://docs.testomat.io/integrations/issues-management/linear).
+
+1. Go to the **'Requirements'** page.
+2. Click **'+ New'** and select **'New Linear requirement'**.
+3. Paste the Linear issue key, such as `ENG-123`, or its URL into **'Issue ID'**.
+4. Click **'Save'**.
+
+Testomat.io imports the issue title and description, and AI writes a summary of the requirement. From here, link an existing suite or let AI generate one.
+
+Linear requirements refresh once a day. To get the latest version right away, use [Refresh the Requirement](#refresh-the-requirement).
 
 ## Files & Text as a Requirement Source
 
