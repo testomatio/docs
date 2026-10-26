@@ -128,6 +128,8 @@ Use bulk sharing when you want to share multiple tests, suites, or folders at on
 ![Sharing multiple tests](./images/sharing-tests-and-suites/3-sharing-multiple-tests.png)
 
 All selected items are shared using the same settings.
+
+To share many items at once from a script, use Public API v2. Select tests or suites by ID or by label, up to 1,000 tests or 200 suites per request. See the [API Reference](https://app.testomat.io/docs/public-api#tag/shares).
  
 ## Share an Item With More Projects
  

@@ -67,6 +67,7 @@ To hide the **Step data** or **Expected result** field, click the **×** next to
 
 - **No steps in the Rich editor.** The test has no `## Steps` section yet. Add one in the **Markdown** tab — see [Test Steps and Expected Results](https://docs.testomat.io/project/tests/test-steps-and-expected-results).
 - **The formatting changed after saving.** The Rich editor rewrites steps in its own format. If the test used a table, subheadings, or a separate `## Expected Results` section, edit it in the **Markdown** tab instead.
+- **Shift+Enter adds a suggested step instead of a new line.** Turn off **Autocomplete Steps** in the editor options, the gear icon next to the template picker. Suggestions stop, and Shift+Enter starts a new line.
 
 ## Next Steps
 

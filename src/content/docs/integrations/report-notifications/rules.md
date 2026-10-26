@@ -25,6 +25,7 @@ head:
 - **Jira** notification.
 - **Azure DevOps** notification.
 - **Telegram** notification.
+- **Webhook** — a JSON request to your own HTTPS endpoint.
 
 Testomat.io allows sending notifications for finished runs:
 

@@ -37,6 +37,24 @@ The test appears in the tree in its suite. New tests are marked **manual**.
 
 See [Steps Database](https://docs.testomat.io/project/steps-snippets/steps) for examples of how to structure the test.
 
+### Choose or Create a Suite
+
+When you create a test from **+ New** → **New test**, pick the suite it belongs to.
+
+1. Click **Select suite** in the top-right corner of the editor.
+2. Find the suite in the list, or search for it by title.
+3. Select the checkbox next to the suite.
+4. Click **Select 1 suite**. The button shows how many suites you selected.
+
+The suite you need doesn't exist yet? Create it right here:
+
+1. Scroll to the bottom of the list and click **New suite**. In a long list, the **New suite** button at the top takes you straight there.
+2. Type the suite name and press **Enter**.
+
+![The Select suite for test window with New folder and New suite at the bottom of the list](./images/create-test/5-select-suite-new-suite.png)
+
+The new suite is selected for you, and everything you have already written in the test stays in place. Need a folder to hold your suites? Click **New folder** in the same place.
+
 ## Quick Test Creation
 
 Enter only the titles when you have ideas for tests and want to add them quickly to the list. You can add the description, steps, and other details later.

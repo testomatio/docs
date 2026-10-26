@@ -153,6 +153,20 @@ By using the `in` operator, you reduce the risk of syntax errors (like missing a
 
 :::
 
+### Write a Query in Plain Words
+
+With AI features turned on, describe what you need and AI writes the query for you. The editor shows the hint "Enter your request as a text and AI will generate the query." It works in the query editors on the **Tests** and **Runs** pages.
+
+1. Click the **Query Language Editor** button next to the search field.
+2. Type your request, for example `manual runs that finished and have defects`.
+3. Click **Apply**.
+
+![The Tests Query Editor with a plain-language request and the AI Apply button](./images/tql-ai-query.png)
+
+AI turns your request into TQL and filters the list. If you type TQL yourself, it's used as is.
+
+If AI can't build a query, make the request more specific or write the TQL directly.
+
 ## Tests Variables
 
 In previous section we used `tag` in the query. `tag` is an allowed query variable. Here is a comprehenisve list of variables you can use in the query:

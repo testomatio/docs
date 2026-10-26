@@ -174,6 +174,18 @@ TESTOMATIO={API_KEY} TESTOMATIO_TITLE="Today's Build"  TESTOMATIO_SHARED_RUN=1 T
 
 In this case all tests will be added to the same run if it was created less than 120 minutes ago.
 
+#### `TESTOMATIO_SHARDS`
+
+Tells Testomat.io how many shards report into one shared run. The run finishes on its own as soon as the last shard reports, so you don't wait for the timeout or finish it by hand. It also turns on `TESTOMATIO_SHARED_RUN`, so you don't need to set both. The maximum is 50.
+
+Example:
+
+```
+TESTOMATIO={API_KEY} TESTOMATIO_TITLE="report for commit ${GIT_COMMIT}" TESTOMATIO_SHARDS=2 <actual run command>
+```
+
+If one of the shards never reports, the run stays open until the shared run timeout closes it.
+
 #### `TESTOMATIO_STACK_FILTER`
 
 Stack trace filter configuration.
