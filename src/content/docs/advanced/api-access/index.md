@@ -111,7 +111,7 @@ GET /api/{project_id}/testruns?run_id={run_id}
 
 ## Public API v2
  
-Public API v2 uses the same request and response shape for every endpoint. That makes it easier to write an integration and easier for an AI agent to use. It supports requests to a branch, grouped counts, run statistics, analytics, and pagination. For additional information see [Testomat.io API Reference](https://app.testomat.io/docs/openapi).
+Public API v2 uses the same request and response shape for every endpoint. That makes it easier to write an integration and easier for an AI agent to use. It supports requests to a branch, grouped counts, run statistics, analytics, and pagination. For additional information see [Testomat.io API Reference](https://app.testomat.io/docs/public-api).
 
 Public API v2 also lets you import suites from a CSV, XLS, or XLSX file, share tests and suites in bulk by their IDs or labels, and create and update milestones.
 
