@@ -22,11 +22,11 @@ Choose the level that best describes the importance of the test.
 | --- | --- |
 | **low** | Minor checks that rarely affect a release. |
 | **normal** | Most tests. This is the default. |
-| **important** | Tests that are important for a feature or workflow. |
 | **high** | Tests that need extra attention. |
+| **important** | Tests that are important for a feature or workflow. |
 | **critical** | Tests that can block a release or other important work. |
  
-Your team can use these levels in the way that works best for your project. For example, you might use **critical** for release blockers, **high** for feature blockers, and **important** for tests that always run in regression.
+Your team can use these levels in the way that works best for your project. For example, you might use **critical** for release blockers, **important** for feature blockers, and **high** for tests that always run in regression.
  
 Each priority has its own icon, so you can recognize it quickly in the test list and tree.
  
@@ -41,8 +41,6 @@ Choose the priority while creating the test.
 5. Select a priority.
 6. Click **Save**.
 
-![The priority list open next to the test title field](./images/priority/1-priority-dropdown.png)
- 
 :::note
 
 If you don't select a priority, the test gets **normal** priority.
@@ -58,6 +56,8 @@ You can change the priority of an existing test at any time.
 3. Select a new priority.
 4. Close the test.
 
+![The priority list open next to the test title field](./images/priority/1-priority-dropdown.png)
+ 
 The new priority applies immediately. You don't need to save the test.
  
 ## Change Priority for Multiple Tests
