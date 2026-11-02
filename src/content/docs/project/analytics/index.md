@@ -117,6 +117,7 @@ By toggling **As widget**, your custom chart will appear as a separate widget on
 | --- | --- | --- |
 | **Chart type** | Yes | How the data is drawn - bar, donut, pie |
 | **Labels** | Yes | What the labels show - short query, title, number, title and % |
+| **Percent of** | No | What the percentages are calculated from - the sum of all query results, or all tests in the project. Shown only for the **Tests** data source |
 | **As widget** | No | Puts the chart on the Analytics dashboard, next to the other widgets |
 | **Timeline period** | No | Tracks how the data changes over a period you pick |
 | **Timeline extra line** | No | Adds a second line so you can compare two metrics |
@@ -137,6 +138,26 @@ Custom charts can be tailored to match your reporting needs. You can adjust how 
 During chart creation or in the **Edit** mode, select the **Labels** dropdown to customize the information on the chart to your preference.
 
 ![Labels view](./images/8-labels-dropdown.png)
+
+### Choose What Percentages Are Based On
+
+By default, a chart adds up the results of all its queries and shows each percentage against that sum. If your queries overlap, the same test is counted more than once, so the percentages come out lower than expected.
+
+To count each query against all tests in the project instead:
+
+1. Open the chart in **Edit** mode.
+2. In the **Percent of** dropdown, select **All tests in project**.
+3. Click **Save**.
+
+![The Percent of dropdown in Edit Chart with Sum of results and All tests in project](./images/percent-of-dropdown.png)
+
+Each query is now counted on its own. For example, if 245 of your 405 tests match a query, the chart shows 61%.
+
+:::note
+
+**Percent of** is available only for the **Tests** data source. Percentages are rounded to whole numbers.
+
+:::
 
 ### Color Customization
 
@@ -256,8 +277,10 @@ We empowered Testomat.io Run Reports with Overview chart, Flaky and Slowests tes
 
 Overview chart visualizes aggregated tests statuses by suites:
 
-![Analytics In Run Reports](./images/gif3_357.gif)
+![Analytics In Run Reports](./images/16-runs-analytics.png)
 
-Flaky and Slowests tests widgets show the latest 5 tests and navigate to dedicated Analytics pages:
+## Next Steps
 
-![Flaky and Slowests widgets](./images/att11_357.png)
+- [Query Language](https://docs.testomat.io/advanced/tql)
+- [Analytics Dashboards (Widgets)](https://docs.testomat.io/advanced/global-analytics/analytics-dashboards)
+- [Analytics Board](https://docs.testomat.io/advanced/global-analytics/analytics-board)

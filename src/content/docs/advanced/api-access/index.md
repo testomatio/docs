@@ -119,7 +119,7 @@ Run responses also include when a run was launched and finished, and the test ru
  
 ### Testomat.io MCP Server v2.0
  
-The MCP Server speaks the Model Context Protocol, so AI assistants can work with [Public API v2](./public-api-v2.md) directly. It can do the following:
+The MCP Server speaks the Model Context Protocol, so AI assistants can work with [Public API v2](https://docs.testomat.io/advanced/api-access/#public-api-v2) directly. It can do the following:
  
 - Full CRUD support for core entities.
 - Read-only tags access.
