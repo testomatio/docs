@@ -248,3 +248,5 @@ TESTOMATIO={API_KEY} TESTOMATIO_TITLE="report for commit ${GIT_COMMIT}" TESTOMAT
 * Run your Playwright tests automatically on every commit - see [Continuous Integration](https://docs.testomat.io/integrations/continuous-integration/).
 * Spot unstable and slow tests across your runs in [Analytics](https://docs.testomat.io/project/analytics/).
 * Get failures explained from your logs and traces with [AI-Powered Features](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features/).
+* Test counts don’t match? See [Why is there a test count mismatch between Playwright and Testomat?](https://knowledge.testomat.io/automation/test-count-mismatch-playwright-testomat/)
+* Running in GitHub Actions? See [How do I set up GitHub Actions workflows for Playwright?](https://knowledge.testomat.io/automation/setup-github-actions-workflows-playwright/)

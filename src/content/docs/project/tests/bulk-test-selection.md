@@ -57,4 +57,5 @@ Choose the action you need and follow the prompts that appear.
 - [Test Priority](https://docs.testomat.io/project/tests/test-priority)
 - [Tags, Labels, and Assignees](https://docs.testomat.io/project/tests/tags-labels-and-assignees)
 - [Move Tests](https://docs.testomat.io/project/tests/move-tests)
+- [Why do bulk-edit options differ between test cases?](https://knowledge.testomat.io/test-management/bulk-editing-options-automated-test-suites/)
  

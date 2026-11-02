@@ -80,6 +80,7 @@ export default defineConfig({
 				Search: './src/components/Search.astro',
 				PageTitle: './src/components/PageTitle.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',
+				MarkdownContent: './src/components/MarkdownContent.astro',
 			},
 
 			sidebar: (docsSidebar = [
@@ -556,6 +557,7 @@ export default defineConfig({
 					collapsed: false,
 					items: [
 						{ label: 'Contact Us', link: '/support'},
+						{ label: 'Knowledge Base', link: 'https://knowledge.testomat.io', attrs: { target: '_blank' } },
 					],
 				},
 			]),

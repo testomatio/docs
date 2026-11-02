@@ -1,0 +1,105 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+
+const KB = 'https://knowledge.testomat.io';
+
+// First matching prefix wins, so keep the specific paths above the general ones
+const categories = [
+	['getting-started', 'getting-started', 'getting started'],
+	['project/runs', 'test-runs', 'test runs'],
+	['project/analytics', 'reporting-analytics', 'reporting and analytics'],
+	['advanced/global-analytics', 'reporting-analytics', 'reporting and analytics'],
+	['advanced/api-access', 'api', 'the API'],
+	['tutorials/interacting-via-api', 'api', 'the API'],
+	['advanced/ai-powered-features', 'ai', 'AI features'],
+	['tutorials/using-ai-in-testing', 'ai', 'AI features'],
+	['tutorials/mcp-connection', 'ai', 'AI features'],
+	['tutorials/connect-', 'ai', 'AI features'],
+	['tutorials/working-with-jira', 'integrations', 'integrations'],
+	['tutorials/manual-testing', 'test-management', 'test management'],
+	['tutorials/working-with-plans', 'test-management', 'test management'],
+	['tutorials/migration-from', 'test-management', 'test management'],
+	['tutorials/set-up-read-only-access', 'account-access', 'account access'],
+	['tutorials', 'automation', 'test automation'],
+	['test-reporting', 'automation', 'test automation'],
+	['integrations', 'integrations', 'integrations'],
+	['management/company/plan-features-comparison', 'billing', 'billing'],
+	['management/company/subscriptions', 'billing', 'billing'],
+	['management/company/trials', 'billing', 'billing'],
+	['management', 'account-access', 'account access'],
+	['project', 'test-management', 'test management'],
+	['advanced', 'test-management', 'test management'],
+];
+
+const id = Astro.locals.starlightRoute.id.toLowerCase();
+const match = categories.find(([prefix]) => id.startsWith(prefix));
+const [, slug, topic] = match ?? [];
+---
+
+<Default><slot /></Default>
+
+{
+	match && (
+		<aside class="kb-link not-content">
+			<div>
+				<p class="kb-link__title">Have a question about {topic}?</p>
+				<p class="kb-link__text">See answers to common questions in the Testomat.io Knowledge Base.</p>
+			</div>
+			<a class="kb-link__button" href={`${KB}/${slug}/`} target="_blank">
+				Open Knowledge Base
+				<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg>
+			</a>
+		</aside>
+	)
+}
+
+<style>
+	.kb-link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		margin-top: 2.5rem;
+		padding: 1rem 1.25rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.75rem;
+		background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+	}
+
+	.kb-link__title {
+		margin: 0;
+		font-weight: 600;
+		color: var(--sl-color-white);
+	}
+
+	.kb-link__text {
+		margin: 0.25rem 0 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-2);
+	}
+
+	.kb-link__button {
+		display: inline-flex;
+		flex-shrink: 0;
+		align-items: center;
+		gap: 0.375rem;
+		padding: 0.5rem 1rem;
+		border-radius: 0.5rem;
+		background: var(--sl-color-accent);
+		color: var(--sl-color-black);
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.kb-link__button:hover {
+		background: var(--sl-color-accent-high);
+	}
+
+	@media (max-width: 50rem) {
+		.kb-link {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+</style>

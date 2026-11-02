@@ -174,4 +174,5 @@ After unlinking:
  
 - [Test URL and ID](https://docs.testomat.io/project/tests/test-url-and-id)
 - [Suites and Folders](https://docs.testomat.io/project/tests/suites-and-folders)
+- [How can I share my test repo with a project leader who is not registered?](https://knowledge.testomat.io/account-access/share-test-repo-with-unregistered-project-leader/)
  

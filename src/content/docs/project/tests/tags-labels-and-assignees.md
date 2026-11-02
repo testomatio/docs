@@ -94,4 +94,5 @@ Assigning a test in a run does not change its test assignment.
 - [Create a Test](https://docs.testomat.io/project/tests/create-a-test)
 - [Test Attachments](https://docs.testomat.io/project/tests/test-attachments)
 - [Tags](https://docs.testomat.io/advanced/tags-labels/tags/)
+- [Can you parse pytest marks as tags in Testomat.io?](https://knowledge.testomat.io/test-management/parse-pytest-marks-as-tags/)
  

@@ -102,3 +102,4 @@ You can now add other suites to the folder.
 - [Create a Test](https://docs.testomat.io/project/tests/create-a-test)
 - [Copying Tests and Suites](https://docs.testomat.io/project/tests/copying-tests-and-suites)
 - [Sharing Tests and Suites](https://docs.testomat.io/project/tests/sharing-tests-and-suites)
+- [How should I organize automated and manual tests in Testomat?](https://knowledge.testomat.io/test-management/organize-automated-manual-tests-testomat/)

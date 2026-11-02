@@ -115,3 +115,5 @@ Linear requirements refresh **once a day**. To pull the latest version right awa
 - [Issues Management Systems](https://docs.testomat.io/integrations/issues-management)
 - [AI-Requirements](https://docs.testomat.io/advanced/ai-powered-features/ai-requirements)
 - [Defects](https://docs.testomat.io/project/defects)
+- [How do I activate the Linear integration?](https://knowledge.testomat.io/integrations/activate-linear-integration/)
+- [Why does Linear integration say ‘team not found’?](https://knowledge.testomat.io/integrations/linear-integration-team-not-found/)

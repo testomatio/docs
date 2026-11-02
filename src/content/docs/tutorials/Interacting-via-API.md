@@ -157,3 +157,5 @@ npx -y @testomatio/mcp@latest --token <PROJECT_TOKEN> --project <PROJECT_ID>
 * See every endpoint, parameter, and schema in the [API Reference](https://docs.testomat.io/advanced/api-access/#api-reference).
 * Reporting from a test framework instead of raw requests? See the [Testomat.io Reporter](https://docs.testomat.io/test-reporting/reporter/#_top).
 * Want to filter results precisely? Learn the query language in [TQL](https://docs.testomat.io/advanced/tql/#_top).
+* Not sure where to find your credentials? See [How do I get the project ID and API token?](https://knowledge.testomat.io/api/get-project-id-api-token/)
+* Need to add tests to a specific folder? See [How do I push test cases to a folder via API?](https://knowledge.testomat.io/api/push-test-cases-to-folder-via-api/)

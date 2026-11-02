@@ -51,4 +51,6 @@ Attachments have a separate retention period and are restored from the **Attachm
  
 - [Move Tests](https://docs.testomat.io/project/tests/move-tests)
 - [Test Attachments](https://docs.testomat.io/project/tests/test-attachments)
+- [How do I retrieve deleted tests in Pulse?](https://knowledge.testomat.io/troubleshooting/retrieve-deleted-tests-in-pulse/)
+- [How to retrieve lost test data from empty folders?](https://knowledge.testomat.io/test-management/retrieve-lost-test-data-from-empty-folders/)
  
