@@ -156,4 +156,5 @@ The **Edit steps** control on the test preview page converts your steps to its o
 - [Classical Test Case Editor](https://docs.testomat.io/project/tests/classical-test-case-editor)
 - [Steps Database](https://docs.testomat.io/project/steps-snippets/steps)
 - [Keyboard Shortcuts](https://docs.testomat.io/advanced/shortcuts)
+- [Can I customize the result fields for each test case?](https://knowledge.testomat.io/test-management/customize-test-result-fields/)
  

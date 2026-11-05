@@ -300,3 +300,4 @@ In a Classical project, use the ID without `#`.
 
 - [BDD Test Case Editor](https://docs.testomat.io/project/tests/bdd-test-case-editor)
 - [Classical vs BDD](https://docs.testomat.io/project/tests/classical-vs-bdd)
+- [Why do `---` dividers cause odd formatting in test cases?](https://knowledge.testomat.io/troubleshooting/dividers-cause-odd-formatting/)

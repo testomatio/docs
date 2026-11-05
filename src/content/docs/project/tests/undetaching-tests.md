@@ -79,4 +79,5 @@ If the test no longer has automation code, undetaching it changes the test to **
 - [Test Tree Display](https://docs.testomat.io/project/tests/test-tree-display)
 - [Restoring Deleted Tests](https://docs.testomat.io/project/tests/restoring-deleted-tests)
 - [Import Tests From Source Code](https://docs.testomat.io/project/import-export/import/import-tests-from-source-code)
+- [How to scope detachment to specific directories with the –partial flag?](https://knowledge.testomat.io/automation/scope-detachment-specific-directories-partial-flag/)
  

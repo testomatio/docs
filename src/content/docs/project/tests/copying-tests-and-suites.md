@@ -124,3 +124,4 @@ Testomat.io remembers your duplicate settings and uses the same selections the n
 - [Suites and Folders](https://docs.testomat.io/project/tests/suites-and-folders)
 - [Tags, Labels, and Assignees](https://docs.testomat.io/project/tests/tags-labels-and-assignees)
 - [Bulk Edit](https://docs.testomat.io/advanced/bulk-edit-folder)
+- [Can I remove the ‘Shared’ icon from copied test cases?](https://knowledge.testomat.io/test-management/remove-shared-icon-copied-test-cases/)

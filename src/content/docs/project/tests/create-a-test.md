@@ -96,3 +96,4 @@ All four save options save your changes. Choose one based on what you want to do
 - [Classical Test Case Editor](https://docs.testomat.io/project/tests/classical-test-case-editor)
 - [Steps Database](https://docs.testomat.io/project/steps-snippets/steps)
 - [Tags](https://docs.testomat.io/advanced/tags-labels/tags)
+- [How should I organize automated and manual tests in Testomat?](https://knowledge.testomat.io/test-management/organize-automated-manual-tests-testomat/)

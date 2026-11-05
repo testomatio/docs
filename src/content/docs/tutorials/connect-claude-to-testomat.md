@@ -94,3 +94,5 @@ Claude can read and change the same things you can, so anything it writes appear
 - [MCP - Connect with a Config File](https://docs.testomat.io/tutorials/mcp-connection)
 - [Test Query Language (TQL)](https://docs.testomat.io/advanced/tql)
 - [API Access](https://docs.testomat.io/advanced/api-access)
+- [Where can I find the Testomat MCP for Claude?](https://knowledge.testomat.io/ai/locate-testomat-mcp-for-claude/)
+- [Why can’t I connect to the Testomat.io MCP Server?](https://knowledge.testomat.io/ai/cannot-connect-testomat-mcp/)

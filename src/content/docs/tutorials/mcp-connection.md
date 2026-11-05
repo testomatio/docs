@@ -161,3 +161,5 @@ Once connected, your assistant works with your project through [Public API v2](h
 * Need to establish a connection with Testomat.io? See [API Access](https://docs.testomat.io/advanced/api-access/) for more details.
 * Learn how to customize your test syntax at [Test Query Language (TQL)](https://docs.testomat.io/advanced/tql/).
 * Read [Interacting via API](https://docs.testomat.io/tutorials/interacting-via-api/) to learn to interact with Testomat.io directly.
+* Connection fails? See [Why can’t I connect to the Testomat.io MCP Server?](https://knowledge.testomat.io/ai/cannot-connect-testomat-mcp/)
+* Labels don’t show up in tool calls? See [Why are custom labels missing in MCP tool calls?](https://knowledge.testomat.io/ai/custom-labels-missing-mcp-tool-calls/)

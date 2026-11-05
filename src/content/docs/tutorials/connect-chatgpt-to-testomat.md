@@ -94,3 +94,4 @@ ChatGPT can read and change the same things you can, so anything it writes appea
 - [MCP - Connect Claude](https://docs.testomat.io/tutorials/connect-claude-to-testomat)
 - [MCP - Connect with a Config File](https://docs.testomat.io/tutorials/mcp-connection)
 - [AI-Powered Features](https://docs.testomat.io/advanced/ai-powered-features)
+- [Why can’t I connect to the Testomat.io MCP Server?](https://knowledge.testomat.io/ai/cannot-connect-testomat-mcp/)

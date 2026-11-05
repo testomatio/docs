@@ -184,3 +184,4 @@ To ensure rapid loading times across large datasets, widget results are cached a
 - [Project Analytics](https://docs.testomat.io/project/analytics) - drill into a single project when a company-wide view is not enough.
 - [Tags or Labels](https://docs.testomat.io/advanced/tags-labels/tags-or-labels) - tag and label your tests.
 - [Users Roles & Access](https://docs.testomat.io/management/company/users-and-permissions) - check who can create and edit dashboards in your company.
+- [Why does my dashboard query throw an error?](https://knowledge.testomat.io/reporting-analytics/custom-dashboard-creation-error-query/) - fix a widget query that fails.
