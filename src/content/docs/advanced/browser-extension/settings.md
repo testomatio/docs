@@ -3,11 +3,6 @@ title: "Settings and shortcuts"
 type: article
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/settings.md).
-:::
-
-
 The **Settings** tab in the panel header holds six folds. **Connection** and
 **Failure log** start open; click a heading to unfold the rest. Every
 checkbox and field is committed by **Save & validate** at the bottom — it
@@ -72,16 +67,16 @@ saved.
 - **Forget this instance** — deletes the saved token, project and
   preferences of the instance the form points at, after a confirmation.
   If that is the instance you are on, its restored session, queued results
-  waiting to be sent, recorded steps, captured log and unsaved drafts go
-  too, a running recording is stopped, and the panel returns to the connect
-  screen. Other instances are kept.
+  waiting to be sent, recorded steps, captured log, screen recording and
+  unsaved drafts go too, a running recording is stopped, and the panel
+  returns to the connect screen. Other instances are kept.
 
 ## Stored credentials
 
 **Sign out** is for a shared machine: after a confirmation it erases every
 saved token, instance, history entry, queued result, session, unsaved test
-draft, recorded step and captured log from this browser, stops a running
-recording, and reloads the panel onto the connect screen. The colour
+draft, recorded step, captured log and screen recording from this browser,
+stops a running recording, and reloads the panel onto the connect screen. The colour
 scheme and the side-panel-or-window choice stay. Site access is Chrome's
 own setting for the extension, on `chrome://extensions`, and is not
 touched.
@@ -132,5 +127,6 @@ From any tab, `Alt+Shift+R` starts or stops a
 - **"Nothing saved for …"** — Forget was pressed for a server that was never
   saved; nothing was erased.
 - **A warning about the recording after Forget or Sign out** — the erase
-  happened, but the console & network recorder could not be stopped;
-  restart the browser to be sure its log is gone.
+  happened, but the console & network recorder or the screen recorder could
+  not be stopped; the warning names which. Restart the browser to be sure
+  the log or the video is gone.

@@ -3,11 +3,6 @@ title: "Attach a screen recording"
 type: article
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/screen-recording.md).
-:::
-
-
 The panel records the tab you are testing into a `.webm` — no audio — and
 lets you review and trim it before anything uploads.
 

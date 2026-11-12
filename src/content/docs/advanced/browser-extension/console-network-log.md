@@ -3,11 +3,6 @@ title: "Console & network log (Rec)"
 type: article
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/console-network-log.md).
-:::
-
-
 The panel records what the tab under test is doing — console messages and
 network calls — into a rolling window, and attaches it to a failed result
 as a readable text file.

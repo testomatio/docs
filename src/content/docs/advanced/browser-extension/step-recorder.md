@@ -3,11 +3,6 @@ title: "Step recorder"
 type: article
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/step-recorder.md).
-:::
-
-
 Instead of typing steps, do the flow once on the page and let the panel
 write it down — as readable Markdown, not code.
 
@@ -73,6 +68,12 @@ With it on, nothing changes while you record; when you stop, your
 Testomat.io AI rewrites the recorded steps into cleaner prose. **Undo
 polish** puts the recorded wording back. If the AI is unavailable, the
 raw steps are kept and the editor says so.
+
+The polish runs on your company's Testomat.io AI. When your company has no
+AI features — the plan does not include them, or the company owner has not
+switched them on in the company settings — the switch stays off and says
+so when you click it, and nothing is sent. On a server with no AI at all,
+the switch is not shown.
 
 ## If it didn't work
 
