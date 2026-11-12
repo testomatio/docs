@@ -3,11 +3,6 @@ title: "Create tests"
 type: article
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/create-tests.md).
-:::
-
-
 The **Tests** tab browses the project's suites and lets you add test cases
 without leaving the panel — by title alone, or written out in the editor.
 

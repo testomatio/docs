@@ -3,11 +3,6 @@ title: "Connect to your project"
 type: article
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/connect.md).
-:::
-
-
 One authorization connects the panel to your account. It then reads each
 project's own API key by itself — there is nothing else to find or paste.
 

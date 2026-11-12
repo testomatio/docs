@@ -3,20 +3,41 @@ title: "Install and update"
 type: article
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/install.md).
-:::
-
-
-The extension is not in the Chrome Web Store yet. You load it from a folder on
-your disk, once, and Chrome keeps it. Chrome 123 or newer.
+Install the extension from the Chrome Web Store. Chrome 123 or newer.
 
 ## Install
+
+1. Open [Testomat.io in the Chrome Web Store](https://chromewebstore.google.com/detail/testomatio/amcnjlghmkkjfaajanfeghpgbjakdcka)
+   and click **Add to Chrome**, then **Add extension**.
+2. Click the puzzle icon in Chrome's toolbar and pin **Testomat.io** with the
+   pushpin:
+
+   ![Pinning Testomat.io from the puzzle menu](img/install-pin.png)
+3. Click the pinned icon — the panel opens and asks you to connect
+   (**Connect to Testomat.io**). That is the next page: [Connect](connect.md).
+
+## Update
+
+Chrome updates the extension by itself. Your token, settings and unsent
+results survive an update.
+
+## If it didn't work
+
+- **Chrome refuses to add it** — check your Chrome is 123 or newer
+  (`chrome://settings/help`).
+
+## Install from source
+
+For developers: run the code from this repository instead of the store copy.
+The source copy has the same ID as the store copy, so Chrome holds only one of
+them: remove the store copy on `chrome://extensions` first. Removing it
+deletes its token and settings, so you connect again.
 
 1. Get the folder — either way works:
    - download the newest `testomat-io-<version>.zip` from
      [Releases](https://github.com/testomatio/browser-extension/releases) —
-     the single file under **Assets** — and unpack it, **or**
+     the file under **Assets** without `-webstore` in its name (that one is
+     the Chrome Web Store upload) — and unpack it, **or**
 
      ![The zip under Assets on the Releases page](img/install-release-zip.png)
 
@@ -34,18 +55,13 @@ your disk, once, and Chrome keeps it. Chrome 123 or newer.
    Either way, the right folder is the one with `manifest.json` directly
    inside.
 
-4. Click the puzzle icon in Chrome's toolbar and pin **Testomat.io** with the
-   pushpin:
-
-   ![Pinning Testomat.io from the puzzle menu](img/install-pin.png)
-5. Click the pinned icon — the panel opens and asks you to connect
-   (**Connect to Testomat.io**). That is the next page: [Connect](connect.md).
+4. Pin the icon and connect, as in steps 2–3 of [Install](#install).
 
 There is nothing to build or install beyond that — the folder runs as is.
 
-## Update
+### Update a source copy
 
-There is no auto-update. To get a new version:
+A source copy does not update itself. To get a new version:
 
 1. Replace the folder contents: unpack a newer zip over the same folder, or
    `git pull` in the clone.
@@ -56,13 +72,11 @@ There is no auto-update. To get a new version:
 
 Your token, settings and unsent results survive the reload.
 
-## If it didn't work
+### If a source copy didn't work
 
 - **"Load unpacked" is missing** — Developer mode is off; the switch is in
   the top right corner of `chrome://extensions`.
 - **"Manifest file is missing or unreadable"** — you picked the repository
   root; pick the `extension/` folder inside it.
-- **Chrome refuses to load it** — check your Chrome is 123 or newer
-  (`chrome://settings/help`).
 - **Updated, but behaves like the old version** — press reload (↻) on the
   extension's card; replacing the files alone is not enough.

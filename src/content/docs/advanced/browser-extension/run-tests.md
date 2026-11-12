@@ -3,11 +3,6 @@ title: "Run a manual run"
 type: article
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/run-tests.md).
-:::
-
-
 You open a run, walk its tests next to the site under test, and mark each
 one. Nothing ever navigates on its own — you move on when you choose to.
 

@@ -3,11 +3,6 @@ title: "Attach a screenshot"
 type: article
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/screenshots.md).
-:::
-
-
 The panel captures the tab you are testing and opens an annotator right
 over that page. Nothing uploads until you press **Save** there.
 
