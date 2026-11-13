@@ -12,20 +12,26 @@ head:
   - tag: meta
     attrs:
       name: keywords
-      content: GitHub Issues, Testomat.io, issue tracking, test management, API token, workflow integration, defect creation, test reporting
+      content: GitHub Issues, GitHub Enterprise, Testomat.io, issue tracking, test management, API token, workflow integration, defect creation, test reporting
 ---
 
-![CleanShot 2022-11-19 at 18 56 02@2x](./images/202862519-e99c8c8d-7166-4c46-8a66-bc3496bb98bb.jpg)
+![Connect GitHub Issues in five steps: name the profile, enter your username, add the API token, enter the repository, and click Save. Testomat.io and GitHub are then connected](./images/github/0-connect-github-steps.png)
 
 1. Give a name to your profile 
-4. Enter your GitHub Username
-8. Enter your GitHub API Token with access to workflow scope and write permissions ([learn more](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
-![Alt text](./images/GH-pat.png)
-10. Enter your GitHub Organization/Repository
-11. Click on Save button
+2. Enter your GitHub Username
+3. Enter your GitHub API Token with access to workflow scope and write permissions ([learn more](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token))
+4. Enter your GitHub Organization/Repository
+5. Click on Save button
 
-![CleanShot 2022-11-19 at 18 58 12@2x](./images/202862612-68c32b53-ed91-4e34-98cb-6125c3bccc6c.jpg)
+![Connecting the GitHub profile to Testomat.io with the form's fields filled out](./images/github/1-connect-github.png)
 
 Once your Issues Management System is configured you can link a test or create a defect. As a result, Testomat.io will create a ticket in your GitHub project with dedicated links and data, so you can easily look through the testing data you need. Here is an example:
 
-![CleanShot 2022-11-23 at 16 29 39@2x](./images/203572256-7081ae0b-a2f2-48f6-ac57-c374f7634db5.jpg)
+## Connect GitHub Enterprise
+
+If your repository is on GitHub Enterprise Cloud (`*.ghe.com`) or GitHub Enterprise Server, select **GitHub Enterprise** instead of **GitHub**, and fill in **GitHub Enterprise API URL**:
+
+- GitHub Enterprise Cloud with data residency: `https://api.<your-tenant>.ghe.com`;
+- GitHub Enterprise Server: `https://github.<your-company>.com/api/v3`.
+
+The other fields are the same as for GitHub: **GitHub Username**, **API Token** (created in your GitHub Enterprise), and **Organization/Repository**.
