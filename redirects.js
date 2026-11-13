@@ -109,6 +109,11 @@ const redirects = {
     "/project/tests/other-features-for-test-case-design": "/project/tests/sharing-tests-and-suites",
     "/project/test_design_features": "/project/tests/sharing-tests-and-suites",
     "/project/copy_move_tests": "/project/tests/copying-tests-and-suites",
+    "/advanced/browser-extension/connect": "/advanced/browser-extension/install",
+    "/advanced/browser-extension/screenshots": "/advanced/browser-extension/attachments",
+    "/advanced/browser-extension/screen-recording": "/advanced/browser-extension/attachments",
+    "/advanced/browser-extension/console-network-log": "/advanced/browser-extension/attachments",
+    "/advanced/browser-extension/step-recorder": "/advanced/browser-extension/create-tests",
 }
 
 export default redirects

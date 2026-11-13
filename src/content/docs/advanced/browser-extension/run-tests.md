@@ -1,84 +1,71 @@
 ---
-title: "Run a manual run"
+title: Run Manual Tests
+description: Open a Testomat.io run in the browser extension, mark tests and steps, use keyboard shortcuts, and finish the run next to the website you're testing.
 type: article
+url: https://docs.testomat.io/advanced/browser-extension/run-tests/
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io browser extension, manual run, mark test, passed, failed, skipped, keyboard shortcuts, finish run
 ---
 
-You open a run, walk its tests next to the site under test, and mark each
-one. Nothing ever navigates on its own — you move on when you choose to.
+Go through a run in the side panel while the website you're testing stays open next to it. The panel never moves on by itself — you go to the next test when you're ready.
 
-## Open a run
+## Open a Run
 
-1. **Runs** tab. The list shows the project's runs with their progress.
-2. Click a run — or paste a run's URL from the web app into the search box;
-   the same box also filters the list by title as you type. (**New run**
-   opens the web app's create-run page — runs are made there and then show
-   up in this list.)
+1. Open the **Runs** tab.
+2. Click a run. 
+3. The run opens as a checklist grouped by suite, with a progress bar and status filters.
 
-   ![The Runs tab](img/run-tests-list.png)
+![A run open as a checklist, with one suite expanded](./img/run-tests/2-run-view.png)
 
-The run opens as a checklist grouped by suite, with a progress bar and
-status chips to filter by.
+To create a new run, click **New run**. It opens the run creation page in Testomat.io. When you save the run, it appears in this list.
 
-![The run checklist, one suite open](img/run-tests-run-view.png)
+To find run fast, type part of its title in the search box or paste the run's URL from Testomat.io.
 
-## Mark a test
+![The Runs tab in the side panel](./img/run-tests/1-run-search.png)
 
-Quick marks live right on the checklist: every row carries its own
-✓ / ✗ / − buttons. For everything else — steps, a comment, the log —
-click the test's title to open it.
+## Mark Tests
 
-![Ticking steps, marking passed, jumping to the next test](img/run-tests-mark.gif)
+To mark a test quickly, use the ✓ / ✗ / − buttons on its row in the checklist. To tick steps, click the test's title to open it:
 
-- **Steps** tick on click: once for pass, again for fail, again for skip.
-  Ticks sync to the server so a colleague sees them (in basic mode they
-  stay local).
-- **Passed / Failed / Skipped** save immediately and stay put — moving on
-  is the **›** arrow of the *n of N* pager under the progress bar, or the
-  hotkeys below.
-- A comment saved with a status lands on the result in the web app too.
-- Failing a test can attach the console & network log of the tab under
-  test automatically — that is the [Rec recorder](console-network-log.md).
-- A parametrized test shows one row per example; each row is marked on its
-  own.
+1. Click a step to tick it: once for passed, twice for failed, three times for skipped.
+2. Add a comment if you need one.
+3. Click **Passed**, **Failed**, or **Skipped**. The result saves with the comment.
+4. Go to the next test with the **›** arrow under the progress bar, or press `N`.
 
-Hotkeys, in the test view only:
+![Ticking steps, marking a test as Passed, and moving to the next test](./img/run-tests/3-steps-requirements.png)
+
+A test with parameters shows one row per example. Mark each row on its own.
+
+When you mark a test **Failed**, the panel can attach the browser log to it automatically. See [Attach Screenshots, Recordings, and Logs](/advanced/browser-extension/attachments/#collect-console-and-network-logs).
+
+## Keyboard Shortcuts
+
+These shortcuts work in an open test when no text field is active. Cmd and Ctrl both work on any system.
 
 | Keys | Action |
 |---|---|
 | `Cmd/Ctrl+Enter` | Passed |
 | `Cmd/Ctrl+U` | Failed |
 | `Cmd/Ctrl+I` | Skipped |
-| `N` | Next still-untested test |
+| `N` | Next untested test |
 | `↓` / `→`, `↑` / `←` | Next / previous test |
 
-![A failed test open: steps, statuses, the result](img/run-tests-test-view.png)
+To see this list in the panel, click **?** next to the test pager.
 
-## Stay in sync
+## Finish the Run
 
-An open run re-reads itself about every 20 seconds while you look at it, so
-a colleague's marks land on their own. The server's state wins; your own
-in-flight write is never overwritten by a poll.
+Click **Finish run** at the top of the run. Confirm in the dialog — any tests you haven't marked become Skipped.
 
-## Finish the run
+## Work with Colleagues and Offline
 
-**Finish run** on the run screen asks once — *"Finish run? Pending tests
-will be marked skipped."* — and closes the run. It needs the full (not
-basic) mode.
+While a run is open, the panel refreshes it about every 20 seconds, so you see your colleagues' results. To refresh right now, click Refresh in the panel header.
 
-## If the network drops
+If your connection drops, your results aren't lost. They wait in the panel with a `queued` badge and are sent when the connection returns, as long as the panel stays open. To send them right away, click **Retry**.
 
-A status that fails to save is not lost: it queues in the panel, the row
-gets a `queued` badge, and a bar counts the *changes pending*. They replay
-when the connection returns — or press **Retry** on the bar.
+## Next Steps
 
-## If it didn't work
-
-- **The run you pasted doesn't open** — the panel says when a URL leads
-  nowhere it can reach: check the project the panel is on matches the URL.
-- **Finish run is greyed out** — *"Finish run needs an active … web login"*:
-  you are in basic mode; see [Connect](connect.md#basic-mode).
-- **Ticked steps aren't visible to a colleague** — basic mode again; steps
-  sync only with a session.
-- **Marks from a colleague don't appear** — the panel polls only while the
-  run is open and the panel is visible; press the header's Refresh for an
-  immediate pull.
+- [Attach Screenshots, Recordings, and Logs](/advanced/browser-extension/attachments/)
+- [Create Tests](/advanced/browser-extension/create-tests/)
