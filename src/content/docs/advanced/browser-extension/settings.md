@@ -1,136 +1,93 @@
 ---
-title: "Settings and shortcuts"
+title: Settings
+description: Configure failure logs, step recording, appearance, self-hosted instances, and stored credentials in the Testomat.io browser extension.
 type: article
+url: https://docs.testomat.io/advanced/browser-extension/settings/
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io browser extension, settings, failure log, step recorder, appearance, self-hosted instance, sign out, side panel
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/settings.md).
-:::
+Choose what the extension records, how it looks, and which server it connects to. Open the **Settings** tab in the panel header. Click a section heading to expand it.
 
+![The Settings tab with the Connection and Failure log sections open](./img/settings/1-settings-pt1.png)
 
-The **Settings** tab in the panel header holds six folds. **Connection** and
-**Failure log** start open; click a heading to unfold the rest. Every
-checkbox and field is committed by **Save & validate** at the bottom — it
-also re-checks the connection, then lands you on the Runs tab. The one
-exception is **Appearance**, which applies the moment you click it.
+Click **Save & validate** at the bottom to apply your changes. It also checks the connection and then opens the **Runs** tab. Only **Appearance** applies right away.
 
-Settings are kept per instance: switch to another Testomat.io server and
-you get that server's own set.
-
-![The Settings tab as you arrive: Connection and Failure log open, the rest folded](img/settings-folds.png)
+Settings are saved separately for each Testomat.io server you connect to.
 
 ## Connection
 
-The card names the host you are connected to, shows the **Connected** badge
-(or *Project not picked* while the first-time setup is half done — token in,
-no project chosen yet) and offers **Disconnect**. Authorizing, picking a
-project and ending the connection are on [Connect](connect.md).
+Shows the server you're connected to and the current project. See [Install and Connect](/advanced/browser-extension/install/#check-or-end-the-connection).
 
-## Failure log
+## Failure Log
 
-What gets recorded, and what leaves the browser, when you mark a test
-**Failed**. Details of the recorder itself are on
-[Console & network log](console-network-log.md).
+Controls what the panel records and attaches when you mark a test **Failed**. To learn how logging works, see [Collect Console and Network Logs](/advanced/browser-extension/attachments/#collect-console-and-network-logs).
 
-| Setting | Default | What it does |
+| Setting | Default | What It Does |
 |---|---|---|
-| **Auto-start console & network recorder when you open a test in a run** | Off | Rec starts by itself when you open a test in a run, bound to that test, and stops when you leave it. |
-| **Attach log to failures** | On | The recorded log is uploaded and linked on a test you mark Failed. Off skips only that automatic upload — **Attach** on a single log entry still works. |
-| **Include response bodies** | On | A failed request carries a snippet of what came back, up to 16 KB. Off keeps the request line and writes *(body capture disabled)* where the snippet would be. |
-| **Log window** | 60 seconds | How much console & network history is kept and attached. Any value from 10 to 600; blank means 60. A number outside the range is refused — Save reports *Log window must be between 10 and 600 seconds* and nothing is saved. |
-| **Record environment info** | On | Browser, OS, the viewport of the tab under test and its page URL are written onto the run as meta, with every status you set — not only a failure. |
-| **Include the query string** | Off | The recorded URL — and the step recorder's first `Open` step — is cut to origin + path, so reset tokens and signed links in a query string stay out of the run. On records it whole. |
+| **Auto-start console & network recorder when you open a test in a run** | Off | Starts **Rec** when you open a test and stops it when you leave the test |
+| **Attach log to failures** | On | Attaches the log to every test you mark Failed. When off, you can still attach a single log entry with **Attach** |
+| **Include response bodies** | On | Saves up to 16 KB of the response for failed requests |
+| **Log window** | 60 seconds | How much history the log keeps: from 10 to 600 seconds. Leave it empty for 60 |
+| **Record environment info** | On | Adds the browser, OS, viewport size, and page URL to every result you set |
+| **Include the query string** | Off | When off, URLs are saved without query parameters, so tokens in links stay private. This also applies to the first `Open` step in recorded steps |
 
-## Step recorder
+## Step Recorder
 
-| Setting | Default | What it does |
+| Setting | Default | What It Does |
 |---|---|---|
-| **Never record entered values** | Off | Off, the recorder saves what you type into the steps and masks what it recognises as a password, card number, CVV or one-time code. On, every entry reads *Type text into the … field* — only a password field still says so — and a dropdown choice reads *Select an option in the … dropdown*. Turn it on when the site under test handles real payment or identity data. See [Sensitive values](step-recorder.md#sensitive-values). |
+| **Never record entered values** | Off | When on, no typed value is saved: steps read *Type text into the … field* and *Select an option in the … dropdown*. Turn it on if the website handles real payment or personal data. See [Sensitive Values](/advanced/browser-extension/create-tests/#sensitive-values) |
+
+![The Step recorder, Appearance, Advanced, and Stored credentials sections open](./img/settings/2-settings-pt2.png)
 
 ## Appearance
 
-**System**, **Light** or **Dark**. The click is the save — no **Save &
-validate** needed. System follows your operating system as it changes.
-The choice belongs to the browser, not to an instance: it holds across
-projects and servers, applies to the test editor tab too, and survives
-**Sign out**.
-
-![The lower folds open: Step recorder, Appearance, Advanced, Stored credentials](img/settings-lower.png)
+Choose **System**, **Light**, or **Dark**. The change stays the same for all projects and servers.
 
 ## Advanced
 
-For a self-hosted Testomat.io. On app.testomat.io leave it as it is — the
-fold stays closed; it unfolds by itself once a self-hosted instance is
-saved.
+Used only for self-hosted Testomat.io. On app.testomat.io, you don't need it.
 
-- **Instance** — the server's `https://` URL. HTTP is refused. The
-  authorize link in Connection follows this field.
-- **Pick a saved instance** — this dropdown appears once you have saved two
-  or more servers. Picking one loads its saved settings into the form;
-  **Save & validate** switches the panel to it. A server you hold no token
-  for brings the **Access token** field back.
-- **Forget this instance** — deletes the saved token, project and
-  preferences of the instance the form points at, after a confirmation.
-  If that is the instance you are on, its restored session, queued results
-  waiting to be sent, recorded steps, captured log and unsaved drafts go
-  too, a running recording is stopped, and the panel returns to the connect
-  screen. Other instances are kept.
+- **Instance** — your server's `https://` URL.
+- **Pick a saved instance** — appears when you've saved two or more servers. Choose one and click **Save & validate** to switch to it.
+- **Forget this instance** — deletes the saved token, project, and settings for this server, after you confirm. If it's the server you're using now, its queued results, recorded steps, logs, screen recordings, and unsaved drafts are deleted too, and the panel returns to the connect screen. Other servers aren't affected.
 
-## Stored credentials
+## Diagnostics
 
-**Sign out** is for a shared machine: after a confirmation it erases every
-saved token, instance, history entry, queued result, session, unsaved test
-draft, recorded step and captured log from this browser, stops a running
-recording, and reloads the panel onto the connect screen. The colour
-scheme and the side-panel-or-window choice stay. Site access is Chrome's
-own setting for the extension, on `chrome://extensions`, and is not
-touched.
+Shows the technical state of the extension in one place. Use it when something doesn't work as expected, or when you report a bug.
 
-## Side panel or window
+Nothing in this section is sent anywhere. Click **Copy** to copy all rows to your clipboard, then paste them into your bug report or support request.
 
-The header's **Open in window** button reopens the panel as a window of its
-own — tall and narrow, like the side panel — for a second screen or a
-site that fights the side panel. In that window the same button reads
-**Dock to side panel**. The choice is remembered: the toolbar icon opens
-whichever surface you used last.
-
-## Keyboard shortcuts
-
-In the test view, when no field has the focus:
-
-| Keys | Action |
+| Row | What It Shows |
 |---|---|
-| `Cmd/Ctrl+Enter` | Passed |
-| `Cmd/Ctrl+U` | Failed |
-| `Cmd/Ctrl+I` | Skipped |
-| `N` | Next still-untested test |
-| `↓` / `→`, `↑` / `←` | Next / previous test |
+| **Version** | The installed extension version |
+| **Instance** | The Testomat.io server the panel is connected to, such as app.testomat.io |
+| **Project** | The current project |
+| **Auth** | How the panel is signed in. If your web session has expired, the panel works in [basic mode](/advanced/browser-extension/install/#basic-mode) |
+| **Access** | Your access to the project: read/write, or read-only |
+| **Queue** | Results waiting to be sent. **empty** means everything is saved in Testomat.io |
+| **Live sync** | How often an open run refreshes |
+| **Storage used** | How much space the extension uses in your browser |
+| **Worker** | Whether the extension's background process is running. **answering** means it is |
 
-Cmd and Ctrl both work on every system. The **?** button beside the
-test pager at the bottom of the test view opens the same list in the
-panel. None of the marks moves you on — that is `N`.
+![The Diagnostics section open](./img/settings/3-settings-diagnostics.png)
 
-From any tab, `Alt+Shift+R` starts or stops a
-[screen recording](screen-recording.md) of the tab in front; change it on
-`chrome://extensions/shortcuts`.
+## Stored Credentials
 
-## If it didn't work
+On a shared computer, click **Sign out** when you're done. After you confirm, it deletes all saved tokens, servers, queued results, drafts, recorded steps, logs, and screen recordings from this browser. Your color scheme and panel layout stay.
 
-- **"Instance and access token are required"** — the Access token field is
-  empty for a server the panel holds no token for; authorize and paste.
-- **"Instance URL must be https://"** / **"Instance is not a valid URL"** —
-  fix the Instance field; the fold opens on the error.
-- **"Log window must be between 10 and 600 seconds"** — the number in **Log
-  window** is outside the range; nothing was saved, and the field still holds
-  what you typed. Leave it blank for 60.
-- **"Token rejected by …"** — the token is stale for that server; press
-  **Open Testomat.io & authorize** again and save the new one.
-- **"This token reaches no projects"** — ask for access to a project on that
-  server, then save again.
-- **"Couldn't load your projects from …"** — the server did not answer;
-  check the connection and save again.
-- **"Nothing saved for …"** — Forget was pressed for a server that was never
-  saved; nothing was erased.
-- **A warning about the recording after Forget or Sign out** — the erase
-  happened, but the console & network recorder could not be stopped;
-  restart the browser to be sure its log is gone.
+## Side Panel or Window
+
+To open the panel in a separate window, for example on a second screen, click **Open in window** in the panel header. To bring it back, click **Dock to side panel**. The extension remembers your choice.
+
+## Keyboard Shortcuts
+
+For shortcuts in an open test, see [Run Manual Tests](/advanced/browser-extension/run-tests/#keyboard-shortcuts). `Alt+Shift+R` starts or stops a screen recording from any tab. To change this shortcut, go to `chrome://extensions/shortcuts`.
+
+## Next Steps
+
+- [Install and Connect](/advanced/browser-extension/install/)
+- [Run Manual Tests](/advanced/browser-extension/run-tests/)

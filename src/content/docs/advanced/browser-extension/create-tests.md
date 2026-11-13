@@ -1,68 +1,89 @@
 ---
-title: "Create tests"
+title: Create Tests
+description: Add tests by title, write test cases in Markdown, record test steps from your actions on a website, and add parameters in the Testomat.io browser extension.
 type: article
+url: https://docs.testomat.io/advanced/browser-extension/create-tests/
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Testomat.io browser extension, create test, bulk add, Markdown editor, step recorder, record steps, parameters, Polish with AI
 ---
 
-:::note
-Taken from [Browser Extension documentation](https://github.com/testomatio/browser-extension/tree/main/docs/guide/create-tests.md).
-:::
+Write new test cases while you explore the website. The **Tests** tab shows the project's suite tree with test counts. 
 
+![The Tests tab with the suite tree](./img/create-tests/1-test-tree.png)
 
-The **Tests** tab browses the project's suites and lets you add test cases
-without leaving the panel — by title alone, or written out in the editor.
+## Add Tests by Title
 
-## Browse
+1. Open a suite.
+2. Type a title in **Add new test** at the bottom and click **Create** or press `Enter`. 
 
-The tab shows the suite tree with test counts. Folders group suites;
-clicking a suite opens its test list; clicking a test opens it — an
-existing case renders read-only until you choose to edit.
+![Adding one test by title, then several with Bulk](./img/create-tests/2-quick-add-tests.png)
 
-![The suite tree](img/create-tests-tree.png)
+The test is added to the suite, and you can fill it in later.
 
-## Add by title
+To add several tests at once, turn on **Bulk** and enter one title per line. The tests are created in the same order.
 
-Open a suite. The bar at the bottom adds a test **right here**:
+## Write a Test in the Editor
 
-1. Type the title into **Add new test**, press **Create** (or Enter) —
-   the case appears in the list, empty for now.
-2. Flip **Bulk** and the field becomes a list — one title per line, one
-   press, the whole list is created in order.
+1. Click **New test**. The editor opens.
+2. Enter the title. If you started from the top of the tree, choose a suite.
+3. Write the description and steps in Markdown. 
+4. Save the test.
 
-![One title, then a bulk list](img/create-tests-quick-add.gif)
+![The test editor with Markdown steps and the Record steps, Polish with AI, and Parameters controls](./img/create-tests/3-extension-test-editor.png)
 
-Bulk add needs the full (not basic) mode.
+To create a suite or folder, use the **+** buttons in the tree.
 
-## Write it out in the editor
+## Record Steps
 
-**New test** opens the editor: the title, a Markdown body with live
-preview, and a suite picker if you started from the tree root. Steps are
-plain Markdown lists; the toolbar records steps for you (see
-[Step recorder](step-recorder.md)) and can hand the draft to your
-Testomat.io AI to be rewritten — with an Undo.
+Instead of typing steps, go through the flow on the website once. The extension turns your clicks, text entry, selections, and page navigation into readable steps.
 
-![The editor: Markdown, Record steps, Polish with AI, Parameters](img/create-tests-editor.png)
+1. Open the website you want to test, then start a new test in the editor.
+2. Click **Record steps**. A recording bar appears in the bottom-right corner of the page.
+3. Go through the flow. Each action appears in the test's steps a second after you do it.
+4. Click **Stop** in the bar or in the editor.
 
-New suites and folders are made from the tree's own + buttons.
+![Recording steps: actions on the page appear as steps in the editor](./img/create-tests/3-extension-test-editor.png)
 
-## Parameters
+Recorded steps read like this: *Click the "Add to cart" button*, *Type "pliers" into the Search field*. When a page opens, the extension adds an `Expected:` line under the step that opened it, for example *The "Cart" page opens*.
 
-A test that should run once per data row gets **parameters** — edited in
-the same editor:
+![Recorded steps in the editor, one with an Expected line](./img/create-tests/4-record-steps.png)
 
-1. Name the columns (say `role`, `email`).
-2. Fill one example row per variant.
-3. Write `${role}` and `${email}` in the title or steps.
+While recording:
 
-In a run, such a test shows one row per example, each marked on its own.
+- **+ Expected** adds your own expected result to the last step. Type it and press `Enter`.
+- **Pause** stops recording for a moment, for example to do something that isn't part of the test. Click **Resume** to continue.
+- After 50 steps, recording pauses and asks **Still recording?**. Click **Continue** to add 50 more.
 
-![A parametrized test rendered: the table under the steps](img/create-tests-params.png)
+![Test steps being recorded](./img/create-tests/5-steps-being-recorded.png)
 
-## If it didn't work
+### Sensitive Values
 
-- **Create is greyed out** — the title is empty, or the panel is in basic
-  mode (bulk add and the editor's server features need the session).
-- **`${name}` shows literally in a run** — the test has no example rows
-  yet; add at least one in the editor's Parameters.
-- **A new test is not in the web app yet** — give the panel a moment or
-  press Refresh there; the panel writes through the same API the web
-  reads.
+The extension recognizes passwords, card numbers, one-time codes, and similar fields, and doesn't save their values. The step names the field but not what you typed: *Type the password into the Password field*.
+
+This works on a best-effort basis. If the website handles real payment or personal data, turn on **Never record entered values** in [Settings](/advanced/browser-extension/settings/#step-recorder) — then no typed value is saved.
+
+### Polish with AI
+
+If Testomat.io AI is enabled for your company, turn on **Polish with AI** next to **Record steps**. When you stop recording, the AI rewrites the steps in clearer language. To get the original wording back, click **Undo polish**.
+
+If AI isn't available for your company, the switch stays off and tells you why when you click it, and nothing is sent. On a Testomat.io server without AI, the switch isn't shown.
+
+## Add Parameters
+
+Use parameters to run the same test with different data, such as different user roles.
+
+1. In the editor, open **Parameters** and name the columns, for example `role` and `email`.
+2. Add one row per data set.
+3. Use `${role}` and `${email}` in the title or steps.
+
+![A test with parameters: the steps and the example table under them](./img/create-tests/6-test-params.png)
+
+In a run, the test shows one row per data set, and you mark each one separately.
+
+## Next Steps
+
+- [Run Manual Tests](/advanced/browser-extension/run-tests/)
+- [Settings](/advanced/browser-extension/settings/)
