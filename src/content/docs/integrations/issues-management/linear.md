@@ -26,11 +26,9 @@ Testomat.io connects to Linear with a personal API key. Linear calls it an **API
 
 ![The Create API key form in Linear with Key name, Permissions, and Team access](./images/linear/2-linear-create-api-key.png)
 
-6. Click the copy icon next to the key.
+6. Click the copy icon next to the key. Copy the key before you leave the page - Linear shows it only once.
 
 ![The new Linear API key with the copy icon](./images/linear/3-linear-copy-api-key.png)
-
-Copy the key before you leave the page - Linear shows it only once.
 
 ## Connect Linear
 
