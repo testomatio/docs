@@ -257,6 +257,10 @@ Filters allow you to dynamically **include or exclude tests in a plan** based on
 
 Efficient management of test plans is key to keeping your testing organized and transparent. In Testomat.io, you can group and organize plans using **Labels**, making it easy to filter, find, and manage multiple plans at once.
 
+### Comment on Plans
+
+Discuss a plan with your team in its comments. See [Comments](https://docs.testomat.io/project/comments-notifications/comments).
+
 ### Benefits of Using Labels for Plans
 
 By assigning labels to your plans, you can:

@@ -1,5 +1,6 @@
 ---
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import ImageZoom from 'starlight-image-zoom/components/ImageZoom.astro';
 
 const KB = 'https://knowledge.testomat.io';
 
@@ -36,6 +37,7 @@ const match = categories.find(([prefix]) => id.startsWith(prefix));
 const [, slug, topic] = match ?? [];
 ---
 
+<ImageZoom />
 <Default><slot /></Default>
 
 {

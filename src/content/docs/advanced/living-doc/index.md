@@ -30,18 +30,40 @@ Easily include documentation in Confluence pages, sprint reports, or product spe
 - Make tests or suites publicly viewable, or embed internally for team access.
 Useful for partners, clients, or external QA vendors.
 
-## Enable Living Documentation
+## Share Living Documentation
 
-Living Documentation can be enabled in Project Settings:
+Share Living Documentation with people who do not have a Testomat.io account. You choose how long the link works, and you can protect it with a passcode.
 
-1. Go to **Settings**.
-2. Click on the **Project** tab.
-3. Enable **Share Living Docs** toggle.
-4. See the confirmation and generated link for **Living Documentation**.
+Before you start, turn on **Living Documentation** in **Company Settings**. See [Share Options](https://docs.testomat.io/management/company/administration/#share-options).
 
-![Enabling Living Docs](./images/enabling_living_docs.png)
+1. Go to **Settings** and select **Project**.
+2. In the **Sharing** section, turn on **Enable Shared Living Docs**.
+3. In **Expiration Date**, select the last day of access. The default is 7 days from today.
+4. Keep **Protect by passcode** selected to protect the link.
+5. Click **Share**.
+6. Copy the link and the passcode. The passcode shows only once.
+
+![The Share Living Docs window with Expiration Date and Protect by passcode](./images/enable-living-docs.png)
+
+Your docs are shared. The link and the expiration date show under the toggle in the **Sharing** section.
+
+### Open the Shared Docs
+
+Guests open the link and enter the 5-digit passcode. Project members open the docs without the passcode. The passcode also protects the suite, test, and embedded pages.
+
+### Stop Sharing
+
+Turn off **Enable Shared Living Docs**. The link stops working at once.
+
+When the expiration date passes, sharing turns off. To share again, turn on the toggle. Guests then need the new passcode.
 
 ## Embed Living Documentation
+
+:::note
+
+Embedded docs stop working when the share expires. If the share has a passcode, readers of the embedded docs enter it too.
+
+:::
 
 Living documentation can be embedded into your website, you have a possibility to:
 

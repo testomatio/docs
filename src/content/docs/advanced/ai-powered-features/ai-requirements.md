@@ -111,6 +111,25 @@ To unlink the requirement from the suite, follow Steps 1-3 and on **'Attached to
 
 ![Testomat.io - Unlink Requirements](./images/Unlink_Requirement_1.png)
 
+## Convert a Linked Issue to a Requirement
+
+Turn a Jira issue that is linked to a suite into a requirement. You do not need to enter the issue again on the **Requirements** page.
+
+1. Open the suite.
+2. Click **Set requirements**.
+3. Open the **Linked issues** tab.
+4. Click **Convert** next to the issue.
+
+![The Linked issues tab in Attach requirements to suite with the Convert button](./images/convert-jira-issue-to-requirement.png)
+
+Testomat.io creates the requirement and attaches it to the suite. You see it on the **Attached to suite** tab. From there, you can use AI to analyze the requirement and generate tests.
+
+:::note
+
+The **Linked issues** tab shows Jira issues only.
+
+:::
+
 ## Jira as a Requirement Source
 
 Testomat.io not only allows you to start a new project with requirements but also to link requirements to an ongoing project at any time.
