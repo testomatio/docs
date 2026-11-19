@@ -209,6 +209,19 @@ Visit the [Issues Management Systems](https://docs.testomat.io/integration/issue
 
 ![Testomat.io - Issues Board](./images/13-linked-items.png)
 
+## Issue Trackers
+
+The **Issue Trackers** widget is a traceability matrix for trackers other than Jira, such as GitHub, GitLab, Linear, and Plane. It shows your linked issues and the tests that cover them. The **Jira** widget stays as it is.
+
+1. Go to **Analytics**.
+2. Click the **Issue Trackers** widget.
+3. Select a tracker tab.
+4. Click an issue to see its linked tests.
+
+![The Issue Trackers widget on the Analytics dashboard](./images/13-1-issue-tracker-widget.png)
+
+The number on the widget shows how many issues are linked. The page shows one tracker at a time.
+
 ## Defects Board
 
 The Defects report answers a question: which of your tests are blocked, and by what. Each row is a test case, with its defects nested underneath. Expand a test to see every defect holding it back, each with its severity, status, and a link to the tracker. Choose how defects reach a test with the data-source selector:

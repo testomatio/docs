@@ -76,6 +76,12 @@ Refresh the page and you will see all the imported test files.
 
 ![Testomat.io - Test tree with automated tests](././images/New_zIxolwhp_2024-07-23.png)
 
+:::note
+
+You can import feature files in any Gherkin language. Add the `# language:` line at the top of each file. See [Write Scenarios in Other Languages](https://docs.testomat.io/project/tests/bdd-test-case-editor/#write-scenarios-in-other-languages).
+
+:::
+
 ## Import Manual BDD Tests from Source Code
 
 If you have manual tests in the repository and want to import them into Testomatio you can use `.manual.feature` extension in the feature file. Tests will be imported as well as automated tests and will be marked as `manual` in Testomatio. For instance:

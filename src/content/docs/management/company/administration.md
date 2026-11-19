@@ -78,12 +78,7 @@ Enables company users to create and share living documentation without requiring
 
 ![Living Documentation](images/att11_263.png)
 
-2. Navigate to the general **'Settings'** tab in the sidebar
-3. Click the **'Project'** tab
-4. Enable **'Share Living Docs'** in the **'Sharing'** section
-5. The link appears under the **'Share Living Docs'** button
-
-![Share Living Docs link](images/att5_263.png)
+2. Share Living Docs from the project settings. See [Share Living Documentation](https://docs.testomat.io/advanced/living-doc/#share-living-documentation).
 
 - **Public Shared Report**
 

@@ -114,9 +114,10 @@ You can view RunGroup Report by clicking on its name.
 2. Review **'RunGroup summary section'** with general information based on the selected [Merge Strategy](https://docs.testomat.io/project/runs/merge-strategies/).
 3. View a list of test runs, their statuses with the number of Passed, Failed, Skipped tests, along with the run assignee and executed time.
 4. Customize your RunGroup Report view (Read more in the [How to Customize Runs List View ](https://docs.testomat.io/project/runs/rungroups/#how-to-customize-runs-list-view) section below).
-5. Check **'Combined Report'** (Read more in the [Combined Report for RunGroups](https://docs.testomat.io/project/runs/rungroups/#combined-report-for-rungroups) section below).
+5. Open the [Combined Report](#combined-report-for-rungroups).
 6. Add a new Manual Run to the selected RunGroup.
 7. Generate a [Rungroup Statistic Report](https://docs.testomat.io/advanced/ai-powered-features/ai-powered-features/#rungroup-statistic-report)(AI-feature should be enabled on **'Company Settings'** page).
+8. [Finish all pending runs](#finish-pending-runs) of the group.
 
 ![Testomat.io - RunGroup Report](./images/RunGroup_Report_1.png)
 
@@ -187,39 +188,72 @@ The chart displays up to 50 of the latest test runs belonging to the group. If y
 
 ## Combined Report for RunGroups
 
-Testomat.io provides a **'Combined Report'** feature for RunGroups. This report is designed to help you aggregate and analyze the results of all test runs within the RunGroup in a single view.
+The **Combined Report** shows the results of all runs in a RunGroup on one page, including the runs in nested groups. Use it to see how a release went without opening each run.
 
-You can open **'Combined Report'** for a RunGroup by clicking on **'Combined Report'** button from the RunGroup Report Basic View window.
+1. Open the RunGroup.
+2. Click **Combined Report** in the top-right corner.
 
-![Testomat.io - Combined Report](./images/Combined_report.png)
+![The RunGroup page with the Combined Report button](./images/combined-report.png)
 
-The comparison of runs is based on the first (main) launch. The statuses counters on the left side are calculated based on the main run.
+The report opens. The runs and their tests show on the left. The group statistics show on the right.
 
-To change the main run, click the **'Compare To'** button. Note that the counters of loaded tests is above them. The final summary on the right side is calculated based on the loaded tests.
+![The Combined Report with the runs and tests on the left and the group statistics on the right](./images/combined-report-stats.png)
 
-![Testomat.io - Combined Report](./images/Combined_report_1.png)
+### Runs and Tests
+
+The **Rungroups, runs** list shows each run with its status, defects, assignee, and finish time.
+
+The **Tests** matrix shows each test in a row and each run in a column. The column number matches the run in the list above. A dash means that the test is not in that run.
+
+- Use the pager above the matrix to move between pages of 10 runs.
+- Scroll down to load more tests.
+- Click a result to open the test report.
+
+### Group Statistics
+
+The group status follows the [merge strategy](https://docs.testomat.io/project/runs/merge-strategies/) of the RunGroup. For example, "Failed based on 3 runs with realistic strategy".
+
+| Tile | What it shows |
+| --- | --- |
+| **Pass rate** | The percentage of passed tests. |
+| Runs | The number of runs by type, such as `3 manual`. |
+| **Wall-clock** | The time from the first run start to the last run finish, and the total time of all runs. |
+| **Total tests** | The number of unique tests, and how many times they ran. |
+| **Tests in all runs** | Tests that are in every run of the group. |
+| **Passed in all runs** | Tests that passed in all runs where they ran. |
+| **Failed in all runs** | Tests that failed in all runs where they ran. |
+| **Skipped in all runs** | Tests that were skipped in all runs where they ran. |
+| **Flaky** | Tests that passed in some runs and failed in others. |
+| **Reviewed** | Tests that failed before and passed in a later run. |
+| **Degraded** | Tests that passed before and failed in a later run. |
+
+To compare runs side by side, click **Compare Runs** in the top-right corner. See [Compare Test Runs](https://docs.testomat.io/project/runs/reports/#compare-test-runs).
 
 :::note
-
-The **'Combined Report'** feature for RunGroups does **not** combine test results of all runs inside one RunGroup into a single report. It only allows you **to compare** test results of all runs within this RunGroup.
-
+The report includes up to 100 runs. The **Combined Report** button becomes available when at least one run on the first level of the group is finished.
 :::
 
-Inside the **'Combined Report'**, you can get a quick overview of the pass/fail rates for all tests within the Group. You can also see the total number of tests present in all compared runs, as well as the total number of flaky (unstable tests that passed or failed in different runs), reviewed (previously failing that passed in next runs), and degraded (previously passed that failed in next runs) tests.
+## Finish Pending Runs
 
-Additionally, you can use filters and search features to view the data most relevant to your needs.
+Close all unfinished runs of a RunGroup in one action. You do not need to open and finish each run.
 
-![Testomat.io - Combined Report](./images/Combined_report_2.gif)
+1. Open the RunGroup.
+2. Click the **⋯** button in the top-right corner.
+3. Select **Finish Pending Runs**.
+4. Check the number of runs in the confirmation.
+5. Click **Finish runs**.
 
-**Key benefits:**
+![The RunGroup ⋯ menu with Finish Pending Runs](./images/finish-pending-runs.png)
 
-- **Analyze Trends:** By seeing the results from multiple runs in one place, you can identify trends in test performance and stability over time.
+Done. You see the message "N run(s) finished", and the list of runs updates.
 
-- **Consolidate Data:** The combined report is especially useful for "mixed runs" (runs that include both manual and automated tests), as it consolidates all results into a single, cohesive report.
+The action finishes manual runs in progress, paused runs, scheduled runs that did not start, relaunched runs, and automated and mixed runs. It includes the runs in nested groups. If you start it from a subgroup, it finishes only that subgroup and its nested groups.
 
-- **Compare Runs:** Testomat.io also has a separate **'Compare Test Runs'** feature that can be used within a RunGroup. This allows you to side-by-side compare the results of different runs to pinpoint changes, regressions, or improvements. (Go to [Compare Test Runs](https://docs.testomat.io/project/runs/reports/#compare-test-runs) section on **'Run reports'** page to read more about this feature.)
+:::note
+Tests without a result become **Skipped**. Passed and failed results stay as they are.
+:::
 
-This feature is a powerful tool for project managers, QA leads, and stakeholders who need to make informed decisions based on a holistic view of testing activities, without having to manually compile data from individual reports.
+If the group has no pending runs, you see the message "There are no pending runs in this group". Nothing changes.
 
 ## How to Copy RunGroup
 
