@@ -219,6 +219,7 @@ Use the feature table below to explore specific capabilities in each area like t
 | Personal and project tokens            |  ✔️  |      ✔️      |     ✔️     |
 | 24/7 monitoring                        |  ✖️  |      ✔️      |     ✔️     |
 | Single Sign-On (SSO)                   |  ✖️  |      ✖️      |     ✔️     |
+| IP restrictions                        |  ✖️  |      ✖️      |     ✔️     |
 | SLA (Security Service Level Agreement) |  ✖️  |      ✖️      |     ✔️     |
 | Self-hosted on-premise option          |  ✖️  |      ✖️      |     ✔️     |
 | Users auto-provisionning by domain     |  ✖️  |      ✖️      |     ✔️     |

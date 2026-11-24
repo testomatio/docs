@@ -410,7 +410,7 @@ This setting applies to all new run types — manual, automated, and mixed.
 
 :::note
 
- If you relaunch an existing run as a copy and the original run belongs to a RunGroup, the copy is placed in the same group. No manual selection is needed.      
+If you relaunch an existing run as a copy and the original run belongs to a RunGroup, the copy is placed in the same group. No manual selection is needed.      
 
 :::
 
@@ -482,48 +482,51 @@ Automated tests can be run manually in two ways:
 
 ![Running Automated Tests from the Runs Page](./images/gif2_7641.gif)
 
-## How to Make Changes in a Launched Run
+Found a new case during testing? Add it to the run that is already in progress. You do not need to stop testing.
 
-During testing, you might encounter new scenarios that need to be added immediately. Testomat.io allows you to easily add tests to a run that’s already started. This way, you can cover unexpected cases without stopping your ongoing testing process.
+1. Go to **Runs**.
+2. Open the unfinished run.
+3. Click **Edit** in the top-right corner.
 
-This ensures flexibility, smooth testing workflow, and that no important scenarios are missed.
+![The Edit button on an unfinished manual run](./images/edit-run-button.png)
 
-1. Go to the **Runs** page
-2. Open the unfinished run you want to edit
-3. Click the **Edit** button (or open the '...' menu and select **Edit**)
+The **Edit manual run** page opens. The run ID shows next to the title. Click the copy icon to copy it.
 
-![Edit button](./images/att3_7641.png)
+| Field or button | What you can do |
+| --- | --- |
+| **Assign to** | Add or remove the users of the run. Use **Assign tests manually**, **Select All**, or **Remove assign users**. |
+| **Title** | Change the run title. |
+| **Environment** | Set the environment for the run. |
+| **Description** | Change the run description. |
+| **details** | See where the tests of the run come from. |
+| **All tests in run** | See all tests in the run. |
+| **New added tests** | See the tests you add in this edit. |
+| **+ Add from plan** | Add the tests of a plan. |
+| **+ Add tests** | Add tests from the test tree. |
 
-Once the **Edit manual run** view is opened, here’s what you can do:
+### Add Tests to the Run
 
-- **Assign to** - Remove existing users or assign more to the run
-- **Title** - Enter or change the run title
-- **Environment** - Add or remove testing environments
-- **Description** - Add or update the run description
-- **details** link - Check configuration details of the run
-- **Current tests** – Shows all tests currently included in the run. Remove unnecessary tests by clicking the **trash** icon
-- **+ Tests** – Similar to the [Select tests](https://docs.testomat.io/project/runs/running-tests-manually/#how-to-configure-a-manual-run) tab in a new manual run. You can browse the test tree, use search or filters, or expand suites to select manual tests to add to this run
-- **+ Plans** – Select tests from existing test plans. You can include one or multiple plans in the current run
+1. On the **Edit manual run** page, click **+ Add tests**.
+2. Find the tests with the filters on the left or with **Search**.
+3. Select the tests or suites to add.
+4. Click **Add tests**.
+5. Click **Save**.
 
-:::note
+![The Edit manual run page with the Add tests button](./images/add-tests-in-edit.png)
 
-You can add tests from plans and additional tests at the same time. For example: select one or more plans, then select specific suites or individual tests — everything will be added to the run instantly.
+![The Add tests to run window with filters and tests marked Already in run](./images/add-tests-window.png)
 
-:::
+That's it. The new tests show on the **New added tests** tab, and you can start testing them. Next to each suite, a counter such as `5 / 6 tests` shows how many of its tests are in the run.
 
-![Edit existing run](./images/gif1-7865.gif)
+In the **Add tests to run** window, tests that are already in the run show at the top with the **Already in run** label. You cannot select them twice, so the run has no duplicates.
 
-### Adding Tests to an Existing Run
+| Option | What it does |
+| --- | --- |
+| **Filters** | Find tests by **States**, **Labels**, **Custom Fields**, **Tags**, **Priority**, **Assigned to**, or **Milestone**. |
+| **Run Automated as Manual** | Add automated tests and run them by hand. |
+| List and tree icons | Show the tests as a list with **Suites** and **Tests** columns, or as a tree. |
 
-You can add the new tests to the run. When you add the new tests the old tests are marked with the **checkmark**. Also you can see how many tests are new and how many were added to the run - it is shown in the cointer.
-
-- A **checkmark** next to a test means the test is in the run.
-- A **counter** next to a suite, like `10 of 12 in run`, tells you how many tests from that suite is included.
-- The suite tree can focus on suites that already contain tests from the run.
-
-![Adding tests to a run](./images/17-edit-manual-run.png)
-
-You can also assign individual tests directly from the editor. The test list and the responsibilities are updated in one place.
+The **Add tests** button becomes active after you select at least one test. You can add tests from a plan and single tests in the same edit.
 
 ## Pause a manual run
 
@@ -554,30 +557,15 @@ You can change the status of a single result in a run that has already finished,
 
 The run updates right away. The change is recorded, not applied quietly - each edit keeps its new status, your message, and who made it, so the run shows both where it landed and how it got there. The change broadcasts live to everyone watching the project, and any linked Jira issue re-syncs in the background.
 
-## How to Remove and Re-add a Test in a Run
+## Remove and Return a Test
 
-Removing a test does not delete it. You can remove a test from a running test run and bring it back later. Testomat.io marks the test as excluded and keeps it in the run configuration.
+Removing a test from a run does not delete the test from the project.
 
-### How to Return a Test to the Run
+1. Open the **Edit manual run** page.
+2. On **All tests in run**, click **×** next to the test or suite.
+3. Click **Save**.
 
-If you remove a test and then add the same test again, the run holds two statuses at once, excluded and included. The excluded status has higher priority, so the test stays out of the run's test list, even though Testomat.io confirms it was added.
-
-If you only removed the test:
-
-1. Open the run and go to configuration **details**.
-2. Find the removed test and cancel the deletion.
-3. The test returns to the run.
-
-![Test configuration details](./images/574-test-config.png)
-
-If you removed the test and then added it again, it now shows both a removed and an added status:
-
-1. Open configuration **details** and find the test.
-2. Click the `x` next to the removed status to clear the exclusion.
-
-The added status then takes effect, and the test appears in the run.
-
-![Removing a deleted test from test configuration](./images/574-remove-from-test-config.png)
+Changed your mind? Add the test again with **+ Add tests**, then click **Save**. The test is back in the run.
 
 ## How to Adjust Test Case Description Block
 

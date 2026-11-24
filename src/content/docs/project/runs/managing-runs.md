@@ -14,15 +14,10 @@ head:
 Testomat.io offers comprehensive features for managing test runs, catering to both manual and automated testing. Here's how to manage runs within the system:
 
 1. **Update Test Runs:** Add new test cases directly from Test Run, **Relaunch** finished Test Runs to update tests statuses, or **Launch a copy**. Find more information in the sections below.
-
 2. **Filter Test Runs:** Filter runs and **share the filter parameters** with your teammates directly via URL. find more information added in the sections below.
-
 3. **Group Runs:** Organize your runs into **RunGroups** based on criteria like sprint, release, functional area, or any other logical grouping. Read more on the [RunGroups](https://docs.testomat.io/project/runs/rungroups) page.
-
 4. **Select a Merge Strategy:** Aggregate the results of the individual test runs within a RunGroup. Find more information on the [Merge Strategies](https://docs.testomat.io/project/runs/merge-strategies) page.
-
 5. **Archive Runs & RunGroups:** Maintain a clean and organized main board tailored to your ongoing testing priorities. Read how to archive Runs & RunGroups on the [Archive Runs & RunGroups](https://docs.testomat.io/project/runs/archive-runs-and-groups) page.
-
 6. **Share Run Reports:** Share test results with your teammates or stakeholders. You can find detail information about Reports on the [Run Reports](https://docs.testomat.io/project/runs/reports) page.
 
 ## How to Create a Test Case within a Run
@@ -219,6 +214,26 @@ In the opened sidebar window, configure your relaunch (optional):
 6. Click the **'Relaunch'** button.
 
 ![The Advanced Relaunch window with Create new run, Keep values, and Keep assignees selected](./images/advanced-relaunch-keep-assignees.png)
+
+### Relaunch on CI
+
+For an automated run, you can choose the CI to run the tests on. After you click **Relaunch**, the **Relaunch Run on CI** window opens.
+
+1. In **Select Profile**, select the CI profile.
+2. Check the values in **Configuration**, such as the `ref` branch.
+3. Click **Launch Run**.
+
+![The Relaunch Run on CI window with Select Profile and Configuration](./images/select-ci-profile.png)
+
+The CI starts the tests, and the results come back to the run.
+
+By default, **Select Profile** shows the profile of the original run. To see all values of the profile, click **See config values**.
+
+If the profile has no settings, you see the message "No settings for <profile>". Check the profile in **Settings** → **Continuous integration**.
+
+To relaunch on the same CI without changes, open the **(⋯)** menu of the run and select **Relaunch Failed on CI** or **Relaunch All on CI**. See [Relaunch Failed Test Cases for Automated Runs](#relaunch-failed-test-cases-for-automated-runs).
+
+![The run ⋯ menu with Relaunch Failed on CI and Relaunch All on CI](./images/relaunch-on-ci.png)
 
 ### Run Type
 

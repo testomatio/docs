@@ -61,6 +61,35 @@ You can keep an unfinished scenario as a draft. See [Drafts for unfinished scena
 
 ![Syntax error message example in the Gherkin test](./images/bdd-projects/2-gherkin-syntax-error.png)
 
+### Write Scenarios in Other Languages
+
+Write your scenarios in the language your team speaks. Testomat.io supports all 80 Gherkin languages. Set the language in the feature file:
+
+1. Create a suite or open it in the [Feature File Editor](#feature-file-editor). 
+2. Add the `# language:` line with the language code as the first line:
+
+```gherkin
+# language: fr
+Fonctionnalité: Connexion
+
+  Scénario: Connexion réussie
+    Soit l'utilisateur est sur la page de connexion
+    Quand il saisit des identifiants valides
+    Alors il voit le tableau de bord
+```
+
+Testomat.io highlights the keywords and saves the steps. Your text stays in your language.
+
+A suite has one language. All scenarios in the suite use it. Without the `# language:` line, Testomat.io finds the language from the first keyword, such as `Fonctionnalité:`.
+
+![A French feature file in the suite editor with the language line first](./images/bdd-projects/6-gherkin-francais.png)
+
+:::note
+
+The `Rule` keyword is not supported yet in any language.
+
+:::
+
 ## Reuse Shared Steps
 
 The same steps, such as `Given I am on the login page`, can be reused:

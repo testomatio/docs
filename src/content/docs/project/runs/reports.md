@@ -216,6 +216,26 @@ Testomat.io also allows you to export your test run results as a PDF report. Thi
 
 ![Testomat.io - export as PDF](./images/Export_7.png)
 
+### Failed Tests Details
+
+The PDF report has a **Failed tests details** section. Share it with people outside Testomat.io, so they can see why each test failed. Each failed test shows these blocks, in the same order as the run report:
+
+| Block | What it shows |
+| --- | --- |
+| **Failure** | The failure message. |
+| **Meta** | The meta data of the test. |
+| **Stacktrace** | The first 10 and the last 10 lines. |
+| **Steps** | The steps and their statuses. |
+| **Artifacts** | The names of the attached files. |
+
+For a manual test, the report shows all preconditions and steps, and which of them are checked. The expected result of a step shows on its own line.
+
+:::note
+
+The PDF shows the file names of screenshots, not the images. Open the run in Testomat.io to see them.
+
+:::
+
 **Use cases for PDF Reports:**
 
 - **Sharing results with stakeholders:** Quickly generate a portable summary of test outcomes for product owners, QA managers, or external partners who may not have access to the platform.

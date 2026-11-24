@@ -74,12 +74,18 @@ The lists show only the values of your connected team. If your team doesn't use 
 
 ## Link an Existing Issue
 
-1. Open a test, suite, or run, click the **⋯** button in the top-right corner, and select **Link to Issue**.
-2. Open the **Link existing issue** tab.
-3. Paste the Linear issue URL or its key, such as `QA-1`, into **Issue URL or ID**.
-4. Click **Link Issue**.
+1. Open a test, suite, or run.
+2. Click the **⋯** button in the top-right corner and select **Link to Issue**.
+3. Open the **Link existing issue** tab.
+4. Paste the Linear issue URL or key, such as `QA-1`, into **Issue URL or ID**.
+5. If the project has more than one Linear profile, select a profile in **Integration**.
+6. Click **Link Issue**.
 
-![The Link existing issue tab with a Linear key in the Issue URL or ID field](./images/linear/8-link-existing-issue.png)
+![The Link existing issue tab with a Linear key and the Integration field](./images/linear/8-link-existing-issue.png)
+
+The **Integration** field shows only when two or more Linear profiles match the issue. Testomat.io links the issue with the profile you select. In Linear, the activity shows the user of that profile.
+
+If you do not select a profile, you see the message "Please select an integration for this issue". Select a profile and click **Link Issue** again.
 
 ## Raise a Defect
 
@@ -88,7 +94,7 @@ The lists show only the values of your connected team. If your team doesn't use 
 3. Click **Show Optional Fields** to set Linear fields.
 4. Create the defect.
 
-To link a defect that already exists, open **Link existing defect** and paste the key. With **Tracker** set to **Detect automatically**, Testomat.io recognizes a Linear key on its own.
+To link a defect that already exists, open **Link existing defect** and paste the key. With **Tracker** set to **Detect automatically**, Testomat.io recognizes a Linear key. If the project has more than one Linear profile, select a profile in **Integration**.
 
 ## Track Linear Defects
 
@@ -100,11 +106,32 @@ To pull the latest changes from Linear right away, click the **⋯** button in t
 
 ## See Testomat.io Items in Linear
 
-Every linked test, suite, run, plan, requirement, or defect appears on the Linear issue as an attachment, not a comment. The issue discussion stays clean, and your team opens the testing context in one click.
+When you link a test, suite, run, or requirement to a Linear issue, Testomat.io adds it to the issue as an attachment. Testomat.io does not post a comment, so the discussion in the issue stays clean.
+
+Attachments show in the **Resources** section of the Linear issue. The title starts with the item type, such as `Suite:` or `Test:`.
+
+![A Suite attachment in the Resources section of a Linear issue](./images/linear/10-linear-resources.png)
+
+| Item | Title in Linear | Subtitle in Linear |
+| --- | --- | --- |
+| Test | `Test: <test title>` | Last status, suite, labels, assignee, and last run time |
+| Suite | `Suite: <suite title>` | — |
+| Run | `Run: <run title>` | Run status. Passed and failed runs also show test counts. |
+| Requirement | `Requirement: <requirement title>` | — |
+
+The status shows as `[PASSED]`, `[FAILED]`, or `[SKIPPED]`. A test with no runs shows no status. A run with no title shows as `Run: <run ID>`.
+
+Click an attachment to see its details. To go back to the item, click **Open in Testomat**.
+
+![The details of a suite attachment in Linear with the description and the Open in Testomat button](./images/linear/11-attachment-from-testomat.png)
+
+Testomat.io updates the attachment when the test status changes. When you unlink the issue or delete the test, Testomat.io removes the attachment.
 
 ## Use Linear Issues as Requirements
 
 Add a Linear issue as a requirement to plan tests from it. Testomat.io imports the title and the description. See [Linear as a Requirement Source](https://docs.testomat.io/advanced/ai-powered-features/ai-requirements#linear-as-a-requirement-source).
+
+Testomat.io also adds the requirement to the Linear issue as an attachment, together with the suites and tests linked to it. When you unlink or delete the requirement, Testomat.io removes these attachments.
 
 Linear requirements refresh **once a day**. To pull the latest version right away, open the requirement, click the **⋯** menu, and select **Refresh Requirement**.
 

@@ -508,6 +508,7 @@ export default defineConfig({
 							{ label: 'Administration', link: '/management/company/administration' },
 							{ label: 'Clone Project Settings', link: '/management/company/clone-project-settings' },
 							{ label: 'Audit Log', link: '/management/company/audit-log' },
+							{ label: 'IP Restrictions', link: '/management/company/ip-restrictions' },
 							{ label: 'Trials', link: '/management/company/trials' },
 							{ label: 'Subscriptions', link: '/management/company/subscriptions' },
 							{ label: 'Plan Features Comparison', link: '/management/company/plan-features-comparison' },

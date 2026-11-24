@@ -1,13 +1,13 @@
 ---
 title: Comments
-description: Comment on tests and suites in Testomat.io. This guide covers posting a comment, editing and deleting your own comments, and how comments behave when a suite is shared with another project.
+description: Comment on tests, suites, and plans in Testomat.io. This guide covers posting a comment, editing and deleting your own comments, and how comments behave when a suite is shared with another project.
 type: article
 url: https://docs.testomat.io/project/comments-notifications/comments
 head:
   - tag: meta
     attrs:
       name: keywords
-      content: comments, comment on a test, comment on a suite, edit a comment, delete a comment, test case discussion, shared projects, collaboration, Testomat.io
+      content: comments, comment on a test, comment on a suite, comment on a plan, edit a comment, delete a comment, test case discussion, shared projects, collaboration, Testomat.io
 ---
 
 Comments are for your work convenience. Comments keep a discussion next to the test it is about. 
@@ -16,9 +16,9 @@ Everyone who opens the test later sees the context, and everyone already in the 
 
 ![What comments give you: context, thread updates, editing, and project scope](./images/comments-mindmap.png)
 
-## Comment on a test or suite
+## Comment on a Test, Suite, or Plan
 
-1. Open the test or the suite you want to discuss.
+1. Open the test, the suite, or the plan you want to discuss.
 2. Open the **Comments** tab.
 3. Enter your comment.
 4. Click **Comment**.
@@ -47,6 +47,18 @@ Editing also lets you remove a mention you no longer need. To edit a comment:
 :::caution[Important]
 
 Deleting a comment removes it from the thread for everyone. This cannot be undone.
+
+:::
+
+## Comments in Test Plans
+
+Discuss a plan with your team right next to it. Plan comments work the same as comments on tests and suites: you can use Markdown and mention people with `@`. The plan header shows the number of comments.
+
+To close the comments panel, press **Esc** or click **X**.
+
+:::note
+
+Users with read-only access can read plan comments. They cannot add comments.
 
 :::
 
