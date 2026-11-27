@@ -71,6 +71,7 @@ When you share a test, its test content becomes available in the target project.
 | Attachments | Yes |
 | Labels and custom labels | Yes |
 | Tags | Yes |
+| Parameters (Examples table) | Yes |
 | Priority | Yes |
 | Linked issues | Yes, when the integration is available |
 | Assignee | Yes, when the user exists in the target project |
@@ -86,7 +87,7 @@ After the first share, changes to title, description, and tags are synchronized 
  
 New tests added to a shared suite are also available in linked projects.
  
-Other shared fields are not updated after the initial share.
+Other shared fields, including the Examples table of parameterized tests, are not updated after the initial share.
  
 :::note
 
